@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "智能客服Pro",
+  "description": "基于大语言模型的企业级智能客服平台，支持多轮对话、知识库问答、工单流转和数据分析",
+  "applicationCategory": "智能客服",
+  "operatingSystem": "Web",
+  "url": "https://example.com/smart-cs",
+  "featureList": [
+    "多轮对话引擎，支持上下文理解",
+    "企业知识库RAG，精准问答",
+    "多渠道接入（网页、微信、APP、电话）",
+    "智能工单流转与人工协作",
+    "实时数据看板与客服质检"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "按坐席计费，起步价 299元/坐席/月",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "示例科技有限公司"
+    }
+  },
+  "producer": {
+    "@type": "Organization",
+    "name": "示例科技有限公司",
+    "url": "https://example.com"
+  }
+}

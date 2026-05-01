@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FANUC A61L-0001-0093 LCD液晶显示器",
+  "description": "日本FANUC数控系统9英寸CRT显示器的液晶升级替代模块，保留原CRT的9英寸安装尺寸及HONDA 20针信号接口，替换性升级，无需改动原设备结构",
+  "applicationCategory": "CNC数控显示器升级",
+  "operatingSystem": "Web",
+  "url": "https://www.kongto.com/product/a61l-0001-0093",
+  "featureList": [
+    "保留原CRT安装尺寸，替换式安装，无需改动设备结构",
+    "HONDA 20针信号接口，与FANUC 0i/16i/18i等系统完全兼容",
+    "DC24V供电，兼容原CRT电源设计",
+    "工业级液晶面板，亮度高、寿命长（50000小时以上）",
+    "铝合金壳体，IP65前面板防护等级",
+    "宽温设计，支持-20°C至60°C工作温度",
+    "VGA模拟信号输入，支持双频率显示模式"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "面议，根据型号和数量定价",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "深圳市江图科技有限公司"
+    }
+  },
+  "producer": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://www.kongto.com"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "FANUC A61L-0001-0093 LCD液晶显示器是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "日本FANUC数控系统9英寸CRT显示器的液晶升级替代模块，保留原CRT的9英寸安装尺寸及HONDA 20针信号接口，替换性升级，无需改动原设备结构"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FANUC A61L-0001-0093 LCD液晶显示器有哪些核心功能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "核心功能：保留原CRT安装尺寸，替换式安装，无需改动设备结构；HONDA 20针信号接口，与FANUC 0i/16i/18i等系统完全兼容；DC24V供电，兼容原CRT电源设计；工业级液晶面板，亮度高、寿命长（50000小时以上）；铝合金壳体，IP65前面板防护等级；宽温设计，支持-20°C至60°C工作温度；VGA模拟信号输入，支持双频率显示模式"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FANUC A61L-0001-0093 LCD液晶显示器怎么收费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "面议，根据型号和数量定价"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FANUC A61L-0001-0093 LCD液晶显示器适用于哪些场景？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "典型场景：FANUC 0-TC/0-MC系统CRT显示器换新；FANUC 16T/18T数控车床/加工中心显示器升级；老旧CNC设备显示器翻新改造；FANUC 0i系统显示器维修替代"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工业视频信号转换器系列是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "涵盖VGA、HDMI、CVBS、RGBS、CGA、EGA等多种视频信号格式之间的转换，用于老旧工业设备的显示接口升级"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工业视频信号转换器系列有哪些核心功能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "核心功能：支持VGA转VIDEO、HDMI转VGA、AV转HDMI等多种格式；CGA/EGA/MDA老式显示器信号转换；工业级设计，宽温宽压，支持7×24小时连续运行；即插即用，无需驱动"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工业视频信号转换器系列怎么收费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "面议"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工业视频信号转换器系列适用于哪些场景？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "典型场景：老旧工控机显示接口扩展；工业相机图像输出转换；老旧设备显示系统升级"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工控专用显示器是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7-12英寸工业级液晶显示器，配备CGA、EGA、MDA等老式信号接口，专为工控和数控设备设计"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工控专用显示器有哪些核心功能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "核心功能：7-12英寸多尺寸可选；支持CGA/EGA/MDA/VGA多种信号输入；工业级铝合金前面框，坚固耐用；宽温设计，强抗干扰能力"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工控专用显示器怎么收费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "面议"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工控专用显示器适用于哪些场景？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "典型场景：数控系统配套显示；PLC工控设备显示；自动化设备HMI"
+      }
+    }
+  ]
+}

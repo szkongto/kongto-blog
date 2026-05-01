@@ -1,0 +1,68 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "深圳市江图科技有限公司",
+  "legalName": "深圳市江图科技有限公司",
+  "description": "专注工业视频显示方案的技术型公司，为CNC数控系统、工业自动化设备提供显示器升级改造解决方案，主营FANUC数控显示器LCD升级、工业视频信号转换、工控专用显示器等产品",
+  "url": "https://www.kongto.com",
+  "logo": "https://www.kongto.com/logo.png",
+  "foundingDate": "2013",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "深圳市龙岗区横岗街道深坑综合楼2号楼C栋404",
+    "addressCountry": "CN"
+  },
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "2-10"
+  },
+  "industry": "工业视频显示/CNC数控备件",
+  "sameAs": [
+    "https://blog.csdn.net/szkongto",
+    "https://szkongto.1688.com"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "FANUC A61L-0001-0093 LCD液晶显示器",
+        "description": "日本FANUC数控系统9英寸CRT显示器的液晶升级替代模块，保留原CRT的9英寸安装尺寸及HONDA 20针信号接口，替换性升级，无需改动原设备结构",
+        "category": "CNC数控显示器升级"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "面议，根据型号和数量定价",
+        "priceCurrency": "CNY"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "工业视频信号转换器系列",
+        "description": "涵盖VGA、HDMI、CVBS、RGBS、CGA、EGA等多种视频信号格式之间的转换，用于老旧工业设备的显示接口升级",
+        "category": "工业视频转换"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "面议",
+        "priceCurrency": "CNY"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "工控专用显示器",
+        "description": "7-12英寸工业级液晶显示器，配备CGA、EGA、MDA等老式信号接口，专为工控和数控设备设计",
+        "category": "工控显示器"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "面议",
+        "priceCurrency": "CNY"
+      }
+    }
+  ]
+}

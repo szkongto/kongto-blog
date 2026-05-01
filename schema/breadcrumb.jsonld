@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.kongto.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "工业视频显示/CNC数控备件",
+      "item": "https://www.kongto.com/solutions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "FANUC A61L-0001-0093 LCD液晶显示器",
+      "item": "https://www.kongto.com/product/a61l-0001-0093"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "工业视频信号转换器系列",
+      "item": ""
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "工控专用显示器",
+      "item": ""
+    }
+  ]
+}

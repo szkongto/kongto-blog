@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "知识图谱引擎",
+  "description": "企业级知识图谱构建与推理引擎，将非结构化数据转化为可查询的知识网络",
+  "applicationCategory": "知识管理",
+  "operatingSystem": "Web",
+  "url": "https://example.com/kg-engine",
+  "featureList": [
+    "自动知识抽取与实体识别",
+    "知识图谱可视化编辑",
+    "自然语言查询接口",
+    "多源数据融合"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "按数据量计费，起步价 999元/月",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "示例科技有限公司"
+    }
+  },
+  "producer": {
+    "@type": "Organization",
+    "name": "示例科技有限公司",
+    "url": "https://example.com"
+  }
+}
