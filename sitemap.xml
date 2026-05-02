@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>https://szkongto.github.io/kongto-blog/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
     <url><loc>https://szkongto.github.io/kongto-blog/posts/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://szkongto.github.io/kongto-blog/posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
