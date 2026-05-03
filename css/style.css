@@ -38,3 +38,25 @@ footer { text-align: center; padding: 2rem; color: #666; border-top: 1px solid #
     .hero { padding: 2rem 1rem; }
     .hero h1 { font-size: 1.8rem; }
 }
+
+/* Language Switcher */
+.lang-switch {
+    margin-left: auto;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.lang-switch a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+}
+.lang-switch a:hover {
+    background: #f0f0f0;
+}
+.lang-switch .lang-en { color: #0066cc; }
+.lang-switch .lang-zh { color: #cc0000; }
+@media (max-width: 768px) {
+    .lang-switch { margin-left: 0; padding: 0.5rem 0; }
+    nav { flex-wrap: wrap; }
+}
