@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANUC Unknown LCD Retrofit Guide</title>
-    <meta name="description" content="Unknown LCD retrofit solution for FANUC CNC systems.">
-    <meta name="keywords" content="FANUC Unknown, LCD retrofit, CNC display">
+    <title>How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study | Kongto Technology</title>
+    <meta name="description" content="Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.">
+    <meta name="keywords" content="FANUC CRT retrofit, LCD conversion, Kongto Technology, case study">
     <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html">
+    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <meta property="og:title" content="How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study" />
+    <meta property="og:description" content="Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results." />
+    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <meta property="og:type" content="article" />
     <link rel="stylesheet" href="/kongto-blog/css/style.css">
-    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html" />
-    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html" />
 </head>
 <body>
     <header>
@@ -22,36 +26,100 @@
                 <a href="/kongto-blog/en/about.html">About</a>
             </div>
             <div class="lang-switch">
-                <a href="/kongto-blog/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html" lang="zh">中文</a> |
-                <a href="/kongto-blog/en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html" lang="en">English</a>
+                <a href="/kongto-blog/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="zh">中文</a> |
+                <a href="/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="en">English</a>
             </div>
         </nav>
     </header>
     <main>
         <article class="post">
-            <h1>FANUC Unknown LCD Retrofit Guide</h1>
-            <p class="post-meta">2026-05-03 | FANUC CNC Display Solutions</p>
-            
-            <div class="post-content">
-                <h2>Product Overview</h2>
-                <p>The Unknown is a professional LCD retrofit kit for FANUC CNC systems.</p>
-                <h2>Key Features</h2>
-                <ul>
-                    <li>Direct replacement for original CRT display</li>
-                    <li>Same mounting dimensions as original</li>
-                    <li>Industrial-grade design for 24/7 operation</li>
-                    <li>2-year warranty</li>
-                </ul>
-                <h2>Contact Us</h2>
-                <p>Email: szkongto01@foxmail.com</p>
-                <p>Phone: +86-13686889647</p>
-                <p>Address: Nanjing, China</p>
-                <p><a href="/kongto-blog/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html">Read Chinese version</a></p>
+            <h1>How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study</h1>
+            <div class="meta">
+                <time datetime="2026-05-01">2026-05-01</time>
+                <span class="author">作者: kongto01</span>
+            </div>
+            <div class="content">
+
+
+<p><strong>Keywords</strong>: FANUC CRT to LCD retrofit, LCD conversion, CNC display upgrade, industrial display</p>
+<p><em>Target Audience: CNC engineers, factory equipment managers, industrial automation integrators</em></p>
+<hr>
+<h2>1. Project Background</h2>
+<p>A precision machining factory in Shenzhen operates 15 FANUC 0i-MC CNC milling machines, all equipped with original 9-inch CRT displays manufactured between 2003-2008. After 15+ years of continuous operation, these CRT displays exhibited the following issues:</p>
+<ul>
+<li>Screen flickering and brightness degradation (over 60% reduction from original)</li>
+<li>Intermittent display failures causing unplanned production stoppages</li>
+<li>Color distortion affecting operator ability to read tool position data</li>
+<li>High-voltage circuit failures requiring increasingly frequent repairs (average 3 service calls per machine per year)</li>
+</ul>
+<p>Annual maintenance costs per machine: approximately CNY 3,600 (parts + labor + production loss from downtime).</p>
+<hr>
+
+<h2>2. Solution Design</h2>
+<p>Kongto Technology proposed a comprehensive CRT-to-LCD retrofit solution:</p>
+<table>
+<tr><th>Component</th><th>Specification</th><th>Quantity</th></tr>
+<tr><td>FANUC A61L-0001-0093 LCD Display</td><td>9-inch TFT-LCD, 800x600, 350 cd/m&sup2;</td><td>15 units</td></tr>
+<tr><td>Signal Adapter Cable</td><td>HONDA 20-pin to VGA</td><td>15 units</td></tr>
+<tr><td>Mounting Kit</td><td>Stainless steel brackets + screws</td><td>15 sets</td></tr>
+<tr><td>Anti-Glare Filter</td><td>9-inch optical grade</td><td>15 units</td></tr>
+</table>
+<p><strong>Total project cost</strong>: CNY 52,500 (CNY 3,500/unit including installation)<br>
+<strong>Expected annual savings</strong>: CNY 54,000 (CNY 3,600/machine/year in reduced maintenance + downtime)</p>
+<p><strong>ROI period</strong>: Less than 12 months</p>
+<hr>
+
+<h2>3. Installation Process</h2>
+<p>A team of 2 technicians completed all 15 machines in 3 days (approximately 4-6 hours per machine):</p>
+
+<h3>Day 1: Machines 1-5</h3>
+<ol>
+<li>Power off and verify complete discharge of CRT high-voltage circuit (wait 30 minutes after power-off)</li>
+<li>Remove original CRT display from mounting bracket (4 screws + HONDA 20-pin + 24V power)</li>
+<li>Install LCD display using original mounting holes, connect HONDA 20-pin adapter cable</li>
+<li>Power on and calibrate display settings in FANUC system parameters</li>
+<li>Run 2-hour burn-in test to verify stability</li>
+</ol>
+
+<h3>Day 2: Machines 6-10</h3>
+<p>Installation proceeded faster after the team optimized the workflow. Average time per machine reduced to 3.5 hours.</p>
+
+<h3>Day 3: Machines 11-15 + Final Testing</h3>
+<p>All 15 machines completed. Comprehensive system testing performed across all machines simultaneously.</p>
+<hr>
+
+<h2>4. Results & Benefits</h2>
+<table>
+<tr><th>Metric</th><th>Before (CRT)</th><th>After (LCD)</th><th>Improvement</th></tr>
+<tr><td>Display Brightness</td><td>~120 cd/m&sup2; (degraded)</td><td>350+ cd/m&sup2;</td><td>+192%</td></tr>
+<tr><td>Annual Failure Rate</td><td>3 incidents/machine/year</td><td>0 incidents (first 6 months)</td><td>-100%</td></tr>
+<tr><td>Power Consumption (per display)</td><td>30W</td><td>8W</td><td>-73%</td></tr>
+<tr><td>Annual Maintenance Cost (total)</td><td>CNY 54,000</td><td>CNY 0 (under warranty)</td><td>-100%</td></tr>
+<tr><td>Operator Satisfaction</td><td>Frequent complaints about eye strain</td><td>No complaints reported</td><td>Significantly improved</td></tr>
+</table>
+<hr>
+
+<h2>5. Customer Feedback</h2>
+<p>"The LCD upgrade has transformed our shop floor. Operators report significantly less eye fatigue during long shifts, and we haven't had a single display-related downtime incident since installation. The investment paid for itself within the first year through eliminated repair costs alone."<br>
+— <em>Factory Equipment Manager</em></p>
+<hr>
+
+<h2>6. Conclusion</h2>
+<p>This case study demonstrates that FANUC CRT-to-LCD retrofit delivers:</p>
+<ul>
+<li>Immediate elimination of display-related production stoppages</li>
+<li>73% reduction in display power consumption</li>
+<li>Complete ROI within 12 months</li>
+<li>Significantly improved operator working conditions</li>
+</ul>
+<p>For similar retrofit projects, contact <strong>Kongto Technology</strong> at szkongto01@foxmail.com for a free on-site assessment and customized solution.</p>
+
             </div>
         </article>
     </main>
     <footer>
-        <p>&copy; Kongto Technology Co., Ltd. Contact: szkongto01@foxmail.com</p>
+        <p>&copy; Kongto Technology Co., Ltd.</p>
+        <p>Contact: szkongto01@foxmail.com</p>
     </footer>
 </body>
 </html>

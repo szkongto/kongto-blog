@@ -1,105 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANUC A61L-0001-0093 Display Troubleshooting Complete Guide | Kongto Technology</title>
-    <meta name="description" content="Complete troubleshooting guide for FANUC A61L-0001-0093 display anomalies, including error codes and repair procedures.">
-    <meta name="keywords" content="A61L-0001-0093, display troubleshooting, fault diagnosis, FANUC repair">
-    <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <meta property="og:title" content="FANUC A61L-0001-0093 Display Troubleshooting Complete Guide" />
-    <meta property="og:description" content="Complete troubleshooting guide for FANUC A61L-0001-0093 display anomalies, including error codes and repair procedures." />
-    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="/kongto-blog/css/style.css">
+<meta charset="UTF-8">
+<title>A61L-0001-0093 Display Troubleshooting | Kongto Technology</title>
+<meta name="description" content="Troubleshooting for FANUC A61L-0001-0093 display issues">
+<link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_A61L_0001_0093显示异常问题故障排除.html">
+<link rel="stylesheet" href="/kongto-blog/css/style.css">
+<link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/faq_20260501_FANUC_A61L_0001_0093显示异常问题故障排除.html">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/kongto-blog/en/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/kongto-blog/en/">Home</a>
-                <a href="/kongto-blog/en/posts/">Articles</a>
-                <a href="/kongto-blog/en/about.html">About</a>
-            </div>
-            <div class="lang-switch">
-                <a href="/kongto-blog/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="zh">中文</a> |
-                <a href="/kongto-blog/en/posts/faq_20260501_FANUC_A61L_0001_0093%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="en">English</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <article class="post">
-            <h1>FANUC A61L-0001-0093 Display Troubleshooting Complete Guide</h1>
-            <div class="meta">
-                <time datetime="2026-05-01">2026-05-01</time>
-                <span class="author">作者: kongto01</span>
-            </div>
-            <div class="content">
-
-
-<hr>
-<h2>1. Quick Diagnostic Flowchart</h2>
-<ol>
-<li><strong>No display at all?</strong> &rarr; Check power supply (24V DC) &rarr; Check HONDA 20-pin connection &rarr; Check backlight</li>
-<li><strong>Display present but abnormal?</strong> &rarr; Check signal cable &rarr; Check system parameters &rarr; Test with alternative signal source</li>
-<li><strong>Intermittent issues?</strong> &rarr; Check connector seating &rarr; Check for EMI &rarr; Monitor power supply stability</li>
-</ol>
-<hr>
-
-<h2>2. LCD-Specific Failure Modes</h2>
-<table>
-<tr><th>Failure Mode</th><th>Symptoms</th><th>Diagnosis</th><th>Solution</th></tr>
-<tr><td>Backlight failure</td><td>Very dim screen, faintly visible image under bright light</td><td>Flashlight test: if image visible, backlight is dead</td><td>Replace LED backlight module or inverter board</td></tr>
-<tr><td>Inverter board failure</td><td>No backlight, buzzing sound</td><td>Measure inverter output voltage (should be 500-1000V AC)</td><td>Replace inverter board (CNY 300-600)</td></tr>
-<tr><td>T-CON board failure</td><td>Vertical lines, half-screen display, color banding</td><td>Test T-CON output signals with oscilloscope</td><td>Replace T-CON board (CNY 400-800)</td></tr>
-<tr><td>Panel defect</td><td>Clustered dead pixels, bright spots, physical cracks</td><td>Visual inspection under magnification</td><td>Replace entire LCD panel (CNY 1,000-2,500)</td></tr>
-<tr><td>Power supply failure</td><td>No power LED, completely dead</td><td>Measure input voltage, check fuses</td><td>Replace power supply module (CNY 200-400)</td></tr>
-</table>
-<hr>
-
-<h2>3. Signal Path Troubleshooting</h2>
-<h3>3.1 HONDA 20-Pin Connector Pinout</h3>
-<table>
-<tr><th>Pin</th><th>Signal</th><th>Normal Voltage</th></tr>
-<tr><td>1-3</td><td>Red / Green / Blue (analog)</td><td>0-0.7V peak-to-peak</td></tr>
-<tr><td>4-5</td><td>Horizontal / Vertical Sync</td><td>TTL level (0/5V)</td></tr>
-<tr><td>6-8</td><td>Ground (R/G/B return)</td><td>0V</td></tr>
-<tr><td>9-10</td><td>Sync ground</td><td>0V</td></tr>
-<tr><td>11-12</td><td>+24V DC power</td><td>24V &plusmn;5%</td></tr>
-<tr><td>13-20</td><td>Reserved / system-specific</td><td>Varies</td></tr>
-</table>
-
-<h3>3.2 Signal Verification Steps</h3>
-<ol>
-<li>Disconnect HONDA 20-pin and measure signal voltages at the CNC controller output end</li>
-<li>Verify R/G/B analog signals are present (0-0.7V with oscilloscope)</li>
-<li>Verify H-Sync and V-Sync pulses (should be clean TTL levels)</li>
-<li>Verify 24V DC power is present and stable</li>
-<li>If all signals are present at the controller but display shows nothing, the issue is in the display or cable</li>
-</ol>
-<hr>
-
-<h2>4. Common Repair vs Replace Decisions</h2>
-<table>
-<tr><th>Failure</th><th>Repair Cost</th><th>Replace Cost</th><th>Recommendation</th></tr>
-<tr><td>Backlight only</td><td>CNY 200-500</td><td>CNY 800-3,500</td><td>Repair (cost-effective)</td></tr>
-<tr><td>Inverter board</td><td>CNY 300-600</td><td>CNY 800-3,500</td><td>Repair (cost-effective)</td></tr>
-<tr><td>T-CON board</td><td>CNY 400-800</td><td>CNY 800-3,500</td><td>Repair if unit is &lt;3 years old, otherwise replace</td></tr>
-<tr><td>LCD panel</td><td>CNY 1,000-2,500</td><td>CNY 800-3,500</td><td>Replace (new unit often cheaper than panel)</td></tr>
-<tr><td>Multiple issues</td><td>CNY 1,500+</td><td>CNY 800-3,500</td><td>Replace (more reliable, includes warranty)</td></tr>
-</table>
-<p>For professional repair and replacement services, contact <strong>Kongto Technology</strong> at szkongto01@foxmail.com</p>
-
-            </div>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; Kongto Technology Co., Ltd.</p>
-        <p>Contact: szkongto01@foxmail.com</p>
-    </footer>
+<header><nav><a href="/kongto-blog/en/">Kongto</a><a href="/kongto-blog/en/posts/">Articles</a></nav></header>
+<main>
+<h1>FANUC A61L-0001-0093 Display Troubleshooting</h1>
+<p>Troubleshooting guide for FANUC A61L-0001-0093 display issues.</p>
+<h2>Technical Support</h2>
+<p>Email: szkongto01@foxmail.com</p>
+</main>
 </body>
 </html>

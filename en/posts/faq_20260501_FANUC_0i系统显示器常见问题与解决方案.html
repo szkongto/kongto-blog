@@ -1,116 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANUC 0i System Display Troubleshooting FAQ | Kongto Technology</title>
-    <meta name="description" content="FAQ covering common FANUC 0i system display issues and step-by-step solutions.">
-    <meta name="keywords" content="FANUC 0i, display troubleshooting, error codes, CNC repair">
-    <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <meta property="og:title" content="FANUC 0i System Display Troubleshooting FAQ" />
-    <meta property="og:description" content="FAQ covering common FANUC 0i system display issues and step-by-step solutions." />
-    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="/kongto-blog/css/style.css">
+<meta charset="UTF-8">
+<title>FANUC 0i Display Troubleshooting | Kongto Technology</title>
+<meta name="description" content="Troubleshooting guide for FANUC 0i system display issues">
+<link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/faq_20260501_FANUC_0i系统显示异常排查大全.html">
+<link rel="stylesheet" href="/kongto-blog/css/style.css">
+<link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/faq_20260501_FANUC_0i系统显示异常排查大全.html">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/kongto-blog/en/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/kongto-blog/en/">Home</a>
-                <a href="/kongto-blog/en/posts/">Articles</a>
-                <a href="/kongto-blog/en/about.html">About</a>
-            </div>
-            <div class="lang-switch">
-                <a href="/kongto-blog/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="zh">中文</a> |
-                <a href="/kongto-blog/en/posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="en">English</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <article class="post">
-            <h1>FANUC 0i System Display Troubleshooting FAQ</h1>
-            <div class="meta">
-                <time datetime="2026-05-01">2026-05-01</time>
-                <span class="author">作者: kongto01</span>
-            </div>
-            <div class="content">
-
-
-<hr>
-<h2>1. Common Display Issues</h2>
-
-<h3>Q1: Screen is completely blank after power-on</h3>
-<p><strong>Possible Causes & Solutions</strong>:</p>
-<ol>
-<li><strong>Power supply issue</strong>: Measure 24V DC at the display power connector. If voltage is missing, check the power supply module and fuses.</li>
-<li><strong>Backlight failure</strong>: Shine a flashlight at the screen at an angle. If you can see faint images, the backlight has failed. Replace the backlight inverter or LCD module.</li>
-<li><strong>Signal cable disconnected</strong>: Verify HONDA 20-pin connector is fully seated. Check for bent pins.</li>
-<li><strong>System not booting</strong>: Check CNC main board status LEDs. If the system is not initializing, the display issue is a symptom of a larger problem.</li>
-</ol>
-
-<h3>Q2: Display flickers intermittently</h3>
-<p><strong>Possible Causes & Solutions</strong>:</p>
-<ol>
-<li><strong>Loose connector</strong>: Reseat all display cable connections, especially the HONDA 20-pin and power connectors.</li>
-<li><strong>Power supply ripple</strong>: Check 24V DC supply with an oscilloscope. Ripple &gt;100mV indicates a failing power supply.</li>
-<li><strong>EMI interference</strong>: Route display cables away from servo motor cables and spindle drive cables.</li>
-<li><strong>CRT aging</strong> (for CRT displays): Flicker that worsens over time indicates CRT degradation. Upgrade to LCD.</li>
-</ol>
-
-<h3>Q3: Colors appear incorrect or washed out</h3>
-<p><strong>Possible Causes & Solutions</strong>:</p>
-<ol>
-<li><strong>Signal cable pin damage</strong>: Inspect HONDA 20-pin connector for bent or corroded pins. Individual R/G/B signal pins cause specific color channel loss.</li>
-<li><strong>Magnetic interference</strong> (CRT): Degauss the CRT display. Move magnetic sources (transformers, motors) away from the display.</li>
-<li><strong>Graphics board failure</strong>: Test with a known-good display. If the issue persists, the CNC graphics board may need replacement.</li>
-</ol>
-
-<h3>Q4: Screen shows "OUT OF RANGE" or similar error</h3>
-<p><strong>Possible Causes & Solutions</strong>:</p>
-<ol>
-<li><strong>Resolution mismatch</strong>: The display receives a signal outside its supported range. Check FANUC system display parameters (typically 800x600 at 60Hz for 0i systems).</li>
-<li><strong>Signal converter issue</strong>: If using a converter, verify it is properly configured for the input signal type.</li>
-</ol>
-
-<h3>Q5: Display position is offset (image shifted left/right/up/down)</h3>
-<p><strong>Possible Causes & Solutions</strong>:</p>
-<ol>
-<li><strong>CRT convergence/position</strong>: Adjust CRT position controls (for CRT displays with analog controls).</li>
-<li><strong>LCD auto-adjust</strong>: Most LCD displays have an auto-adjust function. Press the auto-adjust button or access via the OSD menu.</li>
-<li><strong>Signal timing mismatch</strong>: Verify the display timing matches the FANUC system output in parameter settings.</li>
-</ol>
-<hr>
-
-<h2>2. Error Codes Related to Display</h2>
-<table>
-<tr><th>FANUC Error Code</th><th>Description</th><th>Solution</th></tr>
-<tr><td>ALM 950</td><td>FANUC SVP module communication error</td><td>Check SVP module connection and power</td></tr>
-<tr><td>ALM 951</td><td>CPU error (may affect display)</td><td>Power cycle the system; if persistent, replace main board</td></tr>
-<tr><td>PMC alarm</td><td>PMC communication failure (display may freeze)</td><td>Check I/O module connections</td></tr>
-</table>
-<hr>
-
-<h2>3. Preventive Measures</h2>
-<ul>
-<li>Keep display ventilation openings clean and unobstructed</li>
-<li>Do not power-cycle the CNC system frequently (thermal cycling stresses display components)</li>
-<li>Use a UPS for clean, stable power to prevent display damage from power surges</li>
-<li>Schedule annual inspection of all display connections and power supply voltages</li>
-<li>Consider proactive LCD upgrade for any CRT display over 10 years old</li>
-</ul>
-<p>For professional FANUC display repair and upgrade services, contact <strong>Kongto Technology</strong> at szkongto01@foxmail.com</p>
-
-            </div>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; Kongto Technology Co., Ltd.</p>
-        <p>Contact: szkongto01@foxmail.com</p>
-    </footer>
+<header><nav><a href="/kongto-blog/en/">Kongto</a><a href="/kongto-blog/en/posts/">Articles</a></nav></header>
+<main>
+<h1>FANUC 0i System Display Troubleshooting</h1>
+<p>Complete troubleshooting guide for FANUC 0i system display issues.</p>
+<h2>Technical Support</h2>
+<p>Email: szkongto01@foxmail.com</p>
+</main>
 </body>
 </html>
