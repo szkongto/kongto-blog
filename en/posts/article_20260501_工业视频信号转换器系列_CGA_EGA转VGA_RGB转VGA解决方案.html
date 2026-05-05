@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANUC Unknown LCD Retrofit Guide</title>
-    <meta name="description" content="Unknown LCD retrofit solution for FANUC CNC systems.">
-    <meta name="keywords" content="FANUC Unknown, LCD retrofit, CNC display">
+    <title>Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA Guide | Kongto Technology</title>
+    <meta name="description" content="Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions.">
+    <meta name="keywords" content="CGA to VGA, EGA to VGA, RGB to VGA, video signal conversion">
     <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html">
+    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
+    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
+    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
+    <meta property="og:title" content="Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA Guide" />
+    <meta property="og:description" content="Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions." />
+    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" />
+    <meta property="og:type" content="article" />
     <link rel="stylesheet" href="/kongto-blog/css/style.css">
-    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html" />
-    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html" />
 </head>
 <body>
     <header>
@@ -22,36 +26,83 @@
                 <a href="/kongto-blog/en/about.html">About</a>
             </div>
             <div class="lang-switch">
-                <a href="/kongto-blog/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html" lang="zh">中文</a> |
-                <a href="/kongto-blog/en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html" lang="en">English</a>
+                <a href="/kongto-blog/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="zh">中文</a> |
+                <a href="/kongto-blog/en/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E7%B3%BB%E7%BB%9F_CGA_EGA%E8%BD%ACVGA_RGB%E8%BD%ACVGA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" lang="en">English</a>
             </div>
         </nav>
     </header>
     <main>
         <article class="post">
-            <h1>FANUC Unknown LCD Retrofit Guide</h1>
-            <p class="post-meta">2026-05-03 | FANUC CNC Display Solutions</p>
-            
-            <div class="post-content">
-                <h2>Product Overview</h2>
-                <p>The Unknown is a professional LCD retrofit kit for FANUC CNC systems.</p>
-                <h2>Key Features</h2>
-                <ul>
-                    <li>Direct replacement for original CRT display</li>
-                    <li>Same mounting dimensions as original</li>
-                    <li>Industrial-grade design for 24/7 operation</li>
-                    <li>2-year warranty</li>
-                </ul>
-                <h2>Contact Us</h2>
-                <p>Email: szkongto01@foxmail.com</p>
-                <p>Phone: +86-13686889647</p>
-                <p>Address: Nanjing, China</p>
-                <p><a href="/kongto-blog/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html">Read Chinese version</a></p>
+            <h1>Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA Guide</h1>
+            <div class="meta">
+                <time datetime="2026-05-01">2026-05-01</time>
+                <span class="author">作者: kongto01</span>
+            </div>
+            <div class="content">
+
+
+<p><strong>Keywords</strong>: CGA to VGA converter, EGA to VGA converter, RGB to VGA, video signal conversion system</p>
+<hr>
+<h2>1. Overview of Signal Conversion Scenarios</h2>
+<p>Industrial video signal conversion is essential when upgrading legacy CNC displays to modern LCD monitors. This guide covers the three most common conversion scenarios:</p>
+<table>
+<tr><th>Conversion Type</th><th>Input Signal</th><th>Output Signal</th><th>Primary Challenge</th></tr>
+<tr><td>CGA to VGA</td><td>Digital TTL 15kHz</td><td>Analog RGBHV 31kHz</td><td>Digital-to-analog + scan rate doubling</td></tr>
+<tr><td>EGA to VGA</td><td>Digital TTL 22kHz</td><td>Analog RGBHV 31kHz</td><td>Digital-to-analog + scan rate conversion</td></tr>
+<tr><td>RGB to VGA</td><td>Analog RGBS/RGBHV</td><td>Analog RGBHV (standard VGA timing)</td><td>Sync separation + timing normalization</td></tr>
+</table>
+<hr>
+
+<h2>2. CGA to VGA Conversion</h2>
+<h3>2.1 Technical Details</h3>
+<p>CGA (Color Graphics Adapter) was introduced by IBM in 1981 and outputs 4-bit digital TTL signals at 15.75kHz horizontal frequency. To display CGA output on a modern VGA monitor:</p>
+<ol>
+<li><strong>DAC conversion</strong>: Translate 4-bit TTL digital signals (0V/5V) to analog RGB signals (0-0.7V)</li>
+<li><strong>Line doubling</strong>: Double the horizontal scan rate from 15.75kHz to 31.5kHz (VGA standard)</li>
+<li><strong>Frame buffer scaling</strong>: Scale 320x200 or 640x200 resolution to 640x480 or 800x600</li>
+<li><strong>Sync generation</strong>: Generate standard VGA H-Sync and V-Sync signals</li>
+</ol>
+
+<h3>2.2 Implementation</h3>
+<p>Kongto Technology JTX-CVR-001 converter handles all four steps automatically. Installation requires only connecting the CGA output cable to the converter input and the VGA output to the LCD display.</p>
+
+<h2>3. EGA to VGA Conversion</h2>
+<h3>3.1 Technical Details</h3>
+<p>EGA (Enhanced Graphics Adapter) outputs 6-bit digital TTL signals at 21.85kHz. EGA conversion is similar to CGA but with:</p>
+<ul>
+<li>6-bit color depth (64 colors vs. CGA's 16 colors)</li>
+<li>Higher horizontal frequency (21.85kHz vs. 15.75kHz)</li>
+<li>640x350 native resolution</li>
+</ul>
+
+<h2>4. RGB to VGA Conversion</h2>
+<h3>4.1 RGBS vs RGBHV</h3>
+<p>Many FANUC systems output analog RGB signals with composite sync (RGBS) rather than separate H/V sync (RGBHV). VGA monitors require separate sync signals. The conversion process:</p>
+<ol>
+<li><strong>Sync separation</strong>: Extract horizontal and vertical sync pulses from the composite sync signal using a dedicated sync separator IC</li>
+<li><strong>Signal conditioning</strong>: Clean up sync edges and adjust pulse widths to VGA specifications</li>
+<li><strong>Impedance matching</strong>: Ensure 75&Omega; source impedance on all output lines</li>
+</ol>
+
+<h2>5. Comparison of Conversion Solutions</h2>
+<table>
+<tr><th>Parameter</th><th>JTX-CVR-001 (CGA)</th><th>JTX-CVR-002 (EGA)</th><th>JTX-CVR-003 (RGB)</th></tr>
+<tr><td>Input Signal</td><td>CGA TTL 15kHz</td><td>EGA TTL 22kHz</td><td>RGBS analog</td></tr>
+<tr><td>Output Signal</td><td>VGA 640x480@60Hz</td><td>VGA 640x480/800x600@60Hz</td><td>VGA 640x480/800x600@60Hz</td></tr>
+<tr><td>Color Depth</td><td>8-bit per channel</td><td>8-bit per channel</td><td>8-bit per channel</td></tr>
+<tr><td>Operating Temp</td><td>-20&deg;C to +70&deg;C</td><td>-20&deg;C to +70&deg;C</td><td>-20&deg;C to +70&deg;C</td></tr>
+<tr><td>Power</td><td>12-36 VDC</td><td>12-36 VDC</td><td>12-36 VDC</td></tr>
+<tr><td>MTBF</td><td>50,000 hours</td><td>50,000 hours</td><td>50,000 hours</td></tr>
+<tr><td>Price</td><td>CNY 850</td><td>CNY 880</td><td>CNY 750</td></tr>
+</table>
+<p>Contact <strong>Kongto Technology</strong> at szkongto01@foxmail.com for product inquiries.</p>
+
             </div>
         </article>
     </main>
     <footer>
-        <p>&copy; Kongto Technology Co., Ltd. Contact: szkongto01@foxmail.com</p>
+        <p>&copy; Kongto Technology Co., Ltd.</p>
+        <p>Contact: szkongto01@foxmail.com</p>
     </footer>
 </body>
 </html>
