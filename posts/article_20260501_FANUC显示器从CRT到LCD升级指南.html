@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANUC CRT to LCD Upgrade Complete Guide | Jiangtu Technology</title>
+    <meta name="description" content="Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.">
+    <meta name="keywords" content="FANUC CRT to LCD, display upgrade, CNC monitor replacement">
+    <meta name="author" content="kongto01">
+    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" />
+    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" />
+    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" />
+    <meta property="og:title" content="FANUC CRT to LCD Upgrade Complete Guide" />
+    <meta property="og:description" content="Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations." />
+    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" />
+    <meta property="og:type" content="article" />
+    <link rel="stylesheet" href="/kongto-blog/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/kongto-blog/en/" class="logo">Jiangtu Technology</a>
+            <div class="nav-links">
+                <a href="/kongto-blog/en/">Home</a>
+                <a href="/kongto-blog/en/posts/">Articles</a>
+                <a href="/kongto-blog/en/about.html">About</a>
+            </div>
+            <div class="lang-switch">
+                <a href="/kongto-blog/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" lang="zh">中文</a> |
+                <a href="/kongto-blog/en/posts/article_20260501_FANUC%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BB%8ECRT%E5%88%B0LCD%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97.html" lang="en">English</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article class="post">
+            <h1>FANUC CRT to LCD Upgrade Complete Guide</h1>
+            <div class="meta">
+                <time datetime="2026-05-01">2026-05-01</time>
+                <span class="author">作者: kongto01</span>
+            </div>
+            <div class="content">
+
+
+<p><em>Applicable to FANUC 0i/16i/18i series CNC systems</em></p>
+<hr>
+<h2>1. Why Upgrade? — CRT vs LCD Comparison</h2>
+<table>
+<tr><th>Feature</th><th>CRT (Cathode Ray Tube)</th><th>LCD (Liquid Crystal Display)</th></tr>
+<tr><td><strong>Size & Weight</strong></td><td>Bulky, approximately 3-5 kg</td><td>Ultra-thin, lightweight (~0.8 kg), direct replacement</td></tr>
+<tr><td><strong>Power Consumption</strong></td><td>80-120W (high-voltage supply)</td><td>10-15W (low-voltage DC)</td></tr>
+<tr><td><strong>Brightness & Viewing Angle</strong></td><td>Affected by ambient light, narrow angle</td><td>400+ cd/m&sup2;, 178&deg; wide viewing angle</td></tr>
+<tr><td><strong>Lifespan</strong></td><td>~10,000 hours, prone to burn-in</td><td>50,000+ hours, burn-in resistant</td></tr>
+<tr><td><strong>Maintenance Cost</strong></td><td>Vacuum tube aging, high-voltage repair needed</td><td>Modular design, extremely low failure rate</td></tr>
+<tr><td><strong>Environmental</strong></td><td>Contains lead, mercury, and other hazardous materials</td><td>RoHS compliant, environmentally friendly</td></tr>
+<tr><td><strong>User Experience</strong></td><td>Color distortion, low contrast</td><td>Vivid colors, high contrast, faster information reading</td></tr>
+</table>
+<p><strong>Conclusion</strong>: Upgrading to LCD significantly reduces energy consumption, improves operator comfort, extends equipment lifespan, and meets modern environmental requirements.</p>
+<hr>
+
+<h2>2. Technical Principles</h2>
+<h3>2.1 Signal Conversion</h3>
+<p>Original FANUC CRT displays use a <strong>HONDA 20-pin</strong> analog signal interface. The LCD display's internal <strong>signal bridge chip</strong> (e.g., ADI ADV7511) converts the analog signal to LVDS/TTL digital signals in real time to drive the LCD panel.</p>
+
+<h3>2.2 Power Compatibility</h3>
+<p>The original CRT uses <strong>24V DC</strong> low-voltage power (fed to the high-voltage conversion module). The LCD uses <strong>24V DC</strong> directly, with an integrated <strong>DC-DC buck converter</strong> outputting 5V/12V for the driver board and backlight. No power wiring modifications needed.</p>
+
+<h3>2.3 Dimensional Compatibility</h3>
+<p>The LCD features <strong>identical mounting holes and outer dimensions</strong> as the original CRT (approximately 150mm x 120mm), enabling a "drop-in replacement."</p>
+<hr>
+
+<h2>3. Installation Steps</h2>
+<p><strong>Required Tools</strong>: Phillips screwdriver, torque wrench (&le;5 Nm), anti-static wrist strap, cleaning cloth, 70% isopropyl alcohol</p>
+<table>
+<tr><th>Step</th><th>Key Operations</th><th>Important Notes</th></tr>
+<tr><td><strong>1. Power Off & ESD</strong></td><td>Turn off CNC machine main power, disconnect display power cable; wear anti-static wrist strap and ground it.</td><td>Verify all power indicator lights are off to prevent residual high voltage.</td></tr>
+<tr><td><strong>2. Remove Original CRT</strong></td><td>Loosen 4-6 mounting screws (varies by model). Carefully disconnect the HONDA 20-pin signal cable and 24V power cable.</td><td>Pull connectors straight out to avoid damaging latch mechanisms.</td></tr>
+<tr><td><strong>3. Clean Mounting Surface</strong></td><td>Wipe the original bracket and enclosure contact surface with alcohol cloth to remove oil and dust.</td><td>Do not use corrosive solvents that may damage metal surfaces.</td></tr>
+<tr><td><strong>4. Install LCD</strong></td><td>Align the FANUC A61L-0001-0093 LCD with the original mounting holes. Press gently on all four corners until clips lock automatically.</td><td>Ensure LCD is fully seated on the bracket to avoid signal contact issues from tilting.</td></tr>
+<tr><td><strong>5. Connect Cables</strong></td><td>Insert the HONDA 20-pin connector (align direction marker "1"). Connect the 24V DC power cable (red/black polarity same as original CRT).</td><td>Ensure connectors are fully seated to prevent vibration-induced disconnection.</td></tr>
+<tr><td><strong>6. Secure Screws</strong></td><td>Use torque wrench to tighten screws to <strong>4-5 Nm</strong>. Over-tightening may crack the panel.</td><td>Keep threads clean, avoid metal shavings entering the display.</td></tr>
+<tr><td><strong>7. Power-On Test</strong></td><td>Enter FANUC System &rarr; Parameters &rarr; Display Settings, confirm resolution is 800x600 (or system default). If display is abnormal, recheck signal cable connections.</td><td>Observe for 5 minutes on first power-up to confirm uniform backlight and color.</td></tr>
+</table>
+<hr>
+
+<h2>4. Product Recommendation: FANUC A61L-0001-0093 LCD</h2>
+<table>
+<tr><th>Feature</th><th>Description</th></tr>
+<tr><td><strong>Dimensional Compatibility</strong></td><td>100% match with original CRT mounting holes and outer dimensions, <strong>no machine structure modification required</strong></td></tr>
+<tr><td><strong>Plug-and-Play</strong></td><td>HONDA 20-pin signal interface, compatible with FANUC 0i/16i/18i systems, <strong>zero programming</strong></td></tr>
+<tr><td><strong>Power Compatibility</strong></td><td>DC24V power supply, uses original CRT power directly, <strong>no rewiring</strong></td></tr>
+<tr><td><strong>Industrial-Grade Reliability</strong></td><td>Operating temp -20&deg;C to +60&deg;C, MTBF &ge; 80,000 hours</td></tr>
+<tr><td><strong>IP65 Protection</strong></td><td>Front panel waterproof and dustproof for harsh workshop environments</td></tr>
+</table>
+<hr>
+
+<h2>5. Frequently Asked Questions</h2>
+<p><strong>Q: Will the LCD affect the CNC system's G-code display?</strong><br>
+A: No. The LCD is a direct replacement for the CRT with identical signal processing. All G-code, M-code, and system parameter displays remain unchanged.</p>
+
+<p><strong>Q: How long does installation typically take?</strong><br>
+A: For experienced technicians, 30-45 minutes. First-time installers should allow 1-2 hours.</p>
+
+<p><strong>Q: Can I revert to the original CRT if needed?</strong><br>
+A: Yes. The LCD is a non-destructive replacement. Simply swap back the original CRT and reconnect the cables.</p>
+
+<p>For product inquiries and installation support, contact <strong>Jiangtu Technology</strong> at szkongto01@foxmail.com</p>
+
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Jiangtu Technology Co., Ltd.</p>
+        <p>Contact: szkongto01@foxmail.com</p>
+    </footer>
+</body>
+</html>
