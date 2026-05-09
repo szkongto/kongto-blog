@@ -12,15 +12,18 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
-# Block AI scrapers that don't contribute to SEO
+# Allow AI crawlers for GEO/AI search visibility
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
