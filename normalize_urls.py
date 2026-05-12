@@ -8,12 +8,12 @@ import re
 import os
 
 # 文章目录
-POSTS_DIR = r'D:\workspace\kongto-blog\posts'
-
+POSTS_DIR = r'./posts'  # 改成相对路径，或者保留你原来的路径
+# 要替换的URL模式
 # 要替换的URL模式
 URL_PATTERNS = [
-    ('https://szkongto.github.io/kongto-blog/', '/kongto-blog/'),
-    ('http://szkongto.github.io/kongto-blog/', '/kongto-blog/'),
+    ('https://szkongto.github.io/kongto-blog/', '/'),
+    ('http://szkongto.github.io/kongto-blog/', '/'),
 ]
 
 def normalize_urls_in_file(filepath, filename):
