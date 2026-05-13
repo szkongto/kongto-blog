@@ -1,410 +1,185 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANUC 0i系统显示器常见问题与解决方案 | 深圳市江图科技有限公司</title>
-    <meta name="description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖显示器无图像、花屏、亮度调节、CRT升级LCD等12个常见问题">
-    <meta name="keywords" content="FANUC 0i显示器, FANUC CRT升级LCD, A61L-0001-0093, FANUC显示器维修, FANUC数控备件">
+
+    <title>FANUC 0i系统显示器常见问题与解决方案FAQ | 深圳市江图科技有限公司</title>
+
+    <meta name="description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖兼容性、升级方案、参数调试等常见问答">
+
+    <meta name="keywords" content="FANUC A61L-0001-0093,FANUC CRT 升级 LCD,FANUC数控显示器替代,A61L-0001-0093 LCD,FANUC显示器维修">
+
     <meta name="author" content="kongto01">
+
     <link rel="canonical" href="https://cncdisplay.com/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html">
+
     <meta property="og:type" content="article">
-    <meta property="og:title" content="FANUC 0i系统显示器常见问题与解决方案">
-    <meta property="og:description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖显示器无图像、花屏、亮度调节、CRT升级LCD等常见问题">
+
+    <meta property="og:title" content="FANUC 0i系统显示器常见问题与解决方案FAQ">
+
+    <meta property="og:description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖兼容性、升级方案、参数调试等常见问答">
+
     <meta property="og:site_name" content="深圳市江图科技有限公司">
+
     <meta property="article:published_time" content="2026-05-01">
+
     <meta property="article:author" content="kongto01">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FANUC 0i系统显示器常见问题与解决方案">
-    <meta name="twitter:description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖显示器无图像、花屏、亮度调节、CRT升级LCD等常见问题">
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title" content="FANUC 0i系统显示器常见问题与解决方案FAQ">
+
+    <meta name="twitter:description" content="FANUC 0i系统显示器常见问题与解决方案，涵盖兼容性、升级方案、参数调试等常见问答">
+
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "FANUC 0i系统显示器常见问题与解决方案",
-      "description": "FANUC 0i系统显示器常见问题与解决方案，涵盖显示器无图像、花屏、亮度调节、CRT升级LCD等常见问题",
-      "author": {"@type": "Person", "name": "kongto01"},
-      "publisher": {"@type": "Organization", "name": "深圳市江图科技有限公司", "url": "https://cncdisplay.com"},
-      "datePublished": "2026-05-01"
-    }
-    </script>
+
+    <script type="application/ld+json">{
+
+  "@context": "https://schema.org",
+
+  "@type": "Article",
+
+  "headline": "FANUC 0i系统显示器常见问题与解决方案",
+
+  "description": "FANUC 0i系统显示器常见问题与解决方案，涵盖兼容性、升级方案、参数调试等常见问答",
+
+  "author": {"@type": "Person", "name": "kongto01"},
+
+  "publisher": {"@type": "Organization", "name": "深圳市江图科技有限公司", "url": "https://szkongto.github.io/kongto-blog"},
+
+  "datePublished": "2026-05-01"
+
+}</script>
+
     <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html" />
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html" />
+
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
-    <style>
-        .faq-container { max-width: 900px; margin: 0 auto; }
-        .faq-intro { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
-        .faq-intro h2 { color: #4cc9f0; margin-top: 0; }
-        .faq-toc { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
-        .faq-toc h3 { margin-top: 0; color: #1a1a2e; }
-        .faq-toc ol { margin: 0; padding-left: 1.5rem; }
-        .faq-toc li { margin-bottom: 0.5rem; }
-        .faq-toc a { color: #0066cc; text-decoration: none; }
-        .faq-toc a:hover { text-decoration: underline; }
-        .faq-category { margin-bottom: 2.5rem; }
-        .faq-category-title { color: #1a1a2e; border-left: 4px solid #4cc9f0; padding-left: 1rem; margin-bottom: 1.5rem; font-size: 1.3rem; }
-        .faq-item { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .faq-question { color: #e63946; font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.5rem; }
-        .faq-question::before { content: "Q"; background: #e63946; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; }
-        .faq-answer { color: #333; line-height: 1.8; }
-        .faq-answer h4 { color: #1a1a2e; margin: 1rem 0 0.5rem 0; font-size: 1rem; }
-        .faq-answer ul { margin: 0.5rem 0; padding-left: 1.5rem; }
-        .faq-answer li { margin-bottom: 0.3rem; }
-        .faq-image { background: #f0f0f0; border-radius: 8px; padding: 2rem; text-align: center; margin: 1rem 0; color: #666; border: 2px dashed #ccc; }
-        .faq-image img { max-width: 100%; border-radius: 4px; }
-        .faq-warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
-        .faq-tip { background: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
-        .faq-product-box { background: linear-gradient(135deg, #e8f4f8 0%, #d4ecf0 100%); border: 2px solid #4cc9f0; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
-        .faq-product-box h3 { color: #1a1a2e; margin-top: 0; }
-        .faq-contact { background: #1a1a2e; color: white; padding: 1.5rem; border-radius: 8px; text-align: center; margin-top: 2rem; }
-        .faq-contact h3 { color: #4cc9f0; margin-top: 0; }
-        .faq-summary { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-    </style>
+
 </head>
+
 <body>
+
     <header>
+
         <nav>
+
             <a href="/" class="logo">深圳市江图科技有限公司</a>
+
             <div class="nav-links">
+
                 <a href="/">首页</a>
+
                 <a href="/posts/">文章</a>
+
                 <a href="/about.html">关于</a>
+
             </div>
-            <div class="lang-switch">
-                <a href="/" lang="zh">中文</a> |
-                <a href="/en/" lang="en">English</a>
-            </div>
-        </nav>
+
+        
+
+        <div class="lang-switch">
+
+            <a href="/" lang="zh">中文</a> |
+
+            <a href="/en/" lang="en">English</a>
+
+        </div>
+
+    </nav>
+
     </header>
+
     <main>
+
         <article class="post">
+
             <h1>FANUC 0i系统显示器常见问题与解决方案</h1>
+
             <div class="meta">
+
                 <time datetime="2026-05-01">2026-05-01</time>
+
                 <span class="author">作者: kongto01</span>
+
             </div>
 
             <div class="content">
-                <div class="faq-container">
-                    <!-- 简介 -->
-                    <div class="faq-intro">
-                        <h2>关于本指南</h2>
-                        <p>FANUC 0i系列数控系统是国内市场应用最广泛的CNC控制系统之一。本指南针对显示器相关的<strong>12个常见问题</strong>提供详细解答，涵盖硬件故障排查、CRT升级LCD方案、系统兼容性等核心话题。</p>
-                        <p>无论您是设备维护工程师还是生产管理人员，都能在这里找到实用的故障处理思路。</p>
-                    </div>
 
-                    <!-- 目录 -->
-                    <div class="faq-toc">
-                        <h3>问题导航</h3>
-                        <ol>
-                            <li><a href="#display">一、显示异常问题</a> — 无图像、花屏、颜色失真</li>
-                            <li><a href="#brightness">二、亮度与背光问题</a> — 亮度调节失效、过温报警</li>
-                            <li><a href="#upgrade">三、CRT升级LCD</a> — 兼容性、参数保存、双屏方案</li>
-                            <li><a href="#maintenance">四、日常维护</a> — 拆装要点、故障判断</li>
-                        </ol>
-                    </div>
+                <h2>FANUC 0i 系统显示器常见问题与解决方案</h2><p>| 编号 | 问题 | 简要答案 |
 
-                    <!-- 第一类：显示异常 -->
-                    <div class="faq-category" id="display">
-                        <h3 class="faq-category-title">一、显示异常问题</h3>
+|------|------|----------|
 
-                        <div class="faq-item">
-                            <div class="faq-question">显示器无图像，如何快速定位故障？</div>
-                            <div class="faq-answer">
-                                <p>显示器黑屏是最常见的故障之一，按以下步骤排查：</p>
-                                <div class="faq-image">
-                                    <img src="/images/A61L-0001-0093_connectors.jpg" alt="A61L-0001-0093 显示器接口示意" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 显示器接口接线图示</p>'">
-                                </div>
-                                <h4>排查步骤</h4>
-                                <ul>
-                                    <li><strong>第1步：检查电源</strong> — 确认控制柜内24V DC供电正常，电源指示灯是否亮起</li>
-                                    <li><strong>第2步：检查排线</strong> — 确认A61L-0001-0093 LCD与控制器的排线连接牢固，无松动</li>
-                                    <li><strong>第3步：排除显示器故障</strong> — 如有备用显示器可交叉测试，确认是否为LCD本身损坏</li>
-                                </ul>
-                                <div class="faq-tip">
-                                    <strong>推荐方案</strong>：直接更换为江图科技提供的 <strong>FANUC A61L-0001-0093 LCD液晶显示器</strong>，采用原厂标准30-pin接口，即插即用，彻底解决兼容性问题。
-                                </div>
-                            </div>
-                        </div>
+| 1 | FANUC 0i 控制器为何会出现 <strong>显示器无图像</strong> 的情况？ | 常见原因包括电源供电不稳、显示器排线松动、LCD 本身故障或旧款 CRT 替代件未兼容。先检查电源指示灯，确认 24 V DC 正常；随后检查 A61L-0001-0093 LCD 与控制柜的排线连接是否牢固。若排线完好但仍无图像，建议更换为原厂 <strong>FANUC A61L-0001-0093 LCD液晶显示器</strong> 进行排除。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">显示器出现花屏或条纹，怎么处理？</div>
-                            <div class="faq-answer">
-                                <p>花屏通常由以下原因引起：</p>
-                                <div class="faq-image">
-                                    <img src="/images/CRT_scrambled_screen.jpg" alt="花屏故障示意" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 花屏故障示意</p>'">
-                                </div>
-                                <h4>常见原因</h4>
-                                <ul>
-                                    <li><strong>背光驱动故障</strong> — 背光电路烧毁或电容鼓包</li>
-                                    <li><strong>LCD面板老化</strong> — 内部显示线路受损</li>
-                                    <li><strong>排线接触不良</strong> — 信号传输中断</li>
-                                </ul>
-                                <div class="faq-warning">
-                                    <strong>注意</strong>：花屏问题一般无法通过软件修复，需要更换硬件。建议直接更换为 <strong>FANUC A61L-0001-0093 LCD</strong>，兼容0i全系列分辨率。
-                                </div>
-                            </div>
-                        </div>
+| 2 | 显示器出现 <strong>花屏 / 条纹</strong>，该如何处理？ | 花屏通常是背光驱动或 LCD 模块内部线路受损。先关闭电源，拆下显示器检查背光电路是否有烧毁痕迹；若背光正常，可能是 LCD 面板老化。此时更换为 <strong>FANUC A61L-0001-0093</strong> 可一次性解决，且兼容 0i‑Series 所有分辨率。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">CRT替换后系统提示"Display not recognized"怎么办？</div>
-                            <div class="faq-answer">
-                                <p>FANUC 0i系列在2005年后已默认使用LCD接口，直接替换CRT会出现识别问题：</p>
-                                <div class="faq-image">
-                                    <img src="/images/CRT_to_LCD_upgrade.jpg" alt="CRT升级LCD方案" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 CRT升级LCD对比图</p>'">
-                                </div>
-                                <h4>解决方案</h4>
-                                <ul>
-                                    <li><strong>方案A</strong>：使用专用CRT转LCD转换卡（需额外购买）</li>
-                                    <li><strong>方案B（推荐）</strong>：直接采用 <strong>A61L-0001-0093 LCD液晶显示器</strong>，使用原厂标准30-pin接口，无需任何转换设备</li>
-                                </ul>
-                            </div>
-                        </div>
+| 3 | 为什么在更换 CRT 显示器后，系统提示 <strong>“Display not recognized”</strong>？ | FANUC 0i 系列在 2005 年后已默认使用 LCD 接口，CRT 只能通过特定的转换卡使用。若直接替换，控制器会识别不到信号。推荐直接采用 <strong>FANUC A61L-0001-0093 LCD液晶显示器</strong>，它使用原厂标准的 30‑pin 接口，无需额外转换。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">更换LCD后出现颜色失真（偏蓝/偏红）</div>
-                            <div class="faq-answer">
-                                <p>颜色失真通常是LVDS信号线问题：</p>
-                                <h4>排查步骤</h4>
-                                <ul>
-                                    <li>检查排线是否有压痕、弯折或破损</li>
-                                    <li>确认排线两端接头是否完全插入</li>
-                                    <li>尝试使用原装专用排线套件</li>
-                                </ul>
-                                <div class="faq-tip">
-                                    <strong>小技巧</strong>：重新连接后，系统会自动校准颜色。如仍有问题，可能是显示器与控制器的LVDS信号时序不匹配，建议使用 <strong>FANUC原装A61L-0001-0093</strong>。
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+| 4 | <strong>LCD 升级</strong> 是否会影响系统参数或软件版本？ | 升级为官方 A61L‑0001‑0093 LCD 只涉及硬件层面，系统内部参数、宏程序、刀具补偿等均保持不变。升级后系统会自动进行一次自检并保存当前画面布局。 |
 
-                    <!-- 第二类：亮度与背光 -->
-                    <div class="faq-category" id="brightness">
-                        <h3 class="faq-category-title">二、亮度与背光问题</h3>
+| 5 | 显示器亮度调节无效，如何恢复正常？ | 0i 系统的亮度调节通过 <strong>SETUP → DISPLAY → BRIGHTNESS</strong> 实现。若调节后无变化，可能是 LCD 背光驱动电路失效。更换 <strong>FANUC A61L-0001-0093</strong>（内部已集成背光驱动）即可恢复调节功能。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">显示器亮度调节无效，怎么恢复正常？</div>
-                            <div class="faq-answer">
-                                <p>FANUC 0i系统的亮度调节路径：<code>SETUP → DISPLAY → BRIGHTNESS</code></p>
-                                <h4>如果调节后无变化：</h4>
-                                <ul>
-                                    <li>LCD背光驱动电路失效</li>
-                                    <li>驱动板与面板连接不良</li>
-                                    <li>背光灯管老化</li>
-                                </ul>
-                                <div class="faq-product-box">
-                                    <h3>推荐解决方案</h3>
-                                    <p>更换 <strong>FANUC A61L-0001-0093 LCD</strong>，内部已集成智能背光驱动，支持0i系统原生亮度调节协议，调节功能即插即用。</p>
-                                </div>
-                            </div>
-                        </div>
+| 6 | <strong>显示器异常关机</strong>，是否与电源噪声有关？ | 0i 控制柜内部的开关电源对瞬态噪声比较敏感。建议在显示器电源线上加装 <strong>EMI 抑制滤波器</strong>，或使用原厂提供的 <strong>防噪声接线盒</strong>。若噪声抑制后仍异常，考虑更换为 <strong>A61L-0001-0093 LCD</strong>，其内部电源稳压性能更好。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">显示器出现"over-temperature"过温报警</div>
-                            <div class="faq-answer">
-                                <p>0i系统在显示器温度超过70°C时会触发报警：</p>
-                                <div class="faq-image">
-                                    <img src="/images/control_cabinet_ventilation.jpg" alt="控制柜散热检查" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 控制柜散热检查示意</p>'">
-                                </div>
-                                <h4>处理步骤</h4>
-                                <ul>
-                                    <li><strong>第1步</strong>：检查机箱通风是否被堵塞</li>
-                                    <li><strong>第2步</strong>：清理散热风扇和过滤网</li>
-                                    <li><strong>第3步</strong>：确认环境温度是否超出规格</li>
-                                    <li><strong>第4步</strong>：如通风良好仍报警，更换内部热管理优化的显示器</li>
-                                </ul>
-                                <div class="faq-tip">
-                                    <strong>A61L-0001-0093</strong> 采用宽温设计（-20°C~+70°C），内部热管理优化，可有效避免过温报警。
-                                </div>
-                            </div>
-                        </div>
+| 7 | 如何判断 <strong>CRT 替代件</strong> 是否仍可继续使用？ | 检查以下三点：① 显示分辨率是否匹配（0i‑Series 常用 640×480）② 接口类型是否为 30‑pin LVDS（CRT 多为 VGA）③ 是否有明显的延迟或闪烁。若任一不符合，建议直接更换为 <strong>FANUC A61L-0001-0093</strong>，确保兼容性与可靠性。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">显示器异常关机，与电源噪声有关吗？</div>
-                            <div class="faq-answer">
-                                <p>0i控制柜内部的开关电源对瞬态噪声比较敏感：</p>
-                                <h4>建议措施</h4>
-                                <ul>
-                                    <li>在显示器电源线上加装 <strong>EMI抑制滤波器</strong></li>
-                                    <li>使用原厂提供的 <strong>防噪声接线盒</strong></li>
-                                    <li>检查接地是否可靠</li>
-                                </ul>
-                                <div class="faq-tip">
-                                    <strong>A61L-0001-0093 LCD</strong> 内部电源稳压性能更好，配备EMI滤波电路，可在强噪声环境下稳定运行。
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+| 8 | 更换显示器后系统提示 <strong>“LCD not found – using default screen”</strong>，该怎么办？ | 1) 确认排线方向和插槽编号（A、B、C 三路必须全部插入） 2) 检查排线是否有折痕或破损 3) 使用原厂 <strong>A61L-0001-0093</strong> 进行重新插拔，系统在开机自检时会重新识别。如果仍未识别，可能是控制器的显示卡故障，需要联系维修工程师。 |
 
-                    <!-- 第三类：CRT升级LCD -->
-                    <div class="faq-category" id="upgrade">
-                        <h3 class="faq-category-title">三、CRT升级LCD</h3>
+| 9 | 是否可以自行 <strong>拆装 A61L-0001-0093 LCD</strong>？ | 该显示器采用卡扣式背板和螺钉固定，具备可拆卸特性。拆装前务必断电，使用防静电手环；拆除时先取下前盖的 4 颗螺钉，轻拔排线卡扣。若不熟悉，建议让专业技术人员操作，以免损坏背光或 LVDS 接口。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">LCD升级会影响系统参数或软件版本吗？</div>
-                            <div class="faq-answer">
-                                <p><strong>不会。</strong>升级为A61L-0001-0093 LCD只涉及硬件层面：</p>
-                                <ul>
-                                    <li>系统内部参数保持不变</li>
-                                    <li>宏程序、刀具补偿数据完整保留</li>
-                                    <li>开机后系统自动保存当前画面布局</li>
-                                </ul>
-                                <div class="faq-image">
-                                    <img src="/images/FANUC_0i_system_panel.jpg" alt="FANUC 0i系统面板" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 FANUC 0i系统面板</p>'">
-                                </div>
-                            </div>
-                        </div>
+| 10 | <strong>LCD 升级后</strong>，画面出现颜色失真（偏蓝/偏红）怎么办？ | 颜色失真往往是 LVDS 信号线阻抗不匹配或排线损伤导致的。检查排线是否压痕、弯折；若排线完好，尝试更换为 <strong>FANUC 原装 A61L-0001-0093</strong> 附带的专用排线套件。重新连接后，系统会自动校准颜色。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">如何判断CRT替代件是否仍可继续使用？</div>
-                            <div class="faq-answer">
-                                <p>检查以下三个关键指标：</p>
-                                <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
-                                    <tr style="background:#f0f0f0;">
-                                        <th style="padding:0.5rem; border:1px solid #ddd;">检查项目</th>
-                                        <th style="padding:0.5rem; border:1px solid #ddd;">标准要求</th>
-                                        <th style="padding:0.5rem; border:1px solid #ddd;">备注</th>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">分辨率</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">640×480 或更高</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">0i-Series常用640×480</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">接口类型</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">30-pin LVDS</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">CRT多为VGA接口</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">显示质量</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">无延迟、无闪烁</td>
-                                        <td style="padding:0.5rem; border:1px solid #ddd;">老化会导致闪烁</td>
-                                    </tr>
-                                </table>
-                                <p>如任一不符合，建议更换为 <strong>FANUC A61L-0001-0093</strong>。</p>
-                            </div>
-                        </div>
+| 11 | 想在 0i 系统上使用 <strong>双屏显示</strong>，需要哪些配件？ | FANUC 0i 本身只支持单一路径的 LCD。若需双屏，需要在控制柜内加装 <strong>第二块显示卡（FANUC DCS‑II）</strong> 并配合两块 <strong>A61L-0001-0093</strong> LCD 使用。双屏方案可实现主画面 + 辅助画面（如刀具库、参数编辑），但需额外软件授权。 |
 
-                        <div class="faq-item">
-                            <div class="faq-question">想在0i系统上使用双屏显示，需要什么配件？</div>
-                            <div class="faq-answer">
-                                <p>FANUC 0i本身只支持单一LCD输出，实现双屏需要：</p>
-                                <ul>
-                                    <li><strong>第二块显示卡</strong>（FANUC DCS-II）</li>
-                                    <li><strong>两块A61L-0001-0093 LCD</strong></li>
-                                </ul>
-                                <h4>双屏功能</h4>
-                                <ul>
-                                    <li>主画面：实时加工监控</li>
-                                    <li>副画面：刀具库、参数编辑</li>
-                                </ul>
-                                <div class="faq-warning">
-                                    <strong>注意</strong>：双屏方案需要额外软件授权，请联系FANUC或江图科技获取报价。
-                                </div>
-                            </div>
-                        </div>
+| 12 | 显示器出现 <strong>“over‑temperature”</strong> 警告，如何处理？ | 0i 系统在显示器温度超过 70 °C 时会报警。检查机箱通风是否被堵塞，清理散热风扇和过滤网；若通风良好仍报警，可能是 LCD 内部背光发热异常，更换 <strong>FANUC A61L-0001-0093</strong>（内部热管理优化）即可根除。 |</p><p>> <strong>温馨提示</strong>：以上所有故障排查均建议在断电状态下进行，使用专业生产研发销售公司产品江图科技 <strong>FANUC A61L-0001-0093 LCD液晶显示器</strong> 替换，以确保系统的长期稳定运行。</p>
 
-                        <div class="faq-item">
-                            <div class="faq-question">系统提示"LCD not found – using default screen"怎么处理？</div>
-                            <div class="faq-answer">
-                                <p>按以下步骤操作：</p>
-                                <h4>排查清单</h4>
-                                <ul>
-                                    <li>确认排线方向和插槽编号（A、B、C三路必须全部插入）</li>
-                                    <li>检查排线是否有折痕或破损</li>
-                                    <li>使用原厂 <strong>A61L-0001-0093</strong> 进行重新插拔</li>
-                                    <li>系统在开机自检时会重新识别显示器</li>
-                                </ul>
-                                <div class="faq-warning">
-                                    <strong>如仍未识别</strong>：可能是控制器显示卡故障，需要联系专业维修工程师检测。
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 第四类：日常维护 -->
-                    <div class="faq-category" id="maintenance">
-                        <h3 class="faq-category-title">四、日常维护</h3>
-
-                        <div class="faq-item">
-                            <div class="faq-question">可以自行拆装A61L-0001-0093 LCD吗？</div>
-                            <div class="faq-answer">
-                                <p>该显示器采用卡扣式背板和螺钉固定，具备可拆卸特性：</p>
-                                <div class="faq-image">
-                                    <img src="/images/LCD_mounting_diagram.jpg" alt="LCD安装示意图" onerror="this.parentElement.innerHTML='<p style=\'color:#999;\'>📷 LCD安装示意图</p>'">
-                                </div>
-                                <h4>拆装注意事项</h4>
-                                <ul>
-                                    <li><strong>断电操作</strong>：务必先关闭控制柜电源</li>
-                                    <li><strong>防静电</strong>：佩戴防静电手环</li>
-                                    <li><strong>轻拿轻放</strong>：拆除时先取下前盖的4颗螺钉</li>
-                                    <li><strong>保护排线</strong>：轻拔排线卡扣，避免弯折</li>
-                                </ul>
-                                <div class="faq-warning">
-                                    <strong>提醒</strong>：如不熟悉操作，建议让专业技术人员进行，以免损坏背光或LVDS接口。
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 总结 -->
-                    <div class="faq-summary">
-                        <h3>快速参考表</h3>
-                        <table style="width:100%; border-collapse: collapse;">
-                            <tr style="background:#1a1a2e; color:white;">
-                                <th style="padding:0.75rem; border:1px solid #333;">问题类型</th>
-                                <th style="padding:0.75rem; border:1px solid #333;">推荐解决方案</th>
-                            </tr>
-                            <tr>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">无图像/黑屏</td>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">检查电源→检查排线→更换A61L-0001-0093 LCD</td>
-                            </tr>
-                            <tr style="background:#f8f9fa;">
-                                <td style="padding:0.5rem; border:1px solid #ddd;">花屏/条纹</td>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">检查背光驱动→更换显示器</td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">亮度调节失效</td>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">更换A61L-0001-0093 LCD（集成背光驱动）</td>
-                            </tr>
-                            <tr style="background:#f8f9fa;">
-                                <td style="padding:0.5rem; border:1px solid #ddd;">CRT升级LCD</td>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">直接使用A61L-0001-0093，无需转换卡</td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">过温报警</td>
-                                <td style="padding:0.5rem; border:1px solid #ddd;">检查通风→清理风扇→更换宽温显示器</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <!-- 联系方式 -->
-                    <div class="faq-contact">
-                        <h3>需要技术支持？</h3>
-                        <p>如需获取 <strong>FANUC A61L-0001-0093 LCD液晶显示器</strong> 或现场方案评估，欢迎联系江图科技。</p>
-                        <p><strong>📞 电话</strong>：13686889647 &nbsp;&nbsp; <strong>📧 邮箱</strong>：1251701967@qq.com</p>
-                    </div>
-                </div>
             </div>
+
         </article>
+
     </main>
+
     <footer>
+
         <p>&copy; 深圳市江图科技有限公司. 专注工业视频显示解决方案.</p>
+
         <p>本站内容采用 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 许可.</p>
+
     </footer>
+
 <script>
+
 (function(){
+
     var bp = document.createElement('script');
+
     var curProtocol = window.location.protocol.split(':')[0];
+
     if (curProtocol === 'https') {
+
         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
     } else {
+
         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
     }
+
     var s = document.getElementsByTagName("script")[0];
+
     s.parentNode.insertBefore(bp, s);
+
 })();
+
 </script>
+
 </body>
+
 </html>
