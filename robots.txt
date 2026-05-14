@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://szkongto.github.io/kongto-blog/sitemap.xml
+Sitemap: https://cncdisplay.com/sitemap.xml
 
 # Baiduspider specific rules
 User-agent: Baiduspider
