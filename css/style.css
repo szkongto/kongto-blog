@@ -252,10 +252,16 @@ main { max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
     padding: 2rem;
     transition: all 0.35s ease;
     cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 .article-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+.article-card:hover h3 {
+    color: #667eea;
 }
 .article-tag {
     display: inline-block;
