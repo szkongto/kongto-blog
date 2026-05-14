@@ -6,28 +6,45 @@
     <title>CGA/EGA显示器改造为RGBHV工业显示器实战指南   | 深圳市江图科技有限公司</title>
     <meta name="description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
     <meta name="keywords" content="FANUC A61L-0001-0093,FANUC CRT 升级 LCD,FANUC数控显示器替代,A61L-0001-0093 LCD,FANUC显示器维修">
-    <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://cncdisplay.com/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html">
+    <meta name="author" content="江图科技">
+    <link rel="canonical" href="https://cncdisplay.com/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="CGA/EGA显示器改造为RGBHV工业显示器实战指南  ">
     <meta property="og:description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/cga_ega_to_rgbhv_banner.jpg">
     <meta property="og:site_name" content="深圳市江图科技有限公司">
     <meta property="article:published_time" content="2026-05-01">
-    <meta property="article:author" content="kongto01">
+    <meta property="article:author" content="江图科技">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CGA/EGA显示器改造为RGBHV工业显示器实战指南  ">
     <meta name="twitter:description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/css/style.css?v=2">
+    
+    <style>
+        .spec-table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14px; }
+        .spec-table th { background:#667eea; color:#fff; padding:10px 12px; text-align:left; }
+        .spec-table td { border:1px solid #ddd; padding:9px 12px; vertical-align:top; }
+        .spec-table tr:nth-child(even) td { background:#f9f9ff; }
+        .spec-table tr:hover td { background:#eef0ff; }
+        .article-image { text-align:center; margin:24px 0; }
+        .article-image img { max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.12); }
+        .img-caption { font-size:13px; color:#666; margin-top:8px; font-style:italic; }
+        .info-box { background:#e8f4fd; border-left:4px solid #2196F3; padding:14px 18px; margin:18px 0; border-radius:0 8px 8px 0; }
+        .warning-box { background:#fff3e0; border-left:4px solid #ff9800; padding:14px 18px; margin:18px 0; border-radius:0 8px 8px 0; }
+        .success-box { background:#e8f5e9; border-left:4px solid #4caf50; padding:14px 18px; margin:18px 0; border-radius:0 8px 8px 0; }
+        .case-box { background:#f3e5f5; border-left:4px solid #9c27b0; padding:14px 18px; margin:18px 0; border-radius:0 8px 8px 0; }
+    </style>
+
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "CGA/EGA显示器改造为RGBHV工业显示器实战指南  ",
   "description": "本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。",
-  "author": {"@type": "Person", "name": "kongto01"},
-  "publisher": {"@type": "Organization", "name": "深圳市江图科技有限公司", "url": "https://szkongto.github.io/kongto-blog"},
+  "author": {"@type": "Person", "name": "江图科技"},
+  "publisher": {"@type": "Organization", "name": "深圳市江图科技有限公司", "url": "https://cncdisplay.com"},
   "datePublished": "2026-05-01"
 }</script>
-    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html" />
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html" />
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html" />
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
 </head>
@@ -52,49 +69,253 @@
             <h1>CGA/EGA显示器改造为RGBHV工业显示器实战指南  </h1>
             <div class="meta">
                 <time datetime="2026-05-01">2026-05-01</time>
-                <span class="author">作者: kongto01</span>
+                <span class="author">作者: 江图科技</span>
             </div>
             <div class="content">
-                <p>> <strong>关键词</strong>：CGA显示器、EGA显示器、工业显示器RGBHV改造、工业视频转换器  </p><p>> <strong>目标读者</strong>：CNC数控工程师、设备维修人员、工控系统集成商、工业自动化采购  </p><p>> <strong>文档结构</strong>  
+                <p><strong>关键词</strong>：CGA显示器、EGA显示器、工业显示器RGBHV改造、工业视频转换器  </p><p><strong>目标读者</strong>：CNC数控工程师、设备维修人员、工控系统集成商、工业自动化采购  </p><p><strong>文档结构</strong>  
 > 1. 改造需求与背景分析  
 > 2. 转换器选型要点  
 > 3. 改造实施步骤  
 > 4. 效果评估与维护  
-> 5. 要点总结  </p><p>---  </p><h2>1. 改造需求与背景分析  </h2><h3>1.1 老旧显示设备在工业现场的现状  </h3><p>| 行业 | 常见老旧显示设备 | 使用年限 (平均) | 主要痛点 |
-|------|----------------|----------------|----------|
-| CNC数控机床 | CGA / EGA CRT 显示器 | 12‑18 年 | 接口老旧、分辨率低、功耗大、体积笨重 |
-| PLC 控制柜 | 旧式工业监视器 | 10‑15 年 | 难以兼容现代上位机、维护成本高 |
-| 自动化生产线 | 旧式图像采集显示 | 8‑13 年 | 信号衰减、抗干扰差、维修频繁 |</p><p>> <strong>数据来源</strong>：2023 年《中国工业自动化设备维修报告》显示，超过 38% 的中小型制造企业仍在使用 1990‑2000 年间的 CGA/EGA 显示器，且每台年均维修成本约 1,200 元人民币。</p><h3>1.2 改造的核心目标  </h3><p>| 目标 | 关键指标 | 预期收益 |
-|------|----------|----------|
-| 信号兼容性 | 将 CGA/EGA 复合信号升级为 RGBHV (VGA) | 兼容现代工控机、工业相机 |
-| 稳定性 | 7×24 小时连续运行，误码率 < 0.01% | 降低停机时间 |
-| 成本控制 | 单台改造成本 ≤ 1,200 元（含转换器、线缆、人工） | 投资回报期 ≤ 12 个月 |
-| 环境适应性 | 工作温度 -20℃~+70℃，宽压 12‑36 VDC | 满足恶劣工厂环境需求 |</p><h3>1.3 为什么不直接更换为工业液晶显示器？  </h3><p>| 方案 | 初始投入 | 维护成本 | 安装周期 | 兼容性 | 备注 |
-|------|----------|----------|----------|--------|------|
-| <strong>直接更换为工控专用显示器</strong> | 2,500–4,500 元/台 | 低（厂家保修） | 1–2 天（需重新布线） | 完全兼容 | 需要拆除旧 CRT、重新布线、可能影响已有机箱结构 |
-| <strong>改造为 RGBHV 显示</strong> | 800–1,200 元/台（转换器+配件） | 中等（转换器寿命 5 年） | 4–6 小时（现场即插即用） | 完全兼容 | 复用原有显示器外壳、减小改动幅度、降低停机时间 |</p><p>> <strong>结论</strong>：在预算受限、改造窗口期短的项目中，<strong>CGA/EGA → RGBHV 改造</strong> 是性价比最高的方案。</p><p>---  </p><h2>2. 转换器选型要点  </h2><h3>2.1 核心技术参数  </h3><p>| 参数 | 推荐值 | 说明 |
-|------|--------|------|
-| 输入信号 | CGA (15 kHz × 60 Hz) / EGA (25 kHz × 70 Hz) | 支持标准 CGA/EGA 时序 |
-| 输出信号 | RGBHV (VGA 640×480@60 Hz、800×600@60 Hz) | 可选 3‑5 种分辨率 |
-| 像素时钟 | 25 MHz‑40 MHz | 满足 VGA 最高 800×600 |
-| 支持宽温 | -20 ℃~+70 ℃ | 工业级环境 |
-| 工作电压 | 12‑36 VDC（可选 24 V） | 与 PLC/电源柜兼容 |
-| 电磁兼容 (EMC) | IEC/EN 61326‑1 Class 2 | 抗干扰能力强 |
-| 输入/输出阻抗 | 75 Ω（CGA/EGA）/ 75 Ω（RGBHV) | 防止信号反射 |
-| 供电方式 | 即插即用、无外部驱动 | 现场快速部署 |
-| 可靠性 | MTBF ≥ 50,000 h | 7×24 h 连续运行 |</p><p>> <strong>产品推荐</strong>：江图科技 <strong>工业视频信号转换器（CGA/EGA → RGBHV）</strong>（型号：JTX‑CVR‑001），符合上述全部指标，已通过 CE、UL、ISO9001 认证。</p><h3>2.2 与竞品的对比  </h3><p>| 项目 | 江图工业视频转换器 | 传统消费级 HDMI‑to‑VGA 适配器 | 竞争对手工业显示器 (内置转换) |
-|------|-------------------|------------------------------|------------------------------|
-| 支持信号 | CGA/EGA → RGBHV | HDMI → VGA（不支持 CGA/EGA） | 直接输出 VGA（需更换显示器） |
-| 温度范围 | -20℃~+70℃ | 0℃~+45℃ | -10℃~+60℃ |
-| 电源 | 12‑36 VDC（宽压） | 5 V USB | 12 V DC |
-| MTBF | ≥ 50,000 h | 10,000 h | 30,000 h |
-| 即插即用 | ✔ | 部分需驱动 | ✔ |
-| 成本（单台） | 约 850 元 | 约 120 元（不适用） | 约 2,800 元 |</p><p>> <strong>结论</strong>：在老旧 CGA/EGA 环境下，唯一能直接接入的工业级方案是 <strong>江图视频转换器</strong>，其在温度、供电、可靠性方面均优于消费级适配器，并且成本远低于更换整机显示器。</p><p>---  </p><h2>3. 改造实施步骤  </h2><p>> <strong>安全提示</strong>：所有操作必须在断电状态下进行，佩戴防静电手环，遵守企业现场安全规范。</p><h3>3.1 前期准备  </h3><p>| 项目 | 内容 | 关键点 |
-|------|------|--------|
-| 现场勘查 | 记录显示器型号、尺寸、外壳结构、供电方式 | 确认是否为 CGA（15 kHz）或 EGA（25 kHz） |
-| 设备清单 | 转换器、BNC‑to‑RCA 线、VGA‑to‑D‑Sub 线、螺丝刀、绝缘胶带 | 建议预留 10% 备件 |
-| 电源检查 | 确认供电电压范围（12‑24 V） | 如超出范围，准备 DC‑DC 降压模块 |
-| 环境评估 | 温度、湿度、振动 | 如温度 > 60℃，选用加装散热片的转换器型号 |</p><h3>3.2 硬件接线  </h3><p>1. <strong>拆除旧显示器的信号线</strong>  
+> 5. 要点总结  </p><hr>
+            <div class="article-image">
+                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/cga_ega_crt_display.jpg" alt="CGA/EGA CRT 工业显示器实物图">
+                <p class="img-caption">CGA/EGA 标准工业 CRT 显示器（改造前）</p>
+            </div>
+
+            <h2>1. 改造需求与背景分析  </h2><h3>1.1 老旧显示设备在工业现场的现状  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>行业</th>
+    <th>常见老旧显示设备</th>
+    <th>使用年限 (平均)</th>
+    <th>主要痛点</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>CNC数控机床</td>
+      <td>CGA / EGA CRT 显示器</td>
+      <td>12‑18 年</td>
+      <td>接口老旧、分辨率低、功耗大、体积笨重</td>
+    </tr>
+    <tr>
+      <td>PLC 控制柜</td>
+      <td>旧式工业监视器</td>
+      <td>10‑15 年</td>
+      <td>难以兼容现代上位机、维护成本高</td>
+    </tr>
+    <tr>
+      <td>自动化生产线</td>
+      <td>旧式图像采集显示</td>
+      <td>8‑13 年</td>
+      <td>信号衰减、抗干扰差、维修频繁</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>数据来源</strong>：2023 年《中国工业自动化设备维修报告》显示，超过 38% 的中小型制造企业仍在使用 1990‑2000 年间的 CGA/EGA 显示器，且每台年均维修成本约 1,200 元人民币。</p><h3>1.2 改造的核心目标  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>目标</th>
+    <th>关键指标</th>
+    <th>预期收益</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>信号兼容性</td>
+      <td>将 CGA/EGA 复合信号升级为 RGBHV (VGA)</td>
+      <td>兼容现代工控机、工业相机</td>
+    </tr>
+    <tr>
+      <td>稳定性</td>
+      <td>7×24 小时连续运行，误码率 < 0.01%</td>
+      <td>降低停机时间</td>
+    </tr>
+    <tr>
+      <td>成本控制</td>
+      <td>单台改造成本 ≤ 1,200 元（含转换器、线缆、人工）</td>
+      <td>投资回报期 ≤ 12 个月</td>
+    </tr>
+    <tr>
+      <td>环境适应性</td>
+      <td>工作温度 -20℃~+70℃，宽压 12‑36 VDC</td>
+      <td>满足恶劣工厂环境需求</td>
+    </tr>
+  </tbody>
+</table>
+<h3>1.3 为什么不直接更换为工业液晶显示器？  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>方案</th>
+    <th>初始投入</th>
+    <th>维护成本</th>
+    <th>安装周期</th>
+    <th>兼容性</th>
+    <th>备注</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>直接更换为工控专用显示器</strong></td>
+      <td>2,500–4,500 元/台</td>
+      <td>低（厂家保修）</td>
+      <td>1–2 天（需重新布线）</td>
+      <td>完全兼容</td>
+      <td>需要拆除旧 CRT、重新布线、可能影响已有机箱结构</td>
+    </tr>
+    <tr>
+      <td><strong>改造为 RGBHV 显示</strong></td>
+      <td>800–1,200 元/台（转换器+配件）</td>
+      <td>中等（转换器寿命 5 年）</td>
+      <td>4–6 小时（现场即插即用）</td>
+      <td>完全兼容</td>
+      <td>复用原有显示器外壳、减小改动幅度、降低停机时间</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>结论</strong>：在预算受限、改造窗口期短的项目中，<strong>CGA/EGA → RGBHV 改造</strong> 是性价比最高的方案。</p><hr>
+            <div class="article-image">
+                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/video_signal_converter.jpg" alt="工业视频信号转换器 JTX-CVR-001">
+                <p class="img-caption">江图科技 JTX-CVR-001 工业视频信号转换器（CGA/EGA → RGBHV）</p>
+            </div>
+
+            <h2>2. 转换器选型要点  </h2><h3>2.1 核心技术参数  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>参数</th>
+    <th>推荐值</th>
+    <th>说明</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>输入信号</td>
+      <td>CGA (15 kHz × 60 Hz) / EGA (25 kHz × 70 Hz)</td>
+      <td>支持标准 CGA/EGA 时序</td>
+    </tr>
+    <tr>
+      <td>输出信号</td>
+      <td>RGBHV (VGA 640×480@60 Hz、800×600@60 Hz)</td>
+      <td>可选 3‑5 种分辨率</td>
+    </tr>
+    <tr>
+      <td>像素时钟</td>
+      <td>25 MHz‑40 MHz</td>
+      <td>满足 VGA 最高 800×600</td>
+    </tr>
+    <tr>
+      <td>支持宽温</td>
+      <td>-20 ℃~+70 ℃</td>
+      <td>工业级环境</td>
+    </tr>
+    <tr>
+      <td>工作电压</td>
+      <td>12‑36 VDC（可选 24 V）</td>
+      <td>与 PLC/电源柜兼容</td>
+    </tr>
+    <tr>
+      <td>电磁兼容 (EMC)</td>
+      <td>IEC/EN 61326‑1 Class 2</td>
+      <td>抗干扰能力强</td>
+    </tr>
+    <tr>
+      <td>输入/输出阻抗</td>
+      <td>75 Ω（CGA/EGA）/ 75 Ω（RGBHV)</td>
+      <td>防止信号反射</td>
+    </tr>
+    <tr>
+      <td>供电方式</td>
+      <td>即插即用、无外部驱动</td>
+      <td>现场快速部署</td>
+    </tr>
+    <tr>
+      <td>可靠性</td>
+      <td>MTBF ≥ 50,000 h</td>
+      <td>7×24 h 连续运行</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>产品推荐</strong>：江图科技 <strong>工业视频信号转换器（CGA/EGA → RGBHV）</strong>（型号：JTX‑CVR‑001），符合上述全部指标，已通过 CE、UL、ISO9001 认证。</p><h3>2.2 与竞品的对比  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>项目</th>
+    <th>江图工业视频转换器</th>
+    <th>传统消费级 HDMI‑to‑VGA 适配器</th>
+    <th>竞争对手工业显示器 (内置转换)</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>支持信号</td>
+      <td>CGA/EGA → RGBHV</td>
+      <td>HDMI → VGA（不支持 CGA/EGA）</td>
+      <td>直接输出 VGA（需更换显示器）</td>
+    </tr>
+    <tr>
+      <td>温度范围</td>
+      <td>-20℃~+70℃</td>
+      <td>0℃~+45℃</td>
+      <td>-10℃~+60℃</td>
+    </tr>
+    <tr>
+      <td>电源</td>
+      <td>12‑36 VDC（宽压）</td>
+      <td>5 V USB</td>
+      <td>12 V DC</td>
+    </tr>
+    <tr>
+      <td>MTBF</td>
+      <td>≥ 50,000 h</td>
+      <td>10,000 h</td>
+      <td>30,000 h</td>
+    </tr>
+    <tr>
+      <td>即插即用</td>
+      <td>✔</td>
+      <td>部分需驱动</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>成本（单台）</td>
+      <td>约 850 元</td>
+      <td>约 120 元（不适用）</td>
+      <td>约 2,800 元</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>结论</strong>：在老旧 CGA/EGA 环境下，唯一能直接接入的工业级方案是 <strong>江图视频转换器</strong>，其在温度、供电、可靠性方面均优于消费级适配器，并且成本远低于更换整机显示器。</p><hr>
+            <div class="article-image">
+                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/cga_to_rgbhv_wiring_diagram.jpg" alt="CGA 转 RGBHV 接线示意图">
+                <p class="img-caption">CGA/EGA 转 RGBHV 接线示意图（BNC → VGA）</p>
+            </div>
+
+            <h2>3. 改造实施步骤  </h2><p><strong>安全提示</strong>：所有操作必须在断电状态下进行，佩戴防静电手环，遵守企业现场安全规范。</p><h3>3.1 前期准备  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>项目</th>
+    <th>内容</th>
+    <th>关键点</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>现场勘查</td>
+      <td>记录显示器型号、尺寸、外壳结构、供电方式</td>
+      <td>确认是否为 CGA（15 kHz）或 EGA（25 kHz）</td>
+    </tr>
+    <tr>
+      <td>设备清单</td>
+      <td>转换器、BNC‑to‑RCA 线、VGA‑to‑D‑Sub 线、螺丝刀、绝缘胶带</td>
+      <td>建议预留 10% 备件</td>
+    </tr>
+    <tr>
+      <td>电源检查</td>
+      <td>确认供电电压范围（12‑24 V）</td>
+      <td>如超出范围，准备 DC‑DC 降压模块</td>
+    </tr>
+    <tr>
+      <td>环境评估</td>
+      <td>温度、湿度、振动</td>
+      <td>如温度 > 60℃，选用加装散热片的转换器型号</td>
+    </tr>
+  </tbody>
+</table>
+<h3>3.2 硬件接线  </h3><p>1. <strong>拆除旧显示器的信号线</strong>  
    - CGA：通常为 9‑针 D‑sub（DB‑9）或 15‑针（DB‑15）  
    - EGA：15‑针（DB‑15）  
    - 记录针脚对应关系（参考附录 A）  </p><p>2. <strong>连接信号输入</strong>  
@@ -105,40 +326,216 @@
    - 转换器的 <strong>RGBHV</strong> 输出通过 <strong>VGA‑to‑D‑Sub</strong> 线连接至显示器内部的 <strong>VGA 接口</strong>（若为 CRT，需改装为 VGA 兼容的 <strong>RGBHV 接口板</strong>）  
    - 若显示器内部无 VGA 接口，可在显示器后盖预留 <strong>VGA 插槽</strong>，并使用 <strong>金属屏蔽盒</strong> 固定。  </p><p>5. <strong>固定与防护</strong>  
    - 使用 <strong>不锈钢螺丝</strong> 将转换器固定在显示器背板的螺孔上，防止震动脱落。  
-   - 对所有裸露的接线做 <strong>热缩管</strong> 包裹，防止短路。  </p><h3>3.3 软件调试（仅限有可调参数的转换器）  </h3><p>| 步骤 | 操作 | 说明 |
-|------|------|------|
-| 1 | 上电检查指示灯 | 绿灯常亮表示供电正常，黄灯闪烁表示信号检测 |
-| 2 | 切换分辨率 | 通过 <strong>拨码开关</strong> 或 <strong>旋钮</strong> 选择 640×480、800×600、1024×768（部分型号） |
-| 3 | 调整时序 | 如出现图像撕裂，可微调 <strong>行同步（V）</strong> 与 <strong>列同步（H）</strong> 延迟（±5 ns） |
-| 4 | 观察图像 | 确认无颜色偏移、无抖动、文字清晰 |  </p><p>> <strong>提示</strong>：大多数江图转换器为 <strong>即插即用</strong>，无需任何软件配置，以上调试仅在特殊现场（长距离传输、强电磁干扰）时使用。</p><h3>3.4 验证与交付  </h3><p>| 验证项目 | 判定标准 |
-|----------|----------|
-| 图像分辨率 | 与设定分辨率完全一致 |
-| 色彩准确度 | ΔE ≤ 3（使用色度计测量） |
-| 信号完整性 | 示波器测得抖动 ≤ 0.5 ns |
-| 稳定运行 | 连续 48 h 无掉帧或重启 |
-| 环境适应性 | 在现场最高温度下（+70℃）运行 8 h |  </p><p>完成上述检查后，填写《改造验收报告》，交付给现场负责人。</p><p>---  </p><h2>4. 效果评估与维护  </h2><h3>4.1 改造后性能对比（案例）  </h3><p><strong>案例 1 – 某汽车零部件厂 CNC 机床</strong>  </p><p>| 项目 | 改造前 (CGA) | 改造后 (RGBHV) | 改造收益 |
-|------|--------------|----------------|----------|
-| 分辨率 | 640×350 | 800×600 | 1.8× 视觉细节提升 |
-| 信号噪声 | 约 3 % 错误率 | < 0.01 % | 稳定性提升 300 倍 |
-| 能耗 | 120 W (CRT) | 30 W (CRT + 转换器) | 节能 75 % |
-| 维修次数 (年) | 6 次 | 1 次 | 维修成本 ↓ 83 % |
-| 停机时间 (h) | 12 h | 1 h | 生产效率提升 92 % |</p><p><strong>案例 2 – 某电子装配线 PLC 控制柜</strong>  </p><p>| 项目 | 改造前 (EGA) | 改造后 (RGBHV) | 备注 |
-|------|--------------|----------------|------|
-| 接口兼容性 | 仅支持专用上位机 | 支持标准 VGA、HDMI（经二级转换） | 可直接接入新监控系统 |
-| 抗干扰能力 | 高频噪声导致图像闪烁 | 无闪烁，符合 IEC 61326‑1 | 现场电磁环境 > 5 kV/m |
-| 使用寿命 | CRT 预计 2025 年报废 | 转换器 MTBF 5 年+，CRT 继续使用至 2028 年 | 延长整体系统寿命 3 年 |</p><h3>4.2 维护建议  </h3><p>| 维护项 | 周期 | 操作要点 |
-|--------|------|----------|
-| 外观检查 | 每月 | 检查螺丝松动、线缆磨损、指示灯异常 |
-| 电源检测 | 每季 | 用万用表测量供电电压，确认无波动 |
-| 信号完整性 | 每半年 | 用示波器检查 RGBHV 信号抖动、同步脉冲 |
-| 固件升级 | 如有 | 江图提供 USB 固件升级工具，建议在生产停机窗口进行 |
-| 清洁 | 每月 | 使用无尘布清理显示屏表面，避免灰尘进入内部散热孔 |</p><p>> <strong>备件管理</strong>：建议现场常备 <strong>转换器（1 台）+ BNC‑to‑RCA 线（2 条）+ VGA 线（2 条）</strong>，可在 2 h 内完成故障更换。</p><p>---  </p><h2>5. 要点总结  </h2><p>| 序号 | 关键要点 |
-|------|----------|
-| 1 | <strong>改造动因</strong>：老旧 CGA/EGA 显示器成本低、结构稳固，但接口不兼容现代设备。 |
-| 2 | <strong>选型核心</strong>：工业视频信号转换器必须满足宽温、宽压、75 Ω 阻抗匹配、7×24 h 可靠运行。江图的 JTX‑CVR‑001 完全符合。 |
-| 3 | <strong>实施步骤</strong>：①现场勘查 → ②信号、供电、输出接线 → ③（可选）参数微调 → ④功能验证。全流程约 4–6 小时完成。 |
-| 4 | <strong>实战效果</strong>：分辨率提升 1.5‑2 倍、功耗降低 70 % 以上、维修次数下降 80 % 以上，显著提升产线稼动率。 |
-| 5 | <strong>后期维护</strong>：定期检查供电、信号完整性、螺丝紧固；常备关键备件，实现 2 小时内快速恢复。 |</p><p>> <strong>结语</strong>：通过本实战指南，您可以在最小的资金投入和最短的停机窗口内，将已有的 CGA/EGA 老旧显示器升级为兼容现代工业系统的 RGBHV 显示终端。江图科技的工业视频信号转换器凭借 <strong>工业级设计、即插即用、宽温宽压</strong> 三大优势，已成为数控与工控领域老旧显示改造的首选方案。  </p><p>---  </p><p>*本文数据来源于江图科技内部测试报告、2023‑2024 年行业调研及实际项目案例，若需获取更详细的技术手册或报价，请联系深圳市江图科技有限公司商务部（电话：13686889647）。*  </p>
+   - 对所有裸露的接线做 <strong>热缩管</strong> 包裹，防止短路。  </p><h3>3.3 软件调试（仅限有可调参数的转换器）  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>步骤</th>
+    <th>操作</th>
+    <th>说明</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>上电检查指示灯</td>
+      <td>绿灯常亮表示供电正常，黄灯闪烁表示信号检测</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>切换分辨率</td>
+      <td>通过 <strong>拨码开关</strong> 或 <strong>旋钮</strong> 选择 640×480、800×600、1024×768（部分型号）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>调整时序</td>
+      <td>如出现图像撕裂，可微调 <strong>行同步（V）</strong> 与 <strong>列同步（H）</strong> 延迟（±5 ns）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>观察图像</td>
+      <td>确认无颜色偏移、无抖动、文字清晰</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>提示</strong>：大多数江图转换器为 <strong>即插即用</strong>，无需任何软件配置，以上调试仅在特殊现场（长距离传输、强电磁干扰）时使用。</p><h3>3.4 验证与交付  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>验证项目</th>
+    <th>判定标准</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>图像分辨率</td>
+      <td>与设定分辨率完全一致</td>
+    </tr>
+    <tr>
+      <td>色彩准确度</td>
+      <td>ΔE ≤ 3（使用色度计测量）</td>
+    </tr>
+    <tr>
+      <td>信号完整性</td>
+      <td>示波器测得抖动 ≤ 0.5 ns</td>
+    </tr>
+    <tr>
+      <td>稳定运行</td>
+      <td>连续 48 h 无掉帧或重启</td>
+    </tr>
+    <tr>
+      <td>环境适应性</td>
+      <td>在现场最高温度下（+70℃）运行 8 h</td>
+    </tr>
+  </tbody>
+</table>
+<p>完成上述检查后，填写《改造验收报告》，交付给现场负责人。</p><hr>
+            <div class="article-image">
+                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/rgbhv_upgrade_result.jpg" alt="RGBHV 改造后效果对比图">
+                <p class="img-caption">改造后 RGBHV 显示效果（左：改造前 CRT，右：改造后 LCD + 转换器）</p>
+            </div>
+
+            <h2>4. 效果评估与维护  </h2><h3>4.1 改造后性能对比（案例）  </h3><p><div class="case-box"><strong>📊 案例 1 – 某汽车零部件厂 CNC 机床</strong>  </p>
+<table class="spec-table">
+  <thead><tr>
+    <th>项目</th>
+    <th>改造前 (CGA)</th>
+    <th>改造后 (RGBHV)</th>
+    <th>改造收益</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>分辨率</td>
+      <td>640×350</td>
+      <td>800×600</td>
+      <td>1.8× 视觉细节提升</td>
+    </tr>
+    <tr>
+      <td>信号噪声</td>
+      <td>约 3 % 错误率</td>
+      <td>< 0.01 %</td>
+      <td>稳定性提升 300 倍</td>
+    </tr>
+    <tr>
+      <td>能耗</td>
+      <td>120 W (CRT)</td>
+      <td>30 W (CRT + 转换器)</td>
+      <td>节能 75 %</td>
+    </tr>
+    <tr>
+      <td>维修次数 (年)</td>
+      <td>6 次</td>
+      <td>1 次</td>
+      <td>维修成本 ↓ 83 %</td>
+    </tr>
+    <tr>
+      <td>停机时间 (h)</td>
+      <td>12 h</td>
+      <td>1 h</td>
+      <td>生产效率提升 92 %</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>案例 2 – 某电子装配线 PLC 控制柜</strong>  </p>
+<table class="spec-table">
+  <thead><tr>
+    <th>项目</th>
+    <th>改造前 (EGA)</th>
+    <th>改造后 (RGBHV)</th>
+    <th>备注</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>接口兼容性</td>
+      <td>仅支持专用上位机</td>
+      <td>支持标准 VGA、HDMI（经二级转换）</td>
+      <td>可直接接入新监控系统</td>
+    </tr>
+    <tr>
+      <td>抗干扰能力</td>
+      <td>高频噪声导致图像闪烁</td>
+      <td>无闪烁，符合 IEC 61326‑1</td>
+      <td>现场电磁环境 > 5 kV/m</td>
+    </tr>
+    <tr>
+      <td>使用寿命</td>
+      <td>CRT 预计 2025 年报废</td>
+      <td>转换器 MTBF 5 年+，CRT 继续使用至 2028 年</td>
+      <td>延长整体系统寿命 3 年</td>
+    </tr>
+  </tbody>
+</table>
+<h3>4.2 维护建议  </h3>
+<table class="spec-table">
+  <thead><tr>
+    <th>维护项</th>
+    <th>周期</th>
+    <th>操作要点</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>外观检查</td>
+      <td>每月</td>
+      <td>检查螺丝松动、线缆磨损、指示灯异常</td>
+    </tr>
+    <tr>
+      <td>电源检测</td>
+      <td>每季</td>
+      <td>用万用表测量供电电压，确认无波动</td>
+    </tr>
+    <tr>
+      <td>信号完整性</td>
+      <td>每半年</td>
+      <td>用示波器检查 RGBHV 信号抖动、同步脉冲</td>
+    </tr>
+    <tr>
+      <td>固件升级</td>
+      <td>如有</td>
+      <td>江图提供 USB 固件升级工具，建议在生产停机窗口进行</td>
+    </tr>
+    <tr>
+      <td>清洁</td>
+      <td>每月</td>
+      <td>使用无尘布清理显示屏表面，避免灰尘进入内部散热孔</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>备件管理</strong>：建议现场常备 <strong>转换器（1 台）+ BNC‑to‑RCA 线（2 条）+ VGA 线（2 条）</strong>，可在 2 h 内完成故障更换。</p><hr>
+            <div class="info-box">
+                <strong>📚 相关阅读：</strong>
+                <ul>
+                    <li><a href="/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html">工业视频信号转换器系列：CGA/EGA转VGA 解决方案</a></li>
+                    <li><a href="/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html">工业显示器 RGBHV 改造全攻略：从 CGA/EGA 到高清显示</a></li>
+                    <li><a href="/posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html">工业视频信号转换器选购指南</a></li>
+                </ul>
+            </div>
+
+            <h2>5. 要点总结  </h2>
+<table class="spec-table">
+  <thead><tr>
+    <th>序号</th>
+    <th>关键要点</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>改造动因</strong>：老旧 CGA/EGA 显示器成本低、结构稳固，但接口不兼容现代设备。</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>选型核心</strong>：工业视频信号转换器必须满足宽温、宽压、75 Ω 阻抗匹配、7×24 h 可靠运行。江图的 JTX‑CVR‑001 完全符合。</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>实施步骤</strong>：①现场勘查 → ②信号、供电、输出接线 → ③（可选）参数微调 → ④功能验证。全流程约 4–6 小时完成。</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>实战效果</strong>：分辨率提升 1.5‑2 倍、功耗降低 70 % 以上、维修次数下降 80 % 以上，显著提升产线稼动率。</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>后期维护</strong>：定期检查供电、信号完整性、螺丝紧固；常备关键备件，实现 2 小时内快速恢复。</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>结语</strong>：通过本实战指南，您可以在最小的资金投入和最短的停机窗口内，将已有的 CGA/EGA 老旧显示器升级为兼容现代工业系统的 RGBHV 显示终端。江图科技的工业视频信号转换器凭借 <strong>工业级设计、即插即用、宽温宽压</strong> 三大优势，已成为数控与工控领域老旧显示改造的首选方案。  </p><hr><p>*本文数据来源于江图科技内部测试报告、2023‑2024 年行业调研及实际项目案例，若需获取更详细的技术手册或报价，请联系深圳市江图科技有限公司商务部（电话：13686889647）。*  </p>
             </div>
         </article>
     </main>
