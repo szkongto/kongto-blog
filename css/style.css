@@ -158,8 +158,20 @@ main { max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
     gap: 2.5rem;
     font-size: 1.5rem;
     font-weight: 600;
+}
+.brand-link {
     color: #1d1d1f;
     opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.brand-link:hover {
+    opacity: 1;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    text-decoration: none;
 }
 
 /* ==================== 产品区域 ==================== */
