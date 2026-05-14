@@ -1,9 +1,16 @@
-/* 基础样式 */
+/* ==================== 基础样式 ==================== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-a { color: #0066cc; text-decoration: none; }
-a:hover { text-decoration: underline; }
-/* ==================== 增强版导航栏 ==================== */
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #1d1d1f; 
+    background: #fff; 
+    -webkit-font-smoothing: antialiased;
+}
+a { color: #0066cc; text-decoration: none; transition: color 0.2s; }
+a:hover { text-decoration: none; color: #0055aa; }
+
+/* ==================== 导航栏 ==================== */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 0;
@@ -16,28 +23,20 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 0.75rem 0;
+    padding: 0.85rem 0;
 }
 .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #fff;
-    letter-spacing: 0.3px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    letter-spacing: -0.3px;
     text-decoration: none;
     transition: opacity 0.2s;
 }
-.logo:hover {
-    opacity: 0.88;
-    text-decoration: none;
-}
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
+.logo:hover { opacity: 0.88; text-decoration: none; color: #fff; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; }
 .nav-links a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
@@ -65,48 +64,294 @@ nav {
     border-radius: 2px;
     transition: transform 0.25s ease;
 }
-.nav-links a:hover::after {
-    transform: translateX(-50%) scaleX(1);
-}
+.nav-links a:hover::after { transform: translateX(-50%) scaleX(1); }
 .lang-switch {
-    margin-left: 0.5rem;
+    margin-left: auto;
     padding: 0 0.75rem;
     font-size: 0.88rem;
     white-space: nowrap;
     border-left: 1px solid rgba(255,255,255,0.25);
 }
-.lang-switch a {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.2s;
-    font-weight: 500;
-}
-.lang-switch a:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.15);
-}
+.lang-switch a { color: rgba(255, 255, 255, 0.75); text-decoration: none; padding: 0.2rem 0.5rem; border-radius: 4px; transition: all 0.2s; font-weight: 500; }
+.lang-switch a:hover { color: #fff; background: rgba(255,255,255,0.15); }
 .lang-switch .lang-en { color: #a8d8ff; }
 .lang-switch .lang-zh { color: #ffd4a8; }
-.lang-switch .lang-en:hover { color: #fff; }
-.lang-switch .lang-zh:hover { color: #fff; }
-main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-footer {
+.lang-switch .divider { color: rgba(255,255,255,0.3); }
+
+/* ==================== 主内容区域 ==================== */
+main { max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ==================== Hero 区域 ==================== */
+.hero {
     text-align: center;
-    padding: 2rem;
-    color: #666;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 2rem;
+    padding: 7rem 0 6rem;
+    background: linear-gradient(180deg, #fbfbfd 0%, #fff 100%);
+}
+.hero-content { max-width: 680px; margin: 0 auto; }
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+    margin-bottom: 1.25rem;
+}
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: #86868b;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.hero-cta { display: flex; gap: 1rem; justify-content: center; }
+
+/* ==================== 按钮样式 ==================== */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 980px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.btn-primary {
+    background: #0071e3;
+    color: #fff !important;
+}
+.btn-primary:hover {
+    background: #0077ED;
+    text-decoration: none;
+    transform: scale(1.02);
+}
+.btn-secondary {
+    background: rgba(0,0,0,0.05);
+    color: #1d1d1f !important;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.btn-secondary:hover {
+    background: rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+.btn-large { padding: 1rem 2.5rem; font-size: 1.1rem; }
+
+/* ==================== 品牌展示 ==================== */
+.brands {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid #d2d2d7;
+    border-bottom: 1px solid #d2d2d7;
+    background: #f5f5f7;
+}
+.brands-label {
+    font-size: 0.85rem;
+    color: #86868b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+.brands-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    opacity: 0.8;
+}
+
+/* ==================== 产品区域 ==================== */
+.products {
+    padding: 5rem 0;
     background: #fff;
 }
-.hero { text-align: center; padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; margin: -2rem -2rem 2rem -2rem; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-.tagline { font-size: 1.2rem; opacity: 0.9; }
-.products { margin: 3rem 0; }
-.products h2 { margin-bottom: 1.5rem; }
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.product-card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+}
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #86868b;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.section-link { color: #0066cc; font-size: 0.95rem; }
+.section-link:hover { color: #0055aa; }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.product-card {
+    background: #f5f5f7;
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+.product-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #1d1d1f;
+}
+.product-card p {
+    font-size: 0.95rem;
+    color: #86868b;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+.product-card ul {
+    list-style: none;
+    font-size: 0.85rem;
+    color: #86868b;
+}
+.product-card ul li {
+    margin: 0.4rem 0;
+}
+.product-card ul li::before {
+    content: "✓ ";
+    color: #34c759;
+}
+
+/* ==================== 文章区域 ==================== */
+.articles {
+    padding: 5rem 0;
+    background: #f5f5f7;
+}
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.article-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2rem;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+.article-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    background: #667eea;
+    padding: 0.25rem 0.75rem;
+    border-radius: 980px;
+    margin-bottom: 1rem;
+}
+.article-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.article-card p {
+    font-size: 0.9rem;
+    color: #86868b;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.article-card time {
+    font-size: 0.8rem;
+    color: #86868b;
+}
+
+/* ==================== CTA 区域 ==================== */
+.cta {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    margin: 0 -1.5rem;
+}
+.cta h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+.cta p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    padding: 3rem 1.5rem;
+    background: #f5f5f7;
+    border-top: 1px solid #d2d2d7;
+}
+.footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-brand {
+    margin-bottom: 1.5rem;
+}
+.footer-logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.footer-brand p {
+    font-size: 0.85rem;
+    color: #86868b;
+    margin-top: 0.25rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+.footer-links a {
+    color: #515154;
+    font-size: 0.9rem;
+}
+.footer-links a:hover { color: #0066cc; }
+.footer-copy {
+    font-size: 0.75rem;
+    color: #86868b;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d2d2d7;
+}
+
+/* ==================== 原有样式兼容 ==================== */
+.products { margin: 0; }
+.product-grid { display: grid; }
 .product-card h3 { margin-bottom: 0.5rem; }
 .product-card ul { margin-top: 1rem; padding-left: 1.5rem; }
 .post-list { display: grid; gap: 1rem; }
@@ -124,18 +369,8 @@ footer {
 .article-img, .article-image { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
 .article-image img { max-width: 100%; height: auto; display: block; }
 .img-caption { font-size: 0.9rem; color: #666; text-align: center; margin-top: 0.5rem; margin-bottom: 1.5rem; }
-@media (max-width: 768px) {
-    .nav-links a { margin-left: 0; padding: 0.4rem 0.8rem; font-size: 0.9rem; }
-    .nav-links { gap: 0.15rem; }
-    main { padding: 1rem; }
-    .hero { padding: 2rem 1rem; }
-    .hero h1 { font-size: 1.8rem; }
-    header { padding: 0 1rem; }
-    .lang-switch { margin-left: 0.5rem; padding: 0 0.5rem; }
-    nav { flex-wrap: wrap; gap: 0.5rem; padding: 0.6rem 0; }
-}
 
-/* Downloads Page */
+/* ==================== 下载页面 ==================== */
 .download-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 .download-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-left: 4px solid #667eea; transition: transform 0.2s; }
 .download-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
@@ -146,189 +381,46 @@ footer {
 .download-btn:hover { background: #764ba2; text-decoration: none !important; }
 .related-link { color: #0066cc; font-size: 0.9rem; }
 
-.lang-switch {
-    margin-left: auto;
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-.lang-switch a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.2rem 0.5rem;
-}
-.lang-switch a:hover {
-    background: #f0f0f0;
-}
-.lang-switch .lang-en { color: #0066cc; }
-.lang-switch .lang-zh { color: #cc0000; }
+/* ==================== 分享按钮 ==================== */
+.share-buttons { margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef; }
+.share-title { font-size: 1rem; font-weight: 600; color: #333; margin-bottom: 1rem; }
+.share-icons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.share-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.2s ease; cursor: pointer; }
+.share-btn:hover { transform: translateY(-2px); text-decoration: none; }
+.share-btn svg { flex-shrink: 0; }
+.share-wechat { background: #07c160; color: #fff; }
+.share-wechat:hover { background: #06ad56; color: #fff; }
+.share-facebook { background: #1877f2; color: #fff; }
+.share-facebook:hover { background: #166fe5; color: #fff; }
+.share-twitter { background: #000; color: #fff; }
+.share-twitter:hover { background: #333; color: #fff; }
+.share-douyin { background: linear-gradient(135deg, #fe2c55, #25f4ee); color: #fff; }
+.share-douyin:hover { background: linear-gradient(135deg, #e0284d, #1fd9d4); color: #fff; }
+.share-youtube { background: #ff0000; color: #fff; }
+.share-youtube:hover { background: #cc0000; color: #fff; }
+.share-copy { background: #6c757d; color: #fff; }
+.share-copy:hover { background: #5a6268; color: #fff; }
+.wechat-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.wechat-modal-content { background: #fff; padding: 2rem; border-radius: 12px; text-align: center; max-width: 320px; }
+.wechat-modal-content h3 { margin-bottom: 1rem; color: #333; }
+.wechat-modal-content img { margin-bottom: 1rem; }
+.wechat-modal-content p { color: #666; margin-bottom: 1rem; font-size: 0.9rem; }
+.wechat-modal-content button { background: #07c160; color: #fff; border: none; padding: 0.5rem 2rem; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+.wechat-modal-content button:hover { background: #06ad56; }
+
+/* ==================== 响应式 ==================== */
 @media (max-width: 768px) {
-    .lang-switch { margin-left: 0; padding: 0.5rem 0; }
-    nav { flex-wrap: wrap; }
-}
-
-/* 社交分享按钮样式 */
-.share-buttons {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
-}
-
-.share-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.share-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.share-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.share-btn:hover {
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-.share-btn svg {
-    flex-shrink: 0;
-}
-
-/* 微信 - 绿色 */
-.share-wechat {
-    background: #07c160;
-    color: #fff;
-}
-.share-wechat:hover {
-    background: #06ad56;
-    color: #fff;
-}
-
-/* Facebook - 蓝色 */
-.share-facebook {
-    background: #1877f2;
-    color: #fff;
-}
-.share-facebook:hover {
-    background: #166fe5;
-    color: #fff;
-}
-
-/* Twitter - 黑色 */
-.share-twitter {
-    background: #000;
-    color: #fff;
-}
-.share-twitter:hover {
-    background: #333;
-    color: #fff;
-}
-
-/* 抖音 - 渐变 */
-.share-douyin {
-    background: linear-gradient(135deg, #fe2c55, #25f4ee);
-    color: #fff;
-}
-.share-douyin:hover {
-    background: linear-gradient(135deg, #e0284d, #1fd9d4);
-    color: #fff;
-}
-
-/* YouTube - 红色 */
-.share-youtube {
-    background: #ff0000;
-    color: #fff;
-}
-.share-youtube:hover {
-    background: #cc0000;
-    color: #fff;
-}
-
-/* 复制链接 - 灰色 */
-.share-copy {
-    background: #6c757d;
-    color: #fff;
-}
-.share-copy:hover {
-    background: #5a6268;
-    color: #fff;
-}
-
-/* 微信二维码弹窗 */
-.wechat-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.wechat-modal-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    max-width: 320px;
-}
-
-.wechat-modal-content h3 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.wechat-modal-content img {
-    margin-bottom: 1rem;
-}
-
-.wechat-modal-content p {
-    color: #666;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.wechat-modal-content button {
-    background: #07c160;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.wechat-modal-content button:hover {
-    background: #06ad56;
-}
-
-@media (max-width: 768px) {
-    .share-icons {
-        flex-direction: column;
-    }
-    
-    .share-btn {
-        width: 100%;
-        justify-content: center;
-    }
+    nav { flex-wrap: wrap; gap: 0.5rem; padding: 0.6rem 1rem; }
+    .nav-links { order: 3; width: 100%; justify-content: center; margin-top: 0.5rem; }
+    .lang-switch { margin-left: 0; border-left: none; padding: 0.5rem 0; }
+    .hero { padding: 4rem 0 3rem; }
+    .hero-title { font-size: 2.25rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+    .hero-cta { flex-direction: column; align-items: center; gap: 0.75rem; }
+    .section-title { font-size: 2rem; }
+    .product-grid, .article-grid { grid-template-columns: 1fr; }
+    .brands-grid { gap: 1.5rem; font-size: 1.2rem; }
+    .cta { padding: 4rem 1.5rem; }
+    .cta h2 { font-size: 2rem; }
+    .footer-links { flex-direction: column; gap: 1rem; }
 }
