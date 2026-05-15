@@ -31,6 +31,29 @@
       "datePublished": "2026-05-01"
     }
     </script>
+
+    <style>
+        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
+        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
+        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
+        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+        .spec-table .even-row {background:#f8fafc;}
+        .spec-table .odd-row {background:#fff;}
+        .spec-table tr:hover {background:#eff6ff;}
+        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+        .content {line-height:1.8;}
+        .content p {margin-bottom:1rem;}
+        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
+        .content h3 {margin-top:1.5rem;color:#475569;}
+        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
+        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
+        .related-links ul {margin:0;padding-left:20px;}
+        .related-links li {margin-bottom:8px;}
+    </style>
+
 </head>
 <body>
     <header>
@@ -57,9 +80,7 @@
             </div>
             <div class="content">
 
-
 <p><strong>Keywords</strong>: CGA to VGA converter, EGA to VGA converter, RGB to VGA, video signal conversion system</p>
-<hr>
 <h2>1. Overview of Signal Conversion Scenarios</h2>
 <p>Industrial video signal conversion is essential when upgrading legacy CNC displays to modern LCD monitors. This guide covers the three most common conversion scenarios:</p>
 <table>
@@ -68,8 +89,6 @@
 <tr><td>EGA to VGA</td><td>Digital TTL 22kHz</td><td>Analog RGBHV 31kHz</td><td>Digital-to-analog + scan rate conversion</td></tr>
 <tr><td>RGB to VGA</td><td>Analog RGBS/RGBHV</td><td>Analog RGBHV (standard VGA timing)</td><td>Sync separation + timing normalization</td></tr>
 </table>
-<hr>
-
 <h2>2. CGA to VGA Conversion</h2>
 <h3>2.1 Technical Details</h3>
 <p>CGA (Color Graphics Adapter) was introduced by IBM in 1981 and outputs 4-bit digital TTL signals at 15.75kHz horizontal frequency. To display CGA output on a modern VGA monitor:</p>
@@ -195,7 +214,13 @@
 })();
 </script>
 
-        </article>
+        <div class="related-links"><h4>相关阅读</h4><ul>
+<li><a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">Video Signal Converters in CNC Systems</a></li>
+<li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA Display Retrofit Guide</a></li>
+<li><a href="/en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">RGBHV Retrofit Complete Guide</a></li>
+<li><a href="/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">Troubleshooting & Repair Guide</a></li>
+</ul></div>
+</article>
     </main>
     <footer>
         <p>&copy; Kongto Technology Co., Ltd.</p>
