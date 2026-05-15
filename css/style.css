@@ -736,3 +736,668 @@ footer {
     font-size: 0.9rem;
 }
 .step-list li:first-child { border-top: 2px solid #667eea; padding-top: 1.25rem; }
+
+/* ================================================================
+   苹果风视觉体系 — 图片与版面协调性升级
+   设计原则：简洁、通透、有呼吸感、高级感
+   色彩：背景 #F5F5F7 / 正文 #1D1D1F / 强调 #FF6600
+   ================================================================ */
+
+/* ==================== CSS 变量 ==================== */
+:root {
+    --apple-bg: #F5F5F7;
+    --apple-bg-alt: #FBFBFD;
+    --apple-text: #1D1D1F;
+    --apple-text-secondary: #86868b;
+    --apple-accent: #FF6600;
+    --apple-accent-light: rgba(255, 102, 0, 0.1);
+    --apple-border: #d2d2d7;
+    --apple-card: #FFFFFF;
+    --apple-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --apple-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.10);
+    --apple-radius: 16px;
+    --apple-radius-sm: 10px;
+    --apple-max-width: 980px;
+}
+
+/* ==================== 文章页面全局升级 ==================== */
+.post {
+    background: var(--apple-card);
+    padding: 3rem 3.5rem;
+    border-radius: var(--apple-radius);
+    box-shadow: var(--apple-shadow);
+    max-width: var(--apple-max-width);
+    margin: 2.5rem auto;
+}
+.post h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--apple-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+}
+.post .meta {
+    color: var(--apple-text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--apple-border);
+}
+.post .content {
+    line-height: 1.85;
+    font-size: 1.05rem;
+    color: var(--apple-text);
+}
+.post .content p {
+    margin-bottom: 1.5rem;
+}
+.post h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--apple-text);
+    margin: 3rem 0 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--apple-accent);
+}
+.post h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    margin: 2rem 0 0.75rem;
+}
+.post h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    margin: 1.5rem 0 0.5rem;
+}
+.post .content a {
+    color: var(--apple-accent);
+    border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+    transition: all 0.2s ease;
+}
+.post .content a:hover {
+    color: #e55c00;
+    border-bottom-color: var(--apple-accent);
+}
+
+/* ==================== 图片规格体系 ==================== */
+
+/* 1. 内容主图 — 800x600，视觉焦点，通栏/居中 */
+.img-hero,
+figure.img-hero {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+.img-hero img,
+figure.img-hero img {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border-radius: var(--apple-radius);
+    box-shadow: var(--apple-shadow);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.img-hero img:hover,
+figure.img-hero img:hover {
+    transform: scale(1.01);
+    box-shadow: var(--apple-shadow-hover);
+}
+.img-hero figcaption,
+figure.img-hero figcaption {
+    font-size: 0.88rem;
+    color: var(--apple-text-secondary);
+    text-align: center;
+    margin-top: 0.75rem;
+    font-style: normal;
+}
+
+/* 2. 步骤/流程插图 — 600x400，可左图右文/右图左文 */
+.img-step,
+figure.img-step {
+    margin: 2rem 0;
+}
+.img-step img,
+figure.img-step img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: var(--apple-radius-sm);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+.img-step img:hover,
+figure.img-step img:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--apple-shadow);
+}
+.img-step figcaption,
+figure.img-step figcaption {
+    font-size: 0.85rem;
+    color: var(--apple-text-secondary);
+    margin-top: 0.6rem;
+    font-style: normal;
+}
+
+/* 3. 数据图表/对比 — 宽度与正文一致 */
+.img-chart,
+figure.img-chart {
+    margin: 2rem 0;
+    text-align: center;
+}
+.img-chart img,
+figure.img-chart img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.img-chart figcaption,
+figure.img-chart figcaption {
+    font-size: 0.85rem;
+    color: var(--apple-text-secondary);
+    margin-top: 0.6rem;
+    font-style: normal;
+}
+
+/* 4. 细节/特写图 — 400x300，嵌入段落或侧边 */
+.img-detail,
+figure.img-detail {
+    margin: 1.5rem 0;
+    display: inline-block;
+}
+.img-detail img,
+figure.img-detail img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: var(--apple-radius-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease;
+}
+.img-detail img:hover,
+figure.img-detail img:hover {
+    transform: scale(1.02);
+}
+.img-detail figcaption,
+figure.img-detail figcaption {
+    font-size: 0.8rem;
+    color: var(--apple-text-secondary);
+    margin-top: 0.5rem;
+    font-style: normal;
+}
+
+/* 5. 对比图 — Before/After 并列 */
+.img-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    align-items: start;
+}
+.img-comparison .comparison-side {
+    position: relative;
+    border-radius: var(--apple-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--apple-shadow);
+}
+.img-comparison .comparison-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.img-comparison .comparison-side .comparison-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+.img-comparison .comparison-side.before .comparison-label {
+    background: rgba(220, 53, 69, 0.85);
+}
+.img-comparison .comparison-side.after .comparison-label {
+    background: rgba(40, 167, 69, 0.85);
+}
+.img-comparison figcaption {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    color: var(--apple-text-secondary);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* 6. 图片网格 — 多图并列 */
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.img-gallery figure,
+.img-gallery .gallery-item {
+    margin: 0;
+}
+.img-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--apple-radius-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.img-gallery img:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--apple-shadow-hover);
+}
+.img-gallery figcaption {
+    font-size: 0.8rem;
+    color: var(--apple-text-secondary);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* ==================== 图文排版布局 ==================== */
+
+/* 左图右文 */
+.layout-img-left {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+.layout-img-left > :first-child img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius);
+    box-shadow: var(--apple-shadow);
+}
+
+/* 右图左文 */
+.layout-img-right {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+.layout-img-right > :last-child img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius);
+    box-shadow: var(--apple-shadow);
+}
+
+/* 上图下文 — 居中通栏 */
+.layout-img-top {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+.layout-img-top img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius);
+    box-shadow: var(--apple-shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* 图文卡片 */
+.img-card {
+    background: var(--apple-bg);
+    border-radius: var(--apple-radius);
+    overflow: hidden;
+    box-shadow: var(--apple-shadow);
+    margin: 2rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--apple-shadow-hover);
+}
+.img-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.img-card .card-body {
+    padding: 1.5rem 1.75rem;
+}
+.img-card .card-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    margin-bottom: 0.5rem;
+}
+.img-card .card-body p {
+    font-size: 0.9rem;
+    color: var(--apple-text-secondary);
+    line-height: 1.6;
+}
+
+/* ==================== 苹果风内容组件升级 ==================== */
+.warning-box {
+    background: #FFF8F0;
+    border-left: 4px solid var(--apple-accent);
+    border-radius: var(--apple-radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.important-box {
+    background: #FFF0F0;
+    border-left: 4px solid #E53935;
+    border-radius: var(--apple-radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.success-box {
+    background: #F0FFF4;
+    border-left: 4px solid #2E7D32;
+    border-radius: var(--apple-radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.info-box {
+    background: #F0F7FF;
+    border-left: 4px solid #1565C0;
+    border-radius: var(--apple-radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.case-box {
+    background: #F8F6FF;
+    border-left: 4px solid #5C6BC0;
+    border-radius: var(--apple-radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==================== 表格苹果风升级 ==================== */
+.spec-table,
+.compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    border-radius: var(--apple-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--apple-shadow);
+    border: 1px solid var(--apple-border);
+}
+.spec-table th,
+.compare-table th {
+    background: var(--apple-text);
+    color: #fff;
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+.spec-table td,
+.compare-table td {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: var(--apple-card);
+}
+.spec-table tr:nth-child(even) td,
+.compare-table tr:nth-child(even) td {
+    background: var(--apple-bg);
+}
+.spec-table tr:last-child td,
+.compare-table tr:last-child td {
+    border-bottom: none;
+}
+.spec-table tr:hover td,
+.compare-table tr:hover td {
+    background: var(--apple-accent-light);
+}
+.compare-table .good { color: #2E7D32; font-weight: 600; }
+.compare-table .bad { color: #E53935; font-weight: 600; }
+
+/* ==================== 流程步骤升级 ==================== */
+.step-list {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+.step-list li {
+    counter-increment: step;
+    padding: 1rem 1rem 1rem 4rem;
+    position: relative;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 1rem;
+    min-height: 3rem;
+}
+.step-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: -1.1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: var(--apple-accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(255, 102, 0, 0.25);
+}
+.step-list li:first-child {
+    border-top: 2px solid var(--apple-accent);
+    padding-top: 1.5rem;
+}
+.step-list li:last-child {
+    border-left-color: transparent;
+}
+
+/* ==================== 产品图片组升级 ==================== */
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.product-images img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+.product-images img:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--apple-shadow-hover);
+}
+
+/* ==================== 通用图片适配 ==================== */
+.post .content figure {
+    margin: 2rem 0;
+}
+.post .content figure img {
+    border-radius: var(--apple-radius-sm);
+    box-shadow: var(--apple-shadow);
+}
+.post .content figcaption {
+    font-size: 0.85rem;
+    color: var(--apple-text-secondary);
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+.article-img,
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--apple-radius-sm);
+    margin: 2rem 0;
+    box-shadow: var(--apple-shadow);
+    transition: transform 0.3s ease;
+}
+.article-img:hover,
+.article-image:hover {
+    transform: translateY(-2px);
+}
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--apple-radius-sm);
+}
+.img-caption,
+.image-caption {
+    font-size: 0.85rem;
+    color: var(--apple-text-secondary);
+    text-align: center;
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* ==================== 分隔线/引用/代码 — 苹果风 ==================== */
+.post .content hr {
+    border: none;
+    height: 1px;
+    background: var(--apple-border);
+    margin: 3rem 0;
+}
+.post .content blockquote {
+    border-left: 4px solid var(--apple-accent);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--apple-bg);
+    border-radius: 0 var(--apple-radius-sm) var(--apple-radius-sm) 0;
+    color: var(--apple-text);
+    font-style: normal;
+}
+.post .content code {
+    background: var(--apple-bg);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--apple-accent);
+}
+.post .content pre {
+    background: #1d1d1f;
+    color: #f5f5f7;
+    padding: 1.5rem;
+    border-radius: var(--apple-radius-sm);
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+.post .content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* ==================== FAQ 升级 ==================== */
+.faq-item {
+    border: 1px solid var(--apple-border);
+    border-radius: var(--apple-radius-sm);
+    margin: 1rem 0;
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+.faq-item:hover {
+    box-shadow: var(--apple-shadow);
+}
+.faq-q {
+    background: var(--apple-bg);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.faq-q::before {
+    content: "Q";
+    background: var(--apple-accent);
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.faq-a {
+    padding: 1rem 1.5rem;
+    background: var(--apple-card);
+    border-top: 1px solid var(--apple-border);
+    color: #444;
+    line-height: 1.75;
+}
+.faq-a::before {
+    content: "A：";
+    font-weight: 600;
+    color: var(--apple-accent);
+}
+
+/* ==================== 按钮苹果风 ==================== */
+.btn-primary {
+    background: var(--apple-accent);
+    color: #fff !important;
+}
+.btn-primary:hover {
+    background: #e55c00;
+    transform: scale(1.02);
+}
+
+/* ==================== 响应式图片体系 ==================== */
+@media (max-width: 768px) {
+    .post {
+        padding: 1.75rem 1.25rem;
+        margin: 1rem auto;
+        border-radius: 12px;
+    }
+    .post h1 { font-size: 1.65rem; }
+    .post h2 { font-size: 1.35rem; }
+    .img-hero img,
+    figure.img-hero img { width: 100%; }
+    .img-step img,
+    figure.img-step img { width: 100%; }
+    .img-detail img,
+    figure.img-detail img { width: 100%; max-width: 300px; }
+    .img-comparison { grid-template-columns: 1fr; gap: 1rem; }
+    .layout-img-left,
+    .layout-img-right { grid-template-columns: 1fr; gap: 1.25rem; }
+    .img-gallery { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .img-gallery img { height: 160px; }
+    .product-images { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .post { padding: 1.25rem 1rem; }
+    .img-gallery { grid-template-columns: 1fr; }
+    .product-images { grid-template-columns: 1fr; }
+}

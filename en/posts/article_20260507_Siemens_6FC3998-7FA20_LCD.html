@@ -1252,7 +1252,7 @@
         var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Scan to Share</h3><img src="' + qrcodeUrl + '" alt="QR Code"><p>Open WeChat, scan to share to Moments</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Scan to Share</h3><img loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>Open WeChat, scan to share to Moments</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
 })();

@@ -63,10 +63,10 @@
                 <p>As the standard-size model in the KTV series, KTV148 features a <strong>12.1-inch</strong> display area, balancing display quality with installation space requirements—ideal for medium-sized CNC systems and industrial control panels.</p>
 
                 <div class="product-images" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_01.jpg" alt="KTV148 Display Front View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_02.jpg" alt="KTV148 Display Side View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_03.jpg" alt="KTV148 Installation Diagram" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_04.jpg" alt="KTV148 Application Scenario" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_01.jpg" alt="KTV148 Display Front View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_02.jpg" alt="KTV148 Display Side View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_03.jpg" alt="KTV148 Installation Diagram" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_04.jpg" alt="KTV148 Application Scenario" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
 
                 <h2>2. Technical Specifications</h2>
@@ -188,7 +188,7 @@
         var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

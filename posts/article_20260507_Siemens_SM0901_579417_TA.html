@@ -71,25 +71,25 @@
 
 
                 <div class="product-images" style="margin: 20px 0; text-align: center;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-1.jpg" alt="西门子6FC3998-7FA20显示器正面图" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-1.jpg" alt="西门子6FC3998-7FA20显示器正面图" >
                     <p style="font-size: 0.9em; color: #666;">图1：西门子6FC3998-7FA20工业显示器正面展示</p>
 
                 </div>
                 
                 <div class="product-images" style="margin: 20px 0; text-align: center;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-2.jpg" alt="显示器细节图" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-2.jpg" alt="显示器细节图" >
                     <p style="font-size: 0.9em; color: #666;">图2：显示器细节展示</p>
 
                 </div>
                 
                 <div class="product-images" style="margin: 20px 0; text-align: center;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-3.jpg" alt="TFT替换方案" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-3.jpg" alt="TFT替换方案" >
                     <p style="font-size: 0.9em; color: #666;">图3：TFT液晶升级效果</p>
 
                 </div>
                 
                 <div class="product-images" style="margin: 20px 0; text-align: center;">
-                    <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-4.jpg" alt="安装示例" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/Siemens-SM0901-579417-TA-4.jpg" alt="安装示例" >
                     <p style="font-size: 0.9em; color: #666;">图4：现场安装案例</p>
 
                 </div>
@@ -221,7 +221,7 @@
         var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = ' <div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = ' <div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

@@ -56,7 +56,7 @@
                 <span class="author">作者: kongto01</span>
             </div>
             <div class="content">
-                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_crt.jpg" alt="FANUC D9MM-11A (A61L-0001-0093) CRT显示器" class="article-img">
+                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_crt.jpg" alt="FANUC D9MM-11A (A61L-0001-0093) CRT显示器" class="article-img">
                 <p>很多用户在设备铭牌上看到<strong>D9MM-11A</strong>这个型号，却找不到对应的配件——其实它就是<strong>A61L-0001-0093</strong>的另一种编号方式。这是FANUC 9英寸单色显示器的经典型号，广泛应用于早期FANUC数控系统。</p>
 
                 <h2>D9MM-11A与A61L-0001-0093的关系</h2>
@@ -98,7 +98,7 @@
                 <p><strong>结论：LCD升级是唯一理性的长期解决方案。</strong></p>
 
                 <h2>江图科技D9MM-11A LCD升级方案</h2>
-                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="D9MM-11A TFT替代屏实拍效果" class="article-img">
+                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="D9MM-11A TFT替代屏实拍效果" class="article-img">
                 
                 <h3>产品组成</h3>
                 <ul>
@@ -211,7 +211,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

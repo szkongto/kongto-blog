@@ -75,8 +75,8 @@
         </ul>
     </div>
 
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_CRT_old.jpg" alt="FANUC CRT Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto; transform:rotate(-90deg);"></figure>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_LCD_new.jpg" alt="FANUC LCD Upgrade" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_CRT_old.jpg" alt="FANUC CRT Display" ></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_LCD_new.jpg" alt="FANUC LCD Upgrade" ></figure>
 
 <h2 id="overview">1. Overview</h2>
 <p>When FANUC CNC system displays (CRTs) reach end-of-life, equipment owners face a critical decision: <strong>continue maintaining the CRT</strong> or <strong>upgrade to LCD module</strong>. This article provides a comprehensive comparison to help you make an informed decision.</p>
@@ -316,7 +316,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

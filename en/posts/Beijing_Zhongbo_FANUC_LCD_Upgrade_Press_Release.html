@@ -79,8 +79,8 @@
 <hr>
 
 <h2 id="company-overview">Company Overview</h2>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="A6100010074 Product Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto; transform:rotate(-90deg);"></figure>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="A6100010093 LED Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="A6100010074 Product Display" ></figure>
+<figure class="img-detail"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="A6100010093 LED Display" ></figure>
 
 <p>Jiangtu Technology is a technology-oriented enterprise focusing on industrial video display solutions, committed to providing high-reliability display upgrade and retrofit services for CNC numerical control systems and industrial automation equipment. The company's core business includes:</p>
 
@@ -214,7 +214,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3 id="wechat-share">WeChat Share</h3><img src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share to Moments</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3 id="wechat-share">WeChat Share</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share to Moments</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

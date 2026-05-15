@@ -99,8 +99,8 @@
 <p><strong>Keywords</strong>: CGA display, EGA display, industrial RGBHV retrofit, industrial video converter</p>
 <p><strong>Target Audience</strong>: CNC engineers, equipment maintenance personnel, industrial control system integrators, industrial automation buyers</p>
 
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="Industrial Display Converter" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto; transform:rotate(-90deg);"></figure>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="LED Industrial Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="Industrial Display Converter" ></figure>
+<figure class="img-detail"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="LED Industrial Display" ></figure>
 
 <h2 id="retrofit-requirements">1. Retrofit Requirements & Background Analysis</h2>
 <h3>1.1 Current Status of Legacy Display Equipment in Industrial Sites</h3>
@@ -234,7 +234,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {
