@@ -63,7 +63,7 @@
 
             <div class="content">
 <h2> 专业版  </h2>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/211.jpg" alt="211" class="article-img"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/211.jpg" alt="211" class="article-img"></figure>
 <strong>数控显示器升级市场动态</strong>  
 <ul><li><strong>市场规模</strong>：国内 CNC 设备保有量已突破 <strong>200 万台</strong>，其中大批 CRT 显示器即将退役。  </li>
 
@@ -151,7 +151,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

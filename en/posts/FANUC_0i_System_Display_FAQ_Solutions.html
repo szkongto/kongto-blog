@@ -77,8 +77,8 @@
         </ul>
     </div>
 
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_CRT_old.jpg" alt="FANUC 0i CRT Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto; transform:rotate(-90deg);"></figure>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_LCD_new.jpg" alt="FANUC 0i LCD Upgrade" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_CRT_old.jpg" alt="FANUC 0i CRT Display" ></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_LCD_new.jpg" alt="FANUC 0i LCD Upgrade" ></figure>
 
 <h2 id="no-display">Q1: No Display at All</h2>
 <p><strong>Symptoms</strong>: Screen completely black, no power indicator light.</p>
@@ -284,7 +284,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

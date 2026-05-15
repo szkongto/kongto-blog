@@ -89,7 +89,7 @@
                 <p>作为KTV系列的中尺寸型号，KTV804 以<strong>8.4英寸</strong>显示面积为核心优势，兼顾显示效果与安装便利性，是中型CNC系统、工业控制面板的理想选择。</p>
 
                 
-                <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV804_01.jpg" alt="KTV804显示器正面图" class="article-img">
+                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV804_01.jpg" alt="KTV804显示器正面图" class="article-img">
                 <p>图1：KTV804显示器正面图</p><h2 id="2-核心技术参数">2. 核心技术参数</h2>
                 
 <table class="spec-table">
@@ -285,7 +285,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {

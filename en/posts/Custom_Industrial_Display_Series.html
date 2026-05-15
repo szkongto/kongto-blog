@@ -74,8 +74,8 @@
 
 <p><strong>Keywords</strong>: Custom Display, Industrial Display, CNC Display, Customized Monitor</p>
 
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="Custom Industrial Display Example" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto; transform:rotate(-90deg);"></figure>
-<figure><img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="LED Industrial Display" style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;"></figure>
+<figure class="img-hero"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="Custom Industrial Display Example" ></figure>
+<figure class="img-detail"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010093_led.jpg" alt="LED Industrial Display" ></figure>
 
 <h2 id="series-overview">Series Overview</h2>
 <p>The <strong>Custom Industrial Display Series</strong> from Kongto Technology is developed specifically for special installation space requirements, breaking through standard size limitations to provide customized display solutions for legacy equipment upgrades, special workstation layouts, and compact machinery applications.</p>
@@ -208,7 +208,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>Scan with WeChat to share</p><button onclick="this.parentElement.parentElement.remove()">Close</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {
