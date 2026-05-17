@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='700' height='900' viewBox='0 0 700 900'>
+<defs><style>text{font-family:Arial,sans-serif}.box{fill:white;stroke:#1a5fb4;stroke-width:2;rx:8}.box-green{fill:#e8f5e9;stroke:#27ae60;stroke-width:2;rx:8}.box-red{fill:#fde8e8;stroke:#c0392b;stroke-width:2;rx:8}.arrow{stroke:#555;stroke-width:2;marker-end:url(#ah)}.title{font-size:18px;font-weight:bold;fill:#1a5fb4}.step{font-size:13px;font-weight:bold;fill:#1a5fb4}.desc{font-size:11px;fill:#444}</style><marker id='ah' markerWidth='10' markerHeight='7' refX='10' refY='3.5' orient='auto'><polygon points='0 0,10 3.5,0 7' fill='#555'/></marker></defs>
+<rect width='700' height='900' fill='#f9f9f9' rx='8'/>
+<text x='350' y='35' text-anchor='middle' class='title'>Industrial Display Procurement Decision Guide</text>
+<rect x='225' y='60' width='250' height='50' class='box'/><text x='350' y='85' text-anchor='middle' class='step'>Step 1: Define Requirements</text><text x='350' y='100' text-anchor='middle' class='desc'>Display size / Signal type / Environment</text>
+<line x1='350' y1='110' x2='350' y2='140' class='arrow'/>
+<rect x='225' y='140' width='250' height='50' class='box'/><text x='350' y='165' text-anchor='middle' class='step'>Step 2: CRT or LCD?</text><text x='350' y='180' text-anchor='middle' class='desc'>Is original display CRT or already LCD?</text>
+<line x1='280' y1='190' x2='180' y2='220' class='arrow'/><line x1='420' y1='190' x2='520' y2='220' class='arrow'/>
+<text x='220' y='207' font-size='11' fill='#c0392b'>CRT (upgrade)</text><text x='480' y='207' font-size='11' fill='#27ae60'>LCD (replace)</text>
+<rect x='60' y='225' width='200' height='50' class='box-red'/><text x='160' y='250' text-anchor='middle' class='step'>Check CRT Condition</text><text x='160' y='265' text-anchor='middle' class='desc'>Still working? Wait vs Act now</text>
+<line x1='160' y1='275' x2='160' y2='305' class='arrow'/>
+<rect x='60' y='305' width='200' height='50' class='box-green'/><text x='160' y='330' text-anchor='middle' class='step'>Select LCD Retrofit Kit</text><text x='160' y='345' text-anchor='middle' class='desc'>Plug-and-play / Wiring adaptor</text>
+<rect x='440' y='225' width='200' height='50' class='box-green'/><text x='540' y='250' text-anchor='middle' class='step'>Verify LCD Spec</text><text x='540' y='265' text-anchor='middle' class='desc'>Size / Resolution / Interface</text>
+<line x1='540' y1='275' x2='540' y2='305' class='arrow'/>
+<rect x='440' y='305' width='200' height='50' class='box'/><text x='540' y='330' text-anchor='middle' class='step'>Source Replacement LCD</text><text x='540' y='345' text-anchor='middle' class='desc'>OEM or Kongto compatible</text>
+<line x1='160' y1='355' x2='260' y2='385' class='arrow'/><line x1='540' y1='355' x2='440' y2='385' class='arrow'/>
+<rect x='225' y='385' width='250' height='50' class='box'/><text x='350' y='410' text-anchor='middle' class='step'>Step 3: Vendor Evaluation</text><text x='350' y='425' text-anchor='middle' class='desc'>Warranty / Lead time / Support</text>
+<line x1='350' y1='435' x2='350' y2='465' class='arrow'/>
+<rect x='225' y='465' width='250' height='50' class='box'/><text x='350' y='490' text-anchor='middle' class='step'>Step 4: Request Samples</text><text x='350' y='505' text-anchor='middle' class='desc'>Test compatibility before bulk order</text>
+<line x1='350' y1='515' x2='350' y2='545' class='arrow'/>
+<rect x='225' y='545' width='250' height='50' class='box'/><text x='350' y='570' text-anchor='middle' class='step'>Step 5: Install & Validate</text><text x='350' y='585' text-anchor='middle' class='desc'>On-machine test / 48h burn-in</text>
+<line x1='350' y1='595' x2='350' y2='625' class='arrow'/>
+<rect x='225' y='625' width='250' height='50' class='box-green'/><text x='350' y='650' text-anchor='middle' class='step'>Step 6: Bulk Procure</text><text x='350' y='665' text-anchor='middle' class='desc'>Volume discount / Spare inventory</text>
+<line x1='350' y1='675' x2='350' y2='705' class='arrow'/>
+<rect x='225' y='705' width='250' height='50' class='box' stroke='#f39c12'/><text x='350' y='730' text-anchor='middle' class='step'>Ongoing Maintenance</text><text x='350' y='745' text-anchor='middle' class='desc'>Annual inspection / Spare parts plan</text>
+<rect x='520' y='400' width='170' height='80' fill='#fffde7' stroke='#f39c12' stroke-width='1' rx='5'/>
+<text x='605' y='420' text-anchor='middle' font-size='11' font-weight='bold' fill='#f39c12'>&#9888; Key Tip</text>
+<text x='535' y='438' font-size='10' fill='#666'>Always verify signal</text><text x='535' y='452' font-size='10' fill='#666'>interface (HONDA 20-pin,</text><text x='535' y='466' font-size='10' fill='#666'>VGA, RGBHV) before</text><text x='535' y='480' font-size='10' fill='#666'>placing order.</text>
+<text x='350' y='895' text-anchor='middle' fill='#aaa' font-size='10'>Kongto Technology · cncdisplay.com · 2026</text>
+</svg>
