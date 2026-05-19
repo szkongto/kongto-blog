@@ -361,16 +361,16 @@ footer {
 
 /* ==================== 图片规格体系 ==================== */
 
-/* 1. 内容主图 — 800x600，视觉焦点，通栏/居中 */
+/* 1. 内容主图 — 最大800px，视觉焦点，居中 */
 .img-hero,
 figure.img-hero {
-    margin: 2.5rem 0;
+    margin: 2.5rem auto;
+    max-width: 800px;
     text-align: center;
 }
 .img-hero img,
 figure.img-hero img {
     max-width: 100%;
-    width: 800px;
     height: auto;
     border-radius: var(--apple-radius);
     box-shadow: var(--apple-shadow);
@@ -390,15 +390,15 @@ figure.img-hero figcaption {
     font-style: normal;
 }
 
-/* 2. 步骤/流程插图 — 600x400，可左图右文/右图左文 */
+/* 2. 步骤/流程插图 — 最大600px */
 .img-step,
 figure.img-step {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    max-width: 600px;
 }
 .img-step img,
 figure.img-step img {
     max-width: 100%;
-    width: 600px;
     height: auto;
     border-radius: var(--apple-radius-sm);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
@@ -439,16 +439,16 @@ figure.img-chart figcaption {
     font-style: normal;
 }
 
-/* 4. 细节/特写图 — 400x300，嵌入段落或侧边 */
+/* 4. 细节/特写图 — 最大400px，嵌入段落或侧边 */
 .img-detail,
 figure.img-detail {
-    margin: 1.5rem 0;
-    display: inline-block;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    display: block;
 }
 .img-detail img,
 figure.img-detail img {
     max-width: 100%;
-    width: 400px;
     height: auto;
     border-radius: var(--apple-radius-sm);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -1112,12 +1112,12 @@ figure.img-detail figcaption {
     }
     .post h1 { font-size: 1.65rem; }
     .post h2 { font-size: 1.35rem; }
-    .img-hero img,
-    figure.img-hero img { width: 100%; }
-    .img-step img,
-    figure.img-step img { width: 100%; }
-    .img-detail img,
-    figure.img-detail img { width: 100%; max-width: 300px; }
+    .img-hero,
+    figure.img-hero { max-width: 100%; }
+    .img-step,
+    figure.img-step { max-width: 100%; }
+    .img-detail,
+    figure.img-detail { max-width: 300px; }
     .img-comparison { grid-template-columns: 1fr; gap: 1rem; }
     .layout-img-left,
     .layout-img-right { grid-template-columns: 1fr; gap: 1.25rem; }
