@@ -1,26 +1,60 @@
+# ============================================================
+# robots.txt - cncdisplay.com
+# 优化配置：兼容 Cloudflare + 百度/Google + AI 爬虫
+# ============================================================
+
+# --- 所有爬虫统一规则 ---
 User-agent: *
 Allow: /
-Sitemap: https://szkongto.github.io/kongto-blog/sitemap.xml
+Crawl-delay: 2
+Sitemap: https://cncdisplay.com/sitemap.xml
 
-# Baiduspider specific rules
+# --- Content Signals (AI/训练控制) ---
+# search=yes: 允许搜索引擎索引
+# ai-train=no: 禁止 AI 训练
+Content-Signal: search=yes,ai-train=no
+
+# --- 百度站长优化 ---
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 1
 
-# Googlebot
+# --- Google 优化 ---
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+User-agent: Googlebot-Image
+Allow: /
 
-# Block AI scrapers that don't contribute to SEO
+# --- Bing ---
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# --- AI 搜索引擎 - 允许收录以提升 GEO 可见性 ---
 User-agent: GPTBot
-Disallow: /
-
+Allow: /
 User-agent: ChatGPT-User
-Disallow: /
-
+Allow: /
 User-agent: CCBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# --- 恶意爬虫 - 禁止 ---
+User-agent: Bytespider
+Disallow: /
+User-agent: Amazonbot
+Disallow: /
+User-agent: Applebot-Extended
 Disallow: /
 
-User-agent: anthropic-ai
-Disallow: /
+# --- 图片爬虫许可 ---
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Baiduspider-image
+Allow: /

@@ -6,28 +6,105 @@
     <title>How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study | Kongto Technology</title>
     <meta name="description" content="Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.">
     <meta name="keywords" content="FANUC CRT retrofit, LCD conversion, Kongto Technology, case study">
-    <meta name="author" content="kongto01">
-    <link rel="canonical" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
-    <link rel="alternate" hreflang="zh" href="https://szkongto.github.io/kongto-blog/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
-    <link rel="alternate" hreflang="en" href="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <meta name="author" content="Kongto Technology">
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
     <meta property="og:title" content="How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study" />
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/article_default.jpg">
     <meta property="og:description" content="Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results." />
-    <meta property="og:url" content="https://szkongto.github.io/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
+    <meta property="og:url" content="https://cncdisplay.com/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" />
     <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="/kongto-blog/css/style.css">
-</head>
+        <meta property="og:site_name" content="深圳市Kongto Technology有限公司">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study | Kongto Technology">
+    <meta name="twitter:description" content="Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.">
+<link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study | Kongto Technology",
+      "description": "Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.",
+      "author": {"@type": "Organization", "name": "Kongto Technology"},
+      "publisher": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
+      "datePublished": "2026-05-01"
+    }
+    </script>
+
+    <meta name="geo.region" content="CN-44">
+    <meta name="geo.placename" content="深圳龙华">
+    <meta name="geo.position" content="22.6568;113.9899">
+    <meta name="ICBM" content="22.6568, 113.9899">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "szkongto01@foxmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙华区大浪街道陶元社区恒昌荣工业园C栋2楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": ["CN", "US", "DE", "JP", "KR", "SG", "IN", "GB", "FR", "IT"],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto",
+    "https://szkongto.1688.com"
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "首页",
+    "item": "https://cncdisplay.com/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study | Kongto Technology",
+    "item": "https://cncdisplay.com/en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html"
+  }]
+}
+</script></head>
 <body>
     <header>
         <nav>
-            <a href="/kongto-blog/en/" class="logo">Kongto Technology</a>
+            <a href="/en/" class="logo">Kongto Technology</a>
             <div class="nav-links">
-                <a href="/kongto-blog/en/">Home</a>
-                <a href="/kongto-blog/en/posts/">Articles</a>
-                <a href="/kongto-blog/en/about.html">About</a>
+                <a href="/en/">Home</a>
+                <a href="/en/posts/">Articles</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About</a>
             </div>
             <div class="lang-switch">
-                <a href="/kongto-blog/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="zh">中文</a> |
-                <a href="/kongto-blog/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="en">English</a>
+                <a href="/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="zh">中文</a> |
+                <a href="/en/posts/article_20260501_%E5%A6%82%E4%BD%95%E5%B0%86FANUC_CRT%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E8%A3%85%E4%B8%BALCD_%E6%B7%B1%E5%9C%B3%E4%B8%AD%E5%9B%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html" lang="en">English</a>
             </div>
         </nav>
     </header>
@@ -36,7 +113,7 @@
             <h1>How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study</h1>
             <div class="meta">
                 <time datetime="2026-05-01">2026-05-01</time>
-                <span class="author">作者: kongto01</span>
+                <span class="author">作者: Kongto Technology</span>
             </div>
             <div class="content">
 
@@ -44,6 +121,21 @@
 <p><strong>Keywords</strong>: FANUC CRT to LCD retrofit, LCD conversion, CNC display upgrade, industrial display</p>
 <p><em>Target Audience: CNC engineers, factory equipment managers, industrial automation integrators</em></p>
 <hr>
+<figure class="img-hero">
+  <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_1.jpg" alt="FANUC CRT before retrofit" loading="lazy">
+  <figcaption>Fig.1: FANUC 0i system with original CRT display</figcaption>
+</figure>
+
+<figure class="img-hero">
+  <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_2.jpg" alt="After LCD retrofit" loading="lazy">
+  <figcaption>Fig.2: Completed LCD upgrade - plug and play, no wiring changes</figcaption>
+</figure>
+
+<figure class="img-hero">
+  <img src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/A6100010074_3.jpg" alt="Retrofit kit components" loading="lazy">
+  <figcaption>Fig.3: Complete LCD upgrade kit includes driver board, cables, and mount</figcaption>
+</figure>
+
 <h2>1. Project Background</h2>
 <p>A precision machining factory in Shenzhen operates 15 FANUC 0i-MC CNC milling machines, all equipped with original 9-inch CRT displays manufactured between 2003-2008. After 15+ years of continuous operation, these CRT displays exhibited the following issues:</p>
 <ul>
@@ -128,7 +220,7 @@
     if (curProtocol === 'https') {
         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
     } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        bp.src = 'https://push.zhanzhang.baidu.com/push.js';
     }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
