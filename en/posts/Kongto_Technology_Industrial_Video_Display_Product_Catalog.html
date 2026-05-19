@@ -116,13 +116,13 @@
                 <span class="author">作者: Kongto Technology</span>
             </div>
             <div class="content">
-<figure class="img-hero"><img style="max-width:100%;height:auto;width:600px;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV104_01.jpg" alt="Display Overview"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV104_01.jpg" alt="Display Overview"></figure>
 <p><em>Display Overview | Source: Kongto Technology</em></p>
-<figure class="img-hero"><img style="max-width:100%;height:auto;width:600px;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_01.jpg" alt="Product Photo"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV148_01.jpg" alt="Product Photo"></figure>
 <p><em>Product Photo | Source: Kongto Technology</em></p>
-<figure class="img-hero"><img style="max-width:100%;height:auto;width:600px;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV800M_01.jpg" alt="Installation View"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV800M_01.jpg" alt="Installation View"></figure>
 <p><em>Installation View | Source: Kongto Technology</em></p>
-<figure class="img-hero"><img style="max-width:100%;height:auto;width:600px;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV804_01.jpg" alt="Technical Detail"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="https://cdn.jsdelivr.net/gh/szkongto/kongto-blog@main/images/KTV804_01.jpg" alt="Technical Detail"></figure>
 <p><em>Technical Detail | Source: Kongto Technology</em></p>
 
 
@@ -232,7 +232,7 @@
         var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img style="max-width:100%; height:auto; width:600px; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {
