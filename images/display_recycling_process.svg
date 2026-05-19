@@ -1,0 +1,61 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='750' height='580' viewBox='0 0 750 580'>
+<defs><style>text{font-family:Arial,sans-serif}.title{font-size:17px;font-weight:bold;fill:#1a5fb4}.step-title{font-size:13px;font-weight:bold}.desc{font-size:10px;fill:#555}.arrow{stroke:#aaa;stroke-width:2;marker-end:url(#ar2)}</style><marker id='ar2' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0,8 3,0 6' fill='#aaa'/></marker></defs>
+<rect width='750' height='580' fill='#f9f9f9' rx='8'/>
+<text x='375' y='32' text-anchor='middle' class='title'>Industrial Display Recycling Process Flow</text>
+<rect x='30' y='55' width='140' height='90' fill='#fde8e8' stroke='#c0392b' stroke-width='2' rx='8'/>
+<text x='100' y='78' text-anchor='middle' class='step-title' fill='#c0392b'>1. Collection</text>
+<text x='100' y='95' text-anchor='middle' font-size='10' fill='#888'>Customer submits request</text>
+<rect x='45' y='105' width='110' height='20' fill='#c0392b' rx='3' opacity='0.8'/>
+<text x='100' y='119' text-anchor='middle' fill='white' font-size='10'>Quote &amp; Logistics</text>
+<text x='100' y='138' text-anchor='middle' fill='#c0392b' font-size='9'>&#9201; 1-2 days</text>
+<line x1='175' y1='100' x2='220' y2='100' class='arrow'/>
+<rect x='220' y='55' width='140' height='90' fill='#fef5e7' stroke='#e67e22' stroke-width='2' rx='8'/>
+<text x='290' y='78' text-anchor='middle' class='step-title' fill='#e67e22'>2. Inspection</text>
+<text x='290' y='95' text-anchor='middle' font-size='10' fill='#888'>CRT/LCD arrival check</text>
+<rect x='235' y='105' width='110' height='20' fill='#e67e22' rx='3' opacity='0.8'/>
+<text x='290' y='119' text-anchor='middle' fill='white' font-size='10'>Test &amp; Grade A-D</text>
+<text x='290' y='138' text-anchor='middle' fill='#e67e22' font-size='9'>&#9201; 2-4 hours</text>
+<line x1='365' y1='100' x2='410' y2='100' class='arrow'/>
+<rect x='410' y='55' width='140' height='90' fill='#ebf5fb' stroke='#1a5fb4' stroke-width='2' rx='8'/>
+<text x='480' y='78' text-anchor='middle' class='step-title' fill='#1a5fb4'>3. Sorting</text>
+<text x='480' y='95' text-anchor='middle' font-size='10' fill='#888'>Categorize by condition</text>
+<rect x='425' y='105' width='110' height='20' fill='#1a5fb4' rx='3' opacity='0.8'/>
+<text x='480' y='119' text-anchor='middle' fill='white' font-size='10'>&#9851; Reuse · Refurb · Recycle</text>
+<text x='480' y='138' text-anchor='middle' fill='#1a5fb4' font-size='9'>&#9201; 1-2 hours</text>
+<line x1='555' y1='100' x2='600' y2='100' class='arrow'/>
+<rect x='600' y='55' width='120' height='90' fill='#e8f5e9' stroke='#27ae60' stroke-width='2' rx='8'/>
+<text x='660' y='78' text-anchor='middle' class='step-title' fill='#27ae60'>4. Processing</text>
+<text x='660' y='95' text-anchor='middle' font-size='10' fill='#888'>Safe disposal</text>
+<rect x='615' y='105' width='90' height='20' fill='#27ae60' rx='3' opacity='0.8'/>
+<text x='660' y='119' text-anchor='middle' fill='white' font-size='10'>Material recovery</text>
+<text x='660' y='138' text-anchor='middle' fill='#27ae60' font-size='9'>&#9201; 1-3 days</text>
+<rect x='30' y='165' width='690' height='70' fill='white' stroke='#ddd' stroke-width='1' rx='5'/>
+<text x='45' y='187' font-size='12' font-weight='bold' fill='#333'>&#9851; Three Processing Paths:</text>
+<rect x='45' y='195' width='200' height='28' fill='#e8f5e9' rx='4'/><text x='145' y='214' text-anchor='middle' font-size='11' fill='#27ae60'>&#9851; Reuse: Working units → Resold</text>
+<rect x='260' y='195' width='220' height='28' fill='#fffde7' rx='4'/><text x='370' y='214' text-anchor='middle' font-size='11' fill='#f39c12'>&#128295; Refurbish: Repairable → Refurbished</text>
+<rect x='490' y='195' width='220' height='28' fill='#fde8e8' rx='4'/><text x='600' y='214' text-anchor='middle' font-size='11' fill='#c0392b'>&#2622; Recycle: E-waste → Material recovery</text>
+<rect x='30' y='250' width='690' height='45' fill='#fde8e8' stroke='#c0392b' stroke-width='1.5' rx='5'/>
+<text x='45' y='272' font-size='11' font-weight='bold' fill='#c0392b'>&#9888; Data Security Notice</text>
+<text x='45' y='288' font-size='10' fill='#555'>All displays with memory are wiped per NIST SP 800-88 guidelines. Certificate provided upon request.</text>
+<text x='375' y='325' text-anchor='middle' font-size='14' font-weight='bold' fill='#333'>Material Recovery Rate (Typical CRT Display)</text>
+<text x='50' y='358' font-size='11' fill='#555'>Glass</text>
+<rect x='120' y='344' width='420' height='22' fill='#3498db' rx='3' opacity='0.8'/>
+<text x='545' y='358' font-size='11' fill='#3498db' font-weight='bold'>62%</text>
+<text x='50' y='388' font-size='11' fill='#555'>Lead (Pb)</text>
+<rect x='120' y='374' width='135' height='22' fill='#c0392b' rx='3' opacity='0.8'/>
+<text x='260' y='388' font-size='11' fill='#c0392b' font-weight='bold'>20%</text>
+<text x='50' y='418' font-size='11' fill='#555'>Phosphor</text>
+<rect x='120' y='404' width='95' height='22' fill='#27ae60' rx='3' opacity='0.8'/>
+<text x='220' y='418' font-size='11' fill='#27ae60' font-weight='bold'>14%</text>
+<text x='50' y='448' font-size='11' fill='#555'>Copper/Fe</text>
+<rect x='120' y='434' width='40' height='22' fill='#f39c12' rx='3' opacity='0.8'/>
+<text x='165' y='448' font-size='11' fill='#f39c12' font-weight='bold'>4%</text>
+<rect x='30' y='475' width='690' height='80' fill='#f8f9fa' stroke='#ddd' stroke-width='1' rx='5'/>
+<text x='375' y='497' text-anchor='middle' font-size='12' font-weight='bold' fill='#333'>Certifications &amp; Compliance</text>
+<rect x='80' y='507' width='100' height='35' fill='white' stroke='#1a5fb4' rx='4'/><text x='130' y='525' text-anchor='middle' font-size='10' fill='#1a5fb4' font-weight='bold'>ISO 14001</text><text x='130' y='538' text-anchor='middle' font-size='9' fill='#888'>Environmental</text>
+<rect x='210' y='507' width='100' height='35' fill='white' stroke='#27ae60' rx='4'/><text x='260' y='525' text-anchor='middle' font-size='10' fill='#27ae60' font-weight='bold'>R2 Certified</text><text x='260' y='538' text-anchor='middle' font-size='9' fill='#888'>Responsible Recycling</text>
+<rect x='340' y='507' width='100' height='35' fill='white' stroke='#e67e22' rx='4'/><text x='390' y='525' text-anchor='middle' font-size='10' fill='#e67e22' font-weight='bold'>WEEE Compliant</text><text x='390' y='538' text-anchor='middle' font-size='9' fill='#888'>EU Directive</text>
+<rect x='470' y='507' width='100' height='35' fill='white' stroke='#c0392b' rx='4'/><text x='520' y='525' text-anchor='middle' font-size='10' fill='#c0392b' font-weight='bold'>GDPR/Data Safe</text><text x='520' y='538' text-anchor='middle' font-size='9' fill='#888'>Data Wiped</text>
+<rect x='600' y='507' width='100' height='35' fill='white' stroke='#1a5fb4' rx='4'/><text x='650' y='525' text-anchor='middle' font-size='10' fill='#1a5fb4' font-weight='bold'>Kongto QA</text><text x='650' y='538' text-anchor='middle' font-size='9' fill='#888'>100% Tested</text>
+<text x='375' y='575' text-anchor='middle' fill='#aaa' font-size='10'>Kongto Technology · cncdisplay.com · 2026</text>
+</svg>

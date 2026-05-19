@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'>
+<defs><style>text{font-family:Arial,sans-serif}.title{font-size:17px;font-weight:bold;fill:#1a5fb4}.layer{font-size:12px;font-weight:bold;fill:white}.desc{font-size:10px;fill:#555}.arrow{stroke:#888;stroke-width:1.5;marker-end:url(#a2)}</style><marker id='a2' markerWidth='7' markerHeight='5' refX='7' refY='2.5' orient='auto'><polygon points='0 0,7 2.5,0 5' fill='#888'/></marker></defs>
+<rect width='800' height='600' fill='#f0f4f8' rx='8'/>
+<text x='400' y='32' text-anchor='middle' class='title'>Smart Factory Display Solution — System Architecture</text>
+<rect x='100' y='55' width='600' height='55' fill='#1a5fb4' rx='8' opacity='0.85'/>
+<text x='400' y='80' text-anchor='middle' class='layer'>&#9729;&#65039; Layer 4: Cloud &amp; Remote Management</text>
+<text x='400' y='98' text-anchor='middle' fill='rgba(255,255,255,0.85)' font-size='11'>Kongto Cloud · Remote diagnostics · OTA updates · Data analytics</text>
+<line x1='400' y1='112' x2='400' y2='135' class='arrow'/><text x='420' y='128' font-size='10' fill='#1a5fb4'>MQTT / HTTPS</text>
+<rect x='100' y='135' width='600' height='55' fill='#2980b9' rx='8' opacity='0.85'/>
+<text x='400' y='160' text-anchor='middle' class='layer'>&#128421;&#65039; Layer 3: Edge Gateway &amp; Data Processing</text>
+<text x='400' y='178' text-anchor='middle' fill='rgba(255,255,255,0.85)' font-size='11'>Signal converter · Protocol bridge (FANUC/Siemens/Mazak) · Local cache</text>
+<line x1='400' y1='195' x2='400' y2='218' class='arrow'/><text x='420' y='230' font-size='10' fill='#2980b9'>RS-485 / Ethernet / VGA</text>
+<rect x='100' y='218' width='600' height='40' fill='#aaa' rx='5' opacity='0.3'/>
+<text x='400' y='243' text-anchor='middle' font-size='11' fill='#666'>&#11087; Machine Level — Real-time Display Data</text>
+<rect x='110' y='258' width='170' height='100' fill='white' stroke='#1a5fb4' stroke-width='2' rx='6'/>
+<text x='195' y='278' text-anchor='middle' font-size='12' font-weight='bold' fill='#1a5fb4'>FANUC CNC</text>
+<rect x='125' y='288' width='140' height='30' fill='#ebf5fb' rx='4'/><text x='195' y='308' text-anchor='middle' font-size='10'>LCD Retrofit Kit</text>
+<circle cx='145' cy='348' r='4' fill='#27ae60'/><text x='153' y='351' font-size='9' fill='#555'>Online</text>
+<circle cx='220' cy='348' r='4' fill='#27ae60'/><text x='228' y='351' font-size='9' fill='#555'>Signal OK</text>
+<rect x='315' y='258' width='170' height='100' fill='white' stroke='#e67e22' stroke-width='2' rx='6'/>
+<text x='400' y='278' text-anchor='middle' font-size='12' font-weight='bold' fill='#e67e22'>Siemens CNC</text>
+<rect x='330' y='288' width='140' height='30' fill='#fef5e7' rx='4'/><text x='400' y='308' text-anchor='middle' font-size='10'>6FC3988 LCD</text>
+<circle cx='350' cy='348' r='4' fill='#27ae60'/><text x='358' y='351' font-size='9' fill='#555'>Online</text>
+<circle cx='425' cy='348' r='4' fill='#e74c3c'/><text x='433' y='351' font-size='9' fill='#555'>Warn</text>
+<rect x='520' y='258' width='170' height='100' fill='white' stroke='#27ae60' stroke-width='2' rx='6'/>
+<text x='605' y='278' text-anchor='middle' font-size='12' font-weight='bold' fill='#27ae60'>Mazak CNC</text>
+<rect x='535' y='288' width='140' height='30' fill='#e8f5e9' rx='4'/><text x='605' y='308' text-anchor='middle' font-size='10'>CD1472D1M LCD</text>
+<circle cx='555' cy='348' r='4' fill='#27ae60'/><text x='563' y='351' font-size='9' fill='#555'>Online</text>
+<circle cx='630' cy='348' r='4' fill='#27ae60'/><text x='638' y='351' font-size='9' fill='#555'>Signal OK</text>
+<line x1='195' y1='358' x2='240' y2='385' stroke='#1a5fb4' stroke-width='1.5' stroke-dasharray='4'/>
+<line x1='400' y1='358' x2='400' y2='385' stroke='#e67e22' stroke-width='1.5' stroke-dasharray='4'/>
+<line x1='605' y1='358' x2='560' y2='385' stroke='#27ae60' stroke-width='1.5' stroke-dasharray='4'/>
+<rect x='100' y='385' width='600' height='45' fill='#d4e6f9' stroke='#aaa' stroke-width='1' rx='5'/>
+<text x='400' y='408' text-anchor='middle' font-size='11' fill='#444'>&#128225; Communication Layer: RS-485 · Ethernet · VGA/HDMI · Wireless (optional)</text>
+<text x='400' y='424' text-anchor='middle' font-size='10' fill='#888'>Protocols: FANUC FOCAS, Siemens S7, MTConnect, OPC-UA</text>
+<line x1='400' y1='432' x2='400' y2='455' class='arrow'/>
+<rect x='100' y='455' width='600' height='55' fill='#2c3e50' rx='8' opacity='0.85'/>
+<text x='400' y='480' text-anchor='middle' class='layer' style='fill:white'>&#128421;&#65039; Layer 1: Local HMI &amp; Operator Interface</text>
+<text x='400' y='498' text-anchor='middle' fill='rgba(255,255,255,0.8)' font-size='11'>7"~21" LCD displays · Touch panel · Status LED · Alarm indication</text>
+<rect x='100' y='525' width='600' height='55' fill='#fffde7' stroke='#f39c12' stroke-width='1' rx='5'/>
+<text x='400' y='548' text-anchor='middle' font-size='12' font-weight='bold' fill='#f39c12'>Kongto Smart Factory Solution Benefits</text>
+<text x='400' y='568' text-anchor='middle' font-size='11' fill='#555'>30% downtime reduction · Real-time monitoring · Predictive maintenance · Centralized management</text>
+<text x='400' y='595' text-anchor='middle' fill='#aaa' font-size='10'>Kongto Technology Co., Ltd. · cncdisplay.com · 2026</text>
+</svg>
