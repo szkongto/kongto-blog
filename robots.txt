@@ -1,37 +1,26 @@
-# ============================================================
-# robots.txt - cncdisplay.com
-# 优化配置：兼容 Cloudflare + 百度/Google + AI 爬虫
-# ============================================================
-
-# --- 所有爬虫统一规则 ---
 User-agent: *
 Allow: /
 Crawl-delay: 2
 Sitemap: https://cncdisplay.com/sitemap.xml
 
-# --- Content Signals (AI/训练控制) ---
-# search=yes: 允许搜索引擎索引
-# ai-train=no: 禁止 AI 训练
-Content-Signal: search=yes,ai-train=no
-
-# --- 百度站长优化 ---
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 1
 
-# --- Google 优化 ---
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
-User-agent: Googlebot-Image
-Allow: /
 
-# --- Bing ---
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# --- AI 搜索引擎 - 允许收录以提升 GEO 可见性 ---
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Baiduspider-image
+Allow: /
+
+# AI Crawlers - Open for GEO
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
@@ -40,12 +29,17 @@ User-agent: CCBot
 Allow: /
 User-agent: anthropic-ai
 Allow: /
+User-agent: ClaudeBot
+Allow: /
 User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
 
-# --- 恶意爬虫 - 禁止 ---
 User-agent: Bytespider
 Disallow: /
 User-agent: Amazonbot
@@ -53,8 +47,4 @@ Disallow: /
 User-agent: Applebot-Extended
 Disallow: /
 
-# --- 图片爬虫许可 ---
-User-agent: Googlebot-Image
-Allow: /
-User-agent: Baiduspider-image
-Allow: /
+Content-Signal: search=yes,ai-train=no
