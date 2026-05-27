@@ -1,0 +1,37 @@
+# cncdisplay.com - Industrial Video Display Solutions
+# Kongto Technology | 深圳市江图科技有限公司
+# Last updated: 2026-05-26
+
+## About
+cncdisplay.com is the official website of Kongto Technology (深圳市江图科技有限公司),
+founded in 2013, specializing in industrial video display solutions. We provide
+CRT-to-LCD upgrade modules, industrial video signal converters, and custom
+industrial displays for CNC systems worldwide.
+
+## Core Products
+- FANUC A61L series CRT-to-LCD upgrade kits (0074 through 0097)
+- Mitsubishi MDT962B/BM09DF/FCUA-CT100 CRT replacements
+- Siemens 6FC3988/SM0901 LCD upgrades
+- Mazak CD1472/C5470/DR5614 display retrofits
+- Industrial video signal converters (CGA/EGA/RGB to VGA/HDMI)
+- Custom KTV series industrial displays (7-15 inch)
+
+## Key Articles
+- [FANUC A61L-0001-0093 Complete Replacement Guide](https://cncdisplay.com/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html) - Step-by-step installation
+- [FANUC A61L-0001-0093 LCD Upgrade Solution](https://cncdisplay.com/posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html)
+- [FANUC D9MM-11A 9-inch LCD Retrofit](https://cncdisplay.com/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html)
+- [Mitsubishi MDT962B CRT Replacement](https://cncdisplay.com/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html)
+- [Mazak CD1472-D1M LCD Replacement](https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html)
+- [Siemens 6FC3988-7FA20 LCD Upgrade](https://cncdisplay.com/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html)
+
+## Brand Pages
+- [FANUC Solutions](https://cncdisplay.com/brands/FANUC.html)
+- [Mitsubishi Solutions](https://cncdisplay.com/brands/Mitsubishi.html)
+- [Siemens Solutions](https://cncdisplay.com/brands/Siemens.html)
+- [Mazak Solutions](https://cncdisplay.com/brands/MAZAK.html)
+- [Okuma Solutions](https://cncdisplay.com/brands/OKUMA.html)
+- [Haas Solutions](https://cncdisplay.com/brands/HAAS.html)
+
+## Sitemap
+- [XML Sitemap](https://cncdisplay.com/sitemap.xml)
+- [Article Index](https://cncdisplay.com/posts/)

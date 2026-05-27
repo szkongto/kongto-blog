@@ -1,152 +1,570 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Articles - Kongto Technology</title>
-    <meta name="description" content="Technical articles about FANUC display retrofit, industrial video signal conversion, and LCD replacement solutions.">
+    <title>Articles | Kongto Technology</title>
+    <meta name="description" content="Industrial video display technical articles covering FANUC, Mitsubishi, Siemens, Mazak, Okuma, Haas display upgrades, signal converters, and CNC spare parts.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://zz.bdstatic.com https://push.zhanzhang.baidu.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <link rel="stylesheet" href="/css/style.css?v=6">
-    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/" />
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/" />
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/index.html" />
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/index.html" />
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/">
+    <style>
+        .category-section { margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; }
+        .category-section h2 { color: #1a1a2e; border-bottom: 2px solid #4cc9f0; padding-bottom: 0.5rem; }
+        .article-count { color: #666; font-size: 0.8em; }
+        .post-list { display: grid; gap: 1rem; margin-top: 1rem; }
+        .post-item { background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .post-item h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
+        .post-item h3 a { color: #1a1a2e; text-decoration: none; }
+        .post-item h3 a:hover { color: #4cc9f0; }
+        .post-item time { color: #888; font-size: 0.85rem; }
+        .post-item p { color: #555; font-size: 0.9rem; margin: 0.5rem 0 0 0; }
+        .toc { background: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
+        .toc h3 { margin-top: 0; }
+        .toc ul { columns: 2; column-gap: 2rem; }
+        .toc li { break-inside: avoid; margin-bottom: 0.3rem; }
+        @media (max-width: 768px) { .toc ul { columns: 1; } }
+    </style>
+    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/en/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/en/">Home</a>
-                <a href="/en/posts/">Articles</a>
-                <a href="/en/docs/">Downloads</a>
-                <a href="/en/about.html">About</a>
-            </div>
-            <div class="lang-switch">
-                <a href="/posts/" lang="zh">中文</a> |
-                <a href="/en/posts/" lang="en">English</a>
-            </div>
-        </nav>
-    </header>
+    <header><nav>
+        <a href="/en/" class="logo">Kongto Technology</a>
+        <div class="nav-links">
+            <a href="/en/">Home</a>
+            <a href="/en/posts/">Articles</a>
+            <a href="/en/docs/">Downloads</a>
+            <a href="/en/about.html">About</a>
+        </div>
+        <div class="lang-switch">
+            <a href="/posts/" lang="zh" class="lang-zh">中文</a>
+            <span class="divider">|</span>
+            <a href="/en/posts/" lang="en" class="lang-en">English</a>
+        </div>
+    </nav></header>
     <main>
-        <section class="posts-index">
-            <h1>Technical Articles</h1>
-            <p>Professional guides for FANUC display retrofit, industrial video signal conversion, and LCD replacement solutions.</p>
-
-            <h2>Mazak / Sharp / MDT LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html">Mazak CD1472-D1M LCD Replacement Solution — Revitalize Your Legacy CNC Monitor</a></li>
-                <li><a href="/en/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html">Sharp AIQA8DSP40 LCD Replacement — The Ultimate Upgrade for 14" CNC CRT Monitors</a></li>
-                <li><a href="/en/posts/article_20260507_MDT1283B_LCD_Replacement.html">MDT-1283B LCD Replacement — Totoku/Mitsubishi 12" CNC CRT Monitor Upgrade</a></li>
-            
-                <li><a href="/en/posts/article_20260508_Mazak_C5470NS.html">Mazak C-5470NS CNC Lathe: CRT to LCD Display Upgrade Case Study</a></li>
-                <li><a href="/en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html">Mazak DR5614 LCD Upgrade — CRT to LCD Replacement for Mazatrol T-32</a></li>
-</ul>
-
-            <h2>Mitsubishi LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">Mitsubishi MDT962B Industrial LCD Monitor — Perfect CRT Replacement for M64/E60/M500/M520</a></li>
-                <li><a href="/en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html">Mitsubishi BM09DF Industrial Display — TFT Replacement for E60 CNC System</a></li>
-                <li><a href="/en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html">Mitsubishi FCUA-CT100 Industrial Display — TFT Replacement for M500/M520 CNC Systems</a></li>
-            
-                <li><a href="/en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html">Mitsubishi MDT962B / BM09DF Series CRT to LCD Upgrade Solution — Complete Guide 2026</a></li>
-</ul>
-
-            <h2>Haas LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260508_Haas_CRT_LCD.html">Haas CNC CRT to LCD Upgrade — Haas VF/ SL/ EC Series Plug-and-Play Retrofit</a></li>
+        <h1>All Articles</h1>
+        <div class="toc">
+            <h3>Category Navigation</h3>
+            <ul>
+                <li><a href="#fanuc">🔧 FANUC CNC Display LCD Upgrade Solutions (32)</a></li>
+<li><a href="#mazak">🔧 Mazak / Sharp / Mitsubishi Display Replacement (10)</a></li>
+<li><a href="#okuma">🔧 Okuma Display Replacement (1)</a></li>
+<li><a href="#haas">🔧 Haas Display Replacement (2)</a></li>
+<li><a href="#siemens">🔧 Siemens Display Replacement (2)</a></li>
+<li><a href="#ktv">📺 Custom KTV Series Industrial Displays (4)</a></li>
+<li><a href="#conv">🔌 Industrial Video Signal Converters (3)</a></li>
+<li><a href="#guide">📚 Technical Guides & Solutions (22)</a></li>
+<li><a href="#comp">⚖️ Technical Comparisons (2)</a></li>
+<li><a href="#faq">❓ FAQ & Troubleshooting (2)</a></li>
+<li><a href="#news">📰 News & Press Releases (1)</a></li>
+<li><a href="#guide2">📚 More Technical Guides (4)</a></li>
             </ul>
-
-            <h2>Siemens LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html">Siemens 6FC3998-7FA20 Industrial Monitor 9" Monochrome LCD Replacement</a></li>
-                <li><a href="/en/posts/article_20260507_Siemens_SM0901_579417_TA.html">Siemens SM0901 579417 TA Monochrome Display - Product Introduction</a></li>
-            </ul>
-        
-            <h2>Okuma LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html">Okuma 5000/5020 CRT to LCD Replacement Guide: Plug-and-Play Retrofit Without Modification</a></li>
-            </ul>
-
-            <h2>FANUC LCD Retrofit Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14-inch Color CRT to LCD Retrofit Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 Color CRT to LCD Complete Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 9-inch Monochrome CRT to LCD Retrofit Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html">FANUC A61L-0001-0092 MDT947B 9-inch Monochrome LCD Retrofit Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD Display Professional Installation Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html">FANUC A61L-0001-0094 14-inch Color LCD Retrofit Guide</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html">FANUC A61L-0001-0095 9-inch Monochrome LCD Replacement Guide</a></li>
-                <li><a href="/en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0096 CRT Display LCD Replacement Solution</a></li>
-                <li><a href="/en/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html">FANUC A61L-0001-0097 LCD Upgrade — CRT to LCD Replacement for CNC Systems</a></li>
-                <li><a href="/en/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html">FANUC D9MM-11A-0093 LCD Retrofit Guide</a></li>
-            </ul>
-
-            <h2>Technical Guides</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide</a></li>
-                <li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html">FANUC A61L-0001-0093 LCD Display — Breathe New Life into Aging CNC Systems</a></li>
-                <li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide</a></li>
-                <li><a href="/en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html">How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study</a></li>
-                <li><a href="/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">Industrial Controller Display Troubleshooting &amp; Maintenance Guide</a></li>
-                <li><a href="/en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">Industrial RGBHV Signal Analysis — From CGA/EGA to Modern Display</a></li>
-                <li><a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">Video Signal Converters in CNC Control Systems</a></li>
-                <li><a href="/en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA Guide</a></li>
-                <li><a href="/en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html">Key Color &amp; Scanning Technologies in Industrial Video Architecture</a></li>
-                <li><a href="/en/posts/Industrial_Touchscreen_vs_Display_Difference_Selection.html">Industrial Display Procurement &amp; Selection Guide</a></li>
-                <li><a href="/en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html">Kongto Technology Industrial Display Product Catalog</a></li>
-            </ul>
-
-            <h2>Comparisons</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html"> FANUC CRT Repair vs LCD Retrofit — Cost Comparison</a></li>
-                <li><a href="/en/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide</a></li>
-            </ul>
-
-            <h2>FAQ</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/FANUC_0i_System_Display_FAQ_Solutions.html">FANUC 0i System Display Troubleshooting</a></li>
-                <li><a href="/en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html">FANUC A61L-0001-0093 Display Troubleshooting</a></li>
-            </ul>
-
-            <h2>Custom Industrial Displays</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/Custom_Industrial_Display_Series.html">Custom Industrial Display Series — KTV148/KTV104/KTV804/KTV800M Customized Display Solutions</a></li>
-                <li><a href="/en/posts/article_20260508_KTV148_Custom_Industrial_Display.html">KTV148 12.1" Custom Industrial Display — Standard Size Model, Multi-Signal Compatible</a></li>
-                <li><a href="/en/posts/article_20260508_KTV104_Custom_Industrial_Display.html">KTV104 10.4" Custom Industrial Display — Compact Design for Space-Limited Applications</a></li>
-                <li><a href="/en/posts/article_20260508_KTV804_Custom_Industrial_Display.html">KTV804 8.4" Custom Industrial Display — Compact Design for CNC/HMI</a></li>
-                <li><a href="/en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html">KTV800M 8" Custom Industrial Display — Compact Design for Small Equipment</a></li>
-            </ul>
-            <h2>Industrial Signal Converters</h2>
-            <ul class="article-list">
-                <li><a href="/en/posts/article_20260509_GBS-8219_RGB_to_VGA_Converter.html">GBS-8219 RGB to VGA Industrial Signal Converter — Breathe New Life into Legacy CNC Systems</a></li>
-                <li><a href="/en/posts/article_20260509_KT809_Industrial_Converter.html">KT809 Industrial Signal Converter — Multi-Function CGA/EGA/RGB to VGA Converter</a></li>
-                <li><a href="/en/posts/article_20260509_KT819_Industrial_Converter.html">KT819 Industrial Signal Converter — Multi-Protocol RGB/Composite Video to VGA Converter</a></li>
-            </ul>
-
-
-            <h2>Downloads</h2>
-            <ul class="article-list">
-                <li><a href="/en/docs/">📄 Technical Documentation - PDF Manuals &amp; Installation Guides</a></li>
-            </ul>
-
-        </section>
+        </div>
+        <section class="category-section" id="fanuc">
+    <h2>🔧 FANUC CNC Display LCD Upgrade Solutions <span class="article-count">(32篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html">A61L-0001-0093 Display Troubleshooting</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Troubleshooting for FANUC A61L-0001-0093 display issues</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html">FANUC 0i Display Troubleshooting</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Troubleshooting guide for FANUC 0i system display issues</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html">FANUC CRT Repair vs LCD Retrofit — Cost Comparison</a></h3>
+    
+    <p>Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html">FANUC A61L-0001-0093 9-inch CRT to LCD Complete Replacement Gu...</a></h3>
+    <time datetime="2026-05-26">2026-05-26</time>
+    <p>Complete step-by-step guide for FANUC A61L-0001-0093 9-inch CRT to LCD upgrade. Model identification, signal connection,</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html">FANUC D9MM-11A (A61L-0001-0093) 9-Inch Monochrome Display LCD ...</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC D9MM-11A (A61L-0001-0093) 9-inch monochrome display LCD upgrade solution. Plug-and-play, zero modification, 1-year</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html">FANUC A61L-0001-0095 9-inch Monochrome LCD Replacement Guide</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0095 9-inch monochrome LCD replacement guide. Direct replacement for CRT displays in FANUC CNC systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html">FANUC A61L-0001-0094 9-inch Color LCD Retrofit Guide</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0094 9-inch color CRT to LCD retrofit guide. Plug-and-play replacement with HONDA 20-pin connector for F</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD Retrofit Solution | 9-inch CRT to LCD...</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0093 9-inch monochrome CRT to LCD retrofit complete solution, including original specifications, fault d</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html">FANUC A61L-0001-0092 MDT947B 9-inch Monochrome LCD Retrofit Guide</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0092 MDT947B 9-inch monochrome CRT to LCD retrofit guide. Plug-and-play replacement for FANUC 0i/16i/18i</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 9-inch Monochrome CRT to LCD Retrofit Gui...</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>Complete guide for retrofitting FANUC A61L-0001-0090 9-inch monochrome CRT display to LCD. Compatible with FANUC 0i/16i/</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 Color CRT to LCD Complete Guide</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>Complete guide for converting FANUC A61L-0001-0086 color CRT display to LCD. Step-by-step retrofit solution for FANUC CN</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14-inch Color CRT to LCD Retrofit – Compl...</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0074 14-inch color CRT to LCD retrofit complete technical solution. Covers original CRT specifications, </p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html">How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study</a></h3>
+    
+    <p>Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html">FANUC CRT to LCD Upgrade Complete Guide</a></h3>
+    
+    <p>Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html">FANUC A61L-0001-0093 LCD Display — Breathe New Life into Aging...</a></h3>
+    
+    <p>FANUC A61L-0001-0093 LCD display specifications, compatibility, and CRT-to-LCD upgrade benefits for CNC systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html">Kongto Technology Launches FANUC Full-Series LCD Retrofit Solu...</a></h3>
+    
+    <p>Press release: Kongto Technology announces comprehensive LCD retrofit solutions for the entire FANUC display series.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html">Kongto FANUC LCD Solution</a></h3>
+    
+    <p>﻿ Kongto FANUC LCD Solution | Kongto Technology Kongto Articles Kongto FANUC LCD Upgrade Solution Shenzhen Kongto Techno</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html">How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study</a></h3>
+    
+    <p>Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html">FANUC CRT to LCD Upgrade Complete Guide</a></h3>
+    
+    <p>Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide</a></h3>
+    
+    <p>Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html">FANUC CRT Repair vs LCD Retrofit — Cost Comparison</a></h3>
+    
+    <p>Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html">FANUC CRT Repair vs LCD Retrofit — Cost Comparison</a></h3>
+    
+    <p>Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html">FANUC CRT Maintenance vs LCD Upgrade Module Comparison</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Detailed comparison between FANUC CRT maintenance and LCD upgrade modules. Covers cost, reliability, performance, and RO</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html">FANUC A61L-0001-0097 LCD Upgrade — CRT to LCD Replacement for ...</a></h3>
+    <time datetime="2026-05-22">2026-05-22</time>
+    <p>FANUC A61L-0001-0097 LCD upgrade solution. Plug-and-play replacement for 9-inch CRT display, 350 cd/m² brightness, compa</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0096 LCD Display Replacement — No-Modification...</a></h3>
+    <time datetime="2026-05-21">2026-05-21</time>
+    <p>FANUC A61L-0001-0096 CRT to LCD replacement solution. Direct-fit, no rewiring, plug-and-play installation. Industrial TF</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html">FANUC A61L-0001-0093 LCD Display — Breathe New Life into Aging...</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>FANUC A61L-0001-0093 LCD display breathes new life into aging CNC systems. Plug-and-play CRT to LCD upgrade solution wit</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display — CNC Upgrade Replacement Guide</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>FANUC A61L-0001-0093 LCD display specifications, compatibility, and CRT-to-LCD upgrade benefits for CNC systems. Plug-an</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html">FANUC A61L-0001-0093 Display FAQ Solutions</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>FAQ and solutions for FANUC A61L-0001-0093 display issues. Common problems and repair solutions for industrial CNC displ</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html">FANUC A61L-0001-0093 Display Abnormality Troubleshooting</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Complete troubleshooting guide for FANUC A61L-0001-0093 display abnormalities. Covers common faults, diagnostic steps, a</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_0i_System_Display_FAQ_Solutions.html">FANUC 0i System Display FAQ Solutions</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>FAQ and solutions for FANUC 0i system display issues. Common problems and repair solutions for industrial CNC displays.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html">FANUC 0i System Display Abnormality Troubleshooting</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Complete troubleshooting guide for FANUC 0i system display abnormalities. Covers common faults, diagnostic steps, and re</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html">Kongto Technology Launches FANUC CNC Display LCD Upgrade Solut...</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Shenzhen Kongto Technology releases FANUC CNC display LCD upgrade solution, providing plug-and-play display upgrade path</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="mazak">
+    <h2>🔧 Mazak / Sharp / Mitsubishi Display Replacement <span class="article-count">(10篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html">Mitsubishi MDT962B / BM09DF Series CRT to LCD Upgrade Solution...</a></h3>
+    <time datetime="2026-05-23">2026-05-23</time>
+    <p>Complete industrial LCD upgrade solution for Mitsubishi MELDAS CNC system CRT monitors. Covers MDT962B-1A, BM09DF, FCUA-</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html">马扎克 C-5470NS CRT 液晶屏改高清液晶屏案例 - Kongto Technology</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>马扎克 C-5470NS 数控车床 CRT 液晶屏改高清液晶屏解决方案，由 Kongto Technology 提供，专业修复黑屏、花屏、色彩失真等故障。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_Mazak_C5470NS.html">Mazak C-5470NS CNC Lathe: CRT to LCD Display Upgrade Case Study</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>Mazak C-5470NS CNC lathe CRT to LCD display upgrade case study by Kongto Technology. Plug-and-play, 10.4</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html">Sharp AIQA8DSP40 LCD Replacement — The Ultimate Upgrade for 14...</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Industrial-grade Sharp AIQA8DSP40 14-inch color CRT to LCD replacement kit.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html">Mazak CD1472-D1M LCD Replacement Solution — Revitalize Your Le...</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Professional Hitachi CD1472-D1M CRT to LCD replacement kit for Mazak Mazatrol systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260507_MDT1283B_LCD_Replacement.html">MDT-1283B LCD Replacement — Totoku/Mitsubishi 12" CRT to LCD U...</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Professional MDT-1283B CRT to LCD replacement solution. Replaces Mazak MDT-1283-02, Totoku MDT1283-1A, Mitsubishi 12A-VX</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">Mitsubishi MDT962B Industrial LCD Monitor — Perfect CRT Replac...</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>Professional Mitsubishi MDT962B CRT to TFT LCD replacement solution. Plug-and-play, 100% mounting hole compatibility. 80</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html">Mitsubishi FCUA-CT100 Industrial Display — TFT Replacement for...</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>Professional Mitsubishi FCUA-CT100 industrial display TFT replacement solution. Designed for Mitsubishi M500/M520 CNC sy</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html">Mitsubishi BM09DF Industrial Display — TFT Replacement for E60...</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>Professional Mitsubishi BM09DF industrial display TFT replacement solution. Perfect compatibility with Mitsubishi M64/E6</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html">Mazak DR5614 LCD Upgrade — CRT to LCD Replacement for Mazatrol...</a></h3>
+    <time datetime="2026-05-22">2026-05-22</time>
+    <p>Mazak DR5614 CRT display professional LCD replacement. 12.1-inch TFT HD display, 800x600 resolution, 15-pin Molex origin</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="okuma">
+    <h2>🔧 Okuma Display Replacement <span class="article-count">(1篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html">Okuma 5000/5020 CRT to LCD Replacement Guide: Plug-and-Play Re...</a></h3>
+    
+    <p>﻿ Okuma 5000/5020 CRT to LCD Replacement Guide: Plug-and-Play Retrofit Without Modification Kongto Technology Home Artic</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="haas">
+    <h2>🔧 Haas Display Replacement <span class="article-count">(2篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260508_Haas_CRT_LCD_Case.html">Haas CNC CRT to LCD Upgrade Case Study</a></h3>
+    
+    <p>Haas CNC CRT to LCD upgrade case study. VF Series, SL Series, EC Series. Plug-and-play replacement, 30-min installation,</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_Haas_CRT_LCD.html">Haas CNC CRT to LCD Retrofit Case Study</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>﻿ Haas CNC CRT to LCD Retrofit Case Study | Kongto Technology Kongto Technology Home Articles Downloads 中文 | English Cas</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="siemens">
+    <h2>🔧 Siemens Display Replacement <span class="article-count">(2篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260507_Siemens_SM0901_579417_TA.html">Siemens SM0901-579417-TA 9-Inch Monochrome Monitor &mdash; LCD...</a></h3>
+    
+    <p>Siemens SM0901-579417-TA 9-inch monochrome CRT monitor &mdash; professional LCD upgrade solution for SINUMERIK 802D/810D</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html">Siemens 6FC3998-7FA20 LCD Monitor Professional Replacement Sol...</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Siemens 6FC3998-7FA20 LCD monitor professional replacement solution. Plug-and-play, 100% mounting hole compatibility. 80</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="ktv">
+    <h2>📺 Custom KTV Series Industrial Displays <span class="article-count">(4篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260508_KTV804_Custom_Industrial_Display.html">KTV804 8.4" Custom Industrial Display</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV804 8.4-inch custom industrial display, compact design, industrial-grade TFT LCD panel, supports VGA/HDMI multiple si</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html">KTV800M 8" Custom Industrial Display</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV800M 8-inch custom industrial display, compact design, industrial-grade TFT LCD panel, supports VGA/HDMI multiple sig</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_KTV148_Custom_Industrial_Display.html">KTV148 12.1" Custom Industrial Display</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV148 12.1-inch custom industrial display, industrial-grade TFT LCD panel, supports VGA/HDMI multiple signal inputs, IP</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260508_KTV104_Custom_Industrial_Display.html">KTV104 10.4" Custom Industrial Display</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV104 10.4-inch custom industrial display, compact design, industrial-grade TFT LCD panel, supports VGA/HDMI multiple s</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="conv">
+    <h2>🔌 Industrial Video Signal Converters <span class="article-count">(3篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260509_KT819_Industrial_Converter.html">KT819 Industrial Signal Converter — Multi-Protocol RGB/Composi...</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>KT819 industrial-grade multi-protocol video signal converter supporting RGB/composite video to VGA, with automatic VGA/R</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260509_KT809_Industrial_Converter.html">KT809 Industrial Signal Converter — Multi-Function CGA/EGA/RGB...</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>KT809 industrial-grade multi-function video signal converter supporting CGA/EGA/RGB to VGA, with optional signal isolati</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260509_GBS-8219_RGB_to_VGA_Converter.html">GBS-8219 RGB to VGA Industrial Signal Converter — Breathe New ...</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>GBS-8219 industrial-grade RGB to VGA signal converter supporting CGA/EGA/MDA input, VGA output up to 1024x768, plug-and-</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="guide">
+    <h2>📚 Technical Guides & Solutions <span class="article-count">(22篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html">Kongto Technology Industrial Display Product Catalog</a></h3>
+    
+    <p>Kongto Technology product catalog featuring LCD displays, signal converters, touch screens, and accessories for industri</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_工业视频显示在智能工厂中的关键角色与江图科技方案.html">Key Color & Scanning Technologies in Industrial Video Architec...</a></h3>
+    
+    <p>Technical analysis of color reproduction and scanning line technologies in industrial video display systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA G...</a></h3>
+    
+    <p>Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_工业视频信号转换器在CNC数控系统中的应用.html">Video Signal Converters in CNC Control Systems</a></h3>
+    
+    <p>Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criter</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html">Industrial RGBHV Signal Analysis — From CGA/EGA to Modern Display</a></h3>
+    
+    <p>Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_工业数控设备显示器故障诊断与维修全攻略.html">Industrial Controller Display Troubleshooting & Maintenance Guide</a></h3>
+    
+    <p>Comprehensive troubleshooting guide for industrial controller display failures, covering common faults, diagnostic metho</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide</a></h3>
+    
+    <p>Complete guide to retrofitting CGA/EGA CRT displays to RGBHV (VGA) industrial monitors. Covers converter selection, inst</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Converters_in_CN_Control_Systems.html">Video Signal Converters in CNC Control Systems</a></h3>
+    
+    <p>Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criter</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">Video Signal Converters in CNC Control Systems</a></h3>
+    
+    <p>Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criter</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA G...</a></h3>
+    
+    <p>Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Converter_Selection_Guide.html">Video Signal Converter Selection</a></h3>
+    
+    <p>﻿ Video Signal Converter Selection | Kongto Technology Kongto Articles Video Signal Converter Selection Guide Complete g</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA G...</a></h3>
+    
+    <p>Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA G...</a></h3>
+    
+    <p>Complete guide to video signal conversion systems including CGA-to-VGA, EGA-to-VGA, and RGB-to-VGA solutions.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html">Kongto Technology Industrial Display Product Catalog</a></h3>
+    
+    <p>Kongto Technology product catalog featuring LCD displays, signal converters, touch screens, and accessories for industri</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html">Key Color & Scanning Technologies in Industrial Video Architec...</a></h3>
+    
+    <p>Technical analysis of color reproduction and scanning line technologies in industrial video display systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Video_Display_Color_Scanning_Technology.html">Key Color & Scanning Technologies in Industrial Video Architec...</a></h3>
+    
+    <p>Technical analysis of color reproduction and scanning line technologies in industrial video display systems.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html">Industrial RGBHV Signal Analysis — From CGA/EGA to Modern Display</a></h3>
+    
+    <p>Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">Industrial RGBHV Signal Analysis — From CGA/EGA to Modern Display</a></h3>
+    
+    <p>Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html">Industrial Controller Display Troubleshooting & Maintenance Guide</a></h3>
+    
+    <p>Comprehensive troubleshooting guide for industrial controller display failures, covering common faults, diagnostic metho</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">Industrial Controller Display Troubleshooting & Maintenance Guide</a></h3>
+    
+    <p>Comprehensive troubleshooting guide for industrial controller display failures, covering common faults, diagnostic metho</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Custom_Industrial_Display_Series.html">Custom Industrial Display Series</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>Shenzhen Kongto Technology custom industrial display series: KTV148, KTV104, KTV804, KTV800M, providing customized displ</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Complete guide to retrofitting CGA/EGA CRT displays to RGBHV (VGA) industrial monitors. Covers converter selection, inst</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="comp">
+    <h2>⚖️ Technical Comparisons <span class="article-count">(2篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html">Video Signal Converter Selection</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>Guide for VGA to VIDEO vs HDMI to VGA converter selection</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Display_Market_Trends_Brand_Comparison.html">Industrial Display Market Trends & Brand Comparison</a></h3>
+    
+    <p>Market analysis and brand comparison for industrial displays, covering trends, pricing, and technology roadmaps.</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="faq">
+    <h2>❓ FAQ & Troubleshooting <span class="article-count">(2篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html">Used Industrial Display Recycling FAQ — Top 10 Questions</a></h3>
+    
+    <p>Top 10 frequently asked questions about used industrial display recycling, covering valuation, testing, and environmenta</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Used_Display_Recycling_FAQ_TOP10.html">Used Display Recycling FAQ</a></h3>
+    
+    <p>﻿ Used Display Recycling FAQ | Kongto Technology Kongto Articles Used Display Recycling FAQ Top 10 Top 10 frequently ask</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="news">
+    <h2>📰 News & Press Releases <span class="article-count">(1篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html">Kongto Technology Industrial Display Product Catalog</a></h3>
+    
+    <p>Kongto Technology product catalog featuring LCD displays, signal converters, touch screens, and accessories for industri</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="guide2">
+    <h2>📚 More Technical Guides <span class="article-count">(4篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/en/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide</a></h3>
+    
+    <p>Complete guide for selecting industrial video signal converters. Compare VGA to VIDEO vs HDMI to VGA converters for CNC </p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Touchscreen_vs_Display_Difference_Selection.html">Industrial Display Procurement & Selection Guide</a></h3>
+    
+    <p>Industrial display procurement guide covering selection criteria, specification comparison, and advanced configuration.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Display_Procurement_Selection_Guide.html">Industrial Display Procurement & Selection Guide</a></h3>
+    
+    <p>Industrial display procurement guide covering selection criteria, specification comparison, and advanced configuration.</p>
+</article>
+<article class="post-item">
+    <h3><a href="/en/posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html">Industrial Controller Display Troubleshooting & Maintenance Guide</a></h3>
+    
+    <p>Comprehensive troubleshooting guide for industrial controller display failures, covering common faults, diagnostic metho</p>
+</article>
+    </div>
+</section>
     </main>
     <footer>
-        <p>&copy; Kongto Technology Co., Ltd.</p>
-        <p>Contact: szkongto01@foxmail.com</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="/en/posts/">技术文章</a>
+                <a href="/en/docs/">资料下载</a>
+                <a href="/en/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2026 Kongto Technology Co., Ltd.</p>
+        </div>
     </footer>
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
 </body>
 </html>
-
-
