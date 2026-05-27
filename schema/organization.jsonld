@@ -3,15 +3,15 @@
   "@type": "Organization",
   "name": "深圳市江图科技有限公司",
   "legalName": "深圳市江图科技有限公司",
-  "alternateName": "Kongto Technology",
+  "alternateName": "Kongto Technology Co.,LTD",
   "description": "专注工业视频显示方案的技术型公司，为CNC数控系统、工业自动化设备提供显示器升级改造解决方案，主营FANUC数控显示器LCD升级、工业视频信号转换、工控专用显示器等产品",
-  "url": "https://szkongto.github.io/kongto-blog/",
-  "logo": "https://szkongto.github.io/kongto-blog/images/logo.png",
+  "url": "https://cncdisplay.com/",
+  "logo": "https://cncdisplay.com/images/logo.png",
   "foundingDate": "2013",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "深坑综合楼2号楼C栋404",
-    "addressLocality": "深圳市龙岗区横岗街道",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳市龙岗区",
     "addressRegion": "广东",
     "postalCode": "518115",
     "addressCountry": "CN"
@@ -19,13 +19,12 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+86-13686889647",
-    "email": "1251701967@qq.com",
+    "email": "szkongto01@foxmail.com",
     "contactType": "customer service",
     "availableLanguage": ["Chinese", "English"]
   },
   "sameAs": [
-    "https://blog.csdn.net/szkongto",
-    "https://szkongto.1688.com"
+    "https://blog.csdn.net/szkongto"
   ],
   "makesOffer": [
     {
