@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,10 @@
     <meta name="geo.placename" content="深圳龙华">
     <meta name="geo.position" content="22.6568;113.9899">
     <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://zz.bdstatic.com https://push.zhanzhang.baidu.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 
 <script type="application/ld+json">
@@ -89,7 +93,8 @@
     "item": "https://cncdisplay.com/en/posts/article_20260508_KTV148_Custom_Industrial_Display.html"
   }]
 }
-</script></head>
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+</head>
 <body>
     <header>
         <nav>
@@ -248,7 +253,7 @@
         var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="/images/qr.png" alt="QR Code"></div>' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() {
@@ -281,7 +286,12 @@
 
         </article>
     </main>
-    <footer>
+    
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+    <h3 style="margin-top:0;">Related Articles</h3>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/article_20260508_KTV104_Custom_Industrial_Display.html">KTV104 10.4" Custom Industrial Display | Kongto Technology</a></li><li><a href="/en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html">KTV800M 8" Custom Industrial Display | Kongto Technology</a></li><li><a href="/en/posts/article_20260508_KTV804_Custom_Industrial_Display.html">KTV804 8.4" Custom Industrial Display | Kongto Technology</a></li></ul>
+</section>
+<footer>
         <p>&copy; 2026 Kongto Technology | <a href="/en/">Back to Home</a></p>
     </footer>
 </body>
