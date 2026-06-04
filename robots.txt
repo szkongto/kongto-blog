@@ -48,3 +48,4 @@ User-agent: Applebot-Extended
 Disallow: /
 
 Content-Signal: search=yes,ai-train=no
+Disallow: /cdn-cgi/
