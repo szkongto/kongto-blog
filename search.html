@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>站内搜索 | 深圳市江图科技有限公司</title>
+    <meta name="description" content="搜索cncdisplay.com全站技术文章、产品文档和品牌方案。支持按品牌名（FANUC/三菱/西门子/马扎克）、型号（A61L-0001-0093/MDT962B）、关键词搜索。">
+    <link rel="stylesheet" href="/css/style.css?v=6">
+    <link rel="canonical" href="https://cncdisplay.com/search.html">
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/search.html" />
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/search.html" />
+    <meta name="geo.region" content="CN-44">
+    <meta name="geo.placename" content="深圳龙岗">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="站内搜索 | 深圳市江图科技有限公司">
+    <meta property="og:description" content="搜索cncdisplay.com全站技术文章、产品文档和品牌方案。">
+    <meta property="og:url" content="https://cncdisplay.com/search.html">
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+    <style>
+        .search-container { max-width: 800px; margin: 2rem auto; padding: 0 20px; }
+        .search-box { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .search-box input { flex: 1; padding: 14px 20px; font-size: 1.1rem; border: 2px solid #e2e8f0; border-radius: 8px; outline: none; transition: border-color 0.2s; }
+        .search-box input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        .search-box button { padding: 14px 28px; background: linear-gradient(135deg,#2563eb,#1d4ed8); color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+        .search-box button:hover { opacity: 0.9; }
+        .search-info { color: #64748b; margin-bottom: 1rem; font-size: 0.9rem; }
+        .search-stats { color: #2563eb; font-weight: 600; }
+        .result-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+        .result-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .result-title { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.4rem 0; }
+        .result-title a { color: #1e40af; text-decoration: none; }
+        .result-title a:hover { text-decoration: underline; }
+        .result-desc { color: #475569; font-size: 0.92rem; margin: 0 0 0.5rem 0; line-height: 1.5; }
+        .result-meta { display: flex; gap: 0.75rem; align-items: center; font-size: 0.82rem; color: #64748b; }
+        .result-tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 500; }
+        .tag-article { background: #dbeafe; color: #1e40af; }
+        .tag-brand { background: #dcfce7; color: #166534; }
+        .tag-download { background: #fef3c7; color: #92400e; }
+        .tag-page { background: #f3e8ff; color: #7c3aed; }
+        .tag-zh { background: #fee2e2; color: #991b1b; }
+        .tag-en { background: #e0e7ff; color: #3730a3; }
+        .search-highlight { background: #fef08a; padding: 0 2px; border-radius: 2px; }
+        .no-results { text-align: center; padding: 3rem 1rem; color: #64748b; }
+        .no-results h3 { font-size: 1.3rem; color: #334155; margin-bottom: 0.5rem; }
+        .no-results ul { text-align: left; max-width: 400px; margin: 1rem auto; }
+        .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .filter-btn { padding: 6px 14px; border: 1px solid #e2e8f0; border-radius: 20px; background: #fff; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+        .filter-btn.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+        .filter-btn:hover { border-color: #2563eb; }
+        @media (max-width: 600px) {
+            .search-box { flex-direction: column; }
+            .search-box button { width: 100%; }
+        }
+    </style>
+    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+</head>
+<body>
+    <header><nav><a href="/" class="logo">深圳市江图科技有限公司</a><div class="nav-links"><a href="/">首页</a><a href="/posts/">文章</a><a href="/docs/">下载</a><a href="/search.html" class="nav-search active">🔍 搜索</a><a href="/about.html">关于</a></div>
+        <div class="lang-switch">
+            <a href="/search.html" lang="zh" class="lang-zh">中文</a> |
+            <a href="/en/search.html" lang="en" class="lang-en">English</a>
+        </div>
+    </nav></header>
+    <main>
+        <div class="search-container">
+            <h1>站内搜索</h1>
+            <p style="color:#64748b;margin-top:-0.5rem;margin-bottom:1.5rem;">搜索全部技术文章、品牌方案、产品下载 — 支持品牌名、型号、关键词</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="输入品牌名、型号或关键词… 如 FANUC A61L-0001-0093 LCD升级" autofocus>
+                <button id="searchBtn">搜索</button>
+            </div>
+
+            <div class="filter-bar" id="filterBar" style="display:none;">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="article">📄 文章</button>
+                <button class="filter-btn" data-filter="brand">🏷 品牌</button>
+                <button class="filter-btn" data-filter="download">📥 下载</button>
+                <button class="filter-btn" data-filter="zh">🇨🇳 中文</button>
+                <button class="filter-btn" data-filter="en">🇬🇧 English</button>
+            </div>
+
+            <div class="search-info" id="searchInfo"></div>
+            <div id="searchResults"></div>
+        </div>
+    </main>
+    <footer><p>&copy; 深圳市江图科技有限公司</p></footer>
+
+<script>
+let searchIndex = [];
+let currentFilter = 'all';
+
+function highlight(text, query) {
+    if (!query) return text;
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const qs = query.trim().split(/\s+/).filter(w => w.length > 0);
+    let result = text;
+    for (const q of qs) {
+        const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        result = result.replace(re, '<span class="search-highlight">$1</span>');
+    }
+    return result;
+}
+
+function search(query) {
+    if (!searchIndex.length) {
+        document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>正在加载搜索索引…</p></div>';
+        return;
+    }
+    if (!query.trim()) {
+        document.getElementById('searchResults').innerHTML = '';
+        document.getElementById('searchInfo').innerHTML = '';
+        document.getElementById('filterBar').style.display = 'none';
+        return;
+    }
+
+    const qs = query.trim().toLowerCase().split(/\s+/).filter(w => w.length > 0);
+    const startTime = performance.now();
+
+    let results = searchIndex.filter(item => {
+        const searchText = item.search_text.toLowerCase();
+        return qs.every(q => searchText.includes(q));
+    });
+
+    // Apply filter
+    if (currentFilter === 'zh') {
+        results = results.filter(r => r.lang === 'zh');
+    } else if (currentFilter === 'en') {
+        results = results.filter(r => r.lang === 'en');
+    } else if (currentFilter !== 'all') {
+        results = results.filter(r => r.category === currentFilter);
+    }
+
+    // Sort: articles first, then by date desc
+    results.sort((a, b) => {
+        if (a.category === 'article' && b.category !== 'article') return -1;
+        if (b.category === 'article' && a.category !== 'article') return 1;
+        return (b.date || '').localeCompare(a.date || '');
+    });
+
+    const elapsed = (performance.now() - startTime).toFixed(0);
+    const stats = `<span class="search-stats">${results.length}</span> 条结果 (${elapsed}ms)`;
+    document.getElementById('searchInfo').innerHTML = stats;
+    document.getElementById('filterBar').style.display = 'flex';
+
+    const container = document.getElementById('searchResults');
+    if (results.length === 0) {
+        container.innerHTML = `<div class="no-results">
+            <h3>未找到相关内容</h3>
+            <p>试试以下关键词：</p>
+            <ul>
+                <li>品牌名：FANUC、三菱、Mitsubishi、西门子、Siemens、马扎克、Mazak</li>
+                <li>型号：A61L-0001-0093、MDT962B、CD1472、6FC3988</li>
+                <li>关键词：CRT转LCD、LCD升级、显示器、CNC、信号转换器</li>
+            </ul>
+        </div>`;
+        return;
+    }
+
+    const catLabels = { article: '文章', brand: '品牌页', download: '下载', page: '页面' };
+    const catTags = { article: 'tag-article', brand: 'tag-brand', download: 'tag-download', page: 'tag-page' };
+    const langTags = { zh: 'tag-zh', en: 'tag-en' };
+
+    container.innerHTML = results.map(r => {
+        const desc = r.description || r.h1 || '';
+        return `<div class="result-card">
+            <h3 class="result-title">
+                <a href="${r.url}">${highlight(r.title, query)}</a>
+            </h3>
+            <p class="result-desc">${highlight(desc.length > 200 ? desc.slice(0, 200) + '…' : desc, query)}</p>
+            <div class="result-meta">
+                <span class="result-tag ${catTags[r.category] || 'tag-page'}">${catLabels[r.category] || r.category}</span>
+                <span class="result-tag ${langTags[r.lang] || 'tag-zh'}">${r.lang === 'en' ? 'English' : '中文'}</span>
+                ${r.date ? `<span>📅 ${r.date.slice(0,4)}-${r.date.slice(4,6)}-${r.date.slice(6,8)}</span>` : ''}
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// Load search index
+fetch('/search-index.json')
+    .then(r => r.json())
+    .then(data => {
+        searchIndex = data;
+        console.log('Search index loaded:', data.length, 'entries');
+        document.getElementById('searchInput').placeholder = '搜索 ' + data.length + ' 个页面… 输入品牌名、型号或关键词';
+        // Check URL for query
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q');
+        if (q) {
+            document.getElementById('searchInput').value = q;
+            search(q);
+        }
+    })
+    .catch(err => {
+        console.error('Failed to load search index:', err);
+        document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>搜索索引加载失败，请刷新页面重试。</p></div>';
+    });
+
+// Event handlers
+document.getElementById('searchBtn').addEventListener('click', () => {
+    search(document.getElementById('searchInput').value);
+});
+
+document.getElementById('searchInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') search(e.target.value);
+});
+
+// Live search as you type (debounced)
+let debounceTimer;
+document.getElementById('searchInput').addEventListener('input', e => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => search(e.target.value), 300);
+});
+
+// Filter buttons
+document.getElementById('filterBar').addEventListener('click', e => {
+    if (e.target.classList.contains('filter-btn')) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        currentFilter = e.target.dataset.filter;
+        search(document.getElementById('searchInput').value);
+    }
+});
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</body>
+</html>
