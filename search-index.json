@@ -33,6 +33,17 @@
     "search_text": "深圳市江图科技有限公司 - 工业视频显示解决方案专家 深圳市江图科技有限公司专注工业视频显示解决方案，为CNC数控系统、工业自动化设备提供CRT转LCD显示器升级改造、工业视频信号转换器、非标定制工控显示器。覆盖FANUC、三菱、西门子、Mazak、Okuma、Haas全品牌。 CNC数控显示器CRT转LCD升级改造 让老旧设备重新看见未来 FANUC A61L-0001-0093 LCD升级,FANUC A61L-0001-0074替代,三菱MDT962B CRT替代,西门子6FC3988-7FA20 LCD,马扎克CD1472-D1M升级,FANUC D9MM-11A更换,工业显示器,CNC显示器,数控显示器,CRT升级LCD,FANUC显示器,三菱显示器,工业液晶屏,工业视频转换器,RGB转VGA,CGA转VGA,Kongto Technology,深圳市江图科技有限公司"
   },
   {
+    "title": "站内搜索",
+    "description": "搜索cncdisplay.com全站技术文章、产品文档和品牌方案。支持按品牌名（FANUC/三菱/西门子/马扎克）、型号（A61L-0001-0093/MDT962B）、关键词搜索。",
+    "h1": "站内搜索",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/search.html",
+    "search_text": "站内搜索 搜索cncdisplay.com全站技术文章、产品文档和品牌方案。支持按品牌名（FANUC/三菱/西门子/马扎克）、型号（A61L-0001-0093/MDT962B）、关键词搜索。 站内搜索 "
+  },
+  {
     "title": "网站地图 | Sitemap",
     "description": "cncdisplay.com全站页面导航索引，涵盖FANUC发那科、三菱、西门子、马扎克等CNC数控显示器CRT转LCD升级方案。帮助用户和搜索引擎快速找到所有技术文章、产品下载和品牌页面。",
     "h1": "网站地图 Sitemap",
@@ -111,14 +122,14 @@
   },
   {
     "title": "技术文档下载 - 深圳市江图科技有限公司",
-    "description": "免费下载FANUC CRT液晶升级指南、三菱M64显示器资料、马扎克MDT-1283改装手册、数控CRT换液晶对照表等技术文档PDF",
+    "description": "技术文档下载 - 深圳市江图科技有限公司。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。",
     "h1": "技术文档下载",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "download",
     "lang": "zh",
     "date": "",
     "url": "/docs/index.html",
-    "search_text": "技术文档下载 - 深圳市江图科技有限公司 免费下载FANUC CRT液晶升级指南、三菱M64显示器资料、马扎克MDT-1283改装手册、数控CRT换液晶对照表等技术文档PDF 技术文档下载 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "技术文档下载 - 深圳市江图科技有限公司 技术文档下载 - 深圳市江图科技有限公司。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。 技术文档下载 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "About Kongto Technology - Industrial Display Solutions",
@@ -141,6 +152,17 @@
     "date": "",
     "url": "/en/index.html",
     "search_text": "Kongto Technology - Industrial Video Display Solutions Specialized in industrial video display solutions. FANUC CRT to LCD retrofit, video signal conversion, and industrial display products. CNC Display CRT to LCD Upgrade Solutions Bring Legacy Equipment Back to Life "
+  },
+  {
+    "title": "Site Search",
+    "description": "Search cncdisplay.com for technical articles, product documentation, and brand solutions. Search by brand name (FANUC/Mitsubishi/Siemens/Mazak), model number (A61L-0001-0093/MDT962B), or keywords.",
+    "h1": "Site Search",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/en/search.html",
+    "search_text": "Site Search Search cncdisplay.com for technical articles, product documentation, and brand solutions. Search by brand name (FANUC/Mitsubishi/Siemens/Mazak), model number (A61L-0001-0093/MDT962B), or keywords. Site Search "
   },
   {
     "title": "FANUC Display Solutions - Kongto Technology",
@@ -1167,14 +1189,14 @@
   },
   {
     "title": "FANUC 0i 系统显示器常见问题与解决方案",
-    "description": "FANUC 0i 数控系统显示器常见问题与解决方案，涵盖硬件故障、系统兼容性、安装维护三大方向，帮助技术人员快速定位问题。",
+    "description": "FANUC 0i 系统显示器常见问题与解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "FANUC 0i 系统显示器常见问题与解决方案",
     "keywords": "FANUC 0i显示器,FANUC 0i LCD,A61L-0001-0093,数控显示器故障,CNC显示器维修,FANUC显示器常见问题",
     "category": "article",
     "lang": "zh",
     "date": "20260501",
     "url": "/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html",
-    "search_text": "FANUC 0i 系统显示器常见问题与解决方案 FANUC 0i 数控系统显示器常见问题与解决方案，涵盖硬件故障、系统兼容性、安装维护三大方向，帮助技术人员快速定位问题。 FANUC 0i 系统显示器常见问题与解决方案 FANUC 0i显示器,FANUC 0i LCD,A61L-0001-0093,数控显示器故障,CNC显示器维修,FANUC显示器常见问题"
+    "search_text": "FANUC 0i 系统显示器常见问题与解决方案 FANUC 0i 系统显示器常见问题与解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 FANUC 0i 系统显示器常见问题与解决方案 FANUC 0i显示器,FANUC 0i LCD,A61L-0001-0093,数控显示器故障,CNC显示器维修,FANUC显示器常见问题"
   },
   {
     "title": "FANUC A61L-0001-0093 LCD升级方案 | 江图科技",
@@ -1189,14 +1211,14 @@
   },
   {
     "title": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力",
-    "description": "FANUC A61L-0001-0093 LCD液晶显示器升级方案，让老旧CNC数控系统焕发新活力。原装接口，即插即用，零改装，质保一年。",
+    "description": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "页面已迁移",
     "keywords": "",
     "category": "article",
     "lang": "zh",
     "date": "20260501",
     "url": "/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
-    "search_text": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力 FANUC A61L-0001-0093 LCD液晶显示器升级方案，让老旧CNC数控系统焕发新活力。原装接口，即插即用，零改装，质保一年。 页面已迁移 "
+    "search_text": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力 FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 页面已迁移 "
   },
   {
     "title": "FANUC 数控显示器 CRT → LCD 升级完整指南",
@@ -1365,14 +1387,14 @@
   },
   {
     "title": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案",
-    "description": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器LCD升级方案。原装接口，即插即用，零改装，质保一年。",
+    "description": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案",
     "keywords": "FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代",
     "category": "article",
     "lang": "zh",
     "date": "20260503",
     "url": "/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html",
-    "search_text": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案 FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器LCD升级方案。原装接口，即插即用，零改装，质保一年。 FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案 FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代"
+    "search_text": "FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案 FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案 FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代"
   },
   {
     "title": "article_20260506_三菱BM09DF工业显示屏E60数控系统TFT替代.html",
@@ -1387,58 +1409,58 @@
   },
   {
     "title": "article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html",
-    "description": "三菱FCUA-CT100工业显示器TFT替代方案，专配三菱M500/M520数控系统，即插即用告别CRT老化和断货烦恼",
+    "description": "三菱FCUA-CT100工业显示器——M500/M520数控系统的显示核心。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "三菱FCUA-CT100工业显示器——M500/M520数控系统的显示核心",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260506",
     "url": "/posts/article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html",
-    "search_text": "article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html 三菱FCUA-CT100工业显示器TFT替代方案，专配三菱M500/M520数控系统，即插即用告别CRT老化和断货烦恼 三菱FCUA-CT100工业显示器——M500/M520数控系统的显示核心 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html 三菱FCUA-CT100工业显示器——M500/M520数控系统的显示核心。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 三菱FCUA-CT100工业显示器——M500/M520数控系统的显示核心 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520",
-    "description": "三菱MDT962B CRT显示器TFT液晶替代方案，即插即用，安装孔位100%一致，适配三菱M64/E60/M500/M520数控系统",
+    "description": "三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "三菱MDT962B工业液晶显示器——完美CRT替代方案",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260506",
     "url": "/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html",
-    "search_text": "三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520 三菱MDT962B CRT显示器TFT液晶替代方案，即插即用，安装孔位100%一致，适配三菱M64/E60/M500/M520数控系统 三菱MDT962B工业液晶显示器——完美CRT替代方案 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520 三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 三菱MDT962B工业液晶显示器——完美CRT替代方案 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生",
-    "description": "Hitachi CD1472-D1M CRT显示器专业LCD升级方案，支持Mazak Mazatrol M/M32/QT/T系列数控系统。",
+    "description": "Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生",
     "keywords": "马扎克CRT升级LCD,Mazak显示器替代,CD1472D1M",
     "category": "article",
     "lang": "zh",
     "date": "20260507",
     "url": "/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html",
-    "search_text": "Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生 Hitachi CD1472-D1M CRT显示器专业LCD升级方案，支持Mazak Mazatrol M/M32/QT/T系列数控系统。 Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生 马扎克CRT升级LCD,Mazak显示器替代,CD1472D1M"
+    "search_text": "Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生 Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 Mazak CD1472-D1M 液晶替换方案 —— 让老式数控机床显示器重获新生 马扎克CRT升级LCD,Mazak显示器替代,CD1472D1M"
   },
   {
     "title": "MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案",
-    "description": "MDT-1283B (Totoku/Mitsubishi/Mazak) 12英寸CRT显示器LCD替换方案V2.62版本。",
+    "description": "MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260507",
     "url": "/posts/article_20260507_MDT1283B_LCD替换方案.html",
-    "search_text": "MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案 MDT-1283B (Totoku/Mitsubishi/Mazak) 12英寸CRT显示器LCD替换方案V2.62版本。 MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案 MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级",
-    "description": "Sharp AIQA8DSP40 14英寸彩色CRT显示器LCD替换方案，适用于Mazak/Mitsubishi数控系统。",
+    "description": "Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260507",
     "url": "/posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html",
-    "search_text": "Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级 Sharp AIQA8DSP40 14英寸彩色CRT显示器LCD替换方案，适用于Mazak/Mitsubishi数控系统。 Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级 Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 Sharp AIQA8DSP40 液晶替换方案 —— 14英寸CRT数控显示器的完美升级 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "西门子6FC3998-7FA20工业显示器 9寸单色LCD完美替代方案",
@@ -1464,14 +1486,14 @@
   },
   {
     "title": "哈斯机床老旧CRT显示器升级液晶替换案例",
-    "description": "详细解析哈斯（Haas）数控机床CRT球面显示器老化故障问题，介绍工业级液晶显示器无损替换方案，通过真实替换案例展示升级效果。",
+    "description": "哈斯机床老旧CRT显示器升级液晶替换案例。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "哈斯机床老旧CRT显示器升级液晶替换案例",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260508",
     "url": "/posts/article_20260508_Haas_CRT_LCD_Case.html",
-    "search_text": "哈斯机床老旧CRT显示器升级液晶替换案例 详细解析哈斯（Haas）数控机床CRT球面显示器老化故障问题，介绍工业级液晶显示器无损替换方案，通过真实替换案例展示升级效果。 哈斯机床老旧CRT显示器升级液晶替换案例 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "哈斯机床老旧CRT显示器升级液晶替换案例 哈斯机床老旧CRT显示器升级液晶替换案例。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 哈斯机床老旧CRT显示器升级液晶替换案例 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "KTV104 10.4寸非标订制工业显示器",
@@ -1552,25 +1574,25 @@
   },
   {
     "title": "KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器",
-    "description": "KT809工业级多功能视频信号转换器，支持CGA/EGA/RGB转VGA，配备信号隔离保护，广泛兼容老旧CNC数控系统。",
+    "description": "KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。",
     "h1": "KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器",
     "keywords": "CGA显示器改造,CGA EGA转VGA,RGB信号转换",
     "category": "article",
     "lang": "zh",
     "date": "20260509",
     "url": "/posts/article_20260509_KT809_工业转换器.html",
-    "search_text": "KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器 KT809工业级多功能视频信号转换器，支持CGA/EGA/RGB转VGA，配备信号隔离保护，广泛兼容老旧CNC数控系统。 KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器 CGA显示器改造,CGA EGA转VGA,RGB信号转换"
+    "search_text": "KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器 KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。 KT809工业转换器 — 多功能CGA/EGA/RGB转VGA工业信号转换器 CGA显示器改造,CGA EGA转VGA,RGB信号转换"
   },
   {
     "title": "KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器",
-    "description": "KT819工业级多协议视频信号转换器，支持RGB/复合视频转VGA，VGA/RGBS双输入自动识别，工业级宽温设计。",
+    "description": "KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。",
     "h1": "KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器",
     "keywords": "工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案",
     "category": "article",
     "lang": "zh",
     "date": "20260509",
     "url": "/posts/article_20260509_KT819_工业转换器.html",
-    "search_text": "KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器 KT819工业级多协议视频信号转换器，支持RGB/复合视频转VGA，VGA/RGBS双输入自动识别，工业级宽温设计。 KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
+    "search_text": "KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器 KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。 KT819工业转换器 — 多协议RGB/复合视频转VGA工业信号转换器 工业显示器,CRT升级LCD,CNC数控显示器,LCD替代方案"
   },
   {
     "title": "FANUC A61L-0001-0093工业显示器——完美CRT升级LCD方案，适配0-M/0-T/16/18系统",
@@ -1673,14 +1695,14 @@
   },
   {
     "title": "FANUC A61L-0001-0093 显示器常见故障及解决方案",
-    "description": "FANUC A61L-0001-0093显示器常见故障解决方案，涵盖黑屏、模糊、闪烁、亮度不足等问题的诊断与维修方法",
+    "description": "FANUC A61L-0001-0093 显示器常见故障及解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
     "h1": "FANUC A61L-0001-0093 显示器常见故障及解决方案",
     "keywords": "FANUC A61L-0001-0093,FANUC CRT 升级 LCD,FANUC数控显示器替代,A61L-0001-0093 LCD,FANUC显示器维修",
     "category": "article",
     "lang": "zh",
     "date": "",
     "url": "/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
-    "search_text": "FANUC A61L-0001-0093 显示器常见故障及解决方案 FANUC A61L-0001-0093显示器常见故障解决方案，涵盖黑屏、模糊、闪烁、亮度不足等问题的诊断与维修方法 FANUC A61L-0001-0093 显示器常见故障及解决方案 FANUC A61L-0001-0093,FANUC CRT 升级 LCD,FANUC数控显示器替代,A61L-0001-0093 LCD,FANUC显示器维修"
+    "search_text": "FANUC A61L-0001-0093 显示器常见故障及解决方案 FANUC A61L-0001-0093 显示器常见故障及解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 FANUC A61L-0001-0093 显示器常见故障及解决方案 FANUC A61L-0001-0093,FANUC CRT 升级 LCD,FANUC数控显示器替代,A61L-0001-0093 LCD,FANUC显示器维修"
   },
   {
     "title": "数控机床显示器更换常见问题FAQ",

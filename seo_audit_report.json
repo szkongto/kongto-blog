@@ -1,0 +1,1452 @@
+{
+  "date": "2026-06-10",
+  "pages": 162,
+  "pages_cn": 66,
+  "pages_en": 96,
+  "issues": {
+    "critical": [],
+    "high": [
+      {
+        "file": "about.html",
+        "msg": "Title too short (18 chars): 关于我们 | 深圳市江图科技有限公司"
+      },
+      {
+        "file": "search.html",
+        "msg": "Title too short (18 chars): 站内搜索 | 深圳市江图科技有限公司"
+      },
+      {
+        "file": "posts/index.html",
+        "msg": "Title too short (18 chars): 文章列表 | 深圳市江图科技有限公司"
+      }
+    ],
+    "medium": [
+      {
+        "file": "404.html",
+        "msg": "Missing hreflang tags"
+      },
+      {
+        "file": "author.html",
+        "msg": "Missing hreflang tags"
+      },
+      {
+        "file": "sitemap.html",
+        "msg": "Missing hreflang tags"
+      },
+      {
+        "file": "en/posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html",
+        "msg": "Meta description too short (57 chars)"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html",
+        "msg": "Meta description too short (56 chars)"
+      }
+    ],
+    "low": [
+      {
+        "file": "404.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "404.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "404.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "about.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "about.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "about.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "author.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "author.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "author.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "search.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "search.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "search.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "search.html",
+        "msg": "Security headers: missing CSP, missing X-Content-Type-Options, missing X-Frame-Options, missing Referrer-Policy"
+      },
+      {
+        "file": "search.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "sitemap.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "sitemap.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "sitemap.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/FANUC.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/FANUC.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "brands/FANUC.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "brands/FANUC.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/HAAS.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/HAAS.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/MAZAK.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/MAZAK.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "brands/MAZAK.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "brands/MAZAK.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/Mitsubishi.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/Mitsubishi.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/OKUMA.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/OKUMA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "brands/Siemens.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "brands/Siemens.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "docs/index.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "docs/index.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "docs/index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "docs/index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/about.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/about.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/about.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/about.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/index.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/index.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "Meta description too long (196 chars)"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "Security headers: missing CSP, missing X-Content-Type-Options, missing X-Frame-Options, missing Referrer-Policy"
+      },
+      {
+        "file": "en/search.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/FANUC.html",
+        "msg": "Meta description too long (235 chars)"
+      },
+      {
+        "file": "en/brands/FANUC.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/FANUC.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/brands/FANUC.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/brands/FANUC.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/HAAS.html",
+        "msg": "Meta description too long (239 chars)"
+      },
+      {
+        "file": "en/brands/HAAS.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/HAAS.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/MAZAK.html",
+        "msg": "Meta description too long (199 chars)"
+      },
+      {
+        "file": "en/brands/MAZAK.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/MAZAK.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/brands/MAZAK.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/brands/MAZAK.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/Mitsubishi.html",
+        "msg": "Meta description too long (195 chars)"
+      },
+      {
+        "file": "en/brands/Mitsubishi.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/Mitsubishi.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/OKUMA.html",
+        "msg": "Meta description too long (211 chars)"
+      },
+      {
+        "file": "en/brands/OKUMA.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/OKUMA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/brands/Siemens.html",
+        "msg": "Meta description too long (212 chars)"
+      },
+      {
+        "file": "en/brands/Siemens.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/brands/Siemens.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/docs/index.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/docs/index.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/docs/index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/docs/index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_工业数控设备显示器故障诊断与维修全攻略.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_工业数控设备显示器故障诊断与维修全攻略.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频信号转换器在CNC数控系统中的应用.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频信号转换器在CNC数控系统中的应用.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频显示在智能工厂中的关键角色与江图科技方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_工业视频显示在智能工厂中的关键角色与江图科技方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html",
+        "msg": "Meta description too long (244 chars)"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html",
+        "msg": "Meta description too long (193 chars)"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html",
+        "msg": "Meta description too long (171 chars)"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html",
+        "msg": "Meta description too long (214 chars)"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html",
+        "msg": "Meta description too long (177 chars)"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html",
+        "msg": "Meta description too long (232 chars)"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html",
+        "msg": "Meta description too long (218 chars)"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html",
+        "msg": "Meta description too long (282 chars)"
+      },
+      {
+        "file": "en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260507_MDT1283B_LCD_Replacement.html",
+        "msg": "Meta description too long (216 chars)"
+      },
+      {
+        "file": "en/posts/article_20260507_MDT1283B_LCD_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html",
+        "msg": "Meta description too long (218 chars)"
+      },
+      {
+        "file": "en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260507_Siemens_SM0901_579417_TA.html",
+        "msg": "Meta description too long (178 chars)"
+      },
+      {
+        "file": "en/posts/article_20260507_Siemens_SM0901_579417_TA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_Haas_CRT_LCD.html",
+        "msg": "Meta description too long (203 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_Haas_CRT_LCD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260508_Haas_CRT_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_Haas_CRT_LCD_Case.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV104_Custom_Industrial_Display.html",
+        "msg": "Meta description too long (172 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV104_Custom_Industrial_Display.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV104_Custom_Industrial_Display.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV148_Custom_Industrial_Display.html",
+        "msg": "Meta description too long (186 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV148_Custom_Industrial_Display.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV148_Custom_Industrial_Display.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html",
+        "msg": "Meta description too long (172 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV804_Custom_Industrial_Display.html",
+        "msg": "Meta description too long (172 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV804_Custom_Industrial_Display.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260508_KTV804_Custom_Industrial_Display.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_Mazak_C5470NS.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html",
+        "msg": "Meta description too long (203 chars)"
+      },
+      {
+        "file": "en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260509_GBS-8219_RGB_to_VGA_Converter.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260509_GBS-8219_RGB_to_VGA_Converter.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260509_KT809_Industrial_Converter.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260509_KT809_Industrial_Converter.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260509_KT819_Industrial_Converter.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260509_KT819_Industrial_Converter.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html",
+        "msg": "Meta description too long (166 chars)"
+      },
+      {
+        "file": "en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html",
+        "msg": "Meta description too long (216 chars)"
+      },
+      {
+        "file": "en/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html",
+        "msg": "Meta description too long (180 chars)"
+      },
+      {
+        "file": "en/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Custom_Industrial_Display_Series.html",
+        "msg": "Meta description too long (204 chars)"
+      },
+      {
+        "file": "en/posts/Custom_Industrial_Display_Series.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/Custom_Industrial_Display_Series.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html",
+        "msg": "Meta description too long (163 chars)"
+      },
+      {
+        "file": "en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_0i_System_Display_FAQ_Solutions.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_0i_System_Display_FAQ_Solutions.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html",
+        "msg": "Meta description too long (200 chars)"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
+        "msg": "Meta description too long (213 chars)"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/index.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/index.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "en/posts/index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Display_Market_Trends_Brand_Comparison.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Display_Market_Trends_Brand_Comparison.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Display_Procurement_Selection_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Display_Procurement_Selection_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Touchscreen_vs_Display_Difference_Selection.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Touchscreen_vs_Display_Difference_Selection.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Video_Display_Color_Scanning_Technology.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Video_Display_Color_Scanning_Technology.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html",
+        "msg": "Meta description too long (200 chars)"
+      },
+      {
+        "file": "en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html",
+        "msg": "Meta description too long (204 chars)"
+      },
+      {
+        "file": "en/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Used_Display_Recycling_FAQ_TOP10.html",
+        "msg": "Meta description too long (212 chars)"
+      },
+      {
+        "file": "en/posts/Used_Display_Recycling_FAQ_TOP10.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Used_Display_Recycling_FAQ_TOP10.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converters_in_CN_Control_Systems.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converters_in_CN_Control_Systems.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Buying_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Buying_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Selection_Guide.html",
+        "msg": "Meta description too long (203 chars)"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Selection_Guide.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Selection_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_工业数控设备显示器故障诊断与维修全攻略.html",
+        "msg": "Title too long (123 chars)"
+      },
+      {
+        "file": "posts/article_20260501_工业数控设备显示器故障诊断与维修全攻略.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_工业视频信号转换器在CNC数控系统中的应用.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_工业视频显示在智能工厂中的关键角色与江图科技方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0074_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0086_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0086_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0090_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0092_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0093_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0093_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0094_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0094_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0095_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_A61L_0001_0095_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260506_三菱BM09DF工业显示屏E60数控系统TFT替代.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260507_MDT1283B_LCD替换方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260507_Siemens_SM0901_579417_TA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_Haas_CRT_LCD_Case.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_KTV104_非标订制工业显示器.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260508_KTV104_非标订制工业显示器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_KTV148_非标订制工业显示器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_KTV800M_非标订制工业显示器.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260508_KTV800M_非标订制工业显示器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_KTV804_非标订制工业显示器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260508_Okuma_5000_5020_CRT_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260509_KT809_工业转换器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260509_KT819_工业转换器.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260521_FANUC_A61L_0001_0096_LCD.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260521_FANUC_A61L_0001_0096_LCD.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT替代方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT替代方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/faq_20260501_数控机床显示器更换常见问题TOP10.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/faq_20260501_数控机床显示器更换常见问题TOP10.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/index.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/index.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/index.html",
+        "msg": "Missing Twitter card meta"
+      },
+      {
+        "file": "posts/index.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/social_20260501_数控显示器升级市场动态与产品速递.html",
+        "msg": "Missing og:image"
+      },
+      {
+        "file": "posts/social_20260501_数控显示器升级市场动态与产品速递.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      },
+      {
+        "file": "posts/非标订制显示器系列.html",
+        "msg": "Missing x-default hreflang"
+      },
+      {
+        "file": "posts/非标订制显示器系列.html",
+        "msg": "External image reference: https://www.clarity.ms/tag/"
+      }
+    ],
+    "info": []
+  }
+}

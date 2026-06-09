@@ -42,7 +42,7 @@ def main():
         r'content="> 关键词',                       # keyword list instead of desc
         r'content="作者：',                          # author instead of desc
         r'content="FANUC A61L.*\| 江图科技"',       # too short, just title
-        r'content=".{1,55}"',                       # under 55 chars
+        r'content=".{1,69}"',                       # under 69 chars
     ]
 
     BROKEN_PATTERNS_RE = [re.compile(p) for p in BROKEN_PATTERNS]
