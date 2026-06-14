@@ -78,6 +78,40 @@ nav {
 .lang-switch .lang-zh { color: #ffd4a8; }
 .lang-switch .divider { color: rgba(255,255,255,0.3); }
 
+/* ==================== 语言切换按钮（文章内） ==================== */
+.lang-link-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+    border: 1px solid #c5d5f0;
+    border-radius: 10px;
+    padding: 0.9rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+.lang-link-box .lang-link-icon {
+    font-size: 1.3rem;
+}
+.lang-link-btn {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    background: #1a56db;
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+.lang-link-btn:hover {
+    background: #1347b8;
+    transform: translateY(-1px);
+}
+
 /* ==================== 主内容区域 ==================== */
 main { max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
 
