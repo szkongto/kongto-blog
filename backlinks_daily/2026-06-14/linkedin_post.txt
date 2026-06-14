@@ -1,11 +1,11 @@
-Manufacturing reality check: Your 1998 FANUC CNC machine is mechanically sound. The cast iron bed, ball screws, and spindle were built for 30+ years.
+Most common CNC LCD retrofit mistake: getting power wrong.
 
-The CRT display? Designed for 10-15 years. It's now at year 28.
+FANUC/Mitsubishi/Mazak/Okuma: DC 24V
+Siemens SINUMERIK: AC 110V (critical!)
+Haas early: DC 12V
 
-Here's what most shops don't realize: plug-and-play LCD replacements exist for virtually every legacy CNC brand. Original connectors. Same power supply. Zero parameter changes. Installation: 10 minutes.
+I've seen LCD modules destroyed by DC-on-AC mistakes.
 
-For $150-300, you extend a machine worth $50,000+ by 5-7 years.
+Compatibility reference: cncdisplay.com
 
-I've documented the process for FANUC, Mitsubishi, Mazak, Siemens, Okuma, and Haas. Links in the comments.
-
-#Manufacturing #CNC #IndustrialAutomation #MachineTool #Engineering
+#CNC #Manufacturing #Engineering
