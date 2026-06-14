@@ -1,26 +1,80 @@
-# ============================================================
-# Netlify Redirects - cncdisplay.com
-# 301 Permanent Redirects + 404 Handling
-# ============================================================
-
-# Canonical URL redirects (root -> /posts/ for articles)
-/article_*  /posts/:splat 301
-/en/article_*  /en/posts/:splat 301
-
-# Brand pages (clean URL -> .html)
-/brands/:brand  /brands/:brand.html 301
-/en/brands/:brand  /en/brands/:brand.html 301
-
-# Index redirects
-/index.html  / 301
-/en/index.html  /en/ 301
-
-# HSTS Security Headers
-/*  /  200!
-  Content-Security-Policy: default-src 'self' https://zz.bdstatic.com https://push.zhanzhang.baidu.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
-  Referrer-Policy: strict-origin-when-cross-origin
-
-# 404 Handling
-/*  /404.html 404
+# 301 Redirects - CNC Display Solutions
+/en/posts/FANUC_0i_System_Display_FAQ_Solutions.html /en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
+/en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html /en/posts/fanuc-a61l-0001-0096-lcd-replacement.html 301
+/en/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html /en/posts/fanuc-a61l-0001-0097-lcd-replacement.html 301
+/en/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html /en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html 301
+/en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html /en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html 301
+/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html /en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
+/en/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html /en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
+/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html /en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
+/en/posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html /en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
+/en/posts/Industrial_Display_Market_Trends_Brand_Comparison.html /en/posts/Industrial_Display_Procurement_Selection_Guide.html 301
+/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html /en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html 301
+/en/posts/Industrial_Video_Display_Color_Scanning_Technology.html /en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
+/en/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /en/posts/mazak-c5470ns-lcd-replacement.html 301
+/en/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /en/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/en/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /en/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/en/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html /en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
+/en/posts/Used_Display_Recycling_FAQ_TOP10.html /en/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html 301
+/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html /en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html /en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+/en/posts/Video_Signal_Converter_Buying_Guide.html /en/posts/Video_Signal_Converter_Selection_Guide.html 301
+/en/posts/Video_Signal_Converters_in_CN_Control_Systems.html /en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
+/en/posts/article_20260501_FANUC_A61L_0001_0093_LCD_Revitalize_CNC.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/article_20260501_FANUC_CRT_to_LCD_Complete_Guide.html /en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
+/en/posts/article_20260501_FANUC_CRT_to_LCD_Kongto_Case_Study.html /en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
+/en/posts/article_20260501_Industrial_CNC_Display_Troubleshooting.html /en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
+/en/posts/article_20260501_Industrial_RGBHV_Retrofit_CGA_EGA_to_HD.html /en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html 301
+/en/posts/article_20260501_Industrial_Video_Display_Smart_Factory.html /en/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
+/en/posts/article_20260501_Kongto_Industrial_Video_Display_Catalog.html /en/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
+/en/posts/article_20260501_Video_Signal_Converter_Series_CGA_EGA_VGA.html /en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+/en/posts/article_20260501_Video_Signal_Converters_in_CNC.html /en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
+/en/posts/article_20260501_cga_ega_to_rgbhv_guide.html /en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html /en/posts/fanuc-a61l-0001-0074-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html /en/posts/fanuc-a61l-0001-0086-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html /en/posts/fanuc-a61l-0001-0090-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html /en/posts/fanuc-a61l-0001-0092-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html /en/posts/fanuc-a61l-0001-0094-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html /en/posts/fanuc-a61l-0001-0095-lcd-replacement.html 301
+/en/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html /en/posts/mitsubishi-bm09df-lcd-replacement.html 301
+/en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html /en/posts/mitsubishi-fcua-ct100-lcd-replacement.html 301
+/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html /en/posts/mitsubishi-mdt962b-lcd-replacement.html 301
+/en/posts/article_20260507_MDT1283B_LCD_Replacement.html /en/posts/mazak-mdt-1283b-lcd-replacement.html 301
+/en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html /en/posts/mazak-cd1472d1m-lcd-replacement.html 301
+/en/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html /en/posts/sharp-aiqa8dsp40-lcd-replacement.html 301
+/en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html /en/posts/siemens-6fc3998-7fa20-lcd-replacement.html 301
+/en/posts/article_20260507_Siemens_SM0901_579417_TA.html /en/posts/siemens-sm0901-lcd-replacement.html 301
+/en/posts/article_20260508_Haas_CRT_LCD.html /en/posts/haas-vf-crt-lcd-replacement.html 301
+/en/posts/article_20260508_Haas_CRT_LCD_Case.html /en/posts/haas-vf-crt-lcd-replacement.html 301
+/en/posts/article_20260508_KTV104_Custom_Industrial_Display.html /en/posts/Custom_Industrial_Display_Series.html 301
+/en/posts/article_20260508_KTV148_Custom_Industrial_Display.html /en/posts/Custom_Industrial_Display_Series.html 301
+/en/posts/article_20260508_KTV800M_Custom_Industrial_Display.html /en/posts/Custom_Industrial_Display_Series.html 301
+/en/posts/article_20260508_KTV804_Custom_Industrial_Display.html /en/posts/Custom_Industrial_Display_Series.html 301
+/en/posts/article_20260508_Mazak_C5470NS.html /en/posts/mazak-c5470ns-lcd-replacement.html 301
+/en/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html /en/posts/okuma-osp-crt-lcd-replacement.html 301
+/en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html /en/posts/mitsubishi-mdt962b-lcd-replacement.html 301
+/en/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/cnc-crt-to-lcd-cost-comparison.html /en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html 301
+/en/posts/cnc-display-installation-guide.html /en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
+/en/posts/comparison_20260501_video_converter_buying_guide.html /en/posts/Video_Signal_Converter_Selection_Guide.html 301
+/en/posts/fanuc-a61l-0001-0074-lcd-replacement.html /en/posts/fanuc-a61l-0001-0074-lcd-replacement.html 301
+/en/posts/fanuc-a61l-0001-0086-lcd-replacement.html /en/posts/fanuc-a61l-0001-0086-lcd-replacement.html 301
+/en/posts/fanuc-a61l-0001-0092-lcd-replacement.html /en/posts/fanuc-a61l-0001-0092-lcd-replacement.html 301
+/en/posts/fanuc-a61l-0001-0094-lcd-replacement.html /en/posts/fanuc-a61l-0001-0094-lcd-replacement.html 301
+/en/posts/fanuc-a61l-0001-0096-lcd-replacement.html /en/posts/fanuc-a61l-0001-0096-lcd-replacement.html 301
+/en/posts/fanuc-a61l-0001-0097-lcd-replacement.html /en/posts/fanuc-a61l-0001-0097-lcd-replacement.html 301
+/en/posts/faq_20260501_FANUC_0idisplay_faq.html /en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
+/en/posts/faq_20260501_FANUC_A61L_0001_0093display_faq_solutions.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
+/en/posts/haas-vf-crt-lcd-replacement-guide.html /en/posts/haas-vf-crt-lcd-replacement.html 301
+/en/posts/mazak-cd1472-lcd-replacement-guide.html /en/posts/mazak-cd1472d1m-lcd-replacement.html 301
+/en/posts/mazak-dr5614-lcd-replacement.html /en/posts/mazak-c5470ns-lcd-replacement.html 301
+/en/posts/mitsubishi-mdt962b-lcd-replacement-guide.html /en/posts/mitsubishi-mdt962b-lcd-replacement.html 301
+/en/posts/okuma-osp-crt-lcd-replacement-guide.html /en/posts/okuma-osp-crt-lcd-replacement.html 301
+/en/posts/siemens-6fc3998-lcd-replacement-guide.html /en/posts/siemens-6fc3998-7fa20-lcd-replacement.html 301
+/en/posts/siemens-sm0901-nfp-lcd-replacement.html /en/posts/siemens-sm0901-lcd-replacement.html 301
