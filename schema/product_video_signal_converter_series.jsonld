@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "工业视频信号转换器系列",
+  "description": "涵盖VGA、HDMI、CVBS、RGBS、CGA、EGA等多种视频信号格式之间的转换，用于老旧工业设备的显示接口升级",
+  "applicationCategory": "工业视频转换",
+  "operatingSystem": "Web",
+  "url": "",
+  "featureList": [
+    "支持VGA转VIDEO、HDMI转VGA、AV转HDMI等多种格式",
+    "CGA/EGA/MDA老式显示器信号转换",
+    "工业级设计，宽温宽压，支持7×24小时连续运行",
+    "即插即用，无需驱动"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "面议",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "深圳市江图科技有限公司"
+    }
+  },
+  "producer": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://www.kongto.com"
+  }
+}
