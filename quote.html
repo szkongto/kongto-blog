@@ -355,7 +355,7 @@
                 <div class="icon">💬</div>
                 <h3>微信直接咨询</h3>
                 <p>点击打开微信，立即发消息询价</p>
-                <span style="color:#07c160;font-weight:600;font-size:1.15rem;">微信号：szkongto01</span>
+                <span style="color:#07c160;font-weight:600;font-size:1.15rem;">微信号：13686889647</span>
                 <div style="margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid #eee;">
                     <p style="font-size:0.82rem;color:#aaa;">手机点击直接唤起微信 · 电脑点击复制微信号</p>
                 </div>
@@ -408,17 +408,16 @@
             <!-- Header -->
             <div style="font-size:2.5rem;margin-bottom:0.5rem;">💬</div>
             <h3 style="margin-bottom:0.25rem;color:#222;font-size:1.35rem;">添加微信咨询</h3>
-            <p style="color:#888;font-size:0.9rem;margin-bottom:1.5rem;">扫码或搜索微信号，快速获取报价</p>
+            <p style="color:#888;font-size:0.9rem;margin-bottom:1.5rem;">扫码添加微信，快速获取报价</p>
 
             <!-- QR Code Image -->
-            <div style="background:#f9fafb;border-radius:12px;padding:1rem;margin-bottom:1.25rem;border:1px solid #eef0f2;">
-                <img src="/images/wechat-qr.jpg" alt="微信二维码 - 扫码添加 Peter Guo 咨询CNC显示器升级" style="width:220px;height:auto;border-radius:8px;display:inline-block;" loading="lazy">
-                <p style="font-size:0.82rem;color:#aaa;margin-top:0.65rem;margin-bottom:0;">用手机微信扫一扫上方二维码</p>
+            <div style="background:white;border-radius:12px;padding:0.5rem;margin-bottom:1.25rem;">
+                <img src="/images/wechat-qr.jpg" alt="微信二维码" style="width:220px;height:auto;display:inline-block;" loading="lazy">
             </div>
 
             <!-- WeChat ID + Copy -->
             <div style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-bottom:1.25rem;">
-                <span id="wechat-id-zh" style="font-size:1.15rem;font-weight:700;color:#07c160;font-family:monospace;letter-spacing:1.5px;">szkongto01</span>
+                <span id="wechat-id-zh" style="font-size:1.15rem;font-weight:700;color:#07c160;font-family:monospace;letter-spacing:1.5px;">13686889647</span>
                 <span style="color:#ddd;">|</span>
                 <button onclick="copyWeChatID('zh')" id="copy-btn-zh" style="background:linear-gradient(135deg,#07c160,#06ad56);color:white;border:none;padding:0.45rem 1rem;border-radius:8px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:transform 0.15s;">复制微信号</button>
             </div>
@@ -458,7 +457,7 @@
         var isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
         if (isMobile) {
             // Try to open WeChat app - chat with the contact
-            window.location.href = 'weixin://dl/chat?szkongto01';
+            window.location.href = 'weixin://dl/chat?13686889647';
             // Fallback: if WeChat not installed, show modal after a short delay
             setTimeout(function() {
                 if (!document.hidden) {
@@ -472,14 +471,14 @@
     }
     function openWeChatApp() {
         // Try WeChat deep link (works on mobile)
-        window.location.href = 'weixin://dl/addcontact?szkongto01';
+        window.location.href = 'weixin://dl/addcontact?13686889647';
         // Also try the chat link
         setTimeout(function() {
-            window.location.href = 'weixin://dl/chat?szkongto01';
+            window.location.href = 'weixin://dl/chat?13686889647';
         }, 500);
     }
     function copyWeChatID(lang) {
-        var id = 'szkongto01';
+        var id = '13686889647';
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(id).then(function() {
                 showCopySuccess(lang);
