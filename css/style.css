@@ -746,6 +746,44 @@ figure.img-detail figcaption {
 .compare-table .good { color: #2E7D32; font-weight: 600; }
 .compare-table .bad { color: #E53935; font-weight: 600; }
 
+/* ==================== 兼容性矩阵表格样式 ==================== */
+.compatibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    table-layout: fixed;
+}
+.compatibility-table th,
+.compatibility-table td {
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    word-wrap: break-word;
+}
+.compatibility-table th {
+    background: #1a1a2e;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+.compatibility-table th:nth-child(1) { width: 22%; }
+.compatibility-table th:nth-child(2) { width: 20%; }
+.compatibility-table th:nth-child(3) { width: 18%; }
+.compatibility-table th:nth-child(4) { width: 12%; }
+.compatibility-table th:nth-child(5) { width: 15%; }
+.compatibility-table th:nth-child(6) { width: 13%; }
+.compatibility-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+.compatibility-table tr:hover {
+    background: #e3f2fd;
+}
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* ==================== 流程步骤升级 ==================== */
 .step-list {
     counter-reset: step;
