@@ -451,25 +451,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
+<url>
     <loc>https://cncdisplay.com/posts/mitsubishi-fcua-ct100-lcd-replacement-zh-content.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
+<url>
     <loc>https://cncdisplay.com/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
