@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "工控专用显示器",
+  "description": "7-12英寸工业级液晶显示器，配备CGA、EGA、MDA等老式信号接口，专为工控和数控设备设计",
+  "applicationCategory": "工控显示器",
+  "operatingSystem": "Web",
+  "url": "",
+  "featureList": [
+    "7-12英寸多尺寸可选",
+    "支持CGA/EGA/MDA/VGA多种信号输入",
+    "工业级铝合金前面框，坚固耐用",
+    "宽温设计，强抗干扰能力"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "面议",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "深圳市江图科技有限公司"
+    }
+  },
+  "producer": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://www.kongto.com"
+  }
+}
