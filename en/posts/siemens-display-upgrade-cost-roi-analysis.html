@@ -8,49 +8,6 @@
 <link rel="canonical" href="https://cncdisplay.com/en/posts/siemens-display-upgrade-cost-roi-analysis.html">
 <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/">
 <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/siemens-display-upgrade-cost-roi-analysis.html">
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; margin:0; padding:0; color: #333; line-height:1.7; }
-  .header { background: #1a1a2e; color: #fff; padding: 14px 0; text-align: center; font-size: 14px; }
-  .header a { color: #00d4ff; text-decoration: none; margin:0 12px; }
-  .nav { background: #16213e; padding: 10px 0; text-align: center; }
-  .nav a { color: #ccc; text-decoration: none; margin:0 14px; font-size: 13px; }
-  .nav a:hover { color: #00d4ff; }
-  .container { max-width: 920px; margin: 40px auto; padding: 0 20px; }
-  h1 { color: #1a1a2e; font-size: 2em; margin:0 0 8px; }
-  .meta { color: #888; font-size: 14px; margin-bottom: 30px; }
-  h2 { color: #16213e; font-size: 1.4em; margin: 35px 0 15px; border-left: 4px solid #00d4ff; padding-left: 12px; }
-  h3 { color: #1a1a2e; font-size: 1.1em; margin: 24px 0 10px; }
-  p { margin: 0 0 16px; }
-  .tip-box { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
-  .warn-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
-  .cost-table { width:100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-  .cost-table th { background: #1a1a2e; color: #fff; padding: 11px 14px; text-align: left; }
-  .cost-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
-  .cost-table tr:nth-child(even) { background: #f8f9fa; }
-  .cost-table .highlight { background: #e8f4fd; font-weight: 600; }
-  .roi-calc { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; margin: 24px 0; }
-  .roi-calc label { display: inline-block; width: 220px; font-size: 14px; }
-  .roi-calc input { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; width: 120px; font-size: 14px; }
-  .roi-calc .result { background: #1a1a2e; color: #00d4ff; padding: 12px 18px; border-radius: 6px; margin-top: 16px; font-size: 1.1em; font-weight: 600; }
-  .timeline { display: flex; gap: 0; margin: 24px 0; }
-  .timeline-step { flex:1; text-align: center; padding: 16px 8px; position: relative; }
-  .timeline-step::after { content: '→'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #ccc; }
-  .timeline-step:last-child::after { content: ''; }
-  .timeline-step .icon { font-size: 28px; display: block; margin-bottom: 8px; }
-  .timeline-step .label { font-size: 13px; color: #555; }
-  .breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
-  .breakdown-item { background: #f8f9fa; border-radius: 8px; padding: 16px; border: 1px solid #e0e0e0; }
-  .breakdown-item .amount { font-size: 1.4em; font-weight: 700; color: #e74c3c; }
-  .breakdown-item .label { font-size: 13px; color: #888; margin-top: 4px; }
-  .btn { display: inline-block; background: #00d4ff; color: #fff; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; }
-  footer { background: #1a1a2e; color: #aaa; text-align: center; padding: 30px 0; margin-top: 60px; font-size: 13px; }
-  a { color: #1976d2; }
-  @media (max-width: 600px) {
-    .breakdown-grid { grid-template-columns: 1fr; }
-    .timeline { flex-direction: column; }
-    .timeline-step::after { content: '↓'; right: auto; }
-  }
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,23 +19,25 @@
   "mainEntityOfPage": {"@type": "WebPage"}
 }
 </script>
+
+<link rel="stylesheet" href="/css/style.css?v=7">
 </head>
 <body>
         <header>
-        <nav>
-            <a href="/en/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/en/">Home</a>
-                <a href="/en/posts/">Articles</a>
-                <a href="/en/about.html">About</a>
-            </div> <a href="/en/search.html" class="nav-search">🔍 Search</a> 
-            <div class="lang-switch">
-                <a href="/posts/Siemens_display_upgrade_cost_roi_analysis.html" lang="zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/en/posts/siemens-display-upgrade-cost-roi-analysis.html" lang="en">English</a>
-            </div>
-        </nav>
-        </header>
+    <nav>
+        <a href="/en/" class="logo">Shenzhen Kongto Technology</a>
+        <div class="nav-links">
+            <a href="/en/">Home</a>
+            <a href="/en/posts/">Articles</a>
+                <a href="/en/docs/">Downloads</a>
+            <a href="/en/about.html">About</a>
+        </div> <a href="/search.html" class="nav-search">🔍 Search</a> 
+        <div class="lang-switch">
+            <a href="/posts/cost-benefit-analysis-lcd-replacement-zh.html" lang="zh">&#20013;&#25991;</a> |
+            <a href="/en/posts/siemens-display-upgrade-cost-roi-analysis.html" lang="en">English</a>
+        </div>
+    </nav>
+</header>
 <h2>ROI Calculation: Upgrade vs. New (Real Numbers)</h2>
 
 <p>Let's run a realistic scenario:</p>
