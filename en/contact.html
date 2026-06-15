@@ -29,7 +29,7 @@
     <meta name="geo.placename" content="Shenzhen Longgang">
     <meta name="geo.position" content="22.6568;113.9899">
     <meta name="ICBM" content="22.6568, 113.9899">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://zz.bdstatic.com https://push.zhanzhang.baidu.com; connect-src 'self' https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://zz.bdstatic.com https://push.zhanzhang.baidu.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -360,49 +360,39 @@
                     return;
                 }
 
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Submitting...';
-                submitStatus.style.display = 'none';
+                // Collect form data into email body
+                var name = form.querySelector('[name="name"]').value.trim();
+                var company = form.querySelector('[name="company"]').value.trim();
+                var email = form.querySelector('[name="email"]').value.trim();
+                var phone = form.querySelector('[name="phone"]').value.trim();
+                var product = form.querySelector('[name="product"]').value;
+                var message = form.querySelector('[name="message"]').value.trim();
 
-                var formData = new FormData(form);
-                fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                }).then(function(response) {
-                    if (response.ok) {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Submit Inquiry';
-                        submitStatus.className = 'submit-status success';
-                        submitStatus.innerHTML = '&#10003; Thank you! Your inquiry has been submitted. We will contact you within 24 hours.';
-                        submitStatus.style.display = 'block';
-                        form.reset();
-                        if (typeof gtag === 'function') {
-                            gtag('event', 'generate_lead', { form_id: 'contactForm_en' });
-                        }
-                        if (typeof clarity === 'function') {
-                            clarity('set', 'form_submitted', 'contact_en');
-                        }
-                    } else {
-                        throw new Error('Server returned ' + response.status);
-                    }
-                }).catch(function(error) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Submit Inquiry';
-                    submitStatus.className = 'submit-status error';
-                    submitStatus.textContent = 'Submission failed. Please email szkongto01@foxmail.com or call +86-136-8688-9647';
-                    submitStatus.style.display = 'block';
-                    console.error('Form submission error:', error);
-                });
-            });
+                var body = '';
+                body += 'Hello, I would like to request a quote for CNC display upgrade.\n\n';
+                body += '[Contact Info]\n';
+                body += 'Name: ' + name + '\n';
+                if (company) body += 'Company: ' + company + '\n';
+                body += 'Email: ' + email + '\n';
+                if (phone) body += 'Phone: ' + phone + '\n';
+                if (product) body += 'Product Model: ' + product + '\n';
+                body += '\n[Requirements]\n';
+                body += message + '\n';
+                body += '\n---\nThis inquiry was submitted via Kongto Technology website contact form';
 
-            var urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
+                var subject = encodeURIComponent('Quote Request: CNC Display Upgrade - ' + name);
+                var mailtoLink = 'mailto:szkongto01@foxmail.com?subject=' + subject + '&body=' + encodeURIComponent(body);
+
+                // Show success message and open email client
                 submitStatus.className = 'submit-status success';
-                submitStatus.textContent = 'Thank you for your inquiry! We will contact you within 24 hours.';
+                submitStatus.innerHTML = '&#9993; Your email client has opened. Click Send to complete your inquiry. We will respond within 24 hours!';
                 submitStatus.style.display = 'block';
-                form.reset();
-            }
+                window.location.href = mailtoLink;
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', { form_id: 'contactForm_en' });
+                }
+            });
         });
     </script>
 </head>
@@ -433,13 +423,8 @@
 
             <div class="contact-grid">
                 <div class="contact-form-card">
-                    <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/xkgezwqa">
+                    <form id="contactForm" name="contact" method="POST" action="#">
                         <input type="hidden" name="form-name" value="contact_en">
-                        <input type="hidden" name="_subject" content="CNC Display Quote - Kongto Website">
-
-                        <div class="form-group hp-field">
-                            <label>Don't fill this field</label>
-                            <input name="_gotcha" tabindex="-1" autocomplete="off">
                         </div>
 
                         <div class="form-group">
@@ -497,7 +482,7 @@
                             <div class="error-msg"></div>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="submit-btn">Submit Inquiry</button>
+                        <button type="submit" id="submitBtn" class="submit-btn">Open Email to Send →</button>
                         <div id="submitStatus" class="submit-status"></div>
                     </form>
                 </div>
