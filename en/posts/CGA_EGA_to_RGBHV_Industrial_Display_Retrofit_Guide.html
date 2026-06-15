@@ -218,6 +218,57 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "CGA/EGA to RGBHV Industrial Display Retrofit Guide",
+  "description": "Guide to retrofitting older CGA/EGA industrial displays to modern RGBHV LCD solutions. Covers signal conversion and installation.",
+  "totalTime": "PT60M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Video signal converter (e.g. GBS-8219)"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Screwdriver"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Multimeter"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Identify Original Interface",
+      "text": "Check original display video interface: CGA (4-pin), EGA (9-pin), or RGBHV (5 BNC). Note pin definitions from machine manual."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Select Signal Converter",
+      "text": "Choose appropriate video signal converter based on original interface. For CGA/EGA to VGA/RGBHV, use a compatible converter box."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mount Converter",
+      "text": "Secure converter inside machine enclosure. Connect original signal cable to converter input. Use shielded cables to avoid EMI."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Connect LCD Display",
+      "text": "Connect converter output to LCD display via VGA or RGBHV cable. Confirm 24V DC power supply to both converter and display."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Test and Adjust",
+      "text": "Power on and test display. Adjust converter settings if image is off-center or has incorrect timing. Verify stability under machine operation."
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>

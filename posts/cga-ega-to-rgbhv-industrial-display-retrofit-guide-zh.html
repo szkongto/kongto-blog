@@ -193,6 +193,57 @@
 
 </script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "CGA/EGA 转 RGBHV 工业显示器改造指南",
+  "description": "将老式 CGA/EGA 工业显示器改造为 RGBHV 接口的现代 LCD 显示方案。",
+  "totalTime": "PT60M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "信号转换器"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "螺丝刀"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "万用表"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "确认原接口类型",
+      "text": "检查原显示器视频接口是 CGA、EGA 还是 RGBHV，确认针脚定义。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "选择转换器",
+      "text": "根据原接口类型选用对应的视频信号转换器（如 GBS-8219 等）。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "安装转换器",
+      "text": "将转换器固定在机床内部合适位置，连接原信号线到转换器输入。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "连接 LCD 显示器",
+      "text": "用 VGA 线将转换器输出连接到 LCD 显示器，确认供电 24V DC。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "通电调试",
+      "text": "开机测试画面是否正常居中、亮度合适，必要时调整转换器参数。"
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
