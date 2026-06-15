@@ -137,10 +137,17 @@
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, transform 0.15s;
+            cursor: pointer;
         }
         .contact-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+        .contact-card a.card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
         }
         .contact-card .icon {
             font-size: 2.5rem;
@@ -317,26 +324,33 @@
     <section id="contact-methods" style="padding:4rem 2rem;max-width:1000px;margin:0 auto;">
         <h2 style="text-align:center;font-size:2rem;margin-bottom:2.5rem;">3 Ways to Get a Quote</h2>
         <div class="contact-methods">
-            <div class="contact-card">
+            <a href="mailto:szkongto01@foxmail.com?subject=Quote%20Request%3A%20CNC%20Display%20Upgrade%20Kit&body=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20a%20CNC%20display%20upgrade%20kit.%0A%0AMy%20machine%20model%3A%0ADisplay%20part%20number%3A" class="contact-card card-link" style="text-decoration:none;color:inherit;">
                 <div class="icon">📧</div>
                 <h3>Email for Quote</h3>
                 <p>Tell us your CNC model and display part number</p>
-                <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a>
-                <p style="margin-top:0.75rem;font-size:0.9rem;">Reply within 24 hours</p>
-            </div>
-            <div class="contact-card">
+                <span style="color:#1a73e8;font-weight:600;font-size:1.1rem;">szkongto01@foxmail.com</span>
+                <p style="margin-top:0.75rem;font-size:0.9rem;">Reply within 24 hours · Click to open email client</p>
+            </a>
+            <a href="https://wa.me/8613686889647?text=Hello%2C%20I%20need%20a%20quote%20for%20CNC%20display%20upgrade.%20My%20model%3A" class="contact-card card-link" style="text-decoration:none;color:inherit;" onclick="
+                var ua = navigator.userAgent;
+                if(ua.match(/iPhone|iPad|iPod|Android/) && !ua.match(/Windows|Macintosh/)) {
+                    this.href='https://wa.me/8613686889647?text=Hello%2C%20I%20need%20a%20quote%20for%20CNC%20display%20upgrade.';
+                } else {
+                    this.href='tel:+8613686889647';
+                }
+            ">
                 <div class="icon">📱</div>
-                <h3>WeChat / Phone</h3>
-                <p>Direct consultation via WeChat or phone</p>
-                <a href="tel:+8613686889647">+86-136-8688-9647</a>
-                <p style="margin-top:0.75rem;font-size:0.9rem;">Mon-Fri 9:00-18:00 GMT+8</p>
-            </div>
-            <div class="contact-card">
+                <h3>WhatsApp / Phone</h3>
+                <p>Direct consultation via WhatsApp or phone call</p>
+                <span style="color:#1a73e8;font-weight:600;font-size:1.1rem;">+86-136-8688-9647</span>
+                <p style="margin-top:0.75rem;font-size:0.9rem;">Mon-Fri 9:00-18:00 GMT+8 · Click to start chat or call</p>
+            </a>
+            <a href="/en/contact.html" class="contact-card card-link" style="text-decoration:none;color:inherit;">
                 <div class="icon">💬</div>
                 <h3>Contact Form</h3>
                 <p>Fill in your equipment info, our engineer will contact you</p>
-                <a href="/en/contact.html" style="display:inline-block;background:#1a73e8;color:white;padding:0.625rem 1.5rem;border-radius:6px;margin-top:0.75rem;">Send Inquiry →</a>
-            </div>
+                <span style="display:inline-block;background:#1a73e8;color:white;padding:0.625rem 1.5rem;border-radius:6px;margin-top:0.75rem;">Send Inquiry →</span>
+            </a>
         </div>
     </section>
 
