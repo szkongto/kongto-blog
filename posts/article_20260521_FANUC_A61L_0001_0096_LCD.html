@@ -91,6 +91,7 @@
                 <a href="/posts/">文章</a>
 
                 <a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
 
             </div> <a href="/search.html" class="nav-search">🔍 搜索</a> 
 
@@ -134,7 +135,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_crt.jpg" alt="FANUC A61L-0001-0096 原装CRT显示器" class="article-img">
+                <img fetchpriority="high" decoding="async" src="https://cncdisplay.com/images/A6100010096_crt.jpg" alt="FANUC A61L-0001-0096 原装CRT显示器" class="article-img">
 
 
 
@@ -142,7 +143,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_LCD_front.jpg" alt="A61L-0001-0096 LCD液晶替代屏正面" class="article-img">
+                <img decoding="async" src="https://cncdisplay.com/images/A6100010096_LCD_front.jpg" alt="A61L-0001-0096 LCD液晶替代屏正面" class="article-img">
 
 
 
@@ -252,7 +253,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_LCD_rear.jpg" alt="A61L-0001-0096 LCD液晶替代屏背面接口" class="article-img">
+                <img decoding="async" src="https://cncdisplay.com/images/A6100010096_LCD_rear.jpg" alt="A61L-0001-0096 LCD液晶替代屏背面接口" class="article-img">
 
 
 
@@ -334,7 +335,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_installation.jpg" alt="A61L-0001-0096 LCD安装替换效果" class="article-img">
+                <img decoding="async" src="https://cncdisplay.com/images/A6100010096_installation.jpg" alt="A61L-0001-0096 LCD安装替换效果" class="article-img">
 
 
 
@@ -366,7 +367,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_interfaces.jpg" alt="A61L-0001-0096 信号和电源接口" class="article-img">
+                <img decoding="async" src="https://cncdisplay.com/images/A6100010096_interfaces.jpg" alt="A61L-0001-0096 信号和电源接口" class="article-img">
 
 
 
@@ -452,7 +453,7 @@
 
 
 
-                <img src="https://cncdisplay.com/images/A6100010096_package.jpg" alt="A61L-0001-0096 LCD包装全套" class="article-img">
+                <img decoding="async" src="https://cncdisplay.com/images/A6100010096_package.jpg" alt="A61L-0001-0096 LCD包装全套" class="article-img">
 
 
 
@@ -598,7 +599,7 @@
 
         modal.className = 'wechat-modal';
 
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img decoding="async" src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
 
         document.body.appendChild(modal);
 

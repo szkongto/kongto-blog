@@ -169,6 +169,7 @@
                 <a href="/docs/">下载</a>
 
                 <a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
 
             </div> <a href="/search.html" class="nav-search">🔍 搜索</a> 
 
@@ -260,11 +261,11 @@
 
                 <div class="product-images" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0;">
 
-                    <img loading="lazy" src="/images/KTV104_01.jpg" alt="KTV104显示器正面图" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV104_01.jpg" alt="KTV104显示器正面图" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
-                    <img loading="lazy" src="/images/KTV104_02.jpg" alt="KTV104显示器侧面图" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV104_02.jpg" alt="KTV104显示器侧面图" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
-                    <img loading="lazy" src="/images/KTV104_03.jpg" alt="KTV104显示器配件展示" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV104_03.jpg" alt="KTV104显示器配件展示" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
                     
 
@@ -512,7 +513,7 @@
 
         modal.className = 'wechat-modal';
 
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img decoding="async" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
 
         document.body.appendChild(modal);
 

@@ -223,13 +223,13 @@
 
                 <div class="product-images" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0;">
 
-                    <img loading="lazy" src="/images/KTV148_01.jpg" alt="KTV148 Display Front View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV148_01.jpg" alt="KTV148 Display Front View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
-                    <img loading="lazy" src="/images/KTV148_02.jpg" alt="KTV148 Display Side View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV148_02.jpg" alt="KTV148 Display Side View" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
-                    <img loading="lazy" src="/images/KTV148_03.jpg" alt="KTV148 Installation Diagram" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV148_03.jpg" alt="KTV148 Installation Diagram" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
-                    <img loading="lazy" src="/images/KTV148_04.jpg" alt="KTV148 Application Scenario" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <img decoding="async" loading="lazy" src="/images/KTV148_04.jpg" alt="KTV148 Application Scenario" style="width: 45%; max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 4px;">
 
                 </div>
 
@@ -473,7 +473,7 @@
 
         modal.className = 'wechat-modal';
 
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="/images/qr.png" alt="QR Code"></div>' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img decoding="async" loading="lazy" src="/images/qr.png" alt="QR Code"></div>' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
 
         document.body.appendChild(modal);
 
