@@ -1,70 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mitsubishi CNC Display Troubleshooting: Why It Fails & How to Fix | Kongto</title>
-<meta name="description" content="Mitsubishi CNC display not turning on? Flickering? No signal? Step-by-step troubleshooting guide for M70, M700, and MDT-series displays. When to repair, when to replace.">
-<link rel="canonical" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html">
-<link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html">
-<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html">
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin:0; padding:0; color: #333; line-height: 1.7; }
-  .header { background: #1a1a2e; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-size: 1.2rem; font-weight: 700; color: white; text-decoration: none; }
-  .lang-link { color: #64b5f6; text-decoration: none; font-size: 0.9rem; border: 1px solid #64b5f6; padding: 0.3rem 0.8rem; border-radius: 4px; }
-  .lang-link:hover { background: #64b5f6; color: #1a1a2e; }
-  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 3rem 2rem; text-align: center; }
-  .hero h1 { font-size: 2rem; margin: 0 0 1rem; }
-  .hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
-  .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #1a1a2e; color: #1a1a2e; }
-  h3 { font-size: 1.2rem; margin: 1.8rem 0 0.8rem; color: #2c3e50; }
-  p { margin: 0 0 1rem; }
-  ul, ol { margin: 0 0 1rem 1.5rem; }
-  li { margin: 0 0 0.5rem; }
-  .symptom-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-  .symptom-box h3 { margin-top: 0; color: #1a1a2e; }
-  .fix-steps { background: #f0f7ff; border-left: 4px solid #10b981; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
-  .fix-steps h4 { margin: 0 0 0.5rem; color: #065f46; }
-  .warn-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-  .tip-box { background: #f0f7ff; border-left: 4px solid #1a1a2e; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-  .decision-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
-  .decision-table th { background: #1a1a2e; color: white; padding: 0.7rem 1rem; text-align: left; }
-  .decision-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
-  .decision-table tr:nth-child(even) td { background: #f9fafb; }
-  .badge-repair { background: #fef3c7; color: #92400e; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
-  .badge-replace { background: #dbeafe; color: #1e40af; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
-  .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
-  .breadcrumb a { color: #1a1a2e; text-decoration: none; }
-  .faq-item { margin: 1.5rem 0; padding: 1rem 1.5rem; background: #f9fafb; border-radius: 8px; }
-  .faq-q { font-weight: 700; color: #1a1a2e; margin: 0 0 0.5rem; }
-  .faq-a { color: #555; margin: 0; }
-  .cta-box { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.5rem 2rem; margin: 2rem 0; text-align: center; }
-  .cta-btn { display: inline-block; background: #1a1a2e; color: white; padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 0.5rem; }
-  .cta-btn:hover { background: #2d2d4e; }
-  footer { background: #1a1a2e; color: #aaa; text-align: center; padding: 2rem; font-size: 0.85rem; margin-top: 3rem; }
-  footer a { color: #64b5f6; }
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Mitsubishi CNC Display Troubleshooting: Why It Fails & How to Fix",
-  "description": "Step-by-step troubleshooting guide for Mitsubishi CNC displays. Covers no power, flickering, no signal, and color problems on M70, M700, and MDT-series.",
-  "author": {"@type": "Organization", "name": "Kongto"},
-  "publisher": {"@type": "Organization", "name": "Kongto"},
-  "datePublished": "2026-06-15",
-  "mainEntityOfPage": "https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html"
-}
-</script>
-
-<meta property="og:title" content="Mitsubishi CNC Display Troubleshooting: Why It Fails &amp; How to Fix | Kongto">
-<meta property="og:description" content="Mitsubishi CNC display not turning on? Flickering? No signal? Step-by-step troubleshooting guide for M70, M700, and MDT-series displays. When to repair, when to replace.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi CNC Display Troubleshooting: Why It Fails & How to Fix | Kongto</title>
+    <meta name="description" content="Mitsubishi CNC display not turning on? Flickering? No signal? Step-by-step troubleshooting guide for M70, M700, and MDT-series displays. When to repair, when to replace.">
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html" />
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
+    <link rel="alternate" hreflang="x-default" href="/en/" />
+    <link rel="stylesheet" href="/css/style.css?v=7">
 </head>
-
+<body>
 <header>
         <nav>
             <a href="/en/" class="logo">Kongto Technology Co.,LTD</a>
@@ -74,22 +21,21 @@
                 <a href="/en/docs/">Downloads</a>
                 <a href="/en/about.html">About</a>
             </div>
-            <a href="/en/search.html" class="nav-search">&#128269; Search</a>
+            <a href="/en/search.html" class="nav-search">🔍 Search</a>
             <div class="lang-switch">
                 <a href="/" lang="zh">中文</a> |
-                <a href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html" lang="en">English</a>
+                <a href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" lang="en">English</a>
             </div>
         </nav>
     </header>
-
-<main class="container">
-<div class="header">
-  <a href="/en/" class="logo">Kongto CNC Display</a>
-  <a href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html" class="lang-link">中文版本</a>
-</div>
-
-<div class="hero">
-  <h1>Mitsubishi CNC Display Troubleshooting</h1>
+    <main class="container">
+        <div class="lang-link-box">
+            <span class="lang-icon">🌐</span>
+            <span>Chinese version:</span>
+            <a href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html" class="lang-link-btn">查看中文版本 &rarr;</a>
+        </div>
+        <article class="post">
+<h1>Mitsubishi CNC Display Troubleshooting</h1>
   <p>Your Mitsubishi screen just died. Or it's flickering. Or the colors are wrong. Here's how to figure out what's broken — and whether it's worth fixing.</p>
 </div>
 
@@ -269,5 +215,13 @@
         <p>Contact: +86-13686889647 | <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a></p>
     </footer>
 
+</body>
+</html>
+        </article>
+    </main>
+<footer>
+        <p>&copy; 2026 Kongto Technology Co.,Ltd - Shenzhen, China. All rights reserved.</p>
+        <p>Contact: +86-13686889647 | <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a></p>
+    </footer>
 </body>
 </html>
