@@ -150,10 +150,17 @@
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, transform 0.15s;
+            cursor: pointer;
         }
         .contact-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+        .contact-card a.card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
         }
         .contact-card .icon {
             font-size: 2.5rem;
@@ -330,26 +337,31 @@
     <section id="contact-methods" style="padding:4rem 2rem;max-width:1000px;margin:0 auto;">
         <h2 style="text-align:center;font-size:2rem;margin-bottom:2.5rem;">三种方式获取报价</h2>
         <div class="contact-methods">
-            <div class="contact-card">
+            <a href="mailto:szkongto01@foxmail.com?subject=%E8%AF%A2%E4%BB%B7%3A%20CNC%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8D%87%E7%BA%A7%E5%A5%97%E4%BB%B6%E6%8A%A5%E4%BB%B7&body=您好%EF%BC%8C%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2CNC%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8D%87%E7%BA%A7%E5%A5%97%E4%BB%B6%E7%9A%84%E6%8A%A4%E4%BB%B7%E3%80%82%E6%88%91%E7%9A%84%E8%AE%BE%E5%A4%87%E5%9E%8B%E5%8F%B7%E6%98%FA%3A" class="contact-card card-link" style="text-decoration:none;color:inherit;">
                 <div class="icon">📧</div>
                 <h3>发送邮件获取报价</h3>
                 <p>告知您的CNC设备型号和显示器型号</p>
-                <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a>
-                <p style="margin-top:0.75rem;font-size:0.9rem;">24小时内回复</p>
-            </div>
-            <div class="contact-card">
+                <span style="color:#1a73e8;font-weight:600;font-size:1.1rem;">szkongto01@foxmail.com</span>
+                <p style="margin-top:0.75rem;font-size:0.9rem;">24小时内回复 · 点击直接发邮件</p>
+            </a>
+            <a href="weixin://dl/chat?szkongto01" class="contact-card card-link" style="text-decoration:none;color:inherit;" onclick="
+                var ua = navigator.userAgent;
+                if(ua.match(/iPhone|iPad|iPod/)) { this.href='weixin://dl/chat?szkongto01'; }
+                else if(ua.match(/Android/) && !ua.match(/Windows|Macintosh/)) { this.href='weixin://dl/chat?szkongto01'; }
+                else { this.href='tel:+8613686889647'; }
+            ">
                 <div class="icon">📱</div>
-                <h3>微信/电话直接咨询</h3>
+                <h3>微信 / 电话直接咨询</h3>
                 <p>添加微信或直接电话沟通</p>
-                <a href="tel:+8613686889647">+86-136-8688-9647</a>
-                <p style="margin-top:0.75rem;font-size:0.9rem;">工作日 9:00-18:00</p>
-            </div>
-            <div class="contact-card">
+                <span style="color:#1a73e8;font-weight:600;font-size:1.1rem;">+86-136-8688-9647</span>
+                <p style="margin-top:0.75rem;font-size:0.9rem;">工作日 9:00-18:00 · 点击启动微信或拨号</p>
+            </a>
+            <a href="/contact.html" class="contact-card card-link" style="text-decoration:none;color:inherit;">
                 <div class="icon">💬</div>
                 <h3>在线留言询价</h3>
                 <p>填写设备信息，技术工程师直接联系您</p>
-                <a href="/contact.html" style="display:inline-block;background:#1a73e8;color:white;padding:0.625rem 1.5rem;border-radius:6px;margin-top:0.75rem;">填写询价单 →</a>
-            </div>
+                <span style="display:inline-block;background:#1a73e8;color:white;padding:0.625rem 1.5rem;border-radius:6px;margin-top:0.75rem;">填写询价单 →</span>
+            </a>
         </div>
     </section>
 
