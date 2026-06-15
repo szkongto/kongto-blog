@@ -44,6 +44,32 @@ def log_post(platform, title, url, status="published"):
 def pick(pool):
     return pool[DAY_NUM % len(pool)]
 
+DEVTO_USED = OUTPUT / "devto_canonicals.json"
+
+def load_devto_used():
+    """Load set of canonical URLs already used on Dev.to."""
+    if DEVTO_USED.exists():
+        return set(json.loads(DEVTO_USED.read_text(encoding='utf-8')))
+    return set()
+
+def save_devto_used(canonical):
+    """Record a canonical URL as used on Dev.to."""
+    used = load_devto_used()
+    used.add(canonical)
+    DEVTO_USED.write_text(json.dumps(sorted(used), indent=2), encoding='utf-8')
+
+def pick_devto(articles):
+    """Pick an article for Dev.to, avoiding used canonical URLs."""
+    used = load_devto_used()
+
+    for a in articles:
+        if a["canonical"] not in used:
+            return a
+
+    # All used — pick oldest (first in list) and rotate
+    print("  [INFO] All canonicals used, recycling oldest")
+    return articles[0]
+
 # ============================================================
 # 30天内容轮换池
 # ============================================================
@@ -90,7 +116,7 @@ Installation guides: [{SITE}]({SITE})""",
     },
     {
         "title": "Repair vs Replace: The Real Cost of Keeping an Old CNC CRT Alive",
-        "devto_tags": ["cnc", "manufacturing", "engineering", "tutorial"],
+        "devto_tags": ["cnc", "manufacturing", "engineering", "economics"],
         "canonical": f"{SITE}/comparison-kongto-vs-competitors.html",
         "body_devto": """## The Sunk Cost Trap
 
@@ -111,27 +137,18 @@ Shop owners paying $400-800 every 6-12 months to "repair" a dying CNC CRT. Let's
 
 | Item | Cost |
 |------|------|
-| LCD module (FANUC A61L-0001-0093) | $180-280 |
+| LCD module | $180-280 |
 | Installation | 10 min (DIY) |
 | Lifespan | 5-7 years continuous |
 | 5-Year Total | **$180-280** |
 
 ## Why CRT Repairs Keep Failing
 
-CRT displays were discontinued 15+ years ago. "Repairs" use flyback transformers and capacitors harvested from donor units — all 20+ years old themselves. Each repair borrows time from another dying unit. The donor pool is shrinking fast.
+CRT displays were discontinued 15+ years ago. "Repairs" use flyback transformers and capacitors harvested from donor units — all 20+ years old themselves.
 
 ## The Hidden Cost: Machine Downtime
 
 A CNC down 3 days waiting for CRT repair at $500/day production value = $1,500 lost output + $400 repair = $1,900 real cost per incident.
-
-## When to Repair vs Replace
-
-**Repair only if:** Machine retiring within 6 months, or rarely-used backup.
-**Replace with LCD if:** Runs production regularly, mechanical condition good, keeping 1+ years.
-
-## OEM Replacement Reality
-
-FANUC sells a "replacement CRT." It's a refurb from another old machine. Cost: $800-1,500. Same aging components as yours.
 
 For $180-280, eliminate the CRT failure cycle permanently.
 
@@ -141,10 +158,10 @@ Model guides: [{SITE}]({SITE})""",
     {
         "title": "How to Identify Your CNC CRT Model Before Ordering a Replacement LCD",
         "devto_tags": ["cnc", "manufacturing", "engineering", "tutorial"],
-        "canonical": f"{SITE}/en/compatibility-matrix.html",
+        "canonical": f"{SITE}/brands/FANUC.html",
         "body_devto": """## First Step: Find Your CRT Model Number
 
-Before ordering any replacement, you need to identify exactly what CRT is in your machine. Here's how.
+Before ordering any replacement, you need to identify exactly what CRT is in your machine.
 
 ## Where to Look
 
@@ -153,14 +170,13 @@ The model label is on the **back** of the CRT housing. You'll need:
 - Your phone camera (take a photo — it's easier than squinting)
 - Possibly a mirror if the label faces the wall
 
-## Reading the Label
+## Reading the Label by Brand
 
 ### FANUC
 Label format: `A61L-0001-XXXX` or `D9MM-11A`
 - A61L-0001-**0093** = 9" amber monochrome, Honda MR-20M
 - A61L-0001-**0092** = 9" amber, similar to 0093
 - A61L-0001-**0074** = 14" color
-- A61L-0001-**0096** = 14" color
 - D9MM-11A = same as A61L-0001-0093
 
 ### Mitsubishi
@@ -178,22 +194,265 @@ Label prefix: `6FC` or `SM`
 Label prefix: `CD1` or `C-` or `DR`
 - CD1472-D1M = 10.4" color, T-32/M-32
 - C-5470NS = 10.4" color, M-32/M-Plus
-- DR5614 = 10.4" color, T-32/T-Plus
 
-## Can't Read the Label?
+FANUC brand guides: [{SITE}/brands/FANUC.html]({SITE}/brands/FANUC.html)
+Full compatibility matrix: [{SITE}/en/compatibility-matrix.html]({SITE}/en/compatibility-matrix.html)""",
+    },
+    {
+        "title": "Mitsubishi CNC CRT to LCD Upgrade: MDT962B and BM09DF Replacement Guide",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "mitsubishi"],
+        "canonical": f"{SITE}/brands/Mitsubishi.html",
+        "body_devto": """## Mitsubishi M64/E60/M500: Complete Display Upgrade
 
-Alternative identification methods:
-1. **Screen size**: Measure the visible diagonal of the CRT
-2. **Connector type**: Count the pins on the connector
-3. **Machine model**: Your CNC model narrows down compatible CRTs
-4. **Send a photo**: A clear photo of the CRT and connector to a specialist
+Mitsubishi CNC controls from the 1990s use 9" monochrome CRTs that are now failing. Here's the direct replacement guide.
 
-## Next Step: Check Compatibility
+## Compatible Models
 
-Once you have your model number, verify compatible replacements here:
-[{SITE}/en/compatibility-matrix.html]({SITE}/en/compatibility-matrix.html)
+| CRT Model | System | Connector | Power |
+|-----------|--------|-----------|-------|
+| MDT962B | M64 | 20-pin | DC 24V |
+| BM09DF | E60 | 20-pin | DC 24V |
+| FCUA-CT100 | M500/M520 | 26-pin | DC 24V |
 
-Or send a photo and get a definitive answer about replacement options: [{SITE}]({SITE})""",
+## Symptoms of Failure
+
+- Screen goes dark after 5-10 minutes of operation
+- Flickering when the spindle motor starts
+- Dim display even at maximum brightness
+- Horizontal lines across the screen
+- CRT takes 30+ minutes to stabilize on cold mornings
+
+## The Replacement Process
+
+1. Power off, verify with multimeter
+2. Remove 4 mounting bolts from CRT bezel
+3. Disconnect the 20-pin or 26-pin connector
+4. Connect same cable to replacement LCD
+5. Mount LCD with original hardware
+6. Power on — no parameters needed
+
+The Mitsubishi M64 CRT power supply delivers clean DC 24V, so LCD compatibility is straightforward — no AC voltage concerns like Siemens systems.
+
+## Pro Tip: Connector Count
+
+Count your pins BEFORE ordering. Mitsubishi used both 20-pin and 26-pin variants. They are NOT interchangeable even within the same machine series.
+
+Full Mitsubishi upgrade guide: [{SITE}/brands/Mitsubishi.html]({SITE}/brands/Mitsubishi.html)
+Compatibility matrix: [{SITE}]({SITE})""",
+    },
+    {
+        "title": "Siemens SINUMERIK CRT Replacement: The Critical AC110V Difference",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "siemens"],
+        "canonical": f"{SITE}/brands/Siemens.html",
+        "body_devto": """## Siemens ≠ Japanese CNC: The Power Supply Difference
+
+If you maintain a Siemens SINUMERIK 810, 820, or 840D, there's one thing you absolutely must know before ordering a replacement display:
+
+**Siemens uses AC 110V. Japanese CNCs use DC 24V.**
+
+## Compatible Siemens Models
+
+| CRT Model | System | Connector | Power |
+|-----------|--------|-----------|-------|
+| 6FC3998-7FA20 | SINUMERIK 810/820 | DB-25 (25-pin) | **AC 110V** |
+| SM0901-579417-TA | SINUMERIK 810/820 | DB-25 | **AC 110V** |
+
+## The DB-25 Connector
+
+Siemens uses a DB-25 D-Sub connector — completely different from the Honda MR-20M used by FANUC or the 20/26-pin connectors on Mitsubishi. A "universal" LCD won't work here.
+
+## Real-World Failure
+
+In 2023, a machine shop ordered a $180 LCD module, connected it to their Siemens 840D, and powered up. The DC-rated module received AC 110V. Result: instant component destruction. The module's power section was designed for DC 24V, not the 110V AC the Siemens CRT supply delivers.
+
+They lost $180 in hardware and 2 days of production waiting for the correct AC-rated replacement.
+
+## The Correct Approach
+
+When ordering a Siemens LCD replacement:
+1. Verify the module explicitly supports AC 110V input
+2. Confirm DB-25 connector compatibility
+3. Check the exact SINUMERIK control version (810, 820, 840D)
+
+Full Siemens guide: [{SITE}/brands/Siemens.html]({SITE}/brands/Siemens.html)
+All brands: [{SITE}]({SITE})""",
+    },
+    {
+        "title": "Mazak CNC CRT Replacement: CD1472-D1M and C-5470NS LCD Upgrade Guide",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "mazak"],
+        "canonical": f"{SITE}/brands/MAZAK.html",
+        "body_devto": """## Mazak T-32/M-32: 26-Pin Proprietary Display
+
+Mazak CRTs use a proprietary 26-pin connector that is physically incompatible with FANUC (20-pin) and Mitsubishi (20/26-pin) modules. Here's what works.
+
+## Compatible Mazak CRT Models
+
+| CRT Model | System | Size | Type |
+|-----------|--------|------|------|
+| CD1472-D1M | T-32/M-32 | 10.4" | Color TFT CRT |
+| C-5470NS | M-32/M-Plus | 10.4" | Color TFT CRT |
+| DR5614 | T-32/T-Plus | 10.4" | Color TFT CRT |
+| MDT-1283B | M-32/M-Plus | 10.4" | Color TFT CRT |
+
+## The Mazak Difference
+
+Unlike FANUC and Mitsubishi controls that use 9" amber monochrome CRTs, Mazak machines shipped with 10.4" color TFT displays. This means:
+- Higher resolution factory display
+- Different connector pinout (26-pin proprietary)
+- Same DC 24V power as Japanese CNCs
+
+## Installation Notes
+
+The Mazak 26-pin connector plugs directly into compatible LCD replacements. No adapter boards, no signal converters, no rewiring needed. Direct swap.
+
+## Warning: Brand Confusion
+
+Some suppliers list "FANUC/Mazak compatible" displays. These are physically incompatible. Mazak uses a 26-pin connector. FANUC uses the 20-pin Honda MR-20M. They do not mate.
+
+Full Mazak guides: [{SITE}/brands/MAZAK.html]({SITE}/brands/MAZAK.html)
+Compatibility check: [{SITE}]({SITE})""",
+    },
+    {
+        "title": "Okuma OSP CNC Display Upgrade: 14-Pin and 20-Pin LCD Replacement",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "okuma"],
+        "canonical": f"{SITE}/brands/OKUMA.html",
+        "body_devto": """## Okuma OSP 5000/5020/7000 Display Retrofit
+
+Okuma CNCs use different connectors depending on the OSP control generation. Here's the complete reference.
+
+## Connector Types by OSP Generation
+
+| Control | CRT Size | Connector | Power |
+|---------|----------|-----------|-------|
+| OSP 5000 | 9" mono | 14-pin | DC 24V |
+| OSP 5020 | 9" mono | 14-pin | DC 24V |
+| OSP 7000 | 9" mono | 20-pin | DC 24V |
+
+## 14-Pin vs 20-Pin
+
+The OSP 5000/5020 uses a 14-pin connector — fewer pins than FANUC (20-pin) or Mitsubishi (20/26-pin). The OSP 7000 switched to 20-pin. They are NOT cross-compatible.
+
+## Okuma-Specific Failure Patterns
+
+Okuma CRTs tend to fail differently from FANUC:
+- **OSP 5000**: High-voltage section failures (flyback transformer)
+- **OSP 5020**: Capacitor aging in the deflection circuit
+- **OSP 7000**: Screen burn-in from static parameter displays
+
+## What Works
+
+LCD replacements for Okuma use the original 14-pin or 20-pin connector, draw DC 24V power from the same cable, and mount with the original screw pattern. No external power supplies needed.
+
+Full Okuma guides: [{SITE}/brands/OKUMA.html]({SITE}/brands/OKUMA.html)
+All brands: [{SITE}]({SITE})""",
+    },
+    {
+        "title": "Haas CNC CRT to LCD: 9-Pin D-Sub Display Replacement for VF/ST/SL Series",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "haas"],
+        "canonical": f"{SITE}/brands/HAAS.html",
+        "body_devto": """## Haas VF/ST/SL: Early Models Need DC 12V LCD
+
+Early Haas machines use a unique 9-pin D-Sub connector with DC 12V power — different from every other major CNC brand.
+
+## Compatible Haas Models
+
+| Series | Connector | Power | Notes |
+|--------|-----------|-------|-------|
+| VF (early) | 9-pin D-Sub | DC 12V | Not 24V! |
+| ST (early) | 9-pin D-Sub | DC 12V | Same as VF |
+| SL (early) | 9-pin D-Sub | DC 12V | Same as VF |
+
+## The DC 12V Difference
+
+Most industrial CNCs use DC 24V for display power. Haas used DC 12V on early machines. A DC 24V LCD module connected to a Haas will NOT receive enough voltage to operate reliably — dim, flickering, or no display at all.
+
+## Visual Identification
+
+The 9-pin D-Sub is easily recognized:
+- Trapezoid-shaped metal shell
+- 9 pins in a 5+4 staggered arrangement
+- Same physical shape as old PC serial ports (but different pinout!)
+
+## Installation
+
+Direct plug-and-play with compatible 9-pin D-Sub + DC 12V LCD modules. Same 4-screw mounting pattern. No control parameter changes needed.
+
+Full Haas guides: [{SITE}/brands/HAAS.html]({SITE}/brands/HAAS.html)
+Cross-brand compatibility: [{SITE}]({SITE})""",
+    },
+    {
+        "title": "FANUC A61L-0001-0093: The Most Common CNC CRT and Its Direct LCD Replacement",
+        "devto_tags": ["cnc", "manufacturing", "engineering", "fanuc"],
+        "canonical": f"{SITE}/case-studies.html",
+        "body_devto": """## The Workhorse CRT That's Everywhere
+
+The FANUC A61L-0001-0093 (also labeled D9MM-11A) is the single most common CNC display in the world. Found on FANUC 0-TC, 0-MC, 18-T, 21-T, and Power Mate controls.
+
+## Why It Fails
+
+Every A61L-0001-0093 was manufactured between 1988-2003. The youngest unit is 20+ years old. The typical CRT is at year 25-30.
+
+Failure points:
+1. **Phosphor burn-in**: Permanent ghosting from static parameter screens
+2. **Flyback transformer**: HV section failure = no display
+3. **Capacitors**: Flickering, unstable brightness
+4. **Tube wear**: Max brightness = still too dim to read
+
+## The LCD Replacement
+
+The replacement LCD module for A61L-0001-0093:
+- Uses the original Honda MR-20M connector
+- Draws DC 24V from the original cable
+- Fits the original mounting points
+- 10-minute installation
+
+## Real Shop Results
+
+Case study: 12-machine FANUC fleet upgrade
+- Before: 3-5 CRT failures/year, 2+ days downtime each
+- After: Zero LCD failures in 18 months
+- Total cost: Under $3,000 (12 LCD modules)
+- Previous annual repair spend: $5,600+
+
+D9MM-11A and A61L-0001-0093 are electrically identical — the same replacement works for both.
+
+Full case studies: [{SITE}/case-studies.html]({SITE}/case-studies.html)
+FANUC guides: [{SITE}/brands/FANUC.html]({SITE}/brands/FANUC.html)""",
+    },
+    {
+        "title": "5 Signs Your CNC CRT Is About to Die — And What to Do About It",
+        "devto_tags": ["cnc", "manufacturing", "maintenance", "engineering"],
+        "canonical": f"{SITE}/en/",
+        "body_devto": """## Don't Wait for Complete Failure
+
+CRT displays rarely fail without warning. Here are the 5 signs that tell you it's time to plan a replacement — before the machine goes dark mid-production.
+
+## Sign 1: Brightness at Maximum, Still Too Dim
+
+The phosphor coating inside the CRT tube degrades over time. When you're at 100% brightness and the characters are still hard to read under shop lighting, the tube is end-of-life. No repair restores phosphor — only a tube replacement helps, and new tubes haven't been manufactured in 15+ years.
+
+## Sign 2: Flickering on Cold Start (20+ Minutes to Stabilize)
+
+Aging electrolytic capacitors in the power supply section can't hold their rated capacitance. As they warm up, they slowly recover. This gets worse over time as caps degrade further.
+
+## Sign 3: Permanent Burn-In
+
+If you can read parameter screen text even with the machine off, the phosphor is permanently burned. This is cosmetic until it isn't — the burned areas eventually lose all phosphor and stop displaying entirely.
+
+## Sign 4: Screen Shrinking or Distorting at Edges
+
+Classic flyback transformer failure symptom. The HV section can't maintain proper voltage. It will get worse, and eventually the HV section fails completely = blank screen.
+
+## Sign 5: High-Pitched Whine
+
+A failing flyback transformer often produces an audible whine at 15-20 kHz. Some operators can hear it (younger ears), some can't. If you hear a high-pitched noise from the CRT enclosure, the flyback is failing.
+
+## The Bottom Line
+
+Any one of these signs = start planning. Two or more = order the replacement now, before the machine goes down mid-job.
+
+Model identification guide: [{SITE}/en/compatibility-matrix.html]({SITE}/en/compatibility-matrix.html)
+All brand guides: [{SITE}]({SITE})""",
     },
 ]
 
@@ -236,7 +495,7 @@ def post_devto():
         print("[SKIP] Dev.to - no API key")
         return None
 
-    article = pick(ARTICLES)
+    article = pick_devto(ARTICLES)
     print(f"\n[Dev.to] {article['title'][:70]}...")
 
     resp = requests.post(
@@ -256,6 +515,7 @@ def post_devto():
         url = resp.json().get("url", "")
         print(f"  [OK] {url}")
         log_post("Dev.to", article["title"], url)
+        save_devto_used(article["canonical"])
         return url
     print(f"  [FAIL] HTTP {resp.status_code}: {resp.text[:150]}")
     return None
