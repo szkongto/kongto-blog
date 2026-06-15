@@ -637,6 +637,47 @@ A61L-0001-0093 (D9MM-11A) = 9" amber, most common
     return None
 
 
+def post_gitlab():
+    """GitLab Snippets - DA 96, Dofollow, public snippet indexed by Google"""
+    cfg = load_config()
+    pat = cfg.get("gitlab_pat")
+    if not pat:
+        print("[SKIP] GitLab - no PAT")
+        return None
+
+    article = pick(ARTICLES)
+    print(f"\n[GitLab] {article['title'][:70]}...")
+
+    # Build snippet content: title + key points + link
+    snippet_content = f"""# {article['title']}
+
+{article['body_devto']}
+
+---
+*Reference: [{SITE}]({SITE})*
+"""
+
+    resp = requests.post(
+        "https://gitlab.com/api/v4/snippets",
+        headers={"PRIVATE-TOKEN": pat, "Content-Type": "application/json"},
+        json={
+            "title": article["title"][:70],
+            "file_name": "cnc-display-upgrade-guide.md",
+            "content": snippet_content,
+            "visibility": "public",
+        },
+        timeout=30
+    )
+
+    if resp.status_code in [200, 201]:
+        url = resp.json().get("web_url", "")
+        print(f"  [OK] {url}")
+        log_post("GitLab", article["title"], url)
+        return url
+    print(f"  [FAIL] HTTP {resp.status_code}: {resp.text[:150]}")
+    return None
+
+
 # ============================================================
 # 生成手动平台内容
 # ============================================================
@@ -682,6 +723,61 @@ def print_status():
 
 
 # ============================================================
+# Git 自动提交 + 推送
+# ============================================================
+def auto_git_push():
+    """Commit today's backlink results and push to GitHub via SSH."""
+    import subprocess
+    try:
+        # Check if we're in a git repo
+        r = subprocess.run(["git", "rev-parse", "--git-dir"], capture_output=True, cwd=str(BASE))
+        if r.returncode != 0:
+            print("[GIT] Not a git repo, skipping")
+            return
+
+        # Stage tracker + canonicals + today's content
+        files = ["backlinks_daily/post_tracker.csv", "backlinks_daily/devto_canonicals.json"]
+        today_dir = OUTPUT / TODAY
+        if today_dir.exists():
+            files.append(f"backlinks_daily/{TODAY}")
+
+        for f in files:
+            subprocess.run(["git", "add", f], capture_output=True, cwd=str(BASE))
+
+        # Check if there are changes
+        r = subprocess.run(["git", "diff", "--cached", "--quiet"], capture_output=True, cwd=str(BASE))
+        if r.returncode == 0:
+            print("[GIT] No changes to commit")
+            return
+
+        # Commit
+        msg = f"Daily backlinks {TODAY}: auto-published"
+        r = subprocess.run(["git", "commit", "-m", msg], capture_output=True, cwd=str(BASE))
+        if r.returncode != 0:
+            err = r.stderr.decode('utf-8', errors='replace')[:200]
+            print(f"[GIT] Commit failed: {err}")
+            return
+
+        # Push
+        r = subprocess.run(["git", "push", "origin", "main"], capture_output=True, cwd=str(BASE))
+        if r.returncode != 0:
+            err = r.stderr.decode('utf-8', errors='replace')[:200]
+            print(f"[GIT] Push failed: {err}")
+            # Try pull+rebase then push
+            subprocess.run(["git", "pull", "--rebase", "origin", "main"], capture_output=True, cwd=str(BASE))
+            r = subprocess.run(["git", "push", "origin", "main"], capture_output=True, cwd=str(BASE))
+            if r.returncode == 0:
+                print("[GIT] Pushed (after rebase)")
+            else:
+                print(f"[GIT] Push still failed: {r.stderr.decode('utf-8', errors='replace')[:200]}")
+                return
+
+        print(f"[GIT] Pushed: {msg}")
+    except Exception as e:
+        print(f"[GIT] Error: {e}")
+
+
+# ============================================================
 # MAIN
 # ============================================================
 if __name__ == '__main__':
@@ -695,6 +791,8 @@ if __name__ == '__main__':
     if r: results["Telegra.ph"] = r
     r = post_rentry()
     if r: results["Rentry.co"] = r
+    r = post_gitlab()
+    if r: results["GitLab"] = r
 
     # === GENERATE MANUAL ===
     day_dir = gen_manual_content()
@@ -706,3 +804,6 @@ if __name__ == '__main__':
         print(f"  [{k}] {v}")
     print(f"  [Manual] {day_dir}")
     print(f"{'='*50}")
+
+    # === AUTO GIT PUSH ===
+    auto_git_push()
