@@ -110,6 +110,22 @@
 <script>
 let searchIndex = [];
 let currentFilter = 'all';
+let searchReady = false;
+
+// Load search index via script tag (more reliable than fetch on GitHub Pages)
+function initSearchIndex(data) {
+    searchIndex = data;
+    searchReady = true;
+    console.log('Search index loaded:', data.length, 'entries');
+    document.getElementById('searchInput').placeholder = 'Search ' + data.length + ' pages…';
+    // Check URL for query
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+        document.getElementById('searchInput').value = q;
+        search(q);
+    }
+}
 
 function highlight(text, query) {
     if (!query) return text;
@@ -195,22 +211,14 @@ function search(query) {
     }).join('');
 }
 
-fetch('/search-index.json')
-    .then(r => r.json())
-    .then(data => {
-        searchIndex = data;
-        console.log('Search index loaded:', data.length, 'entries');
-        const params = new URLSearchParams(window.location.search);
-        const q = params.get('q');
-        if (q) {
-            document.getElementById('searchInput').value = q;
-            search(q);
-        }
-    })
-    .catch(err => {
-        console.error('Failed to load search index:', err);
-        document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>Search index failed to load. Please refresh the page.</p></div>';
-    });
+// Load search index via script tag (works reliably on GitHub Pages, no CSP issues)
+var s = document.createElement('script');
+s.src = '/search-index.js';
+s.onerror = function() {
+    console.error('Failed to load search index script');
+    document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>Search index failed to load. Please refresh the page.</p></div>';
+};
+document.head.appendChild(s);
 
 document.getElementById('searchBtn').addEventListener('click', () => {
     search(document.getElementById('searchInput').value);
