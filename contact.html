@@ -344,7 +344,6 @@
             });
 
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
                 var isValid = true;
                 fields.forEach(function(field) {
                     if (field.closest('.hp-field')) return;
@@ -354,6 +353,7 @@
                 });
 
                 if (!isValid) {
+                    e.preventDefault();
                     submitStatus.className = 'submit-status error';
                     submitStatus.textContent = '请检查并完善表单中的标记项';
                     submitStatus.style.display = 'block';
@@ -364,39 +364,26 @@
                     return;
                 }
 
-                // Collect form data into email body
-                var name = form.querySelector('[name="name"]').value.trim();
-                var company = form.querySelector('[name="company"]').value.trim();
-                var email = form.querySelector('[name="email"]').value.trim();
-                var phone = form.querySelector('[name="phone"]').value.trim();
-                var product = form.querySelector('[name="product"]').value;
-                var message = form.querySelector('[name="message"]').value.trim();
+                // 验证通过：让表单自然提交到 FormSubmit
+                submitBtn.disabled = true;
+                submitBtn.textContent = '正在提交...';
+                submitStatus.style.display = 'none';
+                // 不阻止默认行为，表单将 POST 到 FormSubmit
+                // FormSubmit 处理后会跳转到 _next 指定的 URL
+            });
 
-                var body = '';
-                body += '您好，我想咨询CNC显示器升级方案。\n\n';
-                body += '【基本信息】\n';
-                body += '姓名：' + name + '\n';
-                if (company) body += '公司：' + company + '\n';
-                body += '邮箱：' + email + '\n';
-                if (phone) body += '电话：' + phone + '\n';
-                if (product) body += '产品型号：' + product + '\n';
-                body += '\n【需求描述】\n';
-                body += message + '\n';
-                body += '\n---\n此邮件由江图科技网站询价表单自动生成';
-
-                var subject = encodeURIComponent('询价：CNC显示器升级方案 - ' + name);
-                var mailtoLink = 'mailto:szkongto01@foxmail.com?subject=' + subject + '&body=' + encodeURIComponent(body);
-
-                // Show success message and open email
+            // 页面加载时检查 ?success=true（FormSubmit 跳转回来的）
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
                 submitStatus.className = 'submit-status success';
-                submitStatus.innerHTML = '&#9993; 已打开邮箱客户端，点击发送即可完成询价。我们会在24小时内回复您！';
+                submitStatus.innerHTML = '✓ 提交成功！感谢您的咨询，我们会在24小时内与您联系。';
                 submitStatus.style.display = 'block';
-                window.location.href = mailtoLink;
-
+                form.reset();
                 if (typeof gtag === 'function') {
                     gtag('event', 'generate_lead', { form_id: 'contactForm_zh' });
                 }
-            });
+            }
+        });
         });
     </script>
 </head>
@@ -428,9 +415,12 @@
 
             <div class="contact-grid">
                 <div class="contact-form-card">
-                    <form id="contactForm" name="contact" method="POST" action="#">
+                    <form id="contactForm" name="contact" method="POST" action="https://formsubmit.co/szkongto01@foxmail.com">
                         <input type="hidden" name="form-name" value="contact">
-                        </div>
+                        <input type="hidden" name="_subject" value="CNC显示器询价 - 江图科技网站">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://cncdisplay.com/contact.html?success=true">
 
                         <div class="form-group">
                             <label>姓名 <span class="required">*</span></label>
@@ -487,7 +477,7 @@
                             <div class="error-msg"></div>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="submit-btn">打开邮箱发送询价 →</button>
+                        <button type="submit" id="submitBtn" class="submit-btn">提交询价</button>
                         <div id="submitStatus" class="submit-status"></div>
                     </form>
                 </div>
