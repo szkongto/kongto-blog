@@ -1,0 +1,365 @@
+From 7f3cb0b6a0eafd72e67c526a81cb1bfb22292002 Mon Sep 17 00:00:00 2001
+From: szkongto <1251701967@qq.com>
+Date: Mon, 15 Jun 2026 17:45:37 +0800
+Subject: [PATCH 2/2] Add Schema.org structured data to 7 pages missing JSON-LD
+
+- Added HowTo + Article Schema to Mitsubishi and Siemens upgrade/articles
+- All 173 HTML pages now have proper structured data
+- Fixes SEO Audit Issue #6 (partial)
+---
+ ...itsubishi_CNC_Display_Troubleshooting.html | 18 ++++++
+ ...Mitsubishi_M70_M700_LCD_Upgrade_Guide.html | 55 +++++++++++++++++++
+ ...ubishi-cnc-display-troubleshooting-zh.html | 18 ++++++
+ .../mitsubishi-crt-vs-lcd-comparison-zh.html  | 18 ++++++
+ ...itsubishi-m70-m700-crt-lcd-upgrade-zh.html | 55 +++++++++++++++++++
+ ...-display-upgrade-cost-roi-analysis-zh.html | 55 +++++++++++++++++++
+ ...-sinumerik-display-troubleshooting-zh.html | 18 ++++++
+ ...ns-vs-fanuc-cnc-display-comparison-zh.html | 18 ++++++
+ 8 files changed, 255 insertions(+)
+
+diff --git a/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html b/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html
+index e7e3d2b9..d6d8b326 100644
+--- a/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html
++++ b/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html
+@@ -14,6 +14,24 @@
+     
+     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "Mitsubishi CNC Display Troubleshooting: Why It Fails & How to Fix | Kongto",
++  "description": "Mitsubishi CNC display not turning on? Flickering? No signal? Step-by-step troubleshooting guide for M70, M700, and MDT-series displays. When to repair, when to replace.",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "datePublished": "2026-01-01",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+ <header>
+diff --git a/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html b/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html
+index b1eaf503..ab0928ab 100644
+--- a/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html
++++ b/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html
+@@ -14,6 +14,61 @@
+     
+     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "HowTo",
++  "name": "Mitsubishi M70 & M700 CNC Display Replacement Guide (CRT to LCD) | Kongto",
++  "description": "Mitsubishi M70 and M700 CNC display upgrade guide. Replace dim, flickering CRT with a reliable LCD retrofit kit. Step-by-step installation, compatibility, and cost breakdown.",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "totalTime": "PT30M",
++  "supply": [
++    {
++      "@type": "HowToSupply",
++      "name": "Replacement LCD Display"
++    }
++  ],
++  "step": [
++    {
++      "@type": "HowToStep",
++      "name": "Safety Preparation",
++      "text": "Power off CNC machine and discharge static"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Remove Old Display",
++      "text": "Carefully remove the original LCD display unit"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Install New Display",
++      "text": "Connect and mount the replacement LCD"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Test Functionality",
++      "text": "Power on and verify display operation"
++    }
++  ]
++}
++</script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "Mitsubishi M70 & M700 CNC Display Replacement Guide (CRT to LCD) | Kongto",
++  "description": "Mitsubishi M70 and M700 CNC display upgrade guide. Replace dim, flickering CRT with a reliable LCD retrofit kit. Step-by-step installation, compatibility, and cost breakdown.",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+ <header>
+diff --git a/posts/mitsubishi-cnc-display-troubleshooting-zh.html b/posts/mitsubishi-cnc-display-troubleshooting-zh.html
+index 8916644e..7eb9afa8 100644
+--- a/posts/mitsubishi-cnc-display-troubleshooting-zh.html
++++ b/posts/mitsubishi-cnc-display-troubleshooting-zh.html
+@@ -14,6 +14,24 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/mitsubishi-cnc-display-troubleshooting-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "三菱 CNC 显示屏故障排除：失效原因与修复方法",
++  "description": "三菱 CNC 显示屏不亮？闪烁？无信号？M70、M700 和 MDT 系列显示屏逐步故障排除指南。何时维修，何时更换。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "datePublished": "2026-01-01",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+diff --git a/posts/mitsubishi-crt-vs-lcd-comparison-zh.html b/posts/mitsubishi-crt-vs-lcd-comparison-zh.html
+index fe6acac4..14fd2497 100644
+--- a/posts/mitsubishi-crt-vs-lcd-comparison-zh.html
++++ b/posts/mitsubishi-crt-vs-lcd-comparison-zh.html
+@@ -14,6 +14,24 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/mitsubishi-crt-vs-lcd-comparison-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/mitsubishi-crt-vs-lcd-comparison-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "三菱 CNC 显示屏 CRT 与 LCD 对比：完整分析报告",
++  "description": "三菱 CNC 显示屏 CRT 与 LCD 深度对比。亮度、寿命、功耗、可靠性——帮助您做出明智升级决策的数据。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "datePublished": "2026-01-01",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+diff --git a/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html b/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html
+index bfa63e50..9634b610 100644
+--- a/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html
++++ b/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html
+@@ -14,6 +14,61 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "HowTo",
++  "name": "三菱 M70 & M700 CNC 显示屏升级指南（CRT 到 LCD）",
++  "description": "三菱 M70 和 M700 CNC 显示屏升级指南。将昏暗、闪烁的 CRT 更换为可靠的 LCD 改装套件。逐步安装、兼容性和成本分析。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "totalTime": "PT30M",
++  "supply": [
++    {
++      "@type": "HowToSupply",
++      "name": "Replacement LCD Display"
++    }
++  ],
++  "step": [
++    {
++      "@type": "HowToStep",
++      "name": "Safety Preparation",
++      "text": "Power off CNC machine and discharge static"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Remove Old Display",
++      "text": "Carefully remove the original LCD display unit"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Install New Display",
++      "text": "Connect and mount the replacement LCD"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Test Functionality",
++      "text": "Power on and verify display operation"
++    }
++  ]
++}
++</script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "三菱 M70 & M700 CNC 显示屏升级指南（CRT 到 LCD）",
++  "description": "三菱 M70 和 M700 CNC 显示屏升级指南。将昏暗、闪烁的 CRT 更换为可靠的 LCD 改装套件。逐步安装、兼容性和成本分析。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+diff --git a/posts/siemens-display-upgrade-cost-roi-analysis-zh.html b/posts/siemens-display-upgrade-cost-roi-analysis-zh.html
+index 43d76a03..9bd6bf29 100644
+--- a/posts/siemens-display-upgrade-cost-roi-analysis-zh.html
++++ b/posts/siemens-display-upgrade-cost-roi-analysis-zh.html
+@@ -14,6 +14,61 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/siemens-display-upgrade-cost-roi-analysis-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/siemens-display-upgrade-cost-roi-analysis-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "HowTo",
++  "name": "西门子显示屏升级成本ROI分析：CRT vs LCD全面对比",
++  "description": "西门子 CNC 显示屏升级成本与 ROI 分析。CRT 维修 vs LCD 升级——帮助您做出明智决策的数据。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "totalTime": "PT30M",
++  "supply": [
++    {
++      "@type": "HowToSupply",
++      "name": "Replacement LCD Display"
++    }
++  ],
++  "step": [
++    {
++      "@type": "HowToStep",
++      "name": "Safety Preparation",
++      "text": "Power off CNC machine and discharge static"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Remove Old Display",
++      "text": "Carefully remove the original LCD display unit"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Install New Display",
++      "text": "Connect and mount the replacement LCD"
++    },
++    {
++      "@type": "HowToStep",
++      "name": "Test Functionality",
++      "text": "Power on and verify display operation"
++    }
++  ]
++}
++</script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "西门子显示屏升级成本ROI分析：CRT vs LCD全面对比",
++  "description": "西门子 CNC 显示屏升级成本与 ROI 分析。CRT 维修 vs LCD 升级——帮助您做出明智决策的数据。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+diff --git a/posts/siemens-sinumerik-display-troubleshooting-zh.html b/posts/siemens-sinumerik-display-troubleshooting-zh.html
+index e125039d..5c0e2f04 100644
+--- a/posts/siemens-sinumerik-display-troubleshooting-zh.html
++++ b/posts/siemens-sinumerik-display-troubleshooting-zh.html
+@@ -14,6 +14,24 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/siemens-sinumerik-display-troubleshooting-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/siemens-sinumerik-display-troubleshooting-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "西门子 SINUMERIK CNC 显示屏故障排除指南",
++  "description": "西门子 SINUMERIK CNC 显示屏不亮？闪烁？无信号？逐步故障排除指南。何时维修，何时更换。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "datePublished": "2026-01-01",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+diff --git a/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html b/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html
+index 03049774..a8ae77cd 100644
+--- a/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html
++++ b/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html
+@@ -14,6 +14,24 @@
+     
+     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html" />
+     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html" />
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "Article",
++  "headline": "西门子 vs 发那科 CNC 显示屏对比：全面选购指南",
++  "description": "西门子 vs 发那科 CNC 显示屏全面对比。亮度、可靠性、兼容性、成本——帮助您选择合适系统的数据。",
++  "image": "https://cncdisplay.com/images/kongto-logo.png",
++  "datePublished": "2026-01-01",
++  "publisher": {
++    "@type": "Organization",
++    "name": "Kongto Display Technology Co., Ltd.",
++    "logo": {
++      "@type": "ImageObject",
++      "url": "https://cncdisplay.com/images/kongto-logo.png"
++    }
++  }
++}
++</script>
+ </head>
+ <body>
+     <header>
+-- 
+2.54.0.windows.1
+
