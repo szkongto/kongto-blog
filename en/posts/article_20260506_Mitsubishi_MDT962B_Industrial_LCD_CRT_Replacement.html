@@ -1,106 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT | Kongto</title>
-  <meta name="description" content="Your Mitsubishi MDT962B CRT is failing. Here's what actually happens when you retrofit it with an LCD — installation time, real costs, and what changes on the shop floor.">
-  <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/mitsubishi-mdt962b-series-crt-lcd-upgrade-solution-zh.html">
-  <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
-    "headline": "Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT",
-    "description": "Your Mitsubishi MDT962B CRT is failing. Here's what actually happens when you retrofit it with an LCD.",
-    "author": { "@type": "Organization", "name": "Kongto Technology" },
-    "datePublished": "2026-06-15",
-    "dateModified": "2026-06-15",
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need to drill new mounting holes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The mounting pattern is identical to the original CRT. Four screws, same holes, done." }
-        },
-        {
-          "@type": "Question",
-          "name": "Will the display be better than the original CRT?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. 250 cd/m² brightness vs. ~150 for a new CRT, zero flicker, and 800×600 resolution instead of 640×480." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to change CNC parameters after installation?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The LCD is designed to be plug-and-play. The CNC system sees it as a standard display. Power off, swap, power on." }
-        }
-      ]
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT | Kongto Technology</title>
+    <meta name="description" content="Mitsubishi MDT962B CRT is failing on your CNC machine. Learn about the LCD retrofit solution with real installation cases, technical specs, and compatibility guide.">
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/mitsubishi-mdt962b-crt-lcd-upgrade-zh.html">
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">
+    <meta property="og:title" content="Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT | Kongto Technology">
+    <meta property="og:description" content="Mitsubishi MDT962B CRT retrofit to LCD - installation guide, technical specs, and real customer cases.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">
+    <meta property="og:site_name" content="Kongto Technology">
+    <link rel="stylesheet" href="/css/style.css?v=7">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT",
+        "description": "Mitsubishi MDT962B CRT retrofit to LCD solution guide.",
+        "author": {"@type": "Organization", "name": "Kongto Technology"},
+        "publisher": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
+        "datePublished": "2026-06-15",
+        "dateModified": "2026-06-15"
     }
-  }
-  </script>
-
-  <style>
-    body { font-family: Georgia, 'Times New Roman', serif; max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; line-height: 1.8; color: #1a1a1a; background: #fff; }
-    h1 { font-size: 1.9em; line-height: 1.3; margin-bottom: 6px; }
-    .subtitle { color: #666; font-size: 1em; margin-bottom: 36px; font-style: italic; }
-    h2 { font-size: 1.3em; margin-top: 2.8em; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8; color: #222; }
-    h3 { font-size: 1.1em; margin-top: 1.6em; color: #333; }
-    p { margin: 1.1em 0; }
-    ul, ol { padding-left: 22px; }
-    li { margin: 7px 0; }
-    
-    .toc { background: #f9fafb; border-left: 3px solid #1a73e8; padding: 20px 24px; margin: 36px 0; border-radius: 0 6px 6px 0; font-size: 0.95em; }
-    .toc strong { display: block; margin-bottom: 10px; color: #1a73e8; }
-    .toc a { color: #1a73e8; text-decoration: none; }
-    .toc a:hover { text-decoration: underline; }
-
-    .symptoms { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
-    .symptom { border: 1px solid #e8e8e8; border-radius: 6px; padding: 16px 18px; }
-    .symptom strong { display: block; margin-bottom: 6px; color: #333; }
-
-    .spec-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.93em; }
-    .spec-table th, .spec-table td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
-    .spec-table th { background: #f5f5f5; font-weight: 600; }
-    .spec-table .yes { background: #e8f5e9; color: #2e7d32; font-weight: 600; }
-    .spec-table .no { background: #fce4ec; color: #c62828; }
-
-    .case { background: #fef9e7; border-left: 4px solid #f9a825; padding: 22px 26px; margin: 28px 0; border-radius: 0 6px 6px 0; }
-    .case strong { color: #92400e; }
-
-    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.93em; }
-    .compare-table th, .compare-table td { border: 1px solid #ddd; padding: 10px 14px; }
-    .compare-table th { background: #f5f5f5; }
-    .compare-table .lcd-col { background: #e8f0fe; font-weight: 600; }
-
-    .steps { counter-reset: step; list-style: none; padding-left: 0; }
-    .steps li { counter-increment: step; padding: 12px 0 12px 48px; position: relative; border-bottom: 1px solid #f0f0f0; }
-    .steps li::before { content: counter(step); position: absolute; left: 0; top: 12px; background: #1a73e8; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9em; }
-
-    .faq { margin: 24px 0; border-bottom: 1px solid #eee; padding-bottom: 18px; }
-    .faq-q { font-weight: 700; color: #1a73e8; margin-bottom: 8px; }
-    .faq-a { color: #333; }
-
-    .cta { background: #1a73e8; color: white; padding: 32px; margin: 48px 0; border-radius: 8px; text-align: center; }
-    .cta a { background: #fbbc04; color: #1a1a1a; padding: 14px 32px; text-decoration: none; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 14px; }
-
-    code { background: #f1f3f4; padding: 2px 7px; border-radius: 3px; font-size: 0.9em; }
-    blockquote { border-left: 3px solid #ddd; padding: 12px 20px; margin: 24px 0; color: #555; font-style: italic; }
-    .note { background: #fff8e1; border-left: 3px solid #f9a825; padding: 14px 18px; margin: 24px 0; font-size: 0.95em; border-radius: 0 4px 4px 0; }
-
-    @media (max-width: 640px) {
-      .symptoms { grid-template-columns: 1fr; }
-      .spec-table, .compare-table { font-size: 0.85em; }
-    }
-  </style>
-
-<meta property="og:title" content="Mitsubishi MDT962B LCD Retrofit — Real Fix for a 20-Year-Old CRT | Kongto">
-<meta property="og:description" content="Your Mitsubishi MDT962B CRT is failing. Here's what actually happens when you retrofit it with an LCD — installation time, real costs, and what changes on the shop floor.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">
+    </script>
+    <meta name="geo.region" content="CN-44">
+    <meta name="geo.placename" content="深圳龙岗">
+    <meta name="geo.position" content="22.6568;113.9899">
+    <meta name="ICBM" content="22.6568, 113.9899">
 </head>
 <body>
-
-  <p style="color: #888; font-size: 0.9em; margin-bottom: 0;">Product Retrofit Guide &nbsp;·&nbsp; Updated June 2026</p>
+    <header>
+        <nav>
+            <a href="/en/" class="logo">Kongto Technology Co.,LTD</a>
+            <div class="nav-links">
+                <a href="/en/">Home</a>
+                <a href="/en/posts/">Articles</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About</a>
+            </div>
+            <a href="/en/search.html" class="nav-search">&#128269; Search</a>
+            <div class="lang-switch">
+                <a href="/" lang="zh">中文</a> |
+                <a href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html" lang="en">English</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="lang-link-box">
+            <span class="lang-link-icon">&#127760;</span>
+            <span>Chinese version:</span>
+            <a href="https://cncdisplay.com/posts/mitsubishi-mdt962b-crt-lcd-upgrade-zh.html" class="lang-link-btn">查看中文版本 &rarr;</a>
+        </div>
+        <article class="post">
+<p style="color: #888; font-size: 0.9em; margin-bottom: 0;">Product Retrofit Guide &nbsp;·&nbsp; Updated June 2026</p>
 
   <h1>Mitsubishi MDT962B LCD Retrofit</h1>
   <p class="subtitle">
@@ -478,5 +433,12 @@
     <a href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_FCUA-CT100_Interface_Guide.html" style="color: #1a73e8;">What the FCUA-CT100 Interface Actually Does (and When You Need It)</a>
   </p>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2b42d0796c534f37b00d882f1e4a3690","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kongto Technology Co.,Ltd - Shenzhen, China. All rights reserved.</p>
+        <p>Contact: +86-13686889647 | <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a></p>
+    </footer>
 </body>
 </html>
