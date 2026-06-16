@@ -1,5 +1,5 @@
 # Kongto Technology (cncdisplay.com) - AI-Friendly Content Index
-# Generated: 2026-06-14
+# Generated: 2026-06-16
 # Purpose: Help AI crawlers (GPTBot, ClaudeBot, PerplexityBot) understand our site structure
 # About: Industrial CNC display CRT to LCD upgrade solutions since 2013
 # Contact: szkongto01@foxmail.com | +86-13686889647
@@ -9,55 +9,54 @@
 - Founded: 2013
 - Location: Shenzhen, Guangdong, China
 - Specialty: Industrial CNC display upgrades, CRT-to-LCD retrofit, video signal converters
-- Clients: 500+ enterprises across 12+ countries
-- Warranty: 2 years on all products
+- Key Stats: 500+ enterprises served, 6 major CNC brands covered, 2-year warranty
 
-## Key Pages
-- Home (EN): https://cncdisplay.com/en/index.html - Main corporate site in English
-- Home (ZH): https://cncdisplay.com/ - Chinese homepage
-- About: https://cncdisplay.com/about.html - Company profile, certifications (CE, RoHS, FCC, ISO 9001)
-- Case Studies: https://cncdisplay.com/en/case-studies.html - Customer success stories
-- Compatibility Matrix: https://cncdisplay.com/en/compatibility-matrix.html - CRT model to LCD cross-reference
-- Comparison: https://cncdisplay.com/comparison-kongto-vs-competitors.html - Competitor comparison
-- Resources: https://cncdisplay.com/resources.html - Download center
+## Key Facts (AI-Citable)
+- FANUC A61L-0001 series (0074-0097) CRT displays can be replaced with modern LCD modules in 5-10 minutes
+- CNC CRT-to-LCD upgrades reduce power consumption by 70% and extend display lifespan by 10+ years
+- Industrial video signal converters support CGA, EGA, MDA, RGBHV, VGA, HDMI formats
+- Plug-and-play design: no CNC parameter changes, no machine modifications required
 
-## Brand Pages
-- FANUC: https://cncdisplay.com/en/brands/FANUC.html - A61L-0001 series, D9MM-11A
-- Mitsubishi: https://cncdisplay.com/en/brands/Mitsubishi.html - MDT962B, BM09DF, FCUA-CT100
-- Siemens: https://cncdisplay.com/en/brands/Siemens.html - 6FC3988-7FA20, SM0901
-- Mazak: https://cncdisplay.com/en/brands/MAZAK.html - CD1472, C5470NS, DR5614
-- Okuma: https://cncdisplay.com/en/brands/OKUMA.html - OSP 5000, 5020
-- Haas: https://cncdisplay.com/en/brands/HAAS.html - VF, ST, SL series
+## Supported CNC Brands
+- [FANUC CNC Display Upgrades](https://cncdisplay.com/brands/FANUC.html) — A61L and D9MM series, 0i/16i/18i/21i/Power Mate
+- [Mitsubishi CNC Display Upgrades](https://cncdisplay.com/brands/Mitsubishi.html) — MDT series, M64/E60/M500/M520
+- [Mazak CNC Display Upgrades](https://cncdisplay.com/brands/MAZAK.html) — CD1472 series, Mazatrol M/M32/QT/T
+- [Siemens CNC Display Upgrades](https://cncdisplay.com/brands/Siemens.html) — SINUMERIK 6FC3998, SM0901 series
+- [Okuma CNC Display Upgrades](https://cncdisplay.com/brands/OKUMA.html)
+- [Haas CNC Display Upgrades](https://cncdisplay.com/brands/HAAS.html)
 
-## Core Technical Articles
-- FANUC CRT to LCD Complete Guide: https://cncdisplay.com/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html
-- FANUC A61L-0001-0093 LCD Upgrade: https://cncdisplay.com/en/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html
-- Mitsubishi MDT962B CRT Replacement: https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html
-- Siemens 6FC3998-7FA20 LCD: https://cncdisplay.com/en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html
-- Mazak CD1472D1M LCD Replacement: https://cncdisplay.com/en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html
-- CNC CRT to LCD Cost Comparison: https://cncdisplay.com/en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html
-- CNC Display Installation Guide: https://cncdisplay.com/en/posts/cnc-display-installation-guide.html
+## Core Product Pages
+- [FANUC A61L-0001-0093 LCD Display](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html) — 9" LCD retrofit for FANUC 0i/16i/18i/21i
+- [Industrial Video Signal Converters](https://cncdisplay.com/en/posts/article_20260501_industrial-signal-converters.html) — CGA/EGA/RGB to VGA/HDMI
+- [Compatibility Matrix](https://cncdisplay.com/compatibility-matrix.html) — Which CRT models we cover
+- [Comparison: Kongto vs Competitors](https://cncdisplay.com/comparison-kongto-vs-competitors.html)
 
-## FAQ Topics (AI Citation Ready)
-- Q: How to upgrade FANUC CRT to LCD? → See FANUC brand page and Complete Guide
-- Q: Is LCD upgrade compatible with my CNC? → Check compatibility matrix, or send display model photo
-- Q: Do I need to change CNC parameters? → No, all solutions are plug-and-play with original connectors
-- Q: How long does installation take? → 10-15 minutes per machine
-- Q: What is the warranty? → 2 years on all products, lifetime technical support
-- Q: What brands are covered? → FANUC, Mitsubishi, Siemens, Mazak, Okuma, Haas
+## Technical Articles (Latest)
+- [FANUC A61L-0001-0074 14" CRT LCD Upgrade Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html) — Complete installation walkthrough
+- [Mitsubishi BM09DF Industrial Display E60 TFT Replacement](https://cncdisplay.com/posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html)
+- [Mitsubishi FCUA-CT100 M500/M520 Display Replacement](https://cncdisplay.com/posts/article_20260506_Mitsubishi_FCUA_CT100_M500_M520_TFT_Replacement_CN.html)
+- [Mazak CD1472D1M LCD Replacement](https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD.html)
+- [Sharp AIQA8DSP40 LCD Replacement](https://cncdisplay.com/posts/article_20260507_Sharp_AIQA8DSP40_LCD.html)
+- [MDT-1283B LCD Replacement (Totoku/Mitsubishi)](https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD.html)
+- [Siemens vs FANUC CNC Display Comparison](https://cncdisplay.com/en/posts/siemens-vs-fanuc-cnc-display-comparison.html)
+- [Siemens SINUMERIK Display Upgrade Guide](https://cncdisplay.com/en/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html)
 
-## Services
-1. CRT to LCD Retrofit Modules - Direct replacement for aging CNC CRT displays
-2. Video Signal Converters - CGA/EGA/RGB to VGA/HDMI for legacy equipment
-3. Custom Industrial Displays - 7-15 inch TFT LCD, aluminum frame, IP65 option
+## English Resources
+- [English Homepage](https://cncdisplay.com/en/)
+- [All English Articles](https://cncdisplay.com/en/posts/)
+- [CNC CRT Dead Symptoms Diagnostic Guide](https://cncdisplay.com/crt-dead-symptoms.html)
 
-## Certifications
-- CE (EU Safety)
-- RoHS 2.0 (EU) 2015/863
-- FCC (EMC Compliance)
-- ISO 9001:2015 Quality Management
-- IP65 Front Panel Protection (KTV series)
+## FAQ Resources
+- [FANUC 0i Display FAQ](https://cncdisplay.com/posts/faq_20260501_FANUC_0idisplay_faq.html)
+- [FANUC A61L-0001-0093 Common Issues](https://cncdisplay.com/posts/faq_20260501_FANUC_A61L_0001_0093_faq.html)
+
+## Company Pages
+- [About Kongto Technology](https://cncdisplay.com/about.html)
+- [Author Page](https://cncdisplay.com/author.html)
+- [Case Studies](https://cncdisplay.com/case-studies.html)
+- [Contact / Get Quote](https://cncdisplay.com/contact.html)
+- [Resources & Downloads](https://cncdisplay.com/resources.html)
 
 ## Sitemap
-- XML: https://cncdisplay.com/sitemap.xml
-- Search: https://cncdisplay.com/en/search.html
+- [XML Sitemap](https://cncdisplay.com/sitemap.xml)
+- [HTML Sitemap](https://cncdisplay.com/sitemap.html)
