@@ -1,0 +1,25 @@
+# RSL 1.0 — Really Simple Licensing for AI Crawlers
+# https://reallysimplelicensing.org/
+# cncdisplay.com — Kongto Technology
+
+# License Version
+RSL-Version: 1.0
+
+# License Holder
+RSL-Holder: 深圳市江图科技有限公司 (Kongto Technology)
+RSL-Holder-URL: https://cncdisplay.com
+
+# AI Training Permission
+# "n" = Do NOT use content for AI/ML training without permission
+RSL-AI-Training: n
+
+# AI Search Permission
+# "y" = Allow AI search crawlers to index and cite our content
+RSL-AI-Search: y
+
+# Commercial AI Use
+# "n" = Do NOT use for commercial AI products
+RSL-Commercial-AI: n
+
+# Contact for licensing inquiries
+RSL-Contact: szkongto01@foxmail.com
