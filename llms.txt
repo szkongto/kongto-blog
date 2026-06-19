@@ -1,6 +1,6 @@
 # cncdisplay.com - Industrial Video Display Solutions
 # Kongto Technology | 深圳市江图科技有限公司
-# Last updated: 2026-05-26
+# Last updated: 2026-06-20
 
 ## About
 cncdisplay.com is the official website of Kongto Technology (深圳市江图科技有限公司),
@@ -9,10 +9,9 @@ CRT-to-LCD upgrade modules, industrial video signal converters, and custom
 industrial displays for CNC systems worldwide.
 
 ## Core Products
-- FANUC A61L series CRT-to-LCD upgrade kits (0074 through 0097)
-- Mitsubishi MDT962B/BM09DF/FCUA-CT100 CRT replacements
-- Siemens 6FC3988/SM0901 LCD upgrades
-- Mazak CD1472/C5470/DR5614 display retrofits
+- [FANUC A61L-0001-0093 LCD Upgrade ($299)](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html) - 9-inch plug-and-play CRT replacement
+- [Mitsubishi MDT962B LCD Upgrade ($299)](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html) - M64/E60/M500/M520 compatible
+- [Siemens 6FC3988-7FA20 LCD Upgrade ($299)](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html) - SINUMERIK 840D/810D compatible
 - Industrial video signal converters (CGA/EGA/RGB to VGA/HDMI)
 - Custom KTV series industrial displays (7-15 inch)
 
