@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANUC CNC Display Troubleshooting Decision Tree | Step-by-Step Diagnostic Guide</title>
+    <meta name="description" content="FANUC CNC display troubleshooting decision tree. Step-by-step flowchart to diagnose black screen, dim display, flickering, and other common FANUC 0i/16i/18i display problems. With repair vs replace recommendations.">
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/fanuc-cnc-display-troubleshooting-decision-tree.html">
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/fanuc-cnc-display-troubleshooting-decision-tree.html">
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/fanuc-0i-display-faq-zh.html">
+    <meta property="og:title" content="FANUC CNC Display Troubleshooting Decision Tree | Step-by-Step Guide">
+    <meta property="og:description" content="Diagnose FANUC CNC display problems with our step-by-step decision tree. Black screen, dim display, flickering — find the root cause and fix.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cncdisplay.com/en/posts/fanuc-cnc-display-troubleshooting-decision-tree.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FANUC CNC Display Troubleshooting Decision Tree | Step-by-Step Diagnostic Guide",
+        "description": "Step-by-step troubleshooting decision tree for FANUC CNC display problems including black screen, dim display, flickering, and signal loss.",
+        "author": {"@type": "Organization", "name": "Kongto Technology"},
+        "publisher": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
+        "datePublished": "2026-06-15",
+        "dateModified": "2026-06-15",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://cncdisplay.com/en/posts/fanuc-cnc-display-troubleshooting-decision-tree.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "江图科技技术部",
+  "alternateName": "Kongto Technical Team",
+  "jobTitle": "Industrial Display Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "description": "专注工业视频显示领域12年以上的工程师团队，提供CNC数控系统CRT转LCD升级解决方案",
+  "url": "https://cncdisplay.com",
+  "sameAs": [["https://blog.csdn.net/szkongto", "https://github.com/szkongto", "https://www.youtube.com/@Cncdisplay", "https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/"]]
+}
+    </script>
+
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+</head>
+<body>
+        <header>
+    <nav>
+        <a href="/en/" class="logo">Shenzhen Kongto Technology</a>
+        <div class="nav-links">
+            <a href="/en/">Home</a>
+            <a href="/en/posts/">Articles</a>
+                <a href="/en/docs/">Downloads</a>
+            <a href="/en/about.html">About</a>
+        </div> <a href="/search.html" class="nav-search">🔍 Search</a> 
+        <div class="lang-switch">
+                <a href="/" lang="zh">中文</a> | <a href="/en/posts/fanuc-cnc-display-troubleshooting-decision-tree.html" lang="en">English</a>
+            </div>
+</nav>
+</header>
+<main class="container">
+<h1>FANUC CNC Display Troubleshooting Decision Tree</h1>
+        <p><em>Step-by-step diagnostic flowchart for FANUC 0i/16i/18i/Series 6-18 display problems</em></p>
+
+        <div class="quick-jump">
+            <strong>Quick jump:</strong>
+            <a href="#symptoms">Common Symptoms</a>
+            <a href="#decision-tree">Decision Tree</a>
+            <a href="#black-screen">Black Screen</a>
+            <a href="#dim-display">Dim Display</a>
+            <a href="#flicker">Flickering</a>
+            <a href="#repair-vs-replace">Repair vs Replace</a>
+        </div>
+
+        <p>When your FANUC-controlled machine's display goes dark, every minute of downtime costs money. This guide walks you through a structured diagnostic process—the same one our field technicians use—to identify the root cause and decide whether to repair, replace, or upgrade.</p>
+
+        <!-- Section 1: Common Symptoms -->
+        <h2 id="symptoms">Section 1: Common FANUC Display Symptoms — Quick Reference</h2>
+        <div class="symptom-grid">
+            <div class="symptom-card">
+                <h4>Complete black screen</h4>
+                <p>No image at all. Power LED may be on or off. Most common on 10+ year old CRTs.</p>
+            </div>
+            <div class="symptom-card">
+                <h4>Dim or dark image</h4>
+                <p>Image is there but very dark. Often needs "warm up" time. Classic CRT filament failure symptom.</p>
+            </div>
+            <div class="symptom-card">
+                <h4>Flickering or unstable image</h4>
+                <p>Image flickers, shakes, or randomly cuts out. Usually failing video board or loose connection.</p>
+            </div>
+            <div class="symptom-card">
+                <h4>Distorted or folded image</h4>
+                <p>Image is there but geometry is wrong—folded edges, wrong aspect ratio. CRT deflection circuit failure.</p>
+            </div>
+            <div class="symptom-card">
+                <h4>No video signal (CRT OK)</h4>
+                <p>CRT power LED is on, brightness adjust works, but no CNC image. Problem is in the video signal path, not the display.</p>
+            </div>
+            <div class="symptom-card">
+                <h4>Color display shows B&W only</h4>
+                <p>Color CRT but displaying monochrome. Loose color cable or failing color demodulator board.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: The Decision Tree -->
+        <h2 id="decision-tree">Section 2: The Decision Tree — Start Here</h2>
+        <p>Follow this flowchart step by step. Each decision point narrows down the problem until you reach a recommended action.</p>
+
+        <div class="flow-step">
+            <h3>Step 1: Is the display completely black (no image at all)?</h3>
+            <div class="decision-box">
+                <h4>If YES → Go to <a href="#black-screen">Black Screen Diagnosis</a></h4>
+                <h4>If NO → Go to Step 2</h4>
+            </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">
+            <h3>Step 2: Is the image dim, dark, or takes time to "warm up"?</h3>
+            <div class="decision-box">
+                <h4>If YES → Go to <a href="#dim-display">Dim Display Diagnosis</a></h4>
+                <h4>If NO → Go to Step 3</h4>
+            </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">
+            <h3>Step 3: Is the image flickering, unstable, or cutting out intermittently?</h3>
+            <div class="decision-box">
+                <h4>If YES → Go to <a href="#flicker">Flickering Diagnosis</a></h4>
+                <h4>If NO → Go to Step 4</h4>
+            </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">
+            <h3>Step 4: Is there an image but geometry is wrong (folded, stretched, wrong position)?</h3>
+            <div class="decision-box">
+                <h4>If YES → CRT deflection circuit failure. Repair or replace CRT. LCD upgrade recommended.</h4>
+                <h4>If NO → Go to Step 5</h4>
+            </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">
+            <h3>Step 5: Display seems fine but CNC image is missing (blank screen with backlight on)?</h3>
+            <div class="decision-box">
+                <h4>If YES → Video signal problem, NOT display problem. Check CNC video output, cables, and CNC system power.</h4>
+                <h4>If NO → Problem not clearly identified. Contact technical support.</h4>
+            </div>
+        </div>
+
+        <!-- Section 3: Black Screen Deep Dive -->
+        <h2 id="black-screen">Section 3: Black Screen — Complete Diagnosis</h2>
+
+        <div class="flow-step">
+            <h3>Check 1: Is the display power LED on?</h3>
+            <div class="decision-box">
+                <h4>LED OFF → No power to display. Check:</h4>
+                <ul>
+                    <li>Machine main power — is the machine actually on?</li>
+                    <li>Display fuse (usually on back of display unit)</li>
+                    <li>Power cable connection at both ends</li>
+                    <li>Panel circuit breaker (some machines have a separate breaker for the operator panel)</li>
+                </ul>
+            </div>
+            <div class="fix-box">
+                <h4>Fuse blown?</h4>
+                <p>If the display fuse is blown, replacing it may get you running temporarily—but the CRT is likely drawing excessive current due to aging components. This is your warning sign: the CRT is on its way out. Plan an LCD upgrade soon.</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <h3>Check 2: Power LED is ON, but screen is black. Shine a flashlight at the screen.</h3>
+            <div class="decision-box">
+                <h4>Can you see a faint image with the flashlight? → CRT filament or high-voltage failure. The backlight (for LCD) or CRT filament isn't working.</h4>
+                <h4>No faint image at all? → Video signal problem or complete CRT failure.</h4>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <h3>Check 3: Swap the video cable (if you have a spare).</h3>
+            <div class="decision-box">
+                <h4>Image appears with new cable? → Loose or damaged video cable. Replace cable (low cost fix).</h4>
+                <h4>Still black? → Display unit has failed. Proceed to repair vs replace decision.</h4>
+            </div>
+        </div>
+
+        <div class="fix-box">
+            <h4>Recommended action for black screen:</h4>
+            <p><strong>If CRT (9" or 14"):</strong> CRT repair is possible (replace filament, repair HV board) but cost is $200-500 and reliability is poor. <strong>LCD upgrade is the better choice</strong> — $450-850, 1-year warranty, 10+ year lifespan.</p>
+            <p><strong>If LCD (already upgraded):</strong> LCD modules rarely fail completely. Check the external power brick (if equipped). If the power brick has a LED, is it lit? No LED = dead power brick (cheap replacement).</p>
+        </div>
+
+        <!-- Section 4: Dim Display -->
+        <h2 id="dim-display">Section 4: Dim Display — Diagnosis and Fix</h2>
+
+        <p>A dim display that takes 10-30 minutes to "warm up" is the classic symptom of a CRT with aging filament and weak emission. There's no practical repair—the CRT tube itself is worn out.</p>
+
+        <div class="flow-step">
+            <h3>Quick test: Adjust the brightness/contrast potentiometer</h3>
+            <p>On most FANUC CRT displays, there's a small potentiometer (knob) accessible from the front or back. Turning it may brighten the image temporarily—but if the image gets bright then quickly fades, the CRT filament is definitely failing.</p>
+        </div>
+
+        <div class="warning-box">
+            <h4>Can't find the brightness adjustment?</h4>
+            <p>On FANUC 0i systems, the brightness is sometimes adjusted via CNC parameters, not a physical knob. Check parameter <code>PRM 2300</code> (display brightness setting). But even if you increase the parameter, a genuinely failing CRT won't respond much.</p>
+        </div>
+
+        <div class="fix-box">
+            <h4>Recommended action for dim display:</h4>
+            <p><strong>Don't waste money on CRT repair.</strong> A dimming CRT is a dying CRT. The filament resistance has increased and no adjustment will restore it. LCD upgrade is the only reliable fix. The new LCD will be bright from day 1 with no warm-up needed.</p>
+        </div>
+
+        <!-- Section 5: Flickering -->
+        <h2 id="flicker">Section 5: Flickering / Unstable Image — Diagnosis</h2>
+
+        <div class="flow-step">
+            <h3>Check 1: Is the flicker constant or intermittent?</h3>
+            <div class="decision-box">
+                <h4>Constant flicker → CRT refresh circuit or video board failure. Repair possible but unreliable.</h4>
+                <h4>Intermittent (comes and goes) → Loose connection or failing solder joint. Try reseating all video connectors.</h4>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <h3>Check 2: Gently tap the side of the display unit (with machine powered on and image showing).</h3>
+            <div class="decision-box">
+                <h4>Image changes (gets better or worse) when tapped? → Cold solder joint on the video board. Can be repaired by reflowing solder, but it's a temporary fix. The underlying board is failing.</h4>
+                <h4>No change when tapped? → Problem is likely the CRT tube itself or the high-voltage section.</h4>
+            </div>
+        </div>
+
+        <div class="fix-box">
+            <h4>Recommended action for flickering:</h4>
+            <p>Flickering is almost always a sign of failing electronics inside the CRT display unit. Since these are 15-25 year old components, more failures will follow. <strong>LCD upgrade eliminates the problem entirely</strong> — LCD panels don't flicker (they're inherently flicker-free) and the electronics are modern solid-state.</p>
+        </div>
+
+        <!-- Section 6: Repair vs Replace Decision -->
+        <h2 id="repair-vs-replace">Section 6: Repair vs LCD Upgrade — Decision Framework</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Your Situation</th>
+                    <th>Recommendation</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CRT failed for the FIRST time</td>
+                    <td>LCD Upgrade</td>
+                    <td>CRT repair costs $200-500 and typically fails again within 12-24 months. LCD is $450-850 but lasts 10+ years.</td>
+                </tr>
+                <tr>
+                    <td>CRT has been repaired BEFORE</td>
+                    <td>LCD Upgrade (definitely)</td>
+                    <td>A repaired CRT that fails again is throwing money away. Second failure rate within 12 months is ~70%.</td>
+                </tr>
+                <tr>
+                    <td>Display is already LCD but failed</td>
+                    <td>Repair or replace LCD module</td>
+                    <td>LCD modules have 1-year warranty. If under warranty, get free replacement. If out of warranty, module replacement is ~$200.</td>
+                </tr>
+                <tr>
+                    <td>Machine is being retired within 12 months</td>
+                    <td>CRT Repair (temporary)</td>
+                    <td>If the machine is going away soon, a $200 CRT repair may be the economical choice. But consider: will a display failure cause an unplanned downtime before retirement?</td>
+                </tr>
+                <tr>
+                    <td>You have multiple identical machines</td>
+                    <td>LCD Upgrade + buy spare module</td>
+                    <td>Standardize all machines on the same LCD module. Buy 1 spare for the whole cell. When one fails, swap in the spare (5 minutes vs 2-day wait for repair).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Section 7: Preventing Future Failures -->
+        <h2>Section 7: Preventing Future Display Failures</h2>
+
+        <h3>1. Keep the display panel clean and cool</h3>
+        <p>Most display failures are accelerated by heat. Make sure the machine's operator panel has adequate ventilation. If you notice the panel getting hot to the touch, add a small cooling fan. It's a $20 investment that can add years to display life.</p>
+
+        <h3>2. Use surge protection</h3>
+        <p>Voltage spikes from other shop equipment (welders, large motors) can damage the delicate electronics inside CRT displays. A basic surge protector on the machine's power supply is cheap insurance.</p>
+
+        <h3>3. Standardize on LCD across your shop</h3>
+        <p>If you have 3+ FANUC-controlled machines, standardizing all displays to the same LCD upgrade module simplifies spare parts management. One spare module covers all machines. When a display fails, you swap in the spare and order a replacement at your leisure.</p>
+
+        <!-- Section 8: Get Help -->
+        <h2>Section 8: Still Stuck? We Can Help</h2>
+        <p>If you've followed this decision tree and still can't identify the problem, send us:</p>
+        <ul>
+            <li>Photos of the display (front and back)</li>
+            <li>Photos of the CNC system boot screen (if you can get it to show)</li>
+            <li>Machine model and FANUC system version</li>
+        </ul>
+        <p>We'll review your case and give you a specific recommendation within 2 hours during business days. No charge for the consultation.</p>
+
+        <p>
+            <a href="/contact.html" class="btn">Get Technical Support →</a>
+            &nbsp;&nbsp;
+            <a href="/brands/FANUC.html" class="btn" style="background:#43a047;">View FANUC LCD Upgrades →</a>
+        </p>
+
+        <hr style="margin:40px 0;">
+        <p><small>Kongto Technology (Shenzhen) Co., Ltd. — This troubleshooting guide is based on field service records from 500+ FANUC display repairs and upgrades. While we've structured it as a decision tree, every machine installation is slightly different. When in doubt, consult your machine tool builder's documentation or contact our technical team.</small></p>
+    </div>
+</main>
+
+    <footer>
+        <p>&copy; 2026 Kongto Technology Co.,Ltd - Shenzhen, China. All rights reserved.</p>
+        <p>Contact: +86-13686889647 | <a href="mailto:szkongto01@foxmail.com">szkongto01@foxmail.com</a></p>
+    </footer>
+
+</body>
+</html>
