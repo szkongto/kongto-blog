@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>站内搜索 | 深圳市江图科技有限公司</title>
     <meta name="description" content="搜索cncdisplay.com全站技术文章、产品文档和品牌方案。支持按品牌名（FANUC/三菱/西门子/马扎克）、型号（A61L-0001-0093/MDT962B）、关键词搜索。">
-    <link rel="stylesheet" href="/css/style.css?v=6">
+    <link rel="stylesheet" href="/css/style.css?v=7">
     <link rel="canonical" href="https://cncdisplay.com/search.html">
     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/search.html" />
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/search.html" />
@@ -76,12 +76,12 @@
     </script>
 </head>
 <body>
-    <header><nav><a href="/" class="logo">深圳市江图科技有限公司</a><div class="nav-links"><a href="/">首页</a><a href="/posts/">文章</a><a href="/docs/">下载</a><a href="/search.html" class="nav-search active">🔍 搜索</a><a href="/about.html">关于</a></div>
+    <header><nav><a href="/" class="logo">深圳市江图科技有限公司</a><div class="nav-links"><a href="/">首页</a><a href="/posts/">文章</a><a href="/docs/">下载</a><a href="/search.html" class="nav-search active">🔍 搜索</a><a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a></div>
         <div class="lang-switch">
-            <a href="/search.html" lang="zh" class="lang-zh">中文</a> |
-            <a href="/en/search.html" lang="en" class="lang-en">English</a>
-        </div>
-    </nav></header>
+                <a href="/search.html" lang="zh">中文</a> | <a href="/en/" lang="en">English</a>
+            </div>
+</nav></header>
     <main>
         <div class="search-container">
             <h1>站内搜索</h1>
@@ -110,6 +110,22 @@
 <script>
 let searchIndex = [];
 let currentFilter = 'all';
+let searchReady = false;
+
+// Load search index via script tag (more reliable than fetch on GitHub Pages)
+function initSearchIndex(data) {
+    searchIndex = data;
+    searchReady = true;
+    console.log('Search index loaded:', data.length, 'entries');
+    document.getElementById('searchInput').placeholder = '搜索 ' + data.length + ' 个页面… 输入品牌名、型号或关键词';
+    // Check URL for query
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+        document.getElementById('searchInput').value = q;
+        search(q);
+    }
+}
 
 function highlight(text, query) {
     if (!query) return text;
@@ -199,24 +215,14 @@ function search(query) {
 }
 
 // Load search index
-fetch('/search-index.json')
-    .then(r => r.json())
-    .then(data => {
-        searchIndex = data;
-        console.log('Search index loaded:', data.length, 'entries');
-        document.getElementById('searchInput').placeholder = '搜索 ' + data.length + ' 个页面… 输入品牌名、型号或关键词';
-        // Check URL for query
-        const params = new URLSearchParams(window.location.search);
-        const q = params.get('q');
-        if (q) {
-            document.getElementById('searchInput').value = q;
-            search(q);
-        }
-    })
-    .catch(err => {
-        console.error('Failed to load search index:', err);
-        document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>搜索索引加载失败，请刷新页面重试。</p></div>';
-    });
+// Load search index via script tag (works reliably on GitHub Pages, no CSP issues)
+var s = document.createElement('script');
+s.src = '/search-index.js';
+s.onerror = function() {
+    console.error('Failed to load search index script');
+    document.getElementById('searchResults').innerHTML = '<div class="no-results"><p>搜索索引加载失败，请刷新页面重试。</p></div>';
+};
+document.head.appendChild(s);
 
 // Event handlers
 document.getElementById('searchBtn').addEventListener('click', () => {
@@ -257,5 +263,14 @@ document.getElementById('filterBar').addEventListener('click', e => {
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-</body>
+
+<div style="text-align:center;padding:20px 0;font-size:12px;color:#888888;border-top:1px solid #e0e0e0;margin-top:40px;">
+  <p style="margin:4px 0;">
+    &nbsp;|&nbsp; 深圳市江图科技有限公司 &copy; 2026
+    &nbsp;|&nbsp; <a href="/sitemap.xml" style="color:#888;">Sitemap</a>
+    &nbsp;|&nbsp; <a href="/en/" style="color:#888;">English</a>
+  </p>
+</div>
+
+
 </html>

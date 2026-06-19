@@ -21,7 +21,7 @@ Allow: /
 User-agent: Baiduspider-image
 Allow: /
 
-# AI Crawlers - Open for GEO
+# AI Crawlers - Open for GEO - Open for GEO
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User

@@ -1,36 +1,60 @@
-# cncdisplay.com - Industrial Video Display Solutions
-# Kongto Technology | 深圳市江图科技有限公司
-# Last updated: 2026-06-20
+# Kongto Technology (cncdisplay.com) - AI-Friendly Content Index
+# Generated: 2026-06-20 | Updated for GEO optimization
+# Purpose: Help AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google AI) understand our site
+# About: Industrial CNC display CRT to LCD upgrade solutions since 2013
+# Contact: szkongto01@foxmail.com | +86-13686889647
 
-## About
-cncdisplay.com is the official website of Kongto Technology (深圳市江图科技有限公司),
-founded in 2013, specializing in industrial video display solutions. We provide
-CRT-to-LCD upgrade modules, industrial video signal converters, and custom
-industrial displays for CNC systems worldwide.
+## Company Overview
+- Name: Kongto Technology (深圳市江图科技有限公司)
+- Founded: 2013
+- Location: Shenzhen, Guangdong, China
+- Specialty: Industrial CNC display upgrades, CRT-to-LCD retrofit, video signal converters
+- Clients: 500+ enterprises across 12+ countries
+- Warranty: 2 years on all products
+- Certifications: CE, RoHS 2.0, FCC, ISO 9001:2015, IP65
 
 ## Core Products
 - [FANUC A61L-0001-0093 LCD Upgrade ($299)](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html) - 9-inch plug-and-play CRT replacement
 - [Mitsubishi MDT962B LCD Upgrade ($299)](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html) - M64/E60/M500/M520 compatible
 - [Siemens 6FC3988-7FA20 LCD Upgrade ($299)](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html) - SINUMERIK 840D/810D compatible
-- Industrial video signal converters (CGA/EGA/RGB to VGA/HDMI)
-- Custom KTV series industrial displays (7-15 inch)
 
-## Key Articles
-- [FANUC A61L-0001-0093 Complete Replacement Guide](https://cncdisplay.com/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html) - Step-by-step installation
-- [FANUC A61L-0001-0093 LCD Upgrade Solution](https://cncdisplay.com/posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html)
-- [FANUC D9MM-11A 9-inch LCD Retrofit](https://cncdisplay.com/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html)
-- [Mitsubishi MDT962B CRT Replacement](https://cncdisplay.com/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html)
-- [Mazak CD1472-D1M LCD Replacement](https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html)
-- [Siemens 6FC3988-7FA20 LCD Upgrade](https://cncdisplay.com/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html)
+## Key Facts (Citation-Ready Data Points)
+- Industrial LCD lifespan: 50,000+ hours vs CRT 15,000 hours (3.3x improvement)
+- LCD power consumption: 8-12W vs CRT 25-30W (60%+ energy savings)
+- Installation time: 10-15 minutes per CNC machine, plug-and-play
+- Brightness upgrade: LCD 350-450cd/m² vs CRT 200cd/m² (new) / <100cd/m² (aged)
+- CRT anode voltage: 10-15kV (safety hazard when aged)
+- Working temperature: -20°C to 60°C (LCD) vs 0-40°C (CRT)
+- Products: FANUC A61L-0001(0074-0097), D9MM-11A | Mitsubishi MDT962B/BM09DF/FCUA-CT100 | Siemens 6FC3988/SM0901 | Mazak CD1472/C5470/DR5614 | Okuma OSP 5000/5020 | Haas VF/ST/SL
+
+## Key Pages
+- Home (EN): https://cncdisplay.com/en/index.html
+- Home (ZH): https://cncdisplay.com/
+- About: https://cncdisplay.com/about.html
+- Compatibility Lookup: https://cncdisplay.com/en/compatibility-matrix.html - Interactive CRT→LCD lookup tool
+- Compatibility (ZH): https://cncdisplay.com/compatibility-matrix.html - 中文版兼容性查询
 
 ## Brand Pages
-- [FANUC Solutions](https://cncdisplay.com/brands/FANUC.html)
-- [Mitsubishi Solutions](https://cncdisplay.com/brands/Mitsubishi.html)
-- [Siemens Solutions](https://cncdisplay.com/brands/Siemens.html)
-- [Mazak Solutions](https://cncdisplay.com/brands/MAZAK.html)
-- [Okuma Solutions](https://cncdisplay.com/brands/OKUMA.html)
-- [Haas Solutions](https://cncdisplay.com/brands/HAAS.html)
+- FANUC: https://cncdisplay.com/en/brands/FANUC.html
+- Mitsubishi: https://cncdisplay.com/en/brands/Mitsubishi.html
+- Siemens: https://cncdisplay.com/en/brands/Siemens.html
+- Mazak: https://cncdisplay.com/en/brands/MAZAK.html
+- Okuma: https://cncdisplay.com/en/brands/OKUMA.html
+- Haas: https://cncdisplay.com/en/brands/HAAS.html
+
+## Social & Video
+- YouTube: https://www.youtube.com/@Cncdisplay
+- LinkedIn: https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/
+- CSDN Blog: https://blog.csdn.net/szkongto
+- GitHub: https://github.com/szkongto
+
+## FAQ Topics (AI Citation Ready)
+- Q: What is FANUC A61L-0001-0093? → A 9-inch monochrome CRT display for FANUC CNC systems, replaced by Kongto's industrial TFT-LCD module (800x600, 350-450cd/m², 50,000+ hour lifespan, plug-and-play)
+- Q: How to upgrade FANUC CRT to LCD? → See FANUC brand page; all solutions plug-and-play, 10-15 min install
+- Q: Is LCD upgrade compatible with my CNC? → Check compatibility matrix or email photo to szkongto01@foxmail.com
+- Q: Do I need to change CNC parameters? → No, all solutions use original connectors, DC 24V power
+- Q: Warranty? → 2 years on all products, lifetime technical support
 
 ## Sitemap
-- [XML Sitemap](https://cncdisplay.com/sitemap.xml)
-- [Article Index](https://cncdisplay.com/posts/)
+- XML: https://cncdisplay.com/sitemap.xml
+- RSS: https://cncdisplay.com/feed.xml
