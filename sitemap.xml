@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://cncdisplay.com/</loc><lastmod>2026-05-29</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cncdisplay.com/</loc><lastmod>2026-06-20</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://cncdisplay.com/about.html</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cncdisplay.com/author.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cncdisplay.com/brands/FANUC.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -155,4 +155,7 @@
   <url><loc>https://cncdisplay.com/posts/press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cncdisplay.com/posts/social_20260501_数控显示器升级市场动态与产品速递.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cncdisplay.com/posts/非标订制显示器系列.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
