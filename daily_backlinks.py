@@ -785,14 +785,22 @@ if __name__ == '__main__':
 
     # === AUTO-POST (no user action needed) ===
     results = {}
-    r = post_devto()
-    if r: results["Dev.to"] = r
-    r = post_telegraph()
-    if r: results["Telegra.ph"] = r
-    r = post_rentry()
-    if r: results["Rentry.co"] = r
-    r = post_gitlab()
-    if r: results["GitLab"] = r
+
+    def safe_post(name, fn):
+        try:
+            r = fn()
+            if r:
+                results[name] = r
+                print(f"  [OK] {name}: {r}")
+            else:
+                print(f"  [SKIP] {name}: no content to post")
+        except Exception as e:
+            print(f"  [FAIL] {name}: {type(e).__name__}: {e}")
+
+    safe_post("Dev.to", post_devto)
+    safe_post("Telegra.ph", post_telegraph)
+    safe_post("Rentry.co", post_rentry)
+    safe_post("GitLab", post_gitlab)
 
     # === GENERATE MANUAL ===
     day_dir = gen_manual_content()
