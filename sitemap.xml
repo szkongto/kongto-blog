@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cncdisplay.com/</loc><lastmod>2026-06-18</lastmod></url>
+  <url><loc>https://cncdisplay.com/</loc><lastmod>2026-06-20</lastmod></url>
   <url><loc>https://cncdisplay.com/about.html</loc><lastmod>2026-06-15</lastmod></url>
   <url><loc>https://cncdisplay.com/author.html</loc><lastmod>2026-06-15</lastmod></url>
   <url><loc>https://cncdisplay.com/brands/FANUC.html</loc><lastmod>2026-06-16</lastmod></url>
@@ -190,4 +190,7 @@
   <url><loc>https://cncdisplay.com/resources.html</loc><lastmod>2026-06-15</lastmod></url>
   <url><loc>https://cncdisplay.com/search.html</loc><lastmod>2026-06-15</lastmod></url>
   <url><loc>https://cncdisplay.com/sitemap.html</loc><lastmod>2026-06-15</lastmod></url>
+  <url><loc>https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

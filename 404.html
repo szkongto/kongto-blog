@@ -95,9 +95,7 @@
   "openingHours": "Mo-Fr 09:00-18:00",
   "sameAs": [
     "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto",
-    "https://www.youtube.com/@Cncdisplay",
-    "https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/"
+    "https://blog.csdn.net/szkongto"
   ]
 }
 </script>
@@ -133,12 +131,13 @@
                 <a href="/posts/">文章</a>
                 <a href="/docs/">下载</a>
                 <a href="/about.html">关于</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
             </div> <a href="/search.html" class="nav-search">🔍 搜索</a> 
             <div class="lang-switch">
-                <a href="/404.html" lang="zh">中文</a> | <a href="/en/" lang="en">English</a>
+                <a href="/" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/" lang="en" class="lang-en">English</a>
             </div>
-</nav>
+        </nav>
     </header>
     <main>
         <div class="error-page">
@@ -170,20 +169,6 @@
             <p class="footer-copy">© 2026 深圳市江图科技有限公司</p>
         </div>
     </footer>
-    <script>
-        // 搜索引擎 404 自动跳转
-        setTimeout(function() {
-            window.location.href = "/";
-        }, 8000);
-    </script>
-
-<div style="text-align:center;padding:20px 0;font-size:12px;color:#888888;border-top:1px solid #e0e0e0;margin-top:40px;">
-  <p style="margin:4px 0;">
-    &nbsp;|&nbsp; 深圳市江图科技有限公司 &copy; 2026
-    &nbsp;|&nbsp; <a href="/sitemap.xml" style="color:#888;">Sitemap</a>
-    &nbsp;|&nbsp; <a href="/en/" style="color:#888;">English</a>
-  </p>
-</div>
-
+    <!-- 404 page: stay on page, no auto-redirect (avoids soft-404 penalty) -->
 </body>
 </html>
