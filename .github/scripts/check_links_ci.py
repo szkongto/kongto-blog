@@ -64,6 +64,45 @@ def main():
     strict = '--strict' in sys.argv
     html_files = find_html_files()
 
+    # === Guard: block non-ASCII href URLs (Chinese-character link rot) ===
+    non_ascii_hrefs = []
+    for html_file in sorted(html_files):
+        file_rel = normalize(html_file.relative_to(ROOT))
+        with open(html_file, 'r', encoding='utf-8', errors='ignore') as fh:
+            content = fh.read()
+        for m in re.finditer(r'''href\s*=\s*["']([^"']+)["']''', content, re.IGNORECASE):
+            href = m.group(1)
+            # Ignore data:, mailto:, javascript:
+            if 'data:' in href or 'mailto:' in href or 'javascript:' in href:
+                continue
+            # For relative paths check non-ASCII; for full URLs check cncdisplay.com ones
+            if href.startswith('/'):
+                # relative URL - check for non-ASCII chars
+                pass
+            elif 'cncdisplay.com' in href:
+                # our domain URL - extract path and check for non-ASCII
+                path_part = href.split('cncdisplay.com')[-1] if 'cncdisplay.com' in href else ''
+                # Skip empty path (homepage) and known good paths
+                if not path_part or path_part in ('/', '/en/'):
+                    continue
+                if any(ord(c) > 127 for c in path_part):
+                    non_ascii_hrefs.append((file_rel, m.start(), href[:80]))
+                continue
+            else:
+                continue
+            # Check for non-ASCII characters in the URL path
+            if any(ord(c) > 127 for c in href):
+                non_ascii_hrefs.append((file_rel, m.start(), href[:80]))
+    if non_ascii_hrefs:
+        print("\n=== NON-ASCII HREF URLs DETECTED (blocked by CI) ===")
+        for f, pos, h in non_ascii_hrefs[:20]:
+            print(f"  {f}:{pos}")
+            print(f"    href=\"{h}\"")
+        print(f"\nERROR: {len(non_ascii_hrefs)} non-ASCII href URLs found.")
+        print("All internal URLs must use pure ASCII paths. Fix before merging.")
+        sys.exit(1)
+    # === End guard ===
+
     # Build index
     known_files = set()
     known_dirs = set()
