@@ -14,6 +14,14 @@
 <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/compatibility-matrix.html" />
 <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
 <link rel="stylesheet" href="/css/style.css?v=6">
+<style>
+.search-bar{max-width:600px;margin:0 auto 20px;position:relative}.search-bar input{width:100%;padding:14px 20px 14px 48px;border:2px solid #e2e8f0;border-radius:12px;font-size:16px;outline:none;transition:border-color .2s;box-sizing:border-box}.search-bar input:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.15)}.search-bar .search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:20px;pointer-events:none}
+.brand-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 auto 30px;max-width:700px}.brand-btn{padding:8px 20px;border:2px solid #e2e8f0;border-radius:25px;background:#fff;color:#475569;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}.brand-btn:hover{border-color:#2563eb;color:#2563eb}.brand-btn.active{border-color:#2563eb;background:#2563eb;color:#fff}
+.stats-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 auto 30px}.stat-chip{background:#f1f5f9;padding:6px 14px;border-radius:20px;font-size:13px;color:#475569}
+.compat-table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.no-results{display:none;text-align:center;padding:40px 20px;background:#fff7ed;border:2px solid #fed7aa;border-radius:12px;margin:20px 0}.no-results h3{color:#c2410c;margin:0 0 8px}.no-results p{color:#9a3412;margin:0}
+.tool-hero,.definition-block{display:none}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cncdisplay.com/"}, {"@type": "ListItem", "position": 2, "name": "Compatibility Matrix", "item": "https://cncdisplay.com/compatibility-matrix.html"}]}</script>
     <script type="application/ld+json">
 {
@@ -71,11 +79,31 @@
 <main style="max-width:1200px;margin:20px auto;padding:20px;font-family:Arial,sans-serif;">
 
 <h1 style="text-align:center;font-size:28px;margin-bottom:8px;">CNC CRT显示器 → LCD替代方案 兼容性矩阵</h1>
-<p style="text-align:center;color:#666;margin-bottom:40px;">覆盖 FANUC · 三菱 · Mazak · 西门子 · 大隈 · 哈斯 — 95个型号精确对照<br>最后更新: 2026年6月 | <a href="https://cncdisplay.com">cncdisplay.com</a></p>
+<p style="text-align:center;color:#666;margin-bottom:20px;">覆盖 FANUC · 三菱 · Mazak · 西门子 · 大隈 · 哈斯 — 95个型号精确对照<br>最后更新: 2026年6月</p>
 
+<div class="tool-hero"><div class="search-bar"><span class="search-icon">🔍</span><input type="text" id="cnSearchInput" placeholder="输入CRT型号搜索，如 A61L-0001-0093、MDT962B..." autocomplete="off"></div></div>
+
+<div class="stats-bar" id="cnStatsBar"></div>
+
+<div class="brand-filters">
+    <button type="button" class="brand-btn active" onclick="cnFilterBrand('all',this)">全部</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('FANUC',this)">FANUC</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('三菱',this)">三菱</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('Mazak',this)">马扎克</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('西门子',this)">西门子</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('大隈',this)">大隈</button>
+    <button type="button" class="brand-btn" onclick="cnFilterBrand('哈斯',this)">哈斯</button>
+</div>
+
+<div class="no-results" id="cnNoResults">
+    <h3>未找到匹配型号</h3>
+    <p>将您的CRT显示器铭牌照片发送至 <strong>szkongto01@foxmail.com</strong>，技术工程师24小时内为您确认兼容方案。</p>
+</div>
+
+<div class="cn-brand-section" data-brand="FANUC">
 <!-- FANUC -->
-<h2 style="border-bottom:3px solid #007bff;padding-bottom:8px;">FANUC 发那科（39个型号）</h2>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
+<h2 style="border-bottom:3px solid #007bff;padding-bottom:8px;">FANUC 发那科</h2>
+<div class="compat-table-wrapper" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>A61L-0001-0093 (D9MM-11A)</td><td>0-TC/MC,16/18/21T/M</td><td>KTO-F0093</td><td>9"单色</td><td>Honda MR-20M</td><td>DC24V</td></tr>
 <tr><td>A61L-0001-0092</td><td>0-TC/MC,16T,21T</td><td>KTO-F0092</td><td>9"单色</td><td>Honda MR-20M</td><td>DC24V</td></tr>
@@ -90,10 +118,12 @@
 <tr><td>A61L-0001-0076/0079</td><td>0-TC,10T</td><td>KTO-F0076</td><td>9"单色</td><td>Honda MR-20M</td><td>DC24V</td></tr>
 <tr><td>A61L-0001-0116</td><td>0i-Mate</td><td>KTO-F0116</td><td>9"彩色</td><td>Honda MR-20M</td><td>DC24V</td></tr>
 </table></div>
+</div>
 
 <!-- Mitsubishi -->
-<h2 style="border-bottom:3px solid #e60012;padding-bottom:8px;">三菱 Mitsubishi（14个型号）</h2>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
+<div class="cn-brand-section" data-brand="三菱">
+<h2 style="border-bottom:3px solid #e60012;padding-bottom:8px;">三菱 Mitsubishi</h2>
+<div class="compat-table-wrapper" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>MDT962B-1A</td><td>M3/M310/M64/E60</td><td>KTO-MDT962</td><td>9"单色</td><td>20-Pin</td><td>DC24V</td></tr>
 <tr><td>BM09DF</td><td>M64/E60</td><td>KTO-BM09D</td><td>9"彩色</td><td>20-Pin</td><td>DC24V</td></tr>
@@ -102,10 +132,12 @@
 <tr><td>E60 系统显示器</td><td>E60全系列</td><td>KTO-E60</td><td>10.4"彩色</td><td>26-Pin</td><td>DC24V</td></tr>
 <tr><td>MDT947B-2B</td><td>M3/M310</td><td>KTO-MDT947</td><td>9"单色</td><td>20-Pin</td><td>DC24V</td></tr>
 </table></div>
+</div>
 
 <!-- Mazak -->
-<h2 style="border-bottom:3px solid #ff6600;padding-bottom:8px;">马扎克 Mazak（12个型号）</h2>
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
+<div class="cn-brand-section" data-brand="Mazak">
+<h2 style="border-bottom:3px solid #ff6600;padding-bottom:8px;">马扎克 Mazak</h2>
+<div class="compat-table-wrapper" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>DR5614</td><td>T-32/T-PLUS</td><td>KTO-MDR56</td><td>10.4"彩色</td><td>26-Pin</td><td>DC24V</td></tr>
 <tr><td>C-5470NS</td><td>M-32/M-PLUS</td><td>KTO-MC54</td><td>10.4"彩色</td><td>26-Pin</td><td>DC24V</td></tr>
@@ -114,33 +146,40 @@
 <tr><td>AIQA8DSP40</td><td>T-32/640</td><td>KTO-AIQA8</td><td>10.4"彩色</td><td>26-Pin</td><td>DC24V</td></tr>
 <tr><td>TR-120S9C (Matsushita)</td><td>T-32/M-32</td><td>KTO-TR120</td><td>9"单色</td><td>20-Pin</td><td>DC12V</td></tr>
 </table></div>
+</div>
 
 <!-- Siemens -->
-<h2 style="border-bottom:3px solid #009999;padding-bottom:8px;">西门子 Siemens（5个型号）</h2>
+<div class="cn-brand-section" data-brand="西门子">
+<h2 style="border-bottom:3px solid #009999;padding-bottom:8px;">西门子 Siemens</h2>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>6FC3998-7FA20</td><td>SINUMERIK 810/820</td><td>KTO-SI6FC</td><td>12.1"单色</td><td>DB-25</td><td>AC110V</td></tr>
 <tr><td>SM0901 (NFP 579417 TA)</td><td>SINUMERIK 810M</td><td>KTO-SISM09</td><td>12.1"单色</td><td>DB-25</td><td>AC110V</td></tr>
 <tr><td>6FC5203-0AD08-1AA0</td><td>840D/810D</td><td>KTO-SI6FC52</td><td>15"彩色</td><td>VGA</td><td>AC220V</td></tr>
 </table></div>
+</div>
 
 <!-- Okuma -->
-<h2 style="border-bottom:3px solid #003399;padding-bottom:8px;">大隈 Okuma（3个型号）</h2>
+<div class="cn-brand-section" data-brand="大隈">
+<h2 style="border-bottom:3px solid #003399;padding-bottom:8px;">大隈 Okuma</h2>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>OSP 5000 CRT (9")</td><td>OSP 5000</td><td>KTO-OK5000-9</td><td>9"单色</td><td>14-Pin</td><td>DC24V</td></tr>
 <tr><td>OSP 5020 CRT (10.4")</td><td>OSP 5020</td><td>KTO-OK5020-10</td><td>10.4"彩色</td><td>20-Pin</td><td>DC24V</td></tr>
 <tr><td>OSP 7000 CRT</td><td>OSP 7000</td><td>KTO-OK7000</td><td>12.1"彩色</td><td>20-Pin</td><td>DC24V</td></tr>
 </table></div>
+</div>
 
 <!-- Haas -->
-<h2 style="border-bottom:3px solid #cc0000;padding-bottom:8px;">哈斯 Haas（6个型号）</h2>
+<div class="cn-brand-section" data-brand="哈斯">
+<h2 style="border-bottom:3px solid #cc0000;padding-bottom:8px;">哈斯 Haas</h2>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table style="width:100%;border-collapse:collapse;margin-bottom:30px;font-size:14px;">
 <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">原CRT型号</th><th>系统兼容</th><th>LCD替代型号</th><th>屏幕</th><th>接口</th><th>供电</th></tr>
 <tr><td>VF-0/1/2 9" CRT (琥珀)</td><td>Haas NGC以前</td><td>KTO-HAVF9</td><td>9"单色</td><td>9-Pin D-Sub</td><td>DC12V</td></tr>
 <tr><td>VF-3/4 12" CRT</td><td>Haas Classic Control</td><td>KTO-HAVF12</td><td>12.1"彩色</td><td>15-Pin VGA</td><td>DC12V</td></tr>
 <tr><td>VF 15" LCD (升级)</td><td>Haas NGC</td><td>KTO-HAVF15</td><td>15"彩色</td><td>15-Pin VGA</td><td>DC12V</td></tr>
 </table></div>
+</div>
 
 <hr style="margin:40px 0;">
 
@@ -161,5 +200,54 @@
 </div>
 
 </main>
+<script>
+(function(){
+    var sections = document.querySelectorAll('.cn-brand-section');
+    var totalModels = 0, brandCounts = {};
+    sections.forEach(function(s){
+        var rows = s.querySelectorAll('table tr:not(:first-child)');
+        var brand = s.getAttribute('data-brand');
+        brandCounts[brand] = rows.length;
+        totalModels += rows.length;
+    });
+    var brandNames = {'FANUC':'FANUC','三菱':'三菱','Mazak':'马扎克','西门子':'西门子','大隈':'大隈','哈斯':'哈斯'};
+    var statsHtml = '<span class="stat-chip">🏭 '+Object.keys(brandCounts).length+' 个品牌</span><span class="stat-chip">📋 '+totalModels+' 个型号</span>';
+    for(var k in brandCounts){ statsHtml += '<span class="stat-chip" style="font-size:12px;">'+brandNames[k]+' '+brandCounts[k]+'</span>'; }
+    document.getElementById('cnStatsBar').innerHTML = statsHtml;
+
+    function cnFilterBrand(brand, btn){
+        document.querySelectorAll('.brand-btn').forEach(function(b){ b.classList.remove('active'); });
+        if(btn) btn.classList.add('active');
+        var showAll = brand === 'all';
+        sections.forEach(function(s){
+            var match = showAll || s.getAttribute('data-brand') === brand;
+            s.style.display = match ? '' : 'none';
+        });
+        var hasVisible = false;
+        sections.forEach(function(s){ if(s.style.display !== 'none') hasVisible = true; });
+        document.getElementById('cnNoResults').style.display = hasVisible ? 'none' : 'block';
+    }
+
+    function cnSearchFilter(){
+        var term = document.getElementById('cnSearchInput').value.trim().toLowerCase();
+        if(!term){ sections.forEach(function(s){ s.style.display = ''; }); document.getElementById('cnNoResults').style.display = 'none'; document.querySelectorAll('.brand-btn').forEach(function(b){ b.classList.remove('active'); }); document.querySelector('.brand-btn').classList.add('active'); return; }
+        document.querySelectorAll('.brand-btn').forEach(function(b){ b.classList.remove('active'); });
+        var hasVisible = false;
+        sections.forEach(function(s){
+            var rows = s.querySelectorAll('table tr');
+            var found = false;
+            for(var i=1;i<rows.length;i++){
+                var txt = rows[i].textContent.toLowerCase();
+                if(txt.indexOf(term) !== -1){ found = true; break; }
+            }
+            if(found){ s.style.display = ''; hasVisible = true; }
+            else { s.style.display = 'none'; }
+        });
+        document.getElementById('cnNoResults').style.display = hasVisible ? 'none' : 'block';
+    }
+
+    document.getElementById('cnSearchInput').addEventListener('input', cnSearchFilter);
+})();
+</script>
 </body>
 </html>
