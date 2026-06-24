@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="zh-CN">
 
@@ -8,10 +8,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?| 姹熷浘绉戞妧</title>
+    <title>工业RGBHV信号分析 — 从CGA/EGA到高清显示 | 江图科技</title>
 
-    <meta name="description" content="娣卞叆瑙ｆ瀽宸ヤ笟鏄剧ず鍣≧GBHV淇″彿鎶€鏈紝娑电洊浠庝紶缁烠GA/EGA鍒扮幇浠ｉ珮娓呰緭鍑虹殑瀹屾暣淇″彿杞崲鍘熺悊銆佹椂搴忓弬鏁般€佺嚎鑹茬紪鐮佸強瀹為檯鏀归€犳柟妗堛€?>
-<meta name="author" content="娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃">
+    <meta name="description" content="深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。">
+
+
+    <meta name="author" content="深圳市江图科技有限公司">
 
     <link rel="canonical" href="https://cncdisplay.com/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
 
@@ -21,23 +23,23 @@
 
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
 
-    <meta property="og:title" content="宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?| 姹熷浘绉戞妧" />
+    <meta property="og:title" content="工业RGBHV信号分析 — 从CGA/EGA到高清显示 | 江图科技" />
 
     <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
 
-    <meta property="og:description" content="娣卞叆瑙ｆ瀽宸ヤ笟鏄剧ず鍣≧GBHV淇″彿鎶€鏈紝娑电洊浠庝紶缁烠GA/EGA鍒扮幇浠ｉ珮娓呰緭鍑虹殑瀹屾暣淇″彿杞崲鍘熺悊銆佹椂搴忓弬鏁般€佺嚎鑹茬紪鐮佸強瀹為檯鏀归€犳柟妗堛€? />
+    <meta property="og:description" content="深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。" />
 
     <meta property="og:url" content="https://cncdisplay.com/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
 
     <meta property="og:type" content="article" />
 
-        <meta property="og:site_name" content="娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃">
+        <meta property="og:site_name" content="深圳市江图科技有限公司">
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?| 姹熷浘绉戞妧">
+    <meta name="twitter:title" content="工业RGBHV信号分析 — 从CGA/EGA到高清显示 | 江图科技">
 
-    <meta name="twitter:description" content="娣卞叆瑙ｆ瀽宸ヤ笟鏄剧ず鍣≧GBHV淇″彿鎶€鏈紝娑电洊浠庝紶缁烠GA/EGA鍒扮幇浠ｉ珮娓呰緭鍑虹殑瀹屾暣淇″彿杞崲鍘熺悊銆佹椂搴忓弬鏁般€佺嚎鑹茬紪鐮佸強瀹為檯鏀归€犳柟妗堛€?>
+    <meta name="twitter:description" content="深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。">
 
 <link rel="stylesheet" href="/css/style.css?v=7">
 
@@ -46,12 +48,12 @@
     {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?| 姹熷浘绉戞妧",
-  "description": "娣卞叆瑙ｆ瀽宸ヤ笟鏄剧ず鍣≧GBHV淇″彿鎶€鏈紝娑电洊浠庝紶缁烠GA/EGA鍒扮幇浠ｉ珮娓呰緭鍑虹殑瀹屾暣淇″彿杞崲鍘熺悊銆佹椂搴忓弬鏁般€佺嚎鑹茬紪鐮佸強瀹為檯鏀归€犳柟妗堛€?,
+  "headline": "工业RGBHV信号分析 — 从CGA/EGA到高清显示 | 江图科技",
+  "description": "深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。",
   "author": { "@id": "https://cncdisplay.com/#tech-team" },
   "publisher": {
     "@type": "Organization",
-    "name": "娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
+    "name": "深圳市江图科技有限公司",
     "url": "https://cncdisplay.com"
   },
   "datePublished": "2026-05-01"
@@ -63,7 +65,7 @@
 
     <meta name="geo.region" content="CN-44">
 
-    <meta name="geo.placename" content="娣卞湷榫欏矖">
+    <meta name="geo.placename" content="深圳龙岗">
 
     <meta name="geo.position" content="22.6568;113.9899">
 
@@ -84,18 +86,18 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://cncdisplay.com/#organization",
-  "name": "娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
+  "name": "深圳市江图科技有限公司",
   "alternateName": "Kongto Technology",
   "url": "https://cncdisplay.com",
-  "description": "涓撴敞宸ヤ笟瑙嗛鏄剧ず鍗囩骇鏂规锛孋NC鏄剧ず鍣–RT杞琇CD鍗囩骇涓撳",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
   "image": "/images/logo.png",
   "telephone": "+86-13686889647",
   "email": "szkongto01@foxmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "榫欏矖鍖烘í宀楄閬撴繁鍧戠患鍚堟ゼ2鍙锋ゼC鏍?妤?,
-    "addressLocality": "娣卞湷",
-    "addressRegion": "骞夸笢",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
     "postalCode": "518000",
     "addressCountry": "CN"
   },
@@ -139,13 +141,13 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "棣栭〉",
+      "name": "首页",
       "item": "https://cncdisplay.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?| 姹熷浘绉戞妧",
+      "name": "工业RGBHV信号分析 — 从CGA/EGA到高清显示 | 江图科技",
       "item": "https://cncdisplay.com/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html"
     }
   ]
@@ -157,18 +159,18 @@
 
 <body>    <header>
         <nav>
-            <a href="/" class="logo">姹熷浘绉戞妧</a>
+            <a href="/" class="logo">江图科技</a>
             <div class="nav-links">
-                <a href="/">棣栭〉</a><a href="/compatibility-matrix.html">鍏煎鏌ヨ</a>
-                <a href="/posts/">鏂囩珷</a>
-                <a href="/case-studies.html">妗堜緥</a>
-                <a href="/docs/">涓嬭浇</a>
-                <a href="/about.html">鍏充簬</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">鑾峰彇鎶ヤ环</a>
+                <a href="/">首页</a><a href="/compatibility-matrix.html">兼容查询</a>
+                <a href="/posts/">文章</a>
+                <a href="/case-studies.html">案例</a>
+                <a href="/docs/">下载</a>
+                <a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
             </div>
-            <a href="/search.html" class="nav-search">馃攳 鎼滅储</a>
+            <a href="/search.html" class="nav-search">🔍 搜索</a>
             <div class="lang-switch">
-                <a href="/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" lang="zh" class="lang-zh">涓枃</a>
+                <a href="/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" lang="zh" class="lang-zh">中文</a>
                 <span class="divider">|</span>
                 <a href="/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" lang="en" class="lang-en">English</a>
             </div>
@@ -179,53 +181,53 @@
 
         <article class="post">
 
-            <h1>宸ヤ笟RGBHV淇″彿鍒嗘瀽 鈥?浠嶤GA/EGA鍒伴珮娓呮樉绀?/h1>
+            <h1>工业RGBHV信号分析 — 从CGA/EGA到高清显示</h1>
 
             <div class="meta">
 
                 <time datetime="2026-05-01">2026-05-01</time>
 
-                <span class="author">浣滆€? 姹熷浘绉戞妧</span>
+                <span class="author">作者: 江图科技</span>
 
             </div>
 
             <div class="content">
 
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-01.jpg" alt="鏄剧ず鍣ㄦ瑙?></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-01.jpg" alt="显示器概览"></figure>
 
-<p><em>鏄剧ず鍣ㄦ瑙?| 鏉ユ簮: 姹熷浘绉戞妧</em></p>
+<p><em>显示器概览 | 来源: 江图科技</em></p>
 
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/HAAS-V2.5-1904-01.jpg" alt="浜у搧瀹炴媿"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/HAAS-V2.5-1904-01.jpg" alt="产品实拍"></figure>
 
-<p><em>浜у搧瀹炴媿 | 鏉ユ簮: 姹熷浘绉戞妧</em></p>
+<p><em>产品实拍 | 来源: 江图科技</em></p>
 
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/KTV104_02.jpg" alt="瀹夎鏁堟灉"></figure>
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/KTV104_02.jpg" alt="安装效果"></figure>
 
-<p><em>瀹夎鏁堟灉 | 鏉ユ簮: 姹熷浘绉戞妧</em></p>
-
-
+<p><em>安装效果 | 来源: 江图科技</em></p>
 
 
 
-<p><strong>鍏抽敭璇?/strong>: RGBHV淇″彿, CGA/EGA杞琕GA, 宸ヤ笟鏄剧ず鎶€鏈? 淇″彿杞崲</p>
 
-<p><em>鐩爣璇昏€? CNC宸ョ▼甯堛€佸伐涓氳嚜鍔ㄥ寲鎶€鏈汉鍛樸€佽棰戜俊鍙风郴缁熻璁′汉鍛?/em></p>
+
+<p><strong>关键词</strong>: RGBHV信号, CGA/EGA转VGA, 工业显示技术, 信号转换</p>
+
+<p><em>目标读者: CNC工程师、工业自动化技术人员、视频信号系统设计人员</em></p>
 
 <hr>
 
-<h2>涓€銆佸伐涓氳棰戜俊鍙风殑婕旇繘鍘嗙▼</h2>
+<h2>一、工业视频信号的演进历程</h2>
 
 <table>
 
-<tr><th>鏃朵唬</th><th>淇″彿鏍囧噯</th><th>鍒嗚鲸鐜?/th><th>鍒锋柊鐜?/th><th>鍏稿瀷搴旂敤</th></tr>
+<tr><th>时代</th><th>信号标准</th><th>分辨率</th><th>刷新率</th><th>典型应用</th></tr>
 
-<tr><td>1980s-1990s</td><td>CGA锛堝僵鑹插浘褰㈤€傞厤鍣級</td><td>320x200 / 640x200</td><td>60 Hz</td><td>鏃╂湡CNC鎺у埗鍣ㄣ€佸伐涓氱粓绔?/td></tr>
+<tr><td>1980s-1990s</td><td>CGA（彩色图形适配器）</td><td>320x200 / 640x200</td><td>60 Hz</td><td>早期CNC控制器、工业终端</td></tr>
 
-<tr><td>1985-1995</td><td>EGA锛堝寮哄瀷鍥惧舰閫傞厤鍣級</td><td>640x350</td><td>70 Hz</td><td>鍗囩骇鍨婥NC鏄剧ず鍣ㄣ€丳LC鐩戣鍣?/td></tr>
+<tr><td>1985-1995</td><td>EGA（增强型图形适配器）</td><td>640x350</td><td>70 Hz</td><td>升级型CNC显示器、PLC监视器</td></tr>
 
-<tr><td>1990-2005</td><td>VGA锛堣棰戝浘褰㈤樀鍒楋級</td><td>640x480 / 800x600</td><td>60-85 Hz</td><td>FANUC CRT鏄剧ず鍣ㄣ€佸伐涓歅C</td></tr>
+<tr><td>1990-2005</td><td>VGA（视频图形阵列）</td><td>640x480 / 800x600</td><td>60-85 Hz</td><td>FANUC CRT显示器、工业PC</td></tr>
 
-<tr><td>2005-鑷充粖</td><td>SVGA/XGA 鏁板瓧锛圖VI/HDMI锛?/td><td>800x600 鑷?1920x1080</td><td>60-120 Hz</td><td>鐜颁唬LCD鏄剧ず鍣ㄣ€丠MI浜烘満鐣岄潰</td></tr>
+<tr><td>2005-至今</td><td>SVGA/XGA 数字（DVI/HDMI）</td><td>800x600 至 1920x1080</td><td>60-120 Hz</td><td>现代LCD显示器、HMI人机界面</td></tr>
 
 </table>
 
@@ -233,125 +235,125 @@
 
 
 
-<h2>浜屻€丷GBHV淇″彿鏋舵瀯璇﹁В</h2>
+<h2>二、RGBHV信号架构详解</h2>
 
-<h3>2.1 浠€涔堟槸RGBHV锛?/h3>
+<h3>2.1 什么是RGBHV？</h3>
 
-<p>RGBHV浠ｈ〃<strong>绾?/strong>锛圧ed锛夈€?strong>缁?/strong>锛圙reen锛夈€?strong>钃?/strong>锛圔lue锛夈€?strong>琛屽悓姝?/strong>锛圚orizontal Sync锛夈€?strong>鍦哄悓姝?/strong>锛圴ertical Sync锛夈€傚畠鏄竴绉嶉€氳繃浜斾釜鐙珛閫氶亾浼犺緭瑙嗛淇″彿鐨勬柟娉曪細</p>
+<p>RGBHV代表<strong>红</strong>（Red）、<strong>绿</strong>（Green）、<strong>蓝</strong>（Blue）、<strong>行同步</strong>（Horizontal Sync）、<strong>场同步</strong>（Vertical Sync）。它是一种通过五个独立通道传输视频信号的方法：</p>
 
 <ul>
 
-<li><strong>R銆丟銆丅</strong>锛氫笁涓ā鎷熼鑹查€氶亾锛屾瘡涓壙杞?-0.7V宄板嘲鍊间俊鍙凤紝浠ｈ〃涓夊熀鑹?/li>
+<li><strong>R、G、B</strong>：三个模拟颜色通道，每个承载0-0.7V峰峰值信号，代表三基色</li>
 
-<li><strong>琛屽悓姝ワ紙H-Sync锛?/strong>锛氬畾涔夋瘡琛屾壂鎻忕嚎璧峰浣嶇疆鐨勮鍚屾鑴夊啿</li>
+<li><strong>行同步（H-Sync）</strong>：定义每行扫描线起始位置的行同步脉冲</li>
 
-<li><strong>鍦哄悓姝ワ紙V-Sync锛?/strong>锛氬畾涔夋瘡甯ц捣濮嬩綅缃殑鍦哄悓姝ヨ剦鍐?/li>
+<li><strong>场同步（V-Sync）</strong>：定义每帧起始位置的场同步脉冲</li>
 
 </ul>
 
-<p>杩欑鍒嗙鏂瑰紡鐩告瘮澶嶅悎淇″彿锛圕GA/EGA锛夊叿鏈夋洿浼樼殑淇″彿璐ㄩ噺锛屽洜涓烘瘡涓鑹查€氶亾鐩镐簰闅旂锛屽彲鏈夋晥闃叉涓叉壈鍜岄鑹叉笚鑹层€?/p>
+<p>这种分离方式相比复合信号（CGA/EGA）具有更优的信号质量，因为每个颜色通道相互隔离，可有效防止串扰和颜色渗色。</p>
 
 
 
-<h3>2.2 淇″彿鏃跺簭鍙傛暟</h3>
-
-<table>
-
-<tr><th>鍙傛暟</th><th>CGA</th><th>EGA</th><th>VGA</th><th>SVGA</th></tr>
-
-<tr><td>琛岄</td><td>15.75 kHz</td><td>21.85 kHz</td><td>31.5 kHz</td><td>37.9-48.9 kHz</td></tr>
-
-<tr><td>鍦洪</td><td>60 Hz</td><td>60 Hz</td><td>60-85 Hz</td><td>60-85 Hz</td></tr>
-
-<tr><td>鍍忕礌鏃堕挓</td><td>14.3 MHz</td><td>16.3 MHz</td><td>25.2 MHz</td><td>40-65 MHz</td></tr>
-
-<tr><td>棰滆壊娣卞害</td><td>4浣嶏紙16鑹诧級</td><td>6浣嶏紙64鑹诧級</td><td>8浣嶏紙256鑹诧級</td><td>24浣嶏紙1670涓囪壊锛?/td></tr>
-
-<tr><td>淇″彿绫诲瀷</td><td>鏁板瓧TTL</td><td>鏁板瓧TTL</td><td>妯℃嫙0.7Vpp</td><td>妯℃嫙0.7Vpp</td></tr>
-
-</table>
-
-<h3>2.3 淇″彿棰戠巼瀵圭収琛?/h3>
+<h3>2.2 信号时序参数</h3>
 
 <table>
 
-<tr><th>鏍囧噯</th><th>鍒嗚鲸鐜?/th><th>琛屽悓姝ラ鐜?/th><th>鍦哄悓姝ラ鐜?/th><th>鍍忕礌鏃堕挓</th><th>琛屽悓姝ユ瀬鎬?/th><th>鍦哄悓姝ユ瀬鎬?/th></tr>
+<tr><th>参数</th><th>CGA</th><th>EGA</th><th>VGA</th><th>SVGA</th></tr>
 
-<tr><td>CGA</td><td>640x200</td><td>15.750 kHz</td><td>60.000 Hz</td><td>14.318 MHz</td><td>姝ｆ瀬鎬?/td><td>姝ｆ瀬鎬?/td></tr>
+<tr><td>行频</td><td>15.75 kHz</td><td>21.85 kHz</td><td>31.5 kHz</td><td>37.9-48.9 kHz</td></tr>
 
-<tr><td>EGA</td><td>640x350</td><td>21.850 kHz</td><td>60.000 Hz</td><td>16.257 MHz</td><td>姝ｆ瀬鎬?/td><td>璐熸瀬鎬?/td></tr>
+<tr><td>场频</td><td>60 Hz</td><td>60 Hz</td><td>60-85 Hz</td><td>60-85 Hz</td></tr>
 
-<tr><td>VGA</td><td>640x480</td><td>31.469 kHz</td><td>59.940 Hz</td><td>25.175 MHz</td><td>璐熸瀬鎬?/td><td>璐熸瀬鎬?/td></tr>
+<tr><td>像素时钟</td><td>14.3 MHz</td><td>16.3 MHz</td><td>25.2 MHz</td><td>40-65 MHz</td></tr>
 
-<tr><td>SVGA</td><td>800x600</td><td>37.879 kHz</td><td>60.317 Hz</td><td>40.000 MHz</td><td>姝ｆ瀬鎬?/td><td>姝ｆ瀬鎬?/td></tr>
+<tr><td>颜色深度</td><td>4位（16色）</td><td>6位（64色）</td><td>8位（256色）</td><td>24位（1670万色）</td></tr>
 
-<tr><td>XGA</td><td>1024x768</td><td>48.363 kHz</td><td>60.004 Hz</td><td>65.000 MHz</td><td>璐熸瀬鎬?/td><td>璐熸瀬鎬?/td></tr>
+<tr><td>信号类型</td><td>数字TTL</td><td>数字TTL</td><td>模拟0.7Vpp</td><td>模拟0.7Vpp</td></tr>
 
 </table>
 
-<p><em>琛細VESA鏍囧噯鏃跺簭鍙傛暟璇﹁〃锛堟兜鐩栦紶缁熷強鐜颁唬瑙嗛淇″彿锛夈€傚悓姝ユ瀬鎬ф寚绀哄悓姝ヨ剦鍐蹭负楂樼數骞虫湁鏁堬紙姝ｆ瀬鎬э級杩樻槸浣庣數骞虫湁鏁堬紙璐熸瀬鎬э級銆?/em></p>
+<h3>2.3 信号频率对照表</h3>
 
-<h3>2.4 RGBHV淇″彿浼犺緭鍘熺悊</h3>
+<table>
 
-<p>RGBHV灞炰簬鍒嗛噺瑙嗛鏍囧噯瀹舵棌锛屽叾涓瘡涓俊鍙峰垎閲忓湪涓撶敤瀵肩嚎涓婄嫭绔嬩紶杈撱€傝繖绉嶆灦鏋勭浉姣斿鍚堣棰戞垨S-Video鏍煎紡鍏锋湁澶氶」鏈川浼樺娍锛屼絾涔熷浼犺緭绾跨悊璁烘彁鍑轰簡涓ユ牸瑕佹眰銆?/p>
+<tr><th>标准</th><th>分辨率</th><th>行同步频率</th><th>场同步频率</th><th>像素时钟</th><th>行同步极性</th><th>场同步极性</th></tr>
 
-<p><strong>闃绘姉鍖归厤涓庝俊鍙峰畬鏁存€с€?/strong>姣忔潯RGB绾胯矾璁捐鐢ㄤ簬椹卞姩75娆у绔帴璐熻浇銆備紶杈撶嚎鐨勭壒鎬ч樆鎶楋紙閫氬父涓築NC瀹夎涓殑RG-59鍚岃酱鐢电紗鎴朧GA绾跨紗鍐呴儴鐨勭嫭绔嬪弻缁炵嚎锛夊繀椤诲悓鏃跺尮閰嶆簮绔緭鍑洪樆鎶楀拰鏄剧ず鍣ㄦ垨杞崲鍣ㄨ緭鍏ョ鐨勭鎺ラ樆鎶椼€傞樆鎶椾笉鍖归厤浼氫骇鐢熶俊鍙峰弽灏勶細褰撳叆灏勬尝閬囧埌涓嶈繛缁偣鏃讹紝閮ㄥ垎鑳介噺浼氬弽灏勫洖婧愮锛屽共鎵板悗缁俊鍙疯浆鎹€傚弽灏勮〃鐜颁负鍙鐨勯噸褰便€侀鑹茶竟缂樸€佹按骞?鎸搩"鏉＄汗鎴栨椂搴忔姈鍔ㄢ€斺€斿湪瓒呰繃5绫崇殑闀胯窛绂荤嚎缂嗕腑灏や负涓ラ噸銆傚洜姝わ紝鎺ユ敹绔殑75娆у姝ｇ‘绔帴鐢甸樆瀵逛簬娓呮櫚鐨凴GBHV浼犺緭鑷冲叧閲嶈銆?/p>
+<tr><td>CGA</td><td>640x200</td><td>15.750 kHz</td><td>60.000 Hz</td><td>14.318 MHz</td><td>正极性</td><td>正极性</td></tr>
 
-<p><strong>甯﹀瑕佹眰銆?/strong>姣忎釜RGBHV閫氶亾鎵€闇€鐨勬ā鎷熷甫瀹界敱鍍忕礌鏃堕挓棰戠巼鍐冲畾銆傛牴鎹濂庢柉鐗瑰噯鍒欙紝浼犺緭閫氶亾鑷冲皯闇€瑕佹敮鎸佸儚绱犳椂閽熼鐜囩殑涓€鍗婃墠鑳戒繚鐣欒棰戜俊鍙风殑鍩烘尝璋愭尝銆傚湪瀹為檯搴旂敤涓紝涓轰繚鎸侀攼鍒╃殑杈规部璺冲彉锛堜笂鍗囨椂闂翠綆浜?绾崇锛夛紝寤鸿甯﹀杈惧埌鍍忕礌鏃堕挓鐨?鑷?鍊嶃€傚浜庡儚绱犳椂閽熶负25.175 MHz鐨刅GA锛屾瘡涓鑹查€氶亾绾﹂渶12.6 MHz甯﹀瀹炵幇鍩烘湰杩樺師锛屼絾楂樿川閲忕殑杞崲鍣ㄩ噰鐢ㄥ甫瀹借秴杩?00 MHz鐨勮棰戣繍绠楁斁澶у櫒浠ヤ繚鎸佽竟娌块攼搴︺€傚浜?5 MHz鐨凷VGA锛屾瘡閫氶亾鏈€浣庤姹傛彁鍗囪嚦32.5 MHz銆備笁涓鑹查€氶亾鐨勬€昏棰戝甫瀹藉喅瀹氫簡绯荤粺鍛堢幇绮剧粏鏂囨湰鍜屽伐涓欻MI搴旂敤鎵€闇€缁嗚妭鍥惧舰鐨勮兘鍔涖€?/p>
+<tr><td>EGA</td><td>640x350</td><td>21.850 kHz</td><td>60.000 Hz</td><td>16.257 MHz</td><td>正极性</td><td>负极性</td></tr>
 
-<p><strong>鐩存祦鍋忕疆涓庨粦鐢靛钩閽充綅銆?/strong>鍦ㄦ纭璁＄殑RGBHV绯荤粺涓紝榛戠數骞充互0 V涓哄熀鍑嗭紝宄板€肩櫧鐢靛钩涓?.7 V銆傛瘡琛屾壂鎻忕嚎浠ユ秷闅愰棿闅斿紑濮嬶紝鍦ㄦ鏈熼棿DC鎭㈠锛堥挸浣嶏級鐢佃矾瀵归粦鐢靛钩杩涜閲囨牱骞惰皟鏁寸洿娴佸亸缃紝浠ユ秷闄や綆棰戞紓绉汇€傝嫢鏃犳閽充綅鏈哄埗锛屽悇甯т箣闂村钩鍧囧浘鍍忕數骞崇殑鍙樺寲灏嗗鑷撮粦鐢靛钩鍋忕Щ鈥斺€旇繖绉嶇幇璞＄О涓?榛戠數骞虫紓绉?鎴?鍝煎０"鈥斺€斾粠鑰屽鑷存樉绀轰寒搴﹀拰鑹插僵楗卞拰搴︾殑涓嶄竴鑷淬€俁GBHV涓殑鍚屾淇″彿浣跨敤璐熷悜鑴夊啿锛岄€氬父鍦ㄤ笓鐢ㄥ悓姝ョ嚎涓婁粠0 V鎽嗗姩鑷?0.3 V锛岃繙浣庝簬榛戣壊鍙傝€冪數骞筹紝浠ラ槻骞叉壈鏈夋晥瑙嗛鍖哄煙銆?/p>
+<tr><td>VGA</td><td>640x480</td><td>31.469 kHz</td><td>59.940 Hz</td><td>25.175 MHz</td><td>负极性</td><td>负极性</td></tr>
 
-<p><strong>涓叉壈闅旂銆?/strong>浜旇矾鐙珛妯℃嫙閫氶亾锛圧銆丟銆丅銆佽鍚屾銆佸満鍚屾锛夊湪VGA绾跨紗鎴朠CB涓婄揣瀵嗗竷绾挎椂锛岀浉閭诲浣撲箣闂寸殑鐢靛鑰﹀悎鍜岀數鎰熻€﹀悎浼氬紩鍏ヤ覆鎵扳€斺€斿嵆涓€涓€氶亾鐨勪俊鍙锋硠婕忓埌鍙︿竴涓€氶亾銆備緥濡傦紝鍦╒GA鏄剧ず鍣ㄤ笂锛岃鍚屾淇″彿娉勬紡鍒扮豢鑹查€氶亾浼氳〃鐜颁负鍥惧儚涓婂彔鍔犵殑寰急绔栨潯銆傝涓氭渶浣冲疄璺佃姹傚湪10 MHz涓嬩换鎰忎袱涓€氶亾涔嬮棿鑷冲皯杈惧埌-40 dB鐨勯殧绂诲害銆傝繖閫氳繃閫傚綋鐨勫睆钄斤紙鍚勯鑹查€氶亾閲囩敤鐙珛灞忚斀鍚岃酱瀵癸級銆丳CB甯冨眬涓殑浠旂粏鍦板钩闈㈠垎绂讳互鍙婂皢楂橀€熸暟瀛椾俊鍙凤紙鍚屾绾匡級涓庢ā鎷熼鑹查€氶亾鐗╃悊鍒嗙鐨勫樊鍒嗗竷绾挎妧鏈潵瀹炵幇銆?/p>
+<tr><td>SVGA</td><td>800x600</td><td>37.879 kHz</td><td>60.317 Hz</td><td>40.000 MHz</td><td>正极性</td><td>正极性</td></tr>
 
-<p><strong>涓婂崌鏃堕棿涓庡亸绉绘帶鍒躲€?/strong>涓鸿幏寰楀共鍑€鐨勫儚绱犺烦鍙橈紝姣忎釜棰滆壊閫氶亾鐨?0%-90%涓婂崌鏃堕棿搴斾綆浜?绾崇銆傝繃闀跨殑涓婂崌鏃堕棿浼氫娇杈圭紭妯＄硦骞堕檷浣庤〃瑙傞攼搴︼紝鑰孯銆丟銆丅閫氶亾涔嬮棿杩囧ぇ鐨勫亸绉伙紙鏃跺簭涓嶅尮閰嶏級浼氬湪鍨傜洿杈圭紭澶勪骇鐢熼鑹插垎绂汇€傞珮鎬ц兘杞崲鍣ㄩ泦鎴愪簡鍙紪绋嬪欢杩熺嚎锛岀敤浜庤ˉ鍋縋CB璧扮嚎闀垮害宸紓鍜岀嚎缂嗗紩鍏ョ殑鍋忕Щ锛屼娇涓変釜棰滆壊閫氶亾鍦ㄦ樉绀哄櫒杈撳叆绔榻愬湪2绾崇浠ュ唴銆?/p>
+<tr><td>XGA</td><td>1024x768</td><td>48.363 kHz</td><td>60.004 Hz</td><td>65.000 MHz</td><td>负极性</td><td>负极性</td></tr>
+
+</table>
+
+<p><em>表：VESA标准时序参数详表（涵盖传统及现代视频信号）。同步极性指示同步脉冲为高电平有效（正极性）还是低电平有效（负极性）。</em></p>
+
+<h3>2.4 RGBHV信号传输原理</h3>
+
+<p>RGBHV属于分量视频标准家族，其中每个信号分量在专用导线上独立传输。这种架构相比复合视频或S-Video格式具有多项本质优势，但也对传输线理论提出了严格要求。</p>
+
+<p><strong>阻抗匹配与信号完整性。</strong>每条RGB线路设计用于驱动75欧姆端接负载。传输线的特性阻抗（通常为BNC安装中的RG-59同轴电缆或VGA线缆内部的独立双绞线）必须同时匹配源端输出阻抗和显示器或转换器输入端的端接阻抗。阻抗不匹配会产生信号反射：当入射波遇到不连续点时，部分能量会反射回源端，干扰后续信号转换。反射表现为可见的重影、颜色边缘、水平"振铃"条纹或时序抖动——在超过5米的长距离线缆中尤为严重。因此，接收端的75欧姆正确端接电阻对于清晰的RGBHV传输至关重要。</p>
+
+<p><strong>带宽要求。</strong>每个RGBHV通道所需的模拟带宽由像素时钟频率决定。根据奈奎斯特准则，传输通道至少需要支持像素时钟频率的一半才能保留视频信号的基波谐波。在实际应用中，为保持锐利的边沿跳变（上升时间低于5纳秒），建议带宽达到像素时钟的3至5倍。对于像素时钟为25.175 MHz的VGA，每个颜色通道约需12.6 MHz带宽实现基本还原，但高质量的转换器采用带宽超过100 MHz的视频运算放大器以保持边沿锐度。对于65 MHz的SVGA，每通道最低要求提升至32.5 MHz。三个颜色通道的总视频带宽决定了系统呈现精细文本和工业HMI应用所需细节图形的能力。</p>
+
+<p><strong>直流偏置与黑电平钳位。</strong>在正确设计的RGBHV系统中，黑电平以0 V为基准，峰值白电平为0.7 V。每行扫描线以消隐间隔开始，在此期间DC恢复（钳位）电路对黑电平进行采样并调整直流偏置，以消除低频漂移。若无此钳位机制，各帧之间平均图像电平的变化将导致黑电平偏移——这种现象称为"黑电平漂移"或"哼声"——从而导致显示亮度和色彩饱和度的不一致。RGBHV中的同步信号使用负向脉冲，通常在专用同步线上从0 V摆动至-0.3 V，远低于黑色参考电平，以防干扰有效视频区域。</p>
+
+<p><strong>串扰隔离。</strong>五路独立模拟通道（R、G、B、行同步、场同步）在VGA线缆或PCB上紧密布线时，相邻导体之间的电容耦合和电感耦合会引入串扰——即一个通道的信号泄漏到另一个通道。例如，在VGA显示器上，行同步信号泄漏到绿色通道会表现为图像上叠加的微弱竖条。行业最佳实践要求在10 MHz下任意两个通道之间至少达到-40 dB的隔离度。这通过适当的屏蔽（各颜色通道采用独立屏蔽同轴对）、PCB布局中的仔细地平面分离以及将高速数字信号（同步线）与模拟颜色通道物理分离的差分布线技术来实现。</p>
+
+<p><strong>上升时间与偏移控制。</strong>为获得干净的像素跳变，每个颜色通道的10%-90%上升时间应低于5纳秒。过长的上升时间会使边缘模糊并降低表观锐度，而R、G、B通道之间过大的偏移（时序不匹配）会在垂直边缘处产生颜色分离。高性能转换器集成了可编程延迟线，用于补偿PCB走线长度差异和线缆引入的偏移，使三个颜色通道在显示器输入端对齐在2纳秒以内。</p>
 
 <hr>
 
-<h2>涓夈€丆GA/EGA杞琑GBHV杞崲娴佺▼</h2>
+<h2>三、CGA/EGA转RGBHV转换流程</h2>
 
-<h3>3.1 淇″彿绫诲瀷杞崲</h3>
+<h3>3.1 信号类型转换</h3>
 
-<p>CGA/EGA杞崲涓篟GBHV鐨勬牳蹇冮毦鐐瑰湪浜庝俊鍙风被鍨嬬殑鏍规湰宸紓锛?/p>
+<p>CGA/EGA转换为RGBHV的核心难点在于信号类型的根本差异：</p>
 
 <ul>
 
-<li><strong>CGA/EGA</strong>锛氭暟瀛桾TL淇″彿锛?V鎴?V鐢靛钩锛夆€斺€旀瘡涓鑹蹭綅涓哄紑/鍏崇姸鎬?/li>
+<li><strong>CGA/EGA</strong>：数字TTL信号（0V或5V电平）——每个颜色位为开/关状态</li>
 
-<li><strong>RGBHV/VGA</strong>锛氭ā鎷熶俊鍙凤紙0-0.7V杩炵画鐢靛帇锛夆€斺€斿悇棰滆壊鎸夋瘮渚嬬數鍘嬭緭鍑?/li>
+<li><strong>RGBHV/VGA</strong>：模拟信号（0-0.7V连续电压）——各颜色按比例电压输出</li>
 
 </ul>
 
-<p>闇€瑕佹暟妯¤浆鎹㈠櫒灏員TL閫昏緫鐢靛钩杞崲涓烘瘮渚嬫ā鎷熺數鍘嬨€傛睙鍥剧鎶€杞崲鍣ㄩ噰鐢ㄦ瘡閫氶亾8浣嶅垎杈ㄧ巼鐨勯珮閫熻棰戞暟妯¤浆鎹㈠櫒锛岀‘淇濆钩婊戠殑鑹插僵娓愬彉銆?/p>
+<p>需要数模转换器将TTL逻辑电平转换为比例模拟电压。江图科技转换器采用每通道8位分辨率的高速视频数模转换器，确保平滑的色彩渐变。</p>
 
 
 
-<h3>3.2 鎵弿棰戠巼杞崲</h3>
+<h3>3.2 扫描频率转换</h3>
 
-<p>CGA鐨勮鎵弿棰戠巼涓?5.75 kHz锛岃€孷GA闇€瑕?1.5 kHz銆傝繖鎰忓懗鐫€CGA鐨勬瘡琛屾壂鎻忕嚎蹇呴』鍔犲€嶏紙琛屽姞鍊嶏級锛屾垨鑰呭抚缂撳啿鍣ㄥ繀椤荤缉鏀句互鍖归厤VGA鏃跺簭銆傝浆鎹㈠櫒閫氳繃鍐呯疆甯х紦鍐插櫒鍜岀缉鏀惧紩鎿庤嚜鍔ㄥ鐞嗘杩囩▼銆?/p>
+<p>CGA的行扫描频率为15.75 kHz，而VGA需要31.5 kHz。这意味着CGA的每行扫描线必须加倍（行加倍），或者帧缓冲器必须缩放以匹配VGA时序。转换器通过内置帧缓冲器和缩放引擎自动处理此过程。</p>
 
 
 
-<h3>3.3 鍚屾淇″彿鐢熸垚</h3>
+<h3>3.3 同步信号生成</h3>
 
-<p>CGA/EGA浣跨敤澶嶅悎鍚屾锛堣鍦哄悓姝ュ悎骞朵负涓€璺俊鍙凤級锛岃€孯GBHV灏嗚鍚屾鍜屽満鍚屾鍒嗙銆傝浆鎹㈠櫒鎻愬彇骞堕噸鏂扮敓鎴愬共鍑€銆佸垎绂荤殑琛屽悓姝ュ拰鍦哄悓姝ヤ俊鍙凤紝骞剁‘淇濆叾鏃跺簭姝ｇ‘銆?/p>
+<p>CGA/EGA使用复合同步（行场同步合并为一路信号），而RGBHV将行同步和场同步分离。转换器提取并重新生成干净、分离的行同步和场同步信号，并确保其时序正确。</p>
 
 <hr>
 
 
 
-<h2>鍥涖€佸疄鐢ㄨ浆鎹㈡柟妗?/h2>
+<h2>四、实用转换方案</h2>
 
 <table>
 
-<tr><th>杈撳叆淇″彿</th><th>杈撳嚭淇″彿</th><th>杞崲鍣ㄥ瀷鍙?/th><th>涓昏鐗圭偣</th><th>鍗曚环</th></tr>
+<tr><th>输入信号</th><th>输出信号</th><th>转换器型号</th><th>主要特点</th><th>单价</th></tr>
 
-<tr><td>CGA锛?5kHz锛?/td><td>RGBHV/VGA锛?1kHz锛?/td><td>JTX-CVR-001</td><td>鑷姩鎵弿銆佸嵆鎻掑嵆鐢ㄣ€?20掳C~+70掳C</td><td>CNY 850</td></tr>
+<tr><td>CGA（15kHz）</td><td>RGBHV/VGA（31kHz）</td><td>JTX-CVR-001</td><td>自动扫描、即插即用、-20°C~+70°C</td><td>CNY 850</td></tr>
 
-<tr><td>EGA锛?2kHz锛?/td><td>RGBHV/VGA锛?1kHz锛?/td><td>JTX-CVR-002</td><td>鑷姩鎵弿銆佸嵆鎻掑嵆鐢ㄣ€佸鐢靛帇12-36V</td><td>CNY 880</td></tr>
+<tr><td>EGA（22kHz）</td><td>RGBHV/VGA（31kHz）</td><td>JTX-CVR-002</td><td>自动扫描、即插即用、宽电压12-36V</td><td>CNY 880</td></tr>
 
-<tr><td>RGBS锛堝鍚堝悓姝ワ級</td><td>RGBHV/VGA</td><td>JTX-CVR-003</td><td>鍚屾鍒嗙鍣ㄣ€佸彲璋冭/鍦轰綅缃?/td><td>CNY 750</td></tr>
+<tr><td>RGBS（复合同步）</td><td>RGBHV/VGA</td><td>JTX-CVR-003</td><td>同步分离器、可调行/场位置</td><td>CNY 750</td></tr>
 
-<tr><td>CGA+EGA锛堝弻杈撳叆锛?/td><td>RGBHV/VGA</td><td>JTX-CVR-004</td><td>鑷姩妫€娴嬭緭鍏ョ被鍨嬨€佸弻杈撳叆鍒囨崲</td><td>CNY 950</td></tr>
+<tr><td>CGA+EGA（双输入）</td><td>RGBHV/VGA</td><td>JTX-CVR-004</td><td>自动检测输入类型、双输入切换</td><td>CNY 950</td></tr>
 
 </table>
 
@@ -359,95 +361,95 @@
 
 
 
-<h2>浜斻€佷俊鍙疯川閲忛獙璇?/h2>
+<h2>五、信号质量验证</h2>
 
-<p>杞崲瀹屾垚鍚庯紝璇烽獙璇佷互涓嬩俊鍙疯川閲忔寚鏍囷細</p>
+<p>转换完成后，请验证以下信号质量指标：</p>
 
 <ul>
 
-<li><strong>淇″彿骞呭害</strong>锛歊/G/B閫氶亾 0.7Vpp 卤5% 锛?5惟璐熻浇涓嬶級</li>
+<li><strong>信号幅度</strong>：R/G/B通道 0.7Vpp ±5% （75Ω负载下）</li>
 
-<li><strong>鍚屾鑴夊啿瀹藉害</strong>锛氳鍚屾 3.8渭s 卤10%锛屽満鍚屾 64渭s 卤10%</li>
+<li><strong>同步脉冲宽度</strong>：行同步 3.8μs ±10%，场同步 64μs ±10%</li>
 
-<li><strong>涓婂崌/涓嬮檷鏃堕棿</strong>锛?5ns锛岀‘淇濆共鍑€杈规部</li>
+<li><strong>上升/下降时间</strong>：<5ns，确保干净边沿</li>
 
-<li><strong>涓叉壈</strong>锛氶€氶亾闂?<-40dB</li>
+<li><strong>串扰</strong>：通道间 <-40dB</li>
 
-<li><strong>闃绘姉鍖归厤</strong>锛氭墍鏈夌嚎璺?75惟 卤5%</li>
+<li><strong>阻抗匹配</strong>：所有线路 75Ω ±5%</li>
 
 </ul>
 
 <hr>
 
-<h2>鍏€丷GBHV绾胯壊缂栫爜涓庡紩鑴氬畾涔夋爣鍑?/h2>
+<h2>六、RGBHV线色编码与引脚定义标准</h2>
 
-<p>鍦ㄥ伐涓氱幆澧冧腑澶勭悊RGBHV淇″彿鏃讹紝姝ｇ‘璇嗗埆绾胯壊鍜屽紩鑴氬垎閰嶅浜庢垚鍔熸帴绾垮拰鏁呴殰鎺掗櫎鑷冲叧閲嶈銆備笅琛ㄥ垪鍑轰簡鏍囧噯VGA锛圖E-15锛夊紩鑴氬畾涔夊強鍏稿瀷宸ヤ笟RGBHV绾跨紗涓搴旂殑绾胯壊缂栫爜銆?/p>
+<p>在工业环境中处理RGBHV信号时，正确识别线色和引脚分配对于成功接线和故障排除至关重要。下表列出了标准VGA（DE-15）引脚定义及典型工业RGBHV线缆中对应的线色编码。</p>
 
 <table>
 
-<tr><th>淇″彿</th><th>VGA寮曡剼锛圖E-15锛?/th><th>鏍囧噯绾胯壊</th><th>BNC杩炴帴鍣ㄩ鑹?/th></tr>
+<tr><th>信号</th><th>VGA引脚（DE-15）</th><th>标准线色</th><th>BNC连接器颜色</th></tr>
 
-<tr><td><strong>绾㈣壊</strong></td><td>1</td><td>绾㈣壊</td><td>绾㈣壊</td></tr>
+<tr><td><strong>红色</strong></td><td>1</td><td>红色</td><td>红色</td></tr>
 
-<tr><td><strong>缁胯壊</strong></td><td>2</td><td>缁胯壊</td><td>缁胯壊</td></tr>
+<tr><td><strong>绿色</strong></td><td>2</td><td>绿色</td><td>绿色</td></tr>
 
-<tr><td><strong>钃濊壊</strong></td><td>3</td><td>钃濊壊</td><td>钃濊壊</td></tr>
+<tr><td><strong>蓝色</strong></td><td>3</td><td>蓝色</td><td>蓝色</td></tr>
 
-<tr><td><strong>琛屽悓姝ワ紙H-Sync锛?/strong></td><td>13</td><td>榛勮壊</td><td>榛勮壊</td></tr>
+<tr><td><strong>行同步（H-Sync）</strong></td><td>13</td><td>黄色</td><td>黄色</td></tr>
 
-<tr><td><strong>鍦哄悓姝ワ紙V-Sync锛?/strong></td><td>14</td><td>鐧借壊</td><td>鐧借壊</td></tr>
+<tr><td><strong>场同步（V-Sync）</strong></td><td>14</td><td>白色</td><td>白色</td></tr>
 
-<tr><td><strong>绾㈣壊鍦扮嚎</strong></td><td>6</td><td>榛戣壊锛堜笌绾㈣壊鎴愬锛?/td><td>BNC灞忚斀灞?/td></tr>
+<tr><td><strong>红色地线</strong></td><td>6</td><td>黑色（与红色成对）</td><td>BNC屏蔽层</td></tr>
 
-<tr><td><strong>缁胯壊鍦扮嚎</strong></td><td>7</td><td>榛戣壊锛堜笌缁胯壊鎴愬锛?/td><td>BNC灞忚斀灞?/td></tr>
+<tr><td><strong>绿色地线</strong></td><td>7</td><td>黑色（与绿色成对）</td><td>BNC屏蔽层</td></tr>
 
-<tr><td><strong>钃濊壊鍦扮嚎</strong></td><td>8</td><td>榛戣壊锛堜笌钃濊壊鎴愬锛?/td><td>BNC灞忚斀灞?/td></tr>
+<tr><td><strong>蓝色地线</strong></td><td>8</td><td>黑色（与蓝色成对）</td><td>BNC屏蔽层</td></tr>
 
-<tr><td><strong>鍚屾鍦扮嚎</strong></td><td>10</td><td>榛戣壊</td><td>BNC灞忚斀灞?/td></tr>
+<tr><td><strong>同步地线</strong></td><td>10</td><td>黑色</td><td>BNC屏蔽层</td></tr>
 
-<tr><td><strong>DDC鏁版嵁锛圛虏C锛?/strong></td><td>12</td><td>缁?鐧斤紙濡傛湁锛?/td><td>N/A</td></tr>
+<tr><td><strong>DDC数据（I²C）</strong></td><td>12</td><td>绿/白（如有）</td><td>N/A</td></tr>
 
-<tr><td><strong>DDC鏃堕挓锛圛虏C锛?/strong></td><td>15</td><td>钃?鐧斤紙濡傛湁锛?/td><td>N/A</td></tr>
+<tr><td><strong>DDC时钟（I²C）</strong></td><td>15</td><td>蓝/白（如有）</td><td>N/A</td></tr>
 
 </table>
 
-<p><em>娉細鍦ㄤ簲绾縍GBHV BNC绾跨紗缁勪欢涓紝姣忎釜淇″彿浣跨敤鐙珛鐨勫悓杞寸嚎缂嗭紝灞忚斀灞備綔涓哄湴绾垮洖璺€傚睆钄藉眰閫氬父杩炴帴鍒版簮绔殑寮曡剼10锛堝悓姝ュ湴绾匡級鍜屾満澹冲湴銆?/em></p>
+<p><em>注：在五线RGBHV BNC线缆组件中，每个信号使用独立的同轴线缆，屏蔽层作为地线回路。屏蔽层通常连接到源端的引脚10（同步地线）和机壳地。</em></p>
 
 <hr>
 
-<h2>涓冦€丷GBHV鍙婄浉鍏充俊鍙疯繛鎺ュ櫒瀵圭収琛?/h2>
+<h2>七、RGBHV及相关信号连接器对照表</h2>
 
-<p>涓嶅悓骞翠唬鐨勫伐涓氭樉绀鸿澶囦娇鐢ㄤ笉鍚岀殑鐗╃悊杩炴帴鍣ㄦ壙杞絉GBHV鎴栫浉鍏宠棰戜俊鍙枫€備笅琛ㄥ府鍔╄瘑鍒悇杩炴帴鍣ㄧ被鍨嬪搴旂殑淇″彿鏍囧噯锛屼究浜庢敼閫犻」鐩腑鐨勭嚎缂嗛€夊瀷鍜岃浆鎺ュご瑙勫垝銆?/p>
+<p>不同年代的工业显示设备使用不同的物理连接器承载RGBHV或相关视频信号。下表帮助识别各连接器类型对应的信号标准，便于改造项目中的线缆选型和转接头规划。</p>
 
 <table>
 
-<tr><th>淇″彿绫诲瀷</th><th>甯歌杩炴帴鍣?/th><th>寮曡剼鏁?/th><th>澶栧舰瑙勬牸</th><th>鍏稿瀷鐢ㄩ€?/th></tr>
+<tr><th>信号类型</th><th>常见连接器</th><th>引脚数</th><th>外形规格</th><th>典型用途</th></tr>
 
-<tr><td><strong>CGA</strong></td><td>DE-9</td><td>9锛?鎺掞級</td><td>D-sub寰瀷</td><td>IBM PC/XT/AT鍘熷CGA銆佹棭鏈烠NC缁堢</td></tr>
+<tr><td><strong>CGA</strong></td><td>DE-9</td><td>9（2排）</td><td>D-sub微型</td><td>IBM PC/XT/AT原始CGA、早期CNC终端</td></tr>
 
-<tr><td><strong>EGA</strong></td><td>DE-9</td><td>9锛?鎺掞級</td><td>D-sub寰瀷</td><td>EGA鏄惧崱鍜岀洃瑙嗗櫒锛堜笌CGA鐩稿悓杩炴帴鍣級</td></tr>
+<tr><td><strong>EGA</strong></td><td>DE-9</td><td>9（2排）</td><td>D-sub微型</td><td>EGA显卡和监视器（与CGA相同连接器）</td></tr>
 
-<tr><td><strong>VGA锛圧GBHV锛?/strong></td><td>DE-15锛圚D-15锛?/td><td>15锛?鎺掞級</td><td>楂樺瘑搴-sub</td><td>鏈€甯歌PC鍜屽伐涓歏GA鎺ュ彛</td></tr>
+<tr><td><strong>VGA（RGBHV）</strong></td><td>DE-15（HD-15）</td><td>15（3排）</td><td>高密度D-sub</td><td>最常见PC和工业VGA接口</td></tr>
 
-<tr><td><strong>RGBHV锛圔NC锛?/strong></td><td>BNC锛?璺級</td><td>姣忛€氶亾1鑺?/td><td>鍗″彛鑰﹀悎鍚岃酱</td><td>涓撲笟/骞挎挱绾с€侀暱璺濈甯冪嚎銆佹祴璇曡澶?/td></tr>
+<tr><td><strong>RGBHV（BNC）</strong></td><td>BNC（5路）</td><td>每通道1芯</td><td>卡口耦合同轴</td><td>专业/广播级、长距离布线、测试设备</td></tr>
 
-<tr><td><strong>RGBS锛堝鍚堝悓姝ワ級</strong></td><td>BNC锛?璺級鎴朢CA锛?璺級</td><td>姣忛€氶亾1鑺?/td><td>鍚岃酱</td><td>琛楁満鏄剧ず鍣ㄣ€佹棫寮忚棰戝銆侀儴鍒哖LC鏄剧ず鍣?/td></tr>
+<tr><td><strong>RGBS（复合同步）</strong></td><td>BNC（4路）或RCA（4路）</td><td>每通道1芯</td><td>同轴</td><td>街机显示器、旧式视频墙、部分PLC显示器</td></tr>
 
-<tr><td><strong>DVI-I锛堟ā鎷?鏁板瓧锛?/strong></td><td>DVI-I</td><td>29</td><td>DVI锛堟墎骞抽拡+鍗佸瓧閽堬級</td><td>鍚屾椂鎵胯浇妯℃嫙RGBHV锛堜笌VGA鐩稿悓寮曡剼锛夊拰鏁板瓧TMDS</td></tr>
+<tr><td><strong>DVI-I（模拟+数字）</strong></td><td>DVI-I</td><td>29</td><td>DVI（扁平针+十字针）</td><td>同时承载模拟RGBHV（与VGA相同引脚）和数字TMDS</td></tr>
 
-<tr><td><strong>DVI-D锛堜粎鏁板瓧锛?/strong></td><td>DVI-D</td><td>24</td><td>DVI锛堜粎鎵佸钩閽堬級</td><td>绾暟瀛楄緭鍑猴紝鏃燫GBHV妯℃嫙鐩撮€?/td></tr>
+<tr><td><strong>DVI-D（仅数字）</strong></td><td>DVI-D</td><td>24</td><td>DVI（仅扁平针）</td><td>纯数字输出，无RGBHV模拟直通</td></tr>
 
-<tr><td><strong>HDMI</strong></td><td>HDMI Type A</td><td>19</td><td>HDMI锛堟墎骞炽€佸甫閿綅锛?/td><td>鏁板瓧瑙嗛+闊抽锛岄€氳繃杞帴澶村悜鍚庡吋瀹?/td></tr>
+<tr><td><strong>HDMI</strong></td><td>HDMI Type A</td><td>19</td><td>HDMI（扁平、带键位）</td><td>数字视频+音频，通过转接头向后兼容</td></tr>
 
-<tr><td><strong>SCART锛堟娲诧級</strong></td><td>SCART锛圥茅ritel锛?/td><td>21</td><td>鐭╁舰銆佸甫鎶ゅ</td><td>娆ф床鏃у紡褰遍煶璁惧锛屾壙杞芥ā鎷烺GB+鍚屾+闊抽</td></tr>
+<tr><td><strong>SCART（欧洲）</strong></td><td>SCART（Péritel）</td><td>21</td><td>矩形、带护套</td><td>欧洲旧式影音设备，承载模拟RGB+同步+音频</td></tr>
 
-<tr><td><strong>DisplayPort</strong></td><td>DisplayPort</td><td>20</td><td>甯﹂攣鎵ｇ煩褰?/td><td>鐜颁唬鍒嗙粍鍖栨暟瀛楁帴鍙ｏ紝鏃犲師鐢熸ā鎷熻緭鍑?/td></tr>
+<tr><td><strong>DisplayPort</strong></td><td>DisplayPort</td><td>20</td><td>带锁扣矩形</td><td>现代分组化数字接口，无原生模拟输出</td></tr>
 
 </table>
 
-<p><em>鎻愮ず锛氬皢CGA/EGA宸ヤ笟璁惧鏀归€犱负鐜颁唬鏄剧ず鍣ㄦ椂锛屾渶甯歌鐨勮浆鎺ラ摼璺负 CGA DE-9 鈫?VGA DE-15锛堥€氳繃杞崲鐩掞級鈫?DVI/HDMI锛堝闇€锛岄€氳繃鏈夋簮杞帴澶达級銆侰GA/EGA涓嶸GA涔嬮棿鐨勬棤婧愮洿閫氱嚎缂嗘棤娉曞伐浣滐紝鍘熷洜鏄俊鍙风被鍨嬫牴鏈笉鍚岋紙鏁板瓧TTL vs 妯℃嫙锛夈€?/em></p>
+<p><em>提示：将CGA/EGA工业设备改造为现代显示器时，最常见的转接链路为 CGA DE-9 → VGA DE-15（通过转换盒）→ DVI/HDMI（如需，通过有源转接头）。CGA/EGA与VGA之间的无源直通线缆无法工作，原因是信号类型根本不同（数字TTL vs 模拟）。</em></p>
 
-<p>濡傞渶淇″彿杞崲鏂规鐨勬妧鏈挩璇紝璇疯仈绯?strong>姹熷浘绉戞妧</strong>锛歴zkongto01@foxmail.com</p>
+<p>如需信号转换方案的技术咨询，请联系<strong>江图科技</strong>：szkongto01@foxmail.com</p>
 
 
 
@@ -457,11 +459,11 @@
 
 <div class="share-buttons">
 
-    <div class="share-title">鍒嗕韩鍒帮細</div>
+    <div class="share-title">分享到：</div>
 
     <div class="share-icons">
 
-        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="showWechatQR()" title="鍒嗕韩鍒板井淇?>
+        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="showWechatQR()" title="分享到微信">
 
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 
@@ -469,11 +471,11 @@
 
             </svg>
 
-            <span>寰俊</span>
+            <span>微信</span>
 
         </a>
 
-        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="鍒嗕韩鍒癓inkedIn">
+        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="分享到LinkedIn">
 
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 
@@ -485,7 +487,7 @@
 
         </a>
 
-        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="鍒嗕韩鍒癋acebook">
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到Facebook">
 
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 
@@ -497,7 +499,7 @@
 
         </a>
 
-        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="鍒嗕韩鍒癟witter">
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到Twitter">
 
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 
@@ -509,7 +511,7 @@
 
         </a>
 
-        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="澶嶅埗閾炬帴">
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
 
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 
@@ -517,7 +519,7 @@
 
             </svg>
 
-            <span>澶嶅埗閾炬帴</span>
+            <span>复制链接</span>
 
         </a>
 
@@ -525,8 +527,8 @@
 
     <div id="wechat-qr-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;" onclick="document.getElementById('wechat-qr-modal').style.display='none'">
         <div style="background:#fff;padding:30px;border-radius:12px;text-align:center;max-width:300px;" onclick="event.stopPropagation()">
-            <img src="/images/wechat-qr.png" alt="寰俊浜岀淮鐮? style="width:200px;height:200px;">
-            <p style="margin-top:12px;font-size:14px;color:#333;">鎵弿浜岀淮鐮佸垎浜埌寰俊</p>
+            <img src="/images/wechat-qr.png" alt="微信二维码" style="width:200px;height:200px;">
+            <p style="margin-top:12px;font-size:14px;color:#333;">扫描二维码分享到微信</p>
         </div>
     </div>
 </div>
@@ -554,7 +556,7 @@
 
     window.copyLink = function() {
         navigator.clipboard.writeText(window.location.href).then(function() {
-            alert('閾炬帴宸插鍒跺埌鍓创鏉匡紒');
+            alert('链接已复制到剪贴板！');
         }).catch(function() {
             var input = document.createElement('input');
             input.value = window.location.href;
@@ -562,7 +564,7 @@
             input.select();
             document.execCommand('copy');
             document.body.removeChild(input);
-            alert('閾炬帴宸插鍒跺埌鍓创鏉匡紒');
+            alert('链接已复制到剪贴板！');
         });
     };
 })();
@@ -578,35 +580,35 @@
 
 <section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
 
-    <h3 style="margin-top:0;">鐩稿叧鏂囩珷</h3>
+    <h3 style="margin-top:0;">相关文章</h3>
 
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">CGA/EGA杞琑GBHV宸ヤ笟鏄剧ず鍣ㄦ敼閫犳寚鍗?| 姹熷浘绉戞妧</a></li><li><a href="/posts/article_20260501_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD鏄剧ず鍣?鈥?CNC鍗囩骇鏇挎崲鎸囧崡</a></li><li><a href="/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC CRT杞琇CD瀹屾暣鍗囩骇鎸囧崡 | 姹熷浘绉戞妧</a></li></ul>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">CGA/EGA转RGBHV工业显示器改造指南 | 江图科技</a></li><li><a href="/posts/article_20260501_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD显示器 — CNC升级替换指南</a></li><li><a href="/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC CRT转LCD完整升级指南 | 江图科技</a></li></ul>
 
 </section>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">馃搶 鐩稿叧璧勬簮</p>
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 相关资源</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ 鍨嬪彿鍏煎鎬х煩闃?/a> 鈥?鏌ユ壘鎮ㄧ殑CRT鍨嬪彿</li>
-                <li><a href="/brands/">鎸夊搧鐗屾祻瑙?/a> 鈥?FANUC/涓夎彵/瑗块棬瀛?Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">鑾峰彇鎶ヤ环</a> 鈥?24灏忔椂鍐呭洖澶?/li>
+                <li><a href="/compatibility-matrix.html">95+ 型号兼容性矩阵</a> — 查找您的CRT型号</li>
+                <li><a href="/brands/">按品牌浏览</a> — FANUC/三菱/西门子/Mazak/Okuma/Haas</li>
+                <li><a href="/quote.html">获取报价</a> — 24小时内回复</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">姹熷浘绉戞妧 Kongto Technology</span>
-                <p>涓撴敞宸ヤ笟瑙嗛鏄剧ず瑙ｅ喅鏂规 鈥?CNC鏄剧ず鍣–RT杞琇CD鍗囩骇銆佸伐涓氳棰戜俊鍙疯浆鎹㈠櫒銆侀潪鏍囧畾鍒跺伐鎺ф樉绀哄櫒</p>
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
             </div>
             <div class="footer-links">
-                <a href="/posts/">馃搫 鎶€鏈枃绔?/a>
-                <a href="/brands/FANUC.html">FANUC鏂规</a>
-                <a href="/brands/Mitsubishi.html">涓夎彵鏂规</a>
-                <a href="/brands/Siemens.html">瑗块棬瀛愭柟妗?/a>
-                <a href="/docs/">璧勬枡涓嬭浇</a>
-                <a href="/about.html">鍏充簬鎴戜滑</a>
+                <a href="/posts/">📄 技术文章</a>
+                <a href="/brands/FANUC.html">FANUC方案</a>
+                <a href="/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/brands/Siemens.html">西门子方案</a>
+                <a href="/docs/">资料下载</a>
+                <a href="/about.html">关于我们</a>
             </div>
-            <p class="footer-copy">漏 2013-2026 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃 | 榫欏矖鍖烘í宀楄閬撴繁鍧戠患鍚堟ゼ2鍙锋ゼC鏍?妤?| 13686889647 | szkongto01@foxmail.com</p>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | szkongto01@foxmail.com</p>
         </div>
     </footer>
 
