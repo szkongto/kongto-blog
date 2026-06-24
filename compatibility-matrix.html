@@ -20,7 +20,7 @@
 .stats-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 auto 30px}.stat-chip{background:#f1f5f9;padding:6px 14px;border-radius:20px;font-size:13px;color:#475569}
 .compat-table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .no-results{display:none;text-align:center;padding:40px 20px;background:#fff7ed;border:2px solid #fed7aa;border-radius:12px;margin:20px 0}.no-results h3{color:#c2410c;margin:0 0 8px}.no-results p{color:#9a3412;margin:0}
-.tool-hero,.definition-block{display:none}
+.definition-block{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cncdisplay.com/"}, {"@type": "ListItem", "position": 2, "name": "Compatibility Matrix", "item": "https://cncdisplay.com/compatibility-matrix.html"}]}</script>
     <script type="application/ld+json">
@@ -215,7 +215,7 @@
     for(var k in brandCounts){ statsHtml += '<span class="stat-chip" style="font-size:12px;">'+brandNames[k]+' '+brandCounts[k]+'</span>'; }
     document.getElementById('cnStatsBar').innerHTML = statsHtml;
 
-    function cnFilterBrand(brand, btn){
+    window.cnFilterBrand = function(brand, btn){
         document.querySelectorAll('.brand-btn').forEach(function(b){ b.classList.remove('active'); });
         if(btn) btn.classList.add('active');
         var showAll = brand === 'all';
