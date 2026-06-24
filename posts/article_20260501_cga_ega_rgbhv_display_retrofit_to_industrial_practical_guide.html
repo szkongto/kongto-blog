@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="zh-CN">
 
@@ -8,32 +8,34 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗?  | 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃</title>
+    <title>CGA/EGA显示器改造为RGBHV工业显示器实战指南   | 深圳市江图科技有限公司</title>
 
-    <meta name="description" content="鏈枃浠嬬粛CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄧ殑瀹炴垬鏂规硶锛屾兜鐩栭渶姹傚垎鏋愩€佽浆鎹㈠櫒閫夊瀷銆佸疄鏂芥楠や笌缁存姢瑕佺偣锛屽府鍔╁伐绋嬪笀瀹屾垚鑰佹棫鏄剧ず璁惧鍗囩骇鏀归€犮€?>
-<meta name="author" content="姹熷浘绉戞妧">
+    <meta name="description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
+
+
+    <meta name="author" content="江图科技">
 
     <link rel="canonical" href="https://cncdisplay.com/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">
 
     <meta property="og:type" content="article">
 
-    <meta property="og:title" content="CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗? ">
+    <meta property="og:title" content="CGA/EGA显示器改造为RGBHV工业显示器实战指南  ">
 
-    <meta property="og:description" content="鏈枃浠嬬粛CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄧ殑瀹炴垬鏂规硶锛屾兜鐩栭渶姹傚垎鏋愩€佽浆鎹㈠櫒閫夊瀷銆佸疄鏂芥楠や笌缁存姢瑕佺偣锛屽府鍔╁伐绋嬪笀瀹屾垚鑰佹棫鏄剧ず璁惧鍗囩骇鏀归€犮€?>
+    <meta property="og:description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
 
     <meta property="og:image" content="https://cncdisplay.com/images/cga_ega_to_rgbhv_banner.jpg">
 
-    <meta property="og:site_name" content="娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃">
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
 
     <meta property="article:published_time" content="2026-05-01">
 
-    <meta property="article:author" content="姹熷浘绉戞妧">
+    <meta property="article:author" content="江图科技">
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗? ">
+    <meta name="twitter:title" content="CGA/EGA显示器改造为RGBHV工业显示器实战指南  ">
 
-    <meta name="twitter:description" content="鏈枃浠嬬粛CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄧ殑瀹炴垬鏂规硶锛屾兜鐩栭渶姹傚垎鏋愩€佽浆鎹㈠櫒閫夊瀷銆佸疄鏂芥楠や笌缁存姢瑕佺偣锛屽府鍔╁伐绋嬪笀瀹屾垚鑰佹棫鏄剧ず璁惧鍗囩骇鏀归€犮€?>
+    <meta name="twitter:description" content="本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。">
 
     <link rel="stylesheet" href="/css/style.css?v=7?v=6">
 
@@ -70,15 +72,15 @@
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗? ",
-  "description": "鏈枃浠嬬粛CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄧ殑瀹炴垬鏂规硶锛屾兜鐩栭渶姹傚垎鏋愩€佽浆鎹㈠櫒閫夊瀷銆佸疄鏂芥楠や笌缁存姢瑕佺偣锛屽府鍔╁伐绋嬪笀瀹屾垚鑰佹棫鏄剧ず璁惧鍗囩骇鏀归€犮€?,
+  "headline": "CGA/EGA显示器改造为RGBHV工业显示器实战指南  ",
+  "description": "本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。",
   "author": {
     "@type": "Person",
-    "name": "姹熷浘绉戞妧"
+    "name": "江图科技"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
+    "name": "深圳市江图科技有限公司",
     "url": "https://cncdisplay.com"
   },
   "datePublished": "2026-05-01"
@@ -92,7 +94,7 @@
 
     <meta name="geo.region" content="CN-44">
 
-    <meta name="geo.placename" content="娣卞湷榫欏矖">
+    <meta name="geo.placename" content="深圳龙岗">
 
     <meta name="geo.position" content="22.6568;113.9899">
 
@@ -109,18 +111,18 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://cncdisplay.com/#organization",
-  "name": "娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
+  "name": "深圳市江图科技有限公司",
   "alternateName": "Kongto Technology",
   "url": "https://cncdisplay.com",
-  "description": "涓撴敞宸ヤ笟瑙嗛鏄剧ず鍗囩骇鏂规锛孋NC鏄剧ず鍣–RT杞琇CD鍗囩骇涓撳",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
   "image": "/images/logo.png",
   "telephone": "+86-13686889647",
   "email": "szkongto01@foxmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "榫欏矖鍖烘í宀楄閬撴繁鍧戠患鍚堟ゼ2鍙锋ゼC鏍?妤?,
-    "addressLocality": "娣卞湷",
-    "addressRegion": "骞夸笢",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
     "postalCode": "518000",
     "addressCountry": "CN"
   },
@@ -160,13 +162,13 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "棣栭〉",
+      "name": "首页",
       "item": "https://cncdisplay.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗?  | 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
+      "name": "CGA/EGA显示器改造为RGBHV工业显示器实战指南   | 深圳市江图科技有限公司",
       "item": "https://cncdisplay.com/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html"
     }
   ]
@@ -178,18 +180,18 @@
 
 <body>    <header>
         <nav>
-            <a href="/" class="logo">姹熷浘绉戞妧</a>
+            <a href="/" class="logo">江图科技</a>
             <div class="nav-links">
-                <a href="/">棣栭〉</a><a href="/compatibility-matrix.html">鍏煎鏌ヨ</a>
-                <a href="/posts/">鏂囩珷</a>
-                <a href="/case-studies.html">妗堜緥</a>
-                <a href="/docs/">涓嬭浇</a>
-                <a href="/about.html">鍏充簬</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">鑾峰彇鎶ヤ环</a>
+                <a href="/">首页</a><a href="/compatibility-matrix.html">兼容查询</a>
+                <a href="/posts/">文章</a>
+                <a href="/case-studies.html">案例</a>
+                <a href="/docs/">下载</a>
+                <a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
             </div>
-            <a href="/search.html" class="nav-search">馃攳 鎼滅储</a>
+            <a href="/search.html" class="nav-search">🔍 搜索</a>
             <div class="lang-switch">
-                <a href="/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html" lang="zh" class="lang-zh">涓枃</a>
+                <a href="/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html" lang="zh" class="lang-zh">中文</a>
                 <span class="divider">|</span>
                 <a href="/en/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html" lang="en" class="lang-en">English</a>
             </div>
@@ -200,49 +202,49 @@
 
         <article class="post">
 
-            <h1>CGA/EGA鏄剧ず鍣ㄦ敼閫犱负RGBHV宸ヤ笟鏄剧ず鍣ㄥ疄鎴樻寚鍗? </h1>
+            <h1>CGA/EGA显示器改造为RGBHV工业显示器实战指南  </h1>
 
             <div class="meta">
 
                 <time datetime="2026-05-01">2026-05-01</time>
 
-                <span class="author">浣滆€? 姹熷浘绉戞妧</span>
+                <span class="author">作者: 江图科技</span>
 
             </div>
 
             <div class="content">
 
-                <p>鍏抽敭璇嶏細CGA鏄剧ず鍣ㄣ€丒GA鏄剧ず鍣ㄣ€佸伐涓氭樉绀哄櫒RGBHV鏀归€犮€佸伐涓氳棰戣浆鎹㈠櫒  </p><p>鐩爣璇昏€咃細CNC鏁版帶宸ョ▼甯堛€佽澶囩淮淇汉鍛樸€佸伐鎺х郴缁熼泦鎴愬晢銆佸伐涓氳嚜鍔ㄥ寲閲囪喘  </p><p>鏂囨。缁撴瀯 1. 鏀归€犻渶姹備笌鑳屾櫙鍒嗘瀽  
+                <p>关键词：CGA显示器、EGA显示器、工业显示器RGBHV改造、工业视频转换器  </p><p>目标读者：CNC数控工程师、设备维修人员、工控系统集成商、工业自动化采购  </p><p>文档结构 1. 改造需求与背景分析  
 
-> 2. 杞崲鍣ㄩ€夊瀷瑕佺偣  
+> 2. 转换器选型要点  
 
-> 3. 鏀归€犲疄鏂芥楠? 
+> 3. 改造实施步骤  
 
-> 4. 鏁堟灉璇勪及涓庣淮鎶? 
+> 4. 效果评估与维护  
 
-> 5. 瑕佺偣鎬荤粨  </p><hr>
+> 5. 要点总结  </p><hr>
 
             <div class="article-image img-hero">
 
                 
 
-                <p >CGA/EGA 鏍囧噯宸ヤ笟 CRT 鏄剧ず鍣紙鏀归€犲墠锛?/p>
+                <p >CGA/EGA 标准工业 CRT 显示器（改造前）</p>
 
             </div>
 
-            <h2>1. 鏀归€犻渶姹備笌鑳屾櫙鍒嗘瀽  </h2><h3>1.1 鑰佹棫鏄剧ず璁惧鍦ㄥ伐涓氱幇鍦虹殑鐜扮姸  </h3>
+            <h2>1. 改造需求与背景分析  </h2><h3>1.1 老旧显示设备在工业现场的现状  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>琛屼笟</th>
+    <th>行业</th>
 
-    <th>甯歌鑰佹棫鏄剧ず璁惧</th>
+    <th>常见老旧显示设备</th>
 
-    <th>浣跨敤骞撮檺 (骞冲潎)</th>
+    <th>使用年限 (平均)</th>
 
-    <th>涓昏鐥涚偣</th>
+    <th>主要痛点</th>
 
   </tr></thead>
 
@@ -250,37 +252,37 @@
 
     <tr>
 
-      <td>CNC鏁版帶鏈哄簥</td>
+      <td>CNC数控机床</td>
 
-      <td>CGA / EGA CRT 鏄剧ず鍣?/td>
+      <td>CGA / EGA CRT 显示器</td>
 
-      <td>12鈥?8 骞?/td>
+      <td>12‑18 年</td>
 
-      <td>鎺ュ彛鑰佹棫銆佸垎杈ㄧ巼浣庛€佸姛鑰楀ぇ銆佷綋绉閲?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>PLC 鎺у埗鏌?/td>
-
-      <td>鏃у紡宸ヤ笟鐩戣鍣?/td>
-
-      <td>10鈥?5 骞?/td>
-
-      <td>闅句互鍏煎鐜颁唬涓婁綅鏈恒€佺淮鎶ゆ垚鏈珮</td>
+      <td>接口老旧、分辨率低、功耗大、体积笨重</td>
 
     </tr>
 
     <tr>
 
-      <td>鑷姩鍖栫敓浜х嚎</td>
+      <td>PLC 控制柜</td>
 
-      <td>鏃у紡鍥惧儚閲囬泦鏄剧ず</td>
+      <td>旧式工业监视器</td>
 
-      <td>8鈥?3 骞?/td>
+      <td>10‑15 年</td>
 
-      <td>淇″彿琛板噺銆佹姉骞叉壈宸€佺淮淇绻?/td>
+      <td>难以兼容现代上位机、维护成本高</td>
+
+    </tr>
+
+    <tr>
+
+      <td>自动化生产线</td>
+
+      <td>旧式图像采集显示</td>
+
+      <td>8‑13 年</td>
+
+      <td>信号衰减、抗干扰差、维修频繁</td>
 
     </tr>
 
@@ -288,17 +290,17 @@
 
 </table>
 
-<p>鏁版嵁鏉ユ簮锛?023 骞淬€婁腑鍥藉伐涓氳嚜鍔ㄥ寲璁惧缁翠慨鎶ュ憡銆嬫樉绀猴紝瓒呰繃 38% 鐨勪腑灏忓瀷鍒堕€犱紒涓氫粛鍦ㄤ娇鐢?1990鈥?000 骞撮棿鐨?CGA/EGA 鏄剧ず鍣紝涓旀瘡鍙板勾鍧囩淮淇垚鏈害 1,200 鍏冧汉姘戝竵銆?/p><h3>1.2 鏀归€犵殑鏍稿績鐩爣  </h3>
+<p>数据来源：2023 年《中国工业自动化设备维修报告》显示，超过 38% 的中小型制造企业仍在使用 1990‑2000 年间的 CGA/EGA 显示器，且每台年均维修成本约 1,200 元人民币。</p><h3>1.2 改造的核心目标  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>鐩爣</th>
+    <th>目标</th>
 
-    <th>鍏抽敭鎸囨爣</th>
+    <th>关键指标</th>
 
-    <th>棰勬湡鏀剁泭</th>
+    <th>预期收益</th>
 
   </tr></thead>
 
@@ -306,41 +308,41 @@
 
     <tr>
 
-      <td>淇″彿鍏煎鎬?/td>
+      <td>信号兼容性</td>
 
-      <td>灏?CGA/EGA 澶嶅悎淇″彿鍗囩骇涓?RGBHV (VGA)</td>
+      <td>将 CGA/EGA 复合信号升级为 RGBHV (VGA)</td>
 
-      <td>鍏煎鐜颁唬宸ユ帶鏈恒€佸伐涓氱浉鏈?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>绋冲畾鎬?/td>
-
-      <td>7脳24 灏忔椂杩炵画杩愯锛岃鐮佺巼 < 0.01%</td>
-
-      <td>闄嶄綆鍋滄満鏃堕棿</td>
+      <td>兼容现代工控机、工业相机</td>
 
     </tr>
 
     <tr>
 
-      <td>鎴愭湰鎺у埗</td>
+      <td>稳定性</td>
 
-      <td>鍗曞彴鏀归€犳垚鏈?鈮?1,200 鍏冿紙鍚浆鎹㈠櫒銆佺嚎缂嗐€佷汉宸ワ級</td>
+      <td>7×24 小时连续运行，误码率 < 0.01%</td>
 
-      <td>鎶曡祫鍥炴姤鏈?鈮?12 涓湀</td>
+      <td>降低停机时间</td>
 
     </tr>
 
     <tr>
 
-      <td>鐜閫傚簲鎬?/td>
+      <td>成本控制</td>
 
-      <td>宸ヤ綔娓╁害 -20鈩儈+70鈩冿紝瀹藉帇 12鈥?6 VDC</td>
+      <td>单台改造成本 ≤ 1,200 元（含转换器、线缆、人工）</td>
 
-      <td>婊¤冻鎭跺姡宸ュ巶鐜闇€姹?/td>
+      <td>投资回报期 ≤ 12 个月</td>
+
+    </tr>
+
+    <tr>
+
+      <td>环境适应性</td>
+
+      <td>工作温度 -20℃~+70℃，宽压 12‑36 VDC</td>
+
+      <td>满足恶劣工厂环境需求</td>
 
     </tr>
 
@@ -348,23 +350,23 @@
 
 </table>
 
-<h3>1.3 涓轰粈涔堜笉鐩存帴鏇存崲涓哄伐涓氭恫鏅舵樉绀哄櫒锛? </h3>
+<h3>1.3 为什么不直接更换为工业液晶显示器？  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>鏂规</th>
+    <th>方案</th>
 
-    <th>鍒濆鎶曞叆</th>
+    <th>初始投入</th>
 
-    <th>缁存姢鎴愭湰</th>
+    <th>维护成本</th>
 
-    <th>瀹夎鍛ㄦ湡</th>
+    <th>安装周期</th>
 
-    <th>鍏煎鎬?/th>
+    <th>兼容性</th>
 
-    <th>澶囨敞</th>
+    <th>备注</th>
 
   </tr></thead>
 
@@ -372,33 +374,33 @@
 
     <tr>
 
-      <td>鐩存帴鏇存崲涓哄伐鎺т笓鐢ㄦ樉绀哄櫒</td>
+      <td>直接更换为工控专用显示器</td>
 
-      <td>2,500鈥?,500 鍏?鍙?/td>
+      <td>2,500–4,500 元/台</td>
 
-      <td>浣庯紙鍘傚淇濅慨锛?/td>
+      <td>低（厂家保修）</td>
 
-      <td>1鈥? 澶╋紙闇€閲嶆柊甯冪嚎锛?/td>
+      <td>1–2 天（需重新布线）</td>
 
-      <td>瀹屽叏鍏煎</td>
+      <td>完全兼容</td>
 
-      <td>闇€瑕佹媶闄ゆ棫 CRT銆侀噸鏂板竷绾裤€佸彲鑳藉奖鍝嶅凡鏈夋満绠辩粨鏋?/td>
+      <td>需要拆除旧 CRT、重新布线、可能影响已有机箱结构</td>
 
     </tr>
 
     <tr>
 
-      <td>鏀归€犱负 RGBHV 鏄剧ず</td>
+      <td>改造为 RGBHV 显示</td>
 
-      <td>800鈥?,200 鍏?鍙帮紙杞崲鍣?閰嶄欢锛?/td>
+      <td>800–1,200 元/台（转换器+配件）</td>
 
-      <td>涓瓑锛堣浆鎹㈠櫒瀵垮懡 5 骞达級</td>
+      <td>中等（转换器寿命 5 年）</td>
 
-      <td>4鈥? 灏忔椂锛堢幇鍦哄嵆鎻掑嵆鐢級</td>
+      <td>4–6 小时（现场即插即用）</td>
 
-      <td>瀹屽叏鍏煎</td>
+      <td>完全兼容</td>
 
-      <td>澶嶇敤鍘熸湁鏄剧ず鍣ㄥ澹炽€佸噺灏忔敼鍔ㄥ箙搴︺€侀檷浣庡仠鏈烘椂闂?/td>
+      <td>复用原有显示器外壳、减小改动幅度、降低停机时间</td>
 
     </tr>
 
@@ -406,27 +408,27 @@
 
 </table>
 
-<p>缁撹锛氬湪棰勭畻鍙楅檺銆佹敼閫犵獥鍙ｆ湡鐭殑椤圭洰涓紝CGA/EGA 鈫?RGBHV 鏀归€?鏄€т环姣旀渶楂樼殑鏂规銆?/p><hr>
+<p>结论：在预算受限、改造窗口期短的项目中，CGA/EGA → RGBHV 改造 是性价比最高的方案。</p><hr>
 
             <div class="article-image img-hero">
 
                 
 
-                <p >姹熷浘绉戞妧 JTX-CVR-001 宸ヤ笟瑙嗛淇″彿杞崲鍣紙CGA/EGA 鈫?RGBHV锛?/p>
+                <p >江图科技 JTX-CVR-001 工业视频信号转换器（CGA/EGA → RGBHV）</p>
 
             </div>
 
-            <h2>2. 杞崲鍣ㄩ€夊瀷瑕佺偣  </h2><h3>2.1 鏍稿績鎶€鏈弬鏁? </h3>
+            <h2>2. 转换器选型要点  </h2><h3>2.1 核心技术参数  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>鍙傛暟</th>
+    <th>参数</th>
 
-    <th>鎺ㄨ崘鍊?/th>
+    <th>推荐值</th>
 
-    <th>璇存槑</th>
+    <th>说明</th>
 
   </tr></thead>
 
@@ -434,91 +436,91 @@
 
     <tr>
 
-      <td>杈撳叆淇″彿</td>
+      <td>输入信号</td>
 
-      <td>CGA (15鈥痥Hz鈥椻€?0鈥疕z) / EGA (25鈥痥Hz鈥椻€?0鈥疕z)</td>
+      <td>CGA (15 kHz × 60 Hz) / EGA (25 kHz × 70 Hz)</td>
 
-      <td>鏀寔鏍囧噯 CGA/EGA 鏃跺簭</td>
-
-    </tr>
-
-    <tr>
-
-      <td>杈撳嚭淇″彿</td>
-
-      <td>RGBHV (VGA 640脳480@60鈥疕z銆?00脳600@60鈥疕z)</td>
-
-      <td>鍙€?3鈥? 绉嶅垎杈ㄧ巼</td>
+      <td>支持标准 CGA/EGA 时序</td>
 
     </tr>
 
     <tr>
 
-      <td>鍍忕礌鏃堕挓</td>
+      <td>输出信号</td>
 
-      <td>25鈥疢Hz鈥?0鈥疢Hz</td>
+      <td>RGBHV (VGA 640×480@60 Hz、800×600@60 Hz)</td>
 
-      <td>婊¤冻 VGA 鏈€楂?800脳600</td>
-
-    </tr>
-
-    <tr>
-
-      <td>鏀寔瀹芥俯</td>
-
-      <td>-20鈥剝~+70鈥剝</td>
-
-      <td>宸ヤ笟绾х幆澧?/td>
+      <td>可选 3‑5 种分辨率</td>
 
     </tr>
 
     <tr>
 
-      <td>宸ヤ綔鐢靛帇</td>
+      <td>像素时钟</td>
 
-      <td>12鈥?6鈥疺DC锛堝彲閫?24鈥疺锛?/td>
+      <td>25 MHz‑40 MHz</td>
 
-      <td>涓?PLC/鐢垫簮鏌滃吋瀹?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>鐢电鍏煎 (EMC)</td>
-
-      <td>IEC/EN 61326鈥? Class鈥?</td>
-
-      <td>鎶楀共鎵拌兘鍔涘己</td>
+      <td>满足 VGA 最高 800×600</td>
 
     </tr>
 
     <tr>
 
-      <td>杈撳叆/杈撳嚭闃绘姉</td>
+      <td>支持宽温</td>
 
-      <td>75鈥╋紙CGA/EGA锛? 75鈥╋紙RGBHV)</td>
+      <td>-20 ℃~+70 ℃</td>
 
-      <td>闃叉淇″彿鍙嶅皠</td>
-
-    </tr>
-
-    <tr>
-
-      <td>渚涚數鏂瑰紡</td>
-
-      <td>鍗虫彃鍗崇敤銆佹棤澶栭儴椹卞姩</td>
-
-      <td>鐜板満蹇€熼儴缃?/td>
+      <td>工业级环境</td>
 
     </tr>
 
     <tr>
 
-      <td>鍙潬鎬?/td>
+      <td>工作电压</td>
 
-      <td>MTBF 鈮?>30,000 h</td>
+      <td>12‑36 VDC（可选 24 V）</td>
 
-      <td>7脳24鈥痟 杩炵画杩愯</td>
+      <td>与 PLC/电源柜兼容</td>
+
+    </tr>
+
+    <tr>
+
+      <td>电磁兼容 (EMC)</td>
+
+      <td>IEC/EN 61326‑1 Class 2</td>
+
+      <td>抗干扰能力强</td>
+
+    </tr>
+
+    <tr>
+
+      <td>输入/输出阻抗</td>
+
+      <td>75 Ω（CGA/EGA）/ 75 Ω（RGBHV)</td>
+
+      <td>防止信号反射</td>
+
+    </tr>
+
+    <tr>
+
+      <td>供电方式</td>
+
+      <td>即插即用、无外部驱动</td>
+
+      <td>现场快速部署</td>
+
+    </tr>
+
+    <tr>
+
+      <td>可靠性</td>
+
+      <td>MTBF ≥ >30,000 h</td>
+
+      <td>7×24 h 连续运行</td>
 
     </tr>
 
@@ -526,19 +528,19 @@
 
 </table>
 
-<p>浜у搧鎺ㄨ崘锛氭睙鍥剧鎶€ 宸ヤ笟瑙嗛淇″彿杞崲鍣紙CGA/EGA 鈫?RGBHV锛夛紙鍨嬪彿锛欽TX鈥慍VR鈥?01锛夛紝绗﹀悎涓婅堪鍏ㄩ儴鎸囨爣锛屽凡閫氳繃 CE銆乁L銆両SO9001 璁よ瘉銆?/p><h3>2.2 涓庣珵鍝佺殑瀵规瘮  </h3>
+<p>产品推荐：江图科技 工业视频信号转换器（CGA/EGA → RGBHV）（型号：JTX‑CVR‑001），符合上述全部指标，已通过 CE、UL、ISO9001 认证。</p><h3>2.2 与竞品的对比  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>椤圭洰</th>
+    <th>项目</th>
 
-    <th>姹熷浘宸ヤ笟瑙嗛杞崲鍣?/th>
+    <th>江图工业视频转换器</th>
 
-    <th>浼犵粺娑堣垂绾?HDMI鈥憈o鈥慥GA 閫傞厤鍣?/th>
+    <th>传统消费级 HDMI‑to‑VGA 适配器</th>
 
-    <th>绔炰簤瀵规墜宸ヤ笟鏄剧ず鍣?(鍐呯疆杞崲)</th>
+    <th>竞争对手工业显示器 (内置转换)</th>
 
   </tr></thead>
 
@@ -546,37 +548,37 @@
 
     <tr>
 
-      <td>鏀寔淇″彿</td>
+      <td>支持信号</td>
 
-      <td>CGA/EGA 鈫?RGBHV</td>
+      <td>CGA/EGA → RGBHV</td>
 
-      <td>HDMI 鈫?VGA锛堜笉鏀寔 CGA/EGA锛?/td>
+      <td>HDMI → VGA（不支持 CGA/EGA）</td>
 
-      <td>鐩存帴杈撳嚭 VGA锛堥渶鏇存崲鏄剧ず鍣級</td>
-
-    </tr>
-
-    <tr>
-
-      <td>娓╁害鑼冨洿</td>
-
-      <td>-20鈩儈+70鈩?/td>
-
-      <td>0鈩儈+45鈩?/td>
-
-      <td>-10鈩儈+60鈩?/td>
+      <td>直接输出 VGA（需更换显示器）</td>
 
     </tr>
 
     <tr>
 
-      <td>鐢垫簮</td>
+      <td>温度范围</td>
 
-      <td>12鈥?6鈥疺DC锛堝鍘嬶級</td>
+      <td>-20℃~+70℃</td>
 
-      <td>5鈥疺 USB</td>
+      <td>0℃~+45℃</td>
 
-      <td>12鈥疺 DC</td>
+      <td>-10℃~+60℃</td>
+
+    </tr>
+
+    <tr>
+
+      <td>电源</td>
+
+      <td>12‑36 VDC（宽压）</td>
+
+      <td>5 V USB</td>
+
+      <td>12 V DC</td>
 
     </tr>
 
@@ -584,35 +586,35 @@
 
       <td>MTBF</td>
 
-      <td>鈮?50,000鈥痟</td>
+      <td>≥ 50,000 h</td>
 
-      <td>10,000鈥痟</td>
+      <td>10,000 h</td>
 
-      <td>30,000鈥痟</td>
-
-    </tr>
-
-    <tr>
-
-      <td>鍗虫彃鍗崇敤</td>
-
-      <td>鉁?/td>
-
-      <td>閮ㄥ垎闇€椹卞姩</td>
-
-      <td>鉁?/td>
+      <td>30,000 h</td>
 
     </tr>
 
     <tr>
 
-      <td>鎴愭湰锛堝崟鍙帮級</td>
+      <td>即插即用</td>
 
-      <td>绾?850 鍏?/td>
+      <td>✔</td>
 
-      <td>绾?120 鍏冿紙涓嶉€傜敤锛?/td>
+      <td>部分需驱动</td>
 
-      <td>绾?2,800 鍏?/td>
+      <td>✔</td>
+
+    </tr>
+
+    <tr>
+
+      <td>成本（单台）</td>
+
+      <td>约 850 元</td>
+
+      <td>约 120 元（不适用）</td>
+
+      <td>约 2,800 元</td>
 
     </tr>
 
@@ -620,27 +622,27 @@
 
 </table>
 
-<p>缁撹锛氬湪鑰佹棫 CGA/EGA 鐜涓嬶紝鍞竴鑳界洿鎺ユ帴鍏ョ殑宸ヤ笟绾ф柟妗堟槸 姹熷浘瑙嗛杞崲鍣紝鍏跺湪娓╁害銆佷緵鐢点€佸彲闈犳€ф柟闈㈠潎浼樹簬娑堣垂绾ч€傞厤鍣紝骞朵笖鎴愭湰杩滀綆浜庢洿鎹㈡暣鏈烘樉绀哄櫒銆?/p><hr>
+<p>结论：在老旧 CGA/EGA 环境下，唯一能直接接入的工业级方案是 江图视频转换器，其在温度、供电、可靠性方面均优于消费级适配器，并且成本远低于更换整机显示器。</p><hr>
 
             <div class="article-image img-step">
 
                 
 
-                <p >CGA/EGA 杞?RGBHV 鎺ョ嚎绀烘剰鍥撅紙BNC 鈫?VGA锛?/p>
+                <p >CGA/EGA 转 RGBHV 接线示意图（BNC → VGA）</p>
 
             </div>
 
-            <h2>3. 鏀归€犲疄鏂芥楠? </h2><p>瀹夊叏鎻愮ず锛氭墍鏈夋搷浣滃繀椤诲湪鏂數鐘舵€佷笅杩涜锛屼僵鎴撮槻闈欑數鎵嬬幆锛岄伒瀹堜紒涓氱幇鍦哄畨鍏ㄨ鑼冦€?/p><h3>3.1 鍓嶆湡鍑嗗  </h3>
+            <h2>3. 改造实施步骤  </h2><p>安全提示：所有操作必须在断电状态下进行，佩戴防静电手环，遵守企业现场安全规范。</p><h3>3.1 前期准备  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>椤圭洰</th>
+    <th>项目</th>
 
-    <th>鍐呭</th>
+    <th>内容</th>
 
-    <th>鍏抽敭鐐?/th>
+    <th>关键点</th>
 
   </tr></thead>
 
@@ -648,41 +650,41 @@
 
     <tr>
 
-      <td>鐜板満鍕樻煡</td>
+      <td>现场勘查</td>
 
-      <td>璁板綍鏄剧ず鍣ㄥ瀷鍙枫€佸昂瀵搞€佸澹崇粨鏋勩€佷緵鐢垫柟寮?/td>
+      <td>记录显示器型号、尺寸、外壳结构、供电方式</td>
 
-      <td>纭鏄惁涓?CGA锛?5鈥痥Hz锛夋垨 EGA锛?5鈥痥Hz锛?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>璁惧娓呭崟</td>
-
-      <td>杞崲鍣ㄣ€丅NC鈥憈o鈥慠CA 绾裤€乂GA鈥憈o鈥慏鈥慡ub 绾裤€佽灪涓濆垁銆佺粷缂樿兌甯?/td>
-
-      <td>寤鸿棰勭暀 10% 澶囦欢</td>
+      <td>确认是否为 CGA（15 kHz）或 EGA（25 kHz）</td>
 
     </tr>
 
     <tr>
 
-      <td>鐢垫簮妫€鏌?/td>
+      <td>设备清单</td>
 
-      <td>纭渚涚數鐢靛帇鑼冨洿锛?2鈥?4鈥疺锛?/td>
+      <td>转换器、BNC‑to‑RCA 线、VGA‑to‑D‑Sub 线、螺丝刀、绝缘胶带</td>
 
-      <td>濡傝秴鍑鸿寖鍥达紝鍑嗗 DC鈥慏C 闄嶅帇妯″潡</td>
+      <td>建议预留 10% 备件</td>
 
     </tr>
 
     <tr>
 
-      <td>鐜璇勪及</td>
+      <td>电源检查</td>
 
-      <td>娓╁害銆佹箍搴︺€佹尟鍔?/td>
+      <td>确认供电电压范围（12‑24 V）</td>
 
-      <td>濡傛俯搴?> 60鈩冿紝閫夌敤鍔犺鏁ｇ儹鐗囩殑杞崲鍣ㄥ瀷鍙?/td>
+      <td>如超出范围，准备 DC‑DC 降压模块</td>
+
+    </tr>
+
+    <tr>
+
+      <td>环境评估</td>
+
+      <td>温度、湿度、振动</td>
+
+      <td>如温度 > 60℃，选用加装散热片的转换器型号</td>
 
     </tr>
 
@@ -690,39 +692,39 @@
 
 </table>
 
-<h3>3.2 纭欢鎺ョ嚎  </h3><p>1. 鎷嗛櫎鏃ф樉绀哄櫒鐨勪俊鍙风嚎  
+<h3>3.2 硬件接线  </h3><p>1. 拆除旧显示器的信号线  
 
-   - CGA锛氶€氬父涓?9鈥戦拡 D鈥憇ub锛圖B鈥?锛夋垨 15鈥戦拡锛圖B鈥?5锛? 
+   - CGA：通常为 9‑针 D‑sub（DB‑9）或 15‑针（DB‑15）  
 
-   - EGA锛?5鈥戦拡锛圖B鈥?5锛? 
+   - EGA：15‑针（DB‑15）  
 
-   - 璁板綍閽堣剼瀵瑰簲鍏崇郴锛堝弬鑰冮檮褰?A锛? </p><p>2. 杩炴帴淇″彿杈撳叆  
+   - 记录针脚对应关系（参考附录 A）  </p><p>2. 连接信号输入  
 
-   - 浣跨敤 BNC鈥憈o鈥慠CA锛堟垨 BNC鈥憈o鈥慏B鈥?5锛夎浆鎺ョ嚎锛屽皢 CGA/EGA 鐨?R銆丟銆丅銆丠銆乂 绔彛鍒嗗埆鎺ヨ嚦杞崲鍣ㄧ殑瀵瑰簲杈撳叆绔彛銆? 
+   - 使用 BNC‑to‑RCA（或 BNC‑to‑DB‑15）转接线，将 CGA/EGA 的 R、G、B、H、V 端口分别接至转换器的对应输入端口。  
 
-   - 娉ㄦ剰淇濇寔 75鈥?闃绘姉鍖归厤锛岀嚎闀夸笉瀹滆秴杩?3鈥痬锛岄伩鍏嶄俊鍙疯“鍑忋€? </p><p>3. 渚涚數鎺ュ叆  
+   - 注意保持 75 Ω 阻抗匹配，线长不宜超过 3 m，避免信号衰减。  </p><p>3. 供电接入  
 
-   - 灏嗚浆鎹㈠櫒鐨?+12鈥疺/24鈥疺 渚涚數绾垮苟鍏ュ師鏄剧ず鍣ㄧ殑鐢垫簮绾匡紙浣跨敤 鍒嗘帴澶达級锛岀‘淇濇瀬鎬ф纭€? 
+   - 将转换器的 +12 V/24 V 供电线并入原显示器的电源线（使用 分接头），确保极性正确。  
 
-   - 濡傚師鐢垫簮涓?110鈥疺 AC锛岃浣跨敤 24鈥疺 DC 绋冲帇鐢垫簮锛堝姛鐜?鈮?5鈥疻锛変緵鐢点€? </p><p>4. 杈撳嚭鑷虫樉绀哄櫒  
+   - 如原电源为 110 V AC，请使用 24 V DC 稳压电源（功率 ≥ 5 W）供电。  </p><p>4. 输出至显示器  
 
-   - 杞崲鍣ㄧ殑 RGBHV 杈撳嚭閫氳繃 VGA鈥憈o鈥慏鈥慡ub 绾胯繛鎺ヨ嚦鏄剧ず鍣ㄥ唴閮ㄧ殑 VGA 鎺ュ彛锛堣嫢涓?CRT锛岄渶鏀硅涓?VGA 鍏煎鐨?RGBHV 鎺ュ彛鏉匡級  
+   - 转换器的 RGBHV 输出通过 VGA‑to‑D‑Sub 线连接至显示器内部的 VGA 接口（若为 CRT，需改装为 VGA 兼容的 RGBHV 接口板）  
 
-   - 鑻ユ樉绀哄櫒鍐呴儴鏃?VGA 鎺ュ彛锛屽彲鍦ㄦ樉绀哄櫒鍚庣洊棰勭暀 VGA 鎻掓Ы锛屽苟浣跨敤 閲戝睘灞忚斀鐩?鍥哄畾銆? </p><p>5. 鍥哄畾涓庨槻鎶? 
+   - 若显示器内部无 VGA 接口，可在显示器后盖预留 VGA 插槽，并使用 金属屏蔽盒 固定。  </p><p>5. 固定与防护  
 
-   - 浣跨敤 涓嶉攬閽㈣灪涓?灏嗚浆鎹㈠櫒鍥哄畾鍦ㄦ樉绀哄櫒鑳屾澘鐨勮灪瀛斾笂锛岄槻姝㈤渿鍔ㄨ劚钀姐€? 
+   - 使用 不锈钢螺丝 将转换器固定在显示器背板的螺孔上，防止震动脱落。  
 
-   - 瀵规墍鏈夎８闇茬殑鎺ョ嚎鍋?鐑缉绠?鍖呰９锛岄槻姝㈢煭璺€? </p><h3>3.3 杞欢璋冭瘯锛堜粎闄愭湁鍙皟鍙傛暟鐨勮浆鎹㈠櫒锛? </h3>
+   - 对所有裸露的接线做 热缩管 包裹，防止短路。  </p><h3>3.3 软件调试（仅限有可调参数的转换器）  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>姝ラ</th>
+    <th>步骤</th>
 
-    <th>鎿嶄綔</th>
+    <th>操作</th>
 
-    <th>璇存槑</th>
+    <th>说明</th>
 
   </tr></thead>
 
@@ -732,9 +734,9 @@
 
       <td>1</td>
 
-      <td>涓婄數妫€鏌ユ寚绀虹伅</td>
+      <td>上电检查指示灯</td>
 
-      <td>缁跨伅甯镐寒琛ㄧず渚涚數姝ｅ父锛岄粍鐏棯鐑佽〃绀轰俊鍙锋娴?/td>
+      <td>绿灯常亮表示供电正常，黄灯闪烁表示信号检测</td>
 
     </tr>
 
@@ -742,9 +744,9 @@
 
       <td>2</td>
 
-      <td>鍒囨崲鍒嗚鲸鐜?/td>
+      <td>切换分辨率</td>
 
-      <td>閫氳繃 鎷ㄧ爜寮€鍏?鎴?鏃嬮挳 閫夋嫨 640脳480銆?00脳600銆?024脳768锛堥儴鍒嗗瀷鍙凤級</td>
+      <td>通过 拨码开关 或 旋钮 选择 640×480、800×600、1024×768（部分型号）</td>
 
     </tr>
 
@@ -752,9 +754,9 @@
 
       <td>3</td>
 
-      <td>璋冩暣鏃跺簭</td>
+      <td>调整时序</td>
 
-      <td>濡傚嚭鐜板浘鍍忔挄瑁傦紝鍙井璋?琛屽悓姝ワ紙V锛?涓?鍒楀悓姝ワ紙H锛?寤惰繜锛埪?鈥痭s锛?/td>
+      <td>如出现图像撕裂，可微调 行同步（V） 与 列同步（H） 延迟（±5 ns）</td>
 
     </tr>
 
@@ -762,9 +764,9 @@
 
       <td>4</td>
 
-      <td>瑙傚療鍥惧儚</td>
+      <td>观察图像</td>
 
-      <td>纭鏃犻鑹插亸绉汇€佹棤鎶栧姩銆佹枃瀛楁竻鏅?/td>
+      <td>确认无颜色偏移、无抖动、文字清晰</td>
 
     </tr>
 
@@ -772,15 +774,15 @@
 
 </table>
 
-<p>鎻愮ず锛氬ぇ澶氭暟姹熷浘杞崲鍣ㄤ负 鍗虫彃鍗崇敤锛屾棤闇€浠讳綍杞欢閰嶇疆锛屼互涓婅皟璇曚粎鍦ㄧ壒娈婄幇鍦猴紙闀胯窛绂讳紶杈撱€佸己鐢电骞叉壈锛夋椂浣跨敤銆?/p><h3>3.4 楠岃瘉涓庝氦浠? </h3>
+<p>提示：大多数江图转换器为 即插即用，无需任何软件配置，以上调试仅在特殊现场（长距离传输、强电磁干扰）时使用。</p><h3>3.4 验证与交付  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>楠岃瘉椤圭洰</th>
+    <th>验证项目</th>
 
-    <th>鍒ゅ畾鏍囧噯</th>
+    <th>判定标准</th>
 
   </tr></thead>
 
@@ -788,41 +790,41 @@
 
     <tr>
 
-      <td>鍥惧儚鍒嗚鲸鐜?/td>
+      <td>图像分辨率</td>
 
-      <td>涓庤瀹氬垎杈ㄧ巼瀹屽叏涓€鑷?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>鑹插僵鍑嗙‘搴?/td>
-
-      <td>螖E 鈮?3锛堜娇鐢ㄨ壊搴﹁娴嬮噺锛?/td>
+      <td>与设定分辨率完全一致</td>
 
     </tr>
 
     <tr>
 
-      <td>淇″彿瀹屾暣鎬?/td>
+      <td>色彩准确度</td>
 
-      <td>绀烘尝鍣ㄦ祴寰楁姈鍔?鈮?0.5鈥痭s</td>
-
-    </tr>
-
-    <tr>
-
-      <td>绋冲畾杩愯</td>
-
-      <td>杩炵画 48鈥痟 鏃犳帀甯ф垨閲嶅惎</td>
+      <td>ΔE ≤ 3（使用色度计测量）</td>
 
     </tr>
 
     <tr>
 
-      <td>鐜閫傚簲鎬?/td>
+      <td>信号完整性</td>
 
-      <td>鍦ㄧ幇鍦烘渶楂樻俯搴︿笅锛?70鈩冿級杩愯 8鈥痟</td>
+      <td>示波器测得抖动 ≤ 0.5 ns</td>
+
+    </tr>
+
+    <tr>
+
+      <td>稳定运行</td>
+
+      <td>连续 48 h 无掉帧或重启</td>
+
+    </tr>
+
+    <tr>
+
+      <td>环境适应性</td>
+
+      <td>在现场最高温度下（+70℃）运行 8 h</td>
 
     </tr>
 
@@ -830,29 +832,29 @@
 
 </table>
 
-<p>瀹屾垚涓婅堪妫€鏌ュ悗锛屽～鍐欍€婃敼閫犻獙鏀舵姤鍛娿€嬶紝浜や粯缁欑幇鍦鸿礋璐ｄ汉銆?/p><hr>
+<p>完成上述检查后，填写《改造验收报告》，交付给现场负责人。</p><hr>
 
             <div class="article-image img-chart">
 
                 
 
-                <p >鏀归€犲悗 RGBHV 鏄剧ず鏁堟灉锛堝乏锛氭敼閫犲墠 CRT锛屽彸锛氭敼閫犲悗 LCD + 杞崲鍣級</p>
+                <p >改造后 RGBHV 显示效果（左：改造前 CRT，右：改造后 LCD + 转换器）</p>
 
             </div>
 
-            <h2>4. 鏁堟灉璇勪及涓庣淮鎶? </h2><h3>4.1 鏀归€犲悗鎬ц兘瀵规瘮锛堟渚嬶級  </h3><p><div class="case-box">馃搳 妗堜緥 1 鈥?鏌愭苯杞﹂浂閮ㄤ欢鍘?CNC 鏈哄簥  </p>
+            <h2>4. 效果评估与维护  </h2><h3>4.1 改造后性能对比（案例）  </h3><p><div class="case-box">📊 案例 1 – 某汽车零部件厂 CNC 机床  </p>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>椤圭洰</th>
+    <th>项目</th>
 
-    <th>鏀归€犲墠 (CGA)</th>
+    <th>改造前 (CGA)</th>
 
-    <th>鏀归€犲悗 (RGBHV)</th>
+    <th>改造后 (RGBHV)</th>
 
-    <th>鏀归€犳敹鐩?/th>
+    <th>改造收益</th>
 
   </tr></thead>
 
@@ -860,61 +862,61 @@
 
     <tr>
 
-      <td>鍒嗚鲸鐜?/td>
+      <td>分辨率</td>
 
-      <td>640脳350</td>
+      <td>640×350</td>
 
-      <td>800脳600</td>
+      <td>800×600</td>
 
-      <td>1.8脳 瑙嗚缁嗚妭鎻愬崌</td>
-
-    </tr>
-
-    <tr>
-
-      <td>淇″彿鍣０</td>
-
-      <td>绾?3鈥? 閿欒鐜?/td>
-
-      <td>< 0.01鈥?</td>
-
-      <td>绋冲畾鎬ф彁鍗?300 鍊?/td>
+      <td>1.8× 视觉细节提升</td>
 
     </tr>
 
     <tr>
 
-      <td>鑳借€?/td>
+      <td>信号噪声</td>
 
-      <td>120鈥疻 (CRT)</td>
+      <td>约 3 % 错误率</td>
 
-      <td>30鈥疻 (CRT + 杞崲鍣?</td>
+      <td>< 0.01 %</td>
 
-      <td>鑺傝兘 75鈥?</td>
-
-    </tr>
-
-    <tr>
-
-      <td>缁翠慨娆℃暟 (骞?</td>
-
-      <td>6 娆?/td>
-
-      <td>1 娆?/td>
-
-      <td>缁翠慨鎴愭湰 鈫?83鈥?</td>
+      <td>稳定性提升 300 倍</td>
 
     </tr>
 
     <tr>
 
-      <td>鍋滄満鏃堕棿 (h)</td>
+      <td>能耗</td>
 
-      <td>12鈥痟</td>
+      <td>120 W (CRT)</td>
 
-      <td>1鈥痟</td>
+      <td>30 W (CRT + 转换器)</td>
 
-      <td>鐢熶骇鏁堢巼鎻愬崌 92鈥?</td>
+      <td>节能 75 %</td>
+
+    </tr>
+
+    <tr>
+
+      <td>维修次数 (年)</td>
+
+      <td>6 次</td>
+
+      <td>1 次</td>
+
+      <td>维修成本 ↓ 83 %</td>
+
+    </tr>
+
+    <tr>
+
+      <td>停机时间 (h)</td>
+
+      <td>12 h</td>
+
+      <td>1 h</td>
+
+      <td>生产效率提升 92 %</td>
 
     </tr>
 
@@ -922,19 +924,19 @@
 
 </table>
 
-<p>妗堜緥 2 鈥?鏌愮數瀛愯閰嶇嚎 PLC 鎺у埗鏌? </p>
+<p>案例 2 – 某电子装配线 PLC 控制柜  </p>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>椤圭洰</th>
+    <th>项目</th>
 
-    <th>鏀归€犲墠 (EGA)</th>
+    <th>改造前 (EGA)</th>
 
-    <th>鏀归€犲悗 (RGBHV)</th>
+    <th>改造后 (RGBHV)</th>
 
-    <th>澶囨敞</th>
+    <th>备注</th>
 
   </tr></thead>
 
@@ -942,37 +944,37 @@
 
     <tr>
 
-      <td>鎺ュ彛鍏煎鎬?/td>
+      <td>接口兼容性</td>
 
-      <td>浠呮敮鎸佷笓鐢ㄤ笂浣嶆満</td>
+      <td>仅支持专用上位机</td>
 
-      <td>鏀寔鏍囧噯 VGA銆丠DMI锛堢粡浜岀骇杞崲锛?/td>
+      <td>支持标准 VGA、HDMI（经二级转换）</td>
 
-      <td>鍙洿鎺ユ帴鍏ユ柊鐩戞帶绯荤粺</td>
-
-    </tr>
-
-    <tr>
-
-      <td>鎶楀共鎵拌兘鍔?/td>
-
-      <td>楂橀鍣０瀵艰嚧鍥惧儚闂儊</td>
-
-      <td>鏃犻棯鐑侊紝绗﹀悎 IEC 61326鈥?</td>
-
-      <td>鐜板満鐢电鐜 > 5鈥痥V/m</td>
+      <td>可直接接入新监控系统</td>
 
     </tr>
 
     <tr>
 
-      <td>浣跨敤瀵垮懡</td>
+      <td>抗干扰能力</td>
 
-      <td>CRT 棰勮 2025 骞存姤搴?/td>
+      <td>高频噪声导致图像闪烁</td>
 
-      <td>杞崲鍣?MTBF >30,000 h 骞?锛孋RT 缁х画浣跨敤鑷?2028 骞?/td>
+      <td>无闪烁，符合 IEC 61326‑1</td>
 
-      <td>寤堕暱鏁翠綋绯荤粺瀵垮懡 3 骞?/td>
+      <td>现场电磁环境 > 5 kV/m</td>
+
+    </tr>
+
+    <tr>
+
+      <td>使用寿命</td>
+
+      <td>CRT 预计 2025 年报废</td>
+
+      <td>转换器 MTBF >30,000 h 年+，CRT 继续使用至 2028 年</td>
+
+      <td>延长整体系统寿命 3 年</td>
 
     </tr>
 
@@ -980,17 +982,17 @@
 
 </table>
 
-<h3>4.2 缁存姢寤鸿  </h3>
+<h3>4.2 维护建议  </h3>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>缁存姢椤?/th>
+    <th>维护项</th>
 
-    <th>鍛ㄦ湡</th>
+    <th>周期</th>
 
-    <th>鎿嶄綔瑕佺偣</th>
+    <th>操作要点</th>
 
   </tr></thead>
 
@@ -998,51 +1000,51 @@
 
     <tr>
 
-      <td>澶栬妫€鏌?/td>
+      <td>外观检查</td>
 
-      <td>姣忔湀</td>
+      <td>每月</td>
 
-      <td>妫€鏌ヨ灪涓濇澗鍔ㄣ€佺嚎缂嗙（鎹熴€佹寚绀虹伅寮傚父</td>
-
-    </tr>
-
-    <tr>
-
-      <td>鐢垫簮妫€娴?/td>
-
-      <td>姣忓</td>
-
-      <td>鐢ㄤ竾鐢ㄨ〃娴嬮噺渚涚數鐢靛帇锛岀‘璁ゆ棤娉㈠姩</td>
+      <td>检查螺丝松动、线缆磨损、指示灯异常</td>
 
     </tr>
 
     <tr>
 
-      <td>淇″彿瀹屾暣鎬?/td>
+      <td>电源检测</td>
 
-      <td>姣忓崐骞?/td>
+      <td>每季</td>
 
-      <td>鐢ㄧず娉㈠櫒妫€鏌?RGBHV 淇″彿鎶栧姩銆佸悓姝ヨ剦鍐?/td>
-
-    </tr>
-
-    <tr>
-
-      <td>鍥轰欢鍗囩骇</td>
-
-      <td>濡傛湁</td>
-
-      <td>姹熷浘鎻愪緵 USB 鍥轰欢鍗囩骇宸ュ叿锛屽缓璁湪鐢熶骇鍋滄満绐楀彛杩涜</td>
+      <td>用万用表测量供电电压，确认无波动</td>
 
     </tr>
 
     <tr>
 
-      <td>娓呮磥</td>
+      <td>信号完整性</td>
 
-      <td>姣忔湀</td>
+      <td>每半年</td>
 
-      <td>浣跨敤鏃犲皹甯冩竻鐞嗘樉绀哄睆琛ㄩ潰锛岄伩鍏嶇伆灏樿繘鍏ュ唴閮ㄦ暎鐑瓟</td>
+      <td>用示波器检查 RGBHV 信号抖动、同步脉冲</td>
+
+    </tr>
+
+    <tr>
+
+      <td>固件升级</td>
+
+      <td>如有</td>
+
+      <td>江图提供 USB 固件升级工具，建议在生产停机窗口进行</td>
+
+    </tr>
+
+    <tr>
+
+      <td>清洁</td>
+
+      <td>每月</td>
+
+      <td>使用无尘布清理显示屏表面，避免灰尘进入内部散热孔</td>
 
     </tr>
 
@@ -1050,33 +1052,33 @@
 
 </table>
 
-<p>澶囦欢绠＄悊锛氬缓璁幇鍦哄父澶?杞崲鍣紙1 鍙帮級+ BNC鈥憈o鈥慠CA 绾匡紙2 鏉★級+ VGA 绾匡紙2 鏉★級锛屽彲鍦?2鈥痟 鍐呭畬鎴愭晠闅滄洿鎹€?/p><hr>
+<p>备件管理：建议现场常备 转换器（1 台）+ BNC‑to‑RCA 线（2 条）+ VGA 线（2 条），可在 2 h 内完成故障更换。</p><hr>
 
             <div class="info-box">
 
-                馃摎 鐩稿叧闃呰锛?
+                📚 相关阅读：
 
                 <ul>
 
-                    <li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">宸ヤ笟瑙嗛淇″彿杞崲鍣ㄧ郴鍒楋細CGA/EGA杞琕GA 瑙ｅ喅鏂规</a></li>
+                    <li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">工业视频信号转换器系列：CGA/EGA转VGA 解决方案</a></li>
 
-                    <li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">宸ヤ笟鏄剧ず鍣?RGBHV 鏀归€犲叏鏀荤暐锛氫粠 CGA/EGA 鍒伴珮娓呮樉绀?/a></li>
+                    <li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">工业显示器 RGBHV 改造全攻略：从 CGA/EGA 到高清显示</a></li>
 
-                    <li><a href="/en/posts/comparison_20260501_vga_video_vs_hdmi_industrial_video_signal-converter_buying_guide.html">宸ヤ笟瑙嗛淇″彿杞崲鍣ㄩ€夎喘鎸囧崡</a></li>
+                    <li><a href="/en/posts/comparison_20260501_vga_video_vs_hdmi_industrial_video_signal-converter_buying_guide.html">工业视频信号转换器选购指南</a></li>
 
                 </ul>
 
             </div>
 
-            <h2>5. 瑕佺偣鎬荤粨  </h2>
+            <h2>5. 要点总结  </h2>
 
 <table class="spec-table">
 
   <thead><tr>
 
-    <th>搴忓彿</th>
+    <th>序号</th>
 
-    <th>鍏抽敭瑕佺偣</th>
+    <th>关键要点</th>
 
   </tr></thead>
 
@@ -1086,7 +1088,7 @@
 
       <td>1</td>
 
-      <td>鏀归€犲姩鍥狅細鑰佹棫 CGA/EGA 鏄剧ず鍣ㄦ垚鏈綆銆佺粨鏋勭ǔ鍥猴紝浣嗘帴鍙ｄ笉鍏煎鐜颁唬璁惧銆?/td>
+      <td>改造动因：老旧 CGA/EGA 显示器成本低、结构稳固，但接口不兼容现代设备。</td>
 
     </tr>
 
@@ -1094,7 +1096,7 @@
 
       <td>2</td>
 
-      <td>閫夊瀷鏍稿績锛氬伐涓氳棰戜俊鍙疯浆鎹㈠櫒蹇呴』婊¤冻瀹芥俯銆佸鍘嬨€?5鈥?闃绘姉鍖归厤銆?脳24鈥痟 鍙潬杩愯銆傛睙鍥剧殑 JTX鈥慍VR鈥?01 瀹屽叏绗﹀悎銆?/td>
+      <td>选型核心：工业视频信号转换器必须满足宽温、宽压、75 Ω 阻抗匹配、7×24 h 可靠运行。江图的 JTX‑CVR‑001 完全符合。</td>
 
     </tr>
 
@@ -1102,7 +1104,7 @@
 
       <td>3</td>
 
-      <td>瀹炴柦姝ラ锛氣憼鐜板満鍕樻煡 鈫?鈶′俊鍙枫€佷緵鐢点€佽緭鍑烘帴绾?鈫?鈶紙鍙€夛級鍙傛暟寰皟 鈫?鈶ｅ姛鑳介獙璇併€傚叏娴佺▼绾?4鈥? 灏忔椂瀹屾垚銆?/td>
+      <td>实施步骤：①现场勘查 → ②信号、供电、输出接线 → ③（可选）参数微调 → ④功能验证。全流程约 4–6 小时完成。</td>
 
     </tr>
 
@@ -1110,7 +1112,7 @@
 
       <td>4</td>
 
-      <td>瀹炴垬鏁堟灉锛氬垎杈ㄧ巼鎻愬崌 1.5鈥? 鍊嶃€佸姛鑰楅檷浣?70鈥? 浠ヤ笂銆佺淮淇鏁颁笅闄?80鈥? 浠ヤ笂锛屾樉钁楁彁鍗囦骇绾跨鍔ㄧ巼銆?/td>
+      <td>实战效果：分辨率提升 1.5‑2 倍、功耗降低 70 % 以上、维修次数下降 80 % 以上，显著提升产线稼动率。</td>
 
     </tr>
 
@@ -1118,7 +1120,7 @@
 
       <td>5</td>
 
-      <td>鍚庢湡缁存姢锛氬畾鏈熸鏌ヤ緵鐢点€佷俊鍙峰畬鏁存€с€佽灪涓濈揣鍥猴紱甯稿鍏抽敭澶囦欢锛屽疄鐜?2 灏忔椂鍐呭揩閫熸仮澶嶃€?/td>
+      <td>后期维护：定期检查供电、信号完整性、螺丝紧固；常备关键备件，实现 2 小时内快速恢复。</td>
 
     </tr>
 
@@ -1126,19 +1128,19 @@
 
 </table>
 
-<p>缁撹锛氶€氳繃鏈疄鎴樻寚鍗楋紝鎮ㄥ彲浠ュ湪鏈€灏忕殑璧勯噾鎶曞叆鍜屾渶鐭殑鍋滄満绐楀彛鍐咃紝灏嗗凡鏈夌殑 CGA/EGA 鑰佹棫鏄剧ず鍣ㄥ崌绾т负鍏煎鐜颁唬宸ヤ笟绯荤粺鐨?RGBHV 鏄剧ず缁堢銆傛睙鍥剧鎶€鐨勫伐涓氳棰戜俊鍙疯浆鎹㈠櫒鍑€?宸ヤ笟绾ц璁°€佸嵆鎻掑嵆鐢ㄣ€佸娓╁鍘?涓夊ぇ浼樺娍锛屽凡鎴愪负鏁版帶涓庡伐鎺ч鍩熻€佹棫鏄剧ず鏀归€犵殑棣栭€夋柟妗堛€? </p><hr><p>*鏈枃鏁版嵁鏉ユ簮浜庢睙鍥剧鎶€鍐呴儴娴嬭瘯鎶ュ憡銆?023鈥?024 骞磋涓氳皟鐮斿強瀹為檯椤圭洰妗堜緥锛岃嫢闇€鑾峰彇鏇磋缁嗙殑鎶€鏈墜鍐屾垨鎶ヤ环锛岃鑱旂郴娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃鍟嗗姟閮紙鐢佃瘽锛?3686889647锛夈€?  </p>
+<p>结语：通过本实战指南，您可以在最小的资金投入和最短的停机窗口内，将已有的 CGA/EGA 老旧显示器升级为兼容现代工业系统的 RGBHV 显示终端。江图科技的工业视频信号转换器凭借 工业级设计、即插即用、宽温宽压 三大优势，已成为数控与工控领域老旧显示改造的首选方案。  </p><hr><p>*本文数据来源于江图科技内部测试报告、2023‑2024 年行业调研及实际项目案例，若需获取更详细的技术手册或报价，请联系深圳市江图科技有限公司商务部（电话：13686889647）。*  </p>
 
             </div>
 
-        <div class="related-links"><h4>鐩稿叧闃呰</h4><ul>
+        <div class="related-links"><h4>相关阅读</h4><ul>
 
-<li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">宸ヤ笟瑙嗛淇″彿杞崲鍣ㄧ郴鍒?/a></li>
+<li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">工业视频信号转换器系列</a></li>
 
-<li><a href="/en/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html">宸ヤ笟瑙嗛淇″彿杞崲鍣ㄥ湪CNC绯荤粺涓殑搴旂敤</a></li>
+<li><a href="/en/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html">工业视频信号转换器在CNC系统中的应用</a></li>
 
-<li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">RGBHV鏀归€犲叏鏀荤暐</a></li>
+<li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">RGBHV改造全攻略</a></li>
 
-<li><a href="/en/posts/article_20260501_industrial_cnc_equipment_display_troubleshooting_and_repair_complete-guide.html">鏁呴殰璇婃柇涓庣淮淇?/a></li>
+<li><a href="/en/posts/article_20260501_industrial_cnc_equipment_display_troubleshooting_and_repair_complete-guide.html">故障诊断与维修</a></li>
 
 </ul></div>
 
@@ -1150,35 +1152,35 @@
 
 <section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
 
-    <h3 style="margin-top:0;">鐩稿叧鏂囩珷</h3>
+    <h3 style="margin-top:0;">相关文章</h3>
 
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC 鏁版帶鏄剧ず鍣?CRT 鈫?LCD 鍗囩骇瀹屾暣鎸囧崡   | 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃</a></li><li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">宸ヤ笟鏄剧ず鍣≧GBHV鏀归€犲叏鏀荤暐鈥斺€斾粠CGA/EGA鍒伴珮娓呮樉绀?  | 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃</a></li><li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">宸ヤ笟瑙嗛淇″彿杞崲鍣ㄧ郴鍒?  | 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃</a></li></ul>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC 数控显示器 CRT → LCD 升级完整指南   | 深圳市江图科技有限公司</a></li><li><a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示   | 深圳市江图科技有限公司</a></li><li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">工业视频信号转换器系列   | 深圳市江图科技有限公司</a></li></ul>
 
 </section>    
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">馃搶 Related Resources</p>
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> — Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">姹熷浘绉戞妧 Kongto Technology</span>
-                <p>涓撴敞宸ヤ笟瑙嗛鏄剧ず瑙ｅ喅鏂规 鈥?CNC鏄剧ず鍣–RT杞琇CD鍗囩骇銆佸伐涓氳棰戜俊鍙疯浆鎹㈠櫒銆侀潪鏍囧畾鍒跺伐鎺ф樉绀哄櫒</p>
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
             </div>
             <div class="footer-links">
-                <a href="/posts/">馃搫 鎶€鏈枃绔?/a>
-                <a href="/brands/FANUC.html">FANUC鏂规</a>
-                <a href="/brands/Mitsubishi.html">涓夎彵鏂规</a>
-                <a href="/brands/Siemens.html">瑗块棬瀛愭柟妗?/a>
-                <a href="/docs/">璧勬枡涓嬭浇</a>
-                <a href="/about.html">鍏充簬鎴戜滑</a>
+                <a href="/posts/">📄 技术文章</a>
+                <a href="/brands/FANUC.html">FANUC方案</a>
+                <a href="/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/brands/Siemens.html">西门子方案</a>
+                <a href="/docs/">资料下载</a>
+                <a href="/about.html">关于我们</a>
             </div>
-            <p class="footer-copy">漏 2013-2026 娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃 | 榫欏矖鍖烘í宀楄閬撴繁鍧戠患鍚堟ゼ2鍙锋ゼC鏍?妤?| 13686889647 | szkongto01@foxmail.com</p>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | szkongto01@foxmail.com</p>
         </div>
     </footer>
 
