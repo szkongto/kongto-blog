@@ -13,11 +13,11 @@
 ## 方法3：在URL后加随机参数
 将链接从：
 ```
-https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD替换方案.html
+https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD.html
 ```
 改为：
 ```
-https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD替换方案.html?v=2
+https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD.html?v=2
 ```
 
 ## 方法4：清除Cloudflare缓存

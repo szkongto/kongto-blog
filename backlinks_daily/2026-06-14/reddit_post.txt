@@ -1,0 +1,7 @@
+TITLE: Mitsubishi M64 monitor flickering on cold start
+
+Mitsubishi M64 with MDT962B CRT. Cold mornings = flickering for 20-30 min before stabilizing.
+
+Aging caps in the power section? Anyone fixed this?
+
+If I go LCD route — is it really plug-and-play with the 20-pin connector? No parameter changes?

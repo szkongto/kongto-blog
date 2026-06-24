@@ -1,0 +1,10 @@
+TITLE: CRT repair shop quoted $500 — reasonable?
+
+Quote to rebuild HV section on FANUC 18T CRT: $500, 90-day warranty.
+
+1998 machine, runs daily. Deciding:
+1. Pay $500, hope it lasts
+2. Used CRT on eBay ($200-400)
+3. LCD module
+
+Who went LCD in production? Vibration/temperature issues?

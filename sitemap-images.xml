@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- FANUC A61L-0001-0093 Product Page -->
+  <url>
+    <loc>https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html</loc>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_LCD_new_2.jpg</image:loc>
+      <image:title>FANUC A61L-0001-0093 LCD升级模块正面 工业级TFT液晶屏</image:title>
+      <image:caption>9英寸TFT-LCD工业屏 800×600分辨率 350-450cd/m²亮度 即插即用</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_CRT_old_2.jpg</image:loc>
+      <image:title>FANUC A61L-0001-0093 原装9英寸单色CRT显示器老化状态</image:title>
+      <image:caption>使用8-10年后典型老化状态 亮度衰减50%以上 字符模糊</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_LCD_back_3.jpg</image:loc>
+      <image:title>LCD升级模块背面 HONDA 20针接口 + DC 24V电源口</image:title>
+      <image:caption>信号接口与原装CRT完全兼容 直接对接无需改线 防呆设计</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_install_effect_2.jpg</image:loc>
+      <image:title>FANUC A61L-0001-0093 LCD装机完成效果</image:title>
+      <image:caption>画面清晰 亮度均匀 无闪烁 即插即用30分钟完成</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Mitsubishi MDT962B Product Page -->
+  <url>
+    <loc>https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html</loc>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/MDT962B_MDT962B-1A.jpg</image:loc>
+      <image:title>三菱MDT962B TFT-LCD工业液晶升级模块 9英寸</image:title>
+      <image:caption>兼容M64/E60/M500/M520数控系统 800×600分辨率 50000+小时寿命</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/MDT962B_MDT962B-1A-1.jpg</image:loc>
+      <image:title>三菱MDT962B升级模块背面接口</image:title>
+      <image:caption>原装接口直接连接 无需改线 安装孔位100%匹配</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/MDT962B_replacement_install.jpg</image:loc>
+      <image:title>三菱MDT962B LCD升级装机效果</image:title>
+      <image:caption>安装完成效果 即插即用 20-30分钟完成 无需修改CNC参数</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Siemens 6FC3988-7FA20 Product Page -->
+  <url>
+    <loc>https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html</loc>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/Siemens-SM0901-579417-TA-1.jpg</image:loc>
+      <image:title>西门子SINUMERIK 6FC3988-7FA20/SM0901 LCD显示升级模块</image:title>
+      <image:caption>9英寸TFT-LCD工业屏 兼容SINUMERIK 840D/810D Power Line 即插即用</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/Siemens-SM0901-579417-TA-2.jpg</image:loc>
+      <image:title>西门子SM0901 LCD模块细节</image:title>
+      <image:caption>标准Siemens接口 工业级品质 100%出厂全检</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/Siemens-SM0901-579417-TA-3.jpg</image:loc>
+      <image:title>西门子SM0901 TFT替代效果</image:title>
+      <image:caption>TFT-LCD升级后显示效果 清晰稳定</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Homepage Product Images -->
+  <url>
+    <loc>https://cncdisplay.com/</loc>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_LCD_new_2.jpg</image:loc>
+      <image:title>FANUC A61L-0001-0093 LCD升级显示器</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/MDT962B_MDT962B-1A.jpg</image:loc>
+      <image:title>三菱MDT962B TFT-LCD升级模块</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/西门子SINUMERIK 6FC3988-7FA20显示器.jpg</image:loc>
+      <image:title>西门子6FC3988-7FA20 SINUMERIK LCD显示器</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/logo_256.png</image:loc>
+      <image:title>江图科技 Kongto Technology Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- English Homepage Product Images -->
+  <url>
+    <loc>https://cncdisplay.com/en/</loc>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/A6100010093_LCD_new_2.jpg</image:loc>
+      <image:title>FANUC A61L-0001-0093 LCD Upgrade Display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/MDT962B_MDT962B-1A.jpg</image:loc>
+      <image:title>Mitsubishi MDT962B TFT-LCD Upgrade Module</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cncdisplay.com/images/西门子SINUMERIK 6FC3988-7FA20显示器.jpg</image:loc>
+      <image:title>Siemens 6FC3988-7FA20 SINUMERIK LCD Display</image:title>
+    </image:image>
+  </url>
+
+</urlset>

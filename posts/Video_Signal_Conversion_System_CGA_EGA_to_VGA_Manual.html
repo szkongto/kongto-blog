@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南 | 江图科技</title>
+
+    <meta name="description" content="完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。">
+
+    <meta name="keywords" content="CGA转VGA转换器, EGA转VGA转换器, RGB转VGA, 视频信号转换, CGA引脚定义, EGA引脚定义, DB9连接器引脚, 工业显示器改造, CRT转LCD转换器, 工业视频信号转换">
+
+    <meta name="author" content="深圳市江图科技有限公司">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" />
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
+
+    <meta property="og:title" content="视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南 | 江图科技" />
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:description" content="完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。" />
+
+    <meta property="og:url" content="https://cncdisplay.com/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南 | 江图科技">
+
+    <meta name="twitter:description" content="完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。">
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南 | 江图科技",
+  "description": "完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。",
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}
+
+    </script>
+
+
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "szkongto01@foxmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南",
+      "item": "https://cncdisplay.com/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/">首页</a><a href="/compatibility-matrix.html">兼容查询</a>
+                <a href="/posts/">文章</a>
+                <a href="/case-studies.html">案例</a>
+                <a href="/docs/">下载</a>
+                <a href="/about.html">关于</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者：深圳市江图科技有限公司</span>
+
+            </div>
+
+            <div class="content">
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/article_default.jpg" alt="CGA EGA转VGA转换器系统概览"></figure>
+
+<p><em>CGA EGA转VGA转换器系统概览 | 来源：深圳市江图科技有限公司</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/article_default.jpg" alt="CGA EGA RGB转VGA视频信号转换模块"></figure>
+
+<p><em>CGA EGA RGB转VGA视频信号转换模块 | 来源：深圳市江图科技有限公司</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/article_default.jpg" alt="工业CNC显示器转换器安装实例"></figure>
+
+<p><em>工业CNC显示器转换器安装实例 | 来源：深圳市江图科技有限公司</em></p>
+
+
+
+
+
+<p><strong>关键词</strong>：CGA转VGA转换器、EGA转VGA转换器、RGB转VGA、视频信号转换系统</p>
+
+<hr>
+
+<h2>一、信号转换场景概述</h2>
+
+<p>工业视频信号转换是将老旧CNC显示器升级为现代LCD显示器时的关键环节。本文介绍三种最常见的转换方案：</p>
+
+<table>
+
+<tr><th>转换类型</th><th>输入信号</th><th>输出信号</th><th>主要技术难点</th></tr>
+
+<tr><td>CGA转VGA</td><td>数字TTL 15kHz</td><td>模拟RGBHV 31kHz</td><td>数字转模拟 + 行频倍频</td></tr>
+
+<tr><td>EGA转VGA</td><td>数字TTL 22kHz</td><td>模拟RGBHV 31kHz</td><td>数字转模拟 + 行频转换</td></tr>
+
+<tr><td>RGB转VGA</td><td>模拟RGBS/RGBHV</td><td>模拟RGBHV（标准VGA时序）</td><td>同步分离 + 时序归一化</td></tr>
+
+</table>
+
+<hr>
+
+
+
+<h2>二、CGA转VGA转换</h2>
+
+<h3>2.1 技术细节</h3>
+
+<p>CGA（彩色图形适配器）由IBM于1981年推出，输出4位数字TTL信号，水平频率15.75kHz。要将CGA输出显示在现代VGA显示器上，需要完成以下步骤：</p>
+
+<ol>
+
+<li><strong>数模转换（DAC）</strong>：将4位TTL数字信号（0V/5V）转换为模拟RGB信号（0-0.7V）</li>
+
+<li><strong>行频倍频</strong>：将水平扫描频率从15.75kHz倍增至31.5kHz（VGA标准）</li>
+
+<li><strong>帧缓存缩放</strong>：将320x200或640x200分辨率缩放为640x480或800x600</li>
+
+<li><strong>同步信号生成</strong>：生成标准VGA行同步（H-Sync）和场同步（V-Sync）信号</li>
+
+</ol>
+
+
+
+<h3>2.2 实施方案</h3>
+
+<p>江图科技JTX-CVR-001转换器自动完成上述四个步骤。安装时只需将CGA输出线缆连接至转换器输入端，再通过VGA线缆连接LCD显示器即可。</p>
+
+
+
+<h2>三、EGA转VGA转换</h2>
+
+<h3>3.1 技术细节</h3>
+
+<p>EGA（增强型图形适配器）输出6位数字TTL信号，水平频率21.85kHz。EGA转换与CGA类似，但具有以下特点：</p>
+
+<ul>
+
+<li>6位色深（64色，而CGA为16色）</li>
+
+<li>更高的水平频率（21.85kHz对比15.75kHz）</li>
+
+<li>原生分辨率640x350</li>
+
+</ul>
+
+
+
+<h2>四、RGB转VGA转换</h2>
+
+<h3>4.1 RGBS与RGBHV的区别</h3>
+
+<p>许多FANUC系统输出的是带复合同步的模拟RGB信号（RGBS），而非独立的行/场同步信号（RGBHV）。VGA显示器需要独立的同步信号。转换过程如下：</p>
+
+<ol>
+
+<li><strong>同步分离</strong>：使用专用同步分离IC从复合同步信号中提取行同步和场同步脉冲</li>
+
+<li><strong>信号调理</strong>：清除同步边沿噪声，将脉冲宽度调整为VGA规格</li>
+
+<li><strong>阻抗匹配</strong>：确保所有输出线路的源阻抗为75&Omega;</li>
+
+</ol>
+
+
+
+<h2>五、CGA DB9引脚定义表</h2>
+
+<p>标准CGA连接器采用9针D-sub（DB9）母头接口（位于显示适配器端）。以下是完整引脚定义：</p>
+
+<table>
+
+<tr><th>引脚</th><th>信号名称</th><th>功能描述</th><th>电平</th></tr>
+
+<tr><td>1</td><td>GND</td><td>地</td><td>0V</td></tr>
+
+<tr><td>2</td><td>GND</td><td>地</td><td>0V</td></tr>
+
+<tr><td>3</td><td>Red</td><td>红色视频信号（数字TTL）</td><td>0V / 5V TTL</td></tr>
+
+<tr><td>4</td><td>Green</td><td>绿色视频信号（数字TTL）</td><td>0V / 5V TTL</td></tr>
+
+<tr><td>5</td><td>Blue</td><td>蓝色视频信号（数字TTL）</td><td>0V / 5V TTL</td></tr>
+
+<tr><td>6</td><td>Intensity</td><td>亮度/强度控制位</td><td>0V / 5V TTL</td></tr>
+
+<tr><td>7</td><td>Reserved</td><td>保留（标准CGA未使用）</td><td>N/A</td></tr>
+
+<tr><td>8</td><td>H-Sync</td><td>行同步信号 15.75kHz</td><td>0V / 5V TTL</td></tr>
+
+<tr><td>9</td><td>V-Sync</td><td>场同步信号 60Hz</td><td>0V / 5V TTL</td></tr>
+
+</table>
+
+
+
+<h2>六、EGA DB9引脚定义表</h2>
+
+<p>EGA连接器同样采用9针D-sub（DB9），但信号分配与CGA不同：</p>
+
+<table>
+
+<tr><th>引脚</th><th>信号名称</th><th>功能描述</th></tr>
+
+<tr><td>1</td><td>GND</td><td>地</td></tr>
+
+<tr><td>2</td><td>Red（高位）</td><td>红色视频信号，高亮度位</td></tr>
+
+<tr><td>3</td><td>Red（低位）</td><td>红色视频信号，低亮度位（主红色）</td></tr>
+
+<tr><td>4</td><td>Green（高位）</td><td>绿色视频信号，高亮度位</td></tr>
+
+<tr><td>5</td><td>Green（低位）</td><td>绿色视频信号，低亮度位（主绿色）</td></tr>
+
+<tr><td>6</td><td>Blue（高位）</td><td>蓝色视频信号，高亮度位</td></tr>
+
+<tr><td>7</td><td>Blue（低位）</td><td>蓝色视频信号，低亮度位（主蓝色）</td></tr>
+
+<tr><td>8</td><td>H-Sync</td><td>行同步信号 21.85kHz</td></tr>
+
+<tr><td>9</td><td>V-Sync</td><td>场同步信号 60Hz</td></tr>
+
+</table>
+
+<p><strong>注</strong>：EGA每个颜色通道使用2位（高位/低位），共可显示64种颜色（6位色深），而CGA每通道仅1位加一个亮度位，共16种颜色。</p>
+
+
+
+<h2>七、常见故障排查表</h2>
+
+<p>在安装CGA/EGA转VGA转换器时，以下问题较为常见：</p>
+
+<table>
+
+<tr><th>故障现象</th><th>原因</th><th>解决方案</th></tr>
+
+<tr><td>无显示/黑屏</td><td>输入信号类型选择错误；转换器未供电；DB9连接松动</td><td>确认DIP开关设置与您的CGA/EGA标准匹配；检查12-36VDC电源输入；重新插拔DB9连接器并拧紧螺丝</td></tr>
+
+<tr><td>画面闪烁</td><td>行频不匹配；电源纹波抑制不足</td><td>确认转换器自动同步范围覆盖显示器的扫描频率；使用稳压电源（纹波&lt; 50mV）</td></tr>
+
+<tr><td>色彩显示错误</td><td>TTL信号极性反接；亮度位映射错误；电阻网络DAC不匹配</td><td>检查CGA/EGA跳线设置（部分主板会交换亮度位和蓝色位）；确认74LS系列驱动IC工作正常</td></tr>
+
+<tr><td>图像过暗或过亮</td><td>模拟RGB电压超出范围；对比度微调不当</td><td>使用转换板上的电位器调节RGB增益；典型模拟RGB在75&Omega;负载下应为0.7V峰峰值</td></tr>
+
+<tr><td>不同步/画面滚动</td><td>复合同步未正确分离；同步极性错误</td><td>确认同步分离IC（如LM1881）输入端信号干净；检查行同步和场同步是否接反</td></tr>
+
+<tr><td>重影/文字模糊</td><td>输入线缆屏蔽不良；线缆过长</td><td>更换为屏蔽双绞线缆；TTL信号线缆长度控制在1.5米以内</td></tr>
+
+</table>
+
+
+
+<h2>八、线缆规格表</h2>
+
+<p>合理的线缆选择对信号稳定传输至关重要。在制作或选购转换线缆时，请参考以下规格：</p>
+
+<table>
+
+<tr><th>信号类型</th><th>推荐线缆类型</th><th>最大长度</th><th>屏蔽要求</th></tr>
+
+<tr><td>CGA TTL（数字RGBI）</td><td>9芯屏蔽线缆，24 AWG多股绞线</td><td>1.5米</td><td>整体编织屏蔽覆盖率&ge; 85%；排扰线在源端接地</td></tr>
+
+<tr><td>EGA TTL（数字6位RGB）</td><td>9芯屏蔽线缆，24 AWG多股绞线</td><td>1.5米</td><td>整体铝箔+编织双层屏蔽；建议每个颜色通道使用独立双绞线</td></tr>
+
+<tr><td>模拟RGBS</td><td>每路RGB通道采用75&Omega;同轴线（RG-59或等效）加独立同步线</td><td>5米</td><td>每通道独立同轴屏蔽加整体外护套屏蔽</td></tr>
+
+<tr><td>模拟RGBHV（VGA）</td><td>标准VGA线缆（3+4同轴+控制线）</td><td>10米</td><td>每根同轴双层屏蔽（铝箔+编织）；超过5米时两端加磁环</td></tr>
+
+<tr><td>DB9分线/适配线</td><td>IDC排线配DB9外壳或焊杯式DB9连接器</td><td>0.3米</td><td>短适配线无需屏蔽；超过0.3米时建议使用双绞排线</td></tr>
+
+<tr><td>电源（12-36 VDC）</td><td>2芯18 AWG多股绞线，极性连接器</td><td>3米</td><td>无需屏蔽；建议使用双绞线以减少EMI耦合</td></tr>
+
+</table>
+
+
+
+<h2>九、安装步骤</h2>
+
+<p>请按照以下步骤正确安装您的CGA/EGA转VGA转换系统：</p>
+
+<ol>
+
+<li><strong>确定源信号类型</strong> — 确认您的设备输出的是CGA（15.75kHz，4位TTL）、EGA（21.85kHz，6位TTL）还是模拟RGBS信号。查阅设备维修手册或检查视频连接器引脚定义。大多数FANUC 6/11/15系列使用CGA信号；FANUC 0/16/18/21系列可能使用模拟RGBS信号。</li>
+
+<li><strong>关闭所有设备电源</strong> — 关闭并断开CNC机床和替换LCD显示器的电源。切勿在设备通电时连接或断开视频线缆，否则可能损坏TTL驱动IC。</li>
+
+<li><strong>连接转换器输入端</strong> — 将机床视频输出端的DB9公头连接到转换板上的DB9母头输入接口。拧紧手拧螺丝（扭矩0.3-0.5 Nm）。如果您的设备使用其他类型连接器（如6针Molex），请使用相应的适配线缆。</li>
+
+<li><strong>连接转换器输出端</strong> — 使用标准VGA线缆（公对公）将转换器的VGA输出端口连接到LCD显示器的VGA输入端口。确保线缆完全插入并拧紧手拧螺丝。如果LCD显示器仅支持DVI-D或HDMI输入，请使用有源VGA转DVI/HDMI适配器。</li>
+
+<li><strong>为转换器供电</strong> — 将12-36VDC电源连接到转换器的电源输入端子。注意极性正确（筒式插头内正外负；螺丝端子请查看标识）。转换器的LED指示灯应在2秒内亮起。</li>
+
+<li><strong>开机并验证运行</strong> — 先开启LCD显示器电源，再开启CNC机床。转换器应自动检测输入信号时序并输出稳定的VGA图像。如果10秒内无图像显示，请使用校准按钮（如有）循环切换预设模式，或参考第七节的故障排查表。</li>
+
+</ol>
+
+
+
+<h2>十、转换方案对比</h2>
+
+<table>
+
+<tr><th>参数</th><th>JTX-CVR-001（CGA）</th><th>JTX-CVR-002（EGA）</th><th>JTX-CVR-003（RGB）</th></tr>
+
+<tr><td>输入信号</td><td>CGA TTL 15kHz</td><td>EGA TTL 22kHz</td><td>RGBS 模拟</td></tr>
+
+<tr><td>输出信号</td><td>VGA 640x480@60Hz</td><td>VGA 640x480/800x600@60Hz</td><td>VGA 640x480/800x600@60Hz</td></tr>
+
+<tr><td>色深</td><td>每通道8位</td><td>每通道8位</td><td>每通道8位</td></tr>
+
+<tr><td>工作温度</td><td>-20&deg;C 至 +70&deg;C</td><td>-20&deg;C 至 +70&deg;C</td><td>-20&deg;C 至 +70&deg;C</td></tr>
+
+<tr><td>电源</td><td>12-36 VDC</td><td>12-36 VDC</td><td>12-36 VDC</td></tr>
+
+<tr><td>MTBF（平均无故障时间）</td><td>50,000小时</td><td>50,000小时</td><td>50,000小时</td></tr>
+
+<tr><td>价格</td><td>CNY 850</td><td>CNY 880</td><td>CNY 750</td></tr>
+
+</table>
+
+<p>产品咨询请联系 <strong>深圳市江图科技有限公司</strong>，邮箱：szkongto01@foxmail.com。</p>
+
+
+
+            </div>
+
+
+
+<div class="share-buttons">
+
+    <div class="share-title">分享到：</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="分享到LinkedIn">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+            </svg>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>复制链接</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="showWechatQR()" title="分享到微信">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.134 0 .24-.11.24-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.49.49 0 0 1 .177-.553C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-2.18 2.934c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982z"/>
+
+            </svg>
+
+            <span>微信</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<div id="wechat-qr-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;" onclick="hideWechatQR()">
+
+    <div style="background:#fff;padding:2rem;border-radius:8px;text-align:center;max-width:320px;" onclick="event.stopPropagation()">
+
+        <p style="margin:0 0 1rem 0;font-weight:bold;">微信扫码分享</p>
+
+        <div id="wechat-qr-code" style="width:200px;height:200px;margin:0 auto;display:flex;justify-content:center;align-items:center;border:1px solid #e2e8f0;border-radius:4px;">
+
+            <svg viewBox="0 0 100 100" width="180" height="180">
+
+                <rect width="100" height="100" fill="#fff"/>
+
+                <g fill="#000">
+
+                    <rect x="5" y="5" width="3" height="3"/><rect x="12" y="5" width="3" height="3"/><rect x="26" y="5" width="3" height="3"/><rect x="33" y="5" width="3" height="3"/><rect x="40" y="5" width="3" height="3"/><rect x="54" y="5" width="3" height="3"/><rect x="61" y="5" width="3" height="3"/><rect x="68" y="5" width="3" height="3"/><rect x="82" y="5" width="3" height="3"/><rect x="89" y="5" width="3" height="3"/>
+
+                    <rect x="5" y="12" width="3" height="3"/><rect x="19" y="12" width="3" height="3"/><rect x="33" y="12" width="3" height="3"/><rect x="47" y="12" width="3" height="3"/><rect x="54" y="12" width="3" height="3"/><rect x="68" y="12" width="3" height="3"/><rect x="82" y="12" width="3" height="3"/><rect x="89" y="12" width="3" height="3"/>
+
+                    <rect x="5" y="19" width="3" height="3"/><rect x="19" y="19" width="3" height="3"/><rect x="26" y="19" width="3" height="3"/><rect x="33" y="19" width="3" height="3"/><rect x="40" y="19" width="3" height="3"/><rect x="47" y="19" width="3" height="3"/><rect x="54" y="19" width="3" height="3"/><rect x="61" y="19" width="3" height="3"/><rect x="75" y="19" width="3" height="3"/><rect x="82" y="19" width="3" height="3"/><rect x="89" y="19" width="3" height="3"/>
+
+                    <rect x="5" y="26" width="3" height="3"/><rect x="12" y="26" width="3" height="3"/><rect x="19" y="26" width="3" height="3"/><rect x="33" y="26" width="3" height="3"/><rect x="54" y="26" width="3" height="3"/><rect x="68" y="26" width="3" height="3"/><rect x="75" y="26" width="3" height="3"/><rect x="82" y="26" width="3" height="3"/>
+
+                    <rect x="5" y="33" width="3" height="3"/><rect x="26" y="33" width="3" height="3"/><rect x="33" y="33" width="3" height="3"/><rect x="40" y="33" width="3" height="3"/><rect x="47" y="33" width="3" height="3"/><rect x="54" y="33" width="3" height="3"/><rect x="61" y="33" width="3" height="3"/><rect x="75" y="33" width="3" height="3"/><rect x="89" y="33" width="3" height="3"/>
+
+                    <rect x="5" y="40" width="3" height="3"/><rect x="19" y="40" width="3" height="3"/><rect x="26" y="40" width="3" height="3"/><rect x="40" y="40" width="3" height="3"/><rect x="47" y="40" width="3" height="3"/><rect x="61" y="40" width="3" height="3"/><rect x="68" y="40" width="3" height="3"/><rect x="89" y="40" width="3" height="3"/>
+
+                    <rect x="5" y="47" width="3" height="3"/><rect x="12" y="47" width="3" height="3"/><rect x="19" y="47" width="3" height="3"/><rect x="33" y="47" width="3" height="3"/><rect x="47" y="47" width="3" height="3"/><rect x="54" y="47" width="3" height="3"/><rect x="68" y="47" width="3" height="3"/><rect x="75" y="47" width="3" height="3"/><rect x="82" y="47" width="3" height="3"/><rect x="89" y="47" width="3" height="3"/>
+
+                    <rect x="5" y="54" width="3" height="3"/><rect x="19" y="54" width="3" height="3"/><rect x="33" y="54" width="3" height="3"/><rect x="40" y="54" width="3" height="3"/><rect x="54" y="54" width="3" height="3"/><rect x="61" y="54" width="3" height="3"/><rect x="75" y="54" width="3" height="3"/><rect x="89" y="54" width="3" height="3"/>
+
+                    <rect x="5" y="61" width="3" height="3"/><rect x="12" y="61" width="3" height="3"/><rect x="40" y="61" width="3" height="3"/><rect x="54" y="61" width="3" height="3"/><rect x="68" y="61" width="3" height="3"/><rect x="82" y="61" width="3" height="3"/><rect x="89" y="61" width="3" height="3"/>
+
+                    <rect x="5" y="68" width="3" height="3"/><rect x="19" y="68" width="3" height="3"/><rect x="26" y="68" width="3" height="3"/><rect x="33" y="68" width="3" height="3"/><rect x="40" y="68" width="3" height="3"/><rect x="54" y="68" width="3" height="3"/><rect x="61" y="68" width="3" height="3"/><rect x="68" y="68" width="3" height="3"/><rect x="75" y="68" width="3" height="3"/><rect x="82" y="68" width="3" height="3"/>
+
+                    <rect x="5" y="75" width="3" height="3"/><rect x="12" y="75" width="3" height="3"/><rect x="26" y="75" width="3" height="3"/><rect x="47" y="75" width="3" height="3"/><rect x="61" y="75" width="3" height="3"/><rect x="75" y="75" width="3" height="3"/><rect x="82" y="75" width="3" height="3"/><rect x="89" y="75" width="3" height="3"/>
+
+                    <rect x="5" y="82" width="3" height="3"/><rect x="12" y="82" width="3" height="3"/><rect x="19" y="82" width="3" height="3"/><rect x="33" y="82" width="3" height="3"/><rect x="40" y="82" width="3" height="3"/><rect x="47" y="82" width="3" height="3"/><rect x="54" y="82" width="3" height="3"/><rect x="61" y="82" width="3" height="3"/><rect x="75" y="82" width="3" height="3"/><rect x="82" y="82" width="3" height="3"/>
+
+                    <rect x="5" y="89" width="3" height="3"/><rect x="19" y="89" width="3" height="3"/><rect x="33" y="89" width="3" height="3"/><rect x="40" y="89" width="3" height="3"/><rect x="47" y="89" width="3" height="3"/><rect x="61" y="89" width="3" height="3"/><rect x="68" y="89" width="3" height="3"/><rect x="82" y="89" width="3" height="3"/>
+
+                </g>
+
+            </svg>
+
+        </div>
+
+        <p style="margin:0.75rem 0 0 0;font-size:0.85rem;color:#666;">打开微信扫一扫，分享到朋友圈</p>
+
+        <button onclick="hideWechatQR()" style="margin-top:1rem;padding:8px 24px;background:#f0f0f0;border:none;border-radius:4px;cursor:pointer;">关闭</button>
+
+    </div>
+
+</div>
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToLinkedIn = function() {
+
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('链接已复制到剪贴板！');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('链接已复制到剪贴板！');
+
+        });
+
+    };
+
+    window.showWechatQR = function() {
+
+        document.getElementById('wechat-qr-modal').style.display = 'flex';
+
+    };
+
+    window.hideWechatQR = function() {
+
+        document.getElementById('wechat-qr-modal').style.display = 'none';
+
+    };
+
+})();
+
+</script>
+
+
+
+</article>
+
+    </main>
+
+
+
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+    <h3 style="margin-top:0;">相关文章</h3>
+
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA转RGBHV工业显示器改造指南 | 江图科技</a></li><li><a href="/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD显示器 — CNC升级替换指南</a></li><li><a href="/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT转LCD升级完整指南 | 江图科技</a></li></ul>
+
+</section>
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 相关资源</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/compatibility-matrix.html">95+机型兼容性列表</a> — 查找您的CRT机型</li>
+                <li><a href="/brands/">按品牌浏览</a> — FANUC/三菱/西门子/Mazak/Okuma/Haas</li>
+                <li><a href="/quote.html">获取报价</a> — 24小时内回复</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/posts/">📄 技术文章</a>
+                <a href="/brands/FANUC.html">FANUC方案</a>
+                <a href="/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/brands/Siemens.html">西门子方案</a>
+                <a href="/docs/">资料下载</a>
+                <a href="/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | szkongto01@foxmail.com</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
