@@ -7,6 +7,8 @@ Usage: python check_links_ci.py [--strict]
   --strict: Fail on ANY broken link (default: fail if > 0 unique targets)
 """
 import os, re, sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 from pathlib import Path
 from collections import defaultdict
 from urllib.parse import urlparse, unquote
@@ -138,8 +140,10 @@ def main():
             items = by_file[fname]
             print(f"\n  {fname}:")
             for line, href, target in items[:5]:  # Show max 5 per file
-                print(f"    L{line}: {href[:80]}")
-                print(f"      -> 404: {target}")
+                safe_href = href[:80].encode('ascii', errors='replace').decode('ascii')
+                safe_target = target.encode('ascii', errors='replace').decode('ascii')
+                print(f"    L{line}: {safe_href}")
+                print(f"      -> 404: {safe_target}")
             if len(items) > 5:
                 print(f"    ... and {len(items) - 5} more")
 
