@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi CNC Display Troubleshooting: Why It Fails & How to Fix | Kongto</title>
+    <meta name="description" content="Mitsubishi CNC display not turning on? Flickering? No signal? Step-by-step troubleshooting guide for M70, M700, and MDT-series displays. When to repair, when to replace.">
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
+    <!-- no zh version -->
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" />
+    <link rel="alternate" hreflang="x-default" href="/en/" />
+    <link rel="stylesheet" href="/css/style.css?v=7">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kongto Technology (Shenzhen) Co., Ltd.",
+  "alternateName": ["深圳市江图科技有限公司", "Kongto Technology", "江图科技"],
+  "url": "https://cncdisplay.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://cncdisplay.com/images/logo_256.png"
+  },
+  "foundingDate": "2013",
+  "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions, video signal converters, and custom industrial displays",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-13686889647",
+    "email": "szkongto01@foxmail.com",
+    "contactType": "sales",
+    "availableLanguage": ["Chinese", "English"]
+  },
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+</script>
+    </head>
+<body>    <header>
+        <nav>
+            <a href="/en/" class="logo">Kongto Technology</a>
+            <div class="nav-links">
+                <a href="/en/">Home</a><a href="/en/compatibility-matrix.html">Compatibility</a>
+                <a href="/en/posts/">Articles</a>
+                <a href="/en/case-studies.html">Cases</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About</a>
+                <a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+            </div>
+            <a href="/en/search.html" class="nav-search">🔍 Search</a>
+            <div class="lang-switch">
+                <a href="/posts/" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <article class="post">
+<h1>Mitsubishi CNC Display Troubleshooting</h1>
+  <p>Your Mitsubishi screen just died. Or it's flickering. Or the colors are wrong. Here's how to figure out what's broken — and whether it's worth fixing.</p>
+</div>
+
+<div class="container">
+<div class="breadcrumb"><a href="/en/">Home</a> &gt; <a href="/en/posts/">Posts</a> &gt; Mitsubishi Troubleshooting</div>
+
+<h2>Before you do anything: power cycle the machine</h2>
+
+<p>I know this sounds obvious. But 10–15% of "display failures" are actually just the CNC controller being confused after a power spike or a dirty shutdown.</p>
+
+<p><strong>Do this first:</strong> Power off the machine at the main disconnect. Wait 2 full minutes (not 10 seconds — the capacitors need to discharge). Power back on. If the display comes back — great. But it'll probably happen again. Read on.</p>
+
+<h2>Symptom 1: Display is completely black (no power)</h2>
+
+<div class="symptom-box">
+<h3>What you're seeing</h3>
+<p>You power on the machine. The CNC controller seems to be running (fans spinning, status LEDs on), but the display is 100% black. No light at all — not even a faint glow.</p>
+
+<h3>Most likely causes (in order)</h3>
+<ol>
+  <li><strong>CRT filament burnt out.</strong> This is the most common failure on M70/M700 series with original CRTs. The filament has a finite life, and 15+ year-old machines are right at the limit.</li>
+  <li><strong>Power supply to the monitor failed.</strong> The CRT has its own high-voltage power section. If the fuse blew or a capacitor failed, the CRT gets no power even though the CNC controller is fine.</li>
+  <li><strong>Signal cable disconnected or corroded.</strong> Less common, but worth checking — especially in humid environments where the connector pins corrode.</li>
+</ol>
+
+<div class="fix-steps">
+<h4>What to check (step by step)</h4>
+<ol>
+  <li><strong>Check the power LED on the display bezel (if equipped).</strong> If it's on — the CRT has power but the filament is dead. Replacement time.</li>
+  <li><strong>Open the electrical cabinet and check the fuse for the display circuit.</strong> If it's blown, replace it — but if it blows again immediately, there's a short. Don't keep replacing fuses.</li>
+  <li><strong>Check the signal cable (HD15 or proprietary Mitsubishi connector).</strong> Reseat it on both ends. Look for bent pins or corrosion.</li>
+</ol>
+</div>
+
+<p><strong>Can it be repaired?</strong> Sometimes. A burnt filament means the entire CRT needs replacement. A blown power supply can be repaired, but finding someone who still repairs CRT power supplies is... difficult in 2026. An LCD retrofit kit is usually both cheaper and more reliable than a CRT repair at this point.</p>
+</div>
+
+<h2>Symptom 2: Image is flickering or dim</h2>
+
+<div class="symptom-box">
+<h3>What you're seeing</h3>
+<p>The display is on, but the image flickers (especially noticeable on text), or it's noticeably dimmer than it used to be. Or it takes 10+ minutes after power-on to "warm up" to normal brightness.</p>
+
+<h3>Most likely causes</h3>
+<ol>
+  <li><strong>CRT near end of life.</strong> The phosphor coating on the inside of the CRT tube degrades over time. There's no fix for this — the tube needs replacement.</li>
+  <li><strong>High-voltage section failing.</strong> The flyback transformer or the high-voltage capacitor is degrading. The image may flicker intermittently, then stabilize, then flicker again.</li>
+  <li><strong>Backlight inverter (if LCD) failing.</strong> If you already have an LCD retrofit, the LED backlight or its driver is failing. This is rare (LEDs last a long time), but the driver board can fail.</li>
+</ol>
+
+<div class="fix-steps">
+<h4>Quick diagnostic</h4>
+<p>Take a photo of the screen with your phone. If the photo shows a clear image even though your eyes see a dim/flickering image — the CRT tube is fine, the problem is in the high-voltage section. If the photo also looks dim — the tube itself is dying.</p>
+</div>
+
+<p><strong>Repair vs. replace:</strong> Flickering/dim CRT = replace. The high-voltage section is dangerous to work on (we're talking 15,000+ volts), and even if you fix it, the tube is still old. An LCD retrofit eliminates both problems permanently.</p>
+</div>
+
+<h2>Symptom 3: "No signal" or garbled image</h2>
+
+<div class="symptom-box">
+<h3>What you're seeing</h3>
+<p>The display has power, but it says "No signal," shows a completely garbled/jumbled image, or displays only horizontal/vertical lines instead of the CNC interface.</p>
+
+<h3>Most likely causes</h3>
+<ol>
+  <li><strong>Signal cable failure.</strong> The cable between the CNC controller and the display has broken wires (from years of vibration) or corroded pins.</li>
+  <li><strong>Video signal board in the CRT has failed.</strong> The CRT has a small circuit board that processes the video signal. If this fails, no image gets to the tube.</li>
+  <li><strong>CNC controller video output failed.</strong> Rare, but possible — the video output section on the M70/M700 main board has failed. This is bad news (controller replacement territory).</li>
+</ol>
+
+<div class="fix-steps">
+<h4>Diagnostic steps</h4>
+<ol>
+  <li><strong>Try reseating the signal cable on both ends.</strong> Power off, disconnect, inspect pins, reconnect firmly. This fixes maybe 20% of "no signal" problems.</li>
+  <li><strong>If you have a spare display (even a different model), try swapping it in.</strong> If the spare works, the problem is in your original display. If the spare also has no signal — the problem is in the CNC controller's video output.</li>
+</ol>
+</div>
+
+<p><strong>The good news:</strong> If the problem is the display (not the controller), an LCD retrofit kit completely replaces the display side. You don't need to troubleshoot further — just swap it out.</p>
+</div>
+
+<h2>Symptom 4: Colors are wrong (pink/green tint, or color shift)</h2>
+
+<div class="symptom-box">
+<h3>What you're seeing</h3>
+<p>The image is visible, but the colors are off. Text that should be white looks pink or green. Or the entire image has a color cast that wasn't there before.</p>
+
+<h3>Most likely causes</h3>
+<ol>
+  <li><strong>CRT convergence problem.</strong> The electron guns inside the CRT are no longer aligned properly. This happens as the CRT ages.</li>
+  <li><strong>Signal cable has a broken color wire.</strong> If the red signal wire breaks, everything looks cyan/green. If the blue wire breaks, everything looks yellow/orange.</li>
+  <li><strong>Video amplifier circuit failing.</strong> The CRT has small circuit boards (sometimes called the "video amp" or "neck board") that can fail partially, causing color problems.</li>
+</ol>
+
+<p><strong>Can it be fixed?</strong> Convergence problems in a CRT are not practical to repair in the field. Broken signal cables can be replaced (if you can find the correct Mitsubishi proprietary cable). But again — at this age, replacing the entire display with LCD is the most cost-effective solution.</p>
+</div>
+
+<h2>Repair vs. Replace: Decision table</h2>
+
+<p>I get asked this all the time: "Should I try to repair it, or just replace it?" Here's the honest answer:</p>
+
+<table class="decision-table">
+<tr><th>Symptom</th><th>Repair possible?</th><th>Repair cost (typical)</th><th>LCD retrofit cost</th><th>Recommendation</th></tr>
+<tr><td>Completely black screen</td><td>Sometimes (power supply)</td><td>$300–$600</td><td>$450–$750</td><td><span class="badge-replace">Replace (LCD)</span></td></tr>
+<tr><td>Flickering / dim</td><td>No (CRT tube dead)</td><td>N/A (tube unobtanium)</td><td>$450–$750</td><td><span class="badge-replace">Replace (LCD)</span></td></tr>
+<tr><td>No signal</td><td>Yes (cable or board)</td><td>$100–$300</td><td>$450–$750</td><td><span class="badge-repair">Try repair first</span> (but retrofit if repair fails)</td></tr>
+<tr><td>Wrong colors</td><td>Rarely</td><td>$200–$500</td><td>$450–$750</td><td><span class="badge-replace">Replace (LCD)</span></td></tr>
+<tr><td>Intermittent (works sometimes)</td><td>Maybe (loose connection)</td><td>$50–$200</td><td>$450–$750</td><td><span class="badge-repair">Try reseating cables first</span></td></tr>
+</table>
+
+<div class="warn-box">
+<strong>One important warning:</strong> If your CRT is flickering intermittently, don't wait for it to "completely die" before ordering a replacement. An intermittent failure always becomes a complete failure — usually at the worst possible moment (Friday afternoon, big deadline, etc.). Order the LCD kit when you first notice the problem.
+</div>
+
+<h2>Which Mitsubishi models does this cover?</h2>
+
+<p>The troubleshooting steps above apply to all Mitsubishi CNC displays we've worked with, including:</p>
+
+<ul>
+  <li><strong>M70 series</strong> — M70A, M70B, and variants</li>
+  <li><strong>M700 series</strong> — M700V, M700, and related models</li>
+  <li><strong>MDT-series displays</strong> — MDT962B, MDT1283B, and compatible models</li>
+  <li><strong>FCUA-CT100 / BM09DF</strong> — Industrial displays used with Mitsubishi controllers</li>
+</ul>
+
+<p>If you're not sure which model you have, look at the plate on the side of the display unit (or send us a photo). We'll identify it and tell you the correct retrofit kit part number.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<div class="faq-q">Can I just buy a standard computer monitor and connect it?</div>
+<div class="faq-a">No. Mitsubishi CNC controllers use a proprietary video signal that a standard VGA/HDMI monitor can't understand. You need a signal converter (which is included in our retrofit kits). Don't waste money on a random monitor — it won't work.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">How long does a repair typically take vs. an LCD retrofit?</div>
+<div class="faq-a">Repair (if even possible): 1–3 weeks (shipping to repair shop + turnaround). LCD retrofit: 1–2 days (shipping to you) + 1 hour to install. The retrofit wins on downtime every time.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Will the LCD retrofit preserve my existing screen settings/menus?</div>
+<div class="faq-a">Yes — the LCD shows exactly the same interface as the original CRT. The signal converter passes through the video signal unchanged. Your CNC menus, parameters, and display settings are all exactly the same. The only difference is the image is sharper and the backlight doesn't flicker.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What if the problem is the CNC controller, not the display?</div>
+<div class="faq-a">If you install the LCD kit and still have no image, the problem is almost certainly in the CNC controller's video output section. At that point, you're looking at controller repair or replacement — which is a much bigger expense. But in our experience, 85–90% of "display problems" are actually the display, not the controller.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Do you offer a warranty on the LCD retrofit kits?</div>
+<div class="faq-a">Yes — 1-years on the LCD panel and converter board. If it fails (which is rare), we ship a replacement. The LED backlight is rated for 50,000+ hours, so it'll outlast the rest of your machine.</div>
+</div>
+
+<h2>Not sure what's wrong? Send us a video.</h2>
+
+<p>If you're staring at a flickering or black screen and you're not sure whether it's the CRT, the cable, or the controller — <strong>take a 10-second video with your phone and send it to us.</strong> We can usually tell what's wrong just from the video, and we'll tell you honestly whether a retrofit kit will fix it or whether you need a different solution.</p>
+
+<div class="cta-box">
+  <h3 style="margin-top:0;">Get a diagnosis (free, no obligation)</h3>
+  <p>Send us: (1) Your controller model number, (2) A photo or video of the display problem. We'll tell you what's wrong and give you a firm price on the correct retrofit kit.</p>
+  <a href="mailto:support@kongto.com" class="cta-btn">Email us</a>
+  <a href="https://cncdisplay.com/en/contact.html" class="cta-btn">Contact form</a>
+</div>
+        <hr style="margin: 56px 0 28px; border: none; border-top: 1px solid #e8e8e8;">
+        <p style="color: #888; font-size: 0.9em;">
+            <strong>Related reading:</strong><br>
+            <a href="https://cncdisplay.com/en/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" style="color: #1a73e8;">Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?</a><br>
+            <a href="https://cncdisplay.com/en/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html" style="color: #1a73e8;">Mitsubishi MDT962B LCD Retrofit — Complete Installation Guide</a>
+        </p>
+        </article>
+    </main>    
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> — Reply within 24 hours</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+            </div>
+            <div class="footer-links">
+                <a href="/en/posts/">📄 Articles</a>
+                <a href="/en/brands/FANUC.html">FANUC</a>
+                <a href="/en/brands/Mitsubishi.html">Mitsubishi</a>
+                <a href="/en/brands/Siemens.html">Siemens</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About Us</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | szkongto01@foxmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

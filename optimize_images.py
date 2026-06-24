@@ -1,175 +1,186 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
-图片压缩脚本 - 优化博客图片
-功能：
-1. 压缩超过500KB的图片到指定大小
-2. 限制最大尺寸（如1920px）
-3. 转换为WebP格式（可选）
-4. 输出压缩报告
+全站图片优化脚本 v2
+- 尺寸优化: 最大宽度/高度 1200px (保持比例)
+- 大小优化: JPEG quality 82 + progressive + optimize
+- PNG: quantize 256色 + optimize
+- 创建备份: images_backup_YYYYMMDD_HHMMSS/
 """
 import os
 import sys
-import subprocess
 import shutil
 from pathlib import Path
+from datetime import datetime
+from PIL import Image, ImageFile
 
-# 配置
-MAX_SIZE_KB = 500  # 最大文件大小 KB
-MAX_WIDTH = 1920   # 最大宽度
-MAX_HEIGHT = 1080  # 最大高度
-QUALITY = 85       # JPEG质量
-IMAGES_DIR = "images"
-BACKUP_DIR = "images_backup_compressed"
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+Image.MAX_IMAGE_PIXELS = None
 
-class ImageOptimizer:
+BASE = Path('d:/code/seo_deploy')
+EXTS = {'.jpg', '.jpeg', '.png'}
+SKIP_DIRS = {'images_backup_compressed', 'images_backup'}
+MAX_DIM = 1200
+JPEG_QUALITY = 82
+MIN_SKIP_KB = 15  # skip images < 15KB already within size limits
+
+
+class Stats:
     def __init__(self):
-        self.check_tools()
-        self.stats = {"total": 0, "compressed": 0, "skipped": 0, "errors": 0}
-        self.backup_dir = None
+        self.total_before = 0.0
+        self.total_after = 0.0
+        self.count = 0
+        self.skipped = 0
+        self.resized = 0
+        self.compressed_only = 0
+        self.errors = []
 
-    def check_tools(self):
-        """检查图片处理工具 - 优先使用Pillow"""
-        print("使用Pillow (Python) 进行图片压缩")
-        self.converter = "python"
 
-    def create_backup(self):
-        """创建备份目录"""
-        if not os.path.exists(BACKUP_DIR):
-            os.makedirs(BACKUP_DIR)
-            print(f"创建备份目录: {BACKUP_DIR}")
-        self.backup_dir = BACKUP_DIR
+def optimize_image(filepath, rel_path, stats):
+    """Optimize a single image. Returns (before_kb, after_kb)."""
+    before_kb = os.path.getsize(filepath) / 1024
 
-    def backup_file(self, filepath):
-        """备份原文件"""
-        rel_path = os.path.relpath(filepath, ".")
-        backup_path = os.path.join(BACKUP_DIR, rel_path)
-        backup_dir = os.path.dirname(backup_path)
-        if not os.path.exists(backup_dir):
-            os.makedirs(backup_dir)
-        if not os.path.exists(backup_path):
-            shutil.copy2(filepath, backup_path)
-
-    def compress_with_imagemagick(self, filepath, output_path):
-        """使用ImageMagick压缩"""
-        cmd = [
-            "magick" if shutil.which("magick") else "convert",
-            filepath,
-            "-resize", f"{MAX_WIDTH}x{MAX_HEIGHT}>",
-            "-quality", str(QUALITY),
-            "-strip",
-            output_path
-        ]
-        subprocess.run(cmd, check=True, capture_output=True)
-
-    def compress_with_python(self, filepath, output_path):
-        """使用Python PIL/Pillow压缩"""
-        try:
-            from PIL import Image
-        except ImportError:
-            print("需要安装 Pillow: pip install Pillow")
-            sys.exit(1)
-
+    try:
         img = Image.open(filepath)
+    except Exception as e:
+        stats.errors.append(f"OPEN: {rel_path} - {e}")
+        return (before_kb, before_kb)
 
-        # 调整尺寸
-        if img.width > MAX_WIDTH or img.height > MAX_HEIGHT:
-            img.thumbnail((MAX_WIDTH, MAX_HEIGHT), Image.Resampling.LANCZOS)
+    w, h = img.size
 
-        # 转换RGB（如果是RGBA）
-        if img.mode == 'RGBA':
-            img = img.convert('RGB')
+    # Skip tiny already-optimized images
+    if before_kb < MIN_SKIP_KB and w <= MAX_DIM and h <= MAX_DIM:
+        stats.skipped += 1
+        return (before_kb, before_kb)
 
-        # 保存
-        img.save(output_path, "JPEG", quality=QUALITY, optimize=True)
-
-    def optimize_image(self, filepath):
-        """优化单张图片"""
-        self.stats["total"] += 1
-        size_kb = os.path.getsize(filepath) / 1024
-
-        if size_kb <= MAX_SIZE_KB:
-            self.stats["skipped"] += 1
-            print(f"  跳过 (大小合适): {filepath} ({size_kb:.1f}KB)")
-            return False
-
-        # 备份
-        self.backup_file(filepath)
-
-        # 生成输出路径
-        dir_name = os.path.dirname(filepath)
-        base_name = os.path.splitext(os.path.basename(filepath))[0]
-        ext = os.path.splitext(filepath)[1].lower()
-
-        # 如果是JPEG，用jpg后缀
-        if ext in ['.jpg', '.jpeg']:
-            output_path = filepath  # 直接覆盖
-        else:
-            output_path = os.path.join(dir_name, f"{base_name}_opt.jpg")
-
+    # Resize if oversized
+    needs_resize = w > MAX_DIM or h > MAX_DIM
+    if needs_resize:
+        ratio = min(MAX_DIM / w, MAX_DIM / h)
+        new_w, new_h = int(w * ratio), int(h * ratio)
         try:
-            if self.converter == "imagemagick":
-                self.compress_with_imagemagick(filepath, output_path)
-            else:
-                self.compress_with_python(filepath, output_path)
+            img = img.resize((new_w, new_h), Image.LANCZOS)
+        except (ValueError, OSError):
+            img = img.convert('RGB').resize((new_w, new_h), Image.LANCZOS)
+        stats.resized += 1
+    else:
+        stats.compressed_only += 1
 
-            new_size_kb = os.path.getsize(output_path) / 1024
-            saved = size_kb - new_size_kb
-            print(f"  ✓ 压缩: {filepath}")
-            print(f"    {size_kb:.1f}KB → {new_size_kb:.1f}KB (节省 {saved:.1f}KB, {saved/size_kb*100:.0f}%)")
-            self.stats["compressed"] += 1
-            return True
-        except Exception as e:
-            print(f"  ✗ 错误: {filepath} - {e}")
-            self.stats["errors"] += 1
-            return False
+    # Compress
+    ext = filepath.suffix.lower()
+    if ext in ('.jpg', '.jpeg'):
+        if img.mode not in ('RGB', 'L'):
+            img = img.convert('RGB')
+        img.save(filepath, 'JPEG', quality=JPEG_QUALITY, optimize=True, progressive=True)
+    elif ext == '.png':
+        save_kwargs = {'optimize': True}
+        if img.mode not in ('RGBA', 'PA', 'P') or (img.mode == 'P' and 'transparency' not in img.info):
+            try:
+                converted = img.convert('RGB')
+                img = converted.quantize(colors=256, method=Image.Quantize.MEDIANCUT)
+            except Exception:
+                pass
+        img.save(filepath, 'PNG', **save_kwargs)
 
-    def optimize_directory(self, directory):
-        """优化整个目录"""
-        print(f"\n扫描目录: {directory}")
+    after_kb = os.path.getsize(filepath) / 1024
+    return (before_kb, after_kb)
 
-        for root, dirs, files in os.walk(directory):
-            for filename in files:
-                if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp')):
-                    filepath = os.path.join(root, filename)
-                    self.optimize_image(filepath)
 
-    def print_report(self):
-        """打印压缩报告"""
-        print("\n" + "=" * 50)
-        print("图片压缩报告")
-        print("=" * 50)
-        print(f"总图片数: {self.stats['total']}")
-        print(f"已压缩: {self.stats['compressed']}")
-        print(f"已跳过: {self.stats['skipped']} (大小合适)")
-        print(f"错误数: {self.stats['errors']}")
-        if self.backup_dir:
-            print(f"\n备份目录: {self.backup_dir}/")
-            print("如需恢复，运行: cp -r images_backup_compressed/* images/")
-        print("=" * 50)
+def find_images():
+    """Yield all image paths excluding backup dirs."""
+    for filepath in BASE.rglob('*'):
+        if filepath.suffix.lower() not in EXTS:
+            continue
+        parts = set(str(filepath.relative_to(BASE)).split(os.sep))
+        if parts & SKIP_DIRS:
+            continue
+        yield filepath
+
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser(description="优化博客图片")
-    parser.add_argument("--max-size", type=int, default=500, help="最大文件大小 KB (默认: 500)")
-    parser.add_argument("--max-width", type=int, default=1920, help="最大宽度 px (默认: 1920)")
-    parser.add_argument("--quality", type=int, default=85, help="JPEG质量 (默认: 85)")
-    parser.add_argument("--no-backup", action="store_true", help="跳过备份")
-    parser.add_argument("directory", nargs="?", default="images", help="图片目录")
-    args = parser.parse_args()
+    stats = Stats()
 
-    global MAX_SIZE_KB, MAX_WIDTH, MAX_HEIGHT, QUALITY
-    MAX_SIZE_KB = args.max_size
-    MAX_WIDTH = args.max_width
-    MAX_HEIGHT = 1080
-    QUALITY = args.quality
+    print("=" * 62)
+    print("  cncdisplay.com 全站图片优化")
+    print(f"  最大尺寸: {MAX_DIM}px | JPEG质量: {JPEG_QUALITY} | Progressive: ON")
+    print("=" * 62)
 
-    optimizer = ImageOptimizer()
+    all_images = list(find_images())
+    if not all_images:
+        print("未找到图片。")
+        return
 
-    if not args.no_backup:
-        optimizer.create_backup()
+    print(f"\n  扫描到 {len(all_images)} 张图片，分析中...")
 
-    optimizer.optimize_directory(args.directory)
-    optimizer.print_report()
+    # Analyze
+    plan = []
+    total_scan = 0.0
+    for filepath in all_images:
+        try:
+            img = Image.open(filepath)
+            w, h = img.size
+        except Exception:
+            print(f"  SKIP: {filepath.relative_to(BASE)} (无法打开)")
+            continue
+        size_kb = os.path.getsize(filepath) / 1024
+        total_scan += size_kb
+        if size_kb < MIN_SKIP_KB and w <= MAX_DIM and h <= MAX_DIM:
+            continue
+        plan.append((filepath, w > MAX_DIM or h > MAX_DIM, size_kb, w, h))
 
-if __name__ == "__main__":
+    if not plan:
+        print("  所有图片已优化，无需处理。")
+        return
+
+    oversized = sum(1 for _, needs_r, _, _, _ in plan if needs_r)
+    print(f"  当前: {total_scan/1024:.1f} MB | 优化 {len(plan)} 张 | 缩尺寸 {oversized} 张")
+
+    # Backup
+    ts = datetime.now().strftime('%Y%m%d_%H%M%S')
+    backup_dir = BASE / f'images_backup_{ts}'
+    backup_dir.mkdir(parents=True, exist_ok=True)
+    for filepath, _, _, _, _ in plan:
+        rel = filepath.relative_to(BASE)
+        dest = backup_dir / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(filepath, dest)
+    print(f"  备份: {backup_dir.name}/\n")
+
+    # Optimize
+    print(f"  {'图像文件':<52} {'优化前':>7} {'优化后':>7} {'变化':>6}")
+    print(f"  {'-'*52} {'-'*7} {'-'*7} {'-'*6}")
+
+    for filepath, needs_resize, before_kb, orig_w, orig_h in plan:
+        rel_path = filepath.relative_to(BASE)
+        before, after = optimize_image(filepath, rel_path, stats)
+        stats.total_before += before
+        stats.total_after += after
+        stats.count += 1
+
+        change = before - after
+        pct = (change / before * 100) if before > 0 else 0
+        marker = 'S' if needs_resize else 'C'
+        name = str(rel_path)
+        if len(name) > 50:
+            name = '...' + name[-47:]
+        print(f"  [{marker}] {name:<50} {before:>6.0f}K {after:>6.0f}K {pct:>+5.0f}%")
+
+    # Summary
+    saved_mb = (stats.total_before - stats.total_after) / 1024
+    saved_pct = ((stats.total_before - stats.total_after) / stats.total_before * 100) if stats.total_before > 0 else 0
+
+    print(f"\n{'='*62}")
+    print(f"  优化完成!")
+    print(f"{'='*62}")
+    print(f"  处理: {stats.count} 张 | 缩尺寸: {stats.resized} | 仅压缩: {stats.compressed_only}")
+    print(f"  优化前: {stats.total_before/1024:.1f} MB → 优化后: {stats.total_after/1024:.1f} MB")
+    print(f"  节省: {saved_mb:.1f} MB ({saved_pct:.1f}%)")
+    print(f"  备份: {backup_dir.name}/")
+    if stats.errors:
+        print(f"  错误: {len(stats.errors)} 张")
+        for e in stats.errors[:5]:
+            print(f"    - {e}")
+    print()
+
+
+if __name__ == '__main__':
     main()

@@ -1,7 +1,7 @@
 """Generate search-index.json for client-side search from all HTML articles."""
 import json, os, re, sys
 
-ROOT = "d:/code/seo_deploy"
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 def strip_html(text):
     text = re.sub(r'<[^>]+>', ' ', text)
