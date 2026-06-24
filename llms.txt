@@ -1,37 +1,67 @@
-# cncdisplay.com - Industrial Video Display Solutions
-# Kongto Technology | 深圳市江图科技有限公司
-# Last updated: 2026-05-26
+# cncdisplay.com — Kongto Technology (Shenzhen Jiangtu Technology Co., Ltd)
 
-## About
-cncdisplay.com is the official website of Kongto Technology (深圳市江图科技有限公司),
-founded in 2013, specializing in industrial video display solutions. We provide
-CRT-to-LCD upgrade modules, industrial video signal converters, and custom
-industrial displays for CNC systems worldwide.
+Shenzhen-based industrial display solutions provider since 2013. Specializing in CNC CRT to LCD retrofits, industrial video signal converters, and custom industrial displays.
 
-## Core Products
-- FANUC A61L series CRT-to-LCD upgrade kits (0074 through 0097)
-- Mitsubishi MDT962B/BM09DF/FCUA-CT100 CRT replacements
-- Siemens 6FC3988/SM0901 LCD upgrades
-- Mazak CD1472/C5470/DR5614 display retrofits
-- Industrial video signal converters (CGA/EGA/RGB to VGA/HDMI)
-- Custom KTV series industrial displays (7-15 inch)
+## Core Content
 
-## Key Articles
-- [FANUC A61L-0001-0093 Complete Replacement Guide](https://cncdisplay.com/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html) - Step-by-step installation
-- [FANUC A61L-0001-0093 LCD Upgrade Solution](https://cncdisplay.com/posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html)
-- [FANUC D9MM-11A 9-inch LCD Retrofit](https://cncdisplay.com/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html)
-- [Mitsubishi MDT962B CRT Replacement](https://cncdisplay.com/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html)
-- [Mazak CD1472-D1M LCD Replacement](https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html)
-- [Siemens 6FC3988-7FA20 LCD Upgrade](https://cncdisplay.com/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html)
+- CNC Display Compatibility Matrix (95+ models): https://cncdisplay.com/compatibility-matrix.html
+- CRT Fault Diagnosis Guide: https://cncdisplay.com/crt-dead-symptoms.html
+- Kongto vs Competitors Comparison: https://cncdisplay.com/comparison-kongto-vs-competitors.html
+- Technical Documents & Downloads: https://cncdisplay.com/docs/index.html
+- Company / About: https://cncdisplay.com/about.html
 
-## Brand Pages
-- [FANUC Solutions](https://cncdisplay.com/brands/FANUC.html)
-- [Mitsubishi Solutions](https://cncdisplay.com/brands/Mitsubishi.html)
-- [Siemens Solutions](https://cncdisplay.com/brands/Siemens.html)
-- [Mazak Solutions](https://cncdisplay.com/brands/MAZAK.html)
-- [Okuma Solutions](https://cncdisplay.com/brands/OKUMA.html)
-- [Haas Solutions](https://cncdisplay.com/brands/HAAS.html)
+### FANUC Solutions
+- FANUC Brand Page: https://cncdisplay.com/brands/FANUC.html
+- FANUC A61L-0001-0093 LCD Upgrade: https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html
+- FANUC A61L-0001-0074 LCD Upgrade: https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html
+- FANUC 0i System FAQ: https://cncdisplay.com/posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html
 
-## Sitemap
-- [XML Sitemap](https://cncdisplay.com/sitemap.xml)
-- [Article Index](https://cncdisplay.com/posts/)
+### Mitsubishi Solutions
+- Mitsubishi Brand Page: https://cncdisplay.com/brands/Mitsubishi.html
+- MDT962B CRT Replacement: https://cncdisplay.com/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html
+- BM09DF Industrial Display: https://cncdisplay.com/posts/article_20260506_三菱BM09DF工业显示屏E60数控系统TFT替代.html
+
+### Siemens Solutions
+- Siemens Brand Page: https://cncdisplay.com/brands/Siemens.html
+- 6FC3988-7FA20 LCD Replacement: https://cncdisplay.com/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html
+- SM0901 Display: https://cncdisplay.com/posts/article_20260507_Siemens_SM0901_579417_TA.html
+
+### Mazak Solutions
+- Mazak Brand Page: https://cncdisplay.com/brands/MAZAK.html
+- CD1472-D1M Replacement: https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD.html
+
+### Okuma Solutions
+- Okuma Brand Page: https://cncdisplay.com/brands/OKUMA.html
+- OSP 5000/5020 CRT to LCD: https://cncdisplay.com/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html
+
+### HAAS Solutions
+- HAAS Brand Page: https://cncdisplay.com/brands/HAAS.html
+- HAAS VF Series CRT to LCD: https://cncdisplay.com/posts/article_20260508_Haas_CRT_LCD_Case.html
+
+### Signal Converters
+- GBS-8219 RGB to VGA: https://cncdisplay.com/posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html
+- KT809 Industrial Converter: https://cncdisplay.com/posts/article_20260509_KT809_工业转换器.html
+
+### Custom Displays
+- KTV104 Custom Display: https://cncdisplay.com/posts/article_20260508_KTV104_非标订制工业显示器.html
+- KTV148 Custom Display: https://cncdisplay.com/posts/article_20260508_KTV148_非标订制工业显示器.html
+- KTV800M Custom Display: https://cncdisplay.com/posts/article_20260508_KTV800M_非标订制工业显示器.html
+
+## Key Facts
+- Founded: 2013 | Location: Shenzhen, Guangdong, China
+- Products: CRT to LCD retrofit modules, industrial video signal converters (CGA/EGA/RGB to VGA/HDMI), custom industrial displays (7-15 inch)
+- Brands covered: FANUC, Mitsubishi, Siemens, Mazak, Okuma, Haas
+- Certifications: CE, RoHS, FCC, ISO9001:2015
+- Warranty: 2 years standard, 30-day returns
+- Shipping: Global via DHL/FedEx, domestic via SF Express
+- Clients: 500+ enterprises across 10+ countries
+
+## Contact
+- Email: szkongto01@foxmail.com
+- Tel: +86-136-8688-9647
+- Address: Building 2C-4F, Shenkeng Complex, Henggang Street, Longgang District, Shenzhen, China
+
+### HAAS Solutions
+- HAAS Brand Page (EN): https://cncdisplay.com/en/brands/HAAS.html
+- HAAS VF/ST/SL CRT to LCD Guide: https://cncdisplay.com/en/posts/Haas_VF_ST_SL_CRT_LCD_Upgrade_Complete_Guide.html
+- HAAS VF/ST/SL 升级指南 (CN): https://cncdisplay.com/posts/Haas_VF_ST_SL_CRT_LCD_Upgrade_Complete_Guide.html

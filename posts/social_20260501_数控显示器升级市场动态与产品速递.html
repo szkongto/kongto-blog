@@ -220,9 +220,9 @@
 
 <h2> 专业版  </h2>
 
-<figure><img src="/images/211.jpg" alt="211" class="article-img"></figure>
+<figure><img loading="lazy" src="/images/211.jpg" alt="211" class="article-img"></figure>
 
-<figure><img src="/images/21.JPG" alt="21.JPG" class="article-img"></figure>
+<figure><img loading="lazy" src="/images/21.JPG" alt="21.JPG" class="article-img"></figure>
 
 <strong>数控显示器升级市场动态</strong>  
 
@@ -398,7 +398,7 @@
 
         modal.className = 'wechat-modal';
 
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img loading="lazy" src="' + qrUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
 
         document.body.appendChild(modal);
 
