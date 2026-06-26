@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
@@ -11,8 +11,6 @@
     <title>Video Signal Converters in CNC Control Systems | Kongto Technology</title>
 
     <meta name="description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.">
-
-    <meta name="keywords" content="CNC video signal converter, industrial display converter, CGA to VGA converter, EGA to VGA converter, RGBHV converter, CNC CRT to LCD, CNC display upgrade, industrial signal conversion">
 
     <meta name="author" content="Kongto Technology">
 
@@ -110,13 +108,6 @@
 
 
 
-    <meta name="geo.region" content="CN-44">
-
-    <meta name="geo.placename" content="深圳龙岗">
-
-    <meta name="geo.position" content="22.6568;113.9899">
-
-    <meta name="ICBM" content="22.6568, 113.9899">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -133,18 +124,18 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://cncdisplay.com/#organization",
-  "name": "深圳市江图科技有限公司",
+  "name": "娣卞湷甯傛睙鍥剧鎶€鏈夐檺鍏徃",
   "alternateName": "Kongto Technology",
   "url": "https://cncdisplay.com",
-  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "description": "涓撴敞宸ヤ笟瑙嗛鏄剧ず鍗囩骇鏂规锛孋NC鏄剧ず鍣–RT杞琇CD鍗囩骇涓撳",
   "image": "/images/logo.png",
   "telephone": "+86-13686889647",
   "email": "szkongto01@foxmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
-    "addressLocality": "深圳",
-    "addressRegion": "广东",
+    "streetAddress": "榫欏矖鍖烘í宀楄閬撴繁鍧戠患鍚堟ゼ2鍙锋ゼC鏍?妤?,
+    "addressLocality": "娣卞湷",
+    "addressRegion": "骞夸笢",
     "postalCode": "518000",
     "addressCountry": "CN"
   },
@@ -188,7 +179,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "首页",
+      "name": "棣栭〉",
       "item": "https://cncdisplay.com/"
     },
     {
@@ -215,9 +206,9 @@
                 <a href="/en/about.html">About</a>
                 <a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
             </div>
-            <a href="/en/search.html" class="nav-search">🔍 Search</a>
+            <a href="/en/search.html" class="nav-search">馃攳 Search</a>
             <div class="lang-switch">
-                <a href="https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html" lang="zh" class="lang-zh">中文</a>
+                <a href="https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html" lang="zh" class="lang-zh">涓枃</a>
                 <span class="divider">|</span>
                 <a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" lang="en" class="lang-en">English</a>
             </div>
@@ -434,19 +425,19 @@
 
 <li><strong>Perform Electrical Safety Lockout</strong>. Shut down the CNC machine using the main power disconnect. Apply a lockout/tagout device and verify zero voltage at the controller power supply terminals using your multimeter. Wait at least 3 minutes for internal capacitors to discharge. Never rely on the machine's power switch alone.</li>
 
-<li><strong>Identify and Document the Existing Display Connections</strong>. Remove the CRT display bezel or access panel. Photograph every cable and its connector before disconnecting anything. Note the cable colors and pin positions — many CNC controllers use custom wiring that does not follow standard color codes. Check the controller model number against known pinout diagrams from Kongto Technology's compatibility matrix.</li>
+<li><strong>Identify and Document the Existing Display Connections</strong>. Remove the CRT display bezel or access panel. Photograph every cable and its connector before disconnecting anything. Note the cable colors and pin positions 鈥?many CNC controllers use custom wiring that does not follow standard color codes. Check the controller model number against known pinout diagrams from Kongto Technology's compatibility matrix.</li>
 
 <li><strong>Verify the Video Signal Parameters</strong>. With the machine powered on (after lockout is lifted for testing), use an oscilloscope to measure the H-sync frequency and V-sync frequency at the controller's video output connector. Confirm the signal matches the specifications listed in Section 2. If using a TTL-level signal (0-5V), ensure your converter is configured for TTL input; if analog (0.7Vpp RGB), set the converter accordingly.</li>
 
 <li><strong>Mount the Converter and Route Cables</strong>. Install the converter inside the electrical cabinet using the provided DIN rail clip or mounting bracket. Keep at least 10 cm (4 inches) of separation between video signal cables and motor power cables or servo drive cables to prevent electromagnetic interference. Use shielded twisted-pair cable for the RGB signal lines, with the shield grounded at one end only to avoid ground loops.</li>
 
-<li><strong>Connect and Power On for Initial Test</strong>. Connect the CNC controller's video output to the converter input, and the converter output to the new LCD monitor. Apply power and observe the display. If no image appears, check the converter's sync polarity DIP switches — some FANUC and Mitsubishi controllers output negative-going sync pulses that must be matched. If the image rolls vertically, adjust the V-hold or switch between composite and separate sync modes.</li>
+<li><strong>Connect and Power On for Initial Test</strong>. Connect the CNC controller's video output to the converter input, and the converter output to the new LCD monitor. Apply power and observe the display. If no image appears, check the converter's sync polarity DIP switches 鈥?some FANUC and Mitsubishi controllers output negative-going sync pulses that must be matched. If the image rolls vertically, adjust the V-hold or switch between composite and separate sync modes.</li>
 
 <li><strong>Fine-Tune and Secure the Installation</strong>. Use the converter's on-board potentiometers (if equipped) or OSD menu to adjust horizontal position, vertical position, image size, and phase/clock to achieve a sharp, stable display. Run the CNC machine through a complete boot cycle and test a sample program to confirm the display remains stable under load. Secure all cables with cable ties, label both ends of each cable, and close the cabinet.</li>
 
 </ol>
 
-<div class="success-box">After installation, run the machine for at least 4 hours of continuous operation to verify display stability. Thermal expansion in the electrical cabinet can affect connector seating — re-tighten all screw terminals after the initial burn-in period.</div>
+<div class="success-box">After installation, run the machine for at least 4 hours of continuous operation to verify display stability. Thermal expansion in the electrical cabinet can affect connector seating 鈥?re-tighten all screw terminals after the initial burn-in period.</div>
 
 <h2>6. Kongto Technology Converter Product Line</h2>
 
@@ -630,61 +621,37 @@
 
     <h3 style="margin-top:0;">Related Articles</h3>
 
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide | Kongto Technology</a></li><li><a href="/en/posts/Video_Signal_Converter_Selection_Guide.html">Video Signal Converter Selection | Kongto Technology</a></li><li><a href="/en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">Video Signal Conversion Systems — CGA/EGA to VGA, RGB to VGA G...</a></li></ul>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide | Kongto Technology</a></li><li><a href="/en/posts/Video_Signal_Converter_Selection_Guide.html">Video Signal Converter Selection | Kongto Technology</a></li><li><a href="/en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">Video Signal Conversion Systems 鈥?CGA/EGA to VGA, RGB to VGA G...</a></li></ul>
 
 </section>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">馃搶 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> — Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <span class="footer-logo">Kongto Technology 姹熷浘绉戞妧</span>
+                <p>Industrial Video Display Solutions 鈥?CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
             </div>
             <div class="footer-links">
-                <a href="/en/posts/">📄 Articles</a>
+                <a href="/en/posts/">馃搫 Articles</a>
                 <a href="/en/brands/FANUC.html">FANUC</a>
                 <a href="/en/brands/Mitsubishi.html">Mitsubishi</a>
                 <a href="/en/brands/Siemens.html">Siemens</a>
                 <a href="/en/docs/">Downloads</a>
                 <a href="/en/about.html">About Us</a>
             </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | szkongto01@foxmail.com</p>
+            <p class="footer-copy">漏 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | szkongto01@foxmail.com</p>
         </div>
     </footer>
 
-<script>
 
-(function(){
-
-    var bp = document.createElement('script');
-
-    var curProtocol = window.location.protocol.split(':')[0];
-
-    if (curProtocol === 'https') {
-
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-
-    } else {
-
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-
-    }
-
-    var s = document.getElementsByTagName("script")[0];
-
-    s.parentNode.insertBefore(bp, s);
-
-})();
-
-</script>
 
 </body>
 
