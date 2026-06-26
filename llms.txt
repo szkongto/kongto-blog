@@ -1,60 +1,33 @@
-# Kongto Technology (cncdisplay.com) - AI-Friendly Content Index
-# Generated: 2026-06-20 | Updated for GEO optimization
-# Purpose: Help AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google AI) understand our site
-# About: Industrial CNC display CRT to LCD upgrade solutions since 2013
-# Contact: szkongto01@foxmail.com | +86-13686889647
+# CNC显示器CRT转LCD升级方案 - 江图科技
+> 江图科技提供即插即用的工业LCD替代模块，适用于FANUC发那科、三菱Mitsubishi、西门子Siemens、马扎克Mazak、大隈Okuma、哈斯HAAS等品牌的CNC数控系统CRT显示器升级。直接安装，无需改线，2年质保。
 
-## Company Overview
-- Name: Kongto Technology (深圳市江图科技有限公司)
-- Founded: 2013
-- Location: Shenzhen, Guangdong, China
-- Specialty: Industrial CNC display upgrades, CRT-to-LCD retrofit, video signal converters
-- Clients: 500+ enterprises across 12+ countries
-- Warranty: 2 years on all products
-- Certifications: CE, RoHS 2.0, FCC, ISO 9001:2015, IP65
+## 产品列表
 
-## Core Products
-- [FANUC A61L-0001-0093 LCD Upgrade ($299)](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html) - 9-inch plug-and-play CRT replacement
-- [Mitsubishi MDT962B LCD Upgrade ($299)](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html) - M64/E60/M500/M520 compatible
-- [Siemens 6FC3988-7FA20 LCD Upgrade ($299)](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html) - SINUMERIK 840D/810D compatible
+### FANUC A61L 系列
+- [A61L-0001-0072 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
+- [A61L-0001-0074 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
+- [A61L-0001-0076 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
+- [A61L-0001-0086 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
+- [A61L-0001-0090 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$350
+- [A61L-0001-0092 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
+- [A61L-0001-0093 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$155
+- [A61L-0001-0094 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
+- [A61L-0001-0095 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9寸彩色CRT→8寸LCD，$199
+- [A61L-0001-0096 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
+- [A61L-0001-0097 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
 
-## Key Facts (Citation-Ready Data Points)
-- Industrial LCD lifespan: 50,000+ hours vs CRT 15,000 hours (3.3x improvement)
-- LCD power consumption: 8-12W vs CRT 25-30W (60%+ energy savings)
-- Installation time: 10-15 minutes per CNC machine, plug-and-play
-- Brightness upgrade: LCD 350-450cd/m² vs CRT 200cd/m² (new) / <100cd/m² (aged)
-- CRT anode voltage: 10-15kV (safety hazard when aged)
-- Working temperature: -20°C to 60°C (LCD) vs 0-40°C (CRT)
-- Products: FANUC A61L-0001(0074-0097), D9MM-11A | Mitsubishi MDT962B/BM09DF/FCUA-CT100 | Siemens 6FC3988/SM0901 | Mazak CD1472/C5470/DR5614 | Okuma OSP 5000/5020 | Haas VF/ST/SL
+### 三菱Mitsubishi / 西门子Siemens / 哈斯HAAS / 马扎克Mazak / 大隈Okuma
+- [MDT962B LCD升级](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html): 兼容BM09DF/FCUA-CT100，$155
+- [6FC3988-7FA20 LCD升级](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 兼容SM0901/579417TA，$399
+- [HAAS 28HM-NM4 LCD升级](https://cncdisplay.com/en/products/haas-28hm-nm4-lcd-upgrade.html): 兼容93-5220C，$399
+- [Mazak MDT1283B LCD升级](https://cncdisplay.com/en/products/mazak-mdt1283b-lcd-upgrade.html): $355
+- [Mazak 14寸彩色CRT LCD升级](https://cncdisplay.com/en/products/mazak-14-inch-crt-lcd-upgrade.html): DR5614/C-5470NS等，$355
+- [Okuma OSP CRT LCD升级](https://cncdisplay.com/en/products/okuma-osp-crt-lcd-upgrade.html): $430
 
-## Key Pages
-- Home (EN): https://cncdisplay.com/en/index.html
-- Home (ZH): https://cncdisplay.com/
-- About: https://cncdisplay.com/about.html
-- Compatibility Lookup: https://cncdisplay.com/en/compatibility-matrix.html - Interactive CRT→LCD lookup tool
-- Compatibility (ZH): https://cncdisplay.com/compatibility-matrix.html - 中文版兼容性查询
+## 品牌页面
+- [FANUC](https://cncdisplay.com/brands/FANUC.html) | [三菱](https://cncdisplay.com/brands/Mitsubishi.html) | [西门子](https://cncdisplay.com/brands/Siemens.html)
+- [HAAS](https://cncdisplay.com/brands/HAAS.html) | [Mazak](https://cncdisplay.com/brands/MAZAK.html) | [Okuma](https://cncdisplay.com/brands/OKUMA.html)
 
-## Brand Pages
-- FANUC: https://cncdisplay.com/en/brands/FANUC.html
-- Mitsubishi: https://cncdisplay.com/en/brands/Mitsubishi.html
-- Siemens: https://cncdisplay.com/en/brands/Siemens.html
-- Mazak: https://cncdisplay.com/en/brands/MAZAK.html
-- Okuma: https://cncdisplay.com/en/brands/OKUMA.html
-- Haas: https://cncdisplay.com/en/brands/HAAS.html
-
-## Social & Video
-- YouTube: https://www.youtube.com/@Cncdisplay
-- LinkedIn: https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/
-- CSDN Blog: https://blog.csdn.net/szkongto
-- GitHub: https://github.com/szkongto
-
-## FAQ Topics (AI Citation Ready)
-- Q: What is FANUC A61L-0001-0093? → A 9-inch monochrome CRT display for FANUC CNC systems, replaced by Kongto's industrial TFT-LCD module (800x600, 350-450cd/m², 50,000+ hour lifespan, plug-and-play)
-- Q: How to upgrade FANUC CRT to LCD? → See FANUC brand page; all solutions plug-and-play, 10-15 min install
-- Q: Is LCD upgrade compatible with my CNC? → Check compatibility matrix or email photo to szkongto01@foxmail.com
-- Q: Do I need to change CNC parameters? → No, all solutions use original connectors, DC 24V power
-- Q: Warranty? → 2 years on all products, lifetime technical support
-
-## Sitemap
-- XML: https://cncdisplay.com/sitemap.xml
-- RSS: https://cncdisplay.com/feed.xml
+## 兼容查询
+- [CRT转LCD兼容性查询](https://cncdisplay.com/compatibility-matrix.html): 95+型号对照
+- 邮箱: szkongto01@foxmail.com | 电话: +86-13686889647

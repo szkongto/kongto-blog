@@ -1,0 +1,58 @@
+# CNC Display CRT to LCD Upgrade Solutions
+> Kongto Technology provides plug-and-play industrial LCD replacement modules for aging CRT displays on FANUC, Mitsubishi, Siemens, Mazak, Okuma, and HAAS CNC machines. Direct fit, no wiring modifications, 2-year warranty.
+
+## Products by Brand
+
+### FANUC A61L Series
+- [FANUC A61L-0001-0072 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0074 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0076 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0086 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0090 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $350
+- [FANUC A61L-0001-0092 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0093 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $155
+- [FANUC A61L-0001-0094 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0095 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9-inch color CRT to 8-inch LCD, $199
+- [FANUC A61L-0001-0096 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0097 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+
+### Mitsubishi
+- [Mitsubishi MDT962B LCD Replacement](https://cncdisplay.com/en/products/mitsubishi-mdt962b-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $155. Also fits BM09DF, FCUA-CT100
+
+### Siemens
+- [Siemens 6FC3988-7FA20 LCD Replacement](https://cncdisplay.com/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $399. Also fits SM0901, 579417TA
+
+### HAAS
+- [HAAS 28HM-NM4 LCD Replacement](https://cncdisplay.com/en/products/haas-28hm-nm4-lcd-upgrade.html): 12-inch monochrome CRT to 12.1-inch LCD, $399. Also fits 93-5220C, 93-5220
+
+### Mazak
+- [Mazak MDT1283B-1A LCD Replacement](https://cncdisplay.com/en/products/mazak-mdt1283b-lcd-upgrade.html): 12-inch CRT to 12.1-inch LCD, $355
+- [Mazak 14-inch Color CRT LCD Replacement](https://cncdisplay.com/en/products/mazak-14-inch-crt-lcd-upgrade.html): For DR5614, C-5470NS, AIQA8DSP40, $355
+
+### Okuma
+- [Okuma OSP CRT LCD Replacement](https://cncdisplay.com/en/products/okuma-osp-crt-lcd-upgrade.html): For OSP500L-G, 5000, 5020, 7000, $430
+
+## Brand Pages
+- [FANUC Display Solutions](https://cncdisplay.com/en/brands/FANUC.html)
+- [Mitsubishi Display Solutions](https://cncdisplay.com/en/brands/Mitsubishi.html)
+- [Siemens Display Solutions](https://cncdisplay.com/en/brands/Siemens.html)
+- [HAAS Display Solutions](https://cncdisplay.com/en/brands/HAAS.html)
+- [Mazak Display Solutions](https://cncdisplay.com/en/brands/MAZAK.html)
+- [Okuma Display Solutions](https://cncdisplay.com/en/brands/OKUMA.html)
+
+## Compatibility & Tools
+- [CRT to LCD Compatibility Matrix](https://cncdisplay.com/en/compatibility-matrix.html): 95+ model cross-reference
+- [CNC Display Troubleshooting Guide](https://cncdisplay.com/en/crt-dead-symptoms.html)
+
+## Technical Guides
+- [HAAS VF Series CRT to LCD Guide](https://cncdisplay.com/en/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html)
+- [FANUC A61L Series CRT to LCD Guide](https://cncdisplay.com/en/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html)
+- [Mitsubishi MDT962B CRT to LCD Guide](https://cncdisplay.com/en/posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html)
+- [Siemens Sinumerik CRT to LCD Guide](https://cncdisplay.com/en/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html)
+- [Mazak Mazatrol CRT to LCD Guide](https://cncdisplay.com/en/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html)
+- [Okuma OSP CRT to LCD Guide](https://cncdisplay.com/en/posts/okuma-osp-crt-to-lcd-upgrade-guide.html)
+
+## About
+- [About Kongto Technology](https://cncdisplay.com/en/about.html)
+- [Get a Quote](https://cncdisplay.com/en/quote.html)
+- Contact: szkongto01@foxmail.com | +86-13686889647
