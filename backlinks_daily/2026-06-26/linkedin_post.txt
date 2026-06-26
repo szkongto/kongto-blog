@@ -1,4 +1,4 @@
-CNC maintenance reality: That Okuma OSP 5020 CRT in your OSP 5000 machine ran 20+ years — far past its design life.
+CNC maintenance reality: That Okuma OSP 5020 CRT in your machine ran 20+ years — far past its design life.
 
 Okuma LCD replacements use the original 14-pin or 20-pin. Plug-and-play, ~15 min install, $229.
 

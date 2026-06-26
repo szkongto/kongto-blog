@@ -1,7 +1,3 @@
 TITLE: How hard is Okuma OSP 5020 CRT to LCD swap?
 
-Help needed
-
-My Okuma OSP 5020 CRT is showing flyback transformer whine. Anyone dealt with this?
-
-Machine is mechanically solid — this screen is the only issue. Went LCD yet?
+My Okuma OSP 5020 CRT is showing flyback transformer whine. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
