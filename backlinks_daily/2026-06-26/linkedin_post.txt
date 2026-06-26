@@ -1,11 +1,9 @@
-Most common CNC LCD retrofit mistake: getting power wrong.
+CNC maintenance reality: That Okuma OSP 5020 CRT in your OSP 5000 machine ran 20+ years — far past its design life.
 
-FANUC/Mitsubishi/Mazak/Okuma: DC 24V
-Siemens SINUMERIK: AC 110V (critical!)
-Haas early: DC 12V
+Okuma LCD replacements use the original 14-pin or 20-pin. Plug-and-play, ~15 min install, $229.
 
-I've seen LCD modules destroyed by DC-on-AC mistakes.
+One module eliminates the CRT failure cycle permanently.
 
-Compatibility reference: cncdisplay.com
+Guides at cncdisplay.com
 
-#CNC #Manufacturing #Engineering
+#Manufacturing #CNC #IndustrialAutomation

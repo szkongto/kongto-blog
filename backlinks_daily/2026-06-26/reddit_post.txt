@@ -1,7 +1,7 @@
-TITLE: Mitsubishi M64 monitor flickering on cold start
+TITLE: How hard is Okuma OSP 5020 CRT to LCD swap?
 
-Mitsubishi M64 with MDT962B CRT. Cold mornings = flickering for 20-30 min before stabilizing.
+Help needed
 
-Aging caps in the power section? Anyone fixed this?
+My Okuma OSP 5020 CRT is showing flyback transformer whine. Anyone dealt with this?
 
-If I go LCD route — is it really plug-and-play with the 20-pin connector? No parameter changes?
+Machine is mechanically solid — this screen is the only issue. Went LCD yet?
