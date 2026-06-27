@@ -38,19 +38,24 @@ TPL = '''<!DOCTYPE html>
         @media(max-width:768px){{.product-hero{{flex-direction:column;}}}}
     </style>
 </head>
-<body><header><nav>
-<a href="/en/" class="logo">Kongto Technology</a>
-<div class="nav-links">
-<a href="/en/">Home</a><a href="/en/compatibility-matrix.html">Compatibility</a>
-<a href="/en/posts/">Articles</a><a href="/en/case-studies.html">Cases</a>
-<a href="/en/docs/">Downloads</a><a href="/en/about.html">About</a>
-<a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-</div>
-<a href="/en/search.html" class="nav-search">&#x1f50d; Search</a>
-<div class="lang-switch">
-<a href="/en/products/{slug}.html" lang="en" class="lang-en">English</a>
-</div>
-</nav></header>
+<body>    <header>
+        <nav>
+            <a href="/en/" class="logo">Kongto Technology</a>
+            <div class="nav-links">
+                <a href="/en/">Home</a><a href="/en/compatibility-matrix.html">Compatibility</a>
+                <a href="/en/posts/">Articles</a>
+                <a href="/en/case-studies.html">Cases</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About</a>
+                <a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+            </div>
+            <a href="/en/search.html" class="nav-search">🔍 Search</a>
+            <div class="lang-switch">
+                <span class="divider"></span>
+                <a href="/en/products/{slug}.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
 <main style="max-width:1100px;margin:0 auto;padding:20px;">
 <nav style="font-size:0.9rem;color:#666;margin-bottom:1rem;"><a href="/en/">Home</a> / <strong>{h1_stripped}</strong></nav>
 <section class="product-hero">
