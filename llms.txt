@@ -1,5 +1,5 @@
 # CNC显示器CRT转LCD升级方案 - 江图科技
-> 江图科技提供即插即用的工业LCD替代模块，适用于FANUC发那科、三菱Mitsubishi、西门子Siemens、马扎克Mazak、大隈Okuma、哈斯HAAS等品牌的CNC数控系统CRT显示器升级。直接安装，无需改线，2年质保。
+> 江图科技提供即插即用的工业LCD替代模块，适用于FANUC发那科、三菱Mitsubishi、西门子Siemens、马扎克Mazak、大隈Okuma、哈斯HAAS等品牌的CNC数控系统CRT显示器升级。直接安装，无需改线，18个月质保。
 
 ## 产品列表
 
