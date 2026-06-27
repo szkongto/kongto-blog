@@ -375,7 +375,7 @@
 
 <tr class="even-row"><td>Screen dark, power LED on steady</td><td>Shine a flashlight at an angle onto the screen</td><td>Backlight failed but LCD/CRT still receiving signal (common on LCDs >5 years old)</td><td>Check backlight inverter output voltage; replace CCFL/LED strip or inverter board</td></tr>
 
-<tr class="odd-row"><td>Screen dark, power LED blinking</td><td>Count the blink pattern and rate</td><td>Controller board fault 鈥?specific blink codes indicate memory, backlight, or panel errors</td><td>Look up LED blink code table (varies by manufacturer); replace controller board</td></tr>
+<tr class="odd-row"><td>Screen dark, power LED blinking</td><td>Count the blink pattern and rate</td><td>Controller board fault —specific blink codes indicate memory, backlight, or panel errors</td><td>Look up LED blink code table (varies by manufacturer); replace controller board</td></tr>
 
 <tr class="even-row"><td>Flickering image, unstable</td><td>Does flicker change with vibration (tap gently on case)?</td><td>Loose internal ribbon cable or failing connector; marginal power supply capacitor</td><td>Open display and reseat all internal connectors; replace electrolytic capacitors on PSU</td></tr>
 
@@ -435,7 +435,7 @@
 
 A 2015 FANUC 0i-MD controller driving a 10.4-inch LCD displayed intermittent blackouts lasting 1-3 seconds, occurring every 15-30 minutes. The machine continued running during blackouts. Diagnostics did not log any controller alarms.<br><br>
 
-<strong>Investigation:</strong> The display power supply output was measured at 24.1V DC unloaded and 23.8V loaded, both within spec. However, an oscilloscope revealed 450 mV p-p ripple at 100 Hz on the 24V rail 鈥?well above the acceptable 100 mV p-p threshold. The ripple originated from aging filter capacitors on the machine's I/O power supply module.<br><br>
+<strong>Investigation:</strong> The display power supply output was measured at 24.1V DC unloaded and 23.8V loaded, both within spec. However, an oscilloscope revealed 450 mV p-p ripple at 100 Hz on the 24V rail —well above the acceptable 100 mV p-p threshold. The ripple originated from aging filter capacitors on the machine's I/O power supply module.<br><br>
 
 <strong>Solution:</strong> Replaced the 470 uF / 50V electrolytic capacitors on the I/O power supply board. Ripple dropped to 35 mV p-p. Blackouts stopped completely. Total parts cost: under CNY 20.</div>
 
@@ -443,7 +443,7 @@ A 2015 FANUC 0i-MD controller driving a 10.4-inch LCD displayed intermittent bla
 
 After a planned power-down for maintenance, a Siemens 840D with OP010 panel displayed random characters and garbled graphics on startup. The panel communicated via OPI bus.<br><br>
 
-<strong>Investigation:</strong> The OPI bus cable was found to have a loose DB9 connector at the controller end 鈥?one of the retaining screws was missing, allowing the connector to partially disengage. This caused intermittent data corruption on the bus.<br><br>
+<strong>Investigation:</strong> The OPI bus cable was found to have a loose DB9 connector at the controller end —one of the retaining screws was missing, allowing the connector to partially disengage. This caused intermittent data corruption on the bus.<br><br>
 
 <strong>Solution:</strong> Tightened the DB9 connector (replaced missing screw with a standard M3x10mm threaded standoff). Performed a full power cycle. Display returned to normal. Preventative: applied thread-locking compound to both OPI connector screws to prevent future loosening.</div>
 
@@ -459,7 +459,7 @@ A 2007 Mitsubishi M70 controller with an original 9-inch CRT display had gradual
 
 An Okuma OSP-P200 lathe with a 12.1-inch LCD showed a single horizontal line of dead pixels about 3 inches from the top of the screen. The line appeared on some cold mornings but disappeared after 20-30 minutes of operation.<br><br>
 
-<strong>Investigation:</strong> The intermittent nature suggested a thermal expansion issue. The LCD panel's tab-bonded driver IC (COF 鈥?Chip-on-Flex) had a hairline crack at the bonding interface that made contact once the panel warmed up and expanded slightly.<br><br>
+<strong>Investigation:</strong> The intermittent nature suggested a thermal expansion issue. The LCD panel's tab-bonded driver IC (COF —Chip-on-Flex) had a hairline crack at the bonding interface that made contact once the panel warmed up and expanded slightly.<br><br>
 
 <strong>Solution:</strong> Applying gentle pressure to the COF area with a non-conductive plastic tool temporarily restored the missing lines during testing, confirming the diagnosis. The LCD panel was replaced. The failed panel was sent for recycling. Total downtime: 2 hours.</div>
 
@@ -675,23 +675,23 @@ An Okuma OSP-P200 lathe with a 12.1-inch LCD showed a single horizontal line of 
 
     <h3 style="margin-top:0;">Related Articles</h3>
 
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display 鈥?CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display —CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
 
 </section>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology Kongto</span>
-                <p>Industrial Video Display Solutions 鈥?CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
             </div>
             <div class="footer-links">
                 <a href="/en/posts/">📄 Articles</a>

@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display</title>
+    <title>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</title>
 
     <meta name="description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
 
@@ -22,7 +22,7 @@
 
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/" />
 
-    <meta property="og:title" content="Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display" />
+    <meta property="og:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display" />
 
     <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
 
@@ -36,7 +36,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display | Kongto Technology">
+    <meta name="twitter:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology">
 
     <meta name="twitter:description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
 
@@ -47,7 +47,7 @@
     {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display | Kongto Technology",
+  "headline": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
   "description": "Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.",
   "author": { "@id": "https://cncdisplay.com/#tech-team" },
   "publisher": {
@@ -139,7 +139,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display | Kongto Technology",
+      "name": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
       "item": "https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html"
     }
   ]
@@ -173,7 +173,7 @@
 
         <article class="post">
 
-            <h1>Industrial RGBHV Signal Analysis 鈥?From CGA/EGA to Modern Display</h1>
+            <h1>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</h1>
 
             <div class="meta">
 
@@ -289,13 +289,13 @@
 
 <p>RGBHV belongs to the family of component video standards where each signal component travels on a dedicated conductor. This architecture offers several fundamental advantages over composite or S-video formats, but it also demands strict attention to transmission-line theory.</p>
 
-<p><strong>Impedance Matching and Signal Integrity.</strong> Each RGB line is designed to drive a 75-ohm terminated load. The characteristic impedance of the transmission line (typically RG-59 coaxial cable for BNC installations or the individual twisted pairs inside a VGA cable) must match both the source output impedance and the termination impedance at the display or converter input. Mismatched impedance creates signal reflections: when the incident wave encounters a discontinuity, a portion of the energy is reflected back toward the source, interfering with subsequent signal transitions. Reflections manifest as visible ghosting, color fringing, horizontal "ringing" bars, or timing jitter 鈥?problems that are especially severe in long cable runs above 5 meters. Proper 75-ohm termination resistors at the receiving end are therefore critical for clean RGBHV transmission.</p>
+<p><strong>Impedance Matching and Signal Integrity.</strong> Each RGB line is designed to drive a 75-ohm terminated load. The characteristic impedance of the transmission line (typically RG-59 coaxial cable for BNC installations or the individual twisted pairs inside a VGA cable) must match both the source output impedance and the termination impedance at the display or converter input. Mismatched impedance creates signal reflections: when the incident wave encounters a discontinuity, a portion of the energy is reflected back toward the source, interfering with subsequent signal transitions. Reflections manifest as visible ghosting, color fringing, horizontal "ringing" bars, or timing jitter —problems that are especially severe in long cable runs above 5 meters. Proper 75-ohm termination resistors at the receiving end are therefore critical for clean RGBHV transmission.</p>
 
 <p><strong>Bandwidth Requirements.</strong> The analog bandwidth required per RGBHV channel is governed by the pixel clock frequency. According to the Nyquist criterion, the transmission channel must support at least half the pixel clock frequency to preserve the fundamental harmonic of the video signal. In practice, to maintain sharp edge transitions (rise times below 5 ns), a bandwidth of 3 to 5 times the pixel clock is recommended. For VGA at 25.175 MHz pixel clock, each color channel therefore requires approximately 12.6 MHz of bandwidth for basic reproduction, but high-quality converters use video op-amps with bandwidths exceeding 100 MHz to preserve edge sharpness. For SVGA at 65 MHz, the minimum requirement rises to 32.5 MHz per channel. The total video bandwidth across all three color channels defines the system's ability to render fine text and detailed graphics demanded by industrial HMI applications.</p>
 
-<p><strong>DC Offset and Black-Level Clamping.</strong> In a properly designed RGBHV system, the black level is referenced to 0 V and the peak white level is 0.7 V above black. Each scan line begins with a blanking interval during which a DC-restoration (clamping) circuit samples the black level and adjusts the DC offset to eliminate low-frequency drift. Without this clamping, variations in the average picture level (APL) from frame to frame would cause the black level to shift 鈥?a phenomenon known as "black-level wander" or "hum" 鈥?resulting in inconsistent brightness and color saturation across the display. Sync signals in RGBHV use negative-going pulses that normally swing from 0 V to -0.3 V on dedicated sync lines, well below the black reference to prevent interference with the active video region.</p>
+<p><strong>DC Offset and Black-Level Clamping.</strong> In a properly designed RGBHV system, the black level is referenced to 0 V and the peak white level is 0.7 V above black. Each scan line begins with a blanking interval during which a DC-restoration (clamping) circuit samples the black level and adjusts the DC offset to eliminate low-frequency drift. Without this clamping, variations in the average picture level (APL) from frame to frame would cause the black level to shift —a phenomenon known as "black-level wander" or "hum" —resulting in inconsistent brightness and color saturation across the display. Sync signals in RGBHV use negative-going pulses that normally swing from 0 V to -0.3 V on dedicated sync lines, well below the black reference to prevent interference with the active video region.</p>
 
-<p><strong>Crosstalk Isolation.</strong> With five independent analog channels (R, G, B, H-Sync, V-Sync) routed in close proximity inside a VGA cable or on a PCB, capacitive and inductive coupling between adjacent conductors can introduce crosstalk 鈥?a signal from one channel leaking into another. On a VGA display, crosstalk from the H-Sync line into the Green channel, for example, appears as faint vertical bars overlaid on the image. Industry best practice requires a minimum of -40 dB isolation between any two channels at 10 MHz. This is achieved through proper shielding (individually shielded coaxial pairs for each color), careful ground-plane separation in PCB layout, and differential routing techniques that keep high-speed digital signals (the sync lines) physically separated from the analog color channels.</p>
+<p><strong>Crosstalk Isolation.</strong> With five independent analog channels (R, G, B, H-Sync, V-Sync) routed in close proximity inside a VGA cable or on a PCB, capacitive and inductive coupling between adjacent conductors can introduce crosstalk —a signal from one channel leaking into another. On a VGA display, crosstalk from the H-Sync line into the Green channel, for example, appears as faint vertical bars overlaid on the image. Industry best practice requires a minimum of -40 dB isolation between any two channels at 10 MHz. This is achieved through proper shielding (individually shielded coaxial pairs for each color), careful ground-plane separation in PCB layout, and differential routing techniques that keep high-speed digital signals (the sync lines) physically separated from the analog color channels.</p>
 
 <p><strong>Rise Time and Skew Control.</strong> For clean pixel transitions, the 10%-to-90% rise time of each color channel should be below 5 ns. Excessive rise time softens edges and reduces apparent sharpness, while excessive skew (timing mismatch between the R, G, and B channels) produces color fringing at vertical edges. High-performance converters incorporate programmable delay lines to compensate for PCB trace-length differences and cable-induced skew, aligning all three color channels within 2 ns of each other at the display input.</p>
 
@@ -309,9 +309,9 @@
 
 <ul>
 
-<li><strong>CGA/EGA</strong>: Digital TTL signals (0V or 5V levels) 鈥?on/off for each color bit</li>
+<li><strong>CGA/EGA</strong>: Digital TTL signals (0V or 5V levels) —on/off for each color bit</li>
 
-<li><strong>RGBHV/VGA</strong>: Analog signals (0-0.7V continuous) 鈥?proportional voltage for each color</li>
+<li><strong>RGBHV/VGA</strong>: Analog signals (0-0.7V continuous) —proportional voltage for each color</li>
 
 </ul>
 
@@ -575,23 +575,23 @@
 
     <h3 style="margin-top:0;">Related Articles</h3>
 
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display 鈥?CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display —CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
 
 </section>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology Kongto</span>
-                <p>Industrial Video Display Solutions 鈥?CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
             </div>
             <div class="footer-links">
                 <a href="/en/posts/">📄 Articles</a>

@@ -249,13 +249,13 @@
 
 <h3>2.1 How Video Scanning Works</h3>
 
-<p>Video scanning is the process by which a display system converts an electrical video signal into a visible image by tracing a series of horizontal lines across the screen. In a CRT display, a focused electron beam sweeps from left to right across the phosphor-coated screen, modulating its intensity based on the incoming video signal. At the end of each line, the beam performs a <strong>horizontal retrace</strong> 鈥?rapidly returning to the left edge 鈥?while advancing downward by one line step for the next pass. When the beam reaches the bottom-right corner, a <strong>vertical retrace</strong> returns it to the top-left to begin the next frame.</p>
+<p>Video scanning is the process by which a display system converts an electrical video signal into a visible image by tracing a series of horizontal lines across the screen. In a CRT display, a focused electron beam sweeps from left to right across the phosphor-coated screen, modulating its intensity based on the incoming video signal. At the end of each line, the beam performs a <strong>horizontal retrace</strong> —rapidly returning to the left edge —while advancing downward by one line step for the next pass. When the beam reaches the bottom-right corner, a <strong>vertical retrace</strong> returns it to the top-left to begin the next frame.</p>
 
 <p>The horizontal deflection circuit controls the line-by-line sweep, while the vertical deflection circuit controls the field/frame rate. These two timing domains are synchronized by the video source via separate horizontal sync (HSYNC) and vertical sync (VSYNC) signals, or a combined composite sync (CSYNC) signal. The frequency at which these circuits operate determines the total number of lines resolvable and directly impacts the maximum image resolution the display can handle.</p>
 
 <p>In modern LCD panels, the same raster-scan principle is emulated digitally: the timing controller (TCON) reads pixel data row by row from the frame buffer and addresses each row of TFT transistors sequentially, charging each pixel's liquid crystal cell to the required voltage. Instead of an electron beam sweeping physically, the LCD scans electronically by clocking data into row drivers that enable one gate line at a time, while column drivers simultaneously load the video data for that row.</p>
 
-<p>The fundamental difference is that CRT scanning is <strong>analog and continuous</strong> 鈥?the beam traces a continuous path and any timing drift causes visible geometry distortion 鈥?whereas LCD scanning is <strong>digital and discrete</strong> 鈥?each pixel is addressed individually and the image is inherently stable regardless of timing jitter within the pixel clock window.</p>
+<p>The fundamental difference is that CRT scanning is <strong>analog and continuous</strong> —the beam traces a continuous path and any timing drift causes visible geometry distortion —whereas LCD scanning is <strong>digital and discrete</strong> —each pixel is addressed individually and the image is inherently stable regardless of timing jitter within the pixel clock window.</p>
 
 <h3>2.2 Interlaced vs Progressive Scan</h3>
 
@@ -341,13 +341,13 @@
 
 <tr><td>Grayscale</td><td>4-8</td><td>16-256 shades</td><td>Medical imaging (X-ray previews), monochrome CRT replacements, barcode readers</td><td>Noticeable in gradients at 4-bit</td></tr>
 
-<tr><td>EGA / CGA Color</td><td>4</td><td>16</td><td>Early CNC controller interfaces, simple status panel graphics</td><td>Severe 鈥?only discrete color blocks</td></tr>
+<tr><td>EGA / CGA Color</td><td>4</td><td>16</td><td>Early CNC controller interfaces, simple status panel graphics</td><td>Severe —only discrete color blocks</td></tr>
 
 <tr><td>High Color</td><td>15-16</td><td>32,768-65,536</td><td>Basic industrial HMIs, OSD menus, lower-cost display upgrades where gradient smoothness is not critical</td><td>Visible in smooth gradients</td></tr>
 
 <tr><td>True Color (8-bit)</td><td>24</td><td>16,777,216 (16.7M)</td><td>Modern CNC HMIs, SCADA systems, quality inspection displays, video playback</td><td>None in most content</td></tr>
 
-<tr><td>Deep Color (10-bit)</td><td>30</td><td>1,073,741,824 (1.07B)</td><td>Color-critical inspection, medical-grade monitors, broadcast reference displays, HDR industrial panels</td><td>None 鈥?smooth gradients even in demanding content</td></tr>
+<tr><td>Deep Color (10-bit)</td><td>30</td><td>1,073,741,824 (1.07B)</td><td>Color-critical inspection, medical-grade monitors, broadcast reference displays, HDR industrial panels</td><td>None —smooth gradients even in demanding content</td></tr>
 
 </table>
 
@@ -399,13 +399,13 @@
 
 <li>When converting CGA/EGA interlaced signals to VGA progressive, the converter must perform <strong>de-interlacing</strong> and <strong>line doubling</strong></li>
 
-<li>LCD panels have a <strong>native resolution</strong> 鈥?running at non-native resolution causes scaling artifacts. Always match converter output to LCD native resolution</li>
+<li>LCD panels have a <strong>native resolution</strong> —running at non-native resolution causes scaling artifacts. Always match converter output to LCD native resolution</li>
 
 <li><strong>Response time</strong> matters for CNC applications: LCD panels with &gt;8ms response time may show trailing on fast-moving tool path displays</li>
 
 <li><strong>Input lag</strong>: Signal conversion adds 1-2 frames of latency. For CNC applications, choose converters with minimal processing delay (&lt;16ms)</li>
 
-<li>The <strong>horizontal scan rate</strong> of the converter must fall within the LCD monitor's sync range. Most industrial LCDs accept 31-80 kHz horizontal, but some specialized panels have narrower ranges 鈥?always verify before specifying a replacement</li>
+<li>The <strong>horizontal scan rate</strong> of the converter must fall within the LCD monitor's sync range. Most industrial LCDs accept 31-80 kHz horizontal, but some specialized panels have narrower ranges —always verify before specifying a replacement</li>
 
 </ul>
 
@@ -569,17 +569,17 @@
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology Kongto</span>
-                <p>Industrial Video Display Solutions 鈥?CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
             </div>
             <div class="footer-links">
                 <a href="/en/posts/">📄 Articles</a>
