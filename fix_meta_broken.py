@@ -23,7 +23,7 @@ def generate_desc(filepath, content):
 
     # If it's a product article, add enrichment
     if any(kw in base for kw in ['FANUC', '三菱', 'Mitsubishi', 'Siemens', '西门子', 'Mazak', '马扎克', 'LCD', 'CRT', '显示器']):
-        desc = f"{base}。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。"
+        desc = f"{base}。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，18个月质保。"
     else:
         desc = f"{base}。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。"
 

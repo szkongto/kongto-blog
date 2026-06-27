@@ -64,7 +64,7 @@ TPL = '''<!DOCTYPE html>
 <h1>{h1}</h1>
 <p>{size_crt} CRT to TFT-LCD plug-and-play replacement. No modifications needed. 15-30 minute installation.</p>
 <div class="product-price">${price} <span style="font-size:1rem;color:#666;">USD</span></div>
-<p style="color:#28a745;font-weight:600;">In Stock - Free Shipping - 2-Year Warranty</p>
+<p style="color:#28a745;font-weight:600;">In Stock - Free Shipping - 18-Month Warranty</p>
 <div class="cta-buttons"><a href="/en/quote.html" class="btn btn-primary" style="padding:14px 32px;">Get a Quote</a>{guide_btn}</div>
 </div>
 </section>
@@ -85,7 +85,7 @@ TPL = '''<!DOCTYPE html>
 <section><h2>Compatible Systems</h2><ul>
 {systems}
 </ul></section>
-<section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>2-Year Warranty</strong> - Lifetime Tech Support - Free Shipping Worldwide</p></section>
+<section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Tech Support - Free Shipping Worldwide</p></section>
 <section style="text-align:center;padding:3rem 1rem;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;margin:2rem 0;">
 <h2 style="color:#fff;">Ready to replace your CRT?</h2>
 <p>${price} - In Stock - Ships within 24 hours</p>

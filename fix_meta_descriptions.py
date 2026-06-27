@@ -3,7 +3,7 @@ import re, os
 
 FIXES = {
     # CN Brand pages
-    "./brands/FANUC.html": "FANUC发那科数控系统CRT转LCD显示器升级改造方案。覆盖A61L-0001-0074~0097全系列、D9MM-11A等型号，即插即用，零改装，2年质保。江图科技12年工业显示经验。",
+    "./brands/FANUC.html": "FANUC发那科数控系统CRT转LCD显示器升级改造方案。覆盖A61L-0001-0074~0097全系列、D9MM-11A等型号，即插即用，零改装，18个月质保。江图科技12年工业显示经验。",
     "./brands/HAAS.html": "Haas哈斯数控机床CRT显示器LCD升级解决方案。覆盖VF、ST、SL系列加工中心，原装接口即插即用，保留原安装尺寸，2年超长质保。江图科技工业显示专家。",
     "./brands/OKUMA.html": "Okuma大隈OSP 5000/5020系列CNC数控系统CRT转LCD显示器升级方案。原装接口设计，保留安装尺寸和固定孔位，无需修改系统参数。江图科技工业显示升级专家。",
     "./brands/Siemens.html": "西门子SINUMERIK数控系统显示器LCD升级替代方案。覆盖6FC3988-7FA20、SM0901-579417-TA等型号，支持840D/810D Power Line系统。江图科技12年经验。",

@@ -1,0 +1,46 @@
+=== CNC DISPLAY SITE AUDIT ===
+
+--- 1. BROKEN INTERNAL LINKS ---
+Total broken: 2 unique targets
+  [ENCODING] /posts/article_20260501_FANUC鏁版帶鏄剧ず鍣–RT鍗囩骇LCD瀹屾暣鎸囧崡.html
+    from: /en\posts\article_20260508_KTV104_custom_industrial_display.html [GARBLED]
+  [ENCODING] /posts/article_20260506_涓夎彵MDT962B宸ヤ笟娑叉櫠鏄剧ず鍣–RT鏇夸唬鏂规.html
+    from: /en\posts\article_20260508_KTV104_custom_industrial_display.html [GARBLED]
+
+--- 2. MISSING IMAGES ---
+Missing: 0
+
+--- 3. SCHEMA ISSUES ---
+Schema issues: 0
+
+--- 4. NAVIGATION ISSUES ---
+Nav issues: 74
+  /en\baidu_verify_codeva-MOcuLxbSCp.html: missing lang-switch
+  /en\pricing.html: missing lang-switch
+  /en\sitemap.html: missing lang-switch
+  /en\brands\index.html: missing lang-switch
+  /en\posts\article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html: missing lang-switch
+  /en\posts\article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html: missing lang-switch
+  /en\posts\article_20260501_cnc_industrial_video_signal-converter_in_system.html: missing lang-switch
+  /en\posts\article_20260501_industrial_cnc_equipment_display_troubleshooting_and_repair_complete-guide.html: missing lang-switch
+  /en\posts\article_20260501_industrial_video_display_in_smart-factory_key-role_and_kongto.html: missing lang-switch
+  /en\posts\article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html: missing lang-switch
+
+--- 5. ORPHAN PAGES ---
+Orphans: 196
+  /en\404.html
+  /en\about.html
+  /en\author.html
+  /en\baidu_verify_codeva-MOcuLxbSCp.html
+  /en\brands\FANUC.html
+  /en\brands\HAAS.html
+  /en\brands\MAZAK.html
+  /en\brands\Mitsubishi.html
+  /en\brands\OKUMA.html
+  /en\brands\Siemens.html
+  /en\brands\index.html
+  /en\case-studies.html
+  /en\comparison-kongto-vs-competitors.html
+  /en\compatibility-matrix.html
+  /en\contact.html
+  ... and 181 more

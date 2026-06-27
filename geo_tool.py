@@ -172,7 +172,7 @@ def build_en():
             <div class="stats-bar">
                 <span class="stat-chip">🏭 6 Brands</span>
                 <span class="stat-chip">26 Models</span>
-                <span class="stat-chip">🛡️ 2-Year Warranty</span>
+                <span class="stat-chip">🛡️ 18-Month Warranty</span>
                 <span class="stat-chip">⚡ Plug & Play</span>
             </div>
         </div>
@@ -278,7 +278,7 @@ def build_zh():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNC CRT转LCD兼容性查询工具 | 找替换型号 | 江图科技</title>
-    <meta name="description" content="快速查找您CNC CRT显示器的LCD替代方案。按品牌或型号搜索——FANUC A61L、三菱MDT、西门子6FC、Mazak CD1472、大隈、哈斯。26型号全覆盖，即插即用，2年质保。">
+    <meta name="description" content="快速查找您CNC CRT显示器的LCD替代方案。按品牌或型号搜索——FANUC A61L、三菱MDT、西门子6FC、Mazak CD1472、大隈、哈斯。26型号全覆盖，即插即用，18个月质保。">
     <meta name="keywords" content="CNC CRT LCD兼容表,FANUC A61L替代,三菱MDT962B兼容,Mazak LCD对照,CNC显示器兼容性矩阵">
     <link rel="canonical" href="https://cncdisplay.com/compatibility-matrix.html">
     <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/compatibility-matrix.html">
@@ -323,7 +323,7 @@ def build_zh():
             <div class="stats-bar">
                 <span class="stat-chip">🏭 6大品牌</span>
                 <span class="stat-chip">26 型号</span>
-                <span class="stat-chip">🛡️ 2年质保</span>
+                <span class="stat-chip">🛡️ 18个月质保</span>
                 <span class="stat-chip">⚡ 即插即用</span>
             </div>
         </div>
