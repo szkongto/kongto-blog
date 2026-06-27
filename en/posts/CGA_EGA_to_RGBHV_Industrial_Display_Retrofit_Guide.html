@@ -522,13 +522,13 @@
 
 <h3>Step 1: Power Down and Lockout/Tagout (LOTO)</h3>
 
-<p>Shut down the CNC machine tool using the standard shutdown procedure. Disconnect main power at the disconnect switch. Apply a lockout/tagout device to prevent accidental re-energization. Verify zero voltage using a calibrated multimeter at the power input terminals. Wait at least 2 minutes for internal capacitors to discharge 鈥?CRT power supplies can store lethal voltages even after power-off.</p>
+<p>Shut down the CNC machine tool using the standard shutdown procedure. Disconnect main power at the disconnect switch. Apply a lockout/tagout device to prevent accidental re-energization. Verify zero voltage using a calibrated multimeter at the power input terminals. Wait at least 2 minutes for internal capacitors to discharge —CRT power supplies can store lethal voltages even after power-off.</p>
 
 <div class="warning-box"><strong>WARNING:</strong> CRT flyback transformers and power supply capacitors can retain dangerous voltages for several minutes after power-off. Always verify with a meter before touching any internal components.</div>
 
 <h3>Step 2: Access and Isolate the Original CRT</h3>
 
-<p>Open the electrical cabinet or display enclosure. Locate the original CRT display unit. Document the existing cable routing with photographs. Disconnect the signal cable from the CNC controller to the CRT 鈥?note which connector pins carry R, G, B, H-sync, and V-sync signals. Disconnect the CRT power cable (typically 24V DC or 100-240V AC depending on the display). Label all cables with adhesive tags before disconnecting.</p>
+<p>Open the electrical cabinet or display enclosure. Locate the original CRT display unit. Document the existing cable routing with photographs. Disconnect the signal cable from the CNC controller to the CRT —note which connector pins carry R, G, B, H-sync, and V-sync signals. Disconnect the CRT power cable (typically 24V DC or 100-240V AC depending on the display). Label all cables with adhesive tags before disconnecting.</p>
 
 <p>If the CRT is physically mounted inside the enclosure, remove the mounting screws. Be prepared for the CRT's weight (5-12 kg typical). Use a second person or a mechanical lift for larger units.</p>
 
@@ -561,11 +561,11 @@ Pins 14-15: +12V / +5V (do not connect &mdash; for original CRT only)</div>
 
 <p>For CGA signals with composite sync, the converter automatically extracts H and V sync internally. For TTL-level signals (5V logic), ensure the converter's input impedance is set for TTL (75-ohm termination with series resistor). The JTX-CVR-001 handles this automatically via its auto-sensing input stage.</p>
 
-<p>Use twisted-pair cable for the RGB lines if extending beyond 1 meter. Keep the cable run as short as possible 鈥?ideally under 3 meters for reliable signal integrity.</p>
+<p>Use twisted-pair cable for the RGB lines if extending beyond 1 meter. Keep the cable run as short as possible —ideally under 3 meters for reliable signal integrity.</p>
 
 <h3>Step 5: Connect the RGBHV Output to the New Display</h3>
 
-<p>Run a standard VGA cable (HD-15 male-to-male) from the converter's RGBHV output port to the replacement industrial LCD or LED display. For long runs (over 5 meters), use a high-quality shielded VGA cable with ferrite cores. Alternatively, use 5 individual BNC cables (R, G, B, H, V) if your replacement display has BNC inputs 鈥?this provides superior signal quality at longer distances.</p>
+<p>Run a standard VGA cable (HD-15 male-to-male) from the converter's RGBHV output port to the replacement industrial LCD or LED display. For long runs (over 5 meters), use a high-quality shielded VGA cable with ferrite cores. Alternatively, use 5 individual BNC cables (R, G, B, H, V) if your replacement display has BNC inputs —this provides superior signal quality at longer distances.</p>
 
 <p>If the replacement display supports DVI or HDMI input, you may need a VGA-to-DVI or VGA-to-HDMI adapter cable. Note that these adapters must be <strong>active</strong> (not passive) types for reliable signal conversion from analog to digital.</p>
 
@@ -595,7 +595,7 @@ Pins 14-15: +12V / +5V (do not connect &mdash; for original CRT only)</div>
 
 <ol>
 <li>The converter's power LED should illuminate (green). If not, verify power connection.</li>
-<li>The converter's signal lock LED should illuminate (green) within 2-3 seconds after the CNC controller boots. If flashing red, the input signal format is not detected 鈥?re-check wiring.</li>
+<li>The converter's signal lock LED should illuminate (green) within 2-3 seconds after the CNC controller boots. If flashing red, the input signal format is not detected —re-check wiring.</li>
 <li>The replacement display should show the CNC control interface. If the display shows "No Signal," check the VGA cable connection at both ends and verify the display's input source selection.</li>
 <li>If the image is distorted (rolling, split, or offset), the horizontal or vertical sync timing may need adjustment. Most modern LCDs auto-sync to 60 Hz; if the converter's output is set to a non-standard refresh, adjust the DIP switches on the JTX-CVR-001 (see converter manual).</li>
 </ol>
@@ -928,17 +928,17 @@ Pins 14-15: +12V / +5V (do not connect &mdash; for original CRT only)</div>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
             <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> 鈥?Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> 鈥?FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> 鈥?Reply within 24 hours</li>
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
             </ul>
         </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology Kongto</span>
-                <p>Industrial Video Display Solutions 鈥?CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
             </div>
             <div class="footer-links">
                 <a href="/en/posts/">📄 Articles</a>
