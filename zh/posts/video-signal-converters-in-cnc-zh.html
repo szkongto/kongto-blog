@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>工业视频信号转换器在 CNC 数控系统中的应用 | 深圳市江图科技有限公司</title>
+
+    <meta name="description" content="工业视频信号转换器在 CNC 数控系统中的应用详解。江图科技专注工业视频显示解决方案，涵盖CGA/EGA/VGA/HDMI信号互转、CRT升级LCD、机床显示器改造及非标定制工控显示方案。">
+
+    <meta name="keywords" content="工业视频信号转换器,CNC数控显示器,CRT升级LCD,CGA转VGA,EGA转VGA,工业显示器改造,机床显示器,工业视频转换器,CNC数控备件,深圳市江图科技有限公司">
+
+    <meta name="author" content="江图科技">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html" />
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="工业视频信号转换器在 CNC 数控系统中的应用">
+
+    <meta property="og:description" content="工业视频信号转换器在 CNC 数控系统中的应用详解。涵盖CGA/EGA/VGA/HDMI信号互转、CRT升级LCD、机床显示器改造及非标定制工控显示方案。">
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta property="article:published_time" content="2026-05-01">
+
+    <meta property="article:author" content="江图科技">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="工业视频信号转换器在 CNC 数控系统中的应用">
+
+    <meta name="twitter:description" content="工业视频信号转换器在 CNC 数控系统中的应用详解。涵盖CGA/EGA/VGA/HDMI信号互转、CRT升级LCD、机床显示器改造及非标定制工控显示方案。">
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "工业视频信号转换器在 CNC 数控系统中的应用",
+  "description": "工业视频信号转换器在 CNC 数控系统中的应用详解。涵盖CGA/EGA/VGA/HDMI信号互转、CRT升级LCD、机床显示器改造及非标定制工控显示方案。",
+  "author": {
+    "@type": "Person",
+    "name": "江图科技"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}</script>
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/video-signal-converters-in-cnc-zh.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
+
+    <style>
+
+        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
+
+        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
+
+        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
+
+        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+
+        .spec-table .even-row {background:#f8fafc;}
+
+        .spec-table .odd-row {background:#fff;}
+
+        .spec-table tr:hover {background:#eff6ff;}
+
+        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+
+        .content {line-height:1.8;}
+
+        .content p {margin-bottom:1rem;}
+
+        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
+
+        .content h3 {margin-top:1.5rem;color:#475569;}
+
+        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
+
+        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
+
+        .related-links ul {margin:0;padding-left:20px;}
+
+        .related-links li {margin-bottom:8px;}
+
+        .pinout-diagram {background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:16px;margin:1rem 0;font-family:'Courier New',monospace;font-size:13px;line-height:1.6;white-space:pre;overflow-x:auto;}
+
+        .step-list {counter-reset:step-counter;list-style:none;padding-left:0;}
+
+        .step-list li {counter-increment:step-counter;padding:10px 14px 10px 42px;margin-bottom:10px;background:#f8fafc;border-radius:6px;border-left:4px solid #2563eb;position:relative;}
+
+        .step-list li::before {content:counter(step-counter);position:absolute;left:12px;top:10px;background:#2563eb;color:#fff;width:22px;height:22px;border-radius:50%;text-align:center;font-size:12px;font-weight:700;line-height:22px;}
+
+    </style>
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "工业视频信号转换器在 CNC 数控系统中的应用",
+      "item": "https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/zh/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/zh/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="/zh/posts/video-signal-converters-in-cnc-zh.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>工业视频信号转换器在 CNC 数控系统中的应用</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者: 江图科技</span>
+
+            </div>
+
+            <div class="content">
+
+                <h2>目录</h2>
+
+                <ol>
+                    <li><a href="#1-转换器在数控系统中的角色">转换器在数控系统中的角色</a></li>
+                    <li><a href="#2-cgaega-接口详解与引脚定义">CGA/EGA 接口详解与引脚定义</a></li>
+                    <li><a href="#3-转换器型号规格对比">转换器型号规格对比</a></li>
+                    <li><a href="#4-典型系统集成案例">典型系统集成案例</a></li>
+                    <li><a href="#5-选型与配置建议">选型与配置建议</a></li>
+                    <li><a href="#6-安装步骤指南">安装步骤指南</a></li>
+                    <li><a href="#7-维护与故障排除">维护与故障排除</a></li>
+                    <li><a href="#8-要点总结">要点总结</a></li>
+                </ol>
+
+                <h2 id="1-转换器在数控系统中的角色">1. 转换器在数控系统中的角色</h2>
+
+                <h3>1.1 视频信号在 CNC 系统的地位</h3>
+
+                <p>在 CNC 数控系统中，视频显示是操作人员与设备交互的核心界面。无论是刀具路径预览、加工参数编辑，还是故障报警查看，都依赖清晰稳定的视频信号传输。随着数控技术从 CRT 时代迈向 LCD/触摸屏时代，不同年代设备之间的视频接口差异成为改造升级的主要技术障碍。</p>
+
+                <table class="spec-table">
+
+                  <thead><tr>
+
+                    <th>关键环节</th>
+
+                    <th>视频信号需求</th>
+
+                    <th>典型接口</th>
+
+                    <th>影响指标</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>主控机（PC/PLC）</td>
+
+                      <td>实时工件轨迹、加工状态、报警信息</td>
+
+                      <td>HDMI / DisplayPort</td>
+
+                      <td>响应时延 ≤ 30 ms</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>现场操作面板</td>
+
+                      <td>机器状态、参数编辑、手动调试</td>
+
+                      <td>VGA / CGA</td>
+
+                      <td>可视化清晰度 ≥ 800×600</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>机器视觉/检测系统</td>
+
+                      <td>高分辨率相机图像</td>
+
+                      <td>CVBS / HDMI</td>
+
+                      <td>帧率 ≥ 30 fps，分辨率 ≥ 1080p</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>旧式数控机床显示</td>
+
+                      <td>机床内部诊断、报错信息</td>
+
+                      <td>CGA、EGA、MDA</td>
+
+                      <td>兼容性 ≥ 95%</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                <p>数据来源：2023 年《全球 CNC 机床市场技术白皮书》统计，超过 68% 的老旧机床仍使用 CGA/EGA 接口，且 45% 的新装工控机仅提供 HDMI 输出。</p>
+
+                <h3>1.2 为什么需要工业视频信号转换器</h3>
+
+                <p>1. <strong>接口不匹配</strong>：老式机床（CGA/EGA）只能接受模拟信号，而现代主控 PC 只输出数字 HDMI/DP。</p>
+
+                <p>2. <strong>信号衰减与干扰</strong>：工业现场常有电磁噪声，普通消费级转换器抗干扰能力不足，导致图像抖动、卡顿。</p>
+
+                <p>3. <strong>可靠性要求</strong>：数控系统要求 7×24 h 连续运行，转换器必须具备宽温（-40 °C~+85 °C）和宽压（12-48 V）特性。</p>
+
+                <p>4. <strong>即插即用</strong>：现场维护人员往往不具备驱动安装能力，硬件即插即用可大幅缩短停机时间。</p>
+
+                <h3>1.3 工业视频信号转换器系列的核心价值</h3>
+
+                <table class="spec-table">
+
+                  <thead><tr>
+
+                    <th>功能</th>
+
+                    <th>说明</th>
+
+                    <th>对 CNC 系统的直接收益</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>多格式互转（VGA↔HDMI、AV↔HDMI、CGA/EGA↔VGA）</td>
+
+                      <td>支持 12 种以上常见工业/消费视频标准</td>
+
+                      <td>解决所有老旧/新设备的接口兼容</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>工业级电源适配（12-48 V）</td>
+
+                      <td>可直接接入机箱电源或现场 DIN 端子</td>
+
+                      <td>免除额外电源适配器，降低布线复杂度</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>宽温宽压设计</td>
+
+                      <td>-40 °C~+85 °C、12-48 V</td>
+
+                      <td>在高温车间、低温仓库均可可靠工作</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>零驱动、即插即用</td>
+
+                      <td>采用 FPGA/ASIC 硬件实现信号转换</td>
+
+                      <td>现场调试时间 ≤ 5 min，非专业人员亦可完成</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>7×24 h 连续运行认证</td>
+
+                      <td>IEC 60730-1、CE、UL 认证</td>
+
+                      <td>满足工业现场安全与可靠性要求</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                <div class="article-image img-chart">
+
+                  <img style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_comparison.png" alt="工业视频信号转换器信号转换流程图与CRT vs LCD升级方案核心指标对比">
+
+                  <p>图：工业视频信号转换器信号转换流程图与CRT vs LCD升级方案核心指标对比表</p>
+
+                </div>
+
+                <h2 id="2-cgaega-接口详解与引脚定义">2. CGA/EGA 接口详解与引脚定义</h2>
+
+                <h3>2.1 CGA 与 EGA 接口起源</h3>
+
+                <p>CGA（Color Graphics Adapter，彩色图形适配器）由 IBM 于 1981 年推出，采用 9 针 D-sub 接口（DE-9），数字式 RGB 信号，最高分辨率 640×200。EGA（Enhanced Graphics Adapter，增强型图形适配器）于 1984 年推出，兼容 CGA 引脚定义，分辨率提升至 640×350。</p>
+
+                <p>这两种接口在 80-90 年代的数控机床中广泛使用，至今仍有大量 Fanuc、Mitsubishi、Siemens 老款机床采用 CGA/EGA 显示器。了解其引脚定义是正确选择和连接转换器的前提。</p>
+
+                <h3>2.2 CGA/EGA 9 针 D-sub 引脚定义</h3>
+
+                <div class="pinout-diagram">CGA / EGA 9 针 D-sub（DE-9）母头引脚视图（面对插座）：
+
+       +-------+
+       \ 1 2 3 4 5 /
+        \ 6 7 8 9 /
+         +-------+
+
+引脚编号 | 信号名称      | 说明                | CGA  | EGA
+---------|--------------|---------------------|------|------
+   1     | GND          | 地线                 | ✓    | ✓
+   2     | GND          | 地线                 | ✓    | ✓
+   3     | RED          | 红色信号（数字）     | ✓    | ✓
+   4     | GREEN        | 绿色信号（数字）     | ✓    | ✓
+   5     | BLUE         | 蓝色信号（数字）     | ✓    | ✓
+   6     | INTENSITY    | 亮度/加亮信号        | ✓    | ✓
+   7     | VSYNC        | 垂直同步信号         | ✓    | ✓
+   8     | HSYNC        | 水平同步信号         | ✓    | ✓
+   9     | (保留/SEC)   | CGA备用/EGA次要红色  |      | ✓ (SEC R)</div>
+
+                <div class="info-box"><strong>技术提示：</strong>CGA 使用 4 位数字 RGBI（红绿蓝+亮度）信号，仅支持 16 种颜色，信号电平为 TTL（0 V / 5 V）。EGA 在此基础上扩展为 6 位数字 RGB（每色 2 位），支持 64 色中的 16 色同时显示。工业视频信号转换器必须能够正确识别这两种数字信号并转换为模拟 VGA 或 HDMI 格式。</div>
+
+                <h3>2.3 VGA 15 针 HD D-sub 引脚定义</h3>
+
+                <div class="pinout-diagram">VGA 15 针 HD D-sub（DE-15）母头引脚视图（面对插座）：
+
+         +-----------+
+        /  1 2 3 4 5 \
+       /  6 7 8 9 10  \
+      / 11 12 13 14 15 \
+      +----------------+
+
+引脚编号 | 信号名称      | 说明
+---------|--------------|----------------------
+   1     | RED          | 红色模拟信号（0.7 V p-p）
+   2     | GREEN        | 绿色模拟信号（0.7 V p-p）
+   3     | BLUE         | 蓝色模拟信号（0.7 V p-p）
+   4     | ID2 / NC     | 显示器ID位2 / 未连接
+   5     | GND          | 地线（自检）
+   6     | RGND         | 红色地线
+   7     | GGND         | 绿色地线
+   8     | BGND         | 蓝色地线
+   9     | KEY / +5V    | 备用 / 部分机型+5V输出
+  10     | GND          | 同步信号地线
+  11     | ID0 / NC     | 显示器ID位0 / 未连接
+  12     | ID1 / SDA    | 显示器ID位1 / DDC数据
+  13     | HSYNC        | 水平同步信号
+  14     | VSYNC        | 垂直同步信号
+  15     | ID3 / SCL    | 显示器ID位3 / DDC时钟</div>
+
+                <div class="warning-box"><strong>重要：</strong>CGA/EGA 的数字 TTL 信号（0/5 V）不能直接接入 VGA 的模拟信号通道（0~0.7 V），必须通过工业视频信号转换器进行电平转换和 D/A 转换。错误的直连可能导致信号源电路损坏。</div>
+
+                <h2 id="3-转换器型号规格对比">3. 转换器型号规格对比</h2>
+
+                <h3>3.1 常见工业视频信号转换器对比</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>型号</th>
+
+                    <th>输入接口</th>
+
+                    <th>输出接口</th>
+
+                    <th>最高分辨率</th>
+
+                    <th>电源范围</th>
+
+                    <th>工作温度</th>
+
+                    <th>典型应用场景</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr class="odd-row">
+
+                      <td>CGA2VGA-Pro</td>
+
+                      <td>CGA / EGA (9针 DE-9)</td>
+
+                      <td>VGA (15针 HD-15)</td>
+
+                      <td>1024×768@60Hz</td>
+
+                      <td>12-48 V DC</td>
+
+                      <td>-40~+85 °C</td>
+
+                      <td>老旧Fanuc/三菱机床CRT→LCD</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>VGA2HDMI-4K</td>
+
+                      <td>VGA (15针 HD-15)</td>
+
+                      <td>HDMI 2.0</td>
+
+                      <td>3840×2160@60Hz</td>
+
+                      <td>12-48 V DC</td>
+
+                      <td>-40~+85 °C</td>
+
+                      <td>VGA工控机→4K大屏/触摸屏</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>CVBS2HDMI-A</td>
+
+                      <td>CVBS (BNC/RCA)</td>
+
+                      <td>HDMI 1.4</td>
+
+                      <td>1920×1080@30fps</td>
+
+                      <td>5 V USB / 12 V DC</td>
+
+                      <td>-20~+70 °C</td>
+
+                      <td>工业相机→HDMI检测服务器</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>MDA2VGA</td>
+
+                      <td>MDA / Hercules (9针 DE-9)</td>
+
+                      <td>VGA (15针 HD-15)</td>
+
+                      <td>720×350@50Hz</td>
+
+                      <td>12-48 V DC</td>
+
+                      <td>-40~+85 °C</td>
+
+                      <td>单色显示器/Tektronix设备升级</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>HDMI2VGA-工业版</td>
+
+                      <td>HDMI 1.4</td>
+
+                      <td>VGA (15针 HD-15)</td>
+
+                      <td>1920×1080@60Hz</td>
+
+                      <td>5-24 V DC</td>
+
+                      <td>-30~+85 °C</td>
+
+                      <td>HDMI设备→老式VGA显示器</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h3>3.2 数字接口与模拟接口关键差异</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>特性</th>
+
+                    <th>数字信号（HDMI/DVI）</th>
+
+                    <th>模拟信号（VGA/CGA/EGA）</th>
+
+                    <th>转换器处理要点</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr class="odd-row">
+
+                      <td>信号形式</td>
+
+                      <td>TMDS 差分串行</td>
+
+                      <td>RGB 模拟电压 / TTL 数字电平</td>
+
+                      <td>需 D/A 或 A/D 转换芯片</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>抗干扰能力</td>
+
+                      <td>强（差分传输）</td>
+
+                      <td>弱（易受 EMI 影响）</td>
+
+                      <td>需屏蔽电缆+共模扼流圈</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>传输距离</td>
+
+                      <td>≤ 15 m（无中继）</td>
+
+                      <td>≤ 50 m（高质量同轴）</td>
+
+                      <td>长距离优先使用模拟或光纤方案</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>分辨率上限</td>
+
+                      <td>4K/8K</td>
+
+                      <td>2048×1536（VGA上限）</td>
+
+                      <td>转换器需匹配目标分辨率</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>即插即用</td>
+
+                      <td>支持 EDID 协商</td>
+
+                      <td>不支持自动协商</td>
+
+                      <td>转换器需内置 EDID 模拟器</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h3>3.3 线缆选择与传输距离参考</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>线缆类型</th>
+
+                    <th>最大无中继距离</th>
+
+                    <th>建议屏蔽等级</th>
+
+                    <th>工业现场注意事项</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr class="odd-row">
+
+                      <td>CGA/EGA 9芯线</td>
+
+                      <td>15 m</td>
+
+                      <td>编织屏蔽 ≥ 85%</td>
+
+                      <td>远离变频器/电机动力线 ≥ 30 cm</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>VGA 15芯线</td>
+
+                      <td>30 m（高质量）</td>
+
+                      <td>双磁环+编织屏蔽</td>
+
+                      <td>避免与动力电缆同槽布线</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>HDMI 标准线</td>
+
+                      <td>15 m</td>
+
+                      <td>双屏蔽（铝箔+编织）</td>
+
+                      <td>超过 15 m 使用 HDMI 光纤或延长器</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>CVBS 同轴线</td>
+
+                      <td>100 m（RG59）</td>
+
+                      <td>双层屏蔽</td>
+
+                      <td>BNC 连接器需锁紧以防振动脱落</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>HDMI 光纤</td>
+
+                      <td>100 m+</td>
+
+                      <td>铠装光缆（可选）</td>
+
+                      <td>适用于电磁干扰极强环境</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h2 id="4-典型系统集成案例">4. 典型系统集成案例</h2>
+
+                <h3>案例一：深圳某航空发动机零部件 CNC 加工中心</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>项目概况</th>
+
+                    <th>细节</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>设备</p></td>
+
+                    <td><p>5 台老式 Fanuc 0i 系列数控机床（CGA 显示）</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>需求</p></td>
+
+                    <td><p>将机床监控画面统一投屏至 4K 触摸大屏，以便现场质检和远程监控</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>方案</p></td>
+
+                    <td><p>- 每台机床后端接 CGA→VGA 转换器（内置 12-48 V 电源）</p><p>- VGA 统一接入 VGA→HDMI 主转换器，输出至 4K 触摸屏 </p><p>- 所有转换器均采用工业级即插即用设计</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>成本</p></td>
+
+                    <td><p>转换器硬件费用 ¥12,800（5 台）+ 施工费用 ¥3,200</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>效果</p></td>
+
+                    <td><p>- 画面切换延迟 < 15 ms，满足实时监控要求 </p><p>- 机床停机时间从 1.5 h 降至 0.2 h（故障定位更快）</p><p>- 客户满意度提升 38%（内部调查）</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>对比（无转换器方案）</p></td>
+
+                    <td><p>需要更换全部机床显示器（单价约 ¥4,500/台），总费用约 ¥225,000，且改造周期 > 3 个月。</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <p>关键技术指标：CGA→VGA 转换器的信号恢复率 99.8%，抗噪声性能在 30 dB 以上，符合 IEC 61000-4-2 静电放电标准。</p>
+
+                <h3>案例二：广州汽车零部件制造厂的机器视觉升级</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>项目概况</th>
+
+                    <th>细节</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>设备</p></td>
+
+                    <td><p>8 条数控铣床，每台装有 1.3 MP 工业相机（CVBS 输出）</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>需求</p></td>
+
+                    <td><p>将相机图像实时传输至基于 HDMI 的检测服务器，进行缺陷识别</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>方案</p></td>
+
+                    <td><p>- 使用 CVBS→HDMI 转换器（内置 5 V/2 A 稳压）</p><p>- HDMI 线缆统一接入服务器的 HDMI 输入端口</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>成本</p></td>
+
+                    <td><p>转换器硬件费用 ¥9,600（8 台）+ 布线费用 ¥1,200</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>效果</p></td>
+
+                    <td><p>- 图像延迟从原先的 120 ms 降至 28 ms，检测算法准确率提升 6% </p><p>- 系统连续运行 30 天无故障，MTBF ≥ 30,000 h</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>对比（使用普通消费级转换器）</p></td>
+
+                    <td><p>画面频闪、颜色失真导致误检率上升 12%，维修次数增加 3 倍。</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <p>可靠性数据：该批工业视频转换器在 10,000 h 加速老化试验中未出现任何功能失效，符合 MIL-STD-810G 振动冲击标准。</p>
+
+                <h2 id="5-选型与配置建议">5. 选型与配置建议</h2>
+
+                <h3>5.1 关键选型参数</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>参数</th>
+
+                    <th>推荐值/范围</th>
+
+                    <th>说明</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>输入信号类型</p></td>
+
+                    <td><p>VGA / HDMI / CVBS / CGA / EGA / MDA</p></td>
+
+                    <td><p>根据原设备输出确定</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>输出信号类型</p></td>
+
+                    <td><p>目标显示/服务器接口（HDMI/VGA）</p></td>
+
+                    <td><p>与上位系统匹配</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>分辨率支持</p></td>
+
+                    <td><p>640×480 ~ 1920×1080（部分 4K）</p></td>
+
+                    <td><p>确保不低于原始分辨率</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>帧率</p></td>
+
+                    <td><p>≥ 30 fps（视频）</p><p>≥ 60 Hz（显示）</p></td>
+
+                    <td><p>实时监控需求</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>电源</p></td>
+
+                    <td><p>12-48 V DC（工业级）</p></td>
+
+                    <td><p>兼容现场电源</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>工作温度</p></td>
+
+                    <td><p>-40 °C~+85 °C</p></td>
+
+                    <td><p>适用于极端车间</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>抗干扰等级</p></td>
+
+                    <td><p>≥ 30 dB（EMI）</p></td>
+
+                    <td><p>满足 IEC 61000-4-3</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>认证</p></td>
+
+                    <td><p>CE、UL、IEC 60730-1</p></td>
+
+                    <td><p>安全合规</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h3>5.2 配置实例</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>场景</th>
+
+                    <th>推荐转换器型号</th>
+
+                    <th>连接方式</th>
+
+                    <th>备注</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>老旧 CNC 主机 → 现场 4K 触摸屏</p></td>
+
+                    <td>VGA→HDMI 4K 工业级（宽温、12-48 V）</td>
+
+                    <td><p>VGA (机床) → 转换器 → HDMI (大屏)</p></td>
+
+                    <td><p>支持 4K@60Hz，零延迟</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>工业相机 (CVBS) → 检测服务器 (HDMI)</p></td>
+
+                    <td>CVBS→HDMI 带音频（内置 5 V 稳压）</td>
+
+                    <td><p>CVBS → 转换器 → HDMI (服务器)</p></td>
+
+                    <td><p>支持 1080p@30fps，音视频同步</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>旧式 CGA 显示器 → 新型 VGA 显示器</p></td>
+
+                    <td>CGA/EGA→VGA（即插即用）</td>
+
+                    <td><p>CGA → 转换器 → VGA (显示器)</p></td>
+
+                    <td><p>兼容 640×480、800×600</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>多机共屏显示</p></td>
+
+                    <td>HDMI 分配 + VGA→HDMI 组合</td>
+
+                    <td><p>多 HDMI → 分配器 → 大屏</p></td>
+
+                    <td><p>通过 HDMI 分配器实现 1→4 同屏</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h3>5.3 选型流程（建议）</h3>
+
+                <ol class="step-list">
+                  <li><strong>列出所有视频接口</strong>（包括备用接口）。</li>
+                  <li><strong>确认信号传输距离</strong>：> 15 m 时建议使用 HDMI 光纤或 HDBaseT 扩展模块。</li>
+                  <li><strong>匹配分辨率与帧率</strong>：确保转换器的最高支持规格不低于原始信号。</li>
+                  <li><strong>核对电源与环境</strong>：现场电源是否满足 12-48 V，温度是否超出 -40 °C~+85 °C。</li>
+                  <li><strong>检查认证</strong>：工业现场必须使用 CE/UL 认证产品。</li>
+                  <li><strong>现场验证</strong>：在实际机床或相机上进行 5 min 连续运行测试，确认画面无抖动、无色偏。</li>
+                </ol>
+
+                <h2 id="6-安装步骤指南">6. 安装步骤指南</h2>
+
+                <h3>6.1 典型安装流程图（CGA→VGA→HDMI 方案）</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>步骤</th>
+
+                    <th>操作内容</th>
+
+                    <th>注意事项</th>
+
+                    <th>预估耗时</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr class="odd-row">
+
+                      <td>1. 断电</td>
+
+                      <td>关闭机床总电源，拔掉 CRT 显示器的信号线和电源线</td>
+
+                      <td>确认断电后等待 3 min 让 CRT 电容放电完毕</td>
+
+                      <td>5 min</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>2. 连接转换器输入</td>
+
+                      <td>将 CGA 信号线从机床主控板引出，插入 CGA2VGA-Pro 的 9 针输入口</td>
+
+                      <td>确认引脚对应正确；如线缆长度不够，使用优质 9 芯延长线（≤ 15 m）</td>
+
+                      <td>10 min</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>3. 连接转换器电源</td>
+
+                      <td>将 12-48 V DC 电源接入转换器端子排</td>
+
+                      <td>正负极不可接反；确认电压在额定范围内</td>
+
+                      <td>5 min</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>4. 连接转换器输出</td>
+
+                      <td>将 VGA 线一端插入转换器 VGA 输出口，另一端接入液晶显示器</td>
+
+                      <td>拧紧 VGA 两端手拧螺丝以防振动松脱</td>
+
+                      <td>5 min</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>5. 上电测试</td>
+
+                      <td>开启机床电源，观察显示器画面</td>
+
+                      <td>若画面无显示，检查电源指示灯是否亮起</td>
+
+                      <td>5 min</td>
+
+                    </tr>
+
+                    <tr class="even-row">
+
+                      <td>6. 画面调整</td>
+
+                      <td>通过显示器 OSD 菜单调整位置、亮度和对比度</td>
+
+                      <td>CGA 分辨率较低可开启显示器"1:1"或"点对点"模式</td>
+
+                      <td>5 min</td>
+
+                    </tr>
+
+                    <tr class="odd-row">
+
+                      <td>7. 连续运行验证</td>
+
+                      <td>运行标准加工程序 30 min，确认画面无闪烁、花屏</td>
+
+                      <td>记录画面异常供售后分析</td>
+
+                      <td>30 min</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <div class="warning-box"><strong>安全警告：</strong>CRT 显示器内部含有高压电容，断电后仍可能存有数百伏电压。非专业人员请勿自行拆解 CRT 外壳。建议直接使用工业视频信号转换器外接 LCD 显示器，无需改造 CRT 内部电路。</div>
+
+                <h3>6.2 常见安装问题与对策</h3>
+
+                <table class="spec-table">
+
+                  <thead><tr>
+
+                    <th>问题</th>
+
+                    <th>最常见原因</th>
+
+                    <th>快速对策</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>安装后无图像</td>
+
+                      <td>转换器未上电 / CGA 线序不匹配</td>
+
+                      <td>检查电源 LED；核对 CGA 信号线连线图</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>画面偏色</td>
+
+                      <td>CGA 数字信号阻抗不匹配</td>
+
+                      <td>更换短距离高质量 9 芯线缆</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>开机显示正常，数分钟后消失</td>
+
+                      <td>转换器过温保护</td>
+
+                      <td>检查安装空间通风；确认环境温度未超规格</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>画面抖动/滚动</td>
+
+                      <td>同步信号幅度不足</td>
+
+                      <td>检查 CGA 输出的 HSYNC/VSYNC 电平（需 ≥ 3 V TTL）</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                <h2 id="7-维护与故障排除">7. 维护与故障排除</h2>
+
+                <h3>7.1 常见故障模式</h3>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>故障现象</th>
+
+                    <th>可能原因</th>
+
+                    <th>检查/解决步骤</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>图像模糊、颜色失真</p></td>
+
+                    <td><p>输入信号幅度不足、转换器内部 PLL 锁定失败</p></td>
+
+                    <td><p>1. 检查信号源输出电平（使用示波器）</p><p>2. 更换电源线或使用稳压电源</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>屏幕无显示或间歇性闪烁</p></td>
+
+                    <td><p>接口松动、供电电压波动</p></td>
+
+                    <td><p>1. 确认所有 DIN 端子拧紧</p><p>2. 使用万用表测量供电电压是否在 12-48 V 范围</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>延迟明显（> 50 ms）</p></td>
+
+                    <td><p>转换器内部缓存异常、固件老化</p></td>
+
+                    <td><p>1. 断电 30 s 后重新上电</p><p>2. 联系供应商获取固件升级（若有）</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>设备报警灯红亮</p></td>
+
+                    <td><p>过温或过压保护触发</p></td>
+
+                    <td><p>1. 检查机箱散热是否正常</p><p>2. 确认电源电压是否超过额定上限</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <h3>7.2 预防性维护建议</h3>
+
+                <table class="spec-table">
+
+                  <thead><tr>
+
+                    <th>项目</th>
+
+                    <th>频率</th>
+
+                    <th>具体操作</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>外观检查</td>
+
+                      <td>每月</td>
+
+                      <td>清除灰尘、检查接插件是否腐蚀</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>电源检测</td>
+
+                      <td>每季</td>
+
+                      <td>用万用表测量输入电压、检查稳压模块温度</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>固件检查</td>
+
+                      <td>每半年</td>
+
+                      <td>与厂家确认是否有新版固件，必要时升级</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>故障日志记录</td>
+
+                      <td>持续</td>
+
+                      <td>将每次异常记录在 PLC/SCADA 系统中，便于趋势分析</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td>备件管理</td>
+
+                      <td>常备</td>
+
+                      <td>至少配备 1 台同型号转换器作为热备件，确保 8 h 内可切换</td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                <h3>7.3 故障案例分析</h3>
+
+                <p><strong>案例：</strong>某电子元件生产线在夏季高温（+45 °C）时出现"显示卡顿"。</p>
+
+                <p><strong>原因：</strong>转换器内部温度传感器触发过温保护，导致自动降频。</p>
+
+                <p><strong>处理：</strong>在机箱内部加装风扇并更换为宽温 -40 °C~+85 °C 高温版转换器。恢复后，系统连续运行 180 天无故障。</p>
+
+                <h2 id="8-要点总结">8. 要点总结</h2>
+
+                <div class="table-wrapper">
+
+                <table class="spec-table">
+
+                  <thead><tr class="header-row">
+
+                    <th>序号</th>
+
+                    <th>核心要点</th>
+
+                  </tr></thead>
+
+                  <tbody>
+
+                  <tr class="odd-row">
+
+                    <td><p>1</p></td>
+
+                    <td><p>CNC 系统中视频信号是状态监控、交互操作和机器视觉的关键，老旧接口与现代显示/服务器之间的鸿沟必须通过工业视频信号转换器来弥合。</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>2</p></td>
+
+                    <td>工业级转换器具备宽温、宽压、抗干扰、7×24 h 认证等特性，能够在高噪声、极端环境下保证 ≤30 ms 的低延迟和 ≥99.8% 的信号恢复率。</td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>3</p></td>
+
+                    <td><p>典型案例表明：使用转换器可降低改造成本 80% 以上（如案例一的 5 台机床改造仅 ¥16 k），并显著提升系统可用性（MTBF > 30,000 h）。</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>4</p></td>
+
+                    <td><p>选型时需重点核对输入/输出格式、分辨率、帧率、供电范围、工作温度，并通过现场 5 min 连续运行测试验证兼容性。</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>5</p></td>
+
+                    <td><p>安装 CGA/EGA 转换器时必须了解 9 针 D-sub 引脚定义，数字 TTL 信号不可直接接入 VGA 模拟通道。</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>6</p></td>
+
+                    <td><p>线缆选择应参考传输距离：VGA ≤ 30 m、HDMI ≤ 15 m、CVBS 同轴可达 100 m，超过建议距离须使用光纤或中继方案。</p></td>
+
+                  </tr>
+
+                  <tr class="odd-row">
+
+                    <td><p>7</p></td>
+
+                    <td><p>维护策略应包括定期外观/电源检查、固件更新、备件管理，并通过故障日志进行趋势分析，确保 7×24 h 稳定运行。</p></td>
+
+                  </tr>
+
+                  <tr class="even-row">
+
+                    <td><p>8</p></td>
+
+                    <td><p>对于 CNC 数控备件采购，工业视频信号转换器系列是实现老旧设备升级与新系统集成的关键部件，推荐列入必备清单。</p></td>
+
+                  </tr>
+
+                  </tbody>
+
+                </table>
+
+                </div>
+
+                <hr>
+
+                <p>作者：深圳市江图科技有限公司技术部</p>
+
+                <p>联系方式：</p>
+
+                <ul>
+
+                  <li>电话：13686889647</li>
+
+                  <li>邮箱：info@cncdisplay.com</li>
+
+                </ul>
+
+                <p>如需获取产品技术手册、现场方案设计或报价，请随时联系我们的工程应用团队。</p>
+
+            </div>
+
+            <div class="related-links"><h4>相关阅读</h4><ul>
+
+                <li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">工业视频信号转换器系列</a></li>
+
+                <li><a href="/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">CGA/EGA显示器改造指南</a></li>
+
+                <li><a href="/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">RGBHV改造全攻略</a></li>
+
+                <li><a href="/en/posts/article_20260501_industrial_cnc_equipment_display_troubleshooting_and_repair_complete-guide.html">故障诊断与维修</a></li>
+
+            </ul></div>
+
+        </article>
+
+    </main>
+
+    <section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+        <h3 style="margin-top:0;">相关文章</h3>
+
+        <ul style="display:grid;gap:0.5rem;">
+            <li><a href="/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html">工业视频信号转换器系列 | 深圳市江图科技有限公司</a></li>
+            <li><a href="/en/posts/article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html">江图科技工业视频显示产品目录 | 深圳市江图科技有限公司</a></li>
+            <li><a href="/zh/posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html">GBS-8219 RGB转VGA工业信号转换器 — 让老旧CNC数控系统重获新生 | 深圳市江图科技有限公司</a></li>
+        </ul>
+
+    </section>
+
+    <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+        <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">相关资源</p>
+        <ul style="margin:0;padding-left:1.2rem;">
+            <li><a href="/zh/compatibility-matrix.html">95+ 型号兼容性查询</a> — 查找您的 CRT 型号</li>
+            <li><a href="/zh/brands/">按品牌浏览</a> — FANUC / 三菱 / 西门子 / Mazak / Okuma / Haas</li>
+            <li><a href="/zh/quote.html">获取报价</a> — 24 小时内回复</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | info@cncdisplay.com</p>
+        </div>
+    </footer>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    var curProtocol = window.location.protocol.split(':')[0];
+
+    if (curProtocol === 'https') {
+
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+    } else {
+
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    }
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+</body>
+
+</html>

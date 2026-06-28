@@ -30,4 +30,4 @@
 
 ## 兼容查询
 - [CRT转LCD兼容性查询](https://cncdisplay.com/compatibility-matrix.html): 95+型号对照
-- 邮箱: sales@cncdisplay.com | 电话: +86-13686889647
+- 邮箱: info@cncdisplay.com | 电话: +86-13686889647

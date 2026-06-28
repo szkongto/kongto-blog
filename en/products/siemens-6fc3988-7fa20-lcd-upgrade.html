@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://cncdisplay.com/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html">
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html">
     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Siemens 6FC3988-7FA20 LCD Upgrade | 9-inch CRT to TFT">
@@ -71,7 +71,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+86-13686889647",
-    "email": "sales@cncdisplay.com",
+    "email": "info@cncdisplay.com",
     "contactType": "sales",
     "availableLanguage": ["Chinese", "English"]
   },
@@ -142,9 +142,69 @@
                 <tr><td>Safety</td><td>High voltage (10-15kV)</td><td><strong>Low voltage AC110V</strong></td></tr>
             </table>
         </section>
-        <section><h2>Compatible Systems</h2><ul><li>FANUC Series 0 / 0-Mate / 0-TMate</li><li>FANUC 0i-A/B/C/D</li><li>FANUC 16i / 18i / 21i</li><li>FANUC OM-D / OM-C</li><li>All CNC machines with A61L-0001-0093 display</li></ul></section>
+        <section><h2>Compatible Systems</h2><ul><li>FANUC Series 0 / 0-Mate / 0-TMate</li><li>FANUC 0i-A/B/C/D</li><li>FANUC 16i / 18i / 21i</li><li>FANUC OM-D / OM-C</li><li>All CNC machines with A61L-0001-0093 display</li></ul>
+
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common SIEMENS 6FC3988 7FA20 CRT Display Failures</h2>
+            <p>The SIEMENS 6FC3988 7FA20 is a CRT display found on Siemens Sinumerik 810/820/840/880 controls from the 1980s–1990s.</p>
+            <ul>
+                <li><strong>Blank screen / no display</strong> — Siemens Sinumerik CRT flyback failure. The control runs but the screen is dark.</li>
+                <li><strong>Flickering or unstable image</strong> — Capacitor aging in the horizontal deflection circuit.</li>
+                <li><strong>Dim display</strong> — CRT phosphor wear after 20+ years of continuous operation.</li>
+                <li><strong>Intermittent display / warm-up required</strong> — Cold solder joints or failing electrolytics. The display may take 5–15 minutes to stabilize.</li>
+            </ul>
+            <p>All CRT hardware failures. The Siemens control logic is typically unaffected — our LCD module restores display without parameter changes.</p>
+        </section>
+        <!-- Module 5: Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Signal Wiring</h2>
+            <p>Our LCD module connects directly to the existing CRT connector — no adapter or rewiring needed.</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>2</td><td>Video</td><td>Monochrome video (TTL 0–5V)</td></tr>
+                <tr><td>3</td><td>GND</td><td>Video Ground</td></tr>
+                <tr><td>4</td><td>HS</td><td>Horizontal Sync</td></tr>
+                <tr><td>5</td><td>VS</td><td>Vertical Sync</td></tr>
+                <tr><td>6</td><td>AC 110V / DC 24V</td><td>Power (check machine variant)</td></tr>
+                <tr><td>7</td><td>GND</td><td>Power Ground</td></tr>
+            </table>
+            <p><strong>Note:</strong> Siemens Sinumerik CRTs often use 110V AC power rather than 24V DC. Verify your machine's supply voltage. Our LCD module is available in both AC and DC input versions.</p>
+        </section>
+        
+        <section style="margin:2rem 0;" itemscope="" itemtype="https://schema.org/FAQPage">
+            <h2>Frequently Asked Questions</h2>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Will this work with Siemens Sinumerik 810, 820, 840, or 880 controls?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Yes. This CRT model was used across Sinumerik 810, 820, 840, and 880 series controls. The LCD module works with all of them.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Does this also fit SM0901 or 579417TA CRTs?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Yes. The 6FC3988-7FA20, SM0901, and 579417TA share the same mounting and signal interface.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Installation time?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">10–15 minutes. Power off, swap displays, reconnect connectors, power on.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Warranty?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">18-month warranty, lifetime support, worldwide shipping.</div>
+                </div>
+            </div>
+        </section>
+        <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Technical Support - Free Shipping Worldwide</p></section>
+        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to replace your CRT?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Request Quote</a></section>
+</section>
         <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>1-Year Warranty</strong> - Lifetime Technical Support - Free Shipping Worldwide</p></section>
-        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to upgrade?</h2><p>sales@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Contact Us</a></section>
+        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to upgrade?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Contact Us</a></section>
     </main>    
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
@@ -169,7 +229,7 @@
                 <a href="/en/docs/">Downloads</a>
                 <a href="/en/about.html">About Us</a>
             </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | info@cncdisplay.com</p>
         </div>
     </footer>
 </body>

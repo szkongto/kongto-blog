@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CGA/EGA转RGBHV工业显示器改造指南 | 江图科技</title>
+
+    <meta name="description" content="完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。涵盖转换器选型、安装步骤、成本分析和故障排除。">
+
+    <meta name="keywords" content="CGA转RGBHV, EGA转VGA转换器, 工业显示器CRT改造, CGA EGA信号转换, CNC显示器升级, RGBHV工业监控, CGA EGA转VGA适配器, 工业视频信号转换器, 工控显示屏改造">
+
+    <meta name="author" content="深圳市江图科技有限公司">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="CGA/EGA转RGBHV工业显示器改造指南">
+
+    <meta property="og:description" content="完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。涵盖转换器选型、安装步骤、成本分析和故障排除。">
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta property="og:url" content="https://cncdisplay.com/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">
+
+    <meta property="article:published_time" content="2026-05-01">
+
+    <meta property="article:author" content="深圳市江图科技有限公司">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="CGA/EGA转RGBHV工业显示器改造指南">
+
+    <meta name="twitter:description" content="完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。">
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "CGA/EGA转RGBHV工业显示器改造指南",
+  "description": "完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。涵盖转换器选型、安装步骤、成本分析和故障排除。",
+  "author": {
+    "@type": "Person",
+    "name": "深圳市江图科技有限公司"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}</script>
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
+
+
+
+    <style>
+
+        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
+
+        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
+
+        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
+
+        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+
+        .spec-table .even-row {background:#f8fafc;}
+
+        .spec-table .odd-row {background:#fff;}
+
+        .spec-table tr:hover {background:#eff6ff;}
+
+        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+
+        .content {line-height:1.8;}
+
+        .content p {margin-bottom:1rem;}
+
+        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
+
+        .content h3 {margin-top:1.5rem;color:#475569;}
+
+        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
+
+        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
+
+        .related-links ul {margin:0;padding-left:20px;}
+
+        .related-links li {margin-bottom:8px;}
+
+    </style>
+
+
+
+
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CGA/EGA转RGBHV工业显示器改造指南 | 江图科技",
+      "item": "https://cncdisplay.com/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/zh/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/zh/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>CGA/EGA转RGBHV工业显示器改造指南</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者：深圳市江图科技有限公司</span>
+
+            </div>
+
+            <div class="post-meta-extra">
+
+                <span class="reading-time">预计阅读时间：12分钟</span>
+
+                <span class="last-updated">最后更新：2026-06-24</span>
+
+            </div>
+
+
+
+            <div class="content">
+
+    <div class="table-of-contents">
+
+        <h3>目录</h3>
+
+        <ul>
+
+            <li><a href="#retrofit-requirements">改造需求与背景分析</a></li>
+
+            <li><a href="#converter-selection">转换器选型指南</a></li>
+
+            <li><a href="#crto-lcd-conversion">CRT转LCD对照参考表</a></li>
+
+            <li><a href="#connector-reference">连接器类型参考表</a></li>
+
+            <li><a href="#signal-conversion">信号转换对照表</a></li>
+
+            <li><a href="#pre-install-checklist">安装前检查清单</a></li>
+
+            <li><a href="#retrofit-steps">分步安装指南</a></li>
+
+            <li><a href="#tool-requirements">工具需求表</a></li>
+
+            <li><a href="#performance-evaluation">性能评估与维护</a></li>
+
+            <li><a href="#key-takeaways">核心要点总结</a></li>
+
+            <li><a href="#related-articles">相关文章</a></li>
+
+        </ul>
+
+    </div>
+
+
+
+<p><strong>关键词</strong>：CGA转RGBHV转换、EGA转VGA适配器、工业显示器改造、CNC CRT升级、CGA EGA信号转换器</p>
+
+<p><strong>目标读者</strong>：CNC工程师、设备维护人员、工业控制系统集成商、工业自动化采购人员</p>
+
+
+
+<figure class="img-hero"><img loading="lazy" src="/images/A6100010074_1.jpg" alt="工业显示器转换器" ></figure>
+
+<figure class="img-detail"><img loading="lazy" src="/images/A6100010093_led.jpg" alt="LED工业显示器" ></figure>
+
+
+
+<h2 id="retrofit-requirements">1. 改造需求与背景分析</h2>
+
+<h3>1.1 工业现场老旧显示设备现状</h3>
+
+<table>
+
+<tr><th>行业</th><th>常见老旧显示器</th><th>平均使用寿命</th><th>核心痛点</th></tr>
+
+<tr><td>CNC数控机床</td><td>CGA / EGA CRT显示器</td><td>12-18年</td><td>接口落后、分辨率低、功耗高、体积庞大</td></tr>
+
+<tr><td>PLC控制柜</td><td>老旧工业监控器</td><td>10-15年</td><td>与现代化HMI不兼容、维护成本高昂</td></tr>
+
+<tr><td>自动化生产线</td><td>老旧图像采集显示器</td><td>8-13年</td><td>信号衰减、抗干扰能力差、频繁维修</td></tr>
+
+</table>
+
+<p>根据《2023年中国工业自动化设备维护报告》，超过38%的中小型制造企业仍在使用1990-2000年间的CGA/EGA显示器，平均每台年维护成本约1200元人民币。大量工厂面临迫切升级需求，同时需保持现有控制系统正常运行。</p>
+
+
+
+<h3>1.2 改造核心目标</h3>
+
+<table>
+
+<tr><th>目标</th><th>关键指标</th><th>预期收益</th></tr>
+
+<tr><td>信号兼容性</td><td>将CGA/EGA复合信号升级为RGBHV（VGA）</td><td>兼容现代化IPC和工业相机</td></tr>
+
+<tr><td>稳定性</td><td>7x24小时连续运行，错误率 &lt; 0.01%</td><td>减少停机时间</td></tr>
+
+<tr><td>成本控制</td><td>单台改造成本 &le; 1200元（转换器+线缆+人工）</td><td>投资回报周期 &le; 12个月</td></tr>
+
+<tr><td>环境适应性</td><td>工作温度-20&deg;C至+70&deg;C，宽电压12-36 VDC</td><td>满足严苛工厂环境需求</td></tr>
+
+</table>
+
+
+
+<h3>1.3 为何不直接更换工业液晶显示器？</h3>
+
+<table>
+
+<tr><th>方案</th><th>初期投资</th><th>维护成本</th><th>安装周期</th><th>兼容性</th><th>备注</th></tr>
+
+<tr><td><strong>直接更换工业液晶显示器</strong></td><td>2500-4500元/台</td><td>低（保修期内）</td><td>1-2天（需重新布线）</td><td>完全兼容</td><td>需拆除旧CRT、重新布线，可能影响现有机箱结构</td></tr>
+
+<tr><td><strong>改造为RGBHV显示器</strong></td><td>800-1200元/台（转换器+配件）</td><td>中等（转换器寿命约5年）</td><td>4-6小时（即插即用）</td><td>完全兼容</td><td>保留原有显示器外壳，零改装，减少停机时间</td></tr>
+
+</table>
+
+<p><strong>结论</strong>：对于预算有限、改造窗口期短的项目，<strong>CGA/EGA转RGBHV改造方案</strong>性价比最高。</p>
+
+
+
+<h2 id="converter-selection">2. 转换器选型指南</h2>
+
+<h3>2.1 核心技术参数</h3>
+
+<table>
+
+<tr><th>参数</th><th>推荐值</th><th>说明</th></tr>
+
+<tr><td>输入信号</td><td>CGA（15 kHz x 60 Hz）/ EGA（25 kHz x 70 Hz）</td><td>支持标准CGA/EGA时序</td></tr>
+
+<tr><td>输出信号</td><td>RGBHV（VGA 640x480@60Hz, 800x600@60Hz）</td><td>3-5种分辨率选项</td></tr>
+
+<tr><td>像素时钟</td><td>25 MHz - 40 MHz</td><td>支持最高800x600的VGA输出</td></tr>
+
+<tr><td>宽温工作</td><td>-20&deg;C至+70&deg;C</td><td>工业级标准</td></tr>
+
+<tr><td>工作电压</td><td>12-36 VDC（24V可选）</td><td>兼容PLC/电源柜供电</td></tr>
+
+<tr><td>电磁兼容</td><td>IEC/EN 61326-1 Class 2</td><td>强抗干扰能力</td></tr>
+
+<tr><td>输入/输出阻抗</td><td>75&Omega;（CGA/EGA）/ 75&Omega;（RGBHV）</td><td>防止信号反射</td></tr>
+
+<tr><td>供电方式</td><td>即插即用，无需外部驱动</td><td>现场快速部署</td></tr>
+
+<tr><td>可靠性</td><td>MTBF &ge; 50,000小时</td><td>7x24小时连续运行</td></tr>
+
+</table>
+
+<p><strong>产品推荐</strong>：江图科技 <strong>工业视频信号转换器（CGA/EGA转RGBHV）</strong>（型号：JTX-CVR-001），满足以上全部规格，已通过CE/UL/ISO9001认证。</p>
+
+
+
+<h3>2.2 竞品对比</h3>
+
+<table>
+
+<tr><th>特性</th><th>江图工业转换器</th><th>消费级HDMI转VGA适配器</th><th>竞品内置转换器显示器</th></tr>
+
+<tr><td>支持信号</td><td>CGA/EGA转RGBHV</td><td>HDMI转VGA（不支持CGA/EGA）</td><td>直接VGA输出（需更换显示器）</td></tr>
+
+<tr><td>温度范围</td><td>-20&deg;C至+70&deg;C</td><td>0&deg;C至+45&deg;C</td><td>-10&deg;C至+60&deg;C</td></tr>
+
+<tr><td>供电方式</td><td>12-36 VDC（宽电压）</td><td>5V USB</td><td>12V DC</td></tr>
+
+<tr><td>MTBF</td><td>&ge; 50,000小时</td><td>10,000小时</td><td>30,000小时</td></tr>
+
+<tr><td>即插即用</td><td>&#10004;</td><td>部分需驱动</td><td>&#10004;</td></tr>
+
+<tr><td>单价</td><td>约850元</td><td>约120元（不适用）</td><td>约2800元</td></tr>
+
+</table>
+
+
+
+<h2 id="crto-lcd-conversion">3. CRT转LCD对照参考表</h2>
+
+<p>将老旧CRT更换为现代化LCD或LED工业显示器时，了解规格差异至关重要。下表将常见原始CRT规格与其对应的现代LCD等效规格进行对比。</p>
+
+<div class="table-wrapper"><table class="spec-table">
+
+<tr class="header-row"><th>参数</th><th>原始CRT规格（CGA/EGA）</th><th>替代LCD规格</th><th>备注</th></tr>
+
+<tr class="odd-row"><td>分辨率</td><td>640x200（CGA）/ 640x350（EGA）</td><td>1024x768 或 1280x1024</td><td>LCD原生缩放，转换器负责信号升频</td></tr>
+
+<tr class="even-row"><td>水平扫描频率</td><td>15.75 kHz（CGA）/ 21.85 kHz（EGA）</td><td>30-80 kHz（自动同步）</td><td>转换器须通过PLL匹配时序</td></tr>
+
+<tr class="odd-row"><td>垂直刷新率</td><td>60 Hz（CGA）/ 60 Hz（EGA）</td><td>60-75 Hz</td><td>60 Hz输出为最佳兼容性标准</td></tr>
+
+<tr class="even-row"><td>视频带宽</td><td>约14 MHz（CGA）/ 约16 MHz（EGA）</td><td>约120 MHz（LCD面板）</td><td>转换器像素时钟25-40 MHz已足够</td></tr>
+
+<tr class="odd-row"><td>色彩深度</td><td>4-bit（16色CGA）/ 6-bit（64色EGA）</td><td>24-bit（16.7M色）</td><td>转换器将CGA/EGA调色板映射至RGBHV</td></tr>
+
+<tr class="even-row"><td>同步方式</td><td>复合同步（CGA）/ 分离同步（EGA）</td><td>分离H/V同步（RGBHV）</td><td>转换器处理复合转分离同步的转换</td></tr>
+
+<tr class="odd-row"><td>显示尺寸</td><td>9英寸至14英寸对角线</td><td>10.4英寸至19英寸对角线</td><td>物理安装支架可能需要转接板</td></tr>
+
+<tr class="even-row"><td>功耗</td><td>60-90W（CRT）</td><td>15-25W（LCD面板）</td><td>节能高达75%</td></tr>
+
+<tr class="odd-row"><td>重量</td><td>5-12 kg</td><td>1.5-4 kg</td><td>减轻安装支架的机械负担</td></tr>
+
+<tr class="even-row"><td>对比度</td><td>约500:1（CRT典型值）</td><td>1000:1至3000:1</td><td>LCD在明亮环境下对比度更优</td></tr>
+
+<tr class="odd-row"><td>响应时间</td><td>约8 ms（荧光粉余辉）</td><td>5-8 ms（LCD灰阶响应）</td><td>静态HMI应用中表现相当</td></tr>
+
+</table></div>
+
+
+
+<h2 id="connector-reference">4. 连接器类型参考表</h2>
+
+<p>工业CGA/EGA显示器使用多种老旧连接器。识别现有设备上的正确连接器类型是规划改造的第一步。下表列出常见的CGA/EGA连接器标准。</p>
+
+<div class="table-wrapper"><table class="spec-table">
+
+<tr class="header-row"><th>连接器类型</th><th>引脚数</th><th>常见用途</th><th>信号格式</th><th>典型设备</th></tr>
+
+<tr class="odd-row"><td>HONDA 20针</td><td>20</td><td>FANUC 0/6/10/11/15系列，老旧FANUC CRT</td><td>CGA复合同步，RGB分离，+12V/+5V</td><td>FANUC 0-Mate, FANUC 6T/6M</td></tr>
+
+<tr class="even-row"><td>Molex 15针（2排）</td><td>15</td><td>FANUC Series 15/16/18，三菱Meldas</td><td>CGA/EGA RGB + 复合同步</td><td>FANUC 15-MA, 16-MB, 三菱M50</td></tr>
+
+<tr class="odd-row"><td>DB9（DE-9）</td><td>9</td><td>早期三菱、西门子Sinumerik</td><td>CGA RGB + H/V同步（TTL电平）</td><td>西门子810T, 三菱M3</td></tr>
+
+<tr class="even-row"><td>DB15（DE-15，VGA样式）</td><td>15（3排）</td><td>后期西门子、大隈OSP-5000</td><td>RGBHV（模拟，分离同步）</td><td>西门子840D, 大隈OSP-P200</td></tr>
+
+<tr class="odd-row"><td>排线（IDC）</td><td>10 / 16 / 20</td><td>定制工业显示器，日立HM系列</td><td>TTL RGB + 同步线</td><td>日立PanaCord，定制CNC面板</td></tr>
+
+<tr class="even-row"><td>边缘连接器</td><td>14 / 22</td><td>IBM PC/XT时代CGA适配器，早期CNC控制器</td><td>数字RGBI（含亮度位）</td><td>IBM 5150, Amdek MA-23</td></tr>
+
+<tr class="odd-row"><td>BNC x5</td><td>5（R/G/B/H/V）</td><td>专业视频，后期工业显示器</td><td>模拟RGBHV（独立线缆）</td><td>Barco, Sony PVM, 高端工业液晶屏</td></tr>
+
+</table></div>
+
+
+
+<h2 id="signal-conversion">5. 信号转换对照表</h2>
+
+<p>江图JTX-CVR-001转换器可处理多种输入信号格式，并将其映射为标准RGBHV（VGA）输出。使用此表为您的应用选择正确的输出分辨率。</p>
+
+<div class="table-wrapper"><table class="spec-table">
+
+<tr class="header-row"><th>输入信号</th><th>输入分辨率</th><th>输入行频</th><th>输入场频</th><th>输出信号</th><th>输出分辨率</th><th>应用场景</th></tr>
+
+<tr class="odd-row"><td>CGA（数字RGBI）</td><td>640 x 200</td><td>15.75 kHz</td><td>60 Hz</td><td>RGBHV（模拟）</td><td>640 x 480 @ 60 Hz</td><td>FANUC 0/6 CRT替代</td></tr>
+
+<tr class="even-row"><td>CGA（数字RGBI）</td><td>640 x 200</td><td>15.75 kHz</td><td>60 Hz</td><td>RGBHV（模拟）</td><td>800 x 600 @ 60 Hz</td><td>较大LCD面板缩放</td></tr>
+
+<tr class="odd-row"><td>EGA（数字RGB）</td><td>640 x 350</td><td>21.85 kHz</td><td>60 Hz</td><td>RGBHV（模拟）</td><td>640 x 480 @ 60 Hz</td><td>EGA数控工作站</td></tr>
+
+<tr class="even-row"><td>EGA（数字RGB）</td><td>640 x 350</td><td>21.85 kHz</td><td>60 Hz</td><td>RGBHV（模拟）</td><td>800 x 600 @ 60 Hz</td><td>更高分辨率LCD改造</td></tr>
+
+<tr class="odd-row"><td>MDA（单色）</td><td>720 x 350</td><td>18.43 kHz</td><td>50 Hz</td><td>RGBHV（模拟）</td><td>640 x 480 @ 60 Hz</td><td>单色CRT替代</td></tr>
+
+<tr class="even-row"><td>复合视频（NTSC/PAL）</td><td>约480i / 约576i</td><td>15.73 kHz / 15.63 kHz</td><td>60 Hz / 50 Hz</td><td>RGBHV（模拟）</td><td>640 x 480 @ 60 Hz</td><td>带CCTV功能的CNC显示器</td></tr>
+
+<tr class="odd-row"><td>定制CGA（非标准）</td><td>可变（例如720 x 348）</td><td>15-25 kHz（可变）</td><td>50-70 Hz</td><td>RGBHV（模拟）</td><td>800 x 600 @ 60 Hz</td><td>专有协议CNC控制器</td></tr>
+
+</table></div>
+
+
+
+<h2 id="pre-install-checklist">6. 安装前检查清单</h2>
+
+<p>在开始任何物理安装工作之前，请完成以下检查清单，以确保改造顺利进行。跳过这些准备步骤是导致现场延误的最常见原因。</p>
+
+<div class="info-box"><strong>&#10003; 安装前检查清单</strong></div>
+
+<table>
+
+<tr><th style="width:40px;">#</th><th>任务</th><th>详细说明</th><th style="width:80px;">状态</th></tr>
+
+<tr><td>1</td><td>确认原始显示器信号类型</td><td>检查CNC控制器铭牌。查看原始显示器上的CGA（15.75 kHz）或EGA（21.85 kHz）标识。</td><td>___ / ___</td></tr>
+
+<tr><td>2</td><td>记录连接器引脚定义</td><td>拍摄现有连接器照片。记录线缆颜色和引脚分配。参考上方的连接器类型参考表。</td><td>___ / ___</td></tr>
+
+<tr><td>3</td><td>测量物理安装尺寸</td><td>记录原始CRT边框尺寸（宽x高x深）。确保替代LCD或支架能适配现有外壳。</td><td>___ / ___</td></tr>
+
+<tr><td>4</td><td>确认供电条件</td><td>确认电气柜中具备24V DC或12-36 VDC电源。连接前使用万用表测量电压。</td><td>___ / ___</td></tr>
+
+<tr><td>5</td><td>确认线缆布线路径</td><td>规划从CNC控制器到转换器、再从转换器到显示器的线缆路径。确保线缆长度足够且不过度冗余。</td><td>___ / ___</td></tr>
+
+<tr><td>6</td><td>检查环境温度和使用环境</td><td>确认机柜温度范围。确保转换器的工业级额定范围（-20&deg;C至+70&deg;C）与环境匹配。</td><td>___ / ___</td></tr>
+
+<tr><td>7</td><td>准备所需工具</td><td>参考下方工具需求表。开始安装前备齐所有工具。</td><td>___ / ___</td></tr>
+
+<tr><td>8</td><td>备份CNC参数</td><td>对于FANUC和三菱控制器，备份所有系统参数。部分控制器在改造后可能需要调整显示器相关参数。</td><td>___ / ___</td></tr>
+
+<tr><td>9</td><td>安排维护停机时间</td><td>与生产计划协调。预留4-6小时的保守改造窗口期。</td><td>___ / ___</td></tr>
+
+<tr><td>10</td><td>准备防静电工作区</td><td>在电气柜附近铺设防静电垫、佩戴腕带，准备清洁的工作台面。</td><td>___ / ___</td></tr>
+
+</table>
+
+
+
+<h2 id="retrofit-steps">7. 分步安装指南</h2>
+
+<p>本扩展安装指南涵盖从断电到最终验证的完整流程。请仔细遵循每一步骤，确保安全可靠的改造。</p>
+
+<h3>步骤1：断电与上锁挂牌（LOTO）</h3>
+
+<p>按照标准关机程序关闭CNC数控机床。在切断开关处断开主电源。使用上锁挂牌装置防止意外重新通电。使用经过校准的万用表在电源输入端验证零电压。等待至少2分钟让内部电容放电——CRT电源在断电后仍可能存储致命电压。</p>
+
+<div class="warning-box"><strong>警告：</strong>CRT行输出变压器和电源电容在断电后仍可能保持危险电压数分钟。在接触任何内部组件之前，务必使用万用表验证。</div>
+
+<h3>步骤2：拆卸并隔离原始CRT</h3>
+
+<p>打开电气柜或显示器外壳。找到原始CRT显示单元。拍摄照片记录现有线缆布线。从CNC控制器到CRT断开信号线缆——记下哪些连接器引脚承载R、G、B、H同步和V同步信号。断开CRT电源线缆（通常为24V DC或100-240V AC，具体取决于显示器）。在断开前使用标签标记所有线缆。</p>
+
+<p>如果CRT物理安装在外壳内部，拆下安装螺丝。注意CRT的重量（通常5-12 kg）。较大型单元需两人操作或使用机械升降装置。</p>
+
+<h3>步骤3：安装信号转换器</h3>
+
+<p>在电气柜内为江图JTX-CVR-001转换器选择安装位置。理想位置应满足：</p>
+
+<ul>
+<li>安装在DIN导轨上（如转换器配有DIN导轨夹）或使用安装耳固定在平面上</li>
+<li>远离电源模块和伺服驱动器等高温热源</li>
+<li>远离变频器（VFD）和接触器等强电磁干扰源（保持至少15 cm间距）</li>
+<li>便于操作所有连接器端口的位置</li>
+<li>转换器外壳周围有足够的空气流通</li>
+</ul>
+
+<p>使用M4或M5螺丝（取决于安装支架）固定转换器，或将其卡入DIN导轨。确保转换器通风槽未被遮挡。</p>
+
+<h3>步骤4：连接CGA/EGA输入信号</h3>
+
+<p>将CGA/EGA信号线缆从CNC控制器引至转换器的输入连接器。参考步骤2中记录的连接器引脚定义和上方的连接器类型参考表。典型引脚分配如下：</p>
+
+<div class="info-box"><strong>CGA/EGA至JTX-CVR-001输入接线（以HONDA 20针为例）：</strong><br>
+引脚1：红色视频 &mdash; 连接至转换器红色输入<br>
+引脚2：绿色视频 &mdash; 连接至转换器绿色输入<br>
+引脚3：蓝色视频 &mdash; 连接至转换器蓝色输入<br>
+引脚4：复合同步 / H同步 &mdash; 连接至转换器H同步输入<br>
+引脚5：V同步（仅EGA） &mdash; 连接至转换器V同步输入<br>
+引脚6：地线 &mdash; 连接至转换器GND<br>
+引脚14-15：+12V / +5V（请勿连接 &mdash; 仅供原始CRT使用）</div>
+
+<p>对于采用复合同步的CGA信号，转换器自动在内部提取H和V同步。对于TTL电平信号（5V逻辑），确保转换器的输入阻抗设置为TTL（75欧姆端接加串联电阻）。JTX-CVR-001通过其自动感应输入级自动处理此设置。</p>
+
+<p>如果RGB线缆延伸超过1米，请使用双绞线。线缆走线应尽可能短——理想情况下不超过3米，以确保可靠的信号完整性。</p>
+
+<h3>步骤5：连接RGBHV输出至新显示器</h3>
+
+<p>使用标准VGA线缆（HD-15公对公）从转换器的RGBHV输出端口连接到替代工业LCD或LED显示器。对于长距离走线（超过5米），请使用带铁氧体磁芯的高质量屏蔽VGA线缆。或者，如果替代显示器具有BNC输入接口，可使用5根独立BNC线缆（R、G、B、H、V）——这能在较长距离下提供更优的信号质量。</p>
+
+<p>如果替代显示器仅支持DVI或HDMI输入，可能需要VGA转DVI或VGA转HDMI适配器线缆。请注意，这些适配器必须为<strong>有源</strong>类型（非无源），才能实现从模拟到数字的可靠信号转换。</p>
+
+<table>
+
+<tr><th>线缆类型</th><th>最大可靠长度</th><th>屏蔽要求</th><th>推荐度</th></tr>
+
+<tr><td>标准VGA（HD-15）</td><td>5米</td><td>双屏蔽带铁氧体磁芯</td><td>大多数安装场景最佳选择</td></tr>
+
+<tr><td>BNC x5（独立同轴）</td><td>15米</td><td>每通道RG-59或RG-6</td><td>长距离/强电磁干扰环境最佳</td></tr>
+
+<tr><td>VGA转DVI（有源适配器）</td><td>5米（全长链路）</td><td>按适配器规格要求</td><td>显示器仅支持DVI时使用</td></tr>
+
+<tr><td>VGA转HDMI（有源转换器）</td><td>5米（全长链路）</td><td>按适配器规格要求</td><td>显示器仅支持HDMI时使用（会增加延迟）</td></tr>
+
+</table>
+
+<h3>步骤6：电源连接</h3>
+
+<p>连接转换器的电源输入（标称24V DC）。注意极性正确：将正极（+）引线接至V+端子，负极（-）引线接至GND端子。转换器具有反接保护功能，但通电前务必确认极性。转换器功耗小于2W（典型值100 mA @ 24V DC）。</p>
+
+<p>如果CNC系统在柜内提供24V DC电源，可接入现有端子排。建议为转换器供电回路加装独立保险丝（推荐500 mA慢熔型），以便独立排查故障。</p>
+
+<h3>步骤7：首次通电与信号验证</h3>
+
+<p>移除所有上锁挂牌装置。重新为CNC系统通电。按顺序观察以下各项：</p>
+
+<ol>
+<li>转换器的电源指示灯应亮起（绿色）。如未亮起，请检查电源连接。</li>
+<li>转换器的信号锁定指示灯应在CNC控制器启动后2-3秒内亮起（绿色）。如闪烁红色，则表示未检测到输入信号格式——请重新检查接线。</li>
+<li>替代显示器应显示CNC控制界面。如显示器显示"无信号"，请检查两端的VGA线缆连接，并确认显示器的输入源选择正确。</li>
+<li>如画面失真（滚动、分裂或偏移），可能需要调整水平或垂直同步时序。多数现代LCD可自动同步至60 Hz；如转换器输出设置为非标准刷新率，请通过JTX-CVR-001的DIP开关进行调整（参见转换器手册）。</li>
+</ol>
+
+<div class="success-box"><strong>提示：</strong>如显示器显示"频率超出范围"信息，请断电，通过DIP开关将转换器输出设置为640x480@60Hz，然后重新通电。这是CGA转换最安全的回退分辨率。</div>
+
+<h3>步骤8：分辨率与显示参数调整</h3>
+
+<p>显示器正常工作后，根据需要验证并调整以下设置：</p>
+
+<table>
+
+<tr><th>参数</th><th>推荐设置</th><th>调整方法</th></tr>
+
+<tr><td>显示分辨率</td><td>800x600@60Hz 或 640x480@60Hz</td><td>JTX-CVR-001 DIP开关选择</td></tr>
+
+<tr><td>图像位置（水平/垂直）</td><td>居中，完整可视</td><td>LCD面板OSD菜单（先使用自动调整）</td></tr>
+
+<tr><td>亮度</td><td>50-70%（根据环境光调整）</td><td>LCD面板OSD菜单</td></tr>
+
+<tr><td>对比度</td><td>70-80%</td><td>LCD面板OSD菜单</td></tr>
+
+<tr><td>色温</td><td>6500K（默认）或9300K（复古风格）</td><td>LCD面板OSD菜单</td></tr>
+
+<tr><td>宽高比</td><td>4:3（用于老旧CGA/EGA内容）</td><td>LCD面板OSD菜单（关闭缩放/拉伸）</td></tr>
+
+</table>
+
+<p>对于FANUC系统，如果改造后显示器出现异常行为，可能需要调整以下FANUC参数：</p>
+
+<ul>
+<li>参数9100（显示器类型）&mdash; 设置为匹配新显示器</li>
+<li>参数9110-9115（显示坐标）&mdash; 如图像被裁剪则调整</li>
+<li>参数9301（屏保超时）&mdash; 为LCD设置合适值</li>
+</ul>
+
+<p>在进行参数修改之前，请参考您具体CNC控制器的维护手册。务必在修改前记录原始值。</p>
+
+<h3>步骤9：固定所有线缆并关闭机柜</h3>
+
+<p>信号验证完成且所有参数确认后：</p>
+
+<ul>
+<li>使用扎带将线缆沿既有布线路径固定。请勿将信号线缆与高功率AC电缆平行敷设（保持至少10 cm间距）。</li>
+<li>在每条线缆的两端贴上标签，标明信号名称（例如"CGA输入"、"RGBHV输出"、"24V电源"）。</li>
+<li>整理线缆，使其不遮挡通风风扇或过滤面板。</li>
+<li>关闭并锁紧电气柜。装回拆卸时取下的面板密封垫或密封条。</li>
+</ul>
+
+<h3>步骤10：4小时烧机与最终验证</h3>
+
+<p>让系统在正常运行条件下运行至少4小时。在烧机期间，每30分钟检查以下项目：</p>
+
+<ul>
+<li>显示画面稳定性（无闪烁、无滚动、无同步丢失）</li>
+<li>转换器表面温度（应保持在50&deg;C以下）</li>
+<li>CNC控制器上无与显示器或视频相关的报警信息</li>
+<li>所有CNC功能均可访问且在新显示器上正确显示</li>
+</ul>
+
+<p>烧机期结束后，拍摄照片记录完成的安装。在机器维护日志中记录改造日期、转换器型号和序列号，以及所做的任何参数更改。</p>
+
+
+
+<h2 id="tool-requirements">8. 工具需求表</h2>
+
+<p>在开始安装之前，备齐所有必要工具和设备。拥有正确的工具可以防止延误，确保专业质量的安装效果。</p>
+
+<div class="table-wrapper"><table class="spec-table">
+
+<tr class="header-row"><th>工具/设备</th><th>规格</th><th>用途</th><th>必备或可选</th></tr>
+
+<tr class="odd-row"><td>数字万用表</td><td>自动量程，600V CAT III等级</td><td>验证零电压、测量供电电压、通断测试</td><td>必备</td></tr>
+
+<tr class="even-row"><td>防静电腕带</td><td>内置1 M&Omega;电阻</td><td>处理转换器电路板时的ESD防护</td><td>必备</td></tr>
+
+<tr class="odd-row"><td>精密螺丝刀套装</td><td>十字#0、#1、#2；一字2.5mm和3mm</td><td>端子排螺丝、安装螺丝、连接器拆装</td><td>必备</td></tr>
+
+<tr class="even-row"><td>剥线钳/剪线钳</td><td>22-16 AWG适用</td><td>准备信号和电源线缆端头</td><td>必备</td></tr>
+
+<tr class="odd-row"><td>尼龙扎带</td><td>100mm和150mm长度</td><td>线缆管理和应力释放</td><td>必备</td></tr>
+
+<tr class="even-row"><td>标签机或粘贴标签</td><td>永久性粘贴，耐热</td><td>标记所有线缆和连接</td><td>必备</td></tr>
+
+<tr class="odd-row"><td>铁氧体磁芯夹</td><td>内径3.5mm（用于信号线缆）</td><td>长距离线缆的EMI抑制</td><td>可选（推荐用于>3m布线）</td></tr>
+
+<tr class="even-row"><td>热风枪</td><td>可调50-600&deg;C</td><td>焊接连接的热缩管处理</td><td>可选（如需焊接连接器）</td></tr>
+
+<tr class="odd-row"><td>电烙铁</td><td>30-60W，细尖头</td><td>定制连接器组装或维修</td><td>可选（用于定制线缆制作）</td></tr>
+
+<tr class="even-row"><td>DIN导轨一字螺丝刀</td><td>3.5mm刀口</td><td>DIN导轨端子排安装</td><td>可选（如使用DIN导轨安装）</td></tr>
+
+<tr class="odd-row"><td>扭矩螺丝刀</td><td>0.5-2.0 Nm范围</td><td>按规格拧紧端子排螺丝（防止过紧）</td><td>可选（关键连接的最佳实践）</td></tr>
+
+<tr class="even-row"><td>手电筒/头灯</td><td>LED，至少200流明</td><td>照亮电气柜暗角</td><td>必备</td></tr>
+
+<tr class="odd-row"><td>相机或智能手机</td><td>至少800万像素带闪光灯</td><td>记录原始接线、连接器引脚定义及最终安装效果</td><td>必备</td></tr>
+
+</table></div>
+
+
+
+<h2 id="performance-evaluation">9. 性能评估与维护</h2>
+
+<p>完成改造和烧机期后，验证以下性能指标：</p>
+
+<ul>
+
+<li>显示稳定性：8小时连续运行无闪烁、无信号丢失</li>
+
+<li>图像质量：文字清晰、色彩准确、无重影</li>
+
+<li>温度：转换器在负载下表面温度低于50&deg;C</li>
+
+<li>电磁兼容：不对其他CNC子系统产生干扰</li>
+
+</ul>
+
+<p><strong>维护计划</strong>：每6个月检查连接情况。每年清理转换器通风口的灰尘。转换器预期使用寿命：5年以上。</p>
+
+<p><strong>常见改造后问题与排除方法</strong>：</p>
+
+<table>
+
+<tr><th>故障现象</th><th>可能原因</th><th>解决方法</th></tr>
+
+<tr><td>无图像，电源LED不亮</td><td>转换器未供电</td><td>检查24V供电，验证极性，检查保险丝</td></tr>
+
+<tr><td>无图像，电源LED亮，信号LED闪烁</td><td>无有效输入信号</td><td>检查CGA/EGA线缆连接，核对引脚定义，确认CNC控制器已通电</td></tr>
+
+<tr><td>图像垂直滚动</td><td>垂直同步不匹配</td><td>将转换器输出调整为60 Hz垂直刷新率</td></tr>
+
+<tr><td>图像被压缩或拉伸</td><td>宽高比不匹配</td><td>将LCD设为4:3模式，而非16:9</td></tr>
+
+<tr><td>图像过暗或过亮</td><td>LCD亮度/对比度设置</td><td>通过LCD OSD菜单调整</td></tr>
+
+<tr><td>间歇性信号丢失</td><td>连接器松动或线缆故障</td><td>重新插拔所有连接器，测试线缆通断</td></tr>
+
+<tr><td>重影或拖影</td><td>阻抗不匹配或线缆质量差</td><td>使用75欧姆同轴线缆，缩短线缆长度，加装铁氧体磁芯</td></tr>
+
+</table>
+
+
+
+<h2 id="key-takeaways">10. 核心要点总结</h2>
+
+<ul>
+
+<li>CGA/EGA转RGBHV改造是老旧工业显示器最具成本效益的升级方案</li>
+
+<li>工业级转换器在可靠性和温度范围方面显著优于消费级适配器</li>
+
+<li>通过降低维护成本，典型投资回报周期在12个月以内</li>
+
+<li>江图科技JTX-CVR-001转换器提供即插即用安装，具备完整工业认证</li>
+
+<li>务必遵循安装前检查清单，避免现场延误</li>
+
+<li>使用信号转换对照表为您的应用选择正确的输出分辨率</li>
+
+<li>安装后的4小时烧机期对于验证长期稳定性至关重要</li>
+
+</ul>
+
+<p>如需技术咨询和产品询价，请联系<strong>深圳市江图科技有限公司</strong>：info@cncdisplay.com</p>
+
+
+
+    </div>
+
+
+
+<div class="share-buttons">
+
+    <div class="share-title">分享到：</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="shareToWechat()" title="分享到微信">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M8.691 2.646c-4.234 0-7.667 3.081-7.667 6.882 0 2.162 1.09 4.099 2.802 5.386l-.642 2.273 2.624-1.312c.928.286 1.915.438 2.944.438.336 0 .666-.021.99-.059-.193-.602-.298-1.24-.298-1.902 0-3.514 3.182-6.363 7.107-6.363.322 0 .639.022.951.064-.556-3.35-3.896-5.407-7.811-5.407zm-2.19 4.318c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm4.381 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm5.518 3.636c-3.529 0-6.391 2.532-6.391 5.654 0 1.775.904 3.355 2.319 4.397l-.529 1.873 2.162-1.081c.765.236 1.578.361 2.426.361 3.529 0 6.391-2.532 6.391-5.654s-2.862-5.654-6.391-5.654zm-1.77 3.273c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8 .358-.8.8-.8zm3.539 0c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8 .358-.8.8-.8z"/>
+
+            </svg>
+
+            <span>微信</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>复制链接</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToWechat = function() {
+
+        var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
+
+        var modal = document.createElement('div');
+
+        modal.className = 'wechat-modal';
+
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信分享</h3><img loading="lazy" src="' + qrUrl + '" alt="二维码"><p>扫描二维码分享到微信</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+
+        document.body.appendChild(modal);
+
+    };
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('链接已复制到剪贴板！');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('链接已复制到剪贴板！');
+
+        });
+
+    };
+
+})();
+
+</script>
+
+
+
+    <section class="related-posts">
+
+        <h3 id="related-articles">相关文章</h3>
+
+        <ul>
+
+            <li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT转LCD升级完整指南</a></li>
+
+            <li><a href="/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">工业CNC显示器故障排除与维修指南</a></li>
+
+        </ul>
+
+    </section>
+
+
+
+<div class="related-links"><h4>延伸阅读</h4><ul>
+
+<li><a href="/en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">视频信号转换器系列</a></li>
+
+<li><a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">CNC数控系统中的视频信号转换器</a></li>
+
+<li><a href="/en/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">RGBHV改造完整指南</a></li>
+
+<li><a href="/en/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">故障排除与维修指南</a></li>
+
+</ul></div>
+
+</article>
+
+</main>
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 相关资源</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/zh/compatibility-matrix.html">95+型号兼容性查询表</a> — 查找您的CRT型号</li>
+                <li><a href="/zh/brands/">按品牌浏览</a> — FANUC/三菱/西门子/马扎克/大隈/哈斯</li>
+                <li><a href="/zh/quote.html">获取报价</a> — 24小时内回复</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | info@cncdisplay.com</p>
+        </div>
+    </footer>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    var curProtocol = window.location.protocol.split(':')[0];
+
+    if (curProtocol === 'https') {
+
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+    } else {
+
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    }
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+</body>
+
+</html>

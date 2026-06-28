@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>数控系统中视频信号转换器应用指南 | 江图科技</title>
+
+    <meta name="description" content="工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。">
+
+    <meta name="keywords" content="CNC视频信号转换器, 工业显示器转换, CGA转VGA转换器, EGA转VGA转换器, RGBHV转换器, CNC CRT转LCD, CNC显示器升级, 工业信号转换, 数控系统显示改造">
+
+    <meta name="author" content="深圳市江图科技有限公司">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <meta property="og:title" content="数控系统中视频信号转换器应用指南" />
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:description" content="工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。" />
+
+    <meta property="og:url" content="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="数控系统中视频信号转换器应用指南 | 江图科技">
+
+    <meta name="twitter:description" content="工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。">
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "数控系统中视频信号转换器应用指南 | 江图科技",
+  "description": "工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。",
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}
+
+    </script>
+
+
+
+    <style>
+
+        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
+
+        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
+
+        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
+
+        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+
+        .spec-table .even-row {background:#f8fafc;}
+
+        .spec-table .odd-row {background:#fff;}
+
+        .spec-table tr:hover {background:#eff6ff;}
+
+        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+
+        .content {line-height:1.8;}
+
+        .content p {margin-bottom:1rem;}
+
+        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
+
+        .content h3 {margin-top:1.5rem;color:#475569;}
+
+        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
+
+        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
+
+        .related-links ul {margin:0;padding-left:20px;}
+
+        .related-links li {margin-bottom:8px;}
+
+        .checklist-icon {color:#10b981;font-weight:bold;}
+
+        .wechat-qr {display:inline-block;cursor:pointer;position:relative;}
+
+        .wechat-qr img.qr-code {display:none;position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:100;width:160px;height:160px;border:2px solid #ddd;border-radius:8px;background:#fff;padding:4px;}
+
+        .wechat-qr:hover img.qr-code {display:block;}
+
+    </style>
+
+
+
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "数控系统中视频信号转换器应用指南 | 江图科技",
+      "item": "https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/zh/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/zh/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>数控系统中视频信号转换器应用指南</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者：深圳市江图科技有限公司</span>
+
+            </div>
+
+            <div class="content">
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/Haas_Monitor_00.jpg" alt="显示器概览"></figure>
+
+<p><em>显示器概览 | 来源：江图科技</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/A6100010093_LCD_new.jpg" alt="产品实拍"></figure>
+
+<p><em>产品实拍 | 来源：江图科技</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_steps.png" alt="安装示意图"></figure>
+
+<p><em>安装示意图 | 来源：江图科技</em></p>
+
+
+
+
+
+<p><strong>关键词</strong>：视频信号转换器、数控系统、信号转换、工业自动化</p>
+
+<p><em>目标读者：CNC工程师、设备维护人员、工业控制系统集成商</em></p>
+
+<h2>一、数控系统为何需要视频信号转换器</h2>
+
+<p>目前仍在服役的许多数控机床，其显示接口与现代LCD显示器不兼容。需要信号转换的主要场景包括：</p>
+
+<ul>
+
+<li><strong>CGA/EGA转VGA</strong>：老旧数控控制器输出的CGA（15kHz）或EGA（22kHz）信号无法直接驱动VGA LCD显示器</li>
+
+<li><strong>复合同步转独立H/V同步</strong>：部分系统输出RGBS（复合同步信号），需分离为RGBHV才能接入VGA显示器</li>
+
+<li><strong>扫描频率转换</strong>：将低扫描率信号转换为标准VGA时序（31.5kHz+）</li>
+
+<li><strong>数模转换</strong>：TTL电平数字信号必须转换为模拟VGA信号</li>
+
+</ul>
+
+
+
+<h2>二、数控系统中的信号类型</h2>
+
+<table>
+
+<tr><th>信号类型</th><th>频率</th><th>电压电平</th><th>连接器</th><th>适用FANUC系统</th></tr>
+
+<tr><td>CGA（TTL）</td><td>行频15.75 kHz / 场频60 Hz</td><td>数字 0/5V</td><td>9针 D-Sub</td><td>FANUC 0-M、0-T（早期机型）</td></tr>
+
+<tr><td>EGA（TTL）</td><td>行频21.85 kHz / 场频60 Hz</td><td>数字 0/5V</td><td>9针 D-Sub</td><td>FANUC 0-TC、0-MC</td></tr>
+
+<tr><td>RGBS（模拟）</td><td>行频15-24 kHz / 场频50-60 Hz</td><td>模拟 0.7Vpp + 复合同步</td><td>BNC 或 HONDA</td><td>FANUC 16i、18i（部分型号）</td></tr>
+
+<tr><td>RGBHV/VGA（模拟）</td><td>行频31.5-48 kHz / 场频60-75 Hz</td><td>模拟 0.7Vpp + 独立同步</td><td>HONDA 20针 / HD15</td><td>FANUC 0i、16i、18i</td></tr>
+
+</table>
+
+<h3>2.1 信号标准对比表</h3>
+
+<div class="table-wrapper">
+
+<table class="spec-table">
+
+<tr><th>信号标准</th><th>行频</th><th>场频</th><th>同步类型</th><th>最大分辨率</th><th>色彩深度</th></tr>
+
+<tr class="odd-row"><td>CGA</td><td>15.75 kHz</td><td>60 Hz</td><td>复合同步（TTL）</td><td>640 x 200</td><td>4色（16色调色板）</td></tr>
+
+<tr class="even-row"><td>EGA</td><td>21.85 kHz</td><td>60 Hz</td><td>独立同步（TTL）</td><td>640 x 350</td><td>16色（64色调色板）</td></tr>
+
+<tr class="odd-row"><td>RGB（模拟）</td><td>15-24 kHz</td><td>50-60 Hz</td><td>绿同步/独立同步</td><td>640 x 480</td><td>无限（模拟）</td></tr>
+
+<tr class="even-row"><td>RGBHV</td><td>31.5-64 kHz</td><td>60-85 Hz</td><td>独立H/V同步（TTL）</td><td>1024 x 768</td><td>无限（模拟）</td></tr>
+
+<tr class="odd-row"><td>VGA（标准）</td><td>31.5 kHz</td><td>60-75 Hz</td><td>独立H/V同步（TTL）</td><td>640 x 480</td><td>256+色（模拟）</td></tr>
+
+</table>
+
+</div>
+
+<p class="info-box">理解同步类型至关重要：复合同步将行场时序合并到一根信号线上传输，而独立同步使用专用的行同步（H）和场同步（V）线。大多数工业LCD显示器和转换器需要独立的H/V同步（RGBHV）。</p>
+
+<h2>三、转换器选型标准</h2>
+
+<h3>3.1 输入/输出兼容性</h3>
+
+<table>
+
+<tr><th>选型因素</th><th>要求</th><th>验证方法</th></tr>
+
+<tr><td>输入信号类型</td><td>必须与CNC控制器输出匹配</td><td>查阅控制器手册或用示波器测量</td></tr>
+
+<tr><td>输出分辨率</td><td>必须匹配LCD显示器原生分辨率</td><td>查看LCD规格参数</td></tr>
+
+<tr><td>刷新率</td><td>最低60 Hz，与CNC帧率兼容</td><td>在FANUC系统参数中验证</td></tr>
+
+<tr><td>扫描率处理</td><td>CGA/EGA输入需行倍频处理</td><td>通过测试图案显示验证</td></tr>
+
+</table>
+
+
+
+<h3>3.2 环境要求</h3>
+
+<ul>
+
+<li><strong>工作温度</strong>：车间环境需 -20&#8451; 至 +70&#8451;</li>
+
+<li><strong>电源供应</strong>：12-36 VDC 宽电压范围，兼容PLC/控制柜供电</li>
+
+<li><strong>EMC合规</strong>：符合 IEC/EN 61326-1 Class 2 工业环境标准</li>
+
+<li><strong>抗振性能</strong>：符合 IEC 60068-2-6 机床环境要求</li>
+
+<li><strong>MTBF</strong>：&#8805; 50,000小时，满足7x24小时连续运行</li>
+
+</ul>
+
+<h3>3.3 按CNC品牌划分的转换器选型指南</h3>
+
+<div class="table-wrapper">
+
+<table class="spec-table">
+
+<tr><th>CNC品牌</th><th>常见控制器型号</th><th>输出信号</th><th>推荐转换器</th><th>备注</th></tr>
+
+<tr class="odd-row"><td>FANUC</td><td>0-M、0-T、0-TC、0-MC</td><td>CGA / EGA（TTL）</td><td>JTX-CVR-001 / JTX-CVR-002</td><td>早期型号使用9针D-Sub；较新的0i系列使用RGBHV</td></tr>
+
+<tr class="even-row"><td>FANUC</td><td>16i、18i、21i、0i-D/F</td><td>RGBHV（模拟）</td><td>JTX-CVR-003</td><td>需同步分离器；常使用HONDA 20针连接器</td></tr>
+
+<tr class="odd-row"><td>三菱</td><td>M700V、M70、E70、C70</td><td>RGB（模拟）+ 复合同步</td><td>JTX-CVR-003</td><td>部分型号输出15 kHz RGB；请查阅维修手册确认引脚定义</td></tr>
+
+<tr class="even-row"><td>三菱</td><td>M50、M64、M65、Meldas 500</td><td>CGA / EGA（TTL）</td><td>JTX-CVR-004</td><td>推荐双输入自动检测型；需验证同步极性</td></tr>
+
+<tr class="odd-row"><td>西门子</td><td>Sinumerik 810D、840D</td><td>TTL RGB + VSYNC</td><td>JTX-CVR-005</td><td>6位并行RGB；JTX-CVR-005提供所需DAC转换</td></tr>
+
+<tr class="even-row"><td>西门子</td><td>Sinumerik 828D、840D sl</td><td>DVI / LVDS（数字）</td><td>无需转换器（直连LCD）</td><td>新型号使用数字接口，无需转换器</td></tr>
+
+</table>
+
+</div>
+
+<p class="warning-box">购买转换器前，请务必确认您具体控制器版本和输出连接器引脚定义。FANUC和三菱在不同生产年份使用了多种连接器标准。订购时请联系江图科技索取接线图。</p>
+
+<h2>四、安装最佳实践</h2>
+
+<ol>
+
+<li><strong>安装前准备</strong>：在做出任何更改前，记录所有现有电缆连接和系统参数</li>
+
+<li><strong>电源隔离</strong>：连接或断开显示器电缆前务必关闭CNC机床电源</li>
+
+<li><strong>电缆布线</strong>：信号电缆应与电机动力电缆和伺服驱动器保持距离，最大限度减少电磁干扰</li>
+
+<li><strong>接地处理</strong>：确保转换器正确接地，防止地环路和信号噪声</li>
+
+<li><strong>防振安装</strong>：在电气柜内使用减振支架固定转换器</li>
+
+<li><strong>标识管理</strong>：对所有连接进行标识，记录转换器型号和设置参数，便于日后维护</li>
+
+</ol>
+
+<h3>4.1 安装检查清单</h3>
+
+<div class="table-wrapper">
+
+<table class="spec-table">
+
+<tr><th>步骤</th><th>任务</th><th>所需工具</th><th>预估时间</th><th>备注</th></tr>
+
+<tr class="odd-row"><td>1</td><td>切断电源并执行上锁挂牌（LOTO）</td><td>锁定套件、验电器</td><td>5分钟</td><td>操作前确认零能量状态</td></tr>
+
+<tr class="even-row"><td>2</td><td>拆除原有CRT显示器，记录所有电缆连接</td><td>螺丝刀套装、相机</td><td>15分钟</td><td>断开前对所有连接器拍照留存</td></tr>
+
+<tr class="odd-row"><td>3</td><td>确认CNC控制器视频输出信号类型和引脚定义</td><td>万用表、示波器（可选）</td><td>10分钟</td><td>测量H/V同步电平；TTL为0-5V，模拟为0.7Vpp</td></tr>
+
+<tr class="even-row"><td>4</td><td>使用DIN导轨或支架在电气柜内安装转换器</td><td>DIN导轨卡扣、螺丝刀</td><td>10分钟</td><td>远离驱动变频器和强电流电缆</td></tr>
+
+<tr class="odd-row"><td>5</td><td>连接CNC控制器至转换器的输入电缆</td><td>压线钳（如需定制电缆）</td><td>10分钟</td><td>模拟RGB信号请使用屏蔽双绞线</td></tr>
+
+<tr class="even-row"><td>6</td><td>将转换器输出连接至LCD显示器，上电测试</td><td>无</td><td>5分钟</td><td>若无显示，检查转换器上的同步极性开关</td></tr>
+
+<tr class="odd-row"><td>7</td><td>调整显示位置、尺寸和相位，固定所有电缆</td><td>小平口螺丝刀（调节电位器）</td><td>10分钟</td><td>如有内置测试图案功能请优先使用；记录最终设置</td></tr>
+
+</table>
+
+</div>
+
+<h2>五、分步安装指南</h2>
+
+<p>按以下编号步骤完成完整的CNC CRT转LCD视频信号转换器安装。本指南假设已根据您的CNC控制器输出信号类型选好了正确的转换器型号。</p>
+
+<ol>
+
+<li><strong>准备工作区和工具</strong>。备齐所需工具：用于电压验证的万用表、螺丝刀（十字和一字）、扎带、用于定制线缆接头的压线钳、DIN导轨安装卡扣（若转换器支持DIN导轨安装），以及用于记录原始连接的数码相机。确保电气柜内有充足的照明。</li>
+
+<li><strong>执行电气安全闭锁</strong>。通过主电源断路器关闭CNC机床。安装上锁/挂牌装置，并用万用表确认控制器电源端子处电压为零。等待至少3分钟，让内部电容器充分放电。切勿仅依赖机床电源开关。</li>
+
+<li><strong>识别并记录现有显示连接</strong>。拆下CRT显示器面板或检修盖。在断开任何连接前，为每一根电缆及其连接器拍照。记录线缆颜色和引脚位置——许多CNC控制器采用不遵循标准颜色代码的定制布线。对照江图科技兼容性矩阵中的已知引脚定义图，核对控制器型号。</li>
+
+<li><strong>验证视频信号参数</strong>。解除闭锁后给机器上电进行测试，使用示波器测量控制器视频输出接口的行同步频率和场同步频率，确认信号符合第2节所述的规格。如果使用TTL电平信号（0-5V），确保转换器配置为TTL输入；如果是模拟信号（0.7Vpp RGB），相应设置转换器。</li>
+
+<li><strong>安装转换器并布置线缆</strong>。使用附带的DIN导轨卡扣或安装支架，将转换器安装在电气柜内部。视频信号电缆与电机动力电缆或伺服驱动电缆之间保持至少10厘米间距，以防止电磁干扰。RGB信号线使用屏蔽双绞线，屏蔽层仅单端接地以避免地环路。</li>
+
+<li><strong>连接并上电进行初步测试</strong>。将CNC控制器的视频输出连接至转换器输入端，再将转换器输出连接至新的LCD显示器。接通电源观察显示情况。若无图像显示，检查转换器的同步极性DIP开关——部分FANUC和三菱控制器输出负极性同步脉冲，必须与之匹配。若图像垂直滚动，调节场同步（V-hold）或在复合同步与独立同步模式之间切换。</li>
+
+<li><strong>微调并固定安装</strong>。使用转换器板载电位器（如有配备）或OSD菜单，调节水平位置、垂直位置、图像尺寸和相位/时钟，获得清晰、稳定的显示效果。让CNC机床完成完整开机循环，运行一个示例程序确认显示在负载状态下保持稳定。用扎带固定所有线缆，在每根线缆两端贴上标签，关闭电气柜。</li>
+
+</ol>
+
+<div class="success-box">安装完成后，让机器连续运行至少4小时以验证显示稳定性。电气柜内的热膨胀可能影响连接器接触——在初始老化期结束后，请重新拧紧所有螺钉端子。</div>
+
+<h2>六、江图科技转换器产品线</h2>
+
+<table>
+
+<tr><th>型号</th><th>输入</th><th>输出</th><th>主要功能</th><th>价格</th></tr>
+
+<tr><td>JTX-CVR-001</td><td>CGA（15kHz）</td><td>VGA（31kHz）</td><td>自动行倍频，即插即用</td><td>CNY 850</td></tr>
+
+<tr><td>JTX-CVR-002</td><td>EGA（22kHz）</td><td>VGA（31kHz）</td><td>自动行倍频，宽电压</td><td>CNY 880</td></tr>
+
+<tr><td>JTX-CVR-003</td><td>RGBS</td><td>RGBHV/VGA</td><td>同步分离，可调位置</td><td>CNY 750</td></tr>
+
+<tr><td>JTX-CVR-004</td><td>CGA+EGA（双输入）</td><td>VGA</td><td>自动检测输入类型</td><td>CNY 950</td></tr>
+
+<tr><td>JTX-CVR-005</td><td>TTL RGB</td><td>VGA</td><td>6位DAC，支持64色</td><td>CNY 720</td></tr>
+
+</table>
+
+<p>所有型号均具备：-20&#8451; 至 +70&#8451; 工作温度范围、12-36 VDC供电、MTBF &#8805; 50,000小时、CE/UL认证。</p>
+
+<p>技术咨询请联系 <strong>深圳市江图科技有限公司</strong>：info@cncdisplay.com</p>
+
+
+
+            </div>
+
+<div class="share-buttons">
+
+    <div class="share-title">分享到：</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="分享到LinkedIn">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+            </svg>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-wechat wechat-qr" onclick="shareToWeChat()" title="分享到微信">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.134 0 .24-.11.24-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.49.49 0 0 1 .177-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.873-7.062-6.122zm-2.18 2.746c.535 0 .969.44.969.983a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.983.97-.983zm4.844 0c.535 0 .969.44.969.983a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.983.97-.983z"/>
+
+            </svg>
+
+            <span>微信</span>
+
+            <img class="qr-code" src="/images/wechat-qr.png" alt="微信二维码">
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>复制链接</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToLinkedIn = function() {
+
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToWeChat = function() {
+
+        alert('请使用微信扫描二维码分享此文章。');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('链接已复制到剪贴板！');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('链接已复制到剪贴板！');
+
+        });
+
+    };
+
+})();
+
+</script>
+
+
+
+        <div class="related-links"><h4>相关文章</h4><ul>
+
+<li><a href="/zh/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">视频信号转换器系列</a></li>
+
+<li><a href="/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA显示器改造指南</a></li>
+
+<li><a href="/zh/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">RGBHV改造完整指南</a></li>
+
+<li><a href="/zh/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">CNC显示器故障排除与维修指南</a></li>
+
+</ul></div>
+
+</article>
+
+    </main>
+
+
+
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+    <h3 style="margin-top:0;">推荐文章</h3>
+
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/zh/posts/Video_Signal_Converter_Buying_Guide.html">视频信号转换器选购指南 | 江图科技</a></li><li><a href="/zh/posts/Video_Signal_Converter_Selection_Guide.html">视频信号转换器选型 | 江图科技</a></li><li><a href="/zh/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html">视频信号转换系统 — CGA/EGA转VGA、RGB转VGA解决方案</a></li></ul>
+
+</section>
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 相关资源</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/zh/compatibility-matrix.html">95+ 型号兼容性对照表</a> — 查找您的CRT型号</li>
+                <li><a href="/zh/brands/">按品牌浏览</a> — FANUC/三菱/西门子/Mazak/Okuma/Haas</li>
+                <li><a href="/zh/quote.html">获取报价</a> — 24小时内回复</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | info@cncdisplay.com</p>
+        </div>
+    </footer>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    var curProtocol = window.location.protocol.split(':')[0];
+
+    if (curProtocol === 'https') {
+
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+    } else {
+
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    }
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+</body>
+
+</html>

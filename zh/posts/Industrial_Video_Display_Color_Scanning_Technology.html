@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>工业视频显示的色彩与扫描关键技术解析 | 江图科技</title>
+
+    <meta name="description" content="深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。">
+
+    <meta name="keywords" content="工业显示器色彩还原, CRT扫描频率, LCD色深, 视频扫描频率, 工业显示器色域, 显示器去隔行, CGA信号转换, EGA转VGA, 工业视频显示方案, 工业液晶屏升级">
+
+    <meta name="author" content="深圳市江图科技有限公司">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/Industrial_Video_Display_Color_Scanning_Technology.html" />
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/Industrial_Video_Display_Color_Scanning_Technology.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/Industrial_Video_Display_Color_Scanning_Technology.html" />
+
+    <link rel="alternate" hreflang="x-default" href="/zh/" />
+
+    <meta property="og:title" content="工业视频显示的色彩与扫描关键技术解析 | 江图科技" />
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:description" content="深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。" />
+
+    <meta property="og:url" content="https://cncdisplay.com/posts/Industrial_Video_Display_Color_Scanning_Technology.html" />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="工业视频显示的色彩与扫描关键技术解析 | 江图科技">
+
+    <meta name="twitter:description" content="深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。">
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "工业视频显示的色彩与扫描关键技术解析 | 江图科技",
+  "description": "深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。",
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01",
+  "inLanguage": "zh-CN"
+}
+
+    </script>
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+    </script>
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "工业视频显示的色彩与扫描关键技术解析 | 江图科技",
+      "item": "https://cncdisplay.com/posts/Industrial_Video_Display_Color_Scanning_Technology.html"
+    }
+  ]
+}
+
+    </script>
+
+    <!-- Clarity tracking code for https://cncdisplay.com/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wx8gkt3utu");
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/zh/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/zh/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="/zh/posts/Industrial_Video_Display_Color_Scanning_Technology.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/Industrial_Video_Display_Color_Scanning_Technology.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>工业视频显示的色彩与扫描关键技术解析</h1>
+
+            <div class="meta">
+                <time datetime="2026-05-01">2026-05-01</time>
+                <span class="author">作者：深圳市江图科技有限公司</span>
+            </div>
+
+            <div class="content">
+
+                <figure class="img-hero">
+                    <img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-01.jpg" alt="显示概览">
+                </figure>
+                <p><em>显示概览 | 来源：江图科技</em></p>
+
+                <figure class="img-hero">
+                    <img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-02.jpg" alt="产品实拍">
+                </figure>
+                <p><em>产品实拍 | 来源：江图科技</em></p>
+
+                <figure class="img-hero">
+                    <img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/HAAS-V2.5-1904-05.jpg" alt="安装效果图">
+                </figure>
+                <p><em>安装效果图 | 来源：江图科技</em></p>
+
+                <p><strong>关键词</strong>：工业视频显示器、色彩还原、扫描技术、CRT与LCD对比、CNC显示升级</p>
+
+                <hr>
+
+                <h2>一、工业显示器的色彩还原</h2>
+
+                <h3>1.1 色域空间标准</h3>
+
+                <table>
+                    <tr>
+                        <th>色域空间</th>
+                        <th>应用场景</th>
+                        <th>色彩范围</th>
+                        <th>位深度</th>
+                    </tr>
+                    <tr>
+                        <td>sRGB</td>
+                        <td>标准工业显示器</td>
+                        <td>约CIE 1931的35%</td>
+                        <td>8位（1670万色）</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe RGB</td>
+                        <td>色彩关键型应用</td>
+                        <td>约CIE 1931的50%</td>
+                        <td>10位（10.7亿色）</td>
+                    </tr>
+                    <tr>
+                        <td>NTSC</td>
+                        <td>旧式视频系统</td>
+                        <td>约CIE 1931的54%</td>
+                        <td>8位</td>
+                    </tr>
+                    <tr>
+                        <td>CGA调色板</td>
+                        <td>旧式CNC控制器</td>
+                        <td>16种固定颜色</td>
+                        <td>4位</td>
+                    </tr>
+                </table>
+
+                <h3>1.2 CRT与LCD色彩还原对比</h3>
+
+                <table>
+                    <tr>
+                        <th>特性</th>
+                        <th>CRT</th>
+                        <th>LCD</th>
+                    </tr>
+                    <tr>
+                        <td>色彩生成方式</td>
+                        <td>电子束激发荧光粉发光</td>
+                        <td>白色背光源透过彩色滤光片</td>
+                    </tr>
+                    <tr>
+                        <td>色彩准确度</td>
+                        <td>原生色域优异，随荧光粉老化逐渐下降</td>
+                        <td>LED背光下表现良好，色域受滤光片设计限制</td>
+                    </tr>
+                    <tr>
+                        <td>色彩一致性</td>
+                        <td>屏幕各区域存在差异（会聚漂移）</td>
+                        <td>整面板均匀一致</td>
+                    </tr>
+                    <tr>
+                        <td>校准稳定性</td>
+                        <td>需频繁重新校准</td>
+                        <td>初次校准后保持稳定</td>
+                    </tr>
+                    <tr>
+                        <td>视角影响</td>
+                        <td>色彩偏移极小</td>
+                        <td>极端视角下出现色偏（老款面板）</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>二、扫描技术</h2>
+
+                <h3>2.1 视频扫描工作原理</h3>
+
+                <p>视频扫描是显示系统将电视频信号转换为可视图像的过程，通过在屏幕上逐行扫描水平线来实现。在CRT显示器中，聚焦的电子束在荧光粉涂层屏幕上从左至右扫描，根据输入视频信号调制其强度。每行扫描结束时，电子束执行<strong>水平回扫</strong>——快速返回左边缘——同时向下移动一个行距准备下一行。当电子束到达右下角时，执行<strong>垂直回扫</strong>将其返回左上角，开始下一帧的扫描。</p>
+
+                <p>水平偏转电路控制逐行扫描，垂直偏转电路控制场/帧率。这两个时序域由视频源通过独立的水平同步（HSYNC）和垂直同步（VSYNC）信号，或复合同步（CSYNC）信号进行同步。这些电路的工作频率决定了可分辨的总行数，并直接影响显示器能处理的最大图像分辨率。</p>
+
+                <p>在现代LCD面板中，相同的栅格扫描原理通过数字方式模拟实现：时序控制器（TCON）从帧缓冲器中逐行读取像素数据，依次寻址每一行TFT晶体管，将每个像素的液晶单元充电至所需电压。与电子束物理扫描不同，LCD通过电子方式扫描——将数据逐行时钟送入行驱动器，每次使能一条栅极线，同时列驱动器加载该行的视频数据。</p>
+
+                <p>根本区别在于：CRT扫描是<strong>模拟且连续的</strong>——电子束沿连续路径运动，任何时序漂移都会导致可见的几何失真；而LCD扫描是<strong>数字且离散的</strong>——每个像素被独立寻址，只要像素时钟窗口内的时序抖动可控，图像保持固有稳定。</p>
+
+                <h3>2.2 隔行扫描与逐行扫描</h3>
+
+                <p><strong>隔行扫描</strong>：先绘制奇数行（奇数场），再绘制偶数行（偶数场）。常见于场频50/60 Hz（帧频25/30 fps）的老式CRT显示器。</p>
+
+                <p><strong>逐行扫描</strong>：每帧依次绘制所有行。几乎所有现代LCD显示器均采用此方式，可提供更流畅的运动画面和更清晰的文字显示。</p>
+
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>隔行扫描</th>
+                        <th>逐行扫描</th>
+                    </tr>
+                    <tr>
+                        <td>帧率</td>
+                        <td>25/30 fps（50/60场/秒）</td>
+                        <td>60-85 fps</td>
+                    </tr>
+                    <tr>
+                        <td>运动伪影</td>
+                        <td>梳状效应，水平边缘闪烁</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>文字清晰度</td>
+                        <td>较差（闪烁）</td>
+                        <td>优秀</td>
+                    </tr>
+                    <tr>
+                        <td>带宽需求</td>
+                        <td>等效逐行的一半</td>
+                        <td>需全带宽</td>
+                    </tr>
+                </table>
+
+                <h3>2.3 扫描频率对照表</h3>
+
+                <p>不同显示类型和视频标准的工作水平扫描速率各不相同。在工业环境中，使转换器输出匹配显示器的时序窗口对于获取稳定图像至关重要。</p>
+
+                <table>
+                    <tr>
+                        <th>显示类型/标准</th>
+                        <th>水平扫描率（kHz）</th>
+                        <th>垂直刷新率（Hz）</th>
+                        <th>典型分辨率</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>CGA（彩色图形适配器）</td>
+                        <td>15.75</td>
+                        <td>60</td>
+                        <td>320×200</td>
+                        <td>旧式CNC终端，单色复合信号同为15.75 kHz</td>
+                    </tr>
+                    <tr>
+                        <td>EGA（增强型图形适配器）</td>
+                        <td>21.85</td>
+                        <td>60</td>
+                        <td>640×350</td>
+                        <td>通常配合TTL RGBI信号使用</td>
+                    </tr>
+                    <tr>
+                        <td>VGA（视频图形阵列）</td>
+                        <td>31.47</td>
+                        <td>60-85</td>
+                        <td>640×480</td>
+                        <td>支持最广泛的工业分辨率</td>
+                    </tr>
+                    <tr>
+                        <td>SVGA（超级VGA）</td>
+                        <td>37.9-48.9</td>
+                        <td>60-85</td>
+                        <td>800×600至1024×768</td>
+                        <td>后期CNC人机界面的常见标准</td>
+                    </tr>
+                    <tr>
+                        <td>XGA</td>
+                        <td>48.4-56.5</td>
+                        <td>60-75</td>
+                        <td>1024×768</td>
+                        <td>现代工业面板标准</td>
+                    </tr>
+                    <tr>
+                        <td>SXGA</td>
+                        <td>60.0-68.7</td>
+                        <td>60-75</td>
+                        <td>1280×1024</td>
+                        <td>高分辨率自动化HMI</td>
+                    </tr>
+                    <tr>
+                        <td>UXGA</td>
+                        <td>75.0-81.1</td>
+                        <td>60</td>
+                        <td>1600×1200</td>
+                        <td>高级可视化系统</td>
+                    </tr>
+                    <tr>
+                        <td>HD Ready（720p）</td>
+                        <td>37.5-45.0</td>
+                        <td>50-60</td>
+                        <td>1280×720</td>
+                        <td>逐行扫描，视频墙输入常见</td>
+                    </tr>
+                    <tr>
+                        <td>全高清（1080p）</td>
+                        <td>67.5</td>
+                        <td>60</td>
+                        <td>1920×1080</td>
+                        <td>高清工业显示器</td>
+                    </tr>
+                </table>
+
+                <h3>2.4 扫描速率标准汇总</h3>
+
+                <table>
+                    <tr>
+                        <th>标准</th>
+                        <th>水平（kHz）</th>
+                        <th>垂直（Hz）</th>
+                        <th>分辨率</th>
+                        <th>典型用途</th>
+                    </tr>
+                    <tr>
+                        <td>CGA</td>
+                        <td>15.75</td>
+                        <td>60</td>
+                        <td>320×200</td>
+                        <td>旧式CNC终端</td>
+                    </tr>
+                    <tr>
+                        <td>EGA</td>
+                        <td>21.85</td>
+                        <td>60</td>
+                        <td>640×350</td>
+                        <td>升级版CNC显示器</td>
+                    </tr>
+                    <tr>
+                        <td>VGA</td>
+                        <td>31.5</td>
+                        <td>60-85</td>
+                        <td>640×480</td>
+                        <td>标准工业显示器</td>
+                    </tr>
+                    <tr>
+                        <td>SVGA</td>
+                        <td>37.9-48.9</td>
+                        <td>60-85</td>
+                        <td>800×600-1024×768</td>
+                        <td>现代CNC人机界面</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>三、色深对比分析</h2>
+
+                <p>色深决定每个像素可显示的不同颜色数量。位深度越高，渐变越平滑，色彩还原越准确，但代价是增加显存带宽和处理需求。</p>
+
+                <table>
+                    <tr>
+                        <th>色深</th>
+                        <th>每像素位数</th>
+                        <th>总颜色数</th>
+                        <th>典型应用场景</th>
+                        <th>可见色阶</th>
+                    </tr>
+                    <tr>
+                        <td>单色</td>
+                        <td>1</td>
+                        <td>2（黑/白）</td>
+                        <td>旧式CNC状态显示器、文本终端、单色字母数字HMI</td>
+                        <td>不适用</td>
+                    </tr>
+                    <tr>
+                        <td>灰度</td>
+                        <td>4-8</td>
+                        <td>16-256级灰阶</td>
+                        <td>医学影像（X光预览）、单色CRT替代方案、条码扫描器</td>
+                        <td>4位下渐变中明显可见</td>
+                    </tr>
+                    <tr>
+                        <td>EGA / CGA彩色</td>
+                        <td>4</td>
+                        <td>16</td>
+                        <td>早期CNC控制器界面、简单状态面板图形</td>
+                        <td>严重——仅有离散色块</td>
+                    </tr>
+                    <tr>
+                        <td>高彩色</td>
+                        <td>15-16</td>
+                        <td>32,768-65,536</td>
+                        <td>基础工业HMI、OSD菜单、对渐变平滑度要求不高的低成本升级方案</td>
+                        <td>平滑渐变中可见</td>
+                    </tr>
+                    <tr>
+                        <td>真彩色（8位）</td>
+                        <td>24</td>
+                        <td>16,777,216（1670万）</td>
+                        <td>现代CNC HMI、SCADA系统、质检显示器、视频播放</td>
+                        <td>大多数内容中不可见</td>
+                    </tr>
+                    <tr>
+                        <td>深彩色（10位）</td>
+                        <td>30</td>
+                        <td>1,073,741,824（10.7亿）</td>
+                        <td>颜色关键型检测、医用级显示器、广播参考监视器、HDR工业面板</td>
+                        <td>无——即使在苛刻内容中渐变仍平滑</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>四、工业应用显示技术对比</h2>
+
+                <p>为工业环境选择合适的显示技术需在亮度、视角、响应时间、功耗和寿命之间进行综合权衡。</p>
+
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>CRT</th>
+                        <th>TFT LCD</th>
+                        <th>LED（直视式）</th>
+                        <th>OLED</th>
+                    </tr>
+                    <tr>
+                        <td>亮度（cd/m²）</td>
+                        <td>80-150（随老化衰减）</td>
+                        <td>250-1500（取决于背光）</td>
+                        <td>2000-10000+</td>
+                        <td>200-1000（峰值）</td>
+                    </tr>
+                    <tr>
+                        <td>对比度</td>
+                        <td>10,000:1（真实黑场）</td>
+                        <td>1000:1-5000:1（典型值）</td>
+                        <td>5000:1（取决于模组）</td>
+                        <td>无限（逐像素关闭）</td>
+                    </tr>
+                    <tr>
+                        <td>视角</td>
+                        <td>170°+（无偏移）</td>
+                        <td>IPS：178°；TN：140°</td>
+                        <td>120-160°</td>
+                        <td>178°+</td>
+                    </tr>
+                    <tr>
+                        <td>响应时间</td>
+                        <td>&lt;1 ms（荧光粉瞬间余辉）</td>
+                        <td>4-25 ms（灰阶响应）</td>
+                        <td>&lt;1 ms（microLED）</td>
+                        <td>0.1-1 ms</td>
+                    </tr>
+                    <tr>
+                        <td>寿命（小时）</td>
+                        <td>20,000-50,000（荧光粉衰减）</td>
+                        <td>50,000-100,000（背光）</td>
+                        <td>100,000+</td>
+                        <td>30,000-100,000（烧屏风险）</td>
+                    </tr>
+                    <tr>
+                        <td>功耗</td>
+                        <td>60-150 W（14-21英寸）</td>
+                        <td>15-40 W（同尺寸）</td>
+                        <td>30-300 W（每面板）</td>
+                        <td>20-60 W</td>
+                    </tr>
+                    <tr>
+                        <td>重量（17英寸等效）</td>
+                        <td>15-20 kg</td>
+                        <td>2-4 kg</td>
+                        <td>因间距而异</td>
+                        <td>1-3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>电磁干扰/磁场敏感度</td>
+                        <td>高度敏感（电机附近会聚漂移）</td>
+                        <td>免疫</td>
+                        <td>免疫</td>
+                        <td>免疫</td>
+                    </tr>
+                    <tr>
+                        <td>闪烁（60 Hz下）</td>
+                        <td>敏感用户可见（60 Hz余晖效应）</td>
+                        <td>无（直流背光或PWM &gt; 1 kHz）</td>
+                        <td>无（PWM &gt; 2 kHz典型值）</td>
+                        <td>无（典型直流驱动）</td>
+                    </tr>
+                    <tr>
+                        <td>烧屏/残影</td>
+                        <td>暂时性（荧光粉迟滞）</td>
+                        <td>罕见（静态图像可能导致临时鬼影）</td>
+                        <td>无</td>
+                        <td>静态UI元素存在永久烧屏风险</td>
+                    </tr>
+                    <tr>
+                        <td>工作温度</td>
+                        <td>0-50°C</td>
+                        <td>-20-70°C（工业级）</td>
+                        <td>-40-85°C</td>
+                        <td>0-55°C</td>
+                    </tr>
+                    <tr>
+                        <td>最佳工业应用</td>
+                        <td>旧设备保留</td>
+                        <td>CNC替代、HMI面板、操作员终端</td>
+                        <td>大型数字标牌、控制室视频墙</td>
+                        <td>高端检测监视器、色彩关键型评估</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>五、CNC显示器升级的实践要点</h2>
+
+                <ul>
+                    <li>将CGA/EGA隔行信号转换为VGA逐行信号时，转换器必须执行<strong>去隔行</strong>（De-interlacing）和<strong>行倍频</strong>（Line Doubling）处理</li>
+
+                    <li>LCD面板具有<strong>原生分辨率</strong>——以非原生分辨率运行时会产生缩放伪影，务必使转换器输出匹配LCD的原生分辨率</li>
+
+                    <li><strong>响应时间</strong>对CNC应用至关重要：响应时间超过8 ms的LCD面板在显示快速移动的刀具路径时可能出现拖尾现象</li>
+
+                    <li><strong>输入延迟</strong>：信号转换会增加1-2帧延迟。针对CNC应用，应选择处理延迟最小（&lt;16 ms）的转换器</li>
+
+                    <li>转换器的<strong>水平扫描率</strong>必须在LCD显示器的同步范围内。大多数工业LCD可接受31-80 kHz水平扫描，但部分专用面板范围较窄——指定替代方案前务必核实</li>
+                </ul>
+
+                <p>如需显示技术选型方面的技术咨询，请联系<strong>深圳市江图科技有限公司</strong>，邮箱：info@cncdisplay.com</p>
+
+            </div>
+
+            <div class="share-buttons">
+
+                <div class="share-title">分享到：</div>
+
+                <div class="share-icons">
+
+                    <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="分享到 LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到 Facebook">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到 Twitter">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <span>Twitter</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="share-btn share-wechat" onclick="showWechatQR()" title="分享到微信">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.134 0 .24-.11.24-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.582.582 0 0 1-.024-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-2.18 3.564c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982z"/>
+                        </svg>
+                        <span>微信</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="share-btn share-email" onclick="shareToEmail()" title="通过邮件分享">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <span>邮件</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                        <span>复制链接</span>
+                    </a>
+
+                </div>
+
+                <div id="wechat-qr-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;" onclick="hideWechatQR()">
+                    <div style="background:#fff;padding:30px;border-radius:12px;text-align:center;max-width:320px;" onclick="event.stopPropagation()">
+                        <p style="font-size:16px;font-weight:bold;margin-bottom:15px;">扫一扫，分享到微信</p>
+                        <img src="/images/wechat-qr.png" alt="微信二维码" style="width:200px;height:200px;">
+                        <p style="font-size:13px;color:#666;margin-top:12px;">打开微信，点击"发现"→"扫一扫"</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+            (function() {
+                var pageUrl = encodeURIComponent(window.location.href);
+                var pageTitle = encodeURIComponent(document.title);
+                window.shareToLinkedIn = function() {
+                    window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
+                };
+                window.shareToFacebook = function() {
+                    window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+                };
+                window.shareToTwitter = function() {
+                    window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+                };
+                window.shareToEmail = function() {
+                    window.location.href = 'mailto:?subject=' + pageTitle + '&body=' + pageUrl;
+                };
+                window.copyLink = function() {
+                    navigator.clipboard.writeText(window.location.href).then(function() {
+                        alert('链接已复制到剪贴板！');
+                    }).catch(function() {
+                        var input = document.createElement('input');
+                        input.value = window.location.href;
+                        document.body.appendChild(input);
+                        input.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(input);
+                        alert('链接已复制到剪贴板！');
+                    });
+                };
+                window.showWechatQR = function() {
+                    document.getElementById('wechat-qr-modal').style.display = 'flex';
+                };
+                window.hideWechatQR = function() {
+                    document.getElementById('wechat-qr-modal').style.display = 'none';
+                };
+            })();
+            </script>
+
+        </article>
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 相关资源</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/zh/compatibility-matrix.html">95+ 型号兼容性矩阵</a> — 查找您的CRT型号</li>
+                <li><a href="/zh/brands/">按品牌浏览</a> — 发那科/三菱/西门子/马扎克/大隈/哈斯</li>
+                <li><a href="/zh/quote.html">获取报价</a> — 24小时内回复</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | info@cncdisplay.com</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

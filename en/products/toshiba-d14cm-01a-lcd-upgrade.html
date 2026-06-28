@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toshiba D14CM-01A LCD Replacement | 14-inch CRT to LCD $350 | Kongto Technology</title>
     <meta name="description" content="Toshiba D14CM-01A 14-inch color CRT to LCD replacement. $350. Same as FANUC A61L-0001-0096 / 4MDB049G / D15CM-01A. Fits FANUC 16/18/20/21 Series. In stock.">
-    <link rel="canonical" href="https://cncdisplay.com/en/products/toshiba-d14cm-01a-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/toshiba-d14cm-01a-lcd-upgrade.html" />
+    <link rel="canonical" href="https://cncdisplay.com">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Toshiba D14CM-01A LCD Replacement | 14-inch CRT Upgrade">
@@ -33,7 +33,7 @@
     "@type": "Offer", "price": "350.00", "priceCurrency": "USD",
     "priceValidUntil": "2027-06-28",
     "availability": "https://schema.org/InStock",
-    "url": "https://cncdisplay.com/en/products/toshiba-d14cm-01a-lcd-upgrade.html"
+    "url": "https://cncdisplay.com"
   }
 }
 </script>
@@ -58,10 +58,25 @@
   "url": "https://cncdisplay.com",
   "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions",
   "address": {"@type": "PostalAddress","addressLocality": "Shenzhen","addressRegion": "Guangdong","addressCountry": "CN"},
-  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "sales@cncdisplay.com","contactType": "sales"}
+  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "info@cncdisplay.com","contactType": "sales"}
 }
 </script>
-</head>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Toshiba D14CM-01A CRT to LCD Installation Guide",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Power off","text":"Turn off CNC system power. Remove CRT housing. Disconnect signal and power cables."},
+    {"@type":"HowToStep","position":2,"name":"Install LCD","text":"Mount LCD module in original position. Secure with original screws."},
+    {"@type":"HowToStep","position":3,"name":"Connect cables","text":"Plug signal cable into LCD port. Connect DC 24V power."},
+    {"@type":"HowToStep","position":4,"name":"Power on","text":"Restore power. LCD displays automatically. Use OSD to adjust."}
+  ],
+  "totalTime": "PT30M"
+}
+</script>
+    </head>
 <body>
     <header>
         <nav>
@@ -120,24 +135,58 @@
                 <li><strong>Warranty:</strong> 18 months</li>
             </ul>
         </section>
-        <section>
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common Toshiba D14CM-01A CRT Failures</h2>
+            <p>The D14CM-01A is a 14-inch color CRT (also FANUC A61L-0001-0096) used on FANUC 16/18/20/21 series controls:</p>
+            <ul>
+                <li><strong>Color shift or missing one color</strong> — CRT neck board driver transistor failure.</li>
+                <li><strong>Dim / blurry</strong> — CRT gun emission degradation. Three guns age unevenly.</li>
+                <li><strong>No display</strong> — Flyback transformer failure. CNC runs but screen is dark.</li>
+                <li><strong>Geometry distortion</strong> — Capacitor aging in the deflection circuit.</li>
+            </ul>
+            <p>CRT hardware failures. The CNC control is typically functional — our LCD restores display.</p>
+        </section>
+        <!-- Module 5: Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Color CRT Signal Wiring (HONDA 20-Pin)</h2>
+            <p>The D14CM-01A uses separate analog RGB (0.7V) with TTL sync. Our LCD accepts this directly.</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>R</td><td>Red Video 0–0.7V</td></tr>
+                <tr><td>2</td><td>G</td><td>Green Video 0–0.7V</td></tr>
+                <tr><td>3</td><td>B</td><td>Blue Video 0–0.7V</td></tr>
+                <tr><td>4</td><td>GND</td><td>Video Ground</td></tr>
+                <tr><td>5</td><td>HS</td><td>Horizontal Sync</td></tr>
+                <tr><td>6</td><td>VS</td><td>Vertical Sync</td></tr>
+                <tr><td>7–8</td><td>NC</td><td>Not Connected</td></tr>
+                <tr><td>9</td><td>+24V</td><td>DC Power</td></tr>
+                <tr><td>10</td><td>GND</td><td>Power Ground</td></tr>
+            </table>
+        </section>
+        <section itemscope="" itemtype="https://schema.org/FAQPage">
             <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-q">Q: Is D14CM-01A the same as A61L-0001-0096?</div>
-                <div class="faq-a">A: Yes. They are the same 14-inch color CRT. Toshiba/Totoku manufactured it as D14CM-01A (and D15CM-01A), and FANUC sourced it as A61L-0001-0096. 4MDB049G is another OEM cross-reference for the same display.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Is D14CM-01A the same as A61L-0001-0096?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: Yes. They are the same 14-inch color CRT. Toshiba/Totoku manufactured it as D14CM-01A (and D15CM-01A), and FANUC sourced it as A61L-0001-0096. 4MDB049G is another OEM cross-reference for the same display.</div>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Q: Which FANUC systems use this display?</div>
-                <div class="faq-a">A: FANUC 16-Series (16i-A/B/C), 18-Series, 20-Series, and 21i-Series controls. It is a 14-inch color CRT.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Which FANUC systems use this display?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: FANUC 16-Series (16i-A/B/C), 18-Series, 20-Series, and 21i-Series controls. It is a 14-inch color CRT.</div>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Q: Do I need CNC parameter changes?</div>
-                <div class="faq-a">A: No. Same Honda MR-20M connector and DC 24V power. True plug-and-play.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Do I need CNC parameter changes?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: No. Same Honda MR-20M connector and DC 24V power. True plug-and-play.</div>
             </div>
         </section>
         <section class="cta" style="text-align:center;padding:3rem 1rem;">
             <h2>Need a D14CM-01A LCD Replacement?</h2>
-            <p>sales@cncdisplay.com | +86-13686889647</p>
+            <p>info@cncdisplay.com | +86-13686889647</p>
             <a href="/en/products/fanuc-a61l-0001-0096-lcd-upgrade.html" class="btn btn-primary btn-large">→ Go to Product Details Page</a>
         </section>
     </main>
@@ -152,7 +201,7 @@
         <div class="footer-content">
             <p class="footer-logo" style="font-size:1.1rem;font-weight:600;">Kongto Technology</p>
             <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit</p>
-            <p>sales@cncdisplay.com | © 2013-2026</p>
+            <p>info@cncdisplay.com | © 2013-2026</p>
         </div>
     </footer>
 </body>

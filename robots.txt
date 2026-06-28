@@ -49,4 +49,10 @@ User-agent: Applebot-Extended
 Disallow: /
 
 Content-Signal: search=yes,ai-train=no
+
+# llms.txt - AI crawler content discovery
+Llms: /llms.txt
+Llms: /llms-full.txt
+Llms: /en/llms.txt
+
 Disallow: /cdn-cgi/
