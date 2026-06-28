@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toshiba D9MM-11A LCD Replacement | 9-inch CRT to LCD $199 | Kongto Technology</title>
     <meta name="description" content="Toshiba D9MM-11A 9-inch monochrome CRT to LCD replacement. From $155 plug-and-play, same hardware as FANUC A61L-0001-0093. FANUC 0/0i compatible. In stock.">
-    <link rel="canonical" href="https://cncdisplay.com/en/products/toshiba-d9mm-11a-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/toshiba-d9mm-11a-lcd-upgrade.html" />
+    <link rel="canonical" href="https://cncdisplay.com">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Toshiba D9MM-11A LCD Replacement | 9-inch CRT Upgrade">
@@ -35,7 +35,7 @@
     "priceValidUntil": "2027-06-28",
     "hasMerchantReturnPolicy": {"@type":"MerchantReturnPolicy","applicableCountry":"CN","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"},
     "availability": "https://schema.org/InStock",
-    "url": "https://cncdisplay.com/en/products/toshiba-d9mm-11a-lcd-upgrade.html"
+    "url": "https://cncdisplay.com"
   }
 }
 </script>
@@ -60,10 +60,25 @@
   "url": "https://cncdisplay.com",
   "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions",
   "address": {"@type": "PostalAddress","addressLocality": "Shenzhen","addressRegion": "Guangdong","addressCountry": "CN"},
-  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "sales@cncdisplay.com","contactType": "sales"}
+  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "info@cncdisplay.com","contactType": "sales"}
 }
 </script>
-</head>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Toshiba D9MM-11A CRT to LCD Installation Guide",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Power off","text":"Turn off CNC system power. Remove CRT housing. Disconnect signal and power cables."},
+    {"@type":"HowToStep","position":2,"name":"Install LCD","text":"Mount LCD module in original position. Secure with original screws."},
+    {"@type":"HowToStep","position":3,"name":"Connect cables","text":"Plug signal cable into LCD port. Connect DC 24V power."},
+    {"@type":"HowToStep","position":4,"name":"Power on","text":"Restore power. LCD displays automatically. Use OSD to adjust."}
+  ],
+  "totalTime": "PT30M"
+}
+</script>
+    </head>
 <body>
     <header>
         <nav>
@@ -123,20 +138,54 @@
                 <li><strong>Warranty:</strong> 18 months</li>
             </ul>
         </section>
-        <section>
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common Toshiba D9MM-11A CRT Display Failures</h2>
+            <p>The D9MM-11A is a 9-inch monochrome CRT (also known as FANUC A61L-0001-0093) used on FANUC 0-Series and 0i-Series controls. Same failure patterns as its FANUC-branded counterpart:</p>
+            <ul>
+                <li><strong>Blank screen / no display</strong> — CRT heater or flyback failure. The CNC runs but the screen stays dark.</li>
+                <li><strong>Dim display</strong> — CRT phosphor degradation after 15–30 years of use.</li>
+                <li><strong>Flickering image</strong> — Capacitor aging in the deflection circuit.</li>
+                <li><strong>Burn-in / ghosting</strong> — Permanent phosphor wear from static screen elements.</li>
+            </ul>
+            <p>All CRT hardware failures. The CNC control is typically functional — our LCD module restores the display without control modifications.</p>
+        </section>
+        <!-- Module 5: Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Signal Wiring (HONDA 20-Pin)</h2>
+            <p>The D9MM-11A uses a monochrome TTL-level video signal with separate sync through a standard HONDA 20-pin connector — identical to the FANUC A61L-0001-0093 interface.</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>2</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>3</td><td>Video</td><td>Monochrome video (TTL 0–5V)</td></tr>
+                <tr><td>4</td><td>GND</td><td>Video Ground</td></tr>
+                <tr><td>5</td><td>HS</td><td>Horizontal Sync</td></tr>
+                <tr><td>6</td><td>VS</td><td>Vertical Sync</td></tr>
+                <tr><td>7–8</td><td>NC</td><td>Not Connected</td></tr>
+                <tr><td>9</td><td>+24V</td><td>DC Power</td></tr>
+                <tr><td>10</td><td>GND</td><td>Power Ground</td></tr>
+            </table>
+            <p><strong>Note:</strong> Our LCD module uses the same connector and pinout — direct plug-and-play.</p>
+        </section>
+        <section itemscope="" itemtype="https://schema.org/FAQPage">
             <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-q">Q: Is Toshiba D9MM-11A the same as FANUC A61L-0001-0093?</div>
-                <div class="faq-a">A: Yes. They are the same 9-inch monochrome CRT. Toshiba/Totoku manufactured it under part number D9MM-11A, and FANUC sourced it as A61L-0001-0093. The LCD replacement module is identical for both.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Is Toshiba D9MM-11A the same as FANUC A61L-0001-0093?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: Yes. They are the same 9-inch monochrome CRT. Toshiba/Totoku manufactured it under part number D9MM-11A, and FANUC sourced it as A61L-0001-0093. The LCD replacement module is identical for both.</div>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Q: Which FANUC controls use the D9MM-11A display?</div>
-                <div class="faq-a">A: FANUC 0-Series (0-MA, 0-TC), 0i-A/B/C/D Series, and OM-D controls. It is the standard 9-inch monochrome display for these systems.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Which FANUC controls use the D9MM-11A display?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: FANUC 0-Series (0-MA, 0-TC), 0i-A/B/C/D Series, and OM-D controls. It is the standard 9-inch monochrome display for these systems.</div>
+                </div>
             </div>
         </section>
         <section class="cta" style="text-align:center;padding:3rem 1rem;">
             <h2>Need a D9MM-11A LCD Replacement?</h2>
-            <p>sales@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p>
+            <p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p>
             <a href="/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="btn btn-primary btn-large">→ Go to Product Details Page</a>
         </section>
     </main>
@@ -152,7 +201,7 @@
         <div class="footer-content">
             <p class="footer-logo" style="font-size:1.1rem;font-weight:600;">Kongto Technology</p>
             <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit</p>
-            <p>sales@cncdisplay.com | © 2013-2026</p>
+            <p>info@cncdisplay.com | © 2013-2026</p>
         </div>
     </footer>
 </body>

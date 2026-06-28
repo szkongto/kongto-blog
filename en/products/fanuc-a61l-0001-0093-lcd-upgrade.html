@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="FANUC A61L-0001-0093 LCD Upgrade | 9-inch CRT to TFT">
@@ -71,7 +71,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+86-13686889647",
-    "email": "sales@cncdisplay.com",
+    "email": "info@cncdisplay.com",
     "contactType": "sales",
     "availableLanguage": ["Chinese", "English"]
   },
@@ -143,8 +143,83 @@
             </table>
         </section>
         <section><h2>Compatible Systems</h2><ul><li>FANUC Series 0 / 0-Mate / 0-TMate</li><li>FANUC 0i-A/B/C/D</li><li>FANUC 16i / 18i / 21i</li><li>FANUC OM-D / OM-C</li><li>All CNC machines with A61L-0001-0093 display</li></ul></section>
+
+        <!-- Module 5: Signal Wiring & Pinout -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Signal Wiring & Pinout (HONDA 20-Pin)</h2>
+            <p>The A61L-0001-0093 CRT connects via a standard HONDA 20-pin connector. Our LCD replacement module uses the same connector — no rewiring or adapter boards needed. Below is the pin mapping for reference:</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th><th>Wire Color (Typical)</th></tr>
+                <tr><td>1</td><td>GND</td><td>Signal Ground</td><td>Black</td></tr>
+                <tr><td>2</td><td>GND</td><td>Signal Ground</td><td>Black</td></tr>
+                <tr><td>3</td><td>R (Video)</td><td>Red Video / Monochrome Video</td><td>Red</td></tr>
+                <tr><td>4</td><td>GND</td><td>Video Ground</td><td>Black</td></tr>
+                <tr><td>5</td><td>HS</td><td>Horizontal Sync (TTL)</td><td>White</td></tr>
+                <tr><td>6</td><td>VS</td><td>Vertical Sync (TTL)</td><td>Yellow</td></tr>
+                <tr><td>7</td><td>NC</td><td>Not Connected</td><td>—</td></tr>
+                <tr><td>8</td><td>NC</td><td>Not Connected</td><td>—</td></tr>
+                <tr><td>9</td><td>+24V</td><td>DC Power Input</td><td>Red/White</td></tr>
+                <tr><td>10</td><td>GND</td><td>Power Ground</td><td>Black/White</td></tr>
+                <tr><td>11–20</td><td>NC/GND</td><td>Spare or Chassis Ground</td><td>Various</td></tr>
+            </table>
+            <p style="margin-top:0.75rem;"><strong>Note:</strong> The A61L-0001-0093 uses TTL-level RGB signals (0–5V, not analog 0.7V). Our LCD module accepts both TTL and analog inputs on the same pins, so no signal conversion is needed. If your machine uses a different pin arrangement, refer to our <a href="/en/compatibility-matrix.html">compatibility matrix</a>.</p>
+        </section>
+
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common FANUC A61L-0001-0093 Display Problems</h2>
+            <p>The FANUC A61L-0001-0093 is a 9-inch monochrome CRT display used extensively on FANUC 0-series and 0i-series CNC systems from the 1980s through early 2000s. After 15–30 years of operation, these CRTs develop characteristic failure modes:</p>
+            <ul>
+                <li><strong>Blank screen / no display</strong> — The CRT heater fails or the flyback transformer breaks down. Most common failure. The CNC still operates (keys beep, spindle moves), but the screen stays dark.</li>
+                <li><strong>Dim display / low brightness</strong> — The CRT phosphor has degraded from extended use. Even with max brightness adjustment, the display is too dim to read under shop floor lighting.</li>
+                <li><strong>Flickering or shaky image</strong> — Sync circuit components (capacitors, ICs) drift out of spec. The image jitters or scrolls vertically.</li>
+                <li><strong>Horizontal or vertical line collapse</strong> — One of the deflection circuits fails. The image compresses to a bright horizontal or vertical line.</li>
+                <li><strong>Burned-in image / ghosting</strong> — Static elements (position readout, mode display) become permanently visible as a ghost image on the phosphor.</li>
+            </ul>
+            <p>All of these are CRT hardware failures. The CNC control itself is typically still functional — replacing just the display with our LCD module restores full visibility without replacing the entire control system.</p>
+        </section>
+
+        <!-- Module 6: FAQ -->
+        <section style="margin:2rem 0;" itemscope="" itemtype="https://schema.org/FAQPage">
+            <h2>Frequently Asked Questions</h2>
+
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Does the LCD replacement work with all FANUC CNC models that use the A61L-0001-0093 CRT?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Yes. The LCD module uses the same HONDA 20-pin connector and TTL-level signal protocol as the original CRT. It is a drop-in replacement for any machine originally equipped with the A61L-0001-0093, including FANUC 0, 0-Mate, 0i-A/B/C/D, 16i, 18i, and 21i series controls. No parameter changes, adapter cables, or signal converters are required.</div>
+                </div>
+            </div>
+
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Will I lose any CNC functionality after replacing the CRT with LCD?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">No. The LCD module presents exactly the same video signal interface to the CNC control as the original CRT. All on-screen displays (position, program, offset, parameter, alarm, diagnostic screens) function identically. The LCD uses the same resolution timing and sync rates. The only difference is a clearer, brighter, and flicker-free image.</div>
+                </div>
+            </div>
+
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">What is the installation time and difficulty level?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Installation takes 10–15 minutes for a technician familiar with CNC cabinets. Steps: (1) power off the machine, (2) remove the four screws securing the CRT housing, (3) disconnect the HONDA 20-pin connector and 24V power wires, (4) mount the LCD module in the same opening, (5) reconnect the same connectors, (6) power on and verify. No soldering, no parameter changes, no special tools.</div>
+                </div>
+            </div>
+
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">How does the LCD image quality compare to the original CRT?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">The LCD provides 800×600 resolution (vs 640×400 on the original CRT), 350–450 cd/m² brightness (vs 200 cd/m²), and a 50,000+ hour lifespan (vs ~15,000 hours for the CRT). Text and characters are sharper with no geometric distortion. There is no flicker at any refresh rate. The display is readable even under direct sunlight on the shop floor.</div>
+                </div>
+            </div>
+
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">What warranty comes with the A61L-0001-0093 LCD module?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Standard 18-month warranty covering manufacturing defects. In-stock items ship within 24 hours. Worldwide shipping. Technical support is available via email (info@cncdisplay.com) or WhatsApp (+86-13686889647). Return within 7 days if incompatible (verify model compatibility first).</div>
+                </div>
+            </div>
+        </section>
         <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Technical Support - Free Shipping Worldwide</p></section>
-        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to upgrade?</h2><p>sales@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Contact Us</a></section>
+        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to upgrade?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Contact Us</a></section>
     </main>    
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
@@ -169,7 +244,7 @@
                 <a href="/en/docs/">Downloads</a>
                 <a href="/en/about.html">About Us</a>
             </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | info@cncdisplay.com</p>
         </div>
     </footer>
 </body>

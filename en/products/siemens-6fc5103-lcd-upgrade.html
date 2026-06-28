@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siemens 6FC5103-0AB01 LCD Replacement | SINUMERIK 840D CRT Upgrade | Kongto</title>
     <meta name="description" content="Siemens 6FC5103-0AB01 CRT to LCD replacement for SINUMERIK 840D. DB-25 connector. Plug-and-play, no parameter changes. Please contact us for confirmed compatibility and pricing.">
-    <link rel="canonical" href="https://cncdisplay.com/en/products/siemens-6fc5103-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/siemens-6fc5103-lcd-upgrade.html" />
+    <link rel="canonical" href="https://cncdisplay.com">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Siemens 6FC5103-0AB01 LCD Replacement | SINUMERIK 840D CRT Upgrade">
     <meta property="og:description" content="Plug-and-play LCD replacement for Siemens 6FC5103-0AB01 CRT. DB-25 connector. For SINUMERIK 840D.">
-    <meta property="og:url" content="https://cncdisplay.com/en/products/siemens-6fc5103-lcd-upgrade.html">
+    <meta property="og:url" content="https://cncdisplay.com">
     <meta property="og:site_name" content="Kongto Technology">
     <meta name="twitter:card" content="summary_large_image">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -31,7 +31,7 @@
     "@type": "Offer", "price": "249.00", "priceCurrency": "USD",
     "priceValidUntil": "2027-06-28",
     "availability": "https://schema.org/InStock",
-    "url": "https://cncdisplay.com/en/products/siemens-6fc5103-lcd-upgrade.html"
+    "url": "https://cncdisplay.com"
   }
 }
 </script>
@@ -55,10 +55,26 @@
   "url": "https://cncdisplay.com",
   "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions",
   "address": {"@type": "PostalAddress","addressLocality": "Shenzhen","addressRegion": "Guangdong","addressCountry": "CN"},
-  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "sales@cncdisplay.com","contactType": "sales"}
+  "contactPoint": {"@type": "ContactPoint","telephone": "+86-13686889647","email": "info@cncdisplay.com","contactType": "sales"}
 }
 </script>
-</head>
+    <meta property="og:image" content="https://cncdisplay.com/images/logo_256.png" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Siemens 6FC5103-0AB01 CRT to LCD Installation Guide",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Power off","text":"Turn off CNC system power. Remove CRT housing. Disconnect signal and power cables."},
+    {"@type":"HowToStep","position":2,"name":"Install LCD","text":"Mount LCD module in original position. Secure with original screws."},
+    {"@type":"HowToStep","position":3,"name":"Connect cables","text":"Plug signal cable into LCD port. Connect DC 24V power."},
+    {"@type":"HowToStep","position":4,"name":"Power on","text":"Restore power. LCD displays automatically. Use OSD to adjust."}
+  ],
+  "totalTime": "PT30M"
+}
+</script>
+    </head>
 <body>
     <header>
         <nav>
@@ -98,6 +114,35 @@
             <p><strong>Important:</strong> Since this is a less common Siemens model, please <a href="/en/quote.html">contact us</a> with your specific machine details for confirmed compatibility, pricing, and available images. We will respond within 24 hours with a matching solution.</p>
         </section>
 
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common Siemens 6FC5103 CRT Display Failures</h2>
+            <p>The 6FC5103-0AB01 is a CRT display unit used on Siemens Sinumerik controls. Like all industrial CRTs, it develops characteristic failure modes after 20+ years:</p>
+            <ul>
+                <li><strong>Blank screen / no display</strong> — Flyback transformer failure. The control powers up but the display remains dark.</li>
+                <li><strong>Dim or blurry image</strong> — CRT phosphor degradation or gun emission loss.</li>
+                <li><strong>Flickering / unstable raster</strong> — Capacitor aging in the deflection circuit.</li>
+                <li><strong>Distorted geometry</strong> — The image stretches, compresses, or rotates as the yoke driver components drift out of spec.</li>
+            </ul>
+            <p>These are CRT hardware failures. The Siemens control is typically functional — our LCD module restores display without control modifications.</p>
+        </section>
+        <!-- Module 5: Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Signal Wiring (DB-25 Connector)</h2>
+            <p>The Siemens 6FC5103 uses a DB-25 (25-pin D-sub) connector for video and sync — a different interface from the HONDA 20-pin used on most FANUC and Mitsubishi displays. Our LCD module includes the matching DB-25 connector.</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>2</td><td>Video</td><td>Monochrome video (TTL)</td></tr>
+                <tr><td>3</td><td>GND</td><td>Video Ground</td></tr>
+                <tr><td>4</td><td>HS</td><td>Horizontal Sync</td></tr>
+                <tr><td>5</td><td>VS</td><td>Vertical Sync</td></tr>
+                <tr><td>6–9</td><td>NC</td><td>Not Connected</td></tr>
+                <tr><td>10</td><td>+24V</td><td>DC Power Input</td></tr>
+                <tr><td>11–25</td><td>GND/NC</td><td>Spare / shield pins</td></tr>
+            </table>
+            <p><strong>Note:</strong> DB-25 pinout may vary by Siemens machine variant. Verify against your machine's wiring diagram if unsure.</p>
+        </section>
         <section>
             <h2>Cross-Reference: Similar Siemens Solutions</h2>
             <p>For the more common Siemens SINUMERIK CRT models, see these existing product pages:</p>
@@ -122,26 +167,32 @@
             <p style="margin-top:1rem;">Product photos and detailed installation guide coming soon. <a href="/en/quote.html">Email us</a> for immediate assistance.</p>
         </section>
 
-        <section>
+        <section itemscope="" itemtype="https://schema.org/FAQPage">
             <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-q">Q: Which SINUMERIK systems use the 6FC5103-0AB01?</div>
-                <div class="faq-a">A: SINUMERIK 840D and 810D controls. This is a different series from the 6FC3988 (used on 850/880) — the 6FC5103 uses a DB-25 connector while 6FC3988 uses a different interface.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Which SINUMERIK systems use the 6FC5103-0AB01?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: SINUMERIK 840D and 810D controls. This is a different series from the 6FC3988 (used on 850/880) — the 6FC5103 uses a DB-25 connector while 6FC3988 uses a different interface.</div>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Q: Does the LCD replacement require Siemens software changes?</div>
-                <div class="faq-a">A: No. The LCD module is designed as a drop-in replacement using the same DB-25 pinout and DC 24V power. No NC, PLC, or HMI parameter changes are required.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Does the LCD replacement require Siemens software changes?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: No. The LCD module is designed as a drop-in replacement using the same DB-25 pinout and DC 24V power. No NC, PLC, or HMI parameter changes are required.</div>
+                </div>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Q: Where can I find installation photos for the 6FC5103 model?</div>
-                <div class="faq-a">A: Product photos for the 6FC5103 variant are being prepared. In the meantime, you can refer to our <a href="/en/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html">Siemens SINUMERIK Upgrade Guide</a> which covers the general installation procedure. For model-specific photos, <a href="/en/quote.html">contact our support team</a>.</div>
+            <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" class="faq-item">
+                <div itemprop="name" class="faq-q">Q: Where can I find installation photos for the 6FC5103 model?</div>
+                <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer" class="faq-a">
+                    <div itemprop="text">A: Product photos for the 6FC5103 variant are being prepared. In the meantime, you can refer to our Siemens SINUMERIK Upgrade Guide which covers the general installation procedure. For model-specific photos, contact our support team.</div>
+                </div>
             </div>
         </section>
 
         <section class="cta" style="text-align:center;padding:3rem 1rem;">
             <h2>Need a 6FC5103 LCD Upgrade?</h2>
             <p>Send your machine details for confirmed compatibility</p>
-            <p style="font-size:1.2rem;">sales@cncdisplay.com | +86-13686889647</p>
+            <p style="font-size:1.2rem;">info@cncdisplay.com | +86-13686889647</p>
             <a href="/en/quote.html" class="btn btn-primary btn-large">Request Compatibility Check</a>
         </section>
     </main>
@@ -158,7 +209,7 @@
         <div class="footer-content">
             <p class="footer-logo" style="font-size:1.1rem;font-weight:600;">Kongto Technology</p>
             <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit</p>
-            <p>sales@cncdisplay.com | +86-13686889647 | © 2013-2026</p>
+            <p>info@cncdisplay.com | +86-13686889647 | © 2013-2026</p>
         </div>
     </footer>
 </body>

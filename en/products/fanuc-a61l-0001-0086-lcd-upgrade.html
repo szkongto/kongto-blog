@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html">
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html">
     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/products/fanuc-a61l-0001-0086-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="FANUC A61L-0001-0086 LCD Replacement | 9-inch CRT to LCD">
@@ -53,7 +53,7 @@
   "url": "https://cncdisplay.com",
   "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions",
   "address": { "@type": "PostalAddress", "addressLocality": "Shenzhen", "addressRegion": "Guangdong", "addressCountry": "CN" },
-  "contactPoint": { "@type": "ContactPoint", "telephone": "+86-13686889647", "email": "sales@cncdisplay.com", "contactType": "sales", "availableLanguage": ["Chinese", "English"] }
+  "contactPoint": { "@type": "ContactPoint", "telephone": "+86-13686889647", "email": "info@cncdisplay.com", "contactType": "sales", "availableLanguage": ["Chinese", "English"] }
 }</script>
     <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -119,9 +119,68 @@
                     <li>FANUC Series 11</li>
                     <li>FANUC 0-M</li>
                     <li>FANUC 0-T</li>
-                </ul></section>
+                                </ul></section>
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common FANUC A61L 0001 0086 CRT Display Failures</h2>
+            <p>The FANUC A61L 0001 0086 is a 9-inch monochrome CRT used across FANUC Series 6/10/11 and 0-series controls.</p>
+            <ul>
+                <li><strong>Blank screen / no display</strong> — CRT heater burnout or flyback transformer failure. The CNC control still operates but the screen stays dark.</li>
+                <li><strong>Dim display — unreadable in shop lighting</strong> — CRT phosphor degradation after decades of continuous use.</li>
+                <li><strong>Flickering / unstable image</strong> — Electrolytic capacitors in the deflection circuit dried out, causing the image to shake or roll.</li>
+                <li><strong>Burn-in / ghost image</strong> — Permanent phosphor wear from static screen elements (position readout, status bars).</li>
+            </ul>
+            <p>All CRT hardware failures. The FANUC control itself is typically functional — our LCD module restores display without control modifications.</p>
+        </section>
+        <!-- Module 5: Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Signal Wiring (HONDA 20-Pin)</h2>
+            <p>The FANUC A61L 0001 0086 uses monochrome TTL-level video signal with separate TTL sync through a standard HONDA 20-pin connector. Our LCD module connects directly — no adapter or rewiring needed.</p>
+                        <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>2</td><td>GND</td><td>Signal Ground</td></tr>
+                <tr><td>3</td><td>Video (Mono)</td><td>Monochrome composite video (TTL 0–5V)</td></tr>
+                <tr><td>4</td><td>GND</td><td>Video Ground</td></tr>
+                <tr><td>5</td><td>HS</td><td>Horizontal Sync (TTL)</td></tr>
+                <tr><td>6</td><td>VS</td><td>Vertical Sync (TTL)</td></tr>
+                <tr><td>7–8</td><td>NC</td><td>Not Connected</td></tr>
+                <tr><td>9</td><td>+24V</td><td>DC Power Input (10–30V)</td></tr>
+                <tr><td>10</td><td>GND</td><td>Power Ground</td></tr>
+                <tr><td>11–20</td><td>NC / GND</td><td>Spare or chassis ground</td></tr>
+            </table>
+            <p><strong>Note:</strong> TTL-level monochrome video (0–5V). Our LCD detects the signal type automatically — no jumpers or configuration needed.</p>
+        </section>
+        
+        <section style="margin:2rem 0;" itemscope="" itemtype="https://schema.org/FAQPage">
+            <h2>Frequently Asked Questions</h2>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Will this LCD work with my older FANUC control?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Yes. This replacement is specifically designed for machines using this model CRT. The LCD reproduces the same video timing as the original monochrome CRT — no parameter changes, no adapter cables, no signal converters needed.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">The CRT is completely dead. How do I know the CNC control is still working?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Listen for the spindle relay, watch for IO activity LEDs on the control board, or try MDI operation blindly. In most cases, a dead CRT means the display has failed — the control is still generating video. Our LCD will confirm this immediately after installation.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Installation difficulty?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">10–15 minutes. Power off, remove old CRT, mount LCD, reconnect keyed connectors, power on. No soldering, no parameter changes.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Warranty and support?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">18-month warranty, lifetime technical support, worldwide shipping. info@cncdisplay.com</div>
+                </div>
+            </div>
+        </section>
         <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Tech Support - Free Shipping Worldwide</p><p>Outright sale - no core exchange required</p></section>
-        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to replace your CRT?</h2><p>sales@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Request Quote</a></section>
+        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to replace your CRT?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686899647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Request Quote</a></section>
     </main>
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
             <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">&#x1F4DA; Related Resources</p>
