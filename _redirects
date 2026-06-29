@@ -92,14 +92,12 @@
 /posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_MDT1283B_LCD.html 301
 
 # === Auto-generated redirects for broken link fixes ===
-/${r.url} /index.html 301
 /article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html https://cncdisplay.com/ 301
 /article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html https://cncdisplay.com/ 301
 /cdn-cgi/l/email-protection /posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html 301
 /docs/ /index.html 301
 /docs/fanuc-crt-to-lcd-upgrade-tech.pptx /index.html 301
 /en/ /index.html 301
-/en/${r.url} /en/index.html 301
 /en/baidu_verify_codeva-MOcuLxbSCp.html /index.html 301
 /en/docs/ /en/index.html 301
 /en/docs/CNC_to_LCD_Model_List.docx /en/index.html 301
