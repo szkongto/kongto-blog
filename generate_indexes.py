@@ -72,6 +72,9 @@ def extract_meta(filepath):
 def classify(filename, categories):
     """Classify a file into a category."""
     fn = filename.lower()
+    # If it's a comparison/vs article, put in "comp" category
+    if 'comparison' in fn or '-vs-' in fn:
+        return 'comp'
     for cat_id, cat_name, keywords in categories:
         for kw in keywords:
             if kw.lower() in fn:
@@ -85,12 +88,19 @@ def generate_index(posts_dir, categories, icons, lang):
              if f.endswith('.html') and f != 'index.html']
 
     classified = {}
+    skip_count = 0
     for f in files:
+        title, desc, date = extract_meta(os.path.join(posts_dir, f))
+        # Skip redirect stub files
+        if title in ('Redirecting...', '跳转中...'):
+            skip_count += 1
+            continue
         cat = classify(f, categories)
         if cat not in classified:
             classified[cat] = []
-        title, desc, date = extract_meta(os.path.join(posts_dir, f))
         classified[cat].append((f, title, desc, date))
+    if skip_count:
+        print(f"  Skipped {skip_count} redirect stubs in {posts_dir}")
 
     # Sort each category: newest first by filename date
     for cat in classified:
