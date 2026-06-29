@@ -102,6 +102,9 @@
 /en/docs/ /en/index.html 301
 /en/docs/CNC_to_LCD_Model_List.docx /en/index.html 301
 /en/posts/ /posts/article_20260508_Haas_CRT_LCD_Case.html 301
+/en/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html /en/posts/article_20260508_KTV148_Custom_Industrial_Display.html 301
+/en/posts/FANUC_A61L_0001_0094_LCD_CNC_Upgrade_Replacement.html /en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/en/posts/FANUC_A61L_0001_0095_LCD_CNC_Upgrade_Replacement.html /en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
 /en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html https://cncdisplay.com/ 301
 
 # Chinese-URL article redirects (broken internal links)
@@ -130,6 +133,7 @@
 /brands/ /brands/FANUC.html 301
 /en/brands/ /en/brands/FANUC.html 301
 /en/posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html /en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
+/en/posts/article_20260506_Mitsubishi_FCUA-CT100_Interface_Guide.html /en/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html 301
 /en/posts/article_20260506_Mitsubishi_FCUA_CT100_M500_M520_TFT_Replacement_CN.html /en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
 /en/posts/article_20260506_三菱BM09DF工业显示屏E60数控系统TFT替代.html /en/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
 /en/posts/article_20260506_三菱FCUA-CT100工业显示器M500_M520数控系统TFT替代.html /en/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
@@ -163,6 +167,8 @@
 /en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html三菱MDT962B系列CRT升级LCD液晶全面替换方案.html /en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
 /en/posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html /en/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
 /en/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html /en/index.html 301
+/en/posts/article_20260526_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html /en/index.html 301
+/en/posts/article_20260615_Siemens_Display_Upgrade_Cost_ROI_Analysis.html /en/index.html 301
 /en/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html /index.html 301
 /en/posts/comparison_20260501_工业视频信号转换器选型指南_VGA转VIDEO_vs_HDMI转VGA.html /en/index.html 301
 /en/posts/custom_industrial_display_series.html /index.html 301
@@ -402,16 +408,3 @@
 /en/brands/OKUMA /en/brands/OKUMA.html 301
 /brands/Siemens /brands/Siemens.html 301
 /en/brands/Siemens /en/brands/Siemens.html 301
-
-# === Fallback for unknown product URLs ===
-/products/vesa-mount-01 /index.html 301
-
-# === Broken Chinese-variant URL redirects (zh/ subdirectory, corrupted encoding) ===
-/zh/posts/faq_20260501_���ػ�����ʾ��������������TOP10.html /posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html 301
-/zh/posts/�Ǳ궩����ʾ��ϵ��.html /zh/posts/custom_industrial_display_series.html 301
-/zh/posts/article_20260501_FANUC_0iϵͳ��ʾ������������������.html /posts/fanuc-0i-display-faq-zh.html 301
-/zh/posts/article_20260507_MDT1283B_LCD�滻����.html /posts/article_20260507_MDT1283B_LCD.html 301
-/zh/posts/article_20260508_KTV104_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV104_custom_industrial_display.html 301
-/zh/posts/article_20260508_KTV148_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV148_custom_industrial_display.html 301
-/zh/posts/article_20260508_KTV800M_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV800M_custom_industrial_display.html 301
-/zh/posts/article_20260508_KTV804_�Ǳ궩�ƹ�ҵ��ʹ��ʾ��.html /zh/posts/article_20260508_KTV804_custom_industrial_display.html 301
