@@ -174,7 +174,7 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
     def check_text_corruption(text, label=""):
         """Check if text has encoding corruption, return (is_corrupted, sample)"""
         cn = [c for c in text if '一' <= c <= '鿿']
-        if len(cn) < 2:
+        if len(cn) < 4:
             return False, ""
         bad = sum(1 for c in cn if c in corruption_markers)
         # Title/desc/nav: >10% corrupted = flag. Long blocks like schema: >5% = flag.

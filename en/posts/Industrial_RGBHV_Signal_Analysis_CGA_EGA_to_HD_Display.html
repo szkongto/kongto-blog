@@ -1,610 +1,610 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</title>
-
-    <meta name="description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
-
-    <meta name="author" content="Kongto Technology">
-
-    <link rel="canonical" href="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
-
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
-
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
-
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/" />
-
-    <meta property="og:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display" />
-
-    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
-
-    <meta property="og:description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs." />
-
-    <meta property="og:url" content="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
-
-    <meta property="og:type" content="article" />
-
-        <meta property="og:site_name" content="Kongto Technology">
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology">
-
-    <meta name="twitter:description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
-
-<link rel="stylesheet" href="/css/style.css?v=7">
-
-    <script type="application/ld+json">
-
-    {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
-  "description": "Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.",
-  "author": { "@id": "https://cncdisplay.com/#tech-team" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Kongto Technology",
-    "url": "https://cncdisplay.com"
-  },
-  "datePublished": "2026-05-01"
-}
-
-    </script>
-
-
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-
-
-
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://cncdisplay.com/#organization",
-  "name": "Kongto Technology",
-  "alternateName": "Kongto Technology",
-  "url": "https://cncdisplay.com",
-  "description": "Industrial CNC display upgrade solutions",
-  "image": "/images/logo.png",
-  "telephone": "+86-13686889647",
-  "email": "info@cncdisplay.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Longgang District, Shenzhen",
-    "addressLocality": "Shenzhen",
-    "addressRegion": "Guangdong",
-    "postalCode": "518000",
-    "addressCountry": "CN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 22.6568,
-    "longitude": 113.9899
-  },
-  "areaServed": [
-    "CN",
-    "US",
-    "DE",
-    "JP",
-    "KR",
-    "SG",
-    "IN",
-    "GB",
-    "FR",
-    "IT"
-  ],
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "sameAs": [
-    "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto"
-  ]
-}
-
-</script>
-
-
-
-
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://cncdisplay.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
-      "item": "https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html"
-    }
-  ]
-}
-
-</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
-
-</head>
-
-<body>    <header>
-        <nav>
-            <a href="/en/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/en/">Home</a><a href="/en/compatibility-matrix.html">Compatibility</a>
-                <a href="/en/posts/">Articles</a>
-                <a href="/en/case-studies.html">Cases</a>
-                <a href="/en/docs/">Downloads</a>
-                <a href="/en/about.html">About</a>
-                <a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/en/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <article class="post">
-
-            <h1>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</h1>
-
-            <div class="meta">
-
-                <time datetime="2026-05-01">2026-05-01</time>
-
-                <span class="author">浣滆€? Kongto Technology</span>
-
-            </div>
-
-            <div class="content">
-
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-01.jpg" alt="Display Overview"></figure>
-
-<p><em>Display Overview | Source: Kongto Technology</em></p>
-
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/HAAS-V2.5-1904-01.jpg" alt="Product Photo"></figure>
-
-<p><em>Product Photo | Source: Kongto Technology</em></p>
-
-<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/KTV104_02.jpg" alt="Installation View"></figure>
-
-<p><em>Installation View | Source: Kongto Technology</em></p>
-
-
-
-
-
-<p><strong>Keywords</strong>: RGBHV signal, CGA/EGA to VGA, industrial display technology, signal conversion</p>
-
-<p><em>Target Audience: CNC engineers, industrial automation technicians, video signal system designers</em></p>
-
-<hr>
-
-<h2>1. Evolution of Industrial Video Signals</h2>
-
-<table>
-
-<tr><th>Era</th><th>Signal Standard</th><th>Resolution</th><th>Refresh Rate</th><th>Typical Application</th></tr>
-
-<tr><td>1980s-1990s</td><td>CGA (Color Graphics Adapter)</td><td>320x200 / 640x200</td><td>60 Hz</td><td>Early CNC controllers, industrial terminals</td></tr>
-
-<tr><td>1985-1995</td><td>EGA (Enhanced Graphics Adapter)</td><td>640x350</td><td>70 Hz</td><td>Upgraded CNC displays, PLC monitors</td></tr>
-
-<tr><td>1990-2005</td><td>VGA (Video Graphics Array)</td><td>640x480 / 800x600</td><td>60-85 Hz</td><td>FANUC CRT displays, industrial PCs</td></tr>
-
-<tr><td>2005-Present</td><td>SVGA/XGA Digital (DVI/HDMI)</td><td>800x600 to 1920x1080</td><td>60-120 Hz</td><td>Modern LCD displays, HMI panels</td></tr>
-
-</table>
-
-<hr>
-
-
-
-<h2>2. Understanding RGBHV Signal Architecture</h2>
-
-<h3>2.1 What is RGBHV?</h3>
-
-<p>RGBHV stands for <strong>R</strong>ed, <strong>G</strong>reen, <strong>B</strong>lue, <strong>H</strong>orizontal Sync, <strong>V</strong>ertical Sync. It is a method of transmitting video signals using five separate channels:</p>
-
-<ul>
-
-<li><strong>R, G, B</strong>: Three analog color channels, each carrying 0-0.7V peak-to-peak signals representing the primary colors</li>
-
-<li><strong>H-Sync</strong>: Horizontal synchronization pulse that defines the start of each scan line</li>
-
-<li><strong>V-Sync</strong>: Vertical synchronization pulse that defines the start of each frame</li>
-
-</ul>
-
-<p>This separation provides superior signal quality compared to composite signals (CGA/EGA) because each color channel is isolated, preventing cross-talk and color bleeding.</p>
-
-
-
-<h3>2.2 Signal Timing Parameters</h3>
-
-<table>
-
-<tr><th>Parameter</th><th>CGA</th><th>EGA</th><th>VGA</th><th>SVGA</th></tr>
-
-<tr><td>Horizontal Frequency</td><td>15.75 kHz</td><td>21.85 kHz</td><td>31.5 kHz</td><td>37.9-48.9 kHz</td></tr>
-
-<tr><td>Vertical Frequency</td><td>60 Hz</td><td>60 Hz</td><td>60-85 Hz</td><td>60-85 Hz</td></tr>
-
-<tr><td>Pixel Clock</td><td>14.3 MHz</td><td>16.3 MHz</td><td>25.2 MHz</td><td>40-65 MHz</td></tr>
-
-<tr><td>Color Depth</td><td>4-bit (16 colors)</td><td>6-bit (64 colors)</td><td>8-bit (256 colors)</td><td>24-bit (16.7M colors)</td></tr>
-
-<tr><td>Signal Type</td><td>Digital TTL</td><td>Digital TTL</td><td>Analog 0.7Vpp</td><td>Analog 0.7Vpp</td></tr>
-
-</table>
-
-<h3>2.3 Signal Frequency Table</h3>
-
-<table>
-
-<tr><th>Standard</th><th>Resolution</th><th>H-Sync Freq</th><th>V-Sync Freq</th><th>Pixel Clock</th><th>H-Sync Polarity</th><th>V-Sync Polarity</th></tr>
-
-<tr><td>CGA</td><td>640x200</td><td>15.750 kHz</td><td>60.000 Hz</td><td>14.318 MHz</td><td>Positive</td><td>Positive</td></tr>
-
-<tr><td>EGA</td><td>640x350</td><td>21.850 kHz</td><td>60.000 Hz</td><td>16.257 MHz</td><td>Positive</td><td>Negative</td></tr>
-
-<tr><td>VGA</td><td>640x480</td><td>31.469 kHz</td><td>59.940 Hz</td><td>25.175 MHz</td><td>Negative</td><td>Negative</td></tr>
-
-<tr><td>SVGA</td><td>800x600</td><td>37.879 kHz</td><td>60.317 Hz</td><td>40.000 MHz</td><td>Positive</td><td>Positive</td></tr>
-
-<tr><td>XGA</td><td>1024x768</td><td>48.363 kHz</td><td>60.004 Hz</td><td>65.000 MHz</td><td>Negative</td><td>Negative</td></tr>
-
-</table>
-
-<p><em>Table: Detailed VESA-standard timing parameters for legacy and modern video signals. Sync polarity indicates whether the sync pulse is active-high (positive) or active-low (negative).</em></p>
-
-<h3>2.4 Principles of RGBHV Signal Transmission</h3>
-
-<p>RGBHV belongs to the family of component video standards where each signal component travels on a dedicated conductor. This architecture offers several fundamental advantages over composite or S-video formats, but it also demands strict attention to transmission-line theory.</p>
-
-<p><strong>Impedance Matching and Signal Integrity.</strong> Each RGB line is designed to drive a 75-ohm terminated load. The characteristic impedance of the transmission line (typically RG-59 coaxial cable for BNC installations or the individual twisted pairs inside a VGA cable) must match both the source output impedance and the termination impedance at the display or converter input. Mismatched impedance creates signal reflections: when the incident wave encounters a discontinuity, a portion of the energy is reflected back toward the source, interfering with subsequent signal transitions. Reflections manifest as visible ghosting, color fringing, horizontal "ringing" bars, or timing jitter —problems that are especially severe in long cable runs above 5 meters. Proper 75-ohm termination resistors at the receiving end are therefore critical for clean RGBHV transmission.</p>
-
-<p><strong>Bandwidth Requirements.</strong> The analog bandwidth required per RGBHV channel is governed by the pixel clock frequency. According to the Nyquist criterion, the transmission channel must support at least half the pixel clock frequency to preserve the fundamental harmonic of the video signal. In practice, to maintain sharp edge transitions (rise times below 5 ns), a bandwidth of 3 to 5 times the pixel clock is recommended. For VGA at 25.175 MHz pixel clock, each color channel therefore requires approximately 12.6 MHz of bandwidth for basic reproduction, but high-quality converters use video op-amps with bandwidths exceeding 100 MHz to preserve edge sharpness. For SVGA at 65 MHz, the minimum requirement rises to 32.5 MHz per channel. The total video bandwidth across all three color channels defines the system's ability to render fine text and detailed graphics demanded by industrial HMI applications.</p>
-
-<p><strong>DC Offset and Black-Level Clamping.</strong> In a properly designed RGBHV system, the black level is referenced to 0 V and the peak white level is 0.7 V above black. Each scan line begins with a blanking interval during which a DC-restoration (clamping) circuit samples the black level and adjusts the DC offset to eliminate low-frequency drift. Without this clamping, variations in the average picture level (APL) from frame to frame would cause the black level to shift —a phenomenon known as "black-level wander" or "hum" —resulting in inconsistent brightness and color saturation across the display. Sync signals in RGBHV use negative-going pulses that normally swing from 0 V to -0.3 V on dedicated sync lines, well below the black reference to prevent interference with the active video region.</p>
-
-<p><strong>Crosstalk Isolation.</strong> With five independent analog channels (R, G, B, H-Sync, V-Sync) routed in close proximity inside a VGA cable or on a PCB, capacitive and inductive coupling between adjacent conductors can introduce crosstalk —a signal from one channel leaking into another. On a VGA display, crosstalk from the H-Sync line into the Green channel, for example, appears as faint vertical bars overlaid on the image. Industry best practice requires a minimum of -40 dB isolation between any two channels at 10 MHz. This is achieved through proper shielding (individually shielded coaxial pairs for each color), careful ground-plane separation in PCB layout, and differential routing techniques that keep high-speed digital signals (the sync lines) physically separated from the analog color channels.</p>
-
-<p><strong>Rise Time and Skew Control.</strong> For clean pixel transitions, the 10%-to-90% rise time of each color channel should be below 5 ns. Excessive rise time softens edges and reduces apparent sharpness, while excessive skew (timing mismatch between the R, G, and B channels) produces color fringing at vertical edges. High-performance converters incorporate programmable delay lines to compensate for PCB trace-length differences and cable-induced skew, aligning all three color channels within 2 ns of each other at the display input.</p>
-
-<hr>
-
-<h2>3. CGA/EGA to RGBHV Conversion Process</h2>
-
-<h3>3.1 Signal Type Conversion</h3>
-
-<p>The key challenge in converting CGA/EGA to RGBHV is the fundamental difference in signal types:</p>
-
-<ul>
-
-<li><strong>CGA/EGA</strong>: Digital TTL signals (0V or 5V levels) —on/off for each color bit</li>
-
-<li><strong>RGBHV/VGA</strong>: Analog signals (0-0.7V continuous) —proportional voltage for each color</li>
-
-</ul>
-
-<p>A digital-to-analog converter (DAC) is required to translate TTL logic levels into proportional analog voltages. The Kongto Technology converter uses a high-speed video DAC with 8-bit resolution per channel, ensuring smooth color gradients.</p>
-
-
-
-<h3>3.2 Scan Rate Conversion</h3>
-
-<p>CGA operates at 15.75 kHz horizontal scan rate, while VGA requires 31.5 kHz. This means each CGA scan line must be doubled (line doubling) or the frame buffer must be scaled to match VGA timing. The converter handles this automatically using an integrated frame buffer and scaling engine.</p>
-
-
-
-<h3>3.3 Synchronization Signal Generation</h3>
-
-<p>CGA/EGA use composite sync (combined H+V on a single line), while RGBHV separates horizontal and vertical sync. The converter extracts and regenerates clean, separate H-Sync and V-Sync signals with proper timing.</p>
-
-<hr>
-
-
-
-<h2>4. Practical Conversion Solutions</h2>
-
-<table>
-
-<tr><th>Input Signal</th><th>Output Signal</th><th>Converter Model</th><th>Key Features</th><th>Unit Price</th></tr>
-
-<tr><td>CGA (15kHz)</td><td>RGBHV/VGA (31kHz)</td><td>JTX-CVR-001</td><td>Auto-scan, plug-and-play, -20&deg;C~+70&deg;C</td><td>CNY 850</td></tr>
-
-<tr><td>EGA (22kHz)</td><td>RGBHV/VGA (31kHz)</td><td>JTX-CVR-002</td><td>Auto-scan, plug-and-play, wide voltage 12-36V</td><td>CNY 880</td></tr>
-
-<tr><td>RGBS (composite sync)</td><td>RGBHV/VGA</td><td>JTX-CVR-003</td><td>Sync separator, adjustable H/V position</td><td>CNY 750</td></tr>
-
-<tr><td>CGA+EGA (dual input)</td><td>RGBHV/VGA</td><td>JTX-CVR-004</td><td>Auto-detect input type, dual-input switch</td><td>CNY 950</td></tr>
-
-</table>
-
-<hr>
-
-
-
-<h2>5. Signal Quality Verification</h2>
-
-<p>After conversion, verify the following signal quality metrics:</p>
-
-<ul>
-
-<li><strong>Signal amplitude</strong>: R/G/B channels 0.7Vpp &plusmn;5% into 75&Omega; load</li>
-
-<li><strong>Sync pulse width</strong>: H-Sync 3.8&micro;s &plusmn;10%, V-Sync 64&micro;s &plusmn;10%</li>
-
-<li><strong>Rise/fall time</strong>: &lt;5ns for clean edges</li>
-
-<li><strong>Crosstalk</strong>: &lt;-40dB between channels</li>
-
-<li><strong>Impedance matching</strong>: 75&Omega; &plusmn;5% on all lines</li>
-
-</ul>
-
-<hr>
-
-<h2>6. RGBHV Wire Color Code and Pinout Standards</h2>
-
-<p>When working with RGBHV signals in industrial environments, identifying the correct wire colors and pin assignments is essential for successful cable termination and troubleshooting. The table below lists the standard VGA (DE-15) pinout and the corresponding wire color codes used in typical industrial RGBHV cables.</p>
-
-<table>
-
-<tr><th>Signal</th><th>VGA Pin (DE-15)</th><th>Standard Wire Color</th><th>BNC Connector Color</th></tr>
-
-<tr><td><strong>Red</strong></td><td>1</td><td>Red</td><td>Red</td></tr>
-
-<tr><td><strong>Green</strong></td><td>2</td><td>Green</td><td>Green</td></tr>
-
-<tr><td><strong>Blue</strong></td><td>3</td><td>Blue</td><td>Blue</td></tr>
-
-<tr><td><strong>Horizontal Sync (H-Sync)</strong></td><td>13</td><td>Yellow</td><td>Yellow</td></tr>
-
-<tr><td><strong>Vertical Sync (V-Sync)</strong></td><td>14</td><td>White</td><td>White</td></tr>
-
-<tr><td><strong>Red Ground</strong></td><td>6</td><td>Black (paired with Red)</td><td>BNC shield</td></tr>
-
-<tr><td><strong>Green Ground</strong></td><td>7</td><td>Black (paired with Green)</td><td>BNC shield</td></tr>
-
-<tr><td><strong>Blue Ground</strong></td><td>8</td><td>Black (paired with Blue)</td><td>BNC shield</td></tr>
-
-<tr><td><strong>Sync Ground</strong></td><td>10</td><td>Black</td><td>BNC shield</td></tr>
-
-<tr><td><strong>DDC Data (I&sup2;C)</strong></td><td>12</td><td>Green/White (if present)</td><td>N/A</td></tr>
-
-<tr><td><strong>DDC Clock (I&sup2;C)</strong></td><td>15</td><td>Blue/White (if present)</td><td>N/A</td></tr>
-
-</table>
-
-<p><em>Note: In five-wire RGBHV BNC cable assemblies, each signal uses a separate coaxial cable with the shield serving as the ground return. The shield is typically connected to pin 10 (sync ground) and the chassis ground at the source end.</em></p>
-
-<hr>
-
-<h2>7. Connector Cross-Reference for RGBHV and Related Signals</h2>
-
-<p>Different generations of industrial display equipment use different physical connectors to carry RGBHV or related video signals. The following table helps identify which connector type corresponds to which signal standard, facilitating cable selection and adapter planning during retrofit projects.</p>
-
-<table>
-
-<tr><th>Signal Type</th><th>Common Connector</th><th>Pin Count</th><th>Form Factor</th><th>Typical Use</th></tr>
-
-<tr><td><strong>CGA</strong></td><td>DE-9</td><td>9 (2 rows)</td><td>D-subminiature</td><td>IBM PC/XT/AT original CGA, early CNC terminals</td></tr>
-
-<tr><td><strong>EGA</strong></td><td>DE-9</td><td>9 (2 rows)</td><td>D-subminiature</td><td>EGA cards and monitors (same connector as CGA)</td></tr>
-
-<tr><td><strong>VGA (RGBHV)</strong></td><td>DE-15 (HD-15)</td><td>15 (3 rows)</td><td>High-density D-sub</td><td>Most common PC and industrial VGA interface</td></tr>
-
-<tr><td><strong>RGBHV (BNC)</strong></td><td>BNC (5x)</td><td>1 per channel</td><td>Bayonet-coupled coaxial</td><td>Professional/broadcast, long cable runs, test equipment</td></tr>
-
-<tr><td><strong>RGBS (composite sync)</strong></td><td>BNC (4x) or RCA (4x)</td><td>1 per channel</td><td>Coaxial</td><td>Arcade monitors, legacy video walls, some PLC displays</td></tr>
-
-<tr><td><strong>DVI-I (analog + digital)</strong></td><td>DVI-I</td><td>29</td><td>DVI (flat-pin + cross-pin)</td><td>Carries analog RGBHV on the same pins as VGA plus digital TMDS</td></tr>
-
-<tr><td><strong>DVI-D (digital only)</strong></td><td>DVI-D</td><td>24</td><td>DVI (flat-pin only)</td><td>Digital-only output, no RGBHV analog pass-through</td></tr>
-
-<tr><td><strong>HDMI</strong></td><td>HDMI Type A</td><td>19</td><td>HDMI (flat, keyed)</td><td>Digital video + audio, backward compatible via adapters</td></tr>
-
-<tr><td><strong>SCART (Europe)</strong></td><td>SCART (P&#233;ritel)</td><td>21</td><td>Rectangular, shrouded</td><td>European legacy AV equipment, carries analog RGB+sync+audio</td></tr>
-
-<tr><td><strong>DisplayPort</strong></td><td>DisplayPort</td><td>20</td><td>Latching rectangular</td><td>Modern packetized digital, no native analog output</td></tr>
-
-</table>
-
-<p><em>Tip: When retrofitting industrial equipment from CGA/EGA to modern displays, the most common adapter chain is CGA DE-9 &rarr; VGA DE-15 (via converter box) &rarr; DVI/HDMI (via active adapter if needed). Direct passive cable adapters between CGA/EGA and VGA will not work because of the fundamental signal-type difference (digital TTL vs. analog).</em></p>
-
-<p>For technical consultation on signal conversion solutions, contact <strong>Kongto Technology</strong> at info@cncdisplay.com</p>
-
-
-
-            </div>
-
-
-
-<div class="share-buttons">
-
-    <div class="share-title">Share to:</div>
-
-    <div class="share-icons">
-
-        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="Share to LinkedIn">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-
-            </svg>
-
-            <span>LinkedIn</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="Share to Facebook">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-
-            </svg>
-
-            <span>Facebook</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="Share to Twitter">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-
-            </svg>
-
-            <span>Twitter</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="Copy Link">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-
-            </svg>
-
-            <span>Copy Link</span>
-
-        </a>
-
-    </div>
-
-</div>
-
-<script>
-
-(function() {
-
-    var pageUrl = encodeURIComponent(window.location.href);
-
-    var pageTitle = encodeURIComponent(document.title);
-
-    window.shareToLinkedIn = function() {
-
-        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToFacebook = function() {
-
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToTwitter = function() {
-
-        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
-
-    };
-
-    window.copyLink = function() {
-
-        navigator.clipboard.writeText(window.location.href).then(function() {
-
-            alert('Link copied to clipboard!');
-
-        }).catch(function() {
-
-            var input = document.createElement('input');
-
-            input.value = window.location.href;
-
-            document.body.appendChild(input);
-
-            input.select();
-
-            document.execCommand('copy');
-
-            document.body.removeChild(input);
-
-            alert('Link copied to clipboard!');
-
-        });
-
-    };
-
-})();
-
-</script>
-
-
-
-</article>
-
-    </main>
-
-
-
-<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
-
-    <h3 style="margin-top:0;">Related Articles</h3>
-
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display —CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
-
-</section>
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
-                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology</span>
-                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/en/posts/">📄 Articles</a>
-                <a href="/en/brands/FANUC.html">FANUC</a>
-                <a href="/en/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/en/brands/Siemens.html">Siemens</a>
-                <a href="/en/docs/">Downloads</a>
-                <a href="/en/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">漏 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | info@cncdisplay.com</p>
-        </div>
-    </footer>
-
-</body>
-
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</title>
+
+    <meta name="description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
+
+    <meta name="author" content="Kongto Technology">
+
+    <link rel="canonical" href="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/" />
+
+    <meta property="og:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display" />
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs." />
+
+    <meta property="og:url" content="https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" />
+
+    <meta property="og:type" content="article" />
+
+        <meta property="og:site_name" content="Kongto Technology">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology">
+
+    <meta name="twitter:description" content="Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.">
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
+  "description": "Deep dive into RGBHV signal technology for industrial displays, from legacy CGA/EGA to modern high-resolution outputs.",
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kongto Technology",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}
+
+    </script>
+
+
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "Kongto Technology",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "Industrial CNC display upgrade solutions",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Longgang District, Shenzhen",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display | Kongto Technology",
+      "item": "https://cncdisplay.com/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/en/" class="logo">Kongto Technology</a>
+            <div class="nav-links">
+                <a href="/en/">Home</a><a href="/en/compatibility-matrix.html">Compatibility</a>
+                <a href="/en/posts/">Articles</a>
+                <a href="/en/case-studies.html">Cases</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About</a>
+                <a href="/en/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+            </div>
+            <a href="/en/search.html" class="nav-search">🔍 Search</a>
+            <div class="lang-switch">
+                <a href="/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/en/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>Industrial RGBHV Signal Analysis —From CGA/EGA to Modern Display</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者: Kongto Technology</span>
+
+            </div>
+
+            <div class="content">
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/FANUC-A61L-0001-0095-V3.4-01.jpg" alt="Display Overview"></figure>
+
+<p><em>Display Overview | Source: Kongto Technology</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/HAAS-V2.5-1904-01.jpg" alt="Product Photo"></figure>
+
+<p><em>Product Photo | Source: Kongto Technology</em></p>
+
+<figure class="img-hero"><img style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/KTV104_02.jpg" alt="Installation View"></figure>
+
+<p><em>Installation View | Source: Kongto Technology</em></p>
+
+
+
+
+
+<p><strong>Keywords</strong>: RGBHV signal, CGA/EGA to VGA, industrial display technology, signal conversion</p>
+
+<p><em>Target Audience: CNC engineers, industrial automation technicians, video signal system designers</em></p>
+
+<hr>
+
+<h2>1. Evolution of Industrial Video Signals</h2>
+
+<table>
+
+<tr><th>Era</th><th>Signal Standard</th><th>Resolution</th><th>Refresh Rate</th><th>Typical Application</th></tr>
+
+<tr><td>1980s-1990s</td><td>CGA (Color Graphics Adapter)</td><td>320x200 / 640x200</td><td>60 Hz</td><td>Early CNC controllers, industrial terminals</td></tr>
+
+<tr><td>1985-1995</td><td>EGA (Enhanced Graphics Adapter)</td><td>640x350</td><td>70 Hz</td><td>Upgraded CNC displays, PLC monitors</td></tr>
+
+<tr><td>1990-2005</td><td>VGA (Video Graphics Array)</td><td>640x480 / 800x600</td><td>60-85 Hz</td><td>FANUC CRT displays, industrial PCs</td></tr>
+
+<tr><td>2005-Present</td><td>SVGA/XGA Digital (DVI/HDMI)</td><td>800x600 to 1920x1080</td><td>60-120 Hz</td><td>Modern LCD displays, HMI panels</td></tr>
+
+</table>
+
+<hr>
+
+
+
+<h2>2. Understanding RGBHV Signal Architecture</h2>
+
+<h3>2.1 What is RGBHV?</h3>
+
+<p>RGBHV stands for <strong>R</strong>ed, <strong>G</strong>reen, <strong>B</strong>lue, <strong>H</strong>orizontal Sync, <strong>V</strong>ertical Sync. It is a method of transmitting video signals using five separate channels:</p>
+
+<ul>
+
+<li><strong>R, G, B</strong>: Three analog color channels, each carrying 0-0.7V peak-to-peak signals representing the primary colors</li>
+
+<li><strong>H-Sync</strong>: Horizontal synchronization pulse that defines the start of each scan line</li>
+
+<li><strong>V-Sync</strong>: Vertical synchronization pulse that defines the start of each frame</li>
+
+</ul>
+
+<p>This separation provides superior signal quality compared to composite signals (CGA/EGA) because each color channel is isolated, preventing cross-talk and color bleeding.</p>
+
+
+
+<h3>2.2 Signal Timing Parameters</h3>
+
+<table>
+
+<tr><th>Parameter</th><th>CGA</th><th>EGA</th><th>VGA</th><th>SVGA</th></tr>
+
+<tr><td>Horizontal Frequency</td><td>15.75 kHz</td><td>21.85 kHz</td><td>31.5 kHz</td><td>37.9-48.9 kHz</td></tr>
+
+<tr><td>Vertical Frequency</td><td>60 Hz</td><td>60 Hz</td><td>60-85 Hz</td><td>60-85 Hz</td></tr>
+
+<tr><td>Pixel Clock</td><td>14.3 MHz</td><td>16.3 MHz</td><td>25.2 MHz</td><td>40-65 MHz</td></tr>
+
+<tr><td>Color Depth</td><td>4-bit (16 colors)</td><td>6-bit (64 colors)</td><td>8-bit (256 colors)</td><td>24-bit (16.7M colors)</td></tr>
+
+<tr><td>Signal Type</td><td>Digital TTL</td><td>Digital TTL</td><td>Analog 0.7Vpp</td><td>Analog 0.7Vpp</td></tr>
+
+</table>
+
+<h3>2.3 Signal Frequency Table</h3>
+
+<table>
+
+<tr><th>Standard</th><th>Resolution</th><th>H-Sync Freq</th><th>V-Sync Freq</th><th>Pixel Clock</th><th>H-Sync Polarity</th><th>V-Sync Polarity</th></tr>
+
+<tr><td>CGA</td><td>640x200</td><td>15.750 kHz</td><td>60.000 Hz</td><td>14.318 MHz</td><td>Positive</td><td>Positive</td></tr>
+
+<tr><td>EGA</td><td>640x350</td><td>21.850 kHz</td><td>60.000 Hz</td><td>16.257 MHz</td><td>Positive</td><td>Negative</td></tr>
+
+<tr><td>VGA</td><td>640x480</td><td>31.469 kHz</td><td>59.940 Hz</td><td>25.175 MHz</td><td>Negative</td><td>Negative</td></tr>
+
+<tr><td>SVGA</td><td>800x600</td><td>37.879 kHz</td><td>60.317 Hz</td><td>40.000 MHz</td><td>Positive</td><td>Positive</td></tr>
+
+<tr><td>XGA</td><td>1024x768</td><td>48.363 kHz</td><td>60.004 Hz</td><td>65.000 MHz</td><td>Negative</td><td>Negative</td></tr>
+
+</table>
+
+<p><em>Table: Detailed VESA-standard timing parameters for legacy and modern video signals. Sync polarity indicates whether the sync pulse is active-high (positive) or active-low (negative).</em></p>
+
+<h3>2.4 Principles of RGBHV Signal Transmission</h3>
+
+<p>RGBHV belongs to the family of component video standards where each signal component travels on a dedicated conductor. This architecture offers several fundamental advantages over composite or S-video formats, but it also demands strict attention to transmission-line theory.</p>
+
+<p><strong>Impedance Matching and Signal Integrity.</strong> Each RGB line is designed to drive a 75-ohm terminated load. The characteristic impedance of the transmission line (typically RG-59 coaxial cable for BNC installations or the individual twisted pairs inside a VGA cable) must match both the source output impedance and the termination impedance at the display or converter input. Mismatched impedance creates signal reflections: when the incident wave encounters a discontinuity, a portion of the energy is reflected back toward the source, interfering with subsequent signal transitions. Reflections manifest as visible ghosting, color fringing, horizontal "ringing" bars, or timing jitter —problems that are especially severe in long cable runs above 5 meters. Proper 75-ohm termination resistors at the receiving end are therefore critical for clean RGBHV transmission.</p>
+
+<p><strong>Bandwidth Requirements.</strong> The analog bandwidth required per RGBHV channel is governed by the pixel clock frequency. According to the Nyquist criterion, the transmission channel must support at least half the pixel clock frequency to preserve the fundamental harmonic of the video signal. In practice, to maintain sharp edge transitions (rise times below 5 ns), a bandwidth of 3 to 5 times the pixel clock is recommended. For VGA at 25.175 MHz pixel clock, each color channel therefore requires approximately 12.6 MHz of bandwidth for basic reproduction, but high-quality converters use video op-amps with bandwidths exceeding 100 MHz to preserve edge sharpness. For SVGA at 65 MHz, the minimum requirement rises to 32.5 MHz per channel. The total video bandwidth across all three color channels defines the system's ability to render fine text and detailed graphics demanded by industrial HMI applications.</p>
+
+<p><strong>DC Offset and Black-Level Clamping.</strong> In a properly designed RGBHV system, the black level is referenced to 0 V and the peak white level is 0.7 V above black. Each scan line begins with a blanking interval during which a DC-restoration (clamping) circuit samples the black level and adjusts the DC offset to eliminate low-frequency drift. Without this clamping, variations in the average picture level (APL) from frame to frame would cause the black level to shift —a phenomenon known as "black-level wander" or "hum" —resulting in inconsistent brightness and color saturation across the display. Sync signals in RGBHV use negative-going pulses that normally swing from 0 V to -0.3 V on dedicated sync lines, well below the black reference to prevent interference with the active video region.</p>
+
+<p><strong>Crosstalk Isolation.</strong> With five independent analog channels (R, G, B, H-Sync, V-Sync) routed in close proximity inside a VGA cable or on a PCB, capacitive and inductive coupling between adjacent conductors can introduce crosstalk —a signal from one channel leaking into another. On a VGA display, crosstalk from the H-Sync line into the Green channel, for example, appears as faint vertical bars overlaid on the image. Industry best practice requires a minimum of -40 dB isolation between any two channels at 10 MHz. This is achieved through proper shielding (individually shielded coaxial pairs for each color), careful ground-plane separation in PCB layout, and differential routing techniques that keep high-speed digital signals (the sync lines) physically separated from the analog color channels.</p>
+
+<p><strong>Rise Time and Skew Control.</strong> For clean pixel transitions, the 10%-to-90% rise time of each color channel should be below 5 ns. Excessive rise time softens edges and reduces apparent sharpness, while excessive skew (timing mismatch between the R, G, and B channels) produces color fringing at vertical edges. High-performance converters incorporate programmable delay lines to compensate for PCB trace-length differences and cable-induced skew, aligning all three color channels within 2 ns of each other at the display input.</p>
+
+<hr>
+
+<h2>3. CGA/EGA to RGBHV Conversion Process</h2>
+
+<h3>3.1 Signal Type Conversion</h3>
+
+<p>The key challenge in converting CGA/EGA to RGBHV is the fundamental difference in signal types:</p>
+
+<ul>
+
+<li><strong>CGA/EGA</strong>: Digital TTL signals (0V or 5V levels) —on/off for each color bit</li>
+
+<li><strong>RGBHV/VGA</strong>: Analog signals (0-0.7V continuous) —proportional voltage for each color</li>
+
+</ul>
+
+<p>A digital-to-analog converter (DAC) is required to translate TTL logic levels into proportional analog voltages. The Kongto Technology converter uses a high-speed video DAC with 8-bit resolution per channel, ensuring smooth color gradients.</p>
+
+
+
+<h3>3.2 Scan Rate Conversion</h3>
+
+<p>CGA operates at 15.75 kHz horizontal scan rate, while VGA requires 31.5 kHz. This means each CGA scan line must be doubled (line doubling) or the frame buffer must be scaled to match VGA timing. The converter handles this automatically using an integrated frame buffer and scaling engine.</p>
+
+
+
+<h3>3.3 Synchronization Signal Generation</h3>
+
+<p>CGA/EGA use composite sync (combined H+V on a single line), while RGBHV separates horizontal and vertical sync. The converter extracts and regenerates clean, separate H-Sync and V-Sync signals with proper timing.</p>
+
+<hr>
+
+
+
+<h2>4. Practical Conversion Solutions</h2>
+
+<table>
+
+<tr><th>Input Signal</th><th>Output Signal</th><th>Converter Model</th><th>Key Features</th><th>Unit Price</th></tr>
+
+<tr><td>CGA (15kHz)</td><td>RGBHV/VGA (31kHz)</td><td>JTX-CVR-001</td><td>Auto-scan, plug-and-play, -20&deg;C~+70&deg;C</td><td>CNY 850</td></tr>
+
+<tr><td>EGA (22kHz)</td><td>RGBHV/VGA (31kHz)</td><td>JTX-CVR-002</td><td>Auto-scan, plug-and-play, wide voltage 12-36V</td><td>CNY 880</td></tr>
+
+<tr><td>RGBS (composite sync)</td><td>RGBHV/VGA</td><td>JTX-CVR-003</td><td>Sync separator, adjustable H/V position</td><td>CNY 750</td></tr>
+
+<tr><td>CGA+EGA (dual input)</td><td>RGBHV/VGA</td><td>JTX-CVR-004</td><td>Auto-detect input type, dual-input switch</td><td>CNY 950</td></tr>
+
+</table>
+
+<hr>
+
+
+
+<h2>5. Signal Quality Verification</h2>
+
+<p>After conversion, verify the following signal quality metrics:</p>
+
+<ul>
+
+<li><strong>Signal amplitude</strong>: R/G/B channels 0.7Vpp &plusmn;5% into 75&Omega; load</li>
+
+<li><strong>Sync pulse width</strong>: H-Sync 3.8&micro;s &plusmn;10%, V-Sync 64&micro;s &plusmn;10%</li>
+
+<li><strong>Rise/fall time</strong>: &lt;5ns for clean edges</li>
+
+<li><strong>Crosstalk</strong>: &lt;-40dB between channels</li>
+
+<li><strong>Impedance matching</strong>: 75&Omega; &plusmn;5% on all lines</li>
+
+</ul>
+
+<hr>
+
+<h2>6. RGBHV Wire Color Code and Pinout Standards</h2>
+
+<p>When working with RGBHV signals in industrial environments, identifying the correct wire colors and pin assignments is essential for successful cable termination and troubleshooting. The table below lists the standard VGA (DE-15) pinout and the corresponding wire color codes used in typical industrial RGBHV cables.</p>
+
+<table>
+
+<tr><th>Signal</th><th>VGA Pin (DE-15)</th><th>Standard Wire Color</th><th>BNC Connector Color</th></tr>
+
+<tr><td><strong>Red</strong></td><td>1</td><td>Red</td><td>Red</td></tr>
+
+<tr><td><strong>Green</strong></td><td>2</td><td>Green</td><td>Green</td></tr>
+
+<tr><td><strong>Blue</strong></td><td>3</td><td>Blue</td><td>Blue</td></tr>
+
+<tr><td><strong>Horizontal Sync (H-Sync)</strong></td><td>13</td><td>Yellow</td><td>Yellow</td></tr>
+
+<tr><td><strong>Vertical Sync (V-Sync)</strong></td><td>14</td><td>White</td><td>White</td></tr>
+
+<tr><td><strong>Red Ground</strong></td><td>6</td><td>Black (paired with Red)</td><td>BNC shield</td></tr>
+
+<tr><td><strong>Green Ground</strong></td><td>7</td><td>Black (paired with Green)</td><td>BNC shield</td></tr>
+
+<tr><td><strong>Blue Ground</strong></td><td>8</td><td>Black (paired with Blue)</td><td>BNC shield</td></tr>
+
+<tr><td><strong>Sync Ground</strong></td><td>10</td><td>Black</td><td>BNC shield</td></tr>
+
+<tr><td><strong>DDC Data (I&sup2;C)</strong></td><td>12</td><td>Green/White (if present)</td><td>N/A</td></tr>
+
+<tr><td><strong>DDC Clock (I&sup2;C)</strong></td><td>15</td><td>Blue/White (if present)</td><td>N/A</td></tr>
+
+</table>
+
+<p><em>Note: In five-wire RGBHV BNC cable assemblies, each signal uses a separate coaxial cable with the shield serving as the ground return. The shield is typically connected to pin 10 (sync ground) and the chassis ground at the source end.</em></p>
+
+<hr>
+
+<h2>7. Connector Cross-Reference for RGBHV and Related Signals</h2>
+
+<p>Different generations of industrial display equipment use different physical connectors to carry RGBHV or related video signals. The following table helps identify which connector type corresponds to which signal standard, facilitating cable selection and adapter planning during retrofit projects.</p>
+
+<table>
+
+<tr><th>Signal Type</th><th>Common Connector</th><th>Pin Count</th><th>Form Factor</th><th>Typical Use</th></tr>
+
+<tr><td><strong>CGA</strong></td><td>DE-9</td><td>9 (2 rows)</td><td>D-subminiature</td><td>IBM PC/XT/AT original CGA, early CNC terminals</td></tr>
+
+<tr><td><strong>EGA</strong></td><td>DE-9</td><td>9 (2 rows)</td><td>D-subminiature</td><td>EGA cards and monitors (same connector as CGA)</td></tr>
+
+<tr><td><strong>VGA (RGBHV)</strong></td><td>DE-15 (HD-15)</td><td>15 (3 rows)</td><td>High-density D-sub</td><td>Most common PC and industrial VGA interface</td></tr>
+
+<tr><td><strong>RGBHV (BNC)</strong></td><td>BNC (5x)</td><td>1 per channel</td><td>Bayonet-coupled coaxial</td><td>Professional/broadcast, long cable runs, test equipment</td></tr>
+
+<tr><td><strong>RGBS (composite sync)</strong></td><td>BNC (4x) or RCA (4x)</td><td>1 per channel</td><td>Coaxial</td><td>Arcade monitors, legacy video walls, some PLC displays</td></tr>
+
+<tr><td><strong>DVI-I (analog + digital)</strong></td><td>DVI-I</td><td>29</td><td>DVI (flat-pin + cross-pin)</td><td>Carries analog RGBHV on the same pins as VGA plus digital TMDS</td></tr>
+
+<tr><td><strong>DVI-D (digital only)</strong></td><td>DVI-D</td><td>24</td><td>DVI (flat-pin only)</td><td>Digital-only output, no RGBHV analog pass-through</td></tr>
+
+<tr><td><strong>HDMI</strong></td><td>HDMI Type A</td><td>19</td><td>HDMI (flat, keyed)</td><td>Digital video + audio, backward compatible via adapters</td></tr>
+
+<tr><td><strong>SCART (Europe)</strong></td><td>SCART (P&#233;ritel)</td><td>21</td><td>Rectangular, shrouded</td><td>European legacy AV equipment, carries analog RGB+sync+audio</td></tr>
+
+<tr><td><strong>DisplayPort</strong></td><td>DisplayPort</td><td>20</td><td>Latching rectangular</td><td>Modern packetized digital, no native analog output</td></tr>
+
+</table>
+
+<p><em>Tip: When retrofitting industrial equipment from CGA/EGA to modern displays, the most common adapter chain is CGA DE-9 &rarr; VGA DE-15 (via converter box) &rarr; DVI/HDMI (via active adapter if needed). Direct passive cable adapters between CGA/EGA and VGA will not work because of the fundamental signal-type difference (digital TTL vs. analog).</em></p>
+
+<p>For technical consultation on signal conversion solutions, contact <strong>Kongto Technology</strong> at info@cncdisplay.com</p>
+
+
+
+            </div>
+
+
+
+<div class="share-buttons">
+
+    <div class="share-title">Share to:</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="Share to LinkedIn">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+            </svg>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="Share to Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="Share to Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="Copy Link">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>Copy Link</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToLinkedIn = function() {
+
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('Link copied to clipboard!');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('Link copied to clipboard!');
+
+        });
+
+    };
+
+})();
+
+</script>
+
+
+
+</article>
+
+    </main>
+
+
+
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+    <h3 style="margin-top:0;">Related Articles</h3>
+
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/en/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology</a></li><li><a href="/en/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html">FANUC A61L-0001-0093 LCD Display —CNC Upgrade Replacement Guide</a></li><li><a href="/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
+
+</section>
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/en/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/en/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/en/quote.html">Get a Quote</a> —Reply within 24 hours</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Kongto Technology</span>
+                <p>Industrial Video Display Solutions —CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+            </div>
+            <div class="footer-links">
+                <a href="/en/posts/">📄 Articles</a>
+                <a href="/en/brands/FANUC.html">FANUC</a>
+                <a href="/en/brands/Mitsubishi.html">Mitsubishi</a>
+                <a href="/en/brands/Siemens.html">Siemens</a>
+                <a href="/en/docs/">Downloads</a>
+                <a href="/en/about.html">About Us</a>
+            </div>
+            <p class="footer-copy">漏 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | info@cncdisplay.com</p>
+        </div>
+    </footer>
+
+</body>
+
 </html>
