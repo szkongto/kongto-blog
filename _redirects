@@ -1,4 +1,8 @@
 # 301 Redirects - CNC Display Solutions
+# Screaming Frog audit fixes (2026-06-29)
+/products/kt809-industrial-converter.html /posts/kt809-industrial-converter.html 301
+/products/kt819-industrial-converter.html /posts/kt819-industrial-converter.html 301
+/images/wechat-qr.png /images/wechat-qr.jpg 301
 /en/posts/FANUC_0i_System_Display_FAQ_Solutions.html /en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
 /en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
 /en/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html /en/posts/fanuc-a61l-0001-0093-lcd-replacement.html 301
