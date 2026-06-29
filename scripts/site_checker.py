@@ -144,6 +144,12 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
         elif len(title) > 60:
             result.warn(rel, 0, f"Title 过长 ({len(title)}字): {title[:60]}")
 
+    # FFFD (U+FFFD) 替换字符检测
+    fffd_count = content.count('�')
+    if fffd_count > 3:
+        result.error(rel, 0, f"包含 {fffd_count} 个 U+FFFD 替换字符（文件编码损坏）",
+                     fix="git restore from pre-corruption version")
+
     # Stub 文件跳过后续检查
     if is_stub:
         return "\n".join(lines) if fix else None
