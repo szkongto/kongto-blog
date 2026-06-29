@@ -139,18 +139,76 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
         title = title_match.group(1).strip()
         if not title:
             result.error(rel, 0, "`<title>` 标签为空")
-        elif title == "Redirecting...":
+        elif title == "Redirecting..." or title == "跳转中...":
             is_stub = True  # 跳转 stub 文件，跳过大部分检查
         elif len(title) > 60:
             result.warn(rel, 0, f"Title 过长 ({len(title)}字): {title[:60]}")
 
     # Stub 文件跳过后续检查
     if is_stub:
-        # 但还是要检查 stray /> 和编码
-        # (已经在上面检查过了)
         return "\n".join(lines) if fix else None
 
     # ─── 7. Meta Description ───
+    desc_match = re.search(r'<meta[^>]+name=["\']description["\'][^>]*content=["\']([^"\']*)["\']', content)
+    if not desc_match:
+        desc_match = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]*name=["\']description["\']', content)
+    if not desc_match:
+        result.warn(rel, 0, "缺少 `<meta name=\"description\">`")
+    else:
+        desc = desc_match.group(1)
+        if len(desc) < 50:
+            result.warn(rel, 0, f"Meta Description 过短 ({len(desc)}字): \"{desc}\"")
+        elif len(desc) > 200:
+            result.warn(rel, 0, f"Meta Description 过长 ({len(desc)}字)")
+
+    # ─── 8. 中文编码损坏检测 ───
+    # Phase 0a 批量替换脚本用 GBK 读取 UTF-8 文件导致中文被替换
+    corruption_markers = set('鍙戦偅绉鏄剧ず鍣崌绾柟妗娣卞湷甯傛睙浘绉戞妧鏈夐檺鍏稿凡涓嬭浇彇鎶ヤ环棰樼殑鎴戜滑')
+
+    def check_text_corruption(text, label=""):
+        """Check if text has encoding corruption, return (is_corrupted, sample)"""
+        cn = [c for c in text if '一' <= c <= '鿿']
+        if len(cn) < 2:
+            return False, ""
+        bad = sum(1 for c in cn if c in corruption_markers)
+        # Title/desc/nav: >10% corrupted = flag. Long blocks like schema: >5% = flag.
+        threshold = 0.05 if len(cn) > 50 else 0.10
+        if bad / len(cn) > threshold:
+            sample = ''.join(cn[:5])
+            return True, f"{label}: {bad}/{len(cn)} chars corrupted ({sample}...)"
+        return False, ""
+
+    # Check title tag
+    if title_match:
+        corrupted, sample = check_text_corruption(title_match.group(0), "title")
+        if corrupted:
+            result.error(rel, 0, f"中文编码损坏 - {sample}")
+
+    # Check meta description
+    if desc_match:
+        corrupted, sample = check_text_corruption(desc_match.group(0), "description")
+        if corrupted:
+            result.error(rel, 0, f"中文编码损坏 - {sample}")
+
+    # Check nav text (between > and <)
+    nav_texts = re.findall(r'>([^<]{2,30})<', content)
+    for nt in nav_texts[:10]:
+        corrupted, sample = check_text_corruption(nt)
+        if corrupted:
+            result.error(rel, 0, f"中文编码损坏 - nav文本: {nt[:30]}")
+            break
+
+    # Check schema JSON-LD for corruption (use split to avoid regex escaping issues)
+    for part in content.split('<script type="application/ld+json">'):
+        end = part.find('</script>')
+        if end > 0:
+            block = part[:end].strip()
+            corrupted, sample = check_text_corruption(block, "Schema")
+            if corrupted:
+                result.error(rel, 0, f"中文编码损坏 - {sample}")
+                break
+
+    # ─── 8. Meta Description ───
     desc_match = re.search(r'<meta[^>]+name=["\']description["\'][^>]*content=["\']([^"\']*)["\']', content)
     if not desc_match:
         desc_match = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]*name=["\']description["\']', content)
