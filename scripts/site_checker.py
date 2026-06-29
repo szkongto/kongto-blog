@@ -240,9 +240,13 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
     if "<nav>" in content or 'class="nav-links"' in content:
         # 只检查首页/品牌页/产品页/文章页的导航完整性
         is_main_page = any(p in rel for p in ["brands/", "products/", "posts/", "about", "index"])
+        # EN页面导航链接以 /en/ 开头，CN页面以 / 开头
+        nav_prefix = '/en/' if rel.startswith('en/') else '/'
         if is_main_page:
             for href, label in NAV_LINKS:
-                if f'href="{href}"' not in content:
+                # 检查 /en/ 或 / 两种前缀
+                check_href = nav_prefix + href.lstrip('/')
+                if f'href="{check_href}"' not in content and f'href="{href}"' not in content:
                     result.warn(rel, 0, f"导航缺少链接: {href}")
 
     # ─── 11. Hreflang检查 ───
