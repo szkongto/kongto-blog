@@ -1,0 +1,5 @@
+sessions/
+browser_profile_*/
+*.storage_state.json
+__pycache__/
+*.pyc

@@ -1,0 +1,242 @@
+[
+  {
+    "source": "CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html",
+    "title_cn": "CGA/EGA转RGBHV工业显示器改造指南",
+    "title_en": "",
+    "platforms": {
+      "csdn": {
+        "url": "https://blog.csdn.net/szkongto/article/details/162432181",
+        "date": "2026-06-29",
+        "status": "published"
+      },
+      "zhihu": {
+        "url": "https://zhuanlan.zhihu.com/p/2055068803126632912?just_published=2",
+        "date": "2026-06-29",
+        "status": "published"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Industrial_CNC_Display_Troubleshooting_Repair_Guide.html",
+    "title_cn": "工业控制器显示器故障排查与维修指南",
+    "title_en": "",
+    "platforms": {
+      "csdn": {
+        "url": "https://blog.csdn.net/szkongto/article/details/162432541?sharetype=blogdetail&sharerId=162432541&sharerefer=PC&sharesource=szkongto",
+        "date": "2026-06-29",
+        "status": "published"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Industrial_Display_Procurement_Selection_Guide.html",
+    "title_cn": "工业显示器采购与选型指南",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html",
+    "title_cn": "工业RGBHV信号分析",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Industrial_Video_Display_Color_Scanning_Technology.html",
+    "title_cn": "工业视频显示色彩与扫描技术",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html",
+    "title_cn": "视频信号转换系统",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Video_Signal_Converter_Buying_Guide.html",
+    "title_cn": "工业视频信号转换器选购指南",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html",
+    "title_cn": "数控系统中视频信号转换器应用指南",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html",
+    "title_cn": "CGA/EGA显示改造实战指南",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html",
+    "title_cn": "FANUC A61L-0001-0093 LCD升级",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html",
+    "title_cn": "RGBHV改造完整指南",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260503_FANUC_A61L_0001_0074_LCD.html",
+    "title_cn": "FANUC A61L-0001-0074 LCD升级",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260503_FANUC_A61L_0001_0086_LCD.html",
+    "title_cn": "FANUC A61L-0001-0086 LCD升级",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  },
+  {
+    "source": "article_20260503_FANUC_A61L_0001_0090_LCD.html",
+    "title_cn": "FANUC A61L-0001-0090 LCD升级",
+    "platforms": {
+      "csdn": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      },
+      "zhihu": {
+        "url": "skipped",
+        "date": "2026-06-29",
+        "status": "skipped"
+      }
+    },
+    "published_date": "2026-06-29"
+  }
+]

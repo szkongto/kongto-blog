@@ -410,3 +410,16 @@
 /en/brands/OKUMA /en/brands/OKUMA.html 301
 /brands/Siemens /brands/Siemens.html 301
 /en/brands/Siemens /en/brands/Siemens.html 301
+
+# === Fallback for unknown product URLs ===
+/products/vesa-mount-01 /index.html 301
+
+# === Broken Chinese-variant URL redirects (zh/ subdirectory, corrupted encoding) ===
+/zh/posts/faq_20260501_���ػ�����ʾ��������������TOP10.html /posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html 301
+/zh/posts/�Ǳ궩����ʾ��ϵ��.html /zh/posts/custom_industrial_display_series.html 301
+/zh/posts/article_20260501_FANUC_0iϵͳ��ʾ������������������.html /posts/fanuc-0i-display-faq-zh.html 301
+/zh/posts/article_20260507_MDT1283B_LCD�滻����.html /posts/article_20260507_MDT1283B_LCD.html 301
+/zh/posts/article_20260508_KTV104_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV104_custom_industrial_display.html 301
+/zh/posts/article_20260508_KTV148_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV148_custom_industrial_display.html 301
+/zh/posts/article_20260508_KTV800M_�Ǳ궩�ƹ�ҵ��ʾ��.html /zh/posts/article_20260508_KTV800M_custom_industrial_display.html 301
+/zh/posts/article_20260508_KTV804_�Ǳ궩�ƹ�ҵ��ʹ��ʾ��.html /zh/posts/article_20260508_KTV804_custom_industrial_display.html 301
