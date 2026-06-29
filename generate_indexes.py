@@ -51,23 +51,29 @@ EN_ICONS = {"fanuc":"🔧","mazak":"🔧","okuma":"🔧","haas":"🔧","siemens"
             "ktv":"📺","conv":"🔌","guide":"📚","comp":"⚖️","faq":"❓","news":"📰","guide2":"📚"}
 
 def extract_meta(filepath):
-    """Extract title, description, date from article HTML."""
+    """Extract title, description, date, canonical from article HTML."""
     try:
         with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
             content = f.read()
         title_m = re.search(r'<title>(.*?)</title>', content)
         desc_m = re.search(r'<meta name="description" content="([^"]*)"', content)
         date_m = re.search(r'(\d{4}-\d{2}-\d{2})', content[:2000])
+        canon_m = re.search(r'<link[^>]+rel="canonical"[^>]+href="([^"]*)"', content)
         title = title_m.group(1).strip() if title_m else os.path.basename(filepath)
         desc = desc_m.group(1).strip() if desc_m else ''
         date = date_m.group(1) if date_m else ''
+        canon = canon_m.group(1) if canon_m else ''
         # Clean title - remove site name suffix
-        for suffix in [' | 深圳市江图科技有限公司', ' | Kongto Technology', ' | 江图科技']:
+        for suffix in [' | 深圳市江图科技有限公司', ' | Kongto Technology', ' | 江图科技',
+                       ' — 深圳市江图科技有限公司']:
             if suffix in title:
                 title = title.replace(suffix, '')
-        return title, desc, date
+        # Truncate descriptions to 200 chars
+        if len(desc) > 200:
+            desc = desc[:197] + '...'
+        return title, desc, date, canon
     except:
-        return os.path.basename(filepath), '', ''
+        return os.path.basename(filepath), '', '', ''
 
 def classify(filename, categories):
     """Classify a file into a category."""
@@ -89,18 +95,33 @@ def generate_index(posts_dir, categories, icons, lang):
 
     classified = {}
     skip_count = 0
+    seen_canon = set()
     for f in files:
-        title, desc, date = extract_meta(os.path.join(posts_dir, f))
+        title, desc, date, canon = extract_meta(os.path.join(posts_dir, f))
         # Skip redirect stub files
         if title in ('Redirecting...', '跳转中...'):
             skip_count += 1
             continue
+        # Skip canonical aliases (page points to another URL as canonical)
+        if canon:
+            prefix = 'en/' if lang == 'en' else ''
+            expected = f"https://cncdisplay.com/{prefix}posts/{f}"
+            if canon != expected:
+                skip_count += 1
+                continue
         cat = classify(f, categories)
+        # Deduplicate by (category, normalized title)
+        norm_title = title.rstrip('.。').replace('—', '—').replace('－', '—')[:40]
+        key = (cat, norm_title)
+        if key in seen_canon:
+            skip_count += 1
+            continue
+        seen_canon.add(key)
         if cat not in classified:
             classified[cat] = []
         classified[cat].append((f, title, desc, date))
     if skip_count:
-        print(f"  Skipped {skip_count} redirect stubs in {posts_dir}")
+        print(f"  Skipped {skip_count} files in {posts_dir}")
 
     # Sort each category: newest first by filename date
     for cat in classified:
