@@ -169,7 +169,7 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
 
     # ─── 8. 中文编码损坏检测 ───
     # Phase 0a 批量替换脚本用 GBK 读取 UTF-8 文件导致中文被替换
-    corruption_markers = set('鍙戦偅绉鏄剧ず鍣崌绾柟妗娣卞湷甯傛睙浘绉戞妧鏈夐檺鍏稿凡涓嬭浇彇鎶ヤ环棰樼殑鎴戜滑')
+    corruption_markers = set('鍙戦偅绉鏄剧ず鍣崌绾柟妗娣卞湷甯傛睙浘绉戞妧鏈夐檺鍏稿凡涓嬭浇彇鎶ヤ环棰樼殑鎴戜滑脳掳')
 
     def check_text_corruption(text, label=""):
         """Check if text has encoding corruption, return (is_corrupted, sample)"""
