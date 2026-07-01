@@ -32,6 +32,9 @@
 - [Mazak](https://cncdisplay.com/brands/MAZAK.html) | [Okuma](https://cncdisplay.com/brands/OKUMA.html) | [Heidenhain](https://cncdisplay.com/brands/Heidenhain.html)
 - [Toshiba](https://cncdisplay.com/brands/Toshiba.html) | [Matsushita](https://cncdisplay.com/brands/Matsushita.html)
 
+## 产品列表 (续)
+- [批量采购与OEM定制](https://cncdisplay.com/wholesale.html): 阶梯价格，全定制服务
+
 ## 兼容查询
 - [CRT转LCD兼容性查询](https://cncdisplay.com/compatibility-matrix.html): 6品牌33+型号对照
 - [故障诊断: 黑屏无显示](https://cncdisplay.com/products/no-display.html)

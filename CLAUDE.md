@@ -70,6 +70,16 @@ git push
 - `/plan` — 修改前先出方案（跨文件必用）
 - `帮我审查这次修改` — 自动调用 reviewer 做对抗性审查
 
+## Forum Outreach Plan
+
+Forum outreach guide saved at `docs/forum-outreach-plan.md`:
+
+- Targets: Practical Machinist, CNCzone, Reddit (r/Machinists, r/CNC)
+- 2-3 replies/week per platform, 4-part reply structure (empathy -> troubleshoot -> solution -> offer)
+- Content templates for CRT flickering, blank display, LCD upgrade, comparison threads
+- 4:1 non-commercial to commercial post ratio; anti-detection measures (IP diversity, phrasing variation, rate limiting)
+- No affiliate links, no copy-paste, no multi-account
+
 ## 已知的 CI 警告（可忽略）
 
 - weixin:// 协议链接（微信 deep link，非HTTP）
