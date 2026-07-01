@@ -1,36 +1,34 @@
-browser_profile/
-hashnode_debug.png
-browser_profile_medium/
-images_backup_compressed/
-
-_archive_*/
-
-# Workspace meta files
-.consolidate-state.json
-openclaw/
-.qclaw-version
-.qclaw/
 
 # Temporary report files
-optimization_verification_report.txt
-*_audit*.md
-
 # Workspace files - never deploy
-.openclaw/
+# Workspace meta files
+*_audit*.md
+.consolidate-state.json
 .openclaw
+.openclaw/
+.qclaw-version
+.qclaw/
 AGENTS.md
+BOOTSTRAP.md
 HEARTBEAT.md
 IDENTITY.md
 MEMORY.md
 SOUL.md
 TOOLS.md
 USER.md
-BOOTSTRAP.md
+__pycache__/
+_archive_*/
 branch_info.json
-fix_*.py
-fix_*.ps1
+browser_profile/
+browser_profile_medium/
 cncdisplay_fix_*
-kongto-blog*
 en-blog-*
+fix_*.ps1
+fix_*.py
 fix_progress*
+hashnode_debug.png
+images_backup_compressed/
+kongto-blog*
 memory/
+openclaw/
+optimization_verification_report.txt
