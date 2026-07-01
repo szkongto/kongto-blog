@@ -1,33 +1,40 @@
 # CNC显示器CRT转LCD升级方案 - 江图科技
-> 江图科技提供即插即用的工业LCD替代模块，适用于FANUC发那科、三菱Mitsubishi、西门子Siemens、马扎克Mazak、大隈Okuma、哈斯HAAS等品牌的CNC数控系统CRT显示器升级。直接安装，无需改线，18个月质保。
+> 江图科技提供即插即用的工业LCD替代模块，适用于FANUC发那科、三菱、西门子、马扎克、大隈、哈斯、Heidenhain等品牌的CNC数控系统CRT显示器升级。工厂现货直发，2年质保。
 
 ## 产品列表
 
 ### FANUC A61L 系列
-- [A61L-0001-0072 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
-- [A61L-0001-0074 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
-- [A61L-0001-0076 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
-- [A61L-0001-0086 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
-- [A61L-0001-0090 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$350
-- [A61L-0001-0092 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$255
-- [A61L-0001-0093 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9寸单色CRT→8寸LCD，$155
-- [A61L-0001-0094 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
-- [A61L-0001-0095 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9寸彩色CRT→8寸LCD，$199
-- [A61L-0001-0096 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
-- [A61L-0001-0097 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14寸彩色CRT→12.1寸LCD，$350
+- [A61L-0001-0072 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0074 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14寸彩色CRT→LCD
+- [A61L-0001-0076 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0086 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0090 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0092 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0093 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9寸单色CRT→LCD
+- [A61L-0001-0094 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14寸彩色CRT→LCD
+- [A61L-0001-0095 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9寸彩色CRT→LCD
+- [A61L-0001-0096 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14寸彩色CRT→LCD
+- [A61L-0001-0097 LCD升级](https://cncdisplay.com/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14寸彩色CRT→LCD
 
-### 三菱Mitsubishi / 西门子Siemens / 哈斯HAAS / 马扎克Mazak / 大隈Okuma
-- [MDT962B LCD升级](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html): 兼容BM09DF/FCUA-CT100，$155
-- [6FC3988-7FA20 LCD升级](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 兼容SM0901/579417TA，$399
-- [HAAS 28HM-NM4 LCD升级](https://cncdisplay.com/en/products/haas-28hm-nm4-lcd-upgrade.html): 兼容93-5220C，$399
-- [Mazak MDT1283B LCD升级](https://cncdisplay.com/en/products/mazak-mdt1283b-lcd-upgrade.html): $355
-- [Mazak 14寸彩色CRT LCD升级](https://cncdisplay.com/en/products/mazak-14-inch-crt-lcd-upgrade.html): DR5614/C-5470NS等，$355
-- [Okuma OSP CRT LCD升级](https://cncdisplay.com/en/products/okuma-osp-crt-lcd-upgrade.html): $430
+### 其他品牌
+- [MDT962B LCD升级](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html): 三菱，$155
+- [6FC3988-7FA20 LCD升级](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 西门子
+- [6FC5103 LCD升级](https://cncdisplay.com/products/siemens-6fc5103-lcd-upgrade.html): 西门子
+- [HAAS LCD升级](https://cncdisplay.com/products/haas-28hm-nm4-lcd-upgrade.html): 哈斯
+- [Mazak 14寸LCD升级](https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html): 马扎克
+- [Mazak MDT1283B LCD升级](https://cncdisplay.com/products/mazak-mdt1283b-lcd-upgrade.html): 马扎克
+- [Okuma OSP LCD升级](https://cncdisplay.com/products/okuma-osp-crt-lcd-upgrade.html): 大隈
+- [Toshiba D9MM-11A LCD升级](https://cncdisplay.com/products/toshiba-d9mm-11a-lcd-upgrade.html): 东芝FANUC OEM
+- [Toshiba D14CM-01A LCD升级](https://cncdisplay.com/products/toshiba-d14cm-01a-lcd-upgrade.html): 东芝FANUC OEM
 
 ## 品牌页面
-- [FANUC](https://cncdisplay.com/brands/FANUC.html) | [三菱](https://cncdisplay.com/brands/Mitsubishi.html) | [西门子](https://cncdisplay.com/brands/Siemens.html)
-- [HAAS](https://cncdisplay.com/brands/HAAS.html) | [Mazak](https://cncdisplay.com/brands/MAZAK.html) | [Okuma](https://cncdisplay.com/brands/OKUMA.html)
+- [FANUC](https://cncdisplay.com/brands/FANUC.html) | [三菱](https://cncdisplay.com/brands/Mitsubishi.html) | [西门子](https://cncdisplay.com/brands/Siemens.html) | [HAAS](https://cncdisplay.com/brands/HAAS.html)
+- [Mazak](https://cncdisplay.com/brands/MAZAK.html) | [Okuma](https://cncdisplay.com/brands/OKUMA.html) | [Heidenhain](https://cncdisplay.com/brands/Heidenhain.html)
+- [Toshiba](https://cncdisplay.com/brands/Toshiba.html) | [Matsushita](https://cncdisplay.com/brands/Matsushita.html)
 
 ## 兼容查询
-- [CRT转LCD兼容性查询](https://cncdisplay.com/compatibility-matrix.html): 95+型号对照
+- [CRT转LCD兼容性查询](https://cncdisplay.com/compatibility-matrix.html): 6品牌33+型号对照
+- [故障诊断: 黑屏无显示](https://cncdisplay.com/products/no-display.html)
+- [故障诊断: 屏幕闪烁](https://cncdisplay.com/products/flickering-screen.html)
+- [故障诊断: 残影烧屏](https://cncdisplay.com/products/image-retention.html)
 - 邮箱: info@cncdisplay.com | 电话: +86-13686889647
