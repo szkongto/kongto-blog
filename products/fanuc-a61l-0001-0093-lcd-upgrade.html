@@ -145,7 +145,11 @@
       </select>
     </div>
     <div>
-      <label style="font-weight:600;font-size:0.9rem;">Shipping:</label>
+      <label style="font-weight:600;font-size:0.9rem;">Weight:</label>
+      <span id="productWeight" style="font-size:1.1rem;font-weight:600;"></span>
+    </div>
+    <div>
+      <label style="font-weight:600;font-size:0.9rem;">Shipping (DHL):</label>
       <span id="shippingCost" style="font-size:1.1rem;font-weight:600;">—</span>
     </div>
     <div>
@@ -160,20 +164,31 @@
 
 <script>
 (function() {
-  const WORKER_URL = 'https://cncdisplay-paypal.workers.dev';
+  const WORKER_URL = 'https://cncdisplay-paypal.workers.dev'; // UPDATE AFTER DEPLOY
   const CLIENT_ID = 'pZZE7aJYt_BHaE90VcuFZszvlropHBHtR9gOLd5O';
   let selectedShipping = null;
-  let selectedCost = 0;
+  let currentRates = [];
 
-  // Set product price from page
-  const priceEl = document.querySelector('.paypal-price');
+  // Read product price from page
   const productPrice = parseFloat(document.querySelector('.product-price')?.textContent?.replace(/[$,]/g,'') || '0');
-  if (priceEl) priceEl.textContent = '$' + productPrice.toFixed(2);
+  document.querySelector('.paypal-price').textContent = '$' + productPrice.toFixed(2);
 
-  // Load shipping countries
-  fetch(WORKER_URL + '/shipping-rates')
+  // Read product weight from spec table
+  let productWeight = 1.5; // default fallback
+  document.querySelectorAll('.spec-table tr').forEach(tr => {
+    const cells = tr.querySelectorAll('td');
+    if (cells.length >= 2 && cells[0].textContent.trim().includes('Weight') || cells[0].textContent.trim().includes('重量')) {
+      const w = parseFloat(cells[1].textContent.replace(/[^0-9.]/g,''));
+      if (w > 0) productWeight = w;
+    }
+  });
+  document.getElementById('productWeight').textContent = productWeight + 'kg';
+
+  // Load shipping rates for this product's weight
+  fetch(WORKER_URL + '/shipping-rates?weight=' + productWeight)
     .then(r => r.json())
     .then(rates => {
+      currentRates = rates;
       const sel = document.getElementById('shippingCountry');
       rates.forEach(r => {
         const opt = document.createElement('option');
@@ -185,19 +200,21 @@
   // Update total on country change
   document.getElementById('shippingCountry').addEventListener('change', function() {
     const code = this.value;
-    if (!code) { document.getElementById('shippingCost').textContent = '—'; document.getElementById('totalCost').textContent = '—'; selectedShipping = null; return; }
+    if (!code) {
+      document.getElementById('shippingCost').textContent = '—';
+      document.getElementById('totalCost').textContent = '—';
+      selectedShipping = null;
+      return;
+    }
     selectedShipping = code;
-    fetch(WORKER_URL + '/shipping-rates').then(r => r.json()).then(rates => {
-      const rate = rates.find(r => r.code === code);
-      if (rate) {
-        selectedCost = rate.cost;
-        document.getElementById('shippingCost').textContent = '$' + rate.cost;
-        document.getElementById('totalCost').textContent = '$' + (productPrice + rate.cost).toFixed(2);
-      }
-    });
+    const rate = currentRates.find(r => r.code === code);
+    if (rate) {
+      document.getElementById('shippingCost').textContent = '$' + rate.cost;
+      document.getElementById('totalCost').textContent = '$' + (productPrice + rate.cost).toFixed(2);
+    }
   });
 
-  // Load PayPal SDK
+  // Load PayPal SDK and render button
   const script = document.createElement('script');
   script.src = 'https://www.paypal.com/sdk/js?client-id=' + CLIENT_ID + '&currency=USD';
   script.onload = function() {
@@ -207,7 +224,7 @@
         return fetch(WORKER_URL + '/create-order', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ price: productPrice.toString(), shipping: selectedShipping }),
+          body: JSON.stringify({ price: productPrice.toString(), shipping: selectedShipping, weight: productWeight.toString() }),
         }).then(r => r.json()).then(d => d.orderId);
       },
       onApprove: function(data) {
@@ -226,23 +243,6 @@
 })();
 </script>
 
-</main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">江图科技 Kongto Technology</span>
-                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
-            </div>
-            <div class="footer-links">
-                <a href="/posts/">📄 技术文章</a>
-                <a href="/brands/FANUC.html">FANUC方案</a>
-                <a href="/brands/Mitsubishi.html">三菱方案</a>
-                <a href="/brands/Siemens.html">西门子方案</a>
-                <a href="/docs/">资料下载</a>
-                <a href="/about.html">关于我们</a>
-                <a href="/privacy.html">隐私政策</a>
-                <a href="/terms.html">服务条款</a>
-            </div>
             <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
         </div>
     </footer>
