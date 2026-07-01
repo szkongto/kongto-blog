@@ -98,89 +98,8 @@
                 <div class="product-price">$350 <span style="font-size:1rem;color:#666;">USD</span></div>
                 <p style="color:#28a745;font-weight:600;">In Stock — 2-Year Warranty</p>
                 <div class="cta-buttons"><a href="/en/quote.html" class="btn btn-primary" style="padding:14px 32px;">Get a Quote</a><a href="/en/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html" class="btn btn-secondary" style="padding:14px 32px;">Installation Guide</a></div>
-            </div>
-        </section>
-        <section>
-            <h2>Specifications: Original CRT vs Kongto LCD</h2>
-            <table class="spec-table">
-                <tr><th>Spec</th><th>Original CRT</th><th>Kongto LCD</th></tr>
-                <tr><td>Technology</td><td>14-inch Color CRT</td><td>TFT-LCD Industrial Panel</td></tr>
-                <tr><td>Screen Size</td><td>14-inch</td><td>12.1" LED-backlit LCD</td></tr>
-                <tr><td>Resolution</td><td>640x480</td><td><strong>800x600</strong></td></tr>
-                <tr><td>Brightness</td><td>~200 cd/m2</td><td><strong>350-450 cd/m2</strong></td></tr>
-                <tr><td>Lifespan</td><td>~15,000 hrs</td><td><strong>50,000+ hrs</strong></td></tr>
-                <tr><td>Power</td><td>25-30W</td><td><strong>8-12W</strong></td></tr>
-                <tr><td>Temperature</td><td>0~40C</td><td><strong>-10~+60C</strong></td></tr>
-                <tr><td>Interface</td><td>HONDA 20-pin</td><td>HONDA 20-pin (direct compatible)</td></tr>
-            <tr><td>Weight</td><td>~3.5kg</td><td>~3.5kg</td></tr>
-</table>
-        </section>
-        <section><h2>Compatible Systems</h2><ul>
-                    <li>FANUC 15T</li>
-                    <li>FANUC 10</li>
-                    <li>FANUC 10TE-F</li>
-                </ul></section>
-        <!-- Module 1: Problem Definition -->
-        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
-            <h2>Common FANUC A61L-0001-0074 CRT Failures</h2>
-            <p>The A61L-0001-0074 is a 14-inch color CRT on FANUC 10/15 series controls. Color CRTs develop distinct failure modes from their monochrome counterparts:</p>
-            <ul>
-                <li><strong>Missing one color or color shift</strong> — R/G/B driver transistor failure on the CRT neck board. Common on aging color displays.</li>
-                <li><strong>Dim / blurry image</strong> — CRT gun emission degradation. Color balance shifts as the three guns age unevenly.</li>
-                <li><strong>No display / dead unit</strong> — Flyback transformer or deflection failure. The CNC runs but the screen stays dark.</li>
-                <li><strong>Intermittent display</strong> — Cold solder joints on the yoke or neck board, typical after 20+ years of thermal cycling.</li>
-            </ul>
-            <p>The CNC control itself is typically fine. Our LCD module restores display without any control modifications.</p>
-        </section>
-        <!-- Module 5: Color Signal Wiring -->
-        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
-            <h2>Color CRT Signal Wiring (HONDA 20-Pin)</h2>
-            <p>Unlike monochrome A61L variants, the 0074 uses separate analog RGB (0.7V) with TTL sync.</p>
-            <table class="spec-table">
-                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
-                <tr><td>1</td><td>R</td><td>Red Video 0–0.7V</td></tr>
-                <tr><td>2</td><td>G</td><td>Green Video 0–0.7V (may carry CSYNC)</td></tr>
-                <tr><td>3</td><td>B</td><td>Blue Video 0–0.7V</td></tr>
-                <tr><td>4–5</td><td>GND</td><td>Video ground / Sync ground</td></tr>
-                <tr><td>6</td><td>HS</td><td>Horizontal Sync (TTL)</td></tr>
-                <tr><td>7</td><td>VS</td><td>Vertical Sync (TTL)</td></tr>
-                <tr><td>8</td><td>GND</td><td>Sync ground</td></tr>
-                <tr><td>9</td><td>+24V</td><td>DC Power (10–30V)</td></tr>
-                <tr><td>10</td><td>GND</td><td>Power ground</td></tr>
-            </table>
-            <p><strong>Note:</strong> Analog RGB input — our LCD handles this without sync combiner or level shifter.</p>
-        </section>
-        <!-- Module 6: FAQ -->
-        <section style="margin:2rem 0;" itemscope="" itemtype="https://schema.org/FAQPage">
-            <h2>Frequently Asked Questions</h2>
-            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
-                <h3 itemprop="name">Will this LCD work with a FANUC 10TE-F control?</h3>
-                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">Yes. The 10TE-F uses the same A61L-0001-0074 CRT interface as the 15T and base 10 models. The LCD module plugs directly into the existing HONDA 20-pin connector. No parameter changes required.</div>
-                </div>
-            </div>
-            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
-                <h3 itemprop="name">The CRT shows a pink tint. Will the LCD have the same issue?</h3>
-                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">No. A pink tint usually means the green gun on the CRT has failed. The CNC's video output is likely fine — the LCD reads the R/G/B signals directly from the control and displays accurate colors.</div>
-                </div>
-            </div>
-            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
-                <h3 itemprop="name">Installation time and difficulty?</h3>
-                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">10–15 minutes. Disconnect power, remove the CRT, mount the LCD, reconnect two keyed connectors, power on.</div>
-                </div>
-            </div>
-            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
-                <h3 itemprop="name">Warranty and support terms?</h3>
-                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">2-Year Warranty, lifetime support, worldwide shipping. Model compatibility verification recommended before ordering.</div>
-                </div>
-            </div>
-        </section>
-        <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Tech Support - Free Shipping Worldwide</p><p>Outright sale - no core exchange required</p></section>
-        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to replace your CRT?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686889647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Request Quote</a></section>
-    <!-- PayPal + Shipping Section — inject before </main> -->
+            
+<!-- PayPal + Shipping Section — inject before </main> -->
 <div class="paypal-section" style="margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e2e8f0;">
   <h3 style="margin-top:0;font-size:1.1rem;">🛒 Buy Now</h3>
 
@@ -301,7 +220,89 @@
                 <a href="/en/brands/Siemens.html">Siemens</a>
                 <a href="/en/docs/">Downloads</a>
                 <a href="/en/about.html">About Us</a>
+            </div></div>
+        </section>
+        <section>
+            <h2>Specifications: Original CRT vs Kongto LCD</h2>
+            <table class="spec-table">
+                <tr><th>Spec</th><th>Original CRT</th><th>Kongto LCD</th></tr>
+                <tr><td>Technology</td><td>14-inch Color CRT</td><td>TFT-LCD Industrial Panel</td></tr>
+                <tr><td>Screen Size</td><td>14-inch</td><td>12.1" LED-backlit LCD</td></tr>
+                <tr><td>Resolution</td><td>640x480</td><td><strong>800x600</strong></td></tr>
+                <tr><td>Brightness</td><td>~200 cd/m2</td><td><strong>350-450 cd/m2</strong></td></tr>
+                <tr><td>Lifespan</td><td>~15,000 hrs</td><td><strong>50,000+ hrs</strong></td></tr>
+                <tr><td>Power</td><td>25-30W</td><td><strong>8-12W</strong></td></tr>
+                <tr><td>Temperature</td><td>0~40C</td><td><strong>-10~+60C</strong></td></tr>
+                <tr><td>Interface</td><td>HONDA 20-pin</td><td>HONDA 20-pin (direct compatible)</td></tr>
+            <tr><td>Weight</td><td>~3.5kg</td><td>~3.5kg</td></tr>
+</table>
+        </section>
+        <section><h2>Compatible Systems</h2><ul>
+                    <li>FANUC 15T</li>
+                    <li>FANUC 10</li>
+                    <li>FANUC 10TE-F</li>
+                </ul></section>
+        <!-- Module 1: Problem Definition -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2;">
+            <h2>Common FANUC A61L-0001-0074 CRT Failures</h2>
+            <p>The A61L-0001-0074 is a 14-inch color CRT on FANUC 10/15 series controls. Color CRTs develop distinct failure modes from their monochrome counterparts:</p>
+            <ul>
+                <li><strong>Missing one color or color shift</strong> — R/G/B driver transistor failure on the CRT neck board. Common on aging color displays.</li>
+                <li><strong>Dim / blurry image</strong> — CRT gun emission degradation. Color balance shifts as the three guns age unevenly.</li>
+                <li><strong>No display / dead unit</strong> — Flyback transformer or deflection failure. The CNC runs but the screen stays dark.</li>
+                <li><strong>Intermittent display</strong> — Cold solder joints on the yoke or neck board, typical after 20+ years of thermal cycling.</li>
+            </ul>
+            <p>The CNC control itself is typically fine. Our LCD module restores display without any control modifications.</p>
+        </section>
+        <!-- Module 5: Color Signal Wiring -->
+        <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
+            <h2>Color CRT Signal Wiring (HONDA 20-Pin)</h2>
+            <p>Unlike monochrome A61L variants, the 0074 uses separate analog RGB (0.7V) with TTL sync.</p>
+            <table class="spec-table">
+                <tr><th>Pin</th><th>Signal</th><th>Description</th></tr>
+                <tr><td>1</td><td>R</td><td>Red Video 0–0.7V</td></tr>
+                <tr><td>2</td><td>G</td><td>Green Video 0–0.7V (may carry CSYNC)</td></tr>
+                <tr><td>3</td><td>B</td><td>Blue Video 0–0.7V</td></tr>
+                <tr><td>4–5</td><td>GND</td><td>Video ground / Sync ground</td></tr>
+                <tr><td>6</td><td>HS</td><td>Horizontal Sync (TTL)</td></tr>
+                <tr><td>7</td><td>VS</td><td>Vertical Sync (TTL)</td></tr>
+                <tr><td>8</td><td>GND</td><td>Sync ground</td></tr>
+                <tr><td>9</td><td>+24V</td><td>DC Power (10–30V)</td></tr>
+                <tr><td>10</td><td>GND</td><td>Power ground</td></tr>
+            </table>
+            <p><strong>Note:</strong> Analog RGB input — our LCD handles this without sync combiner or level shifter.</p>
+        </section>
+        <!-- Module 6: FAQ -->
+        <section style="margin:2rem 0;" itemscope="" itemtype="https://schema.org/FAQPage">
+            <h2>Frequently Asked Questions</h2>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Will this LCD work with a FANUC 10TE-F control?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">Yes. The 10TE-F uses the same A61L-0001-0074 CRT interface as the 15T and base 10 models. The LCD module plugs directly into the existing HONDA 20-pin connector. No parameter changes required.</div>
+                </div>
             </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">The CRT shows a pink tint. Will the LCD have the same issue?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">No. A pink tint usually means the green gun on the CRT has failed. The CNC's video output is likely fine — the LCD reads the R/G/B signals directly from the control and displays accurate colors.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Installation time and difficulty?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">10–15 minutes. Disconnect power, remove the CRT, mount the LCD, reconnect two keyed connectors, power on.</div>
+                </div>
+            </div>
+            <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;">
+                <h3 itemprop="name">Warranty and support terms?</h3>
+                <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">2-Year Warranty, lifetime support, worldwide shipping. Model compatibility verification recommended before ordering.</div>
+                </div>
+            </div>
+        </section>
+        <section style="background:#f0f7ff;padding:24px;border-radius:12px;margin:2rem 0;"><h2>Warranty & Service</h2><p><strong>18-Month Warranty</strong> - Lifetime Tech Support - Free Shipping Worldwide</p><p>Outright sale - no core exchange required</p></section>
+        <section class="cta" style="text-align:center;padding:3rem 1rem;"><h2>Ready to replace your CRT?</h2><p>info@cncdisplay.com | +86-13686889647 | <a href="https://wa.me/8613686889647">WhatsApp</a></p><a href="/en/quote.html" class="btn btn-primary btn-large">Request Quote</a></section>
+    
             <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
         </div>
     </footer>
