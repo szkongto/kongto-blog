@@ -408,3 +408,6 @@
 /en/brands/OKUMA /en/brands/OKUMA.html 301
 /brands/Siemens /brands/Siemens.html 301
 /en/brands/Siemens /en/brands/Siemens.html 301
+# Model split redirects
+/products/mazak-14-inch-crt-lcd-upgrade.html /products/mazak-dr5614-lcd-upgrade.html 301
+/en/products/mazak-14-inch-crt-lcd-upgrade.html /en/products/mazak-dr5614-lcd-upgrade.html 301
