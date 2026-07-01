@@ -4,19 +4,19 @@
 
 // Shipping rates — edit these as needed
 const SHIPPING = {
-  US: { name: 'United States', cost: 25 },
-  CA: { name: 'Canada', cost: 30 },
-  GB: { name: 'United Kingdom', cost: 35 },
-  DE: { name: 'Germany', cost: 35 },
-  FR: { name: 'France', cost: 35 },
-  IT: { name: 'Italy', cost: 35 },
-  ES: { name: 'Spain', cost: 35 },
-  JP: { name: 'Japan', cost: 20 },
-  KR: { name: 'South Korea', cost: 20 },
-  SG: { name: 'Singapore', cost: 18 },
-  AU: { name: 'Australia', cost: 30 },
-  CN: { name: 'China', cost: 10 },
-  DEFAULT: { name: 'Other Countries', cost: 40 },
+  US: { name: 'United States', cost: 45 },
+  CA: { name: 'Canada', cost: 50 },
+  GB: { name: 'United Kingdom', cost: 55 },
+  DE: { name: 'Germany', cost: 55 },
+  FR: { name: 'France', cost: 55 },
+  IT: { name: 'Italy', cost: 55 },
+  ES: { name: 'Spain', cost: 55 },
+  JP: { name: 'Japan', cost: 40 },
+  KR: { name: 'South Korea', cost: 40 },
+  SG: { name: 'Singapore', cost: 35 },
+  AU: { name: 'Australia', cost: 50 },
+  CN: { name: 'China', cost: 25 },
+  DEFAULT: { name: 'Other Countries', cost: 60 },
 }
 
 const PAYPAL_API = 'https://api-m.paypal.com' // Live
