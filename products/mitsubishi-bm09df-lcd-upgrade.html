@@ -122,7 +122,104 @@
             <p>本司承接CNC显示器批量供货及OEM定制订单，MOQ可议。工厂直发，交期短，品质稳定。欢迎来电来函咨询。</p>
             <p style="font-size:1.1rem;font-weight:bold;">📞 13686889647 | ✉️ info@cncdisplay.com</p>
         </div>
-    </main>
+    <!-- PayPal + Shipping Section — inject before </main> -->
+<div class="paypal-section" style="margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e2e8f0;">
+  <h3 style="margin-top:0;font-size:1.1rem;">🛒 Buy Now</h3>
+
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem;">
+    <div>
+      <label style="font-weight:600;font-size:0.9rem;">Product Price:</label>
+      <span class="paypal-price" style="font-size:1.4rem;font-weight:800;color:#FF6600;"></span>
+    </div>
+    <div>
+      <label for="shippingCountry" style="font-weight:600;font-size:0.9rem;">Ship to:</label>
+      <select id="shippingCountry" style="padding:8px 12px;border:2px solid #e2e8f0;border-radius:6px;font-size:0.9rem;">
+        <option value="">— Select destination —</option>
+      </select>
+    </div>
+    <div>
+      <label style="font-weight:600;font-size:0.9rem;">Shipping:</label>
+      <span id="shippingCost" style="font-size:1.1rem;font-weight:600;">—</span>
+    </div>
+    <div>
+      <label style="font-weight:600;font-size:0.9rem;">Total:</label>
+      <span id="totalCost" style="font-size:1.4rem;font-weight:800;color:#FF6600;">—</span>
+    </div>
+  </div>
+
+  <div id="paypal-button-container" style="max-width:400px;"></div>
+  <p style="font-size:0.8rem;color:#888;margin:0.5rem 0 0 0;">🔒 Secure checkout via PayPal. Credit/debit cards accepted.</p>
+</div>
+
+<script>
+(function() {
+  const WORKER_URL = 'https://cncdisplay-paypal.workers.dev';
+  const CLIENT_ID = 'pZZE7aJYt_BHaE90VcuFZszvlropHBHtR9gOLd5O';
+  let selectedShipping = null;
+  let selectedCost = 0;
+
+  // Set product price from page
+  const priceEl = document.querySelector('.paypal-price');
+  const productPrice = parseFloat(document.querySelector('.product-price')?.textContent?.replace(/[$,]/g,'') || '0');
+  if (priceEl) priceEl.textContent = '$' + productPrice.toFixed(2);
+
+  // Load shipping countries
+  fetch(WORKER_URL + '/shipping-rates')
+    .then(r => r.json())
+    .then(rates => {
+      const sel = document.getElementById('shippingCountry');
+      rates.forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r.code; opt.textContent = r.name + ' ($' + r.cost + ')';
+        sel.appendChild(opt);
+      });
+    });
+
+  // Update total on country change
+  document.getElementById('shippingCountry').addEventListener('change', function() {
+    const code = this.value;
+    if (!code) { document.getElementById('shippingCost').textContent = '—'; document.getElementById('totalCost').textContent = '—'; selectedShipping = null; return; }
+    selectedShipping = code;
+    fetch(WORKER_URL + '/shipping-rates').then(r => r.json()).then(rates => {
+      const rate = rates.find(r => r.code === code);
+      if (rate) {
+        selectedCost = rate.cost;
+        document.getElementById('shippingCost').textContent = '$' + rate.cost;
+        document.getElementById('totalCost').textContent = '$' + (productPrice + rate.cost).toFixed(2);
+      }
+    });
+  });
+
+  // Load PayPal SDK
+  const script = document.createElement('script');
+  script.src = 'https://www.paypal.com/sdk/js?client-id=' + CLIENT_ID + '&currency=USD';
+  script.onload = function() {
+    paypal.Buttons({
+      createOrder: function() {
+        if (!selectedShipping) { alert('Please select shipping destination first.'); return; }
+        return fetch(WORKER_URL + '/create-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ price: productPrice.toString(), shipping: selectedShipping }),
+        }).then(r => r.json()).then(d => d.orderId);
+      },
+      onApprove: function(data) {
+        return fetch(WORKER_URL + '/capture-order', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ orderId: data.orderID }),
+        }).then(r => r.json()).then(d => {
+          alert('Payment successful! Order ID: ' + d.id);
+          window.location.href = '/en/quote.html';
+        });
+      },
+      onError: function(err) { alert('Payment error. Please email us at info@cncdisplay.com'); }
+    }).render('#paypal-button-container');
+  };
+  document.head.appendChild(script);
+})();
+</script>
+
+</main>
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
