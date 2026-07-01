@@ -73,8 +73,13 @@ def main():
     seen = set()
 
     for root, dirs, files in os.walk('.'):
-        if 'seo_fix_package' in root or 'output' in root:
-            continue
+        # Skip non-content dirs
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in (
+            'node_modules', 'backlinks_daily', 'backlinks_output',
+            'seo_backup', '__pycache__', 'fonts', 'images',
+            'output', '_archive_audit', '_templates', 'patches',
+            'screaming_frog_reports'
+        )]
         for fname in files:
             if not fname.endswith('.html'):
                 continue
