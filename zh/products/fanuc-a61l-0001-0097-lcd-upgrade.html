@@ -172,18 +172,23 @@
   });
   document.getElementById('productWeight').textContent = productWeight + 'kg';
 
-  // Load shipping rates for this product's weight
-  fetch(WORKER_URL + '/shipping-rates?weight=' + productWeight)
-    .then(r => r.json())
-    .then(rates => {
-      currentRates = rates;
-      const sel = document.getElementById('shippingCountry');
-      rates.forEach(r => {
-        const opt = document.createElement('option');
-        opt.value = r.code; opt.textContent = r.name + ' ($' + r.cost + ')';
-        sel.appendChild(opt);
-      });
-    });
+  // Shipping rates (DHL reference - edit rates in workers/paypal-worker.js)
+  const RATES = [
+    {code:"CN",name:"China",cost:13},{code:"JP",name:"Japan",cost:23},
+    {code:"KR",name:"South Korea",cost:23},{code:"SG",name:"Singapore",cost:18},
+    {code:"US",name:"United States",cost:31},{code:"CA",name:"Canada",cost:33},
+    {code:"GB",name:"United Kingdom",cost:34},{code:"DE",name:"Germany",cost:34},
+    {code:"FR",name:"France",cost:34},{code:"IT",name:"Italy",cost:34},
+    {code:"ES",name:"Spain",cost:34},{code:"AU",name:"Australia",cost:31},
+    {code:"OT",name:"Other Countries",cost:43}
+  ];
+  currentRates = RATES;
+  const sel = document.getElementById('shippingCountry');
+  RATES.forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r.code; opt.textContent = r.name + ' ($' + r.cost + ')';
+    sel.appendChild(opt);
+  });
 
   // Update total on country change
   document.getElementById('shippingCountry').addEventListener('change', function() {
