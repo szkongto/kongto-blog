@@ -15,7 +15,7 @@
   Disallow: /
 
 /*.html
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https:; frame-src 'none'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms https://www.paypal.com https://www.paypalobjects.com https://*.paypal.com; style-src 'self' 'unsafe-inline' https://www.paypal.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https: https://cncdisplay-paypal.szkongto01.workers.dev; frame-src https://www.paypal.com https://www.paypalobjects.com https://*.paypal.com; object-src 'none'
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable
