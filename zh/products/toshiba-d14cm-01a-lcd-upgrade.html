@@ -255,7 +255,7 @@
   let productWeight = 1.5; // default fallback
   document.querySelectorAll('.spec-table tr').forEach(tr => {
     const cells = tr.querySelectorAll('td');
-    if (cells.length >= 2 && cells[0].textContent.trim().includes('Weight') || cells[0].textContent.trim().includes('重量')) {
+    if (cells.length >= 2 && (cells[0].textContent.trim().includes('Weight') || cells[0].textContent.trim().includes('重量'))) {
       const w = parseFloat(cells[1].textContent.replace(/[^0-9.]/g,''));
       if (w > 0) productWeight = w;
     }
