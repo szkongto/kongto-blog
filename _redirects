@@ -472,3 +472,9 @@
 /social_20260501_数控显示器升级市场动态与产品速递.html /index.html 301
 /used-display-recycling-faq-top10-zh.html /posts/used-display-recycling-faq-top10-zh.html 301
 # === End GSC 404 fixes ===
+
+# GSC "auto redirect" missing file fixes
+/en/posts/haas-vf-crt-lcd-replacement.html /en/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
+/en/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html /en/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
+/en/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html /en/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+/en/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade Solutions.html /en/brands/FANUC.html 301
