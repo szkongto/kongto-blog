@@ -109,7 +109,12 @@ export default {
         return new Response(JSON.stringify(list), { headers: { 'Content-Type': 'application/json', ...corsHeaders } })
       }
 
-      return new Response('Not Found', { status: 404 })
+      // Default: pass through to origin + add CSP
+      const originResp = await fetch(request)
+      const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' https://zz.bdstatic.com https://push.zhanzhang.baidu.com https://www.clarity.ms https://www.paypal.com https://www.paypalobjects.com https://*.paypal.com; style-src 'self' 'unsafe-inline' https://www.paypal.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https: https://cncdisplay-paypal.szkongto01.workers.dev; frame-src https://www.paypal.com https://www.paypalobjects.com https://*.paypal.com; object-src 'none'"
+      const newHeaders = new Headers(originResp.headers)
+      newHeaders.set('Content-Security-Policy', csp)
+      return new Response(originResp.body, { status: originResp.status, headers: newHeaders })
     } catch (e) {
       return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } })
     }

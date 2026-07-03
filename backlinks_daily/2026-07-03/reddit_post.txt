@@ -1,0 +1,3 @@
+TITLE: Okuma OSP 5020 display going bad — options?
+
+My Okuma OSP 5020 CRT is showing flyback transformer whine. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
