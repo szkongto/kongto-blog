@@ -483,3 +483,6 @@
 # Double-slash URL fixes
 /en//posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html /en/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html 301
 /en//posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html /en/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
+
+# Missing PPTX
+/docs/FANUC_CRT至LCD升级改造技术分享.pptx /index.html 301
