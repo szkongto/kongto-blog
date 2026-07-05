@@ -229,7 +229,6 @@
   document.getElementById('qtyDown').onclick = () => { if (qty > 1) { qty--; document.getElementById('qtyDisplay').textContent = qty; recalc(); }};
   document.getElementById('qtyUp').onclick = () => { qty++; document.getElementById('qtyDisplay').textContent = qty; recalc(); };
   document.getElementById('shippingCountry').onchange = function() { selectedCountry = this.value; recalc(); };
-  recalc();
 
   // PayPal SDK
   const s = document.createElement('script');
