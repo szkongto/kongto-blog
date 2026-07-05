@@ -286,9 +286,11 @@
     IT: { name:'Italy', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
     ES: { name:'Spain', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
     NL: { name:'Netherlands', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
-    DK:    DK: { name:'Denmark', bands:[27,33,37.5,43,49,55,61,67,79,92,105,118,131,144] },
+    GR: { name:'Greece', bands:[27,33,37.5,43,49,55,61,67,79,92,105,118,131,144] },
+    FI: { name:'Finland', bands:[27,33,37.5,43,49,55,61,67,79,92,105,118,131,144] },
+    DK: { name:'Denmark', bands:[27,33,37.5,43,49,55,61,67,79,92,105,118,131,144] },
     CH: { name:'Switzerland', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
-    CZ:    CZ: { name:'Czech Republic', bands:[34,40,46.8,54,62,70,78,86,100,116,132,148,164,180] },
+    CZ: { name:'Czech Republic', bands:[34,40,46.8,54,62,70,78,86,100,116,132,148,164,180] },
     SE: { name:'Sweden', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
     // Zone 2: North America — $38.80/1.5kg
     US: { name:'United States', bands:[28,34,38.8,44,50,56,62,68,80,94,108,122,136,150] },
@@ -296,11 +298,11 @@
     // Zone 3: Asia Pacific — $40.30/1.5kg
     AU: { name:'Australia', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
     KH: { name:'Cambodia', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
-    JP: { name:'Japan', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
+    JP: { name:'Japan', bands:[29,34,39.8,46,52,58,64,70,82,96,110,124,138,152] },
     KR: { name:'S.Korea', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
-    SG: { name:'Singapore', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
-    MY: { name:'Malaysia', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
-    TH: { name:'Thailand', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
+    SG: { name:'Singapore', bands:[21,25,28.9,33,38,43,48,53,63,73,83,93,103,113] },
+    MY: { name:'Malaysia', bands:[21,25,28.9,33,38,43,48,53,63,73,83,93,103,113] },
+    TH: { name:'Thailand', bands:[21,25,28.9,33,38,43,48,53,63,73,83,93,103,113] },
     // Zone 4: Rest of World — $52.30/1.5kg
     AF: { name:'Afghanistan', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
     AM: { name:'Armenia', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
@@ -308,14 +310,17 @@
     BR: { name:'Brazil', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
     CL: { name:'Chile', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
     CO: { name:'Colombia', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
-    IN: { name:'India', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
+    IN: { name:'India', bands:[44,52,60.8,70,80,90,100,110,130,150,170,190,210,230] },
     ZA: { name:'South Africa', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
-    MX: { name:'Mexico', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
-    IL: { name:'Israel', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
+    MX: { name:'Mexico', bands:[30,36,41.5,48,55,62,69,76,90,105,120,135,150,165] },
+    IQ: { name:'Iraq', bands:[32,38,44,50,58,66,74,82,96,112,128,144,160,176] },
+    IR: { name:'Iran', bands:[32,38,44,50,58,66,74,82,96,112,128,144,160,176] },
+    IL: { name:'Israel', bands:[32,38,44,50,58,66,74,82,96,112,128,144,160,176] },
     // Zone 5: Remote — $60.80/1.5kg (Bhutan etc)
     BT: { name:'Bhutan', bands:[44,52,60.8,70,80,90,100,110,130,150,170,190,210,230] },
     // Zone 4b: Africa — $49.10/1.5kg
-    EG:    EG: { name:'Egypt', bands:[36,43,49.1,56,64,72,80,88,104,120,136,154,172,190] },
+    ET: { name:'Ethiopia', bands:[36,43,49.1,56,64,72,80,88,104,120,136,154,172,190] },
+    EG: { name:'Egypt', bands:[36,43,49.1,56,64,72,80,88,104,120,136,154,172,190] },
     CD: { name:'Congo', bands:[36,43,49.1,56,64,72,80,88,104,120,136,154,172,190] },
     // (moved other zone 4 countries down)
         OT: { name:'Other', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
@@ -384,13 +389,13 @@
         const totalKg = qty * productWeight;
         const ship = getShipping(selectedCountry, totalKg);
         const total = ((productPrice * qty) + ship).toFixed(2);
-        return fetch('https://cncdisplay-paypal.szkongto01.workers.dev/create-order', {
+        return fetch('https://paypal-api.cncdisplay.com/create-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ price: (productPrice * qty).toFixed(2), shipping: selectedCountry, weight: totalKg.toString() }),
+          body: JSON.stringify({ total: total }),
         }).then(r=>r.json()).then(d=>d.orderId);
       },
       onApprove: function(data) {
-        return fetch('https://cncdisplay-paypal.szkongto01.workers.dev/capture-order', {
+        return fetch('https://paypal-api.cncdisplay.com/capture-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ orderId: data.orderID }),
         }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/en/quote.html'; });
@@ -437,7 +442,7 @@
 
 <script>
 (function() {
-  const WORKER_URL = 'https://cncdisplay-paypal.szkongto01.workers.dev'; // UPDATE AFTER DEPLOY
+  const WORKER_URL = 'https://paypal-api.cncdisplay.com'; // UPDATE AFTER DEPLOY
   const CLIENT_ID = 'AcLzEUh410L2XAxnzTf4NEr03gVzcVDagOJ2iSLKpZZE7aJYt_BHaE90VcuFZszvlropHBHtR9gOLd5O';
   let selectedShipping = null;
   let currentRates = [];
@@ -502,7 +507,7 @@
         return fetch(WORKER_URL + '/create-order', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ price: productPrice.toString(), shipping: selectedShipping, weight: productWeight.toString() }),
+          body: JSON.stringify({ total: total }),
         }).then(r => r.json()).then(d => d.orderId);
       },
       onApprove: function(data) {
