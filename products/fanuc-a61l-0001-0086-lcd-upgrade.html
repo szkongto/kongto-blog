@@ -358,14 +358,23 @@
   const productPrice = parseFloat(document.querySelector('.product-price')?.textContent?.replace(/[$,]/g,'') || '0');
   document.querySelector('.paypal-price').textContent = '$' + productPrice.toFixed(2);
 
-  // Read weight from spec table
-  document.querySelectorAll('.spec-table tr').forEach(tr => {
-    const cells = tr.querySelectorAll('td');
-    if (cells.length >= 2 && (cells[0].textContent.trim().includes('Weight') || cells[0].textContent.trim().includes('重量'))) {
-      const w = parseFloat(cells[1].textContent.replace(/[^0-9.]/g,''));
-      if (w > 0) productWeight = w;
-    }
-  });
+  // Read product weight from spec table (deferred until DOM ready)
+  function initWeight() {
+    document.querySelectorAll('.spec-table tr').forEach(tr => {
+      const cells = tr.querySelectorAll('td');
+      if (cells.length >= 2 && (cells[0].textContent.trim().includes('Weight') || cells[0].textContent.trim().includes('重量'))) {
+        const w = parseFloat(cells[1].textContent.replace(/[^0-9.]/g,''));
+        if (w > 0) productWeight = w;
+      }
+    });
+    document.getElementById('productWeight').textContent = productWeight + 'kg';
+    recalc();
+  }
+  if (document.querySelector('.spec-table')) {
+    initWeight();
+  } else {
+    document.addEventListener('DOMContentLoaded', initWeight);
+  }
 
   // Populate country dropdown
   const sel = document.getElementById('shippingCountry');
