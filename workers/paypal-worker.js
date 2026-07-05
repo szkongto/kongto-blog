@@ -46,6 +46,9 @@ export default {
           }),
         })
         const order = await orderResp.json()
+        if (!order.id) {
+          return new Response(JSON.stringify({ error: 'PayPal API error', details: order }), { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } })
+        }
         return new Response(JSON.stringify({ orderId: order.id }), { headers: { 'Content-Type': 'application/json', ...corsHeaders } })
       }
 

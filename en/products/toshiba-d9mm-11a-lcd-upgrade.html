@@ -140,7 +140,7 @@
 
 <script>
 (function() {
-  const CLIENT_ID = 'AcLzEUh410L2XAxnzTf4NEr03gVzcVDagOJ2iSLKpZZE7aJYt_BHaE90VcuFZszvlropHBHtR9gOLd5O';
+  const CLIENT_ID = 'ATA9xm7AUziU3FgSDP7iSTAFIpiidjk9kvfmavhlObwerZ7Wu-41EMKSaFo9kQuAq1GAX6lxOfuTTV03';
   let qty = 1, selectedCountry = null, productWeight = 1.5;
 
   // DHL Express weight-band rates (USD) per zone
@@ -254,7 +254,7 @@
   s.onload = function() {
     paypal.Buttons({
       createOrder: function() {
-        if (!selectedCountry) { alert('Please select shipping destination.'); return; }
+        if (!selectedCountry) { alert('Please select shipping destination.'); return Promise.reject(); }
         const totalKg = qty * productWeight;
         const ship = getShipping(selectedCountry, totalKg);
         const total = ((productPrice * qty) + ship).toFixed(2);
