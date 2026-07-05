@@ -1,3 +1,7 @@
 name = "cncdisplay-paypal"
 main = "paypal-worker.js"
-compatibility_date = "2025-01-01"
+compatibility_date = "2026-07-01"
+
+routes = [
+  { pattern = "paypal-api.cncdisplay.com/*", zone_name = "cncdisplay.com" }
+]

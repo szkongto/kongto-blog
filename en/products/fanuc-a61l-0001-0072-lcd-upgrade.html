@@ -248,13 +248,13 @@
         const totalKg = qty * productWeight;
         const ship = getShipping(selectedCountry, totalKg);
         const total = ((productPrice * qty) + ship).toFixed(2);
-        return fetch('https://cncdisplay-paypal.szkongto01.workers.dev/create-order', {
+        return fetch('https://paypal-api.cncdisplay.com/create-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ price: (productPrice * qty).toFixed(2), shipping: selectedCountry, weight: totalKg.toString() }),
+          body: JSON.stringify({ total: total }),
         }).then(r=>r.json()).then(d=>d.orderId);
       },
       onApprove: function(data) {
-        return fetch('https://cncdisplay-paypal.szkongto01.workers.dev/capture-order', {
+        return fetch('https://paypal-api.cncdisplay.com/capture-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ orderId: data.orderID }),
         }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/en/quote.html'; });

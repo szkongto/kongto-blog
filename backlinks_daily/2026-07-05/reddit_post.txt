@@ -1,0 +1,3 @@
+TITLE: FANUC CNC A61L-0001-0093 monitor failing — anyone switched to LCD?
+
+My FANUC A61L-0001-0093 CRT is showing dim display. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

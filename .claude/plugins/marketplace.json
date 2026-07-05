@@ -1,0 +1,32 @@
+{
+  "name": "claude-toolbox",
+  "owner": {
+    "name": "serpro69",
+    "url": "github.com/serpro69"
+  },
+  "metadata": {
+    "description": "Development workflows from claude-toolbox"
+  },
+  "plugins": [
+    {
+      "source": "./klaude-plugin",
+      "name": "kk",
+      "version": "0.18.4",
+      "author": {
+        "name": "serpro69",
+        "url": "github.com/serpro69"
+      },
+      "homepage": "https://serpro69.github.io/claude-toolbox/",
+      "repository": "https://github.com/serpro69/claude-toolbox",
+      "license": "ELv2",
+      "description": "Development workflow skills, commands, and hooks",
+      "keywords": [
+        "development",
+        "workflow",
+        "code-review",
+        "testing",
+        "documentation"
+      ]
+    }
+  ]
+}

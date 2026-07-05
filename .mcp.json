@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "brightdata": {
+      "url": "https://mcp.brightdata.com/sse?token=fdc67a7e-f98a-454c-bde5-7ef361905d0f"
+    }
+  }
+}

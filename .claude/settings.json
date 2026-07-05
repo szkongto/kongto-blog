@@ -1,0 +1,34 @@
+{
+  "enabledPlugins": {
+    "kk@claude-toolbox": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-toolbox": {
+      "source": {
+        "source": "github",
+        "repo": "serpro69/claude-toolbox"
+      }
+    }
+  },
+  "env": {
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "64000",
+    "MAX_MCP_OUTPUT_TOKENS": "64000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(echo *)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(sort:*)",
+      "Skill(kk:*)",
+      "Read(~/.claude/plugins/cache/claude-toolbox/*)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Read(./**/.env)",
+      "Read(.git/)"
+    ]
+  }
+}
