@@ -60,6 +60,49 @@ git push
 - /plan — 改前出方案（跨文件必用）
 - 帮我审查这次修改 — 调用 reviewer 做对抗性审查
 
+## Workflow 自动化指令
+
+### /seo-patrol — 每周SEO/GEO巡检
+
+运行技术SEO + GEO合规 + 内容缺口 + 性能检查，生成报告到 seo_reports/。
+
+```text
+/seo-patrol
+```
+
+### /competitor-radar — 竞品情报雷达
+
+抓取15+竞品数据 → AI分析 → 对比报告 → 行动建议。
+
+```text
+/competitor-radar
+```
+
+### /content-factory "文章主题" — 内容工厂
+
+一键完成：关键词调研 → 英文文章 → 中文版本 → Git推送。
+
+```text
+/content-factory "FANUC A61L-0001-0093 LCD upgrade complete guide"
+```
+
+### /market-research "品类/关键词" — 市场调研
+
+多平台（eBay/Amazon/AliExpress）品类分析 → 价格分布 → 机会点。
+
+```text
+/market-research "CNC display"
+```
+
+### /price "型号" — 定价×销量速查
+
+Amazon + eBay 实时价格 + 销量估算，适合开新店/上新定价。
+
+```text
+/price "FANUC A61L-0001-0093"
+/price "Mitsubishi MDT962B"
+```
+
 ## Forum Outreach Plan
 
 指南: docs/forum-outreach-plan.md

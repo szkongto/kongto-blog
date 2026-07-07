@@ -1,7 +1,8 @@
 {
   "mcpServers": {
     "brightdata": {
-      "url": "https://mcp.brightdata.com/sse?token=fdc67a7e-f98a-454c-bde5-7ef361905d0f"
+      "type": "url",
+      "url": "https://mcp.brightdata.com/mcp?token=fdc67a7e-f98a-454c-bde5-7ef361905d0f&pro=1&groups=ecommerce"
     }
   }
 }
