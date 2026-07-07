@@ -332,6 +332,8 @@
 
 # Redirect shells deleted → Worker 301
 /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html /en/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html 301
 
 # Final remaining 404s — Chinese-named URLs that don't exist on disk
 /posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html /posts/article_20260509_GBS_8219_RGB_to_VGA_Converter_CN.html 301
