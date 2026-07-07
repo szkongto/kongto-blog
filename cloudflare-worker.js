@@ -348,6 +348,7 @@ const REDIRECTS = {
   '/posts/article_20260508_KTV104_非标订制工业显示器.html': '/posts/article_20260508_KTV104_custom_industrial_display.html',
   '/posts/article_20260508_KTV148_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html': '/posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html',
   '/posts/article_20260508_KTV148_Custom_Industrial_Display.html': '/posts/article_20260508_KTV148_custom_industrial_display.html',
+  '/posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html': '/posts/article_20260508_KTV148_custom_industrial_display.html',
   '/posts/article_20260508_KTV148_非标定制工业显示器.html': '/posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html',
   '/posts/article_20260508_KTV148_非标订制工业显示器.html': '/posts/article_20260508_KTV148_custom_industrial_display.html',
   '/posts/article_20260508_KTV800M_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html': '/posts/article_20260508_KTV800M_Custom_Industrial_Display_CN.html',
