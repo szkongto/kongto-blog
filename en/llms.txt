@@ -52,7 +52,38 @@
 - [Mazak Mazatrol CRT to LCD Guide](https://cncdisplay.com/en/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html)
 - [Okuma OSP CRT to LCD Guide](https://cncdisplay.com/en/posts/okuma-osp-crt-to-lcd-upgrade-guide.html)
 
+## Signal Converters
+- [CGA/EGA/RGB to VGA Converter](https://cncdisplay.com/en/products/gbs-8219-cga-ega-rgb-to-vga-converter.html): Industrial-grade GBS-8219, $35
+- [RGB to HDMI Converter](https://cncdisplay.com/en/products/kt809-rgb-cga-ega-to-hdmi-converter.html): KT809 multi-format, $79
+- [RGBHV to VGA/HDMI Converter](https://cncdisplay.com/en/products/kt819-rgbhv-to-vga-hdmi-converter.html): KT819 with audio support, $89
+
+## Custom Industrial Displays
+- [KTV104 10.4-inch Industrial Display](https://cncdisplay.com/en/products/ktv104-industrial-display.html): 1024x768, VGA/HDMI/DVI
+- [KTV148 15-inch Industrial Display](https://cncdisplay.com/en/products/ktv148-industrial-display.html): 1024x768, IP65 front bezel
+- [KTV800M 8-inch Industrial Monitor](https://cncdisplay.com/en/products/ktv800m-industrial-monitor.html): 800x600, compact design
+
+## Case Studies
+- [Successful CRT to LCD Upgrades](https://cncdisplay.com/en/case-studies.html): Real-world installation cases
+- [FANUC CRT to LCD Retrofit Case Study](https://cncdisplay.com/en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html): Step-by-step field installation
+
+## Troubleshooting & Diagnostics
+- [CRT Dead or Flickering? Symptoms Guide](https://cncdisplay.com/en/crt-dead-symptoms.html): Diagnose common CRT failure modes
+- [FANUC Display Troubleshooting](https://cncdisplay.com/en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html): 0i/16i/18i series
+- [A61L Display Abnormality Guide](https://cncdisplay.com/en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html): A61L-specific issues
+- [Industrial CNC Display Repair Guide](https://cncdisplay.com/en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html): General repair methodology
+
+## FAQ & Comparison
+- [CRT Repair vs LCD Upgrade Cost Comparison](https://cncdisplay.com/en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html): $155 vs $500+ repair costs
+- [CRT Maintenance vs LCD Module Comparison](https://cncdisplay.com/en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html): Long-term TCO analysis
+- [FANUC CRT to LCD Upgrade Complete Guide](https://cncdisplay.com/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html): Everything you need to know
+
+## Glossary
+- [CNC Display Terminology](https://cncdisplay.com/en/glossary.html): CRT, LCD, TFT, CGA, EGA, RGB terms explained
+
 ## About
 - [About Kongto Technology](https://cncdisplay.com/en/about.html)
 - [Get a Quote](https://cncdisplay.com/en/quote.html)
+- [Compatibility Matrix](https://cncdisplay.com/en/compatibility-matrix.html): 95+ model cross-reference
+- [Downloads & Manuals](https://cncdisplay.com/en/docs/)
 - Contact: info@cncdisplay.com | +86-13686889647
+- Office: Shenzhen, Guangdong, China
