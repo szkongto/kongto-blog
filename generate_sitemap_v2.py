@@ -9,7 +9,7 @@ from datetime import datetime
 from urllib.parse import quote
 from collections import Counter
 
-BASE = r"C:\Users\Administrator\WorkBuddy\2026-06-15-17-02-27\repo"
+BASE = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://cncdisplay.com"
 
 EXCLUDE = [
