@@ -31,6 +31,12 @@
   "image": "https://cncdisplay.com/images/MDT962B_MDT962B-1A.jpg",
   "offers": {
     "@type": "Offer", "price": "199.00", "priceCurrency": "USD",
+        "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["CN","US","DE","JP","KR","SG","IN","GB","FR","IT"] },
+      "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 7, "unitCode": "DAY" } }
+    },
     "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "CN", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 7, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/FreeReturn"},
     "availability": "https://schema.org/InStock",
     "url": "https://cncdisplay.com/en/products/mitsubishi-mdt962b-lcd-upgrade.html"
