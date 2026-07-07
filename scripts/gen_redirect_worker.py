@@ -77,61 +77,59 @@ entries_str = '\n'.join(entries)
 
 worker_js = f'''// Cloudflare Worker — cncdisplay.com 301 Redirect Engine
 // Auto-generated from _redirects — do not edit directly.
-// Deploy: Cloudflare Dashboard → Workers & Pages → Create Worker → paste
+// Service Worker format (compatible with Dashboard-created workers)
 
 const REDIRECTS = {{
 {entries_str}
 }};
 
-// Normalise a URL path: decode percent-encoding once, strip trailing slash (except root)
+// Normalise a URL path: decode percent-encoding once, collapse double slashes
 function normalise(p) {{
   try {{ p = decodeURIComponent(p); }} catch(e) {{}}
-  // Collapse multiple slashes to single
   p = p.replace(/\\/\\/+/g, '/');
   return p;
 }}
 
-export default {{
-  async fetch(request) {{
-    const url = new URL(request.url);
-    let path = url.pathname;
+addEventListener('fetch', event => {{
+  const request = event.request;
+  const url = new URL(request.url);
+  let path = url.pathname;
 
-    // Skip root
-    if (path === '/' || path === '') {{
-      return fetch(request);
-    }}
-
-    // Try exact match first
-    const exact = REDIRECTS[path];
-    if (exact) {{
-      const dest = exact.startsWith('http') ? exact : `${{url.origin}}${{exact}}`;
-      return Response.redirect(dest, 301);
-    }}
-
-    // Try normalised (decoded) match
-    const normalised = normalise(path);
-    if (normalised !== path) {{
-      const match = REDIRECTS[normalised];
-      if (match) {{
-        const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
-        return Response.redirect(dest, 301);
-      }}
-    }}
-
-    // Try without trailing slash
-    if (path.length > 1 && path.endsWith('/')) {{
-      const withoutSlash = path.slice(0, -1);
-      const match = REDIRECTS[withoutSlash] || REDIRECTS[normalise(withoutSlash)];
-      if (match) {{
-        const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
-        return Response.redirect(dest, 301);
-      }}
-    }}
-
-    // Pass through to origin (GitHub Pages)
-    return fetch(request);
+  // Skip root
+  if (path === '/' || path === '') {{
+    return event.respondWith(fetch(request));
   }}
-}};
+
+  // Try exact match first
+  const exact = REDIRECTS[path];
+  if (exact) {{
+    const dest = exact.startsWith('http') ? exact : `${{url.origin}}${{exact}}`;
+    return event.respondWith(Response.redirect(dest, 301));
+  }}
+
+  // Try normalised (decoded) match
+  const normalised = normalise(path);
+  if (normalised !== path) {{
+    const match = REDIRECTS[normalised];
+    if (match) {{
+      const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
+      return event.respondWith(Response.redirect(dest, 301));
+    }}
+  }}
+
+  // Try without trailing slash
+  if (path.length > 1 && path.endsWith('/')) {{
+    const withoutSlash = path.slice(0, -1);
+    const match = REDIRECTS[withoutSlash] || REDIRECTS[normalise(withoutSlash)];
+    if (match) {{
+      const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
+      return event.respondWith(Response.redirect(dest, 301));
+    }}
+  }}
+
+  // Pass through to origin (GitHub Pages)
+  event.respondWith(fetch(request));
+}});
 '''
 
 with open(DST, 'w', encoding='utf-8') as f:
