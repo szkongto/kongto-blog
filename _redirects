@@ -335,6 +335,25 @@
 /posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
 /posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html /en/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html 301
 
+# Deleted EN stub pages → product pages (GSC discovered-not-indexed 404s)
+/en/posts/fanuc-a61l-0001-0074-lcd-replacement.html /en/products/fanuc-a61l-0001-0074-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0086-lcd-replacement.html /en/products/fanuc-a61l-0001-0086-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0090-lcd-replacement.html /en/products/fanuc-a61l-0001-0090-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0092-lcd-replacement.html /en/products/fanuc-a61l-0001-0092-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0093-lcd-replacement.html /en/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0094-lcd-replacement.html /en/products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0095-lcd-replacement.html /en/products/fanuc-a61l-0001-0095-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0096-lcd-replacement.html /en/products/fanuc-a61l-0001-0096-lcd-upgrade.html 301
+/en/posts/fanuc-a61l-0001-0097-lcd-replacement.html /en/products/fanuc-a61l-0001-0097-lcd-upgrade.html 301
+/en/posts/mazak-cd1472d1m-lcd-replacement.html /en/products/mazak-cd1472-lcd-upgrade.html 301
+/en/posts/mazak-mdt-1283b-lcd-replacement.html /en/products/mazak-mdt1283b-lcd-upgrade.html 301
+/en/posts/mitsubishi-bm09df-lcd-replacement.html /en/products/mitsubishi-bm09df-lcd-upgrade.html 301
+/en/posts/mitsubishi-mdt962b-lcd-replacement.html /en/products/mitsubishi-mdt962b-lcd-upgrade.html 301
+/en/posts/okuma-osp-crt-lcd-replacement.html /en/products/okuma-osp-crt-lcd-upgrade.html 301
+/en/posts/sharp-aiqa8dsp40-lcd-replacement.html /en/products/mazak-aiqa8dsp40-lcd-upgrade.html 301
+/en/posts/siemens-6fc3998-7fa20-lcd-replacement.html /en/products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+/en/posts/siemens-sm0901-lcd-replacement.html /en/products/siemens-sm0901-lcd-upgrade.html 301
+
 # Final remaining 404s — Chinese-named URLs that don't exist on disk
 /posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html /posts/article_20260509_GBS_8219_RGB_to_VGA_Converter_CN.html 301
 /posts/article_20260509_KT809_工业转换器.html /posts/article_20260509_KT809_Industrial_Converter_CN.html 301
