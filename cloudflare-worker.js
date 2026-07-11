@@ -18,7 +18,6 @@ const REDIRECTS = {
   '/cdn-cgi/l/email-protection': '/posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html',
   '/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html': '/index.html',
   '/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html': '/index.html',
-  '/docs/': '/index.html',
   '/docs/CNC_CRT_to_LCD_Cross_数控换液晶对照全表.pdf': '/index.html',
   '/docs/CNC_to_LCD_Model_List.docx': '/index.html',
   '/docs/FANUC_A61L-0093_CRT显示器故障解析与LCD改造方案.pdf': '/index.html',
