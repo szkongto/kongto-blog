@@ -101,7 +101,6 @@
 /baidu_verify_codeva-MOcuLxbSCp.html /index.html 301
 /docs/ /index.html 301
 /docs/CNC_to_LCD_Model_List.docx /index.html 301
-/posts/ /posts/article_20260508_Haas_CRT_LCD_Case.html 301
 /posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html /posts/article_20260508_KTV148_Custom_Industrial_Display.html 301
 /posts/FANUC_A61L_0001_0094_LCD_CNC_Upgrade_Replacement.html /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
 /posts/FANUC_A61L_0001_0095_LCD_CNC_Upgrade_Replacement.html /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
@@ -130,7 +129,6 @@
 /posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%A6%E6%91%B8%E5%B1%8F%E4%B8%8E%E5%B7%A5%E6%8E%A7%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE.html /posts/Industrial_Display_Procurement_Selection_Guide.html 301
 /posts/%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E7%B3%BB%E5%88%97.html /posts/custom_industrial_display_series.html 301
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8_%E8%AE%A9%E8%80%81%E6%97%A7CNC%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%84%95%E5%8F%91%E6%96%B0%E6%B4%BB%E5%8A%9B.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
-/brands/ /brands/FANUC.html 301
 /brands/ /brands/FANUC.html 301
 /posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
 /posts/article_20260506_Mitsubishi_FCUA-CT100_Interface_Guide.html /posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html 301
@@ -206,7 +204,6 @@
 /posts/video-signal-converters-in-cnc-zh.html /index.html 301
 /posts/数控显示器升级市场动态与产品速递.html /index.html 301
 /posts/江图科技推出FANUC数控显示器LCD升级解决方案.html /brands/FANUC.html 301
-/products /index.html 301
 /sitemap.html /index.html 301
 /images/0097_crt.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
 /images/0097_interfaces.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
@@ -225,7 +222,6 @@
 /images/mazak_dr5614_lcd_front.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
 /images/mazak_dr5614_lcd_rear.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
 /images/siemens-sm0901-upgrade-kit.jpg /posts/siemens-sinumerik-display-troubleshooting-zh.html 301
-/posts/ /index.html 301
 /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html /brands/FANUC.html 301
 /posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html /index.html 301
 /posts/Custom_Industrial_Display_Series.html /index.html 301
@@ -328,7 +324,6 @@
 /posts/siemens-vs-fanuc-cnc-display-comparison.html /posts/siemens-vs-fanuc-cnc-display-comparison-zh.html 301
 /posts/used-display-recycling-faq-top10-zh.html /posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html 301
 /posts/非标订制显示器系列.html /index.html 301
-/products /index.html 301
 
 # Redirect shells deleted → Worker 301
 /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
