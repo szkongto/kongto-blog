@@ -16,7 +16,7 @@ from urllib.parse import urlparse, unquote
 ROOT = Path(__file__).resolve().parent.parent.parent  # repo root
 SKIP_DIRS = {'.git', '.github', '_archive_audit', 'node_modules',
              'backlinks_output', 'backlinks_daily', 'schema', 'css',
-             'images', 'fonts', 'output', 'patches', '.claude', '_templates'}
+             'images', 'fonts', 'output', 'patches', '.claude', '_templates', 'en_bak'}
 
 STATIC_EXTS = {'jpg', 'jpeg', 'png', 'gif', 'svg', 'webp', 'ico', 'bmp',
                'css', 'js', 'json', 'xml', 'txt', 'pdf', 'zip', 'exe',
