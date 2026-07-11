@@ -511,3 +511,14 @@
 
 # Missing PPTX
 /docs/FANUC_CRT至LCD升级改造技术分享.pptx /index.html 301
+
+# Phase 0b: /en/docs/ → /docs/
+/en/docs/ /docs/ 301
+/en/docs/index.html /docs/index.html 301
+/en/docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology.pdf /docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology.pdf 301
+/en/docs/CNC_to_LCD_Model_List.docx /docs/CNC_to_LCD_Model_List.docx 301
+/en/docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf /docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf 301
+/en/docs/FANUC_A61L-0001-0096.pdf /docs/FANUC_A61L-0001-0096.pdf 301
+/en/docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx /docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx 301
+/en/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf /docs/Kongto_CRT_LCD_Upgrade_Guide.pdf 301
+/en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf /docs/MDT-1283_CRT_to_LCD_V2.62.pdf 301
