@@ -7,8 +7,8 @@
     <meta name="description" content="Mazak 14英寸彩色CRT转LCD升级方案。兼容DR5614、C-5470、C-5470NS、AIQA8DSP40、26S-14O19L、HM-12PDB、MDT1216、D72MA001840。适用于Mazatrol T-Plus控制系统。即插即用，$355。">
     <link rel="canonical" href="https://cncdisplay.com/zh/products/mazak-dr5614-lcd-upgrade.html">
     <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/products/mazak-dr5614-lcd-upgrade.html">
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/en/products/mazak-dr5614-lcd-upgrade.html">
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/en/products/mazak-dr5614-lcd-upgrade.html">
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/products/mazak-dr5614-lcd-upgrade.html">
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/products/mazak-dr5614-lcd-upgrade.html">
     <link rel="stylesheet" href="/css/style.css?v=7">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Mazak DR5614 CRT转LCD升级方案 | DR5614 C-5470NS">
@@ -32,7 +32,7 @@
     "@type": "Offer", "price": "355.00", "priceCurrency": "USD", "validFrom": "2026-07-08",
     "priceValidUntil": "2027-12-31",
     "availability": "https://schema.org/InStock",
-    "url": "https://cncdisplay.com/products/mazak-dr5614-lcd-upgrade.html",
+    "url": "https://cncdisplay.com/zh/products/mazak-dr5614-lcd-upgrade.html",
     "shippingDetails": {
       "@type": "OfferShippingDetails",
       "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
@@ -78,7 +78,7 @@
             <div class="lang-switch">
                 <a href="/zh/products/mazak-14-inch-crt-lcd-upgrade.html" lang="zh" class="lang-zh">中文</a>
                 <span class="divider">|</span>
-                <a href="/en/products/mazak-dr5614-lcd-upgrade.html" lang="en" class="lang-en">English</a>
+                <a href="/products/mazak-dr5614-lcd-upgrade.html" lang="en" class="lang-en">English</a>
             
 </div>
         </nav>
@@ -92,7 +92,7 @@
                 <p>14英寸彩色CRT转TFT-LCD即插即用升级方案。无需修改CNC参数，15-30分钟安装。</p>
                 <div class="product-price">$355 <span style="font-size:1rem;color:#666;">USD</span></div>
                 <p style="color:#28a745;font-weight:600;">现货 — 2年质保</p>
-                <div class="cta-buttons"><a href="/zh/quote.html" class="btn btn-primary" style="padding:14px 32px;">获取报价</a><a href="/en/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html" class="btn btn-secondary">安装指南</a></div>
+                <div class="cta-buttons"><a href="/zh/quote.html" class="btn btn-primary" style="padding:14px 32px;">获取报价</a><a href="/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html" class="btn btn-secondary">安装指南</a></div>
             
 <!-- PayPal + Shipping Section -->
 <div class="paypal-section" style="margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e2e8f0;">
@@ -260,7 +260,7 @@
         return fetch('https://paypal-api.cncdisplay.com/capture-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ orderId: data.orderID }),
-        }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/en/quote.html'; });
+        }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/quote.html'; });
       },
       onError: function() { alert('Payment error. Email us at info@cncdisplay.com'); }
     }).render('#paypal-button-container');

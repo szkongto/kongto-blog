@@ -16,6 +16,8 @@ EXCLUDE = [
     "404.html",
     "baidu_verify_",
     "test.txt",
+    "_archive_",
+    "_templates/",
 ]
 
 def get_git_lastmod(filepath):
@@ -45,11 +47,11 @@ def get_priority(rel_path):
     if rel_path.endswith('index.html'):
         return "1.0"
     if 'about.html' in rel_path or 'author.html' in rel_path:
-        return "0.8" if 'en/' not in rel_path else "0.7"
+        return "0.8" if 'zh/' not in rel_path else "0.7"
     if 'brands/' in rel_path:
-        return "0.8" if 'en/' not in rel_path else "0.7"
+        return "0.8" if 'zh/' not in rel_path else "0.7"
     if 'posts/' in rel_path:
-        return "0.7" if 'en/' not in rel_path else "0.6"
+        return "0.7" if 'zh/' not in rel_path else "0.6"
     if 'docs/' in rel_path:
         return "0.6"
     return "0.7"
@@ -74,7 +76,7 @@ def main():
 
     for root, dirs, files in os.walk(BASE):
         # Skip backup / hidden folders
-        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('images_backup', '__pycache__')]
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('images_backup', '__pycache__', 'en_bak', '_archive_audit', '_templates')]
 
         for f in files:
             if not f.endswith('.html'):
@@ -118,7 +120,7 @@ def main():
         url = item['url']
         if url == 'index.html' or url == '':
             return (0, '')
-        if url.startswith('en/'):
+        if url.startswith('zh/'):
             return (2, url)
         return (1, url)
 

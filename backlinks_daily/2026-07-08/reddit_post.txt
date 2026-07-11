@@ -1,0 +1,3 @@
+TITLE: Mazak C-5470NS display going bad — options?
+
+My Mazak C-5470NS CRT is showing image retention / burn-in. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
