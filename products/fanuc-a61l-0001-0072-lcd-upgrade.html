@@ -74,7 +74,56 @@
   ],
   "totalTime": "PT30M"
 }</script>
-    </head>
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will this LCD work on both Series 6M (milling) and 6T (turning) controls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both 6M and 6T controls output the same video format through the A61L-0001-0072 display interface. The LCD module reads the video signal and sync timings directly from the control — it is compatible with both machine types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The Series 6 control is very old. Will the LCD work with its low-resolution video output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The LCD module is designed to lock onto the 640×400 resolution and 15–18 kHz horizontal scan rate used by FANUC Series 6 controls. It will display the image correctly at the native resolution without any scaling artifacts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The CRT is completely dead. Is the CNC control still functional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. The CRT is a separate display component powered by its own high-voltage supply. When the CRT fails, the CNC control continues to generate video output — you just cannot see it. Our LCD module connects directly to the control's video driver board and will display the signal immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Installation difficulty for a shop-floor maintenance technician?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "15 minutes. Remove the CRT housing (4 screws), unplug the two connectors (HONDA 20-pin + DC power), mount the LCD, reconnect the same connectors, and power on. No soldering, no parameter changes, no special tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warranty period and support do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2-Year Warranty, lifetime technical support, worldwide shipping. Verify compatibility with our matrix before ordering."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>    <header>
         <nav>
             <a href="/" class="logo">Kongto Technology</a>

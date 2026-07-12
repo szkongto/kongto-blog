@@ -103,7 +103,80 @@
   "totalTime": "PT30M"
 }
 </script>
-    </head>
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the LCD replacement work with all FANUC CNC models that use the A61L-0001-0093 CRT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The LCD module uses the same HONDA 20-pin connector and TTL-level signal protocol as the original CRT. It is a drop-in replacement for any machine originally equipped with the A61L-0001-0093, including FANUC 0, 0-Mate, 0i-A/B/C/D, 16i, 18i, and 21i series controls. No parameter changes, adapter cables, or signal converters are required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I lose any CNC functionality after replacing the CRT with LCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The LCD module presents exactly the same video signal interface to the CNC control as the original CRT. All on-screen displays (position, program, offset, parameter, alarm, diagnostic screens) function identically. The LCD uses the same resolution timing and sync rates. The only difference is a clearer, brighter, and flicker-free image."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the installation time and difficulty level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Installation takes 10–15 minutes for a technician familiar with CNC cabinets. Steps: (1) power off the machine, (2) remove the four screws securing the CRT housing, (3) disconnect the HONDA 20-pin connector and 24V power wires, (4) mount the LCD module in the same opening, (5) reconnect the same connectors, (6) power on and verify. No soldering, no parameter changes, no special tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the LCD image quality compare to the original CRT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The LCD provides 800×600 resolution (vs 640×400 on the original CRT), 350–450 cd/m² brightness (vs 200 cd/m²), and a 50,000+ hour lifespan (vs ~15,000 hours for the CRT). Text and characters are sharper with no geometric distortion. There is no flicker at any refresh rate. The display is readable even under direct sunlight on the shop floor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warranty comes with the A61L-0001-0093 LCD module?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard 2-Year Warranty covering manufacturing defects. In-stock items ship within 24 hours. Worldwide shipping. Technical support is available via email (info@cncdisplay.com) or WhatsApp (+86-13686889647). Return within 7 days if incompatible (verify model compatibility first)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my Fanuc A61L-0001-0093 CRT monitor blinking or flickering, and how do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A blinking or flickering Fanuc CRT is typically caused by aging high-voltage flyback transformers inside the original 9-inch CRT display. The most reliable fix is to replace the obsolete CRT with a plug-and-play LCD upgrade. Our LCD retrofit modules feature automated horizontal/vertical frequency synchronization that eliminates screen flickering instantly without rewiring. No temporary CRT repair will last more than 6-12 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it cheaper to repair my old CNC CRT or upgrade to an LCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Based on real customer data, CRT repair is significantly more expensive long-term. A typical Fanuc 0-TC CRT required 4 repairs in 18 months totaling over $1,800, plus over a week of machine downtime. An LCD upgrade costs $155-$350 one-time, lasts 50,000+ hours with zero maintenance, and installs in under 15 minutes. Case studies show 5-year savings of over 98% when upgrading instead of repairing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a standard consumer LCD monitor to replace my Fanuc CNC CRT display?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard consumer LCD monitors cannot recognize the low-frequency RGB analog signals (MDA/CGA/EGA timing) that legacy Fanuc CNC systems output. They will display an \"Unsupported Signal\" error. Consumer monitors also lack the 20-pin Honda connector and cannot withstand shop-floor vibrations, oil mist, and high temperatures. You need an industrial-grade CRT-to-LCD retrofit kit with proprietary timing firmware and original connector compatibility."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>    <header>
         <nav>
             <a href="/" class="logo">Kongto Technology</a>
