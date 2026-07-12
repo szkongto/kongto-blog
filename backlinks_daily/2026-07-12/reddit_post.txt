@@ -1,0 +1,3 @@
+TITLE: How hard is Mitsubishi BM09DF CRT to LCD swap?
+
+My Mitsubishi BM09DF CRT is showing flickering screen. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

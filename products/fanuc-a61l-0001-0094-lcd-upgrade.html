@@ -283,7 +283,7 @@
         </section>
         <section>
             <h2>Specifications: Original CRT vs Kongto LCD</h2>
-            <table class="spec-table">
+            <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
                 <tr><th>Spec</th><th>Original CRT</th><th>Kongto LCD</th></tr>
                 <tr><td>Technology</td><td>14-inch Color CRT</td><td>TFT-LCD Industrial Panel</td></tr>
                 <tr><td>Screen Size</td><td>14-inch</td><td>12.1" LED-backlit LCD</td></tr>
@@ -294,7 +294,7 @@
                 <tr><td>Temperature</td><td>0~40C</td><td><strong>-10~+60C</strong></td></tr>
                 <tr><td>Interface</td><td>HONDA 20-pin</td><td>HONDA 20-pin (direct compatible)</td></tr>
             <tr><td>Weight</td><td>~3.5kg</td><td>~3.5kg</td></tr>
-</table>
+</table></div>
         </section>
         <section><h2>Compatible Systems</h2><ul>
                     <li>FANUC Series 6</li>
@@ -319,7 +319,7 @@
         <section style="margin:2rem 0;padding:1.5rem;background:#fafafa;border-radius:8px;border:1px solid #e0e0e0;">
             <h2>Color CRT Signal Wiring (HONDA 20-Pin)</h2>
             <p>Unlike the monochrome A61L variants that use a single video channel, the A61L-0001-0094 color CRT carries separate R/G/B signals plus composite sync. Our LCD module handles both color and monochrome inputs on the same connector — plug and play, no jumper changes.</p>
-            <table class="spec-table">
+            <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
                 <tr><th>Pin</th><th>Signal</th><th>Description</th><th>Notes</th></tr>
                 <tr><td>1</td><td>R (Red Video)</td><td>Red analog video 0–0.7V</td><td>75 ohm terminated</td></tr>
                 <tr><td>2</td><td>G (Green Video)</td><td>Green analog video 0–0.7V</td><td>Also carries CSYNC on some machines</td></tr>
@@ -332,7 +332,7 @@
                 <tr><td>9</td><td>+24V</td><td>DC Power Input</td><td>10–30V DC input range</td></tr>
                 <tr><td>10</td><td>GND</td><td>Power ground</td><td>Return for +24V</td></tr>
                 <tr><td>11–20</td><td>NC / GND</td><td>Spare or shield ground</td><td>Varies by machine build</td></tr>
-            </table>
+            </table></div>
             <p style="margin-top:0.75rem;"><strong>Note:</strong> The A61L-0001-0094 uses analog RGB (0.7V p-p) with separate TTL sync — standard VGA-compatible signaling. Our LCD module accepts this directly. If your machine uses composite sync on green (RGsB), the LCD handles that automatically.</p>
         </section>
         <!-- Module 6: FAQ -->
@@ -395,6 +395,7 @@
         </div>
     
             <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
         </div>
     </footer>
 </body>
