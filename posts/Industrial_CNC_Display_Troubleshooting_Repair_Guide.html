@@ -273,7 +273,7 @@
 
 <p>Many CNC controllers and industrial displays report specific error codes through their diagnostic interface. The table below lists common display-related error codes and their meanings.</p>
 
-<div class="table-wrapper"><table class="spec-table">
+<div class="table-wrapper"><div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
 
 <tr><th>Error Code</th><th>System</th><th>Meaning</th><th>Likely Cause</th><th>Solution</th></tr>
 
@@ -293,7 +293,7 @@
 
 <tr class="even-row"><td>ALM 03</td><td>Okuma OSP</td><td>CRT horizontal deflection fault</td><td>Horizontal output transistor shorted or flyback transformer failure</td><td>CRT models only: replace horizontal output transistor; consider LCD retrofit</td></tr>
 
-</table></div>
+</table></div></div>
 
 <div class="info-box"><strong>Note:</strong> Error code numbering varies by manufacturer and controller generation. Always verify against your specific machine's maintenance manual for exact code definitions.</div>
 
@@ -369,7 +369,7 @@
 
 <p>Use the following decision table to quickly narrow down the root cause of common display failures.</p>
 
-<div class="table-wrapper"><table class="spec-table">
+<div class="table-wrapper"><div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
 
 <tr><th>Symptom</th><th>First Check</th><th>Possible Cause</th><th>Solution</th></tr>
 
@@ -389,7 +389,7 @@
 
 <tr class="even-row"><td>Image shifted, cannot center</td><td>Does the image have black borders on one or more sides?</td><td>Horizontal/vertical sync polarity mismatch; CRT deflection yoke shifted; auto-adjust circuit failure</td><td>Try auto-adjust via OSD; for CRTs, adjust yoke position; for LCDs check EDID timing</td></tr>
 
-</table></div>
+</table></div></div>
 
 <h2>4. Common Failure Solutions</h2>
 
@@ -489,7 +489,7 @@ An Okuma OSP-P200 lathe with a 12.1-inch LCD showed a single horizontal line of 
 
 <p>The following table lists the essential test equipment for diagnosing industrial display faults and their approximate price ranges.</p>
 
-<div class="table-wrapper"><table class="spec-table">
+<div class="table-wrapper"><div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
 
 <tr><th>Tool / Instrument</th><th>What It Measures</th><th>Typical Price Range (CNY)</th><th>Recommended for</th></tr>
 
@@ -513,7 +513,7 @@ An Okuma OSP-P200 lathe with a 12.1-inch LCD showed a single horizontal line of 
 
 <tr class="even-row"><td>Logic Analyzer (8-16 channel)</td><td>Digital bus signals (SPI, I2C, parallel RGB)</td><td>500 - 3,000</td><td>Debugging communication between controller and display driver board</td></tr>
 
-</table></div>
+</table></div></div>
 
 <div class="info-box"><strong>Tip:</strong> For most field diagnosis of CNC display issues, a good digital multimeter and a basic oscilloscope cover approximately 85% of fault-finding scenarios. The remaining equipment is primarily needed for bench-level repair of display PCBs.</div>
 
@@ -704,6 +704,7 @@ An Okuma OSP-P200 lathe with a 12.1-inch LCD showed a single horizontal line of 
                 <a href="/about.html">About Us</a>
             </div>
             <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
         </div>
     </footer>
 
