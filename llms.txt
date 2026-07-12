@@ -68,6 +68,7 @@
 - [FANUC A61L Series CRT to LCD Guide](https://cncdisplay.com/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html)
 - [Mitsubishi MDT962B CRT to LCD Guide](https://cncdisplay.com/posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html)
 - [Siemens Sinumerik CRT to LCD Guide](https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html)
+- [Siemens 810T/820T CRT to LCD Guide](https://cncdisplay.com/posts/siemens-810t-820t-crt-lcd-upgrade-guide.html): 810T GA2/GA3, 820T, 6FC3988-7FA20 replacement
 - [Mazak Mazatrol CRT to LCD Guide](https://cncdisplay.com/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html)
 - [Okuma OSP CRT to LCD Guide](https://cncdisplay.com/posts/okuma-osp-crt-to-lcd-upgrade-guide.html)
 
