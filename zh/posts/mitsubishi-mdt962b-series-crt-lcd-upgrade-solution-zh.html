@@ -481,7 +481,18 @@
 
             flex-shrink: 0;
 
+        
+
+        .diag-item .diag-icon::before {
+            content: "\2713";
+            color: #28a745;
+            font-weight: bold;
         }
+
+        .diag-item.diag-warn .diag-icon::before {
+            content: "\26A0";
+            color: #dc3545;
+        }}
 
         .diag-item p { margin: 0; color: #333; line-height: 1.5; }
 
@@ -1055,7 +1066,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">⏱️</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>暖机缓慢</strong><br>开机后需5–10分钟屏幕才能看清；图像持续不稳定</p>
 
@@ -1063,7 +1074,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">🔅</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>亮度极低</strong><br>整体画面昏暗；亮度和对比度调至最大也无济于事；屏幕发黄</p>
 
@@ -1071,7 +1082,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">↔️</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>几何失真</strong><br>画面垂直滚动或水平扭曲；图像随温度变化而偏移</p>
 
@@ -1079,7 +1090,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">🔊</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>异响</strong><br>高压变压器发出高频啸叫，或老化元器件产生烧焦气味</p>
 
@@ -1087,7 +1098,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">⬜</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>局部/完全黑屏</strong><br>仅显示单条水平或垂直线，或完全没有图像—显示器完全失效</p>
 
@@ -1095,7 +1106,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">⚡</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>闪烁或抖动</strong><br>图像不稳定且明显闪烁；字符清晰度严重受损，导致眼睛疲劳</p>
 

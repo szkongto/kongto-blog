@@ -478,7 +478,18 @@
 
             flex-shrink: 0;
 
+        
+
+        .diag-item .diag-icon::before {
+            content: "\2713";
+            color: #28a745;
+            font-weight: bold;
         }
+
+        .diag-item.diag-warn .diag-icon::before {
+            content: "\26A0";
+            color: #dc3545;
+        }}
 
         .diag-item p { margin: 0; color: #333; line-height: 1.5; }
 
@@ -1137,7 +1148,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#9201;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Slow warm-up</strong><br>Takes 5—0 minutes after power-on before the screen becomes readable</p>
 
@@ -1145,7 +1156,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#12777;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Excessive dimming</strong><br>Overall image is dim; maxing out brightness and contrast does not help</p>
 
@@ -1153,7 +1164,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#8596;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Geometry distortion</strong><br>Content scrolls vertically or distorts horizontally; image shifts with temperature</p>
 
@@ -1161,7 +1172,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#128266;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Abnormal noise</strong><br>High-pitched whining from the high-voltage transformer or burning smell from aging components</p>
 
@@ -1169,7 +1180,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#9744;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Partial/complete blackout</strong><br>Only a single horizontal or vertical line visible, or no image at all</p>
 
@@ -1177,7 +1188,7 @@
 
             <div class="diag-item">
 
-                <span class="diag-icon">&#10060;</span>
+                <span class="diag-icon"></span>
 
                 <p><strong>Flickering or jitter</strong><br>Unstable image with visible flicker; character readability severely compromised</p>
 
