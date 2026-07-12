@@ -1,0 +1,452 @@
+[
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0072",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 6M/6T",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0072-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0074",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "FANUC 0/0i/16i/18i/21i",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0074-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0076",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 6/6B/6BII",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0076-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0077",
+    "size_type": "12\" Color CRT",
+    "cnc_system": "FANUC 6 Series",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/quote.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0086",
+    "size_type": "8.4\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0090",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0-TC/0-MC",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0090-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0092",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0092-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0093",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i/OM-D",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0094",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "FANUC 0i/16i/18i",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0094-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0095",
+    "size_type": "9\" Color CRT",
+    "cnc_system": "FANUC 0i/16i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0095-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0096",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "FANUC 0i/Power Mate",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0096-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "A61L-0001-0097",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "FANUC 0i/16i/18i",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0097-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "MDT947B-1A",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/fanuc-a61l-0001-0092-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "D9MM-11A-0093",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/toshiba-d9mm-11a-lcd-upgrade.html"
+  },
+  {
+    "brand": "Toshiba",
+    "crt_model": "D9MM-11A",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i (OEM)",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/toshiba-d9mm-11a-lcd-upgrade.html"
+  },
+  {
+    "brand": "Toshiba",
+    "crt_model": "D14CM-01A",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "FANUC 16/18 (OEM)",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/toshiba-d14cm-01a-lcd-upgrade.html"
+  },
+  {
+    "brand": "Toshiba",
+    "crt_model": "KF-M7099H",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i (OEM)",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/toshiba-d9mm-11a-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "MDT962B",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M64/E60",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mitsubishi-mdt962b-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "MDT962B-1A",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M64/E60",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mitsubishi-mdt962b-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "MDT962B-4A",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M64/E60",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mitsubishi-mdt962b-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "BM09DF",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi E60/E68",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mitsubishi-bm09df-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "FCUA-CT100",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M500/M520",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mitsubishi-fcua-ct100-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "MDT947B",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M3/M310",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/quote.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "MDT1283B",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Mitsubishi M64/M3/M300",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/mazak-mdt1283b-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mitsubishi",
+    "crt_model": "BM14RTA",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "Mitsubishi M700/M70",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/quote.html"
+  },
+  {
+    "brand": "Siemens",
+    "crt_model": "6FC3988-7FA20",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "SINUMERIK 810/820",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html"
+  },
+  {
+    "brand": "Siemens",
+    "crt_model": "SM0901 / 579417TA",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "SINUMERIK 810M",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/siemens-sm0901-lcd-upgrade.html"
+  },
+  {
+    "brand": "Siemens",
+    "crt_model": "6FC5103-0AB01",
+    "size_type": "15\" Color CRT",
+    "cnc_system": "SINUMERIK 840D",
+    "lcd_replacement": "Kongto 15\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/siemens-6fc5103-lcd-upgrade.html"
+  },
+  {
+    "brand": "Siemens",
+    "crt_model": "6FC3997-7FA20",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "SINUMERIK 840C",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/quote.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "DR5614",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "Mazatrol T-32/T-PLUS",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/mazak-dr5614-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "C-5470NS",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "Mazatrol M-32/M-PLUS",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/mazak-c5470ns-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "AIQA8DSP40",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "Mazatrol T-32/640",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/mazak-aiqa8dsp40-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "CD1472-D1M",
+    "size_type": "14\" Color CRT",
+    "cnc_system": "Mazatrol T-Plus/M-Plus/Fusion 640",
+    "lcd_replacement": "Kongto 12.1\" TFT-LCD",
+    "resolution": "1024x768",
+    "status": "Available",
+    "url": "/en/products/mazak-cd1472-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "MDT-1283B-1A",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Mazatrol T-2/T-3/M-2",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/mazak-mdt1283b-lcd-upgrade.html"
+  },
+  {
+    "brand": "Mazak",
+    "crt_model": "TR-120S9C",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "Mazatrol T-32/M-32 (Matsushita)",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/brands/Matsushita.html"
+  },
+  {
+    "brand": "Okuma",
+    "crt_model": "OSP 5000 CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "OSP 5000",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/okuma-osp-crt-lcd-upgrade.html"
+  },
+  {
+    "brand": "Okuma",
+    "crt_model": "OSP 5020 CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "OSP 5020",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/okuma-osp-crt-lcd-upgrade.html"
+  },
+  {
+    "brand": "Okuma",
+    "crt_model": "OSP 7000 CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "OSP 7000",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/okuma-osp-crt-lcd-upgrade.html"
+  },
+  {
+    "brand": "Haas",
+    "crt_model": "VF Series 9\" CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Haas Classic Control",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/haas-28hm-nm4-lcd-upgrade.html"
+  },
+  {
+    "brand": "Haas",
+    "crt_model": "VF Series 12\" CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Haas Classic Control",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/haas-28hm-nm4-lcd-upgrade.html"
+  },
+  {
+    "brand": "Haas",
+    "crt_model": "SL Series CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Haas NGC",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/haas-28hm-nm4-lcd-upgrade.html"
+  },
+  {
+    "brand": "Haas",
+    "crt_model": "ST Series CRT",
+    "size_type": "12\" Monochrome CRT",
+    "cnc_system": "Haas NGC",
+    "lcd_replacement": "Kongto 10.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/products/haas-28hm-nm4-lcd-upgrade.html"
+  },
+  {
+    "brand": "Heidenhain",
+    "crt_model": "BE211",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "TNC 310/320",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/brands/Heidenhain.html"
+  },
+  {
+    "brand": "Heidenhain",
+    "crt_model": "BE411",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "TNC 410/415",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/brands/Heidenhain.html"
+  },
+  {
+    "brand": "Heidenhain",
+    "crt_model": "BE510",
+    "size_type": "9\" Color CRT",
+    "cnc_system": "TNC 425/430",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/en/brands/Heidenhain.html"
+  }
+]
