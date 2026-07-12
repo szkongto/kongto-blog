@@ -1,5 +1,8 @@
 # 301 Redirects - CNC Display Solutions
 # Screaming Frog audit fixes (2026-06-29)
+
+# /guides/ -> /docs/ 规范路径统一
+/guides/ttl-rgb-signal-pinout-guide.html /docs/ttl-rgb-signal-pinout-guide.html 301
 /products/kt809-industrial-converter.html /posts/kt809-industrial-converter.html 301
 /products/kt819-industrial-converter.html /posts/kt819-industrial-converter.html 301
 /images/wechat-qr.png /images/wechat-qr.jpg 301
