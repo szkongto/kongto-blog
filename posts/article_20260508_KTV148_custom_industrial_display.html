@@ -437,7 +437,7 @@
 
         modal.className = 'wechat-modal';
 
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img width="400" height="300" loading="lazy" src="/images/qr.webp" alt="QR Code"></div>' + qrcodeUrl + '" alt="QR Code"><p>Open WeChat to scan and share</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>WeChat Share</h3><img width="400" height="300" loading="lazy" src="/images/qr.webp" alt="QR Code" style="height:auto;"></div>' + qrcodeUrl + '" alt="QR Code"><p>Open WeChat to scan and share</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
 
         document.body.appendChild(modal);
 
