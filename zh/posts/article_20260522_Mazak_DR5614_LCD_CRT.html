@@ -122,7 +122,7 @@
 <p>DR5614 CRT 显示器由 Data Ray 公司为 Mazak 授权生产，采用15针 Molex 信号接口，支持 Mazak 专用时序（Mazak Special Timing），广泛应用于 Mazatrol T-32、M-32、T-2、M-2、T Plus、M Plus 等控制系统。根据工控设备运维数据统计，该型号显示器被安装在超过50,000台马扎克数控车床和加工中心上（数据来源：Mazak 服务报告 2010-2020年）。</p>
 <p>随着设备运行年限超过20年（大部分 DR5614 设备为1995-2005年间投产），CRT显示器普遍出现显像管老化、色彩失真、高压电路故障等问题。原厂 Data Ray 已于2012年停产该型号，市场上流通的翻新件故障率高达58%。深圳市江图科技有限公司基于工业级 TFT-LCD 技术，研发出 DR5614 专用 LCD 替代方案，在100%保留原装接口和安装尺寸的前提下，实现 CRT 到 LCD 的无缝替换。</p>
 
-<img width="400" height="300" fetchpriority="high" decoding="async" src="https://cncdisplay.com/images/mazak_dr5614_crt.jpg" alt="马扎克 DR5614 原装CRT显示器" class="article-img" loading="lazy">
+<img width="400" height="300" fetchpriority="high" decoding="async" src="https://cncdisplay.com/images/mazak_dr5614_crt.jpg" alt="马扎克 DR5614 原装CRT显示器" class="article-img" loading="lazy" style="height:auto;">
 <p><em>图1：马扎克 Mazak DR5614 原装14英寸彩色CRT显示器（已老化） | 图片来源：Kongto Technology</em></p>
 
 <h2>二、DR5614 CRT显示器核心痛点数据分析</h2>
@@ -183,7 +183,7 @@
         var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
         var modal = document.createElement('div');
         modal.className = 'wechat-modal';
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img decoding="async" src="' + qrUrl + '" alt="QR Code" loading="lazy"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img decoding="async" src="' + qrUrl + '" alt="QR Code" loading="lazy" style="height:auto;"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
         document.body.appendChild(modal);
     };
     window.shareToFacebook = function() { window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400'); };
