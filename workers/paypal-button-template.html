@@ -166,7 +166,7 @@
         return fetch('https://paypal-api.cncdisplay.com/capture-order', {
           method:'POST', headers:{'Content-Type':'application/json'},
           body: JSON.stringify({ orderId: data.orderID }),
-        }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/en/quote.html'; });
+        }).then(r=>r.json()).then(d=>{ alert('Payment successful! Order: ' + d.id); window.location.href='/quote.html'; });
       },
       onError: function() { alert('Payment error. Email us at info@cncdisplay.com'); }
     }).render('#paypal-button-container');
