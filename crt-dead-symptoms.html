@@ -72,8 +72,71 @@
         </nav>
     </header>
     <main style="max-width:1100px;margin:40px auto;padding:20px;">
-        <h1>CNC CRT Display Failure Symptoms</h1>
-        <h2>Common CRT Failure Symptoms</h2><ul><li><strong>Dim/Flickering Display</strong> — Aging CRT tube. LCD upgrade restores full brightness.</li><li><strong>Screen Burn-in</strong> — Permanent ghost images. LCD is the only fix.</li><li><strong>Color Distortion</strong> — Weak electron gun. LCD eliminates permanently.</li><li><strong>Intermittent Blackouts</strong> — Failing power supply. LCD upgrade is more cost-effective.</li><li><strong>Blurry Text</strong> — Worn focus components. LCD provides sharp 800x600+ resolution.</li></ul><h2>Cost Analysis</h2><p>CRT repair: $200-400 per incident (3-6 month lifespan). LCD upgrade: one-time $199-299 with 5-10 year lifespan.</p><p><a href="/contact.html">Contact us</a> for a free evaluation.</p>
+        <h1>CNC CRT Display Failure Symptoms — Diagnosis & Solutions</h1>
+        <p>CRT displays in CNC machines have a typical lifespan of 10,000–20,000 hours (roughly 5–7 years in continuous operation). After this point, failure symptoms become increasingly frequent. This guide helps you diagnose each symptom and decide whether to repair or upgrade to LCD.</p>
+
+        <h2>Symptom Reference Table</h2>
+        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+            <tr style="background:#1a1a2e;color:#fff;">
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Symptom</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Likely Cause</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Repair Cost</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">LCD Upgrade Cost</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Recommendation</th>
+            </tr>
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Dim / Flickering Display</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Aging CRT tube — electron gun nearing end of life</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$400 (tube replacement)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — CRT repair lasts only 3–6 months</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Screen Burn-in / Ghost Image</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Permanent phosphor damage from static display elements</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$300 (tube swap)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — burn-in is irreversible on CRT</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Color Distortion / Tint Shift</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Weak or failing electron gun, degaussing circuit failure</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$350</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — color accuracy will continue degrading</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Intermittent Blackouts</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Failing CRT power supply, bad capacitors, or HV section</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$100–$250</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — power supply failure will recur</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Blurry / Out of Focus Text</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Worn focus components in CRT deflection circuit</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$300</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — 800x600+ resolution with permanent sharpness</td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>No Display / Dead Screen</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Complete CRT failure, HV section or tube dead</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$300–$500+</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — repair cost exceeds replacement</td></tr>
+        </table>
+
+        <h2>Symptom-by-Symptom Guide</h2>
+
+        <h3>1. Dim or Flickering Display</h3>
+        <p>The most common early sign of CRT aging. The electron gun loses emission efficiency over time, reducing brightness. Flickering indicates the horizontal deflection circuit is unstable. On FANUC 0i systems, this often appears as a slow brightness fade over weeks. On Mitsubishi M60/M500 controls, flickering may be accompanied by a high-pitched whine from the flyback transformer.</p>
+
+        <h3>2. Screen Burn-in (Ghost Images)</h3>
+        <p>Static elements — axis position readouts, mode indicators, tool number displays — leave permanent marks on the CRT phosphor. This is irreversible. LCDs are immune to burn-in. An LCD upgrade not only fixes the ghost image but provides a sharper, more readable display.</p>
+
+        <h3>3. Color Distortion</h3>
+        <p>When one or more CRT electron guns weaken, the color balance shifts. The display may develop a red, green, or blue tint. Degaussing (internal or manual) provides only temporary relief. The root cause is tube aging — the only permanent fix is replacement.</p>
+
+        <h3>4. Intermittent Blackouts</h3>
+        <p>The CRT works for a period then goes dark, often returning after a cool-down period. This is typically caused by failing electrolytic capacitors in the power supply section. While capacitor replacement is a relatively cheap repair ($50–$100 in parts), the underlying CRT tube and deflection circuits remain aged and will fail again.</p>
+
+        <h3>5. Blurry / Unreadable Text</h3>
+        <p>CRT focus relies on precise voltage in the focusing electrode. As components drift with age, text becomes unreadable. LCD modules offer native 800×600 or higher resolution with pixel-perfect sharpness — no focus adjustment ever needed.</p>
+
+        <h3>6. No Display (Dead Screen)</h3>
+        <p>Complete failure. The CRT or its power supply has stopped working entirely. At this point, repair cost often exceeds replacement value. A third-party LCD module (such as Kongto's $155 A61L-0001-0093 replacement) costs less than a CRT repair quote from most service centers.</p>
+
+        <h2>Repair vs LCD Upgrade: Cost Over Time</h2>
+        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+            <tr style="background:#1a1a2e;color:#fff;">
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Scenario</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 1</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 2</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 3</th>
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">5-Year Total</th>
+            </tr>
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;">CRT Repair Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repeat repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$400 (major fix)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$1,150+</strong></td></tr>
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD Upgrade Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$199 (one-time)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$199</strong></td></tr>
+        </table>
+
+        <h2>When to Choose LCD Upgrade</h2>
+        <ul>
+            <li>CRT is 7+ years old (past typical lifespan)</li>
+            <li>Any symptom from the table above is present</li>
+            <li>CRT repair cost exceeds $200</li>
+            <li>You need higher resolution or brightness for modern operation</li>
+            <li>Spare CRT monitors are no longer available for your CNC model</li>
+        </ul>
+
+        <h2>Not Sure What You Need?</h2>
+        <p>Send us a photo of your CRT display and CNC model number. We will confirm compatibility and recommend the right LCD upgrade within 24 hours.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> | <strong>Phone:</strong> +86-13686889647</p>
     </main>
     
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
