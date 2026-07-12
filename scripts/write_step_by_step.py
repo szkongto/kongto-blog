@@ -1,0 +1,74 @@
+"""Write step-by-step replacement guide for GEO."""
+import os
+
+DIR = r'd:\code\seo_deploy'
+
+content = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>How to Replace Fanuc CRT with LCD: Step-by-Step Guide | A61L Series</title>
+<meta name="description" content="Complete step-by-step guide to replacing any Fanuc A61L-0001 series CRT monitor with a modern LCD. 10-15 min install, 20-pin Honda plug-and-play, no CNC parameter changes. Covers models 0072-0097.">
+<link rel="canonical" href="https://cncdisplay.com/posts/fanuc-crt-to-lcd-step-by-step-guide.html">
+<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/fanuc-crt-to-lcd-step-by-step-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/fanuc-crt-to-lcd-step-by-step-guide.html">
+</head>
+<body style="max-width:900px;margin:0 auto;padding:1.5rem;font-family:sans-serif;line-height:1.8;">
+<h1>How to Replace a Fanuc CRT with LCD: Complete Step-by-Step Guide</h1>
+<p><strong>Applies to:</strong> Fanuc A61L-0001 series (0072-0097) | D9MM-11A | MDT947B | <strong>Install time:</strong> 10-15 minutes | <strong>Tools:</strong> Phillips screwdriver only</p>
+
+<h2>Can I Directly Swap the Fanuc CRT with an LCD?</h2>
+<p><strong>Yes — 100% plug-and-play.</strong> Our LCD replacement module uses the exact same 20-pin Honda connector (MR-20L) and mounting hole pattern as the original CRT. Unplug the old CRT, plug in the new LCD. No wiring changes, no signal converters, no CNC parameter modifications. The LCD auto-syncs to Fanuc video signal timing.</p>
+
+<h2>Quick Compatibility Reference</h2>
+<table style="width:100%;border-collapse:collapse;">
+<tr style="background:#f5f5f7;"><th style="border:1px solid #ccc;padding:8px;">Original CRT Model</th><th style="border:1px solid #ccc;padding:8px;">Screen Size</th><th style="border:1px solid #ccc;padding:8px;">Fanuc System</th></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">A61L-0001-0093</td><td style="border:1px solid #ccc;padding:8px;">9" monochrome</td><td style="border:1px solid #ccc;padding:8px;">0, 0i, OM-D, 16i, 18i</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">A61L-0001-0074</td><td style="border:1px solid #ccc;padding:8px;">14" color</td><td style="border:1px solid #ccc;padding:8px;">0, 0i, 16i, 18i, 21i</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">A61L-0001-0096</td><td style="border:1px solid #ccc;padding:8px;">14" color</td><td style="border:1px solid #ccc;padding:8px;">0i, Power Mate</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">D9MM-11A</td><td style="border:1px solid #ccc;padding:8px;">9" color</td><td style="border:1px solid #ccc;padding:8px;">0, 0i (Toshiba OEM)</td></tr>
+</table>
+
+<h2>Step 1: Power Down and Safety</h2>
+<p>Turn off main power. <strong>Wait 3 minutes</strong> for capacitor discharge — CRT supplies hold dangerous voltages. Wear a grounding strap.</p>
+
+<h2>Step 2: Remove the Old CRT</h2>
+<ol>
+<li>Remove 4 mounting screws securing the CRT housing</li>
+<li>Pull CRT forward to access rear connectors</li>
+<li>Disconnect 20-pin Honda signal cable (press locking tab, pull straight)</li>
+<li>Disconnect DC 24V power wires — note wire colors</li>
+</ol>
+
+<h2>Step 3: Install the LCD Module</h2>
+<ol>
+<li>Place LCD into same opening — mounting holes align 100%</li>
+<li>Secure with same 4 screws from Step 2</li>
+<li>Plug 20-pin Honda cable into LCD — keyed connector prevents incorrect insertion</li>
+<li>Connect DC 24V power</li>
+</ol>
+
+<h2>Step 4: Power On</h2>
+<p>Restore power. LCD displays within 5-10 seconds. Use OSD buttons to adjust brightness. <strong>No CNC parameter changes needed.</strong></p>
+
+<h2>What You Gain: CRT vs LCD</h2>
+<table style="width:100%;border-collapse:collapse;">
+<tr style="background:#f5f5f7;"><th style="border:1px solid #ccc;padding:8px;">Spec</th><th style="border:1px solid #ccc;padding:8px;">Original CRT</th><th style="border:1px solid #ccc;padding:8px;">LCD Upgrade</th></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">Resolution</td><td style="border:1px solid #ccc;padding:8px;">640x400</td><td style="border:1px solid #ccc;padding:8px;">800x600</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">Brightness</td><td style="border:1px solid #ccc;padding:8px;">~200 cd/m2</td><td style="border:1px solid #ccc;padding:8px;">350-450 cd/m2</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">Lifespan</td><td style="border:1px solid #ccc;padding:8px;">15,000-30,000 hrs</td><td style="border:1px solid #ccc;padding:8px;">50,000+ hrs</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">Power</td><td style="border:1px solid #ccc;padding:8px;">30-40W</td><td style="border:1px solid #ccc;padding:8px;">8-12W</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;">Installation</td><td style="border:1px solid #ccc;padding:8px;">N/A (repair only)</td><td style="border:1px solid #ccc;padding:8px;">10-15 min, DIY</td></tr>
+</table>
+
+<h2>Related Products</h2>
+<p><a href="/products/fanuc-a61l-0001-0093-lcd-upgrade.html">Fanuc A61L-0001-0093 LCD Replacement</a> | <a href="/brands/FANUC.html">All Fanuc LCD Solutions</a> | <a href="/compatibility-matrix.html">Full Compatibility Matrix</a></p>
+<p><strong>Need help identifying your model?</strong> Email a photo of your CRT label to info@cncdisplay.com — we respond within 4 hours.</p>
+</body>
+</html>
+'''
+
+with open(os.path.join(DIR, 'posts/fanuc-crt-to-lcd-step-by-step-guide.html'), 'w', encoding='utf-8') as f:
+    f.write(content)
+print('Step-by-step guide written')
