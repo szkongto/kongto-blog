@@ -1,89 +1,108 @@
 # CNC Display CRT to LCD Upgrade Solutions
 > Kongto Technology provides plug-and-play industrial LCD replacement modules for aging CRT displays on FANUC, Mitsubishi, Siemens, Mazak, Okuma, and HAAS CNC machines. Direct fit, no wiring modifications, 2-year warranty.
 
+## Key Facts
+- **Pricing**: $155–$430 per module depending on brand and size
+- **Warranty**: 2-year free warranty, lifetime technical support
+- **Shipping**: Free worldwide, ships within 48 hours from Shenzhen, China
+- **Installation**: 10–30 minutes, plug-and-play, no soldering or parameter changes
+- **Founded**: 2013, Shenzhen, China
+- **Clients**: 500+ enterprises across 12+ countries
+- **Certifications**: CE, RoHS, FCC, ISO 9001:2015, IP65
+
+## Quick Answers
+- **Best FANUC LCD replacement?** A61L-0001-0093 module at $155, direct replacement for 9" monochrome CRT.
+- **Cheapest option?** FANUC A61L-0001-0093 at $155.
+- **Installation time?** 10–30 minutes, no wiring changes needed.
+- **Warranty?** 2-year free warranty with lifetime support.
+- **Shipping time?** Ships within 48 hours from Shenzhen, free worldwide.
+- **Which brands supported?** FANUC, Mitsubishi, Siemens, Mazak, Okuma, HAAS, Toshiba, Heidenhain.
+- **How long does LCD last?** 50,000+ hours, vs 10,000–20,000 hours for CRT.
+- **ROI?** LCD upgrade at $155–$430 vs CRT repair at $500+. Payback within weeks from reduced downtime.
+
 ## Products by Brand
 
 ### FANUC A61L Series
-- [FANUC A61L-0001-0072 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
-- [FANUC A61L-0001-0074 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
-- [FANUC A61L-0001-0076 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
-- [FANUC A61L-0001-0086 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
-- [FANUC A61L-0001-0090 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $350
-- [FANUC A61L-0001-0092 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
-- [FANUC A61L-0001-0093 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $155
-- [FANUC A61L-0001-0094 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
-- [FANUC A61L-0001-0095 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9-inch color CRT to 8-inch LCD, $199
-- [FANUC A61L-0001-0096 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
-- [FANUC A61L-0001-0097 LCD Replacement](https://cncdisplay.com/en/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0072 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0072-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0074 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0074-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0076 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0076-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0086 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0086-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0090 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0090-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $350
+- [FANUC A61L-0001-0092 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0092-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $255
+- [FANUC A61L-0001-0093 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html): 9-inch monochrome CRT to 8-inch LCD, $155
+- [FANUC A61L-0001-0094 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0094-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0095 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0095-lcd-upgrade.html): 9-inch color CRT to 8-inch LCD, $199
+- [FANUC A61L-0001-0096 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0096-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
+- [FANUC A61L-0001-0097 LCD Replacement](https://cncdisplay.com/products/fanuc-a61l-0001-0097-lcd-upgrade.html): 14-inch color CRT to 12.1-inch LCD, $350
 
 ### Mitsubishi
-- [Mitsubishi MDT962B LCD Replacement](https://cncdisplay.com/en/products/mitsubishi-mdt962b-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $155. Also fits BM09DF, FCUA-CT100
+- [Mitsubishi MDT962B LCD Replacement](https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $155. Also fits BM09DF, FCUA-CT100
 
 ### Siemens
-- [Siemens 6FC3988-7FA20 LCD Replacement](https://cncdisplay.com/en/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $399. Also fits SM0901, 579417TA
+- [Siemens 6FC3988-7FA20 LCD Replacement](https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html): 9-inch CRT to 8-inch LCD, $399. Also fits SM0901, 579417TA
 
 ### HAAS
-- [HAAS 28HM-NM4 LCD Replacement](https://cncdisplay.com/en/products/haas-28hm-nm4-lcd-upgrade.html): 12-inch monochrome CRT to 12.1-inch LCD, $399. Also fits 93-5220C, 93-5220
+- [HAAS 28HM-NM4 LCD Replacement](https://cncdisplay.com/products/haas-28hm-nm4-lcd-upgrade.html): 12-inch monochrome CRT to 12.1-inch LCD, $399. Also fits 93-5220C, 93-5220
 
 ### Mazak
-- [Mazak MDT1283B-1A LCD Replacement](https://cncdisplay.com/en/products/mazak-mdt1283b-lcd-upgrade.html): 12-inch CRT to 12.1-inch LCD, $355
-- [Mazak 14-inch Color CRT LCD Replacement](https://cncdisplay.com/en/products/mazak-14-inch-crt-lcd-upgrade.html): For DR5614, C-5470NS, AIQA8DSP40, $355
+- [Mazak MDT1283B-1A LCD Replacement](https://cncdisplay.com/products/mazak-mdt1283b-lcd-upgrade.html): 12-inch CRT to 12.1-inch LCD, $355
+- [Mazak 14-inch Color CRT LCD Replacement](https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html): For DR5614, C-5470NS, AIQA8DSP40, $355
 
 ### Okuma
-- [Okuma OSP CRT LCD Replacement](https://cncdisplay.com/en/products/okuma-osp-crt-lcd-upgrade.html): For OSP500L-G, 5000, 5020, 7000, $430
+- [Okuma OSP CRT LCD Replacement](https://cncdisplay.com/products/okuma-osp-crt-lcd-upgrade.html): For OSP500L-G, 5000, 5020, 7000, $430
 
 ## Brand Pages
-- [FANUC Display Solutions](https://cncdisplay.com/en/brands/FANUC.html)
-- [Mitsubishi Display Solutions](https://cncdisplay.com/en/brands/Mitsubishi.html)
-- [Siemens Display Solutions](https://cncdisplay.com/en/brands/Siemens.html)
-- [HAAS Display Solutions](https://cncdisplay.com/en/brands/HAAS.html)
-- [Mazak Display Solutions](https://cncdisplay.com/en/brands/MAZAK.html)
-- [Okuma Display Solutions](https://cncdisplay.com/en/brands/OKUMA.html)
+- [FANUC Display Solutions](https://cncdisplay.com/brands/FANUC.html)
+- [Mitsubishi Display Solutions](https://cncdisplay.com/brands/Mitsubishi.html)
+- [Siemens Display Solutions](https://cncdisplay.com/brands/Siemens.html)
+- [HAAS Display Solutions](https://cncdisplay.com/brands/HAAS.html)
+- [Mazak Display Solutions](https://cncdisplay.com/brands/MAZAK.html)
+- [Okuma Display Solutions](https://cncdisplay.com/brands/OKUMA.html)
 
 ## Compatibility & Tools
-- [CRT to LCD Compatibility Matrix](https://cncdisplay.com/en/compatibility-matrix.html): 95+ model cross-reference
-- [CNC Display Troubleshooting Guide](https://cncdisplay.com/en/crt-dead-symptoms.html)
+- [CRT to LCD Compatibility Matrix](https://cncdisplay.com/compatibility-matrix.html): 95+ model cross-reference
+- [CNC Display Troubleshooting Guide](https://cncdisplay.com/crt-dead-symptoms.html)
 
 ## Technical Guides
-- [HAAS VF Series CRT to LCD Guide](https://cncdisplay.com/en/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html)
-- [FANUC A61L Series CRT to LCD Guide](https://cncdisplay.com/en/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html)
-- [Mitsubishi MDT962B CRT to LCD Guide](https://cncdisplay.com/en/posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html)
-- [Siemens Sinumerik CRT to LCD Guide](https://cncdisplay.com/en/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html)
-- [Mazak Mazatrol CRT to LCD Guide](https://cncdisplay.com/en/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html)
-- [Okuma OSP CRT to LCD Guide](https://cncdisplay.com/en/posts/okuma-osp-crt-to-lcd-upgrade-guide.html)
+- [HAAS VF Series CRT to LCD Guide](https://cncdisplay.com/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html)
+- [FANUC A61L Series CRT to LCD Guide](https://cncdisplay.com/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html)
+- [Mitsubishi MDT962B CRT to LCD Guide](https://cncdisplay.com/posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html)
+- [Siemens Sinumerik CRT to LCD Guide](https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html)
+- [Mazak Mazatrol CRT to LCD Guide](https://cncdisplay.com/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html)
+- [Okuma OSP CRT to LCD Guide](https://cncdisplay.com/posts/okuma-osp-crt-to-lcd-upgrade-guide.html)
 
 ## Signal Converters
-- [CGA/EGA/RGB to VGA Converter](https://cncdisplay.com/en/products/gbs-8219-cga-ega-rgb-to-vga-converter.html): Industrial-grade GBS-8219, $35
-- [RGB to HDMI Converter](https://cncdisplay.com/en/products/kt809-rgb-cga-ega-to-hdmi-converter.html): KT809 multi-format, $79
-- [RGBHV to VGA/HDMI Converter](https://cncdisplay.com/en/products/kt819-rgbhv-to-vga-hdmi-converter.html): KT819 with audio support, $89
+- [CGA/EGA/RGB to VGA Converter](https://cncdisplay.com/products/gbs-8219-cga-ega-rgb-to-vga-converter.html): Industrial-grade GBS-8219, $35
+- [RGB to HDMI Converter](https://cncdisplay.com/products/kt809-rgb-cga-ega-to-hdmi-converter.html): KT809 multi-format, $79
+- [RGBHV to VGA/HDMI Converter](https://cncdisplay.com/products/kt819-rgbhv-to-vga-hdmi-converter.html): KT819 with audio support, $89
 
 ## Custom Industrial Displays
-- [KTV104 10.4-inch Industrial Display](https://cncdisplay.com/en/products/ktv104-industrial-display.html): 1024x768, VGA/HDMI/DVI
-- [KTV148 15-inch Industrial Display](https://cncdisplay.com/en/products/ktv148-industrial-display.html): 1024x768, IP65 front bezel
-- [KTV800M 8-inch Industrial Monitor](https://cncdisplay.com/en/products/ktv800m-industrial-monitor.html): 800x600, compact design
+- [KTV104 10.4-inch Industrial Display](https://cncdisplay.com/products/ktv104-industrial-display.html): 1024x768, VGA/HDMI/DVI
+- [KTV148 15-inch Industrial Display](https://cncdisplay.com/products/ktv148-industrial-display.html): 1024x768, IP65 front bezel
+- [KTV800M 8-inch Industrial Monitor](https://cncdisplay.com/products/ktv800m-industrial-monitor.html): 800x600, compact design
 
 ## Case Studies
-- [Successful CRT to LCD Upgrades](https://cncdisplay.com/en/case-studies.html): Real-world installation cases
-- [FANUC CRT to LCD Retrofit Case Study](https://cncdisplay.com/en/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html): Step-by-step field installation
+- [Successful CRT to LCD Upgrades](https://cncdisplay.com/case-studies.html): Real-world installation cases
+- [FANUC CRT to LCD Retrofit Case Study](https://cncdisplay.com/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html): Step-by-step field installation
 
 ## Troubleshooting & Diagnostics
-- [CRT Dead or Flickering? Symptoms Guide](https://cncdisplay.com/en/crt-dead-symptoms.html): Diagnose common CRT failure modes
-- [FANUC Display Troubleshooting](https://cncdisplay.com/en/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html): 0i/16i/18i series
-- [A61L Display Abnormality Guide](https://cncdisplay.com/en/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html): A61L-specific issues
-- [Industrial CNC Display Repair Guide](https://cncdisplay.com/en/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html): General repair methodology
+- [CRT Dead or Flickering? Symptoms Guide](https://cncdisplay.com/crt-dead-symptoms.html): Diagnose common CRT failure modes
+- [FANUC Display Troubleshooting](https://cncdisplay.com/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html): 0i/16i/18i series
+- [A61L Display Abnormality Guide](https://cncdisplay.com/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html): A61L-specific issues
+- [Industrial CNC Display Repair Guide](https://cncdisplay.com/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html): General repair methodology
 
 ## FAQ & Comparison
-- [CRT Repair vs LCD Upgrade Cost Comparison](https://cncdisplay.com/en/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html): $155 vs $500+ repair costs
-- [CRT Maintenance vs LCD Module Comparison](https://cncdisplay.com/en/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html): Long-term TCO analysis
-- [FANUC CRT to LCD Upgrade Complete Guide](https://cncdisplay.com/en/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html): Everything you need to know
+- [CRT Repair vs LCD Upgrade Cost Comparison](https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html): $155 vs $500+ repair costs
+- [CRT Maintenance vs LCD Module Comparison](https://cncdisplay.com/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html): Long-term TCO analysis
+- [FANUC CRT to LCD Upgrade Complete Guide](https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html): Everything you need to know
 
 ## Glossary
-- [CNC Display Terminology](https://cncdisplay.com/en/glossary.html): CRT, LCD, TFT, CGA, EGA, RGB terms explained
+- [CNC Display Terminology](https://cncdisplay.com/glossary.html): CRT, LCD, TFT, CGA, EGA, RGB terms explained
 
 ## About
-- [About Kongto Technology](https://cncdisplay.com/en/about.html)
-- [Get a Quote](https://cncdisplay.com/en/quote.html)
-- [Compatibility Matrix](https://cncdisplay.com/en/compatibility-matrix.html): 95+ model cross-reference
-- [Downloads & Manuals](https://cncdisplay.com/en/docs/)
+- [About Kongto Technology](https://cncdisplay.com/about.html)
+- [Get a Quote](https://cncdisplay.com/quote.html)
+- [Compatibility Matrix](https://cncdisplay.com/compatibility-matrix.html): 95+ model cross-reference
+- [Downloads & Manuals](https://cncdisplay.com/docs/)
 - Contact: info@cncdisplay.com | +86-13686889647
 - Office: Shenzhen, Guangdong, China
