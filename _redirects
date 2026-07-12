@@ -2,16 +2,16 @@
 # Screaming Frog audit fixes (2026-06-29)
 
 # /guides/ -> /docs/ 规范路径统一
-/guides/ttl-rgb-signal-pinout-guide.html /docs/ttl-rgb-signal-pinout-guide.html 301
-/products/kt809-industrial-converter.html /posts/kt809-industrial-converter.html 301
-/products/kt819-industrial-converter.html /posts/kt819-industrial-converter.html 301
+/guides/ttl-rgb-signal-pinout-guide.html /index.html 301
+/products/kt809-industrial-converter.html /posts/article_20260509_KT809_industrial_converter.html 301
+/products/kt819-industrial-converter.html /posts/article_20260509_KT819_industrial_converter.html 301
 /images/wechat-qr.png /images/wechat-qr.jpg 301
 /posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html /posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
 /posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html /posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
 /posts/Industrial_Display_Market_Trends_Brand_Comparison.html /posts/Industrial_Display_Procurement_Selection_Guide.html 301
 /posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html /posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html 301
 /posts/Industrial_Video_Display_Color_Scanning_Technology.html /posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
-/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /posts/mazak-c5470ns-lcd-replacement.html 301
+/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /products/mazak-c5470ns-lcd-upgrade.html 301
 /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
 /posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
 /posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
@@ -28,44 +28,44 @@
 /posts/article_20260501_Video_Signal_Converter_Series_CGA_EGA_VGA.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
 /posts/article_20260501_Video_Signal_Converters_in_CNC.html /posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
 /posts/article_20260501_cga_ega_to_rgbhv_guide.html /posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html 301
-/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html /posts/fanuc-a61l-0001-0074-lcd-replacement.html 301
-/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html /posts/fanuc-a61l-0001-0086-lcd-replacement.html 301
-/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html /posts/fanuc-a61l-0001-0090-lcd-replacement.html 301
-/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html /posts/fanuc-a61l-0001-0092-lcd-replacement.html 301
-/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html /posts/fanuc-a61l-0001-0094-lcd-replacement.html 301
-/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html /posts/fanuc-a61l-0001-0095-lcd-replacement.html 301
-/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html /posts/mitsubishi-mdt962b-lcd-replacement.html 301
-/posts/article_20260507_Siemens_SM0901_579417_TA.html /posts/siemens-sm0901-lcd-replacement.html 301
-/posts/article_20260508_Haas_CRT_LCD.html /posts/haas-vf-crt-lcd-replacement.html 301
-/posts/article_20260508_Haas_CRT_LCD_Case.html /posts/haas-vf-crt-lcd-replacement.html 301
-/posts/article_20260508_Mazak_C5470NS.html /posts/mazak-c5470ns-lcd-replacement.html 301
-/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html /posts/okuma-osp-crt-lcd-replacement.html 301
-/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html /posts/mitsubishi-mdt962b-lcd-replacement.html 301
-/posts/cnc-crt-to-lcd-cost-comparison.html /posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html 301
+/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html /products/fanuc-a61l-0001-0074-lcd-upgrade.html 301
+/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html /products/fanuc-a61l-0001-0086-lcd-upgrade.html 301
+/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html /products/fanuc-a61l-0001-0090-lcd-upgrade.html 301
+/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html /products/fanuc-a61l-0001-0092-lcd-upgrade.html 301
+/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html /products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
+/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html /products/fanuc-a61l-0001-0095-lcd-upgrade.html 301
+/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
+/posts/article_20260507_Siemens_SM0901_579417_TA.html /products/siemens-sm0901-lcd-upgrade.html 301
+/posts/article_20260508_Haas_CRT_LCD.html /products/haas-28hm-nm4-lcd-upgrade.html 301
+/posts/article_20260508_Haas_CRT_LCD_Case.html /products/haas-28hm-nm4-lcd-upgrade.html 301
+/posts/article_20260508_Mazak_C5470NS.html /products/mazak-c5470ns-lcd-upgrade.html 301
+/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html /products/okuma-osp-crt-lcd-upgrade.html 301
+/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
+/posts/cnc-crt-to-lcd-cost-comparison.html /posts/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html 301
 /posts/cnc-display-installation-guide.html /posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
 /posts/comparison_20260501_video_converter_buying_guide.html /posts/Video_Signal_Converter_Selection_Guide.html 301
-/posts/haas-vf-crt-lcd-replacement-guide.html /posts/haas-vf-crt-lcd-replacement.html 301
-/posts/mazak-cd1472-lcd-replacement-guide.html /posts/mazak-cd1472d1m-lcd-replacement.html 301
-/posts/mazak-dr5614-lcd-replacement.html /posts/mazak-c5470ns-lcd-replacement.html 301
-/posts/mitsubishi-mdt962b-lcd-replacement-guide.html /posts/mitsubishi-mdt962b-lcd-replacement.html 301
-/posts/okuma-osp-crt-lcd-replacement-guide.html /posts/okuma-osp-crt-lcd-replacement.html 301
-/posts/siemens-6fc3998-lcd-replacement-guide.html /posts/siemens-6fc3998-7fa20-lcd-replacement.html 301
-/posts/siemens-sm0901-nfp-lcd-replacement.html /posts/siemens-sm0901-lcd-replacement.html 301
+/posts/haas-vf-crt-lcd-replacement-guide.html /products/haas-28hm-nm4-lcd-upgrade.html 301
+/posts/mazak-cd1472-lcd-replacement-guide.html /products/mazak-cd1472-lcd-upgrade.html 301
+/posts/mazak-dr5614-lcd-replacement.html /products/mazak-c5470ns-lcd-upgrade.html 301
+/posts/mitsubishi-mdt962b-lcd-replacement-guide.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
+/posts/okuma-osp-crt-lcd-replacement-guide.html /products/okuma-osp-crt-lcd-upgrade.html 301
+/posts/siemens-6fc3998-lcd-replacement-guide.html /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+/posts/siemens-sm0901-nfp-lcd-replacement.html /products/siemens-sm0901-lcd-upgrade.html 301
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html https://cncdisplay.com/ 301
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html https://cncdisplay.com/ 301
 /posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html https://cncdisplay.com/ 301
-/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html /posts/article_20260507_Mazak_CD1472D1M_LCD.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/posts/article_20260507_MDT1283B_LCD替换方案.html /posts/article_20260507_MDT1283B_LCD.html 301
+/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html /index.html 301
+/posts/article_20260507_MDT1283B_LCD替换方案.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
 # Percent-encoded versions for Cloudflare Pages compatibility
-/posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_MDT1283B_LCD.html 301
+/posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /index.html 301
+/posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
 
 # === Auto-generated redirects for broken link fixes ===
 /article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html https://cncdisplay.com/ 301
 /article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html https://cncdisplay.com/ 301
-/cdn-cgi/l/email-protection /posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html 301
+/cdn-cgi/l/email-protection /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
 /docs/fanuc-crt-to-lcd-upgrade-tech.pptx /index.html 301
 /baidu_verify_codeva-MOcuLxbSCp.html /index.html 301
 /docs/CNC_to_LCD_Model_List.docx /index.html 301
@@ -73,19 +73,19 @@
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html https://cncdisplay.com/ 301
 
 # Chinese-URL article redirects (broken internal links)
-/posts/article_20260506_%E4%B8%89%E8%8F%B1MDT962B%E5%B7%A5%E4%B8%9A%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html 301
-/posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD.html 301
-/posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_MDT1283B_LCD.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/posts/article_20260506_%E4%B8%89%E8%8F%B1MDT962B%E5%B7%A5%E4%B8%9A%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html 301
+/posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
+/posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /index.html 301
 /posts/article_20260508_KTV104_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV148_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV800M_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV800M_Custom_Industrial_Display_CN.html 301
-/posts/article_20260509_GBS-8219_RGB%E8%BD%ACVGA%E5%B7%A5%E4%B8%9A%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_GBS_8219_RGB_to_VGA_Converter_CN.html 301
-/posts/article_20260509_KT809_%E5%B7%A5%E4%B8%9A%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_KT809_Industrial_Converter_CN.html 301
-/posts/article_20260509_KT819_%E5%B7%A5%E4%B8%9A%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_KT819_Industrial_Converter_CN.html 301
+/posts/article_20260509_GBS-8219_RGB%E8%BD%ACVGA%E5%B7%A5%E4%B8%9A%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html 301
+/posts/article_20260509_KT809_%E5%B7%A5%E4%B8%9A%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_KT809_industrial_converter.html 301
+/posts/article_20260509_KT819_%E5%B7%A5%E4%B8%9A%E8%BD%AC%E6%8D%A2%E5%99%A8.html /posts/article_20260509_KT819_industrial_converter.html 301
 /posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html /posts/fanuc-0i-display-faq-zh.html 301
 /posts/faq_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/fanuc-0i-display-faq-zh.html 301
-/posts/article_20260506_%E4%B8%89%E8%8F%B1BM09DF%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%B1%8FE60%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display.html 301
+/posts/article_20260506_%E4%B8%89%E8%8F%B1BM09DF%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%B1%8FE60%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
 /posts/article_20260506_%E4%B8%89%E8%8F%B1FCUA-CT100%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8M500_M520%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
 /posts/article_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html /posts/fanuc-0i-display-faq-zh.html 301
 /posts/faq_20260501_%E6%95%B0%E6%8E%A7%E6%9C%BA%E5%BA%8A%E6%98%BE%E7%A4%BA%E5%99%A8%E6%9B%B4%E6%8D%A2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98TOP10.html /posts/faq_20260501_CNC_display_replacement_FAQ.html 301
@@ -113,7 +113,7 @@
 /posts/article_20260509_KT819_Industrial_Converter_CN.html /posts/article_20260509_KT819_Industrial_Converter.html 301
 /posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html https://cncdisplay.com/ 301
 /posts/article_20260521_FANUC_A61L_0001_0096_LCD.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /index.html 301
 /posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html三菱MDT962B系列CRT升级LCD液晶全面替换方案.html /posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
 /posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html /posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
 /posts/article_20260526_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html /index.html 301
@@ -139,7 +139,7 @@
 /posts/mitsubishi-fcua-ct100-lcd-replacement-zh-content.html /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
 /posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
 /posts/mitsubishi-mdt962b-series-crt-lcd-upgrade-solution-zh.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
-/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade /Solutions.html /brands/FANUC.html
+/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade /index.html /brands/FANUC.html
 /posts/press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html /brands/FANUC.html 301
 /posts/social_20260501_数控显示器升级市场动态与产品速递.html /index.html 301
 /posts/video-signal-converter-buying-guide-zh.html /index.html 301
@@ -150,10 +150,10 @@
 /sitemap.html /index.html 301
 /images/logo_256.png /index.html 301
 /images/mazak_dr5614_compare.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html 301
-/images/mazak_dr5614_crt.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/images/mazak_dr5614_install.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/images/mazak_dr5614_lcd_front.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/images/mazak_dr5614_lcd_rear.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/images/mazak_dr5614_crt.jpg /index.html 301
+/images/mazak_dr5614_install.jpg /index.html 301
+/images/mazak_dr5614_lcd_front.jpg /index.html 301
+/images/mazak_dr5614_lcd_rear.jpg /index.html 301
 /images/siemens-sm0901-upgrade-kit.jpg /posts/siemens-sinumerik-display-troubleshooting-zh.html 301
 /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html /brands/FANUC.html 301
 /posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html /index.html 301
@@ -171,7 +171,7 @@
 /posts/Industrial_Video_Display_Color_Scanning_Technology.html /index.html 301
 /posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html /index.html 301
 /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html /index.html 301
-/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /index.html 301
 /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /brands/FANUC.html 301
 /posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /brands/FANUC.html 301
 /posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html /index.html 301
@@ -195,7 +195,7 @@
 /posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html https://cncdisplay.com/ 301
 /posts/article_20260506_%E4%B8%89%E8%8F%B1FCUA-CT100%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8M500_M520%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html /products/mitsubishi-mdt962b-lcd-upgrade.html 301
 /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
-/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html /posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html 301
+/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
 /posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html /posts/article_20260507_Sharp_AIQA8DSP40_LCD.html 301
 /posts/article_20260508_Haas_CRT_LCD.html /posts/article_20260508_Haas_CRT_LCD_Case.html 301
 /posts/article_20260508_KTV104_非标订制工业显示器.html /posts/article_20260508_KTV104_custom_industrial_display.html 301
@@ -231,7 +231,7 @@
 
 # Redirect shells deleted → Worker 301
 /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html /index.html 301
 
 # Deleted EN stub pages → product pages (GSC discovered-not-indexed 404s)
 /posts/fanuc-a61l-0001-0074-lcd-replacement.html /products/fanuc-a61l-0001-0074-lcd-upgrade.html 301
@@ -250,16 +250,16 @@
 /posts/siemens-sm0901-lcd-replacement.html /products/siemens-sm0901-lcd-upgrade.html 301
 
 # Final remaining 404s — Chinese-named URLs that don't exist on disk
-/posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html /posts/article_20260509_GBS_8219_RGB_to_VGA_Converter_CN.html 301
-/posts/article_20260509_KT809_工业转换器.html /posts/article_20260509_KT809_Industrial_Converter_CN.html 301
-/posts/article_20260509_KT819_工业转换器.html /posts/article_20260509_KT819_Industrial_Converter_CN.html 301
+/posts/article_20260509_GBS-8219_RGB转VGA工业信号转换器.html /posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html 301
+/posts/article_20260509_KT809_工业转换器.html /posts/article_20260509_KT809_industrial_converter.html 301
+/posts/article_20260509_KT819_工业转换器.html /posts/article_20260509_KT819_industrial_converter.html 301
 /posts/article_20260508_KTV104_非标定制工业显示器.html /posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV148_非标定制工业显示器.html /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV800M_非标定制工业显示器.html /posts/article_20260508_KTV800M_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV804_非标定制工业显示器.html /posts/article_20260508_KTV804_Custom_Industrial_Display_CN.html 301
 /posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html /posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html 301
 /posts/faq_20260501_FANUC_0i系统显示器.html /posts/fanuc-0i-display-faq-solutions-zh.html 301
-/posts/press_release_20260501_南京中晶科技推出FANUC全系列显示器LCDUpgrade Solutions.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/press_release_20260501_南京中晶科技推出FANUC全系列显示器LCDUpgrade /index.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
 /posts/非标定制显示器系列.html /posts/custom_industrial_display_series_CN.html 301
 /posts/faq_20260501_数控机床显示器更换常见问题TOP10.html /posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html 301
 /weixin:/dl/addcontact /index.html 301
@@ -284,9 +284,9 @@
 /posts/article_20260509_KT809_Industrial_Converter_CN.html  /posts/article_20260509_KT809_industrial_converter.html  301
 /posts/article_20260509_KT819_Industrial_Converter_CN.html  /posts/article_20260509_KT819_industrial_converter.html  301
 /posts/custom_industrial_display_series_CN.html  /posts/custom_industrial_display_series.html  301
-/posts/mitsubishi-bm09df-lcd-replacement-zh-content.html  /posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html  301
+/posts/mitsubishi-bm09df-lcd-replacement-zh-content.html  /zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html  301
 /posts/mitsubishi-fcua-ct100-lcd-replacement-zh-content.html  /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html  301
-/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html  /posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html  301
+/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html  /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html  301
 /posts/video-signal-converter-buying-guide-zh.html  /posts/Video_Signal_Converter_Buying_Guide.html  301
 /zh/posts/Video_Signal_Converter_Buying_Guide.html  /posts/Video_Signal_Converter_Buying_Guide.html  301
 /zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html  /posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html  301
@@ -307,9 +307,9 @@
 /zh/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html  /posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html  301
 /zh/posts/custom_industrial_display_series.html  /posts/custom_industrial_display_series.html  301
 /zh/posts/custom_industrial_display_series_CN.html  /posts/custom_industrial_display_series.html  301
-/zh/posts/mitsubishi-bm09df-lcd-replacement-zh-content.html  /posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html  301
+/zh/posts/mitsubishi-bm09df-lcd-replacement-zh-content.html  /zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html  301
 /zh/posts/mitsubishi-fcua-ct100-lcd-replacement-zh-content.html  /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html  301
-/zh/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html  /posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html  301
+/zh/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html  /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html  301
 /zh/posts/video-signal-converter-buying-guide-zh.html  /posts/Video_Signal_Converter_Buying_Guide.html  301
 /brands/FANUC /brands/FANUC.html 301
 /brands/FANUC /brands/FANUC.html 301
@@ -345,7 +345,7 @@
 /posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html /index.html 301
 /posts/article_20260501_工业控制设备显示器故障排除与维护全攻略.html /posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
 /posts/article_20260501_工业显示器RGBHV信号全解析_从CGA_EGA到高清显示.html /posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html 301
-/posts/article_20260501_工业显示器采购与工业显示器选型 /and 进阶.html
+/posts/article_20260501_工业显示器采购与工业显示器选型 /index.html 进阶.html
 /posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
 /posts/article_20260501_工业视频信号转换系统_CGA_EGA转VGA_RGB转VGA解决方案.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
 /posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
@@ -376,18 +376,18 @@
 /posts/mitsubishi-cnc-display-troubleshooting-zh.html /index.html 301
 /posts/mitsubishi-crt-vs-lcd-comparison-zh.html /index.html 301
 /posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html /index.html 301
-/posts/press_release_20260501_Kongto /Technology推出FANUC数控显示器LCD升级解决方案.html /brands/FANUC.html
+/posts/press_release_20260501_Kongto /index.html /brands/FANUC.html
 /posts/social_20260501_工业显示器市场动态与品牌对比.html /index.html 301
 /press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html /index.html 301
 /social_20260501_数控显示器升级市场动态与产品速递.html /index.html 301
-/used-display-recycling-faq-top10-zh.html /posts/used-display-recycling-faq-top10-zh.html 301
+/used-display-recycling-faq-top10-zh.html /zh/posts/faq_20260501_CNC_display_replacement_FAQ.html 301
 # === End GSC 404 fixes ===
 
 # GSC "auto redirect" missing file fixes
 /posts/haas-vf-crt-lcd-replacement.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
 /posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html /posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
 /posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
-/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade Solutions.html /brands/FANUC.html 301
+/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade /index.html /brands/FANUC.html 301
 /posts/article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
 
 # Double-slash URL fixes
