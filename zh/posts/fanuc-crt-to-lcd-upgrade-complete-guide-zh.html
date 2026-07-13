@@ -1,808 +1,808 @@
-<!DOCTYPE html>
-
-<html lang="zh-CN">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FANUC 数控显示器 CRT → LCD 升级完整指南 | 深圳市江图科技有限公司</title>
-
-    <meta name="description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南。江图科技12年工业显示经验，覆盖FANUC 0i/16i/18i/21i/31i全系列CRT转LCD升级改造方案，即插即用零改装，附完整安装步骤、HONDA 20针信号针脚定义与故障排查表。">
-
-    <meta name="keywords" content="FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代,CRT转LCD,数控显示器改造,HONDA 20针信号定义,FANUC 0i液晶屏">
-
-    <meta name="author" content="江图科技">
-
-    <link rel="canonical" href="https://cncdisplay.com/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html">
-
-    <meta property="og:type" content="article">
-
-    <meta property="og:title" content="FANUC 数控显示器 CRT → LCD 升级完整指南">
-
-    <meta property="og:description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南。覆盖 FANUC 0i/16i/18i/21i/31i 全系列，含 HONDA 20针信号定义、安装步骤、故障排查及完整技术规格对比表。">
-
-    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
-
-    <meta property="og:site_name" content="深圳市江图科技有限公司">
-
-    <meta property="article:published_time" content="2026-05-01">
-
-    <meta property="article:author" content="江图科技">
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="FANUC 数控显示器 CRT → LCD 升级完整指南">
-
-    <meta name="twitter:description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南，含完整安装步骤、HONDA 20针信号定义与故障排查表。">
-
-    <link rel="stylesheet" href="/css/style.css?v=7">
-
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "FANUC 数控显示器 CRT → LCD 升级完整指南",
-  "description": "FANUC 数控显示器 CRT 转 LCD 升级完整指南。覆盖 FANUC 0i/16i/18i/21i/31i 全系列，含 HONDA 20针信号定义、安装步骤、故障排查及完整技术规格对比表。",
-  "author": {
-    "@type": "Person",
-    "name": "江图科技"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "深圳市江图科技有限公司",
-    "url": "https://cncdisplay.com"
-  },
-  "datePublished": "2026-05-01"
-}</script>
-
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html" />
-
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html" />
-
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
-
-    <meta name="geo.region" content="CN-44">
-
-    <meta name="geo.placename" content="深圳龙岗">
-
-    <meta name="geo.position" content="22.6568;113.9899">
-
-    <meta name="ICBM" content="22.6568, 113.9899">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://cncdisplay.com/#organization",
-  "name": "深圳市江图科技有限公司",
-  "alternateName": "Kongto Technology",
-  "url": "https://cncdisplay.com",
-  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
-  "image": "/images/logo.png",
-  "telephone": "+86-13686889647",
-  "email": "info@cncdisplay.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
-    "addressLocality": "深圳",
-    "addressRegion": "广东",
-    "postalCode": "518000",
-    "addressCountry": "CN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 22.6568,
-    "longitude": 113.9899
-  },
-  "areaServed": [
-    "CN",
-    "US",
-    "DE",
-    "JP",
-    "KR",
-    "SG",
-    "IN",
-    "GB",
-    "FR",
-    "IT"
-  ],
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "sameAs": [
-    "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto"
-  ]
-}
-
-</script>
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://cncdisplay.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "FANUC 数控显示器 CRT → LCD 升级完整指南",
-      "item": "https://cncdisplay.com/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html"
-    }
-  ]
-}
-
-</script>
-
-<style>
-/* Share buttons */
-.share-buttons { margin: 2.5rem 0; padding: 1.25rem 0; border-top: 1px solid #e0e0e0; }
-.share-title { font-size: 0.95rem; color: #555; margin-bottom: 0.75rem; font-weight: 600; }
-.share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
-.share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #e0e0e0; background: #fafafa; cursor: pointer; font-size: 0.85rem; color: #333; text-decoration: none; transition: all 0.2s; }
-.share-btn:hover { background: #f0f0f0; border-color: #ccc; transform: translateY(-1px); }
-.share-btn svg { flex-shrink: 0; }
-.share-btn span { white-space: nowrap; }
-.share-wechat:hover { color: #07C160; border-color: #07C160; background: #f0faf4; }
-.share-facebook:hover { color: #1877F2; border-color: #1877F2; background: #f0f6ff; }
-.share-twitter:hover { color: #1DA1F2; border-color: #1DA1F2; background: #f0f8ff; }
-.share-douyin:hover { color: #000; border-color: #000; background: #f5f5f5; }
-.share-copy:hover { color: #666; border-color: #999; background: #f0f0f0; }
-/* WeChat QR modal */
-.wechat-modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); z-index: 9999; display: flex; align-items: center; justify-content: center; }
-.wechat-modal-content { background: #fff; border-radius: 14px; padding: 2rem 2.5rem; max-width: 340px; width: 90%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-.wechat-modal-content h3 { font-size: 1.1rem; margin-bottom: 1rem; color: #333; }
-.wechat-modal-content p { font-size: 0.9rem; color: #666; margin: 0.75rem 0 1.25rem; }
-.wechat-modal-content button { padding: 0.5rem 2rem; border-radius: 8px; border: none; background: #07C160; color: #fff; font-size: 0.9rem; cursor: pointer; font-weight: 600; transition: background 0.2s; }
-.wechat-modal-content button:hover { background: #06ad56; }
-/* Content tables */
-.post .content table.spec-table,
-.post .content table.pinout-table,
-.post .content table.compat-table,
-.post .content table.trouble-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 2rem 0; font-size: 0.88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid #d2d2d7; }
-.post .content table.spec-table th,
-.post .content table.pinout-table th,
-.post .content table.compat-table th,
-.post .content table.trouble-table th { background: #1d1d1f; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.3px; }
-.post .content table.spec-table td,
-.post .content table.pinout-table td,
-.post .content table.compat-table td,
-.post .content table.trouble-table td { padding: 0.65rem 1rem; border-bottom: 1px solid #f0f0f0; background: #fff; }
-.post .content table.spec-table tr:nth-child(even) td,
-.post .content table.pinout-table tr:nth-child(even) td,
-.post .content table.compat-table tr:nth-child(even) td,
-.post .content table.trouble-table tr:nth-child(even) td { background: #f5f5f7; }
-.post .content table.spec-table tr:last-child td,
-.post .content table.pinout-table tr:last-child td,
-.post .content table.compat-table tr:last-child td,
-.post .content table.trouble-table tr:last-child td { border-bottom: none; }
-.post .content table.spec-table tr:hover td,
-.post .content table.pinout-table tr:hover td,
-.post .content table.compat-table tr:hover td,
-.post .content table.trouble-table tr:hover td { background: rgba(255,102,0,0.08); }
-.post .content .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
-.post .content .table-wrap table { margin: 0; }
-/* Step indicator */
-.post .content .step-highlight { background: #f0f7ff; border-left: 4px solid #1565C0; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.95rem; line-height: 1.6; }
-/* Tip box */
-.post .content .tip-box { background: #f0fff4; border-left: 4px solid #2e7d32; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.95rem; line-height: 1.6; }
-</style>
-
-    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
-
-</head>
-
-<body><header>
-        <nav>
-            <a href="/" class="logo">江图科技</a>
-            <div class="nav-links">
-                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/products/">产品</a>
-                <a href="/zh/posts/">文章</a>
-                <a href="/zh/case-studies.html">案例</a>
-                <a href="/zh/docs/">下载</a>
-                <a href="/zh/about.html">关于</a>
-                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
-            </div>
-            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
-            <div class="lang-switch">
-                <a href="/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <article class="post">
-
-            <h1>FANUC 数控显示器 CRT → LCD 升级完整指南</h1>
-
-            <div class="meta">
-
-                <time datetime="2026-05-01">2026-05-01</time>
-
-                <span class="author">作者: 江图科技</span>
-
-            </div>
-
-            <div class="content">
-
-适用于 FANUC 0i/16i/18i 系列数控系统 <hr>
-
-<figure class="img-hero">
-
-  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010074_2.webp" alt="LCD升级改装完成" loading="lazy" >
-
-  <figcaption>图2：改装后LCD显示器与原系统无缝对接</figcaption>
-
-</figure>
-
-<figure class="img-step">
-
-  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010074_3.webp" alt="安装固定细节" loading="lazy" >
-
-  <figcaption>图3：LCD驱动板固定与信号线连接</figcaption>
-
-</figure>
-
-<h2>1. 为什么要升级？——CRT 与 LCD 的对比</h2>
-
-<div class="warning-box">
-
-<strong>安装前请注意：</strong>本方案适用于 FANUC 0i-MC/0i-Mate/0i-MF/0i-TF/15i/16i/18i/21i/31i 全系列数控系统。不同年代的系统可能使用不同的显示器接口及信号协议，请对照下方的兼容性表和信号针脚定义确认后再操作。
-
-</div>
-
-<p>CRT（阴极射线管）显示器曾是 FANUC 数控系统的标准配置，但其技术局限日益凸显。下表列出核心对比指标：</p>
-
-<div class="table-wrap">
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-<thead>
-<tr><th>对比项目</th><th>CRT（阴极射线管）</th><th>LCD（液晶显示）</th></tr>
-</thead>
-<tbody>
-<tr><td>体积与重量</td><td>体积大，重量约 3–5 kg</td><td>超薄轻量（约 0.8 kg），可直接替换</td></tr>
-<tr><td>功耗</td><td>80–120 W（含高压包供电）</td><td>10–15 W（低压 DC 供电）</td></tr>
-<tr><td>亮度</td><td>200–300 cd/m²，老化后更低</td><td>≥500 cd/m²，稳定持久</td></tr>
-<tr><td>可视角度</td><td>受限（约 120°），侧看失真</td><td>宽视角 178°，任意角度清晰</td></tr>
-<tr><td>分辨率</td><td>640×480（原始分辨率，不可调）</td><td>800×600 / 1024×768 可选</td></tr>
-<tr><td>色彩</td><td>单色或有限色彩，易偏色</td><td>全彩 1677 万色，色彩精准</td></tr>
-<tr><td>工作寿命</td><td>约 10,000 h，显像管老化后模糊</td><td>≥50,000 h（约10年以上），无衰减</td></tr>
-<tr><td>维护成本</td><td>真空管老化、高压模块需定期检修</td><td>模块化设计，故障率极低，免维护</td></tr>
-<tr><td>环保标准</td><td>含铅、汞等有害物质</td><td>对数控机床操作员而言，LCD 的高亮度和宽视角意味着更准确的信息读取和更低的视觉疲劳。</p>
-
-<div class="article-image img-chart">
-
-  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_comparison.webp" alt="CRT与LCD升级方案核心指标对比表" >
-
-  <p >CRT与LCD升级方案核心指标对比表</p>
-
-</div>
-
-<hr>
-
-<h2>2. 技术原理详解</h2>
-
-<h3>2.1 信号转换链路</h3>
-
-<p>FANUC 数控系统自 0i 系列以上普遍采用模拟 RGB 信号输出，通过 <strong>HONDA 20 针连接器</strong> 将视频信号传输至显示器。升级 LCD 时，信号转换流程如下：</p>
-
-<p>FANUC 数控系统 → HONDA 20 针接口 → 模拟 R/G/B + 同步信号 → 信号桥接芯片（如 ADI ADV7511）→ 数字 LVDS/TTL → TFT 液晶面板</p>
-
-<p>其中信号桥接芯片负责：</p>
-<ul>
-  <li>将模拟 RGB（0.7 Vp-p）采样量化为数字信号</li>
-  <li>将行/场同步信号与数据信号对齐，生成 LVDS 时序</li>
-  <li>对画面进行缩放（从 640×480 缩放至 800×600 或 1024×768）</li>
-  <li>自动检测输入制式（CGA / EGA / VGA 兼容）</li>
-</ul>
-
-<h3>2.2 HONDA 20 针信号接口定义</h3>
-
-<p>以下为 FANUC 数控 CRT 显示器使用的 HONDA 20 针（MR-20）接口完整针脚定义，供安装接线时对照核查：</p>
-
-<div class="table-wrap">
-<table class="pinout-table">
-<thead>
-<tr><th>针脚号</th><th>信号名称</th><th>方向</th><th>说明</th></tr>
-</thead>
-<tbody>
-<tr><td>1</td><td>GND</td><td>-</td><td>电源地 / 信号地</td></tr>
-<tr><td>2</td><td>+24V DC</td><td>输入</td><td>主电源供电（来自数控系统电源模块）</td></tr>
-<tr><td>3</td><td>GND</td><td>-</td><td>电源地</td></tr>
-<tr><td>4</td><td>+24V DC</td><td>输入</td><td>辅助电源（同2脚并联）</td></tr>
-<tr><td>5</td><td>R（红色信号）</td><td>输入</td><td>模拟红色通道，0.7 Vp-p</td></tr>
-<tr><td>6</td><td>G（绿色信号）</td><td>输入</td><td>模拟绿色通道，0.7 Vp-p</td></tr>
-<tr><td>7</td><td>B（蓝色信号）</td><td>输入</td><td>模拟蓝色通道，0.7 Vp-p</td></tr>
-<tr><td>8</td><td>GND</td><td>-</td><td>视频信号地</td></tr>
-<tr><td>9</td><td>HSYNC（行同步）</td><td>输入</td><td>水平同步信号，TTL 电平</td></tr>
-<tr><td>10</td><td>VSYNC（场同步）</td><td>输入</td><td>垂直同步信号，TTL 电平</td></tr>
-<tr><td>11</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
-<tr><td>12</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
-<tr><td>13</td><td>GND</td><td>-</td><td>同步信号地</td></tr>
-<tr><td>14</td><td>NC</td><td>-</td><td>未连接（保留 / 部分机型用于亮度调节）</td></tr>
-<tr><td>15</td><td>VIDEO ON</td><td>输出</td><td>视频使能信号（高电平有效）</td></tr>
-<tr><td>16</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
-<tr><td>17</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
-<tr><td>18</td><td>GND</td><td>-</td><td>屏蔽地</td></tr>
-<tr><td>19</td><td>CONTRAST</td><td>输入</td><td>对比度调节电压（0–5V DC）</td></tr>
-<tr><td>20</td><td>GND</td><td>-</td><td>总地线</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="tip-box">
-<strong>注意：</strong>不同年代的 FANUC 数控系统在针脚定义上可能有细微差异。部分早期机型（如 0i-Mate）使用简化的 14 针接口。建议在操作前先查阅对应机型的维修手册确认。如使用江图 LCD 升级套件，出厂时已按对应机型预配好线缆，无需用户逐一核对针脚。
-</div>
-
-<h3>2.3 供电兼容</h3>
-
-<p>原 CRT 使用 <strong>24 V DC</strong> 低压电源（供给内部高压转换模块产生阳极高压）。LCD 显示器直接使用同一路 <strong>24 V DC</strong> 供电，内部集成 <strong>DC-DC 降压</strong> 电路，输出 5 V / 12 V 给驱动板和 LED 背光。无需改动原电源布线，即插即用。</p>
-
-<h3>2.4 尺寸匹配</h3>
-
-<p>LCD 替换面板采用 <strong>与原 CRT 完全相同的安装孔位与外形尺寸</strong>（标准 9 英寸 / 10.4 英寸 / 14 英寸规格对应不同外形，安装孔间距均与原 CRT 一致），实现真正的"原位替换，一键安装"。</p>
-
-<hr>
-
-<h2>3. FANUC 系统与 LCD 兼容性对照表</h2>
-
-<p>下表列出常见 FANUC 数控系统型号及其对应的 CRT 显示器和 LCD 替换方案：</p>
-
-<div class="table-wrap">
-<div style="overflow-x:auto;margin:1rem 0;"><table class="compat-table">
-<thead>
-<tr><th>FANUC 系统型号</th><th>原 CRT 型号</th><th>LCD 替换型号</th><th>接口类型</th><th>屏幕尺寸</th><th>备注</th></tr>
-</thead>
-<tbody>
-<tr><td>0i-MC / 0i-Mate-MC</td><td>A61L-0001-0074</td><td>A61L-0001-0074-LCD</td><td>HONDA 20 针</td><td>14" 彩色</td><td>最常用型号</td></tr>
-<tr><td>0i-MF / 0i-TF</td><td>A61L-0001-0093</td><td>A61L-0001-0093-LCD</td><td>HONDA 20 针</td><td>9" 彩色</td><td>0i-F 系列标配</td></tr>
-<tr><td>16i-MA / 16i-TA</td><td>A61L-0001-0086</td><td>A61L-0001-0086-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>16i 系列通用</td></tr>
-<tr><td>18i-MA / 18i-TA</td><td>A61L-0001-0090</td><td>A61L-0001-0090-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>18i 系列通用</td></tr>
-<tr><td>21i-MA / 21i-TA</td><td>A61L-0001-0095</td><td>A61L-0001-0095-LCD</td><td>HONDA 20 针</td><td>9" 彩色</td><td>21i 系列专用</td></tr>
-<tr><td>31i-A5 / 31i-B5</td><td>A61L-0001-0100</td><td>A61L-0001-0100-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>高速系统</td></tr>
-<tr><td>15i-MA</td><td>A61L-0001-0073</td><td>A61L-0001-0073-LCD</td><td>HONDA 20 针</td><td>14" 彩色</td><td>早期型号</td></tr>
-<tr><td>0i-D / 0i-Mate-D</td><td>D9MM-11A-0093</td><td>D9MM-11A-0093-LCD</td><td>D-SUB 9 针</td><td>9" 单色</td><td>单色系统</td></tr>
-</tbody>
-</table></div>
-</div>
-
-<div class="info-box">
-<strong>无法确定您的系统型号？</strong> 查看数控系统面板上的型号标签（通常在显示器边框或驱动单元正面），或进入系统参数页面查看版本信息。也可直接联系江图科技技术支持（13686889647），提供系统型号即可获取准确的替换方案。
-</div>
-
-<hr>
-
-<h2>4. 安装步骤详解（7 步完成）</h2>
-
-<p><strong>准备工具：</strong>十字螺丝刀、扭力扳手（≤5 Nm）、防静电腕带、清洁棉、酒精（70%）、万用表（可选，用于通电前检测电源电压）</p>
-
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-<thead>
-<tr><th style="width:12%">步骤</th><th style="width:35%">操作要点</th><th style="width:53%">注意事项与详细说明</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>1</strong></td><td><strong>断电 &amp; 防静电</strong><br>关闭数控机床主电源，拔掉显示器电源线</td><td>确认电源指示灯全部熄灭。等待至少 3 分钟，让 CRT 内部高压电容充分放电。<br>佩戴防静电腕带并可靠接地，防止静电损坏 LCD 驱动板上的敏感元件。</td></tr>
-<tr><td><strong>2</strong></td><td><strong>拆除原 CRT</strong><br>松开固定 CRT 的 4–6 颗螺丝（视机型而定）</td><td>小心拔出 <strong>HONDA 20 针</strong> 信号线和 <strong>24 V</strong> 电源线。拔线时保持插头正面朝外，按压卡扣后均匀用力拔出，防止卡扣断裂或针脚弯折。<br><strong>建议：</strong>拔线前用手机拍照记录线缆连接方位，便于回装时参照。</td></tr>
-<tr><td><strong>3</strong></td><td><strong>清理安装面</strong><br>用酒精棉轻拭原支架与机壳接触面</td><td>去除油污、切削液残留和灰尘。确保安装平面平整无异物。<br>不要使用丙酮、天那水等腐蚀性溶剂，以免损伤金属表面涂层。</td></tr>
-<tr><td><strong>4</strong></td><td><strong>安装 LCD</strong><br>将 LCD 对准原 CRT 安装孔位放入</td><td>确认 LCD 方向正确（信号接口朝向机壳内侧）。轻压四角使面板完全贴合支架。<br>检查 LCD 面板与机壳之间无多余线缆挤压，避免安装后产生应力裂纹。</td></tr>
-<tr><td><strong>5</strong></td><td><strong>连接线缆</strong><br>插入 HONDA 20 针接口（方向标记"1"对齐），连接 24 V DC 电源线</td><td>注意电源线红/黑极性与原 CRT 一致（红 = 正极，黑 = 负极或 GND）。<br>插头需完全推入并听到卡扣锁定的"咔嗒"声，防止振动环境中脱落。</td></tr>
-<tr><td><strong>6</strong></td><td><strong>固定螺丝</strong><br>使用扭力扳手将固定螺丝拧至 4–5 Nm</td><td>按对角线顺序分次拧紧，避免单侧受力不均导致面板偏斜。不要超过 5 Nm，过紧会导致面板裂纹。螺纹保持清洁。</td></tr>
-<tr><td><strong>7</strong></td><td><strong>通电检查</strong><br>开机后进入 FANUC 系统 → 参数 → 画面设置</td><td>确认显示分辨率为 800×600（或系统默认值）。若画面异常（不显示/花屏/偏色），首先检查信号线是否插紧。<br>首次通电建议观察 5–10 分钟，确认背光亮度均匀、无闪烁、无异常发热。</td></tr>
-</tbody>
-</table></div>
-
-<div class="tip-box">
-<strong>小贴士：</strong>若机床配有防护门或防护罩，完成安装后请重新装回，防止金属屑、切削液等进入显示器内部。建议在安装后的第一周每天进行一次目视检查，确保一切正常。
-</div>
-
-<div class="article-image img-step">
-
-  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_steps.webp" alt="CRT到LCD升级安装步骤流程图" >
-
-  <p >CRT到LCD升级安装步骤流程图</p>
-
-</div>
-
-<hr>
-
-<h2>5. 常见故障排查指南</h2>
-
-<p>安装 LCD 后如遇到显示问题，请按以下表格逐一排查：</p>
-
-<div class="table-wrap">
-<table class="trouble-table">
-<thead>
-<tr><th style="width:22%">故障现象</th><th style="width:30%">可能原因</th><th style="width:48%">排查方法与解决方案</th></tr>
-</thead>
-<tbody>
-<tr><td>完全无显示（黑屏）</td><td>1. 24 V 电源未接通<br>2. 信号线松动</td><td>使用万用表测量 LCD 供电端 24 V 是否正常；检查 HONDA 20 针插头是否插到位；若电源正常仍无显示，驱动板可能故障，联系售后更换。</td></tr>
-<tr><td>画面闪烁或抖动</td><td>1. 电源供电不足<br>2. 信号线接触不良</td><td>检查 24 V 电源是否稳定（波动应 < 5%）；重新插拔 HONDA 20 针接口，检查针脚有无弯折；尝试调整数控系统参数中的画面刷新率设置。</td></tr>
-<tr><td>偏色（缺红/绿/蓝）</td><td>1. 模拟 RGB 某路信号断开<br>2. 驱动板输入端虚焊</td><td>检查 HONDA 20 针第 5/6/7 脚连接是否良好；交换 RGB 信号测试（如将 R 和 G 对调，若缺色变为缺红则确认为对应通道问题）；联系售后检测驱动板。</td></tr>
-<tr><td>画面花屏或乱码</td><td>1. 信号格式不匹配<br>2. LVDS 线松动</td><td>检查数控系统画面参数中分辨率设置是否与 LCD 匹配；断电后重新插拔 LCD 内部的 LVDS 排线（FPC 软排线），确保扣具压紧。</td></tr>
-<tr><td>对比度/亮度异常</td><td>1. 对比度调节引脚信号异常<br>2. LCD 背光老化</td><td>检查 HONDA 20 针第 19 脚（对比度调节）电压是否在 0–5 V 范围内；对于新安装的 LCD 极少出现背光问题，优先检查供电。</td></tr>
-<tr><td>画面显示不全或偏移</td><td>1. 画面水平/垂直位置设置错误<br>2. 缩放参数不匹配</td><td>进入 FANUC 系统显示参数菜单，调整画面水平位置（H-POS）和垂直位置（V-POS）参数。若无法解决问题，尝试恢复出厂显示设置。</td></tr>
-<tr><td>开机有显示，几分钟后熄灭</td><td>1. 驱动板过热保护<br>2. 电源负载能力不足</td><td>检查 LCD 周围散热空间是否充足，避免紧贴金属块；测量 24 V 电源在负载下的实际电压，低于 22 V 需检修电源模块。</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="important-box">
-<strong>重要提示：</strong>以上故障中 80% 以上由线缆连接不牢固引起。遇显示问题时建议先从最简单的步骤开始，先重新插拔信号线和电源线，再排查其他原因。如仍无法解决，请联系江图科技技术支持获取远程协助。
-</div>
-
-<hr>
-
-<h2>6. 产品介绍——FANUC A61L 系列 LCD 液晶显示器</h2>
-
-<p>江图科技推出的 FANUC A61L 系列 LCD 替换显示器是原装 CRT 的最佳替代方案：</p>
-
-<div class="table-wrap">
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-<thead>
-<tr><th>特性</th><th>详细说明</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>尺寸兼容</strong></td><td>与原 CRT 安装孔位、外形尺寸 100% 匹配，无需改动机床结构或面板开孔。</td></tr>
-<tr><td><strong>即插即用</strong></td><td>HONDA 20 针信号接口，兼容 FANUC 0i/16i/18i 等系统，零编程、零调试。</td></tr>
-<tr><td><strong>供电兼容</strong></td><td>DC 24 V 供电，直接使用原 CRT 电源线，无需额外电源模块。</td></tr>
-<tr><td><strong>工业级面板</strong></td><td>亮度 ≥ 500 cd/m²，对比度 ≥ 800:1，抗强光、抗冲击、耐振动。</td></tr>
-<tr><td><strong>超长寿命</strong></td><td>采用高品质 TFT-LCD 面板 + LED 背光，寿命 ≥ 50,000 h，显著降低更换频率。</td></tr>
-<tr><td><strong>低功耗</strong></td><td>工作功耗 ≤ 15 W，比 CRT 降低约 80%，长期运行可节省可观的电费开支。</td></tr>
-<tr><td><strong>可靠性</strong></td><td>前面板防护等级 IP65，防尘、防溅，适用于恶劣车间环境。</td></tr>
-<tr><td><strong>宽温工作</strong></td><td>工作温度 -10°C 至 +60°C，满足大多数工业加工车间的环境要求。</td></tr>
-</tbody>
-</table></div>
-</div>
-
-<p>本系列产品已通过 FANUC 0i/16i/18i 等主流系统的完整兼容性测试，确保数据完整性与实时性不受影响。出厂前每台均经过 72 小时老化测试和画面质量检测。</p>
-
-<hr>
-
-<h2>7. CRT vs LCD 详细技术规格对比</h2>
-
-<div class="table-wrap">
-<table class="comparison-table">
-<thead>
-<tr><th>对比项</th><th>原装 CRT 显示器</th><th>江图 LCD 升级方案</th></tr>
-</thead>
-<tbody>
-<tr><td>显示技术</td><td>阴极射线管（CRT）</td><td>TFT 彩色液晶显示 + LED 背光</td></tr>
-<tr><td>分辨率</td><td>640×480（固定）</td><td>800×600 / 1024×768（自适应）</td></tr>
-<tr><td>色彩表现</td><td>单色或有限色彩（模拟偏色）</td><td>全彩 1677 万色（8-bit），色域 sRGB</td></tr>
-<tr><td>亮度</td><td>200–300 cd/m²（老化后更低）</td><td>500+ cd/m²，亮度稳定不衰减</td></tr>
-<tr><td>对比度</td><td>约 300:1</td><td>≥ 800:1（典型值）</td></tr>
-<tr><td>功耗</td><td>60–80 W（含高压包损耗）</td><td>≤ 15 W（LED 背光高效率）</td></tr>
-<tr><td>发热量</td><td>高（高压包 + 显像管灯丝发热）</td><td>极低（无高压部件）</td></tr>
-<tr><td>显示屏厚度</td><td>约 200–250 mm（含后部CRT管颈）</td><td>约 25–40 mm（超薄设计）</td></tr>
-<tr><td>整机重量</td><td>3–5 kg</td><td>约 0.8–1.2 kg</td></tr>
-<tr><td>使用寿命</td><td>5–8 年（显像管老化不可逆）</td><td>MTBF > 30,000 h（约10年以上）</td></tr>
-<tr><td>供货状态</td><td>已停产，需找古董备件</td><td>批量现货供应，长期有货</td></tr>
-<tr><td>安装方式</td><td>原装 FANUC 专用</td><td>原位替换，即插即用，不改线缆</td></tr>
-<tr><td>年维护成本</td><td>¥2,000–8,000/年（找备件 + 维修）</td><td>¥0/年（免维护）</td></tr>
-<tr><td>售后服务</td><td>FANUC 原厂已停止维修支持</td><td>2 年质保，终身技术支持</td></tr>
-</tbody>
-</table>
-</div>
-
-<hr>
-
-<h2>8. 要点总结</h2>
-
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-<thead>
-<tr><th style="width:8%">序号</th><th style="width:92%">关键要点</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>1</strong></td><td><strong>升级意义：</strong>提升亮度与可视角度、降低功耗约 80%、延长寿命至 10 年以上、符合环保要求。</td></tr>
-<tr><td><strong>2</strong></td><td><strong>技术兼容：</strong>HONDA 20 针信号、DC 24 V 供电，与原 CRT 安装孔位 100% 匹配，直接替换，无需改动机床结构。</td></tr>
-<tr><td><strong>3</strong></td><td><strong>安装流程：</strong>断电防静电 → 拆除 CRT → 清理安装面 → 固定 LCD → 连接信号线和电源线 → 拧紧螺丝 → 通电检查。</td></tr>
-<tr><td><strong>4</strong></td><td><strong>产品优势：</strong>尺寸匹配、即插即用、工业级面板（IP65）、50,000 h 超长寿命、2 年质保。</td></tr>
-<tr><td><strong>5</strong></td><td><strong>维护建议：</strong>每半年检查一次螺丝紧固情况；保持显示面板清洁，避免强光直射；定期清理通风散热口。</td></tr>
-</tbody>
-</table></div>
-
-<p><strong>一句话概括：</strong>使用江图科技 FANUC A61L 系列 LCD 显示器，您只需 7 步即可完成从 CRT 到 LCD 的无缝升级，立刻获得更清晰、更节能、更可靠的数控显示效果，为车间生产效率注入新动能。</p>
-
-<hr>
-
-<p>本文由深圳市江图科技有限公司技术团队提供，版权归江图科技所有，未经许可不得转载。</p>
-
-            </div>
-
-<h2>九、常见问题（FAQ）</h2>
-
-<div class="faq-item">
-
-<div class="faq-q">原装 CRT 显示器完全停产了怎么办？</div>
-
-<div class="faq-a">目前 FANUC 原厂已全面停止 CRT 显示器的生产及维修服务，市面上可用的原装拆机件越来越少且价格高昂。推荐升级到我们的 LCD 替代方案，无需改动原有机床线缆和固定结构，直接替换安装。我们的方案已经过数千台机型的市场验证，兼容绝大多数 FANUC 数控系统。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">升级后显示效果和原装 CRT 一样吗？</div>
-
-<div class="faq-a">显示效果整体优于原装 CRT。LCD 替代方案分辨率更高（最高 1024×768），无闪烁、无几何失真、无辐射，画面清晰锐利。全彩显示让操作界面更加直观，长时间使用眼睛更舒适。唯一的差异是部分 FANUC 系统的单色操作界面在 LCD 上显示为灰度，不影响功能使用。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">安装需要专业人员吗？</div>
-
-<div class="faq-a">我们提供详细的安装指南，大多数工厂的电工或设备维护人员可参照本文章独立完成安装（约 15–30 分钟）。如有需要，我们也可安排工程师线上视频指导或上门服务。安装前建议先确认系统型号和接口类型。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">有保修期吗？</div>
-
-<div class="faq-a">所有产品均提供 12 个月质保（批量客户可延至 24 个月）。质保期内非人为损坏免费维修或更换。对于质保期外的产品，我们提供成本价维修服务，长期供应备件，确保您无后顾之忧。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">LCD 在强光车间环境下能看清楚吗？</div>
-
-<div class="faq-a">可以。我们的 LCD 采用高亮工业级面板（亮度 ≥ 500 cd/m²），远高于普通商用显示器。即使车间有强光直射，画面仍清晰可见。部分型号还可选配防眩光（Anti-Glare）表面处理，进一步减少反射干扰。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">升级 LCD 后是否会影响数控系统的加工精度或信号传输？</div>
-
-<div class="faq-a">完全不会。LCD 升级仅涉及显示器模块的更换，不影响数控系统的运算、控制、伺服驱动等核心功能。显示数据在数控系统内部已完成处理，显示器仅负责最终的画面呈现。我们的方案采用纯硬件信号转换，不介入系统数据总线，确保加工的精度和实时性不受任何影响。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">如何确认我的机床使用的 CRT 型号？</div>
-
-<div class="faq-a">查看 CRT 显示器背面的铭牌标签，通常标注有 FANUC 配件号（如 A61L-0001-0074）和序列号。对照本文第 3 节的兼容性表即可找到对应的 LCD 替换型号。您也可以直接拍摄铭牌照片发送给江图科技客服，我们免费为您匹配。</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-q">发货时间多长？支持国际运输吗？</div>
-
-<div class="faq-a">国内订单一般 1–3 个工作日内发货，顺丰快递，2–4 天可达全国。国际订单支持 DHL/FedEx 等国际快递，发货后 5–10 个工作日到达。我们已向美国、德国、日本、韩国、新加坡、印度等 10 余个国家供货，经验丰富。</div>
-
-</div>
-
-</article>
-
-<div class="share-buttons">
-
-    <div class="share-title">分享到：</div>
-
-    <div class="share-icons">
-
-        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="shareToWechat()" title="分享到微信朋友圈">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M8.691 2.646c-4.234 0-7.667 3.081-7.667 6.882 0 2.162 1.09 4.099 2.802 5.386l-.642 2.273 2.624-1.312c.928.286 1.915.438 2.944.438.336 0 .666-.021.99-.059-.193-.602-.298-1.24-.298-1.902 0-3.514 3.182-6.363 7.107-6.363.322 0 .639.022.951.064-.556-3.35-3.896-5.407-7.811-5.407zm-2.19 4.318c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm4.381 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm5.518 3.636c-3.529 0-6.391 2.532-6.391 5.654 0 1.775.904 3.355 2.319 4.397l-.529 1.873 2.162-1.081c.765.236 1.578.361 2.426.361 3.529 0 6.391-2.532 6.391-5.654s-2.862-5.654-6.391-5.654zm-1.77 3.273c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8.358-.8.8-.8zm3.539 0c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8.358-.8.8-.8z"/>
-
-            </svg>
-
-            <span>微信</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到 Facebook">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-
-            </svg>
-
-            <span>Facebook</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到 Twitter">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-
-            </svg>
-
-            <span>Twitter</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-
-            </svg>
-
-            <span>复制链接</span>
-
-        </a>
-
-    </div>
-
-</div>
-
-<script>
-
-(function() {
-
-    var pageUrl = encodeURIComponent(window.location.href);
-
-    var pageTitle = encodeURIComponent(document.title);
-
-    window.shareToWechat = function() {
-
-        var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
-
-        var modal = document.createElement('div');
-
-        modal.className = 'wechat-modal';
-
-        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
-
-        document.body.appendChild(modal);
-
-    };
-
-    window.shareToFacebook = function() {
-
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToTwitter = function() {
-
-        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
-
-    };
-
-    window.copyLink = function() {
-
-        navigator.clipboard.writeText(window.location.href).then(function() {
-
-            alert('链接已复制到剪贴板！');
-
-        }).catch(function() {
-
-            var input = document.createElement('input');
-
-            input.value = window.location.href;
-
-            document.body.appendChild(input);
-
-            input.select();
-
-            document.execCommand('copy');
-
-            document.body.removeChild(input);
-
-            alert('链接已复制到剪贴板！');
-
-        });
-
-    };
-
-})();
-
-</script>
-
-<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
-
-    <h3 style="margin-top:0;">相关文章</h3>
-
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南 | 深圳市江图科技有限公司</a></li><li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操指南 | 深圳市江图科技有限公司</a></li><li><a href="/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">CGA/EGA显示器改造为RGBHV工业显示器实战指南   | 深圳市江图科技有限公司</a></li></ul>
-
-</section>
-
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">资源链接</p>
-
-            <ul style="margin:0;padding-left:1.2rem;">
-
-                <li><a href="/zh/compatibility-matrix.html">95+ 机型兼容查询表</a> — 查找您的CRT型号对应的LCD替代方案</li>
-
-                <li><a href="/zh/brands/FANUC.html">浏览 FANUC 方案</a> — 全系列FANUC显示器替换</li>
-
-                <li><a href="/zh/quote.html">获取报价</a> — 24小时内回复</li>
-
-            </ul>
-
-        </div>
-
-<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
-    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Fanuc A61L 0001 0093 solution</strong></p>
-    <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
-</div>
-</main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">江图科技 Kongto Technology</span>
-                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
-            </div>
-            <div class="footer-links">
-                <a href="/zh/posts/">📄 技术文章</a>
-                <a href="/zh/brands/FANUC.html">FANUC方案</a>
-                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
-                <a href="/zh/brands/Siemens.html">西门子方案</a>
-                <a href="/zh/docs/">资料下载</a>
-                <a href="/zh/about.html">关于我们</a>
-                <a href="/zh/privacy.html">隐私政策</a>
-                <a href="/zh/terms.html">服务条款</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/zh/glossary.html">术语表</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
-                <a href="/zh/comparison-tool.html">对比工具</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
-                <a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/privacy.html">隐私</a>
-                <a href="/zh/terms.html">条款</a>
-                <a href="/zh/sitemap.xml">站点地图</a>
-            </div>
-    </footer>
-
-<script>
-
-(function(){
-
-    var bp = document.createElement('script');
-
-    var curProtocol = window.location.protocol.split(':')[0];
-
-    if (curProtocol === 'https') {
-
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-
-    } else {
-
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-
-    }
-
-    var s = document.getElementsByTagName("script")[0];
-
-    s.parentNode.insertBefore(bp, s);
-
-})();
-
-</script>
-
-</body>
-
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FANUC 数控显示器 CRT → LCD 升级完整指南 | 深圳市江图科技有限公司</title>
+
+    <meta name="description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南。江图科技12年工业显示经验，覆盖FANUC 0i/16i/18i/21i/31i全系列CRT转LCD升级改造方案，即插即用零改装，附完整安装步骤、HONDA 20针信号针脚定义与故障排查表。">
+
+    <meta name="keywords" content="FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代,CRT转LCD,数控显示器改造,HONDA 20针信号定义,FANUC 0i液晶屏">
+
+    <meta name="author" content="江图科技">
+
+    <link rel="canonical" href="https://cncdisplay.com/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html">
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="FANUC 数控显示器 CRT → LCD 升级完整指南">
+
+    <meta property="og:description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南。覆盖 FANUC 0i/16i/18i/21i/31i 全系列，含 HONDA 20针信号定义、安装步骤、故障排查及完整技术规格对比表。">
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+    <meta property="article:published_time" content="2026-05-01">
+
+    <meta property="article:author" content="江图科技">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="FANUC 数控显示器 CRT → LCD 升级完整指南">
+
+    <meta name="twitter:description" content="FANUC 数控显示器 CRT 转 LCD 升级完整指南，含完整安装步骤、HONDA 20针信号定义与故障排查表。">
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "FANUC 数控显示器 CRT → LCD 升级完整指南",
+  "description": "FANUC 数控显示器 CRT 转 LCD 升级完整指南。覆盖 FANUC 0i/16i/18i/21i/31i 全系列，含 HONDA 20针信号定义、安装步骤、故障排查及完整技术规格对比表。",
+  "author": {
+    "@type": "Person",
+    "name": "江图科技"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "深圳市江图科技有限公司",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}</script>
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
+
+    <meta name="geo.region" content="CN-44">
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "深圳市江图科技有限公司",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FANUC 数控显示器 CRT → LCD 升级完整指南",
+      "item": "https://cncdisplay.com/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html"
+    }
+  ]
+}
+
+</script>
+
+<style>
+/* Share buttons */
+.share-buttons { margin: 2.5rem 0; padding: 1.25rem 0; border-top: 1px solid #e0e0e0; }
+.share-title { font-size: 0.95rem; color: #555; margin-bottom: 0.75rem; font-weight: 600; }
+.share-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #e0e0e0; background: #fafafa; cursor: pointer; font-size: 0.85rem; color: #333; text-decoration: none; transition: all 0.2s; }
+.share-btn:hover { background: #f0f0f0; border-color: #ccc; transform: translateY(-1px); }
+.share-btn svg { flex-shrink: 0; }
+.share-btn span { white-space: nowrap; }
+.share-wechat:hover { color: #07C160; border-color: #07C160; background: #f0faf4; }
+.share-facebook:hover { color: #1877F2; border-color: #1877F2; background: #f0f6ff; }
+.share-twitter:hover { color: #1DA1F2; border-color: #1DA1F2; background: #f0f8ff; }
+.share-douyin:hover { color: #000; border-color: #000; background: #f5f5f5; }
+.share-copy:hover { color: #666; border-color: #999; background: #f0f0f0; }
+/* WeChat QR modal */
+.wechat-modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); z-index: 9999; display: flex; align-items: center; justify-content: center; }
+.wechat-modal-content { background: #fff; border-radius: 14px; padding: 2rem 2.5rem; max-width: 340px; width: 90%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.wechat-modal-content h3 { font-size: 1.1rem; margin-bottom: 1rem; color: #333; }
+.wechat-modal-content p { font-size: 0.9rem; color: #666; margin: 0.75rem 0 1.25rem; }
+.wechat-modal-content button { padding: 0.5rem 2rem; border-radius: 8px; border: none; background: #07C160; color: #fff; font-size: 0.9rem; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+.wechat-modal-content button:hover { background: #06ad56; }
+/* Content tables */
+.post .content table.spec-table,
+.post .content table.pinout-table,
+.post .content table.compat-table,
+.post .content table.trouble-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 2rem 0; font-size: 0.88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid #d2d2d7; }
+.post .content table.spec-table th,
+.post .content table.pinout-table th,
+.post .content table.compat-table th,
+.post .content table.trouble-table th { background: #1d1d1f; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.3px; }
+.post .content table.spec-table td,
+.post .content table.pinout-table td,
+.post .content table.compat-table td,
+.post .content table.trouble-table td { padding: 0.65rem 1rem; border-bottom: 1px solid #f0f0f0; background: #fff; }
+.post .content table.spec-table tr:nth-child(even) td,
+.post .content table.pinout-table tr:nth-child(even) td,
+.post .content table.compat-table tr:nth-child(even) td,
+.post .content table.trouble-table tr:nth-child(even) td { background: #f5f5f7; }
+.post .content table.spec-table tr:last-child td,
+.post .content table.pinout-table tr:last-child td,
+.post .content table.compat-table tr:last-child td,
+.post .content table.trouble-table tr:last-child td { border-bottom: none; }
+.post .content table.spec-table tr:hover td,
+.post .content table.pinout-table tr:hover td,
+.post .content table.compat-table tr:hover td,
+.post .content table.trouble-table tr:hover td { background: rgba(255,102,0,0.08); }
+.post .content .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.post .content .table-wrap table { margin: 0; }
+/* Step indicator */
+.post .content .step-highlight { background: #f0f7ff; border-left: 4px solid #1565C0; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.95rem; line-height: 1.6; }
+/* Tip box */
+.post .content .tip-box { background: #f0fff4; border-left: 4px solid #2e7d32; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.95rem; line-height: 1.6; }
+</style>
+
+    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body><header>
+        <nav>
+            <a href="/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/products/">产品</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+                <a href="/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>FANUC 数控显示器 CRT → LCD 升级完整指南</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">作者: 江图科技</span>
+
+            </div>
+
+            <div class="content">
+
+适用于 FANUC 0i/16i/18i 系列数控系统 <hr>
+
+<figure class="img-hero">
+
+  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010074_2.webp" alt="LCD升级改装完成" loading="lazy" >
+
+  <figcaption>图2：改装后LCD显示器与原系统无缝对接</figcaption>
+
+</figure>
+
+<figure class="img-step">
+
+  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010074_3.webp" alt="安装固定细节" loading="lazy" >
+
+  <figcaption>图3：LCD驱动板固定与信号线连接</figcaption>
+
+</figure>
+
+<h2>1. 为什么要升级？——CRT 与 LCD 的对比</h2>
+
+<div class="warning-box">
+
+<strong>安装前请注意：</strong>本方案适用于 FANUC 0i-MC/0i-Mate/0i-MF/0i-TF/15i/16i/18i/21i/31i 全系列数控系统。不同年代的系统可能使用不同的显示器接口及信号协议，请对照下方的兼容性表和信号针脚定义确认后再操作。
+
+</div>
+
+<p>CRT（阴极射线管）显示器曾是 FANUC 数控系统的标准配置，但其技术局限日益凸显。下表列出核心对比指标：</p>
+
+<div class="table-wrap">
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<thead>
+<tr><th>对比项目</th><th>CRT（阴极射线管）</th><th>LCD（液晶显示）</th></tr>
+</thead>
+<tbody>
+<tr><td>体积与重量</td><td>体积大，重量约 3–5 kg</td><td>超薄轻量（约 0.8 kg），可直接替换</td></tr>
+<tr><td>功耗</td><td>80–120 W（含高压包供电）</td><td>10–15 W（低压 DC 供电）</td></tr>
+<tr><td>亮度</td><td>200–300 cd/m²，老化后更低</td><td>≥500 cd/m²，稳定持久</td></tr>
+<tr><td>可视角度</td><td>受限（约 120°），侧看失真</td><td>宽视角 178°，任意角度清晰</td></tr>
+<tr><td>分辨率</td><td>640×480（原始分辨率，不可调）</td><td>800×600 / 1024×768 可选</td></tr>
+<tr><td>色彩</td><td>单色或有限色彩，易偏色</td><td>全彩 1677 万色，色彩精准</td></tr>
+<tr><td>工作寿命</td><td>约 10,000 h，显像管老化后模糊</td><td>≥50,000 h（约10年以上），无衰减</td></tr>
+<tr><td>维护成本</td><td>真空管老化、高压模块需定期检修</td><td>模块化设计，故障率极低，免维护</td></tr>
+<tr><td>环保标准</td><td>含铅、汞等有害物质</td><td>对数控机床操作员而言，LCD 的高亮度和宽视角意味着更准确的信息读取和更低的视觉疲劳。</p>
+
+<div class="article-image img-chart">
+
+  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_comparison.webp" alt="CRT与LCD升级方案核心指标对比表" >
+
+  <p >CRT与LCD升级方案核心指标对比表</p>
+
+</div>
+
+<hr>
+
+<h2>2. 技术原理详解</h2>
+
+<h3>2.1 信号转换链路</h3>
+
+<p>FANUC 数控系统自 0i 系列以上普遍采用模拟 RGB 信号输出，通过 <strong>HONDA 20 针连接器</strong> 将视频信号传输至显示器。升级 LCD 时，信号转换流程如下：</p>
+
+<p>FANUC 数控系统 → HONDA 20 针接口 → 模拟 R/G/B + 同步信号 → 信号桥接芯片（如 ADI ADV7511）→ 数字 LVDS/TTL → TFT 液晶面板</p>
+
+<p>其中信号桥接芯片负责：</p>
+<ul>
+  <li>将模拟 RGB（0.7 Vp-p）采样量化为数字信号</li>
+  <li>将行/场同步信号与数据信号对齐，生成 LVDS 时序</li>
+  <li>对画面进行缩放（从 640×480 缩放至 800×600 或 1024×768）</li>
+  <li>自动检测输入制式（CGA / EGA / VGA 兼容）</li>
+</ul>
+
+<h3>2.2 HONDA 20 针信号接口定义</h3>
+
+<p>以下为 FANUC 数控 CRT 显示器使用的 HONDA 20 针（MR-20）接口完整针脚定义，供安装接线时对照核查：</p>
+
+<div class="table-wrap">
+<table class="pinout-table">
+<thead>
+<tr><th>针脚号</th><th>信号名称</th><th>方向</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>GND</td><td>-</td><td>电源地 / 信号地</td></tr>
+<tr><td>2</td><td>+24V DC</td><td>输入</td><td>主电源供电（来自数控系统电源模块）</td></tr>
+<tr><td>3</td><td>GND</td><td>-</td><td>电源地</td></tr>
+<tr><td>4</td><td>+24V DC</td><td>输入</td><td>辅助电源（同2脚并联）</td></tr>
+<tr><td>5</td><td>R（红色信号）</td><td>输入</td><td>模拟红色通道，0.7 Vp-p</td></tr>
+<tr><td>6</td><td>G（绿色信号）</td><td>输入</td><td>模拟绿色通道，0.7 Vp-p</td></tr>
+<tr><td>7</td><td>B（蓝色信号）</td><td>输入</td><td>模拟蓝色通道，0.7 Vp-p</td></tr>
+<tr><td>8</td><td>GND</td><td>-</td><td>视频信号地</td></tr>
+<tr><td>9</td><td>HSYNC（行同步）</td><td>输入</td><td>水平同步信号，TTL 电平</td></tr>
+<tr><td>10</td><td>VSYNC（场同步）</td><td>输入</td><td>垂直同步信号，TTL 电平</td></tr>
+<tr><td>11</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
+<tr><td>12</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
+<tr><td>13</td><td>GND</td><td>-</td><td>同步信号地</td></tr>
+<tr><td>14</td><td>NC</td><td>-</td><td>未连接（保留 / 部分机型用于亮度调节）</td></tr>
+<tr><td>15</td><td>VIDEO ON</td><td>输出</td><td>视频使能信号（高电平有效）</td></tr>
+<tr><td>16</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
+<tr><td>17</td><td>NC</td><td>-</td><td>未连接（保留）</td></tr>
+<tr><td>18</td><td>GND</td><td>-</td><td>屏蔽地</td></tr>
+<tr><td>19</td><td>CONTRAST</td><td>输入</td><td>对比度调节电压（0–5V DC）</td></tr>
+<tr><td>20</td><td>GND</td><td>-</td><td>总地线</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tip-box">
+<strong>注意：</strong>不同年代的 FANUC 数控系统在针脚定义上可能有细微差异。部分早期机型（如 0i-Mate）使用简化的 14 针接口。建议在操作前先查阅对应机型的维修手册确认。如使用江图 LCD 升级套件，出厂时已按对应机型预配好线缆，无需用户逐一核对针脚。
+</div>
+
+<h3>2.3 供电兼容</h3>
+
+<p>原 CRT 使用 <strong>24 V DC</strong> 低压电源（供给内部高压转换模块产生阳极高压）。LCD 显示器直接使用同一路 <strong>24 V DC</strong> 供电，内部集成 <strong>DC-DC 降压</strong> 电路，输出 5 V / 12 V 给驱动板和 LED 背光。无需改动原电源布线，即插即用。</p>
+
+<h3>2.4 尺寸匹配</h3>
+
+<p>LCD 替换面板采用 <strong>与原 CRT 完全相同的安装孔位与外形尺寸</strong>（标准 9 英寸 / 10.4 英寸 / 14 英寸规格对应不同外形，安装孔间距均与原 CRT 一致），实现真正的"原位替换，一键安装"。</p>
+
+<hr>
+
+<h2>3. FANUC 系统与 LCD 兼容性对照表</h2>
+
+<p>下表列出常见 FANUC 数控系统型号及其对应的 CRT 显示器和 LCD 替换方案：</p>
+
+<div class="table-wrap">
+<div style="overflow-x:auto;margin:1rem 0;"><table class="compat-table">
+<thead>
+<tr><th>FANUC 系统型号</th><th>原 CRT 型号</th><th>LCD 替换型号</th><th>接口类型</th><th>屏幕尺寸</th><th>备注</th></tr>
+</thead>
+<tbody>
+<tr><td>0i-MC / 0i-Mate-MC</td><td>A61L-0001-0074</td><td>A61L-0001-0074-LCD</td><td>HONDA 20 针</td><td>14" 彩色</td><td>最常用型号</td></tr>
+<tr><td>0i-MF / 0i-TF</td><td>A61L-0001-0093</td><td>A61L-0001-0093-LCD</td><td>HONDA 20 针</td><td>9" 彩色</td><td>0i-F 系列标配</td></tr>
+<tr><td>16i-MA / 16i-TA</td><td>A61L-0001-0086</td><td>A61L-0001-0086-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>16i 系列通用</td></tr>
+<tr><td>18i-MA / 18i-TA</td><td>A61L-0001-0090</td><td>A61L-0001-0090-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>18i 系列通用</td></tr>
+<tr><td>21i-MA / 21i-TA</td><td>A61L-0001-0095</td><td>A61L-0001-0095-LCD</td><td>HONDA 20 针</td><td>9" 彩色</td><td>21i 系列专用</td></tr>
+<tr><td>31i-A5 / 31i-B5</td><td>A61L-0001-0100</td><td>A61L-0001-0100-LCD</td><td>HONDA 20 针</td><td>10.4" 彩色</td><td>高速系统</td></tr>
+<tr><td>15i-MA</td><td>A61L-0001-0073</td><td>A61L-0001-0073-LCD</td><td>HONDA 20 针</td><td>14" 彩色</td><td>早期型号</td></tr>
+<tr><td>0i-D / 0i-Mate-D</td><td>D9MM-11A-0093</td><td>D9MM-11A-0093-LCD</td><td>D-SUB 9 针</td><td>9" 单色</td><td>单色系统</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="info-box">
+<strong>无法确定您的系统型号？</strong> 查看数控系统面板上的型号标签（通常在显示器边框或驱动单元正面），或进入系统参数页面查看版本信息。也可直接联系江图科技技术支持（13686889647），提供系统型号即可获取准确的替换方案。
+</div>
+
+<hr>
+
+<h2>4. 安装步骤详解（7 步完成）</h2>
+
+<p><strong>准备工具：</strong>十字螺丝刀、扭力扳手（≤5 Nm）、防静电腕带、清洁棉、酒精（70%）、万用表（可选，用于通电前检测电源电压）</p>
+
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<thead>
+<tr><th style="width:12%">步骤</th><th style="width:35%">操作要点</th><th style="width:53%">注意事项与详细说明</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>1</strong></td><td><strong>断电 &amp; 防静电</strong><br>关闭数控机床主电源，拔掉显示器电源线</td><td>确认电源指示灯全部熄灭。等待至少 3 分钟，让 CRT 内部高压电容充分放电。<br>佩戴防静电腕带并可靠接地，防止静电损坏 LCD 驱动板上的敏感元件。</td></tr>
+<tr><td><strong>2</strong></td><td><strong>拆除原 CRT</strong><br>松开固定 CRT 的 4–6 颗螺丝（视机型而定）</td><td>小心拔出 <strong>HONDA 20 针</strong> 信号线和 <strong>24 V</strong> 电源线。拔线时保持插头正面朝外，按压卡扣后均匀用力拔出，防止卡扣断裂或针脚弯折。<br><strong>建议：</strong>拔线前用手机拍照记录线缆连接方位，便于回装时参照。</td></tr>
+<tr><td><strong>3</strong></td><td><strong>清理安装面</strong><br>用酒精棉轻拭原支架与机壳接触面</td><td>去除油污、切削液残留和灰尘。确保安装平面平整无异物。<br>不要使用丙酮、天那水等腐蚀性溶剂，以免损伤金属表面涂层。</td></tr>
+<tr><td><strong>4</strong></td><td><strong>安装 LCD</strong><br>将 LCD 对准原 CRT 安装孔位放入</td><td>确认 LCD 方向正确（信号接口朝向机壳内侧）。轻压四角使面板完全贴合支架。<br>检查 LCD 面板与机壳之间无多余线缆挤压，避免安装后产生应力裂纹。</td></tr>
+<tr><td><strong>5</strong></td><td><strong>连接线缆</strong><br>插入 HONDA 20 针接口（方向标记"1"对齐），连接 24 V DC 电源线</td><td>注意电源线红/黑极性与原 CRT 一致（红 = 正极，黑 = 负极或 GND）。<br>插头需完全推入并听到卡扣锁定的"咔嗒"声，防止振动环境中脱落。</td></tr>
+<tr><td><strong>6</strong></td><td><strong>固定螺丝</strong><br>使用扭力扳手将固定螺丝拧至 4–5 Nm</td><td>按对角线顺序分次拧紧，避免单侧受力不均导致面板偏斜。不要超过 5 Nm，过紧会导致面板裂纹。螺纹保持清洁。</td></tr>
+<tr><td><strong>7</strong></td><td><strong>通电检查</strong><br>开机后进入 FANUC 系统 → 参数 → 画面设置</td><td>确认显示分辨率为 800×600（或系统默认值）。若画面异常（不显示/花屏/偏色），首先检查信号线是否插紧。<br>首次通电建议观察 5–10 分钟，确认背光亮度均匀、无闪烁、无异常发热。</td></tr>
+</tbody>
+</table></div>
+
+<div class="tip-box">
+<strong>小贴士：</strong>若机床配有防护门或防护罩，完成安装后请重新装回，防止金属屑、切削液等进入显示器内部。建议在安装后的第一周每天进行一次目视检查，确保一切正常。
+</div>
+
+<div class="article-image img-step">
+
+  <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_steps.webp" alt="CRT到LCD升级安装步骤流程图" >
+
+  <p >CRT到LCD升级安装步骤流程图</p>
+
+</div>
+
+<hr>
+
+<h2>5. 常见故障排查指南</h2>
+
+<p>安装 LCD 后如遇到显示问题，请按以下表格逐一排查：</p>
+
+<div class="table-wrap">
+<table class="trouble-table">
+<thead>
+<tr><th style="width:22%">故障现象</th><th style="width:30%">可能原因</th><th style="width:48%">排查方法与解决方案</th></tr>
+</thead>
+<tbody>
+<tr><td>完全无显示（黑屏）</td><td>1. 24 V 电源未接通<br>2. 信号线松动</td><td>使用万用表测量 LCD 供电端 24 V 是否正常；检查 HONDA 20 针插头是否插到位；若电源正常仍无显示，驱动板可能故障，联系售后更换。</td></tr>
+<tr><td>画面闪烁或抖动</td><td>1. 电源供电不足<br>2. 信号线接触不良</td><td>检查 24 V 电源是否稳定（波动应 < 5%）；重新插拔 HONDA 20 针接口，检查针脚有无弯折；尝试调整数控系统参数中的画面刷新率设置。</td></tr>
+<tr><td>偏色（缺红/绿/蓝）</td><td>1. 模拟 RGB 某路信号断开<br>2. 驱动板输入端虚焊</td><td>检查 HONDA 20 针第 5/6/7 脚连接是否良好；交换 RGB 信号测试（如将 R 和 G 对调，若缺色变为缺红则确认为对应通道问题）；联系售后检测驱动板。</td></tr>
+<tr><td>画面花屏或乱码</td><td>1. 信号格式不匹配<br>2. LVDS 线松动</td><td>检查数控系统画面参数中分辨率设置是否与 LCD 匹配；断电后重新插拔 LCD 内部的 LVDS 排线（FPC 软排线），确保扣具压紧。</td></tr>
+<tr><td>对比度/亮度异常</td><td>1. 对比度调节引脚信号异常<br>2. LCD 背光老化</td><td>检查 HONDA 20 针第 19 脚（对比度调节）电压是否在 0–5 V 范围内；对于新安装的 LCD 极少出现背光问题，优先检查供电。</td></tr>
+<tr><td>画面显示不全或偏移</td><td>1. 画面水平/垂直位置设置错误<br>2. 缩放参数不匹配</td><td>进入 FANUC 系统显示参数菜单，调整画面水平位置（H-POS）和垂直位置（V-POS）参数。若无法解决问题，尝试恢复出厂显示设置。</td></tr>
+<tr><td>开机有显示，几分钟后熄灭</td><td>1. 驱动板过热保护<br>2. 电源负载能力不足</td><td>检查 LCD 周围散热空间是否充足，避免紧贴金属块；测量 24 V 电源在负载下的实际电压，低于 22 V 需检修电源模块。</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="important-box">
+<strong>重要提示：</strong>以上故障中 80% 以上由线缆连接不牢固引起。遇显示问题时建议先从最简单的步骤开始，先重新插拔信号线和电源线，再排查其他原因。如仍无法解决，请联系江图科技技术支持获取远程协助。
+</div>
+
+<hr>
+
+<h2>6. 产品介绍——FANUC A61L 系列 LCD 液晶显示器</h2>
+
+<p>江图科技推出的 FANUC A61L 系列 LCD 替换显示器是原装 CRT 的最佳替代方案：</p>
+
+<div class="table-wrap">
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<thead>
+<tr><th>特性</th><th>详细说明</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>尺寸兼容</strong></td><td>与原 CRT 安装孔位、外形尺寸 100% 匹配，无需改动机床结构或面板开孔。</td></tr>
+<tr><td><strong>即插即用</strong></td><td>HONDA 20 针信号接口，兼容 FANUC 0i/16i/18i 等系统，零编程、零调试。</td></tr>
+<tr><td><strong>供电兼容</strong></td><td>DC 24 V 供电，直接使用原 CRT 电源线，无需额外电源模块。</td></tr>
+<tr><td><strong>工业级面板</strong></td><td>亮度 ≥ 500 cd/m²，对比度 ≥ 800:1，抗强光、抗冲击、耐振动。</td></tr>
+<tr><td><strong>超长寿命</strong></td><td>采用高品质 TFT-LCD 面板 + LED 背光，寿命 ≥ 50,000 h，显著降低更换频率。</td></tr>
+<tr><td><strong>低功耗</strong></td><td>工作功耗 ≤ 15 W，比 CRT 降低约 80%，长期运行可节省可观的电费开支。</td></tr>
+<tr><td><strong>可靠性</strong></td><td>前面板防护等级 IP65，防尘、防溅，适用于恶劣车间环境。</td></tr>
+<tr><td><strong>宽温工作</strong></td><td>工作温度 -10°C 至 +60°C，满足大多数工业加工车间的环境要求。</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<p>本系列产品已通过 FANUC 0i/16i/18i 等主流系统的完整兼容性测试，确保数据完整性与实时性不受影响。出厂前每台均经过 72 小时老化测试和画面质量检测。</p>
+
+<hr>
+
+<h2>7. CRT vs LCD 详细技术规格对比</h2>
+
+<div class="table-wrap">
+<table class="comparison-table">
+<thead>
+<tr><th>对比项</th><th>原装 CRT 显示器</th><th>江图 LCD 升级方案</th></tr>
+</thead>
+<tbody>
+<tr><td>显示技术</td><td>阴极射线管（CRT）</td><td>TFT 彩色液晶显示 + LED 背光</td></tr>
+<tr><td>分辨率</td><td>640×480（固定）</td><td>800×600 / 1024×768（自适应）</td></tr>
+<tr><td>色彩表现</td><td>单色或有限色彩（模拟偏色）</td><td>全彩 1677 万色（8-bit），色域 sRGB</td></tr>
+<tr><td>亮度</td><td>200–300 cd/m²（老化后更低）</td><td>500+ cd/m²，亮度稳定不衰减</td></tr>
+<tr><td>对比度</td><td>约 300:1</td><td>≥ 800:1（典型值）</td></tr>
+<tr><td>功耗</td><td>60–80 W（含高压包损耗）</td><td>≤ 15 W（LED 背光高效率）</td></tr>
+<tr><td>发热量</td><td>高（高压包 + 显像管灯丝发热）</td><td>极低（无高压部件）</td></tr>
+<tr><td>显示屏厚度</td><td>约 200–250 mm（含后部CRT管颈）</td><td>约 25–40 mm（超薄设计）</td></tr>
+<tr><td>整机重量</td><td>3–5 kg</td><td>约 0.8–1.2 kg</td></tr>
+<tr><td>使用寿命</td><td>5–8 年（显像管老化不可逆）</td><td>MTBF > 30,000 h（约10年以上）</td></tr>
+<tr><td>供货状态</td><td>已停产，需找古董备件</td><td>批量现货供应，长期有货</td></tr>
+<tr><td>安装方式</td><td>原装 FANUC 专用</td><td>原位替换，即插即用，不改线缆</td></tr>
+<tr><td>年维护成本</td><td>¥2,000–8,000/年（找备件 + 维修）</td><td>¥0/年（免维护）</td></tr>
+<tr><td>售后服务</td><td>FANUC 原厂已停止维修支持</td><td>2 年质保，终身技术支持</td></tr>
+</tbody>
+</table>
+</div>
+
+<hr>
+
+<h2>8. 要点总结</h2>
+
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<thead>
+<tr><th style="width:8%">序号</th><th style="width:92%">关键要点</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>1</strong></td><td><strong>升级意义：</strong>提升亮度与可视角度、降低功耗约 80%、延长寿命至 10 年以上、符合环保要求。</td></tr>
+<tr><td><strong>2</strong></td><td><strong>技术兼容：</strong>HONDA 20 针信号、DC 24 V 供电，与原 CRT 安装孔位 100% 匹配，直接替换，无需改动机床结构。</td></tr>
+<tr><td><strong>3</strong></td><td><strong>安装流程：</strong>断电防静电 → 拆除 CRT → 清理安装面 → 固定 LCD → 连接信号线和电源线 → 拧紧螺丝 → 通电检查。</td></tr>
+<tr><td><strong>4</strong></td><td><strong>产品优势：</strong>尺寸匹配、即插即用、工业级面板（IP65）、50,000 h 超长寿命、2 年质保。</td></tr>
+<tr><td><strong>5</strong></td><td><strong>维护建议：</strong>每半年检查一次螺丝紧固情况；保持显示面板清洁，避免强光直射；定期清理通风散热口。</td></tr>
+</tbody>
+</table></div>
+
+<p><strong>一句话概括：</strong>使用江图科技 FANUC A61L 系列 LCD 显示器，您只需 7 步即可完成从 CRT 到 LCD 的无缝升级，立刻获得更清晰、更节能、更可靠的数控显示效果，为车间生产效率注入新动能。</p>
+
+<hr>
+
+<p>本文由深圳市江图科技有限公司技术团队提供，版权归江图科技所有，未经许可不得转载。</p>
+
+            </div>
+
+<h2>九、常见问题（FAQ）</h2>
+
+<div class="faq-item">
+
+<div class="faq-q">原装 CRT 显示器完全停产了怎么办？</div>
+
+<div class="faq-a">目前 FANUC 原厂已全面停止 CRT 显示器的生产及维修服务，市面上可用的原装拆机件越来越少且价格高昂。推荐升级到我们的 LCD 替代方案，无需改动原有机床线缆和固定结构，直接替换安装。我们的方案已经过数千台机型的市场验证，兼容绝大多数 FANUC 数控系统。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">升级后显示效果和原装 CRT 一样吗？</div>
+
+<div class="faq-a">显示效果整体优于原装 CRT。LCD 替代方案分辨率更高（最高 1024×768），无闪烁、无几何失真、无辐射，画面清晰锐利。全彩显示让操作界面更加直观，长时间使用眼睛更舒适。唯一的差异是部分 FANUC 系统的单色操作界面在 LCD 上显示为灰度，不影响功能使用。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">安装需要专业人员吗？</div>
+
+<div class="faq-a">我们提供详细的安装指南，大多数工厂的电工或设备维护人员可参照本文章独立完成安装（约 15–30 分钟）。如有需要，我们也可安排工程师线上视频指导或上门服务。安装前建议先确认系统型号和接口类型。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">有保修期吗？</div>
+
+<div class="faq-a">所有产品均提供 12 个月质保（批量客户可延至 24 个月）。质保期内非人为损坏免费维修或更换。对于质保期外的产品，我们提供成本价维修服务，长期供应备件，确保您无后顾之忧。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">LCD 在强光车间环境下能看清楚吗？</div>
+
+<div class="faq-a">可以。我们的 LCD 采用高亮工业级面板（亮度 ≥ 500 cd/m²），远高于普通商用显示器。即使车间有强光直射，画面仍清晰可见。部分型号还可选配防眩光（Anti-Glare）表面处理，进一步减少反射干扰。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">升级 LCD 后是否会影响数控系统的加工精度或信号传输？</div>
+
+<div class="faq-a">完全不会。LCD 升级仅涉及显示器模块的更换，不影响数控系统的运算、控制、伺服驱动等核心功能。显示数据在数控系统内部已完成处理，显示器仅负责最终的画面呈现。我们的方案采用纯硬件信号转换，不介入系统数据总线，确保加工的精度和实时性不受任何影响。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">如何确认我的机床使用的 CRT 型号？</div>
+
+<div class="faq-a">查看 CRT 显示器背面的铭牌标签，通常标注有 FANUC 配件号（如 A61L-0001-0074）和序列号。对照本文第 3 节的兼容性表即可找到对应的 LCD 替换型号。您也可以直接拍摄铭牌照片发送给江图科技客服，我们免费为您匹配。</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">发货时间多长？支持国际运输吗？</div>
+
+<div class="faq-a">国内订单一般 1–3 个工作日内发货，顺丰快递，2–4 天可达全国。国际订单支持 DHL/FedEx 等国际快递，发货后 5–10 个工作日到达。我们已向美国、德国、日本、韩国、新加坡、印度等 10 余个国家供货，经验丰富。</div>
+
+</div>
+
+</article>
+
+<div class="share-buttons">
+
+    <div class="share-title">分享到：</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-wechat" onclick="shareToWechat()" title="分享到微信朋友圈">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M8.691 2.646c-4.234 0-7.667 3.081-7.667 6.882 0 2.162 1.09 4.099 2.802 5.386l-.642 2.273 2.624-1.312c.928.286 1.915.438 2.944.438.336 0 .666-.021.99-.059-.193-.602-.298-1.24-.298-1.902 0-3.514 3.182-6.363 7.107-6.363.322 0 .639.022.951.064-.556-3.35-3.896-5.407-7.811-5.407zm-2.19 4.318c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm4.381 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm5.518 3.636c-3.529 0-6.391 2.532-6.391 5.654 0 1.775.904 3.355 2.319 4.397l-.529 1.873 2.162-1.081c.765.236 1.578.361 2.426.361 3.529 0 6.391-2.532 6.391-5.654s-2.862-5.654-6.391-5.654zm-1.77 3.273c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8.358-.8.8-.8zm3.539 0c.442 0 .8.358.8.8s-.358.8-.8.8-.8-.358-.8-.8.358-.8.8-.8z"/>
+
+            </svg>
+
+            <span>微信</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="分享到 Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="分享到 Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="复制链接">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>复制链接</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToWechat = function() {
+
+        var qrcodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
+
+        var modal = document.createElement('div');
+
+        modal.className = 'wechat-modal';
+
+        modal.innerHTML = '<div class="wechat-modal-content"><h3>微信扫码分享</h3><img style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy" src="' + qrcodeUrl + '" alt="QR Code"><p>打开微信扫一扫，分享到朋友圈</p><button onclick="this.parentElement.parentElement.remove()">关闭</button></div>';
+
+        document.body.appendChild(modal);
+
+    };
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('链接已复制到剪贴板！');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('链接已复制到剪贴板！');
+
+        });
+
+    };
+
+})();
+
+</script>
+
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+    <h3 style="margin-top:0;">相关文章</h3>
+
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南 | 深圳市江图科技有限公司</a></li><li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操指南 | 深圳市江图科技有限公司</a></li><li><a href="/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">CGA/EGA显示器改造为RGBHV工业显示器实战指南   | 深圳市江图科技有限公司</a></li></ul>
+
+</section>
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">资源链接</p>
+
+            <ul style="margin:0;padding-left:1.2rem;">
+
+                <li><a href="/zh/compatibility-matrix.html">95+ 机型兼容查询表</a> — 查找您的CRT型号对应的LCD替代方案</li>
+
+                <li><a href="/zh/brands/FANUC.html">浏览 FANUC 方案</a> — 全系列FANUC显示器替换</li>
+
+                <li><a href="/zh/quote.html">获取报价</a> — 24小时内回复</li>
+
+            </ul>
+
+        </div>
+
+<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
+    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Fanuc A61L 0001 0093 solution</strong></p>
+    <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
+</div>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+                <a href="/zh/privacy.html">隐私政策</a>
+                <a href="/zh/terms.html">服务条款</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
+        </div>
+    
+            <div class="footer-links">
+                <a href="/zh/glossary.html">术语表</a>
+                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
+                <a href="/zh/comparison-tool.html">对比工具</a>
+                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/privacy.html">隐私</a>
+                <a href="/zh/terms.html">条款</a>
+                <a href="/zh/sitemap.xml">站点地图</a>
+            </div>
+    </footer>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    var curProtocol = window.location.protocol.split(':')[0];
+
+    if (curProtocol === 'https') {
+
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+    } else {
+
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    }
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+</body>
+
 </html>
