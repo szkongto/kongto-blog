@@ -1,496 +1,496 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章列表 | 深圳市江图科技有限公司</title>
-    <meta name="description" content="工业视频显示技术文章，涵盖FANUC、三菱、西门子、Mazak、Okuma、Haas显示器升级、工业视频信号转换、CNC数控备件等专业内容。">
-    <link rel="stylesheet" href="/css/style.css?v=6">
-    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/index.html" />
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/index.html" />
-	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/index.html" />
-	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/index.html" />
-    <link rel="canonical" href="/zh/posts/index.html">
-    <style>
-        .category-section { margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; }
-        .category-section h2 { color: #1a1a2e; border-bottom: 2px solid #4cc9f0; padding-bottom: 0.5rem; }
-        .article-count { color: #666; font-size: 0.8em; }
-        .post-list { display: grid; gap: 1rem; margin-top: 1rem; }
-        .post-item { background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .post-item h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
-        .post-item h3 a { color: #1a1a2e; text-decoration: none; }
-        .post-item h3 a:hover { color: #4cc9f0; }
-        .post-item time { color: #888; font-size: 0.85rem; }
-        .post-item p { color: #555; font-size: 0.9rem; margin: 0.5rem 0 0 0; }
-        .toc { background: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
-        .toc h3 { margin-top: 0; }
-        .toc ul { columns: 2; column-gap: 2rem; }
-        .toc li { break-inside: avoid; margin-bottom: 0.3rem; }
-        @media (max-width: 768px) { .toc ul { columns: 1; } }
-    </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kongto Technology",
-  "alternateName": ["深圳市江图科技有限公司", "Kongto Technology", "江图科技"],
-  "url": "https://cncdisplay.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://cncdisplay.com/images/logo_256.png"
-  },
-  "foundingDate": "2013",
-  "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions, video signal converters, and custom industrial displays",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Shenzhen",
-    "addressRegion": "Guangdong",
-    "addressCountry": "CN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+86-13686889647",
-    "email": "info@cncdisplay.com",
-    "contactType": "sales",
-    "availableLanguage": ["Chinese", "English"]
-  }
-}
-</script>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">江图科技</a>
-            <div class="nav-links">
-                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/products/">产品</a>
-                <a href="/zh/posts/">文章</a>
-                <a href="/zh/case-studies.html">案例</a>
-                <a href="/zh/docs/">下载</a>
-                <a href="/zh/about.html">关于</a>
-                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
-            </div>
-            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
-            <div class="lang-switch">
-            <a href="/zh/posts/" lang="zh" class="lang-zh">中文</a>
-            <span class="divider">|</span>
-            <a href="/posts/" lang="en" class="lang-en">English</a>
-        </div>
-        </nav>
-    </header>
-    <main>
-        <h1>全部文章</h1>
-        <div class="toc">
-            <h3>文章分类导航</h3>
-            <ul>
-                <li><a href="#fanuc">🔧 FANUC 发那科 显示器 LCD 升级方案 (17)</a></li>
-<li><a href="#mazak">🔧 马扎克 Mazak / 夏普 Sharp 显示器替代方案 (3)</a></li>
-<li><a href="#okuma">🔧 大隈 Okuma 显示器替代方案 (1)</a></li>
-<li><a href="#haas">🔧 哈斯 Haas 显示器替代方案 (1)</a></li>
-<li><a href="#siemens">🔧 西门子 Siemens 显示器替代方案 (4)</a></li>
-<li><a href="#mitsu">🔧 三菱 Mitsubishi 工业显示器替代方案 (5)</a></li>
-<li><a href="#conv">🔌 工业视频信号转换器 (3)</a></li>
-<li><a href="#ktv">📺 非标 KTV 系列 订制工业显示器 (4)</a></li>
-<li><a href="#guide">📚 技术指南与方案 (18)</a></li>
-<li><a href="#comp">⚖️ 技术对比分析 (2)</a></li>
-<li><a href="#news">📰 新闻动态 (1)</a></li>
-            </ul>
-        </div>
-        <section class="category-section" id="fanuc">
-    <h2>🔧 FANUC 发那科 显示器 LCD 升级方案 <span class="article-count">(17篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html">江图科技推出FANUC数控显示器LCD升级解决方案</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>江图科技推出FANUC数控显示器LCD升级解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html">FANUC 数控显示器 CRT → LCD 升级完整指南</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>FANUC 数控显示器 CRT 转 LCD 升级完整指南。江图科技12年工业显示经验，覆盖FANUC 0i/16i/18i/21i/31i全系列CRT转LCD升级改造方案，即插即用零改装，附完整安装步骤、HONDA 20针信号针脚定义与故障</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操指南</a></h3>
-    <time datetime="2026-05-26">2026-05-26</time>
-    <p>FANUC A61L-0001-0093 9英寸CRT显示器改LCD液晶完整替换流程，从型号识别、信号对接、实物安装到效果展示，分步实操指南。即插即用，不改接线、不改参数、不动结构。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT.html">FANUC A61L-0001-0097 LCD液晶替代方案——老式CRT显示器升级专家</a></h3>
-    <time datetime="2026-05-22">2026-05-22</time>
-    <p>FANUC A61L-0001-0097 LCD液晶替代方案。原位替换9英寸CRT显示器，免改机免改线，亮度350cd/m²，兼容FANUC 0i/16i/18i系列数控系统。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260521_FANUC_A61L_0001_0096_LCD.html">FANUC A61L-0001-0096 CRT显示器LCD液晶替代方案——免改机原位升级专业解决方案</a></h3>
-    <time datetime="2026-05-21">2026-05-21</time>
-    <p>FANUC A61L-0001-0096 CRT显示器专用液晶替代方案，免改机免改线原位安装即装即用，兼容FANUC 0i/16i/18i系列数控系统，工业级TFT-LCD面板50000小时寿命。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html">FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html">FANUC A61L-0001-0095 LCD升级方案 | FANUC 0i-B/C系统9英寸显示器</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0095 9英寸单色CRT显示器专业LCD升级方案。适用于FANUC 0i-B/C系列数控车床和加工中心。江图科技提供标准版/专业版两种方案，即插即用，质保2年。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html">FANUC A61L-0001-0094 14英寸彩色显示器替代方案详解</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0094 14英寸彩色显示器替代方案详解。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD升级替代方案 | 9英寸CRT改液晶实战</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0093 9英寸单色CRT显示器LCD液晶升级替代完整方案，含原厂参数、故障诊断、安装步骤、系统兼容性说明，适用于FANUC 0/0i/OM-D等数控系统。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html">FANUC A61L-0001-0092 MDT947B 9英寸单色显示器替代升级方案</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0092 MDT947B 9英寸单色显示器替代升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 CRT显示器LCD升级方案 | 工业显示器改造专家</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0090 9英寸单色CRT显示器专业LCD升级方案。适用于FANUC 0-T系列数控车床系统，解决CRT老化、显示暗淡、高压包故障等问题。江图科技提供即插即用升级模块，质保2年。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 松下CRT显示器LCD替换方案 | 工业显示器升级专家</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0086松下原装9英寸CRT显示器专业LCD升级方案。兼容FANUC Series 6/10/11系统，解决CRT老化、亮度衰减、高压包故障等典型问题。江图科技提供定制化LCD替换模块，即装即用，质保2年。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南</a></h3>
-    <time datetime="2026-05-03">2026-05-03</time>
-    <p>FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html">FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力</a></h3>
-    
-    <p>FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
-</article>
-    </div>
-
-<article class="post-item">
-    <h3><a href="/zh/posts/fanuc-a02b-0094-c022-lcd-upgrade-guide.html">FANUC A02B-0094-C022 CRT/MDI一体机改LCD升级指南</a></h3>
-    <time datetime="2026-07-13">2026-07-13</time>
-    <p>FANUC A02B-0094-C022 CRT/MDI一体机改LCD方案。保留原MDI键盘功能，替换CRT显示部分为工业TFT液晶。即插即用，不改参数，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/fanuc-a61l-0001-0116-lcd-upgrade-guide.html">FANUC A61L-0001-0116 12.1英寸CRT转LCD升级指南</a></h3>
-    <time datetime="2026-07-13">2026-07-13</time>
-    <p>FANUC A61L-0001-0116 12.1英寸CRT转LCD升级方案。参数对比、安装步骤、兼容系统列表。兼容FANUC 0i/16i/18i/21i系列。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/fanuc-a02b-0099-c094-lcd-upgrade-guide.html">FANUC Series 0-P A02B-0099-C094单绿色CRT改LCD升级</a></h3>
-    <time datetime="2026-07-13">2026-07-13</time>
-    <p>FANUC Series 0-P / A02B-0099-C094 单绿色CRT改LCD升级指南。用于FANUC 0系列/0-Mate经典数控，即插即用不改参数。</p>
-</article></section>
-<section class="category-section" id="mazak">
-    <h2>&#x1f527; &#x9A6C;&#x624E;&#x514B; Mazak &#x663E;&#x793A;&#x5668;&#x66FF;&#x4EE3;&#x65B9;&#x6848; <span class="article-count">(5&#x7BC7;)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/article_20260522_Mazak_DR5614_LCD_CRT.html">&#x9A6C;&#x624E;&#x514B; DR5614 LCD&#x66FF;&#x4EE3;&#x65B9;&#x6848;</a></h3>
-    <time datetime="2026-05-22">2026-05-22</time>
-    <p>&#x9A6C;&#x624E;&#x514B; Mazak DR5614 CRT&#x663E;&#x793A;&#x5668;LCD&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;12.1&#x82F1;&#x5BF8;TFT&#x9AD8;&#x6E05;&#x5C4F;&#xFF0C;800&#x00D7;600&#xFF0C;15&#x9488;Molex&#x539F;&#x88C5;&#x63A5;&#x53E3;&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html">&#x9A6C;&#x624E;&#x514B; C-5470NS CRT&#x6539;LCD&#x5347;&#x7EA7;</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>&#x9A6C;&#x624E;&#x514B; C-5470NS CRT&#x6539;LCD&#x5347;&#x7EA7;&#x6848;&#x4F8B;&#x3002;&#x89E3;&#x51B3;CRT&#x9ED1;&#x5C4F;&#x3001;&#x82B1;&#x5C4F;&#x3001;&#x8272;&#x5F69;&#x5931;&#x771F;&#x7B49;&#x6545;&#x969C;&#x3002;72&#x5C0F;&#x65F6;&#x8001;&#x5316;&#x6D4B;&#x8BD5;&#xFF0C;2&#x5E74;&#x8D28;&#x4FDD;&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html">Mazak AIQA8DSP40 14&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>AIQA8DSP40 14&#x82F1;&#x5BF8;&#x5F69;&#x8272;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;&#xFF0C;&#x7528;&#x4E8E;Mazak Mazatrol T-32/640&#x6570;&#x63A7;&#x7CFB;&#x7EDF;&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_Mazak_CD1472D1M_LCD.html">Mazak CD1472-D1M 14&#x82F1;&#x5BF8;&#x6DB2;&#x6676;&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>Mazak CD1472-D1M 14&#x82F1;&#x5BF8;CRT&#x6539;&#x6DB2;&#x6676;&#x65B9;&#x6848;&#x3002;&#x7528;&#x4E8E;Mazak Mazatrol&#x6570;&#x63A7;&#x7CFB;&#x7EDF;&#x3002;&#x5373;&#x63D2;&#x5373;&#x7528;&#xFF0C;&#x4E0D;&#x6539;&#x53C2;&#x6570;&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_MDT1283B_LCD_Replacement.html">Mazak MDT1283B-1A 12&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>Mazak MDT1283B-1A 12&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;&#x3002;&#x4E0D;&#x540C;&#x4E8E;CD1472&#xFF08;14&#x82F1;&#x5BF8;&#xFF09;&#xFF0C;&#x72EC;&#x7ACB;&#x578B;&#x53F7;&#x4E13;&#x7528;&#x65B9;&#x6848;&#x3002;&#x5373;&#x63D2;&#x5373;&#x7528;&#x3002;</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="okuma">id="okuma">
-    <h2>🔧 大隈 Okuma 显示器替代方案 <span class="article-count">(1篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html">大隈 Okuma 5000/5020 CRT 液晶屏升级替换指南——即插即用 无需改装</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>大隈 Okuma OSP 5000/5020 数控系统 CRT 显示器老化故障怎么办？工业级液晶显示器升级方案，即插即用安装，无需改动电路，全兼容替换。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="haas">
-    <h2>🔧 哈斯 Haas 显示器替代方案 <span class="article-count">(1篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_Haas_CRT_LCD_Case.html">哈斯机床老旧CRT显示器升级液晶替换案例</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>哈斯机床老旧CRT显示器升级液晶替换案例。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="siemens">
-    <h2>🔧 西门子 Siemens 显示器替代方案 <span class="article-count">(4篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/siemens-sinumerik-display-troubleshooting-zh.html">西门子 SINUMERIK CNC 显示屏故障排除指南</a></h3>
-    
-    <p>西门子 SINUMERIK CNC 显示屏不亮？闪烁？无信号？逐步故障排除指南。何时维修，何时更换。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/siemens-display-upgrade-cost-roi-analysis-zh.html">西门子显示屏升级成本ROI分析：CRT vs LCD全面对比</a></h3>
-    
-    <p>西门子 CNC 显示屏升级成本与 ROI 分析。CRT 维修 vs LCD 升级——帮助您做出明智决策的数据。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_Siemens_SM0901_579417_TA.html">西门子Siemens-SM0901 579417 TA单色显示器 产品介绍</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>西门子Siemens-SM0901 579417 TA单色显示器 产品介绍。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html">西门子6FC3998-7FA20工业显示器 9寸单色LCD完美替代方案</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>西门子6FC3998-7FA20工业显示器 9寸单色LCD完美替代方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="mitsu">
-    <h2>🔧 三菱 Mitsubishi 工业显示器替代方案 <span class="article-count">(5篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html">三菱 MDT962B/BM09DF 系列 CRT 升级 LCD 液晶全面替换方案</a></h3>
-    
-    <p>三菱MELDAS数控系统CRT显示器升级工业LCD液晶方案全解。覆盖MDT962B-1A、BM09DF、FCUA-CT100等全型号，免改机、免改线、即插即用，2年质保。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260507_MDT1283B_LCD.html">MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案</a></h3>
-    <time datetime="2026-05-07">2026-05-07</time>
-    <p>MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html">三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520</a></h3>
-    <time datetime="2026-05-06">2026-05-06</time>
-    <p>三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html">三菱FCUA-CT100工业显示器 — M500/M520数控系统TFT替代方案</a></h3>
-    <time datetime="2026-05-06">2026-05-06</time>
-    <p>专业三菱FCUA-CT100工业显示器TFT替代方案。专为三菱M500/M520数控系统设计。9英寸TFT LCD，800×600分辨率，即插即用安装。彻底消除CRT老化问题。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html">三菱BM09DF工业显示屏 — E60数控系统TFT替代方案</a></h3>
-    <time datetime="2026-05-06">2026-05-06</time>
-    <p>专业三菱BM09DF工业显示屏TFT替代方案。完美兼容三菱M64/E60数控系统。9英寸TFT彩色LCD，800×600分辨率，即插即用安装。彻底消除CRT老化问题。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="conv">
-    <h2>&#x1f50c; &#x5DE5;&#x4E1A;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; <span class="article-count">(3&#x7BC7;)</span></h2>
-    <div class="post-list">
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260509_KT809_industrial_converter.html">KT809 &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; &#x2014; CGA/EGA/RGB&#x8F6C;VGA</a></h3>
-    <time datetime="2026-05-09">2026-05-09</time>
-    <p>KT809 &#x5DE5;&#x4E1A;&#x7EA7;&#x591A;&#x534F;&#x8BAE;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;CGA/EGA/RGB&#x8F6C;VGA&#x8F93;&#x51FA;&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260509_KT819_industrial_converter.html">KT819 &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; &#x2014; RGB/&#x590D;&#x5408;&#x89C6;&#x9891;&#x8F6C;VGA</a></h3>
-    <time datetime="2026-05-09">2026-05-09</time>
-    <p>KT819 &#x5DE5;&#x4E1A;&#x7EA7;&#x591A;&#x534F;&#x8BAE;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;RGB/&#x590D;&#x5408;&#x89C6;&#x9891;&#x8F6C;VGA&#x3002;</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html">GBS-8219 RGB&#x8F6C;VGA &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;</a></h3>
-    <time datetime="2026-05-09">2026-05-09</time>
-    <p>GBS-8219 &#x5DE5;&#x4E1A;&#x7EA7;RGB&#x8F6C;VGA&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;CGA/EGA/MDA&#x8F93;&#x5165;&#x3002;</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="ktv">
-    <h2>📺 非标 KTV 系列 订制工业显示器 <span class="article-count">(4篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_KTV804_custom_industrial_display.html">KTV804 8.4寸非标订制工业显示器</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>KTV804 8.4寸非标订制工业显示器，平衡尺寸与显示效果，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_KTV800M_custom_industrial_display.html">KTV800M 8寸非标订制工业显示器</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>KTV800M 8寸非标订制工业显示器，紧凑型设计，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260508_KTV104_custom_industrial_display.html">KTV104 10.4寸非标订制工业显示器</a></h3>
-    <time datetime="2026-05-08">2026-05-08</time>
-    <p>KTV104 10.4寸非标订制工业显示器，紧凑型设计，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
-	</article>
-	<article class="post-item">
-	    <h3><a href="/zh/posts/article_20260508_KTV148_custom_industrial_display.html">KTV148 12.1寸非标订制工业显示器</a></h3>
-	    <time datetime="2026-05-08">2026-05-08</time>
-	    <p>KTV148 12.1寸非标订制工业显示器，工业级TFT液晶屏，支持VGA/HDMI多信号输入。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="guide">
-    <h2>📚 技术指南与方案 <span class="article-count">(18篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/video-signal-converters-in-cnc-zh.html">工业视频信号转换器在 CNC 数控系统中的应用</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>工业视频信号转换器在 CNC 数控系统中的应用详解。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/video-signal-converter-series-cga-ega-to-vga-zh.html">工业视频信号转换器系列</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>江图科技工业视频信号转换器系列：CGA转VGA、EGA转VGA、RGB转VGA解决方案。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/video-signal-converter-buying-guide-zh.html">工业视频信号转换器选购指南</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>完整工业视频信号转换器选购指南：对比VGA转VIDEO、HDMI转VGA、CGA/EGA/MDA转VGA方案。</p>
-</article>
-        
-
-
-<article class="post-item">
-    <h3><a href="/zh/posts/kongto-industrial-video-display-catalog-zh.html">江图科技工业视频显示产品目录</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>江图科技工业视频显示产品目录。专注工业视频显示解决方案，提供CNC数控系统CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/industrial-video-display-smart-factory-kongto-zh.html">工业视频显示在智能工厂中的关键角色与江图科技方案</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>工业视频显示在智能工厂中的关键角色与江图科技方案。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/industrial-rgbhv-retrofit-cga-ega-to-hd-zh.html">工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>本文面向CNC数控工程师、设备维修人员、工控系统集成商及工业自动化采购人员，系统介绍工业显示器RGBHV改造方案，涵盖从CGA/EGA到高清VGA的完整技术路径、RGBHV针脚接线定义、信号时序参数、故障排查步骤及经济效益分析。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/industrial-cnc-display-troubleshooting-repair-guide-zh.html">工业数控设备显示器故障诊断与维修全攻略</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>本文面向数控机床、加工中心、自动化生产线等工业现场的显示器（CRT与LCD）维护人员。提供故障分类表、维修成本对比、修换判断以及深圳市江图科技有限公司的升级方案。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/custom_industrial_display_series.html">非标订制显示器系列</a></h3>
-    <time datetime="2026-06-14">2026-06-14</time>
-    <p>江图科技非标订制工业显示器系列：KTV148、KTV104、KTV804、KTV800M，为特殊尺寸需求提供定制化显示解决方案，适用于CNC数控系统、工业自动化设备。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/cnc-display-troubleshooting-guide.html">CNC显示器故障排查完全指南 | 黑屏/花屏/亮度不足原因与解决方案</a></h3>
-    <time datetime="2026-06-24">2026-06-24</time>
-    <p>专业CNC数控系统显示器故障排查指南。覆盖FANUC、三菱、西门子、Mazak等品牌的黑屏、花屏、亮度衰减、高压放电等常见故障原因分析与维修升级方案。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示  </a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>本文面向CNC数控工程师、设备维修人员、工控系统集成商及工业自动化采购人员，系统介绍工业显示器RGBHV改造方案，涵盖从CGA/EGA到高清VGA的完整技术路径。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">CGA/EGA显示器改造为RGBHV工业显示器实战指南  </a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">数控系统中视频信号转换器应用指南</a></h3>
-    
-    <p>工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南</a></h3>
-    
-    <p>完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Industrial_Video_Display_Color_Scanning_Technology.html">工业视频显示的色彩与扫描关键技术解析</a></h3>
-    
-    <p>深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html">工业RGBHV信号分析 — 从CGA/EGA到高清显示</a></h3>
-    
-    <p>深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Industrial_Display_Procurement_Selection_Guide.html">工业显示器采购与选型指南</a></h3>
-    
-    <p>工业显示器采购与选型全面指南：涵盖选型标准、规格对比、CRT转LCD升级方案及多品牌CNC兼容性表（FANUC/三菱/西门子/Mazak/OKUMA等）。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html">工业控制器显示器故障排查与维修指南</a></h3>
-    
-    <p>全面的工业控制器显示器故障排查指南，涵盖常见故障类型、系统诊断方法及预防性维护方案，帮助工程师快速定位和解决工业显示问题。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA转RGBHV工业显示器改造指南</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。涵盖转换器选型、安装步骤、成本分析和故障排除。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="comp">
-    <h2>⚖️ 技术对比分析 <span class="article-count">(2篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html">西门子 vs 发那科 CNC 显示屏对比：全面选购指南</a></h3>
-    
-    <p>西门子 vs 发那科 CNC 显示屏全面对比。亮度、可靠性、兼容性、成本——帮助您选择合适系统的数据。</p>
-</article>
-<article class="post-item">
-    <h3><a href="/zh/posts/crt-vs-lcd-cnc-display-comparison.html">CRT vs LCD全面对比：CNC数控显示器升级到底值不值</a></h3>
-    <time datetime="2026-06-24">2026-06-24</time>
-    <p>CRT与LCD工业显示器全方位对比分析：亮度、寿命、功耗、安全性、成本。含5年TCO分析。</p>
-</article>
-    </div>
-</section>
-<section class="category-section" id="news">
-    <h2>📰 新闻动态 <span class="article-count">(1篇)</span></h2>
-    <div class="post-list">
-        <article class="post-item">
-    <h3><a href="/zh/posts/social_20260501_cnc_display_upgrade_market-trends_and_product-update.html">数控显示器升级市场动态与产品速递</a></h3>
-    <time datetime="2026-05-01">2026-05-01</time>
-    <p>数控显示器升级市场动态与产品速递。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
-</article>
-    </div>
-</section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">江图科技 Kongto Technology</span>
-                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
-            </div>
-            <div class="footer-links">
-                <a href="/zh/posts/">📄 技术文章</a>
-                <a href="/zh/brands/FANUC.html">FANUC方案</a>
-                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
-                <a href="/zh/brands/Siemens.html">西门子方案</a>
-                <a href="/zh/docs/">资料下载</a>
-                <a href="/zh/about.html">关于我们</a>
-                <a href="/zh/privacy.html">隐私政策</a>
-                <a href="/zh/terms.html">服务条款</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/zh/glossary.html">术语表</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
-                <a href="/zh/comparison-tool.html">对比工具</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
-                <a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/privacy.html">隐私</a>
-                <a href="/zh/terms.html">条款</a>
-                <a href="/zh/sitemap.xml">站点地图</a>
-            </div>
-    </footer>
-</body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章列表 | 深圳市江图科技有限公司</title>
+    <meta name="description" content="工业视频显示技术文章，涵盖FANUC、三菱、西门子、Mazak、Okuma、Haas显示器升级、工业视频信号转换、CNC数控备件等专业内容。">
+    <link rel="stylesheet" href="/css/style.css?v=6">
+    <link rel="alternate" hreflang="zh" href="https://cncdisplay.com/posts/index.html" />
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/index.html" />
+	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/index.html" />
+	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/index.html" />
+    <link rel="canonical" href="/zh/posts/index.html">
+    <style>
+        .category-section { margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; }
+        .category-section h2 { color: #1a1a2e; border-bottom: 2px solid #4cc9f0; padding-bottom: 0.5rem; }
+        .article-count { color: #666; font-size: 0.8em; }
+        .post-list { display: grid; gap: 1rem; margin-top: 1rem; }
+        .post-item { background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .post-item h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
+        .post-item h3 a { color: #1a1a2e; text-decoration: none; }
+        .post-item h3 a:hover { color: #4cc9f0; }
+        .post-item time { color: #888; font-size: 0.85rem; }
+        .post-item p { color: #555; font-size: 0.9rem; margin: 0.5rem 0 0 0; }
+        .toc { background: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
+        .toc h3 { margin-top: 0; }
+        .toc ul { columns: 2; column-gap: 2rem; }
+        .toc li { break-inside: avoid; margin-bottom: 0.3rem; }
+        @media (max-width: 768px) { .toc ul { columns: 1; } }
+    </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kongto Technology",
+  "alternateName": ["深圳市江图科技有限公司", "Kongto Technology", "江图科技"],
+  "url": "https://cncdisplay.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://cncdisplay.com/images/logo_256.png"
+  },
+  "foundingDate": "2013",
+  "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions, video signal converters, and custom industrial displays",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-13686889647",
+    "email": "info@cncdisplay.com",
+    "contactType": "sales",
+    "availableLanguage": ["Chinese", "English"]
+  }
+}
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">江图科技</a>
+            <div class="nav-links">
+                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/products/">产品</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+            </div>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+            <div class="lang-switch">
+            <a href="/zh/posts/" lang="zh" class="lang-zh">中文</a>
+            <span class="divider">|</span>
+            <a href="/posts/" lang="en" class="lang-en">English</a>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <h1>全部文章</h1>
+        <div class="toc">
+            <h3>文章分类导航</h3>
+            <ul>
+                <li><a href="#fanuc">🔧 FANUC 发那科 显示器 LCD 升级方案 (17)</a></li>
+<li><a href="#mazak">🔧 马扎克 Mazak / 夏普 Sharp 显示器替代方案 (3)</a></li>
+<li><a href="#okuma">🔧 大隈 Okuma 显示器替代方案 (1)</a></li>
+<li><a href="#haas">🔧 哈斯 Haas 显示器替代方案 (1)</a></li>
+<li><a href="#siemens">🔧 西门子 Siemens 显示器替代方案 (4)</a></li>
+<li><a href="#mitsu">🔧 三菱 Mitsubishi 工业显示器替代方案 (5)</a></li>
+<li><a href="#conv">🔌 工业视频信号转换器 (3)</a></li>
+<li><a href="#ktv">📺 非标 KTV 系列 订制工业显示器 (4)</a></li>
+<li><a href="#guide">📚 技术指南与方案 (18)</a></li>
+<li><a href="#comp">⚖️ 技术对比分析 (2)</a></li>
+<li><a href="#news">📰 新闻动态 (1)</a></li>
+            </ul>
+        </div>
+        <section class="category-section" id="fanuc">
+    <h2>🔧 FANUC 发那科 显示器 LCD 升级方案 <span class="article-count">(17篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html">江图科技推出FANUC数控显示器LCD升级解决方案</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>江图科技推出FANUC数控显示器LCD升级解决方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html">FANUC 数控显示器 CRT → LCD 升级完整指南</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>FANUC 数控显示器 CRT 转 LCD 升级完整指南。江图科技12年工业显示经验，覆盖FANUC 0i/16i/18i/21i/31i全系列CRT转LCD升级改造方案，即插即用零改装，附完整安装步骤、HONDA 20针信号针脚定义与故障</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操指南</a></h3>
+    <time datetime="2026-05-26">2026-05-26</time>
+    <p>FANUC A61L-0001-0093 9英寸CRT显示器改LCD液晶完整替换流程，从型号识别、信号对接、实物安装到效果展示，分步实操指南。即插即用，不改接线、不改参数、不动结构。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT.html">FANUC A61L-0001-0097 LCD液晶替代方案——老式CRT显示器升级专家</a></h3>
+    <time datetime="2026-05-22">2026-05-22</time>
+    <p>FANUC A61L-0001-0097 LCD液晶替代方案。原位替换9英寸CRT显示器，免改机免改线，亮度350cd/m²，兼容FANUC 0i/16i/18i系列数控系统。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260521_FANUC_A61L_0001_0096_LCD.html">FANUC A61L-0001-0096 CRT显示器LCD液晶替代方案——免改机原位升级专业解决方案</a></h3>
+    <time datetime="2026-05-21">2026-05-21</time>
+    <p>FANUC A61L-0001-0096 CRT显示器专用液晶替代方案，免改机免改线原位安装即装即用，兼容FANUC 0i/16i/18i系列数控系统，工业级TFT-LCD面板50000小时寿命。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html">FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC D9MM-11A（A61L-0001-0093）9英寸单色显示器专业LCD升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html">FANUC A61L-0001-0095 LCD升级方案 | FANUC 0i-B/C系统9英寸显示器</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0095 9英寸单色CRT显示器专业LCD升级方案。适用于FANUC 0i-B/C系列数控车床和加工中心。江图科技提供标准版/专业版两种方案，即插即用，质保2年。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html">FANUC A61L-0001-0094 14英寸彩色显示器替代方案详解</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0094 14英寸彩色显示器替代方案详解。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD升级替代方案 | 9英寸CRT改液晶实战</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0093 9英寸单色CRT显示器LCD液晶升级替代完整方案，含原厂参数、故障诊断、安装步骤、系统兼容性说明，适用于FANUC 0/0i/OM-D等数控系统。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html">FANUC A61L-0001-0092 MDT947B 9英寸单色显示器替代升级方案</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0092 MDT947B 9英寸单色显示器替代升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 CRT显示器LCD升级方案 | 工业显示器改造专家</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0090 9英寸单色CRT显示器专业LCD升级方案。适用于FANUC 0-T系列数控车床系统，解决CRT老化、显示暗淡、高压包故障等问题。江图科技提供即插即用升级模块，质保2年。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 松下CRT显示器LCD替换方案 | 工业显示器升级专家</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0086松下原装9英寸CRT显示器专业LCD升级方案。兼容FANUC Series 6/10/11系统，解决CRT老化、亮度衰减、高压包故障等典型问题。江图科技提供定制化LCD替换模块，即装即用，质保2年。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南</a></h3>
+    <time datetime="2026-05-03">2026-05-03</time>
+    <p>FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html">FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力</a></h3>
+    
+    <p>FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
+</article>
+    </div>
+
+<article class="post-item">
+    <h3><a href="/zh/posts/fanuc-a02b-0094-c022-lcd-upgrade-guide.html">FANUC A02B-0094-C022 CRT/MDI一体机改LCD升级指南</a></h3>
+    <time datetime="2026-07-13">2026-07-13</time>
+    <p>FANUC A02B-0094-C022 CRT/MDI一体机改LCD方案。保留原MDI键盘功能，替换CRT显示部分为工业TFT液晶。即插即用，不改参数，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/fanuc-a61l-0001-0116-lcd-upgrade-guide.html">FANUC A61L-0001-0116 12.1英寸CRT转LCD升级指南</a></h3>
+    <time datetime="2026-07-13">2026-07-13</time>
+    <p>FANUC A61L-0001-0116 12.1英寸CRT转LCD升级方案。参数对比、安装步骤、兼容系统列表。兼容FANUC 0i/16i/18i/21i系列。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/fanuc-a02b-0099-c094-lcd-upgrade-guide.html">FANUC Series 0-P A02B-0099-C094单绿色CRT改LCD升级</a></h3>
+    <time datetime="2026-07-13">2026-07-13</time>
+    <p>FANUC Series 0-P / A02B-0099-C094 单绿色CRT改LCD升级指南。用于FANUC 0系列/0-Mate经典数控，即插即用不改参数。</p>
+</article></section>
+<section class="category-section" id="mazak">
+    <h2>&#x1f527; &#x9A6C;&#x624E;&#x514B; Mazak &#x663E;&#x793A;&#x5668;&#x66FF;&#x4EE3;&#x65B9;&#x6848; <span class="article-count">(5&#x7BC7;)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/article_20260522_Mazak_DR5614_LCD_CRT.html">&#x9A6C;&#x624E;&#x514B; DR5614 LCD&#x66FF;&#x4EE3;&#x65B9;&#x6848;</a></h3>
+    <time datetime="2026-05-22">2026-05-22</time>
+    <p>&#x9A6C;&#x624E;&#x514B; Mazak DR5614 CRT&#x663E;&#x793A;&#x5668;LCD&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;12.1&#x82F1;&#x5BF8;TFT&#x9AD8;&#x6E05;&#x5C4F;&#xFF0C;800&#x00D7;600&#xFF0C;15&#x9488;Molex&#x539F;&#x88C5;&#x63A5;&#x53E3;&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html">&#x9A6C;&#x624E;&#x514B; C-5470NS CRT&#x6539;LCD&#x5347;&#x7EA7;</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>&#x9A6C;&#x624E;&#x514B; C-5470NS CRT&#x6539;LCD&#x5347;&#x7EA7;&#x6848;&#x4F8B;&#x3002;&#x89E3;&#x51B3;CRT&#x9ED1;&#x5C4F;&#x3001;&#x82B1;&#x5C4F;&#x3001;&#x8272;&#x5F69;&#x5931;&#x771F;&#x7B49;&#x6545;&#x969C;&#x3002;72&#x5C0F;&#x65F6;&#x8001;&#x5316;&#x6D4B;&#x8BD5;&#xFF0C;2&#x5E74;&#x8D28;&#x4FDD;&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html">Mazak AIQA8DSP40 14&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>AIQA8DSP40 14&#x82F1;&#x5BF8;&#x5F69;&#x8272;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;&#xFF0C;&#x7528;&#x4E8E;Mazak Mazatrol T-32/640&#x6570;&#x63A7;&#x7CFB;&#x7EDF;&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_Mazak_CD1472D1M_LCD.html">Mazak CD1472-D1M 14&#x82F1;&#x5BF8;&#x6DB2;&#x6676;&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Mazak CD1472-D1M 14&#x82F1;&#x5BF8;CRT&#x6539;&#x6DB2;&#x6676;&#x65B9;&#x6848;&#x3002;&#x7528;&#x4E8E;Mazak Mazatrol&#x6570;&#x63A7;&#x7CFB;&#x7EDF;&#x3002;&#x5373;&#x63D2;&#x5373;&#x7528;&#xFF0C;&#x4E0D;&#x6539;&#x53C2;&#x6570;&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_MDT1283B_LCD_Replacement.html">Mazak MDT1283B-1A 12&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>Mazak MDT1283B-1A 12&#x82F1;&#x5BF8;CRT&#x6539;LCD&#x66FF;&#x6362;&#x65B9;&#x6848;&#x3002;&#x4E0D;&#x540C;&#x4E8E;CD1472&#xFF08;14&#x82F1;&#x5BF8;&#xFF09;&#xFF0C;&#x72EC;&#x7ACB;&#x578B;&#x53F7;&#x4E13;&#x7528;&#x65B9;&#x6848;&#x3002;&#x5373;&#x63D2;&#x5373;&#x7528;&#x3002;</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="okuma">id="okuma">
+    <h2>🔧 大隈 Okuma 显示器替代方案 <span class="article-count">(1篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html">大隈 Okuma 5000/5020 CRT 液晶屏升级替换指南——即插即用 无需改装</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>大隈 Okuma OSP 5000/5020 数控系统 CRT 显示器老化故障怎么办？工业级液晶显示器升级方案，即插即用安装，无需改动电路，全兼容替换。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="haas">
+    <h2>🔧 哈斯 Haas 显示器替代方案 <span class="article-count">(1篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_Haas_CRT_LCD_Case.html">哈斯机床老旧CRT显示器升级液晶替换案例</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>哈斯机床老旧CRT显示器升级液晶替换案例。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="siemens">
+    <h2>🔧 西门子 Siemens 显示器替代方案 <span class="article-count">(4篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/siemens-sinumerik-display-troubleshooting-zh.html">西门子 SINUMERIK CNC 显示屏故障排除指南</a></h3>
+    
+    <p>西门子 SINUMERIK CNC 显示屏不亮？闪烁？无信号？逐步故障排除指南。何时维修，何时更换。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/siemens-display-upgrade-cost-roi-analysis-zh.html">西门子显示屏升级成本ROI分析：CRT vs LCD全面对比</a></h3>
+    
+    <p>西门子 CNC 显示屏升级成本与 ROI 分析。CRT 维修 vs LCD 升级——帮助您做出明智决策的数据。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_Siemens_SM0901_579417_TA.html">西门子Siemens-SM0901 579417 TA单色显示器 产品介绍</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>西门子Siemens-SM0901 579417 TA单色显示器 产品介绍。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html">西门子6FC3998-7FA20工业显示器 9寸单色LCD完美替代方案</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>西门子6FC3998-7FA20工业显示器 9寸单色LCD完美替代方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="mitsu">
+    <h2>🔧 三菱 Mitsubishi 工业显示器替代方案 <span class="article-count">(5篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html">三菱 MDT962B/BM09DF 系列 CRT 升级 LCD 液晶全面替换方案</a></h3>
+    
+    <p>三菱MELDAS数控系统CRT显示器升级工业LCD液晶方案全解。覆盖MDT962B-1A、BM09DF、FCUA-CT100等全型号，免改机、免改线、即插即用，2年质保。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260507_MDT1283B_LCD.html">MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案</a></h3>
+    <time datetime="2026-05-07">2026-05-07</time>
+    <p>MDT-1283B 液晶替换方案 —— Totoku/三菱 12英寸数控CRT显示器升级方案。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html">三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html">三菱FCUA-CT100工业显示器 — M500/M520数控系统TFT替代方案</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>专业三菱FCUA-CT100工业显示器TFT替代方案。专为三菱M500/M520数控系统设计。9英寸TFT LCD，800×600分辨率，即插即用安装。彻底消除CRT老化问题。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html">三菱BM09DF工业显示屏 — E60数控系统TFT替代方案</a></h3>
+    <time datetime="2026-05-06">2026-05-06</time>
+    <p>专业三菱BM09DF工业显示屏TFT替代方案。完美兼容三菱M64/E60数控系统。9英寸TFT彩色LCD，800×600分辨率，即插即用安装。彻底消除CRT老化问题。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="conv">
+    <h2>&#x1f50c; &#x5DE5;&#x4E1A;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; <span class="article-count">(3&#x7BC7;)</span></h2>
+    <div class="post-list">
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260509_KT809_industrial_converter.html">KT809 &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; &#x2014; CGA/EGA/RGB&#x8F6C;VGA</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>KT809 &#x5DE5;&#x4E1A;&#x7EA7;&#x591A;&#x534F;&#x8BAE;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;CGA/EGA/RGB&#x8F6C;VGA&#x8F93;&#x51FA;&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260509_KT819_industrial_converter.html">KT819 &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668; &#x2014; RGB/&#x590D;&#x5408;&#x89C6;&#x9891;&#x8F6C;VGA</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>KT819 &#x5DE5;&#x4E1A;&#x7EA7;&#x591A;&#x534F;&#x8BAE;&#x89C6;&#x9891;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;RGB/&#x590D;&#x5408;&#x89C6;&#x9891;&#x8F6C;VGA&#x3002;</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html">GBS-8219 RGB&#x8F6C;VGA &#x5DE5;&#x4E1A;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;</a></h3>
+    <time datetime="2026-05-09">2026-05-09</time>
+    <p>GBS-8219 &#x5DE5;&#x4E1A;&#x7EA7;RGB&#x8F6C;VGA&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x5668;&#xFF0C;&#x652F;&#x6301;CGA/EGA/MDA&#x8F93;&#x5165;&#x3002;</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="ktv">
+    <h2>📺 非标 KTV 系列 订制工业显示器 <span class="article-count">(4篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_KTV804_custom_industrial_display.html">KTV804 8.4寸非标订制工业显示器</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV804 8.4寸非标订制工业显示器，平衡尺寸与显示效果，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_KTV800M_custom_industrial_display.html">KTV800M 8寸非标订制工业显示器</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV800M 8寸非标订制工业显示器，紧凑型设计，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260508_KTV104_custom_industrial_display.html">KTV104 10.4寸非标订制工业显示器</a></h3>
+    <time datetime="2026-05-08">2026-05-08</time>
+    <p>KTV104 10.4寸非标订制工业显示器，紧凑型设计，工业级TFT液晶屏，支持VGA/HDMI多信号输入，</p>
+	</article>
+	<article class="post-item">
+	    <h3><a href="/zh/posts/article_20260508_KTV148_custom_industrial_display.html">KTV148 12.1寸非标订制工业显示器</a></h3>
+	    <time datetime="2026-05-08">2026-05-08</time>
+	    <p>KTV148 12.1寸非标订制工业显示器，工业级TFT液晶屏，支持VGA/HDMI多信号输入。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="guide">
+    <h2>📚 技术指南与方案 <span class="article-count">(18篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/video-signal-converters-in-cnc-zh.html">工业视频信号转换器在 CNC 数控系统中的应用</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>工业视频信号转换器在 CNC 数控系统中的应用详解。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/video-signal-converter-series-cga-ega-to-vga-zh.html">工业视频信号转换器系列</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>江图科技工业视频信号转换器系列：CGA转VGA、EGA转VGA、RGB转VGA解决方案。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/video-signal-converter-buying-guide-zh.html">工业视频信号转换器选购指南</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>完整工业视频信号转换器选购指南：对比VGA转VIDEO、HDMI转VGA、CGA/EGA/MDA转VGA方案。</p>
+</article>
+        
+
+
+<article class="post-item">
+    <h3><a href="/zh/posts/kongto-industrial-video-display-catalog-zh.html">江图科技工业视频显示产品目录</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>江图科技工业视频显示产品目录。专注工业视频显示解决方案，提供CNC数控系统CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/industrial-video-display-smart-factory-kongto-zh.html">工业视频显示在智能工厂中的关键角色与江图科技方案</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>工业视频显示在智能工厂中的关键角色与江图科技方案。江图科技专注工业视频显示解决方案，提供CNC数控系统显示器CRT转LCD升级改造、工业视频信号转换器及非标定制工控显示器。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/industrial-rgbhv-retrofit-cga-ega-to-hd-zh.html">工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>本文面向CNC数控工程师、设备维修人员、工控系统集成商及工业自动化采购人员，系统介绍工业显示器RGBHV改造方案，涵盖从CGA/EGA到高清VGA的完整技术路径、RGBHV针脚接线定义、信号时序参数、故障排查步骤及经济效益分析。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/industrial-cnc-display-troubleshooting-repair-guide-zh.html">工业数控设备显示器故障诊断与维修全攻略</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>本文面向数控机床、加工中心、自动化生产线等工业现场的显示器（CRT与LCD）维护人员。提供故障分类表、维修成本对比、修换判断以及深圳市江图科技有限公司的升级方案。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/custom_industrial_display_series.html">非标订制显示器系列</a></h3>
+    <time datetime="2026-06-14">2026-06-14</time>
+    <p>江图科技非标订制工业显示器系列：KTV148、KTV104、KTV804、KTV800M，为特殊尺寸需求提供定制化显示解决方案，适用于CNC数控系统、工业自动化设备。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/cnc-display-troubleshooting-guide.html">CNC显示器故障排查完全指南 | 黑屏/花屏/亮度不足原因与解决方案</a></h3>
+    <time datetime="2026-06-24">2026-06-24</time>
+    <p>专业CNC数控系统显示器故障排查指南。覆盖FANUC、三菱、西门子、Mazak等品牌的黑屏、花屏、亮度衰减、高压放电等常见故障原因分析与维修升级方案。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html">工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示  </a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>本文面向CNC数控工程师、设备维修人员、工控系统集成商及工业自动化采购人员，系统介绍工业显示器RGBHV改造方案，涵盖从CGA/EGA到高清VGA的完整技术路径。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html">CGA/EGA显示器改造为RGBHV工业显示器实战指南  </a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html">数控系统中视频信号转换器应用指南</a></h3>
+    
+    <p>工业视频信号转换器在数控系统中的应用指南，涵盖CGA/EGA/RGBHV信号类型分析、转换器选型标准和安装最佳实践。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">视频信号转换系统 — CGA/EGA转VGA、RGB转VGA完整指南</a></h3>
+    
+    <p>完整视频信号转换系统指南：CGA转VGA、EGA转VGA、RGB转VGA解决方案。含CGA/EGA DB9引脚定义、故障排查表、安装步骤及工业显示器改造方案。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Industrial_Video_Display_Color_Scanning_Technology.html">工业视频显示的色彩与扫描关键技术解析</a></h3>
+    
+    <p>深入技术分析工业视频显示系统中的色彩还原与扫描线技术，涵盖CRT与LCD色彩对比、逐行/隔行扫描、色深标准及CNC显示器升级实践。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html">工业RGBHV信号分析 — 从CGA/EGA到高清显示</a></h3>
+    
+    <p>深入解析工业显示器RGBHV信号技术，涵盖从传统CGA/EGA到现代高清输出的完整信号转换原理、时序参数、线色编码及实际改造方案。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Industrial_Display_Procurement_Selection_Guide.html">工业显示器采购与选型指南</a></h3>
+    
+    <p>工业显示器采购与选型全面指南：涵盖选型标准、规格对比、CRT转LCD升级方案及多品牌CNC兼容性表（FANUC/三菱/西门子/Mazak/OKUMA等）。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html">工业控制器显示器故障排查与维修指南</a></h3>
+    
+    <p>全面的工业控制器显示器故障排查指南，涵盖常见故障类型、系统诊断方法及预防性维护方案，帮助工程师快速定位和解决工业显示问题。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA转RGBHV工业显示器改造指南</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>完整指南：将CGA/EGA CRT工业显示器改造升级为RGBHV（VGA）工业液晶显示器。涵盖转换器选型、安装步骤、成本分析和故障排除。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="comp">
+    <h2>⚖️ 技术对比分析 <span class="article-count">(2篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/siemens-vs-fanuc-cnc-display-comparison-zh.html">西门子 vs 发那科 CNC 显示屏对比：全面选购指南</a></h3>
+    
+    <p>西门子 vs 发那科 CNC 显示屏全面对比。亮度、可靠性、兼容性、成本——帮助您选择合适系统的数据。</p>
+</article>
+<article class="post-item">
+    <h3><a href="/zh/posts/crt-vs-lcd-cnc-display-comparison.html">CRT vs LCD全面对比：CNC数控显示器升级到底值不值</a></h3>
+    <time datetime="2026-06-24">2026-06-24</time>
+    <p>CRT与LCD工业显示器全方位对比分析：亮度、寿命、功耗、安全性、成本。含5年TCO分析。</p>
+</article>
+    </div>
+</section>
+<section class="category-section" id="news">
+    <h2>📰 新闻动态 <span class="article-count">(1篇)</span></h2>
+    <div class="post-list">
+        <article class="post-item">
+    <h3><a href="/zh/posts/social_20260501_cnc_display_upgrade_market-trends_and_product-update.html">数控显示器升级市场动态与产品速递</a></h3>
+    <time datetime="2026-05-01">2026-05-01</time>
+    <p>数控显示器升级市场动态与产品速递。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。</p>
+</article>
+    </div>
+</section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+            </div>
+            <div class="footer-links">
+                <a href="/zh/posts/">📄 技术文章</a>
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+                <a href="/zh/docs/">资料下载</a>
+                <a href="/zh/about.html">关于我们</a>
+                <a href="/zh/privacy.html">隐私政策</a>
+                <a href="/zh/terms.html">服务条款</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
+        </div>
+    
+            <div class="footer-links">
+                <a href="/zh/glossary.html">术语表</a>
+                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
+                <a href="/zh/comparison-tool.html">对比工具</a>
+                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/privacy.html">隐私</a>
+                <a href="/zh/terms.html">条款</a>
+                <a href="/zh/sitemap.xml">站点地图</a>
+            </div>
+    </footer>
+</body>
 </html>

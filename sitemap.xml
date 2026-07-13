@@ -813,12 +813,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/products/mazak-aiqa8dsp40-lcd-upgrade.html</loc>
     <lastmod>2026-07-12</lastmod>
@@ -927,12 +922,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/sitemap.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/terms.html</loc>
     <lastmod>2026-07-12</lastmod>

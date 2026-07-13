@@ -1,642 +1,642 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Video Signal Converters in CNC Control Systems | Kongto Technology</title>
-
-    <meta name="description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.">
-
-    <meta name="author" content="Kongto Technology">
-
-    <link rel="canonical" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
-
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
-
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
-	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
-
-    <meta property="og:title" content="Video Signal Converters in CNC Control Systems" />
-
-    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
-
-    <meta property="og:description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices." />
-
-    <meta property="og:url" content="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
-
-    <meta property="og:type" content="article" />
-
-        <meta property="og:site_name" content="Kongto Technology">
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Video Signal Converters in CNC Control Systems | Kongto Technology">
-
-    <meta name="twitter:description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.">
-
-<link rel="stylesheet" href="/css/style.css?v=7">
-
-    <script type="application/ld+json">
-
-    {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Video Signal Converters in CNC Control Systems | Kongto Technology",
-  "description": "Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.",
-  "author": { "@id": "https://cncdisplay.com/#tech-team" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Kongto Technology",
-    "url": "https://cncdisplay.com"
-  },
-  "datePublished": "2026-05-01"
-}
-
-    </script>
-
-    <style>
-
-        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
-
-        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
-
-        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
-
-        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
-
-        .spec-table .even-row {background:#f8fafc;}
-
-        .spec-table .odd-row {background:#fff;}
-
-        .spec-table tr:hover {background:#eff6ff;}
-
-        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
-
-        .content {line-height:1.8;}
-
-        .content p {margin-bottom:1rem;}
-
-        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
-
-        .content h3 {margin-top:1.5rem;color:#475569;}
-
-        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
-
-        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
-
-        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
-
-        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
-
-        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
-
-        .related-links ul {margin:0;padding-left:20px;}
-
-        .related-links li {margin-bottom:8px;}
-
-        .checklist-icon {color:#10b981;font-weight:bold;}
-
-    </style>
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://cncdisplay.com/#organization",
-  "name": "Kongto Technology",
-  "alternateName": "Kongto Technology",
-  "url": "https://cncdisplay.com",
-  "description": "Industrial CNC display upgrade solutions",
-  "image": "/images/logo.png",
-  "telephone": "+86-13686889647",
-  "email": "info@cncdisplay.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Longgang District, Shenzhen",
-    "addressLocality": "Shenzhen",
-    "addressRegion": "Guangdong",
-    "postalCode": "518000",
-    "addressCountry": "CN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 22.6568,
-    "longitude": 113.9899
-  },
-  "areaServed": [
-    "CN",
-    "US",
-    "DE",
-    "JP",
-    "KR",
-    "SG",
-    "IN",
-    "GB",
-    "FR",
-    "IT"
-  ],
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "sameAs": [
-    "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto"
-  ]
-}
-
-</script>
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://cncdisplay.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Video Signal Converters in CNC Control Systems | Kongto Technology",
-      "item": "https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html"
-    }
-  ]
-}
-
-</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
-
-</head>
-
-<body>    <header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/products/">Products</a>
-                <a href="/posts/">Articles</a>
-                <a href="/case-studies.html">Cases</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <article class="post">
-
-            <h1>Video Signal Converters in CNC Control Systems</h1>
-
-            <div class="meta">
-
-                <time datetime="2026-05-01">2026-05-01</time>
-
-                <span class="author">Author: Kongto Technology</span>
-
-            </div>
-
-            <div class="content">
-
-<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/Haas_Monitor_00.webp" alt="Display Overview"></figure>
-
-<p><em>Display Overview | Source: Kongto Technology</em></p>
-
-<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/A6100010093_LCD_new.webp" alt="Product Photo"></figure>
-
-<p><em>Product Photo | Source: Kongto Technology</em></p>
-
-<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_steps.webp" alt="Installation View"></figure>
-
-<p><em>Installation View | Source: Kongto Technology</em></p>
-
-<p><strong>Keywords</strong>: video signal converter, CNC control system, signal conversion, industrial automation</p>
-
-<p><em>Target Audience: CNC engineers, equipment maintenance personnel, industrial control system integrators</em></p>
-
-<h2>1. Why CNC Systems Need Video Signal Converters</h2>
-
-<p>Many CNC machine tools in service today were designed with display interfaces that are incompatible with modern LCD monitors. The primary scenarios requiring signal conversion include:</p>
-
-<ul>
-
-<li><strong>CGA/EGA to VGA</strong>: Legacy CNC controllers output CGA (15kHz) or EGA (22kHz) signals that cannot directly drive VGA LCD displays</li>
-
-<li><strong>Composite sync to separate H/V sync</strong>: Some systems output RGBS (composite sync) which must be separated into RGBHV for VGA displays</li>
-
-<li><strong>Scan rate conversion</strong>: Converting low scan rate signals to standard VGA timing (31.5kHz+)</li>
-
-<li><strong>Digital-to-analog conversion</strong>: TTL-level digital signals must be converted to analog VGA signals</li>
-
-</ul>
-
-<h2>2. Signal Types in CNC Systems</h2>
-
-<table>
-
-<tr><th>Signal Type</th><th>Frequency</th><th>Voltage Level</th><th>Connector</th><th>FANUC Systems</th></tr>
-
-<tr><td>CGA (TTL)</td><td>15.75 kHz H / 60 Hz V</td><td>Digital 0/5V</td><td>9-pin D-Sub</td><td>FANUC 0-M, 0-T (very early)</td></tr>
-
-<tr><td>EGA (TTL)</td><td>21.85 kHz H / 60 Hz V</td><td>Digital 0/5V</td><td>9-pin D-Sub</td><td>FANUC 0-TC, 0-MC</td></tr>
-
-<tr><td>RGBS (Analog)</td><td>15-24 kHz H / 50-60 Hz V</td><td>Analog 0.7Vpp + Composite Sync</td><td>BNC or HONDA</td><td>FANUC 16i, 18i (some models)</td></tr>
-
-<tr><td>RGBHV/VGA (Analog)</td><td>31.5-48 kHz H / 60-75 Hz V</td><td>Analog 0.7Vpp + Separate Sync</td><td>HONDA 20-pin / HD15</td><td>FANUC 0i, 16i, 18i</td></tr>
-
-</table>
-
-<h3>2.1 Signal Type Comparison Table</h3>
-
-<div class="table-wrapper">
-
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-<tr><th>Signal Standard</th><th>Horizontal Frequency</th><th>Vertical Frequency</th><th>Sync Type</th><th>Max Resolution</th><th>Color Depth</th></tr>
-
-<tr class="odd-row"><td>CGA</td><td>15.75 kHz</td><td>60 Hz</td><td>Composite sync (TTL)</td><td>640 x 200</td><td>4 colors (16 palette)</td></tr>
-
-<tr class="even-row"><td>EGA</td><td>21.85 kHz</td><td>60 Hz</td><td>Separate sync (TTL)</td><td>640 x 350</td><td>16 colors (64 palette)</td></tr>
-
-<tr class="odd-row"><td>RGB (Analog)</td><td>15-24 kHz</td><td>50-60 Hz</td><td>Composite sync on green / separate</td><td>640 x 480</td><td>Unlimited (analog)</td></tr>
-
-<tr class="even-row"><td>RGBHV</td><td>31.5-64 kHz</td><td>60-85 Hz</td><td>Separate H/V (TTL)</td><td>1024 x 768</td><td>Unlimited (analog)</td></tr>
-
-<tr class="odd-row"><td>VGA (standard)</td><td>31.5 kHz</td><td>60-75 Hz</td><td>Separate H/V (TTL)</td><td>640 x 480</td><td>256+ (analog)</td></tr>
-
-</table></div>
-
-</div>
-
-<p class="info-box">Understanding the sync type is critical: composite sync combines horizontal and vertical timing onto a single wire, while separate sync uses dedicated H and V lines. Most industrial LCD monitors and converters expect separate H/V sync (RGBHV).</p>
-
-<h2>3. Converter Selection Criteria</h2>
-
-<h3>3.1 Input/Output Compatibility</h3>
-
-<table>
-
-<tr><th>Selection Factor</th><th>Requirement</th><th>Verification Method</th></tr>
-
-<tr><td>Input signal type</td><td>Must match CNC controller output</td><td>Check controller documentation or measure with oscilloscope</td></tr>
-
-<tr><td>Output resolution</td><td>Must match LCD display native resolution</td><td>Check LCD specifications</td></tr>
-
-<tr><td>Refresh rate</td><td>60 Hz minimum, compatible with CNC frame rate</td><td>Verify in FANUC system parameters</td></tr>
-
-<tr><td>Scan rate handling</td><td>Line doubling for CGA/EGA input</td><td>Verify with test pattern display</td></tr>
-
-</table>
-
-<h3>3.2 Environmental Requirements</h3>
-
-<ul>
-
-<li><strong>Operating temperature</strong>: -20&deg;C to +70&deg;C for workshop environments</li>
-
-<li><strong>Power supply</strong>: 12-36 VDC wide voltage range for PLC/cabinet compatibility</li>
-
-<li><strong>EMC compliance</strong>: IEC/EN 61326-1 Class 2 for industrial environments</li>
-
-<li><strong>Vibration resistance</strong>: IEC 60068-2-6 for machine tool environments</li>
-
-<li><strong>MTBF</strong>: &ge; 50,000 hours for 24/7 operation</li>
-
-</ul>
-
-<h3>3.3 Converter Selection Guide by CNC Brand</h3>
-
-<div class="table-wrapper">
-
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-<tr><th>CNC Brand</th><th>Common Controller Models</th><th>Output Signal</th><th>Recommended Converter</th><th>Notes</th></tr>
-
-<tr class="odd-row"><td>FANUC</td><td>0-M, 0-T, 0-TC, 0-MC</td><td>CGA / EGA (TTL)</td><td>JTX-CVR-001 / JTX-CVR-002</td><td>Early models use 9-pin D-Sub; newer 0i series uses RGBHV</td></tr>
-
-<tr class="even-row"><td>FANUC</td><td>16i, 18i, 21i, 0i-D/F</td><td>RGBHV (Analog)</td><td>JTX-CVR-003</td><td>Sync separator required; HONDA 20-pin connector common</td></tr>
-
-<tr class="odd-row"><td>Mitsubishi</td><td>M700V, M70, E70, C70</td><td>RGB (Analog) + composite sync</td><td>JTX-CVR-003</td><td>Some models output 15 kHz RGB; check service manual pinout</td></tr>
-
-<tr class="even-row"><td>Mitsubishi</td><td>M50, M64, M65, Meldas 500</td><td>CGA / EGA (TTL)</td><td>JTX-CVR-004</td><td>Dual-input auto-detect recommended; verify sync polarity</td></tr>
-
-<tr class="odd-row"><td>Siemens</td><td>Sinumerik 810D, 840D</td><td>TTL RGB + VSYNC</td><td>JTX-CVR-005</td><td>6-bit parallel RGB; JTX-CVR-005 provides needed DAC</td></tr>
-
-<tr class="even-row"><td>Siemens</td><td>Sinumerik 828D, 840D sl</td><td>DVI / LVDS (digital)</td><td>N/A (direct LCD)</td><td>Newer models use digital interface; no converter needed</td></tr>
-
-</table></div>
-
-</div>
-
-<p class="warning-box">Always confirm your specific controller revision and output connector pinout before purchasing a converter. FANUC and Mitsubishi used multiple connector standards across production years. Request a wiring diagram from Kongto Technology when ordering.</p>
-
-<h2>4. Installation Best Practices</h2>
-
-<ol>
-
-<li><strong>Pre-installation</strong>: Document all existing cable connections and system parameters before making any changes</li>
-
-<li><strong>Power isolation</strong>: Always power down the CNC machine before connecting or disconnecting display cables</li>
-
-<li><strong>Cable routing</strong>: Route signal cables away from motor power cables and servo drives to minimize EMI</li>
-
-<li><strong>Grounding</strong>: Ensure proper grounding of the converter to prevent ground loops and signal noise</li>
-
-<li><strong>Vibration mounting</strong>: Secure the converter with vibration-dampening mounts inside the electrical cabinet</li>
-
-<li><strong>Labeling</strong>: Label all connections and document the converter model and settings for future maintenance</li>
-
-</ol>
-
-<h3>4.1 Installation Checklist</h3>
-
-<div class="table-wrapper">
-
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-<tr><th>Step</th><th>Task</th><th>Tool Required</th><th>Time Estimate</th><th>Notes</th></tr>
-
-<tr class="odd-row"><td>1</td><td>Power down and lockout/tagout the CNC machine</td><td>Lockout kit, voltage tester</td><td>5 min</td><td>Verify zero energy state before proceeding</td></tr>
-
-<tr class="even-row"><td>2</td><td>Remove existing CRT display and document all cable connections</td><td>Screwdriver set, camera</td><td>15 min</td><td>Take photos of all connectors before disconnecting</td></tr>
-
-<tr class="odd-row"><td>3</td><td>Identify CNC controller video output signal type and pinout</td><td>Multimeter, oscilloscope (optional)</td><td>10 min</td><td>Measure H/V sync levels; TTL = 0-5V, analog = 0.7Vpp</td></tr>
-
-<tr class="even-row"><td>4</td><td>Mount converter inside electrical cabinet using DIN rail or bracket</td><td>DIN rail clip, screwdriver</td><td>10 min</td><td>Keep away from drive inverters and high-current cables</td></tr>
-
-<tr class="odd-row"><td>5</td><td>Connect input cable from CNC controller to converter</td><td>Crimping tool (if custom cable needed)</td><td>10 min</td><td>Use shielded twisted-pair cable for analog RGB signals</td></tr>
-
-<tr class="even-row"><td>6</td><td>Connect converter output to LCD monitor; power on and test</td><td>None</td><td>5 min</td><td>If no display, check sync polarity switches on converter</td></tr>
-
-<tr class="odd-row"><td>7</td><td>Adjust display position, size, and phase; secure all cables</td><td>Small flathead screwdriver (for trim pots)</td><td>10 min</td><td>Use built-in test pattern if available; document final settings</td></tr>
-
-</table></div>
-
-</div>
-
-<h2>5. Step-by-Step Installation Guide</h2>
-
-<p>Follow these numbered steps to perform a complete CNC CRT-to-LCD video signal converter installation. This guide assumes the correct converter model has already been selected based on your CNC controller's output signal type.</p>
-
-<ol>
-
-<li><strong>Prepare the Workspace and Tools</strong>. Gather all necessary tools: a multimeter for voltage verification, screwdrivers (Phillips and flathead), cable ties, a crimping tool for custom cable ends, a DIN rail mounting clip (if your converter supports DIN rail mounting), and a digital camera to document original connections. Ensure adequate lighting inside the electrical cabinet.</li>
-
-<li><strong>Perform Electrical Safety Lockout</strong>. Shut down the CNC machine using the main power disconnect. Apply a lockout/tagout device and verify zero voltage at the controller power supply terminals using your multimeter. Wait at least 3 minutes for internal capacitors to discharge. Never rely on the machine's power switch alone.</li>
-
-<li><strong>Identify and Document the Existing Display Connections</strong>. Remove the CRT display bezel or access panel. Photograph every cable and its connector before disconnecting anything. Note the cable colors and pin positions —many CNC controllers use custom wiring that does not follow standard color codes. Check the controller model number against known pinout diagrams from Kongto Technology's compatibility matrix.</li>
-
-<li><strong>Verify the Video Signal Parameters</strong>. With the machine powered on (after lockout is lifted for testing), use an oscilloscope to measure the H-sync frequency and V-sync frequency at the controller's video output connector. Confirm the signal matches the specifications listed in Section 2. If using a TTL-level signal (0-5V), ensure your converter is configured for TTL input; if analog (0.7Vpp RGB), set the converter accordingly.</li>
-
-<li><strong>Mount the Converter and Route Cables</strong>. Install the converter inside the electrical cabinet using the provided DIN rail clip or mounting bracket. Keep at least 10 cm (4 inches) of separation between video signal cables and motor power cables or servo drive cables to prevent electromagnetic interference. Use shielded twisted-pair cable for the RGB signal lines, with the shield grounded at one end only to avoid ground loops.</li>
-
-<li><strong>Connect and Power On for Initial Test</strong>. Connect the CNC controller's video output to the converter input, and the converter output to the new LCD monitor. Apply power and observe the display. If no image appears, check the converter's sync polarity DIP switches —some FANUC and Mitsubishi controllers output negative-going sync pulses that must be matched. If the image rolls vertically, adjust the V-hold or switch between composite and separate sync modes.</li>
-
-<li><strong>Fine-Tune and Secure the Installation</strong>. Use the converter's on-board potentiometers (if equipped) or OSD menu to adjust horizontal position, vertical position, image size, and phase/clock to achieve a sharp, stable display. Run the CNC machine through a complete boot cycle and test a sample program to confirm the display remains stable under load. Secure all cables with cable ties, label both ends of each cable, and close the cabinet.</li>
-
-</ol>
-
-<div class="success-box">After installation, run the machine for at least 4 hours of continuous operation to verify display stability. Thermal expansion in the electrical cabinet can affect connector seating —re-tighten all screw terminals after the initial burn-in period.</div>
-
-<h2>6. Kongto Technology Converter Product Line</h2>
-
-<table>
-
-<tr><th>Model</th><th>Input</th><th>Output</th><th>Key Features</th><th>Price</th></tr>
-
-<tr><td>JTX-CVR-001</td><td>CGA (15kHz)</td><td>VGA (31kHz)</td><td>Auto line-doubling, plug-and-play</td><td>CNY 850</td></tr>
-
-<tr><td>JTX-CVR-002</td><td>EGA (22kHz)</td><td>VGA (31kHz)</td><td>Auto line-doubling, wide voltage</td><td>CNY 880</td></tr>
-
-<tr><td>JTX-CVR-003</td><td>RGBS</td><td>RGBHV/VGA</td><td>Sync separator, adjustable position</td><td>CNY 750</td></tr>
-
-<tr><td>JTX-CVR-004</td><td>CGA+EGA (dual)</td><td>VGA</td><td>Auto-detect input type</td><td>CNY 950</td></tr>
-
-<tr><td>JTX-CVR-005</td><td>TTL RGB</td><td>VGA</td><td>6-bit DAC, supports 64 colors</td><td>CNY 720</td></tr>
-
-</table>
-
-<p>All models feature: -20&deg;C to +70&deg;C operating range, 12-36 VDC power, MTBF &ge; 50,000 hours, CE/UL certified.</p>
-
-<p>Contact <strong>Kongto Technology</strong> at info@cncdisplay.com for technical consultation.</p>
-
-            </div>
-
-<div class="share-buttons">
-
-    <div class="share-title">Share to:</div>
-
-    <div class="share-icons">
-
-        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="Share to LinkedIn">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-
-            </svg>
-
-            <span>LinkedIn</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="Share to Facebook">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-
-            </svg>
-
-            <span>Facebook</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="Share to Twitter">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-
-            </svg>
-
-            <span>Twitter</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-youtube" onclick="shareToYouTube()" title="Share to YouTube">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.124C18.244 3 12 3 12 3s-6.244 0-9.376.62a3.016 3.016 0 0 0-2.122 2.124C0 8.318 0 12 0 12s0 3.682.502 5.814a3.016 3.016 0 0 0 2.122 2.124c3.152.62 9.376.62 9.376.62s6.244 0 9.376-.62a3.016 3.016 0 0 0 2.122-2.124C24 15.682 24 12 24 12s0-3.682-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-
-            </svg>
-
-            <span>YouTube</span>
-
-        </a>
-
-        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="Copy link">
-
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-
-                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-
-            </svg>
-
-            <span>Copy link</span>
-
-        </a>
-
-    </div>
-
-</div>
-
-<script>
-
-(function() {
-
-    var pageUrl = encodeURIComponent(window.location.href);
-
-    var pageTitle = encodeURIComponent(document.title);
-
-    window.shareToLinkedIn = function() {
-
-        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToFacebook = function() {
-
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToTwitter = function() {
-
-        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
-
-    };
-
-    window.shareToYouTube = function() {
-
-        alert('Share this article by copying the link and pasting it into a YouTube video description or community post.');
-
-    };
-
-    window.copyLink = function() {
-
-        navigator.clipboard.writeText(window.location.href).then(function() {
-
-            alert('Link copied to clipboard!');
-
-        }).catch(function() {
-
-            var input = document.createElement('input');
-
-            input.value = window.location.href;
-
-            document.body.appendChild(input);
-
-            input.select();
-
-            document.execCommand('copy');
-
-            document.body.removeChild(input);
-
-            alert('Link copied to clipboard!');
-
-        });
-
-    };
-
-})();
-
-</script>
-
-        <div class="related-links"><h4>Related Articles</h4><ul>
-
-<li><a href="/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">Video Signal Converter Series</a></li>
-
-<li><a href="/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA Display Retrofit Guide</a></li>
-
-<li><a href="/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">RGBHV Retrofit Complete Guide</a></li>
-
-<li><a href="/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">Troubleshooting &amp; Repair Guide</a></li>
-
-</ul></div>
-
-</article>
-
-    </main>
-
-<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
-
-    <h3 style="margin-top:0;">Related Articles</h3>
-
-    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide | Kongto Technology</a></li><li><a href="/posts/Video_Signal_Converter_Selection_Guide.html">Video Signal Converter Selection | Kongto Technology</a></li><li><a href="/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">Video Signal Conversion Systems —CGA/EGA to VGA, RGB to VGA G...</a></li></ul>
-
-</section>
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
-                <li><a href="/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">Get a Quote</a> —Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/posts/">📄 Articles</a>
-                <a href="/brands/FANUC.html">FANUC</a>
-                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/brands/Siemens.html">Siemens</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/glossary.html">Glossary</a>
-                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
-                <a href="/comparison-tool.html">Compare</a>
-                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
-                <a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-                <a href="/sitemap.xml">Sitemap</a>
-            </div>
-    </footer>
-
-</body>
-
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Signal Converters in CNC Control Systems | Kongto Technology</title>
+
+    <meta name="description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.">
+
+    <meta name="author" content="Kongto Technology">
+
+    <link rel="canonical" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <meta property="og:title" content="Video Signal Converters in CNC Control Systems" />
+
+    <meta property="og:image" content="https://cncdisplay.com/images/article_default.jpg">
+
+    <meta property="og:description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices." />
+
+    <meta property="og:url" content="https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" />
+
+    <meta property="og:type" content="article" />
+
+        <meta property="og:site_name" content="Kongto Technology">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Video Signal Converters in CNC Control Systems | Kongto Technology">
+
+    <meta name="twitter:description" content="Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.">
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+
+    <script type="application/ld+json">
+
+    {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Video Signal Converters in CNC Control Systems | Kongto Technology",
+  "description": "Application guide for industrial video signal converters in CNC control systems, covering signal types, selection criteria, and installation best practices.",
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kongto Technology",
+    "url": "https://cncdisplay.com"
+  },
+  "datePublished": "2026-05-01"
+}
+
+    </script>
+
+    <style>
+
+        .spec-table {width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14px;}
+
+        .spec-table th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #1e40af;}
+
+        .spec-table td {padding:10px 16px;border:1px solid #e2e8f0;vertical-align:top;}
+
+        .spec-table .header-row th {background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+
+        .spec-table .even-row {background:#f8fafc;}
+
+        .spec-table .odd-row {background:#fff;}
+
+        .spec-table tr:hover {background:#eff6ff;}
+
+        .table-wrapper {overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+
+        .content {line-height:1.8;}
+
+        .content p {margin-bottom:1rem;}
+
+        .content h2 {margin-top:2rem;padding-top:1rem;border-top:2px solid #e2e8f0;}
+
+        .content h3 {margin-top:1.5rem;color:#475569;}
+
+        .info-box {background:#e8f4fd;border-left:4px solid #2196F3;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .warning-box {background:#fff3e0;border-left:4px solid #ff9800;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .success-box {background:#e8f5e9;border-left:4px solid #4caf50;padding:14px 18px;margin:18px 0;border-radius:0 8px 8px 0;}
+
+        .related-links {background:#f8fafc;border-radius:8px;padding:16px;margin:1.5rem 0;}
+
+        .related-links h4 {margin:0 0 12px 0;color:#1e40af;}
+
+        .related-links ul {margin:0;padding-left:20px;}
+
+        .related-links li {margin-bottom:8px;}
+
+        .checklist-icon {color:#10b981;font-weight:bold;}
+
+    </style>
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cncdisplay.com/#organization",
+  "name": "Kongto Technology",
+  "alternateName": "Kongto Technology",
+  "url": "https://cncdisplay.com",
+  "description": "Industrial CNC display upgrade solutions",
+  "image": "/images/logo.png",
+  "telephone": "+86-13686889647",
+  "email": "info@cncdisplay.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Longgang District, Shenzhen",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "postalCode": "518000",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.6568,
+    "longitude": 113.9899
+  },
+  "areaServed": [
+    "CN",
+    "US",
+    "DE",
+    "JP",
+    "KR",
+    "SG",
+    "IN",
+    "GB",
+    "FR",
+    "IT"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "sameAs": [
+    "https://github.com/szkongto",
+    "https://blog.csdn.net/szkongto"
+  ]
+}
+
+</script>
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cncdisplay.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Video Signal Converters in CNC Control Systems | Kongto Technology",
+      "item": "https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html"
+    }
+  ]
+}
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+</head>
+
+<body>    <header>
+        <nav>
+            <a href="/" class="logo">Kongto Technology</a>
+            <div class="nav-links">
+                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+                <a href="/products/">Products</a>
+                <a href="/posts/">Articles</a>
+                <a href="/case-studies.html">Cases</a>
+                <a href="/docs/">Downloads</a>
+                <a href="/about.html">About</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+            </div>
+            <a href="/search.html" class="nav-search">🔍 Search</a>
+            <div class="lang-switch">
+                <a href="https://cncdisplay.com/posts/video-signal-converters-in-cnc-zh.html" lang="zh" class="lang-zh">中文</a>
+                <span class="divider">|</span>
+                <a href="/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html" lang="en" class="lang-en">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <article class="post">
+
+            <h1>Video Signal Converters in CNC Control Systems</h1>
+
+            <div class="meta">
+
+                <time datetime="2026-05-01">2026-05-01</time>
+
+                <span class="author">Author: Kongto Technology</span>
+
+            </div>
+
+            <div class="content">
+
+<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/Haas_Monitor_00.webp" alt="Display Overview"></figure>
+
+<p><em>Display Overview | Source: Kongto Technology</em></p>
+
+<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/A6100010093_LCD_new.webp" alt="Product Photo"></figure>
+
+<p><em>Product Photo | Source: Kongto Technology</em></p>
+
+<figure class="img-hero"><img width="400" height="300" style="max-width:100%;height:auto;display:block;margin:20px auto;" loading="lazy" src="/images/crt_lcd_upgrade_steps.webp" alt="Installation View"></figure>
+
+<p><em>Installation View | Source: Kongto Technology</em></p>
+
+<p><strong>Keywords</strong>: video signal converter, CNC control system, signal conversion, industrial automation</p>
+
+<p><em>Target Audience: CNC engineers, equipment maintenance personnel, industrial control system integrators</em></p>
+
+<h2>1. Why CNC Systems Need Video Signal Converters</h2>
+
+<p>Many CNC machine tools in service today were designed with display interfaces that are incompatible with modern LCD monitors. The primary scenarios requiring signal conversion include:</p>
+
+<ul>
+
+<li><strong>CGA/EGA to VGA</strong>: Legacy CNC controllers output CGA (15kHz) or EGA (22kHz) signals that cannot directly drive VGA LCD displays</li>
+
+<li><strong>Composite sync to separate H/V sync</strong>: Some systems output RGBS (composite sync) which must be separated into RGBHV for VGA displays</li>
+
+<li><strong>Scan rate conversion</strong>: Converting low scan rate signals to standard VGA timing (31.5kHz+)</li>
+
+<li><strong>Digital-to-analog conversion</strong>: TTL-level digital signals must be converted to analog VGA signals</li>
+
+</ul>
+
+<h2>2. Signal Types in CNC Systems</h2>
+
+<table>
+
+<tr><th>Signal Type</th><th>Frequency</th><th>Voltage Level</th><th>Connector</th><th>FANUC Systems</th></tr>
+
+<tr><td>CGA (TTL)</td><td>15.75 kHz H / 60 Hz V</td><td>Digital 0/5V</td><td>9-pin D-Sub</td><td>FANUC 0-M, 0-T (very early)</td></tr>
+
+<tr><td>EGA (TTL)</td><td>21.85 kHz H / 60 Hz V</td><td>Digital 0/5V</td><td>9-pin D-Sub</td><td>FANUC 0-TC, 0-MC</td></tr>
+
+<tr><td>RGBS (Analog)</td><td>15-24 kHz H / 50-60 Hz V</td><td>Analog 0.7Vpp + Composite Sync</td><td>BNC or HONDA</td><td>FANUC 16i, 18i (some models)</td></tr>
+
+<tr><td>RGBHV/VGA (Analog)</td><td>31.5-48 kHz H / 60-75 Hz V</td><td>Analog 0.7Vpp + Separate Sync</td><td>HONDA 20-pin / HD15</td><td>FANUC 0i, 16i, 18i</td></tr>
+
+</table>
+
+<h3>2.1 Signal Type Comparison Table</h3>
+
+<div class="table-wrapper">
+
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+<tr><th>Signal Standard</th><th>Horizontal Frequency</th><th>Vertical Frequency</th><th>Sync Type</th><th>Max Resolution</th><th>Color Depth</th></tr>
+
+<tr class="odd-row"><td>CGA</td><td>15.75 kHz</td><td>60 Hz</td><td>Composite sync (TTL)</td><td>640 x 200</td><td>4 colors (16 palette)</td></tr>
+
+<tr class="even-row"><td>EGA</td><td>21.85 kHz</td><td>60 Hz</td><td>Separate sync (TTL)</td><td>640 x 350</td><td>16 colors (64 palette)</td></tr>
+
+<tr class="odd-row"><td>RGB (Analog)</td><td>15-24 kHz</td><td>50-60 Hz</td><td>Composite sync on green / separate</td><td>640 x 480</td><td>Unlimited (analog)</td></tr>
+
+<tr class="even-row"><td>RGBHV</td><td>31.5-64 kHz</td><td>60-85 Hz</td><td>Separate H/V (TTL)</td><td>1024 x 768</td><td>Unlimited (analog)</td></tr>
+
+<tr class="odd-row"><td>VGA (standard)</td><td>31.5 kHz</td><td>60-75 Hz</td><td>Separate H/V (TTL)</td><td>640 x 480</td><td>256+ (analog)</td></tr>
+
+</table></div>
+
+</div>
+
+<p class="info-box">Understanding the sync type is critical: composite sync combines horizontal and vertical timing onto a single wire, while separate sync uses dedicated H and V lines. Most industrial LCD monitors and converters expect separate H/V sync (RGBHV).</p>
+
+<h2>3. Converter Selection Criteria</h2>
+
+<h3>3.1 Input/Output Compatibility</h3>
+
+<table>
+
+<tr><th>Selection Factor</th><th>Requirement</th><th>Verification Method</th></tr>
+
+<tr><td>Input signal type</td><td>Must match CNC controller output</td><td>Check controller documentation or measure with oscilloscope</td></tr>
+
+<tr><td>Output resolution</td><td>Must match LCD display native resolution</td><td>Check LCD specifications</td></tr>
+
+<tr><td>Refresh rate</td><td>60 Hz minimum, compatible with CNC frame rate</td><td>Verify in FANUC system parameters</td></tr>
+
+<tr><td>Scan rate handling</td><td>Line doubling for CGA/EGA input</td><td>Verify with test pattern display</td></tr>
+
+</table>
+
+<h3>3.2 Environmental Requirements</h3>
+
+<ul>
+
+<li><strong>Operating temperature</strong>: -20&deg;C to +70&deg;C for workshop environments</li>
+
+<li><strong>Power supply</strong>: 12-36 VDC wide voltage range for PLC/cabinet compatibility</li>
+
+<li><strong>EMC compliance</strong>: IEC/EN 61326-1 Class 2 for industrial environments</li>
+
+<li><strong>Vibration resistance</strong>: IEC 60068-2-6 for machine tool environments</li>
+
+<li><strong>MTBF</strong>: &ge; 50,000 hours for 24/7 operation</li>
+
+</ul>
+
+<h3>3.3 Converter Selection Guide by CNC Brand</h3>
+
+<div class="table-wrapper">
+
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+<tr><th>CNC Brand</th><th>Common Controller Models</th><th>Output Signal</th><th>Recommended Converter</th><th>Notes</th></tr>
+
+<tr class="odd-row"><td>FANUC</td><td>0-M, 0-T, 0-TC, 0-MC</td><td>CGA / EGA (TTL)</td><td>JTX-CVR-001 / JTX-CVR-002</td><td>Early models use 9-pin D-Sub; newer 0i series uses RGBHV</td></tr>
+
+<tr class="even-row"><td>FANUC</td><td>16i, 18i, 21i, 0i-D/F</td><td>RGBHV (Analog)</td><td>JTX-CVR-003</td><td>Sync separator required; HONDA 20-pin connector common</td></tr>
+
+<tr class="odd-row"><td>Mitsubishi</td><td>M700V, M70, E70, C70</td><td>RGB (Analog) + composite sync</td><td>JTX-CVR-003</td><td>Some models output 15 kHz RGB; check service manual pinout</td></tr>
+
+<tr class="even-row"><td>Mitsubishi</td><td>M50, M64, M65, Meldas 500</td><td>CGA / EGA (TTL)</td><td>JTX-CVR-004</td><td>Dual-input auto-detect recommended; verify sync polarity</td></tr>
+
+<tr class="odd-row"><td>Siemens</td><td>Sinumerik 810D, 840D</td><td>TTL RGB + VSYNC</td><td>JTX-CVR-005</td><td>6-bit parallel RGB; JTX-CVR-005 provides needed DAC</td></tr>
+
+<tr class="even-row"><td>Siemens</td><td>Sinumerik 828D, 840D sl</td><td>DVI / LVDS (digital)</td><td>N/A (direct LCD)</td><td>Newer models use digital interface; no converter needed</td></tr>
+
+</table></div>
+
+</div>
+
+<p class="warning-box">Always confirm your specific controller revision and output connector pinout before purchasing a converter. FANUC and Mitsubishi used multiple connector standards across production years. Request a wiring diagram from Kongto Technology when ordering.</p>
+
+<h2>4. Installation Best Practices</h2>
+
+<ol>
+
+<li><strong>Pre-installation</strong>: Document all existing cable connections and system parameters before making any changes</li>
+
+<li><strong>Power isolation</strong>: Always power down the CNC machine before connecting or disconnecting display cables</li>
+
+<li><strong>Cable routing</strong>: Route signal cables away from motor power cables and servo drives to minimize EMI</li>
+
+<li><strong>Grounding</strong>: Ensure proper grounding of the converter to prevent ground loops and signal noise</li>
+
+<li><strong>Vibration mounting</strong>: Secure the converter with vibration-dampening mounts inside the electrical cabinet</li>
+
+<li><strong>Labeling</strong>: Label all connections and document the converter model and settings for future maintenance</li>
+
+</ol>
+
+<h3>4.1 Installation Checklist</h3>
+
+<div class="table-wrapper">
+
+<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+<tr><th>Step</th><th>Task</th><th>Tool Required</th><th>Time Estimate</th><th>Notes</th></tr>
+
+<tr class="odd-row"><td>1</td><td>Power down and lockout/tagout the CNC machine</td><td>Lockout kit, voltage tester</td><td>5 min</td><td>Verify zero energy state before proceeding</td></tr>
+
+<tr class="even-row"><td>2</td><td>Remove existing CRT display and document all cable connections</td><td>Screwdriver set, camera</td><td>15 min</td><td>Take photos of all connectors before disconnecting</td></tr>
+
+<tr class="odd-row"><td>3</td><td>Identify CNC controller video output signal type and pinout</td><td>Multimeter, oscilloscope (optional)</td><td>10 min</td><td>Measure H/V sync levels; TTL = 0-5V, analog = 0.7Vpp</td></tr>
+
+<tr class="even-row"><td>4</td><td>Mount converter inside electrical cabinet using DIN rail or bracket</td><td>DIN rail clip, screwdriver</td><td>10 min</td><td>Keep away from drive inverters and high-current cables</td></tr>
+
+<tr class="odd-row"><td>5</td><td>Connect input cable from CNC controller to converter</td><td>Crimping tool (if custom cable needed)</td><td>10 min</td><td>Use shielded twisted-pair cable for analog RGB signals</td></tr>
+
+<tr class="even-row"><td>6</td><td>Connect converter output to LCD monitor; power on and test</td><td>None</td><td>5 min</td><td>If no display, check sync polarity switches on converter</td></tr>
+
+<tr class="odd-row"><td>7</td><td>Adjust display position, size, and phase; secure all cables</td><td>Small flathead screwdriver (for trim pots)</td><td>10 min</td><td>Use built-in test pattern if available; document final settings</td></tr>
+
+</table></div>
+
+</div>
+
+<h2>5. Step-by-Step Installation Guide</h2>
+
+<p>Follow these numbered steps to perform a complete CNC CRT-to-LCD video signal converter installation. This guide assumes the correct converter model has already been selected based on your CNC controller's output signal type.</p>
+
+<ol>
+
+<li><strong>Prepare the Workspace and Tools</strong>. Gather all necessary tools: a multimeter for voltage verification, screwdrivers (Phillips and flathead), cable ties, a crimping tool for custom cable ends, a DIN rail mounting clip (if your converter supports DIN rail mounting), and a digital camera to document original connections. Ensure adequate lighting inside the electrical cabinet.</li>
+
+<li><strong>Perform Electrical Safety Lockout</strong>. Shut down the CNC machine using the main power disconnect. Apply a lockout/tagout device and verify zero voltage at the controller power supply terminals using your multimeter. Wait at least 3 minutes for internal capacitors to discharge. Never rely on the machine's power switch alone.</li>
+
+<li><strong>Identify and Document the Existing Display Connections</strong>. Remove the CRT display bezel or access panel. Photograph every cable and its connector before disconnecting anything. Note the cable colors and pin positions —many CNC controllers use custom wiring that does not follow standard color codes. Check the controller model number against known pinout diagrams from Kongto Technology's compatibility matrix.</li>
+
+<li><strong>Verify the Video Signal Parameters</strong>. With the machine powered on (after lockout is lifted for testing), use an oscilloscope to measure the H-sync frequency and V-sync frequency at the controller's video output connector. Confirm the signal matches the specifications listed in Section 2. If using a TTL-level signal (0-5V), ensure your converter is configured for TTL input; if analog (0.7Vpp RGB), set the converter accordingly.</li>
+
+<li><strong>Mount the Converter and Route Cables</strong>. Install the converter inside the electrical cabinet using the provided DIN rail clip or mounting bracket. Keep at least 10 cm (4 inches) of separation between video signal cables and motor power cables or servo drive cables to prevent electromagnetic interference. Use shielded twisted-pair cable for the RGB signal lines, with the shield grounded at one end only to avoid ground loops.</li>
+
+<li><strong>Connect and Power On for Initial Test</strong>. Connect the CNC controller's video output to the converter input, and the converter output to the new LCD monitor. Apply power and observe the display. If no image appears, check the converter's sync polarity DIP switches —some FANUC and Mitsubishi controllers output negative-going sync pulses that must be matched. If the image rolls vertically, adjust the V-hold or switch between composite and separate sync modes.</li>
+
+<li><strong>Fine-Tune and Secure the Installation</strong>. Use the converter's on-board potentiometers (if equipped) or OSD menu to adjust horizontal position, vertical position, image size, and phase/clock to achieve a sharp, stable display. Run the CNC machine through a complete boot cycle and test a sample program to confirm the display remains stable under load. Secure all cables with cable ties, label both ends of each cable, and close the cabinet.</li>
+
+</ol>
+
+<div class="success-box">After installation, run the machine for at least 4 hours of continuous operation to verify display stability. Thermal expansion in the electrical cabinet can affect connector seating —re-tighten all screw terminals after the initial burn-in period.</div>
+
+<h2>6. Kongto Technology Converter Product Line</h2>
+
+<table>
+
+<tr><th>Model</th><th>Input</th><th>Output</th><th>Key Features</th><th>Price</th></tr>
+
+<tr><td>JTX-CVR-001</td><td>CGA (15kHz)</td><td>VGA (31kHz)</td><td>Auto line-doubling, plug-and-play</td><td>CNY 850</td></tr>
+
+<tr><td>JTX-CVR-002</td><td>EGA (22kHz)</td><td>VGA (31kHz)</td><td>Auto line-doubling, wide voltage</td><td>CNY 880</td></tr>
+
+<tr><td>JTX-CVR-003</td><td>RGBS</td><td>RGBHV/VGA</td><td>Sync separator, adjustable position</td><td>CNY 750</td></tr>
+
+<tr><td>JTX-CVR-004</td><td>CGA+EGA (dual)</td><td>VGA</td><td>Auto-detect input type</td><td>CNY 950</td></tr>
+
+<tr><td>JTX-CVR-005</td><td>TTL RGB</td><td>VGA</td><td>6-bit DAC, supports 64 colors</td><td>CNY 720</td></tr>
+
+</table>
+
+<p>All models feature: -20&deg;C to +70&deg;C operating range, 12-36 VDC power, MTBF &ge; 50,000 hours, CE/UL certified.</p>
+
+<p>Contact <strong>Kongto Technology</strong> at info@cncdisplay.com for technical consultation.</p>
+
+            </div>
+
+<div class="share-buttons">
+
+    <div class="share-title">Share to:</div>
+
+    <div class="share-icons">
+
+        <a href="javascript:void(0)" class="share-btn share-linkedin" onclick="shareToLinkedIn()" title="Share to LinkedIn">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+            </svg>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-facebook" onclick="shareToFacebook()" title="Share to Facebook">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.025 1.79-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
+            <span>Facebook</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-twitter" onclick="shareToTwitter()" title="Share to Twitter">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.492 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+
+            </svg>
+
+            <span>Twitter</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-youtube" onclick="shareToYouTube()" title="Share to YouTube">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.124C18.244 3 12 3 12 3s-6.244 0-9.376.62a3.016 3.016 0 0 0-2.122 2.124C0 8.318 0 12 0 12s0 3.682.502 5.814a3.016 3.016 0 0 0 2.122 2.124c3.152.62 9.376.62 9.376.62s6.244 0 9.376-.62a3.016 3.016 0 0 0 2.122-2.124C24 15.682 24 12 24 12s0-3.682-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+
+            </svg>
+
+            <span>YouTube</span>
+
+        </a>
+
+        <a href="javascript:void(0)" class="share-btn share-copy" onclick="copyLink()" title="Copy link">
+
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+
+            </svg>
+
+            <span>Copy link</span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+(function() {
+
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    var pageTitle = encodeURIComponent(document.title);
+
+    window.shareToLinkedIn = function() {
+
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToFacebook = function() {
+
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToTwitter = function() {
+
+        window.open('https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle, '_blank', 'width=600,height=400');
+
+    };
+
+    window.shareToYouTube = function() {
+
+        alert('Share this article by copying the link and pasting it into a YouTube video description or community post.');
+
+    };
+
+    window.copyLink = function() {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            alert('Link copied to clipboard!');
+
+        }).catch(function() {
+
+            var input = document.createElement('input');
+
+            input.value = window.location.href;
+
+            document.body.appendChild(input);
+
+            input.select();
+
+            document.execCommand('copy');
+
+            document.body.removeChild(input);
+
+            alert('Link copied to clipboard!');
+
+        });
+
+    };
+
+})();
+
+</script>
+
+        <div class="related-links"><h4>Related Articles</h4><ul>
+
+<li><a href="/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">Video Signal Converter Series</a></li>
+
+<li><a href="/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html">CGA/EGA Display Retrofit Guide</a></li>
+
+<li><a href="/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html">RGBHV Retrofit Complete Guide</a></li>
+
+<li><a href="/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html">Troubleshooting &amp; Repair Guide</a></li>
+
+</ul></div>
+
+</article>
+
+    </main>
+
+<section class="related-articles" style="margin:3rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;">
+
+    <h3 style="margin-top:0;">Related Articles</h3>
+
+    <ul style="display:grid;gap:0.5rem;"><li><a href="/posts/Video_Signal_Converter_Buying_Guide.html">Video Signal Converter Selection Guide | Kongto Technology</a></li><li><a href="/posts/Video_Signal_Converter_Selection_Guide.html">Video Signal Converter Selection | Kongto Technology</a></li><li><a href="/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html">Video Signal Conversion Systems —CGA/EGA to VGA, RGB to VGA G...</a></li></ul>
+
+</section>
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
+            <ul style="margin:0;padding-left:1.2rem;">
+                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+                <li><a href="/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+                <li><a href="/quote.html">Get a Quote</a> —Reply within 24 hours</li>
+            </ul>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+            </div>
+            <div class="footer-links">
+                <a href="/posts/">📄 Articles</a>
+                <a href="/brands/FANUC.html">FANUC</a>
+                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
+                <a href="/brands/Siemens.html">Siemens</a>
+                <a href="/docs/">Downloads</a>
+                <a href="/about.html">About Us</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
+        </div>
+    
+            <div class="footer-links">
+                <a href="/glossary.html">Glossary</a>
+                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
+                <a href="/comparison-tool.html">Compare</a>
+                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
+                <a href="/compatibility-matrix.html">Compatibility</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+    </footer>
+
+</body>
+
 </html>
