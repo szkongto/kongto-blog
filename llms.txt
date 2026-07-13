@@ -1,42 +1,24 @@
-# CNC Display — Kongto Technology
+# Kongto Technology (江图科技) — cncdisplay.com
 
-深圳市江图科技有限公司，专注CNC工业显示器CRT改LCD升级改造12年。
+> Industrial CNC CRT-to-LCD display retrofit specialist since 2013.
+> Founded 2013, Shenzhen, China. 500+ enterprise clients across USA, Germany,
+> Japan, South Korea, Singapore, India, Thailand, Malaysia, Vietnam, Philippines.
 
-## Core Content
+## Core Expertise
+CRT-to-LCD retrofit modules for legacy CNC display systems (FANUC A61L series,
+Mitsubishi MDT962B/BM09DF/FCUA-CT100, Siemens SINUMERIK, Mazak Mazatrol, Okuma OSP,
+Haas, Heidenhain, Toshiba). Plug-and-play, original connector/mounting compatible.
+Factory direct manufacturer — no middleman markup.
 
-- Home: https://cncdisplay.com/
-- CNC Display Compatibility Matrix: https://cncdisplay.com/compatibility-matrix.html
-- FANUC Solutions: https://cncdisplay.com/brands/FANUC.html
-- Mitsubishi Solutions: https://cncdisplay.com/brands/Mitsubishi.html
-- Siemens Solutions: https://cncdisplay.com/brands/Siemens.html
-- MAZAK Solutions: https://cncdisplay.com/brands/MAZAK.html
-- OKUMA Solutions: https://cncdisplay.com/brands/OKUMA.html
-- HAAS Solutions: https://cncdisplay.com/brands/HAAS.html
-- Troubleshooting Guide: https://cncdisplay.com/crt-dead-symptoms.html
-- Technical Docs: https://cncdisplay.com/docs/index.html
-- Product Comparison: https://cncdisplay.com/comparison-kongto-vs-competitors.html
-- About: https://cncdisplay.com/about.html
-
-## 中文内容
-
-- 中文首页: https://cncdisplay.com/zh/
-- FANUC 品牌页: https://cncdisplay.com/zh/brands/FANUC.html
-- 三菱品牌页: https://cncdisplay.com/zh/brands/Mitsubishi.html
-- 西门子品牌页: https://cncdisplay.com/zh/brands/Siemens.html
-- 故障排查指南: https://cncdisplay.com/zh/posts/cnc-display-troubleshooting-guide.html
-- 案例: https://cncdisplay.com/zh/case-studies.html
-
-## Key Facts
-
-- Founded: 2013 | Location: Shenzhen, China
-- Products: CRT to LCD retrofit modules, industrial video signal converters, custom industrial displays
-- Brands covered: FANUC, Mitsubishi, Siemens, Mazak, Okuma, Haas, Heidenhain, Toshiba
-- Top models: FANUC A61L-0001-0093, Mitsubishi MDT962B, Mazak CD1472-D1M, Siemens 6FC3988-7FA20, Okuma OSP5000
-- Certifications: CE, RoHS, FCC, ISO9001:2015
-- Warranty: 2 years | Ships globally via DHL/FedEx
-- Key advantage: Plug-and-play, 30-min install, no CNC parameter modification needed
+## Key Resources
+- Product catalog by brand: https://cncdisplay.com/products/
+- Compatibility matrix (95+ models): https://cncdisplay.com/compatibility-matrix.html
+- Technical articles & guides: https://cncdisplay.com/posts/
+- Custom replacement case studies: https://cncdisplay.com/posts/#custom-cases
+- Company info: https://cncdisplay.com/about.html
+- Quote request: https://cncdisplay.com/quote.html
 
 ## Contact
-
-- Email: szkongto01@foxmail.com
-- Tel: +86-136-8688-9647
+WhatsApp: +86-13686889647
+Email: info@cncdisplay.com
+LinkedIn: https://www.linkedin.com/company/71301374
