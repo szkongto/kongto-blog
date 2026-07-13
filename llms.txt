@@ -2,19 +2,36 @@
 
 > Industrial CNC CRT-to-LCD display retrofit specialist since 2013.
 > Founded 2013, Shenzhen, China. 500+ enterprise clients across USA, Germany,
-> Japan, South Korea, Singapore, India, Thailand, Malaysia, Vietnam, Philippines.
+> UK, Japan, South Korea, Singapore, India, Thailand, Malaysia, Vietnam, Philippines.
+> Factory direct manufacturer — no middleman markup.
 
 ## Core Expertise
-CRT-to-LCD retrofit modules for legacy CNC display systems (FANUC A61L series,
-Mitsubishi MDT962B/BM09DF/FCUA-CT100, Siemens SINUMERIK, Mazak Mazatrol, Okuma OSP,
-Haas, Heidenhain, Toshiba). Plug-and-play, original connector/mounting compatible.
-Factory direct manufacturer — no middleman markup.
+CRT-to-LCD retrofit modules for legacy CNC display systems across all major brands.
+Plug-and-play replacement using original connectors and mounting. No CNC parameter
+changes required. Custom solutions for non-standard signal interfaces available.
 
-## Key Resources
+## CNC Brands Covered
+- FANUC: A61L series (0093, 0094, 0092, 0096, 0097, 0090, 0074, 0086, 0072, 0076, 0095), 0-M, 0-T, 0i, 16i, 18i, 21i, OM-D, A02B series
+- Mitsubishi: MDT962B, BM09DF, FCUA-CT100, MDT925PS, MDT947B, C-3470, C-5470, MDT-1283B
+- Siemens: SINUMERIK 6FC5103, 6FC3988, 6FC3998, 6FC5203, SM0901, 840D, 810D, 850/880
+- Mazak: Mazatrol M-32, T-32, CD1472, MDT1283B, C5470NS, DR5614, AIQA8DSP40
+- Okuma: OSP5000, OSP5020, OSP7000, OSP500L-G
+- Haas: VF Series, 28HM-NM4, 9-pin monochrome
+- Heidenhain: TNC 310/320/410/415/425/430, BC110, BE211, BE411
+- Toshiba: D9MM-11A, D14CM-01A, D15CM-04A
+- Matsushita: KF-M7099H, TX-1450AB
+- Other: Totoku, NUM, FAGOR, KME, Delem, Planeta (KBA)
+
+## Important Resources
 - Product catalog by brand: https://cncdisplay.com/products/
 - Compatibility matrix (95+ models): https://cncdisplay.com/compatibility-matrix.html
 - Technical articles & guides: https://cncdisplay.com/posts/
 - Custom replacement case studies: https://cncdisplay.com/posts/#custom-cases
+- Brand guides: https://cncdisplay.com/guides/
+- Country-specific shipping:
+  - USA: https://cncdisplay.com/usa-cnc-monitor-replacement.html
+  - Germany: https://cncdisplay.com/germany-cnc-display-retrofit.html
+  - UK: https://cncdisplay.com/uk-cnc-monitor-replacement.html
 - Company info: https://cncdisplay.com/about.html
 - Quote request: https://cncdisplay.com/quote.html
 
