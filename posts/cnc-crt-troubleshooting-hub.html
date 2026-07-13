@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CNC CRT Display Troubleshooting Guide — Common Faults & Fixes | Kongto</title>
+<meta name="description" content="Complete CNC CRT display troubleshooting guide. Black screen, dim display, flickering, burn-in, color issues — diagnose and fix legacy CNC monitor problems.">
+<meta name="keywords" content="CNC CRT troubleshooting, CNC display black screen fix, CRT flickering repair, CNC monitor no display, industrial CRT failure diagnosis">
+<link rel="canonical" href="https://cncdisplay.com/posts/cnc-crt-troubleshooting-hub.html">
+<link rel="stylesheet" href="/css/style.css?v=7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why did my CNC CRT display go black?","acceptedAnswer":{"@type":"Answer","text":"The most common cause is CRT high-voltage section failure. The flyback transformer or horizontal output transistor fails, cutting the HV supply to the CRT anode. The CNC control still runs — you just can't see the display. An LCD replacement restores it."}},{"@type":"Question","name":"Can a dim CRT be repaired?","acceptedAnswer":{"@type":"Answer","text":"CRT dimming is caused by phosphor degradation and electron gun emission loss — both are permanent physical wear. No repair can restore original brightness. LCD replacement is the only effective solution."}},{"@type":"Question","name":"What causes CRT screen flickering?","acceptedAnswer":{"@type":"Answer","text":"Flickering is usually caused by failing electrolytic capacitors in the CRT's power supply or deflection circuit. Replacing capacitors can temporarily fix it, but the underlying CRT wear continues. LCD replacement eliminates flicker permanently."}}]}</script>
+</head>
+<body>
+<header><nav><a href="/" class="logo">Kongto Technology</a><div class="nav-links"><a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a><a href="/posts/">Articles</a><a href="/products/">Products</a><a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a></div></nav></header>
+<main style="max-width:860px;margin:0 auto;padding:20px;">
+<article>
+<h1>CNC CRT Display Troubleshooting Guide — Diagnose & Fix Common Faults</h1>
+<p>CRT displays on legacy CNC equipment fail in predictable ways. This guide helps you diagnose the symptom, understand the root cause, and choose the right fix — whether it's a simple cable reseat, a component-level repair, or an LCD upgrade.</p>
+
+<div style="background:#fff7ed;padding:1.25rem;border-radius:8px;border-left:4px solid #f97316;margin:1rem 0;">
+<p><strong>⚠️ Safety warning:</strong> CRT displays contain high voltage (up to 28 kV) that persists after power-off. Always discharge the CRT anode before handling. If you're not trained in HV safety, have a qualified technician do the diagnosis.</p>
+</div>
+
+<h2>Quick Symptom Lookup</h2>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">Symptom</th><th style="padding:10px;border:1px solid #333;">Likely Cause</th><th style="padding:10px;border:1px solid #333;">Fix</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;"><a href="/products/no-display.html">Black screen / no display</a></td><td>HV section failure, flyback transformer, HOT transistor</td><td>LCD replacement</td></tr>
+<tr style="background:#f8f9fa;"><td><a href="/products/flickering-screen.html">Screen flickering / rolling</a></td><td>Failing electrolytic capacitors, sync signal loss</td><td>Cap replacement or LCD</td></tr>
+<tr><td><a href="/products/image-retention.html">Burn-in / ghosting</a></td><td>Permanent phosphor damage</td><td>LCD replacement (irreversible)</td></tr>
+<tr style="background:#f8f9fa;"><td>Dim display / low brightness</td><td>Phosphor wear, electron gun degradation</td><td>LCD replacement</td></tr>
+<tr><td>Color shift / missing colors</td><td>CRT gun driver failure, shadow mask warp</td><td>LCD replacement</td></tr>
+<tr style="background:#f8f9fa;"><td>Horizontal line / image collapse</td><td>Vertical deflection IC failure, yoke fault</td><td>LCD replacement</td></tr>
+<tr><td>Geometric distortion (pincushion)</td><td>Deflection coil aging, pincushion circuit</td><td>Component repair or LCD</td></tr>
+<tr style="background:#f8f9fa;"><td>High voltage buzz / arcing</td><td>Flyback transformer crack, humidity ingress</td><td>LCD replacement (safety risk)</td></tr>
+<tr><td>Intermittent display / goes dark after warm-up</td><td>Thermal failure — bad solder joints, failing caps</td><td>Component repair or LCD</td></tr>
+</tbody>
+</table>
+
+<h2>Detailed Symptom Diagnosis</h2>
+
+<h3>1. Black Screen — CNC Control Still Running</h3>
+<p><strong>Most common CRT failure.</strong> The CNC powers on, motors and servos work, but the screen stays dark. This is almost always a CRT high-voltage failure, not a CNC mainboard problem.</p>
+<p><strong>Diagnostic steps:</strong></p>
+<ol>
+<li>Shine a bright flashlight at the screen at an angle. If you see a faint image, the CRT's HV section has failed (backlight/luminance is gone, but video signal is still present).</li>
+<li>Verify DC 24V at the CRT connector using a multimeter.</li>
+<li>Listen for the characteristic CRT "whine" (15.7 kHz flyback frequency). No whine = HV section dead.</li>
+<li>If the flashlight test shows no image at all, the video driver board or CRT tube itself has failed.</li>
+</ol>
+<p><strong>Fix:</strong> CRT HV repair is possible (flyback replacement ~$200-600) but temporary — the tube has limited remaining life. <a href="/products/no-display.html">LCD replacement is the permanent fix →</a></p>
+
+<h3>2. Dim Display — Gradual Brightness Loss</h3>
+<p>CRTs lose approximately 40% of their brightness over their service life. After 10+ years, most CNC CRTs are below 35% of original brightness. This is caused by:</p>
+<ul>
+<li><strong>Phosphor wear:</strong> The P39 phosphor coating on the tube face degrades with electron bombardment, losing luminous efficiency.</li>
+<li><strong>Electron gun emission decay:</strong> The cathode in the CRT gun loses emissivity over time, reducing beam current.</li>
+<li><strong>HV drift:</strong> The high-voltage supply output drifts downward as components age.</li>
+</ul>
+<p><strong>Fix:</strong> CRT brightness cannot be restored. Replacement is the only effective solution. Our LCD modules deliver 350-450 cd/m² — 2-3x brighter than a worn CRT.</p>
+
+<h3>3. Flickering or Scrolling Image</h3>
+<p>Vertical scrolling or flickering indicates sync signal problems or power supply instability.</p>
+<ul>
+<li><strong>Vertical roll (image scrolls up/down):</strong> VSYNC signal missing or corrupted. Check the cable and connector pins first.</li>
+<li><strong>Horizontal flicker (entire screen pulses):</strong> Aging electrolytic capacitors in the B+ power supply. The voltage regulation drifts, causing brightness cycling.</li>
+<li><strong>Random flicker with brightness shifts:</strong> Failing flyback transformer or CRT socket arcing.</li>
+</ul>
+<p><a href="/products/flickering-screen.html">Full flickering diagnosis guide →</a></p>
+
+<h3>4. Burn-In / Image Retention</h3>
+<p>Permanent ghost image of previously displayed content (tool offset screens, status bars) visible on the CRT even when the display changes. This is caused by phosphor aging — areas that display bright static content lose their phosphor efficiency faster than dim areas.</p>
+<p><strong>Fix:</strong> Burn-in is permanent on CRTs. LCD modules have no phosphor and do not suffer from burn-in. <a href="/products/image-retention.html">Full burn-in guide →</a></p>
+
+<h3>5. Color Problems</h3>
+<p><strong>Color shift</strong> — One or more colors are weak or missing. Caused by failing CRT gun drivers or shadow mask deformation from heat/age.</p>
+<p><strong>Color purity issues</strong> — Patches of wrong color on the screen. The shadow mask has become magnetized or physically distorted.</p>
+<p><strong>Fix:</strong> Degaussing can fix mild magnetization. Major purity or gun driver failures require CRT replacement (or LCD upgrade).</p>
+
+<h3>6. Image Collapse (Horizontal or Vertical Line)</h3>
+<p>The display compresses to a bright horizontal or vertical line. This is a deflection circuit failure:</p>
+<ul>
+<li><strong>Horizontal line:</strong> Vertical deflection IC or yoke has failed. The beam sweeps horizontally but not vertically.</li>
+<li><strong>Vertical line:</strong> Horizontal deflection failure — rare, usually a connection issue.</li>
+</ul>
+<p><strong>Fix:</strong> The deflection IC can be replaced (~$50-150 repair), but the CRT may have other latent issues. LCD replacement is more cost-effective long-term.</p>
+
+<h3>7. High-Voltage Arcing / Buzzing</h3>
+<p>Audible buzzing or crackling from the CRT area, sometimes with visible blue flashes inside the CRT housing. This is arcing from the flyback transformer or the anode cap.</p>
+<p><strong>⚠️ Safety hazard:</strong> Arcing indicates insulation breakdown. The CRT can develop unpredictable HV paths. This should be addressed immediately — either discharge and retire the CRT, or replace with LCD.</p>
+
+<h2>CRT Repair vs LCD Replacement Decision Guide</h2>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">Scenario</th><th style="padding:10px;border:1px solid #333;">Repair?</th><th style="padding:10px;border:1px solid #333;">LCD Upgrade?</th></tr></thead>
+<tbody>
+<tr><td>Black screen (HV failure)</td><td>Possible ($200-600), temporary</td><td style="color:#16a34a;font-weight:700;">Recommended</td></tr>
+<tr style="background:#f8f9fa;"><td>Dim display (>10 years old)</td><td style="color:#dc2626;">Not possible</td><td style="color:#16a34a;font-weight:700;">Recommended</td></tr>
+<tr><td>Flickering (bad caps)</td><td>Possible ($50-150), 6-18 month life</td><td style="color:#16a34a;font-weight:700;">Better value</td></tr>
+<tr style="background:#f8f9fa;"><td>Burn-in</td><td style="color:#dc2626;">Not possible</td><td style="color:#16a34a;font-weight:700;">Required</td></tr>
+<tr><td>Color failure</td><td>Possible ($100-300), depends on parts</td><td style="color:#16a34a;font-weight:700;">More reliable</td></tr>
+<tr style="background:#f8f9fa;"><td>HV arcing</td><td style="color:#dc2626;">Safety hazard — replace</td><td style="color:#16a34a;font-weight:700;">Required</td></tr>
+</tbody>
+</table>
+
+<h2>CRT Life Expectancy by Age</h2>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">CRT Age</th><th style="padding:10px;border:1px solid #333;">Remaining Brightness</th><th style="padding:10px;border:1px solid #333;">Failure Probability</th><th style="padding:10px;border:1px solid #333;">Recommendation</th></tr></thead>
+<tbody>
+<tr><td>0-5 years</td><td>100-85%</td><td>Low</td><td>Continue use</td></tr>
+<tr style="background:#f8f9fa;"><td>5-8 years</td><td>85-60%</td><td>Moderate</td><td>Monitor, plan upgrade</td></tr>
+<tr><td>8-12 years</td><td>60-35%</td><td>High</td><td>Consider LCD upgrade</td></tr>
+<tr style="background:#f8f9fa;"><td>12-15 years</td><td>35-20%</td><td>Very high</td><td style="font-weight:700;color:#16a34a;">Replace with LCD</td></tr>
+<tr><td>15+ years</td><td>Below 20%</td><td>Critical</td><td style="font-weight:700;color:#dc2626;">Immediate replacement</td></tr>
+</tbody>
+</table>
+
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/products/no-display.html">CNC Display Black Screen — Complete Fix Guide</a></li>
+<li><a href="/products/flickering-screen.html">CNC Screen Flickering — Causes & Fixes</a></li>
+<li><a href="/products/image-retention.html">CRT Burn-In / Image Retention — Solutions</a></li>
+<li><a href="/compatibility-matrix.html">Compatibility Matrix — Find Your Model</a></li>
+</ul>
+</article>
+</main>
+<footer><div class="footer-content"><div class="footer-brand"><span class="footer-logo">Kongto Technology</span><p>Industrial Video Display Solutions</p></div><p class="footer-copy">&copy; 2013-2026 Kongto Technology | Shenzhen | info@cncdisplay.com | <a href="/usa-cnc-monitor-replacement.html">🇺🇸</a> <a href="/germany-cnc-display-retrofit.html">🇩🇪</a> <a href="/uk-cnc-monitor-replacement.html">🇬🇧</a> <a href="/california-cnc-monitor-replacement.html">CA</a> <a href="/texas-cnc-monitor-replacement.html">TX</a> <a href="/michigan-cnc-monitor-replacement.html">MI</a></p></div></footer>
+</body>
+</html>
