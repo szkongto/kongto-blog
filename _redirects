@@ -277,6 +277,5 @@
 /en/docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx /docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx 301
 /en/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf /docs/Kongto_CRT_LCD_Upgrade_Guide.pdf 301
 /en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf /docs/MDT-1283_CRT_to_LCD_V2.62.pdf 301
-/en/posts/ /posts/ 301
-# 2026-07-13: 0093 rewrite deployed in-place over original URL; redirect the old /en/posts/ orphan path
-/en/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301
+# /en/ path prefix redirects — EN site is at root / not /en/
+/en/* /:splat 301
