@@ -157,7 +157,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/brands/HAAS.html</loc>
+    <loc>https://cncdisplay.com/brands/Haas.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2935,6 +2935,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://cncdisplay.com/products/haas-9pin-mono-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cncdisplay.com/products/heidenhain-bc110-lcd-upgrade.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3092,6 +3098,12 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/products/okuma-osp-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/products/okuma-osp5020-crt-lcd-upgrade.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4304,6 +4316,12 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/posts/siemens-display-upgrade-cost-roi-analysis.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/posts/siemens-sinumerik-840c-crt-lcd-upgrade-zh.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
