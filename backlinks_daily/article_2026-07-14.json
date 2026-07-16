@@ -1,0 +1,41 @@
+{
+  "title": "How to Fix Mazak MDT1283B image retention / burn-in — Complete Guide",
+  "devto_tags": [
+    "cnc",
+    "manufacturing",
+    "engineering",
+    "mazak"
+  ],
+  "canonical": "https://cncdisplay.com/brands/MAZAK.html",
+  "body_devto": "## If you operate a Mazak CNC machine with a MDT1283B CRT display, you may have noticed it developing image retention / burn-in. This isn't surprising — these CRTs were designed for 10-15 years of service, and most are now past 20.\n\n## Important Note\n\nSome suppliers list 'FANUC/Mazak compatible' displays. These are physically incompatible — Mazak uses a 26-pin connector, FANUC uses 20-pin Honda MR-20M.\n\n## Technical Details\n\nThe MDT1283B CRT in Mazak systems connects via 26-pin proprietary and runs on DC 24V. It's compatible with Mazatrol T-32, Mazatrol M-32, M-Plus controls. The LCD replacement uses the same connector and power — no adapter needed. Price: $249.\n\nPhosphor burn-in is permanent. That ghosted CNC parameter screen is etched into the tube. LCD modules use TFT technology — no phosphor layer, no burn-in, ever.\n\n## Installation\n\n1. Power off CNC machine and verify power is off with multimeter\n2. Remove 4 mounting bolts from the CRT bezel\n3. Disconnect the 26-pin proprietary cable\n4. Connect same cable to the replacement LCD module\n5. Mount LCD using original screw holes (same pattern)\n6. Power on — no CNC parameter changes required\n\nTotal time: ~15 minutes. The LCD draws DC 24V, matching the original CRT power supply.\n\nFull guide: https://cncdisplay.com/brands/MAZAK.html\n\n## Summary\n\nMazak LCD replacement: same connector (26-pin proprietary), same power (DC 24V), plug-and-play installation. Full guide: https://cncdisplay.com/brands/MAZAK.html",
+  "brand": {
+    "name": "Mazak",
+    "name_cn": "马扎克",
+    "models": [
+      "CD1472-D1M",
+      "C-5470NS",
+      "DR5614",
+      "MDT1283B"
+    ],
+    "connector": "26-pin proprietary",
+    "power": "DC 24V",
+    "controls": [
+      "Mazatrol T-32",
+      "Mazatrol M-32",
+      "M-Plus",
+      "Fusion 640"
+    ],
+    "price": "$249",
+    "page": "https://cncdisplay.com/brands/MAZAK.html"
+  },
+  "model": "MDT1283B",
+  "failure": {
+    "name": "烧屏残影",
+    "en": "image retention / burn-in",
+    "desc": "permanent ghost image from static CNC UI displays"
+  },
+  "angle": {
+    "en": "maintenance tips",
+    "zh": "维护技巧"
+  }
+}

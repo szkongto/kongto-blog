@@ -1,0 +1,9 @@
+CNC maintenance reality: That Haas 15-pin VGA CRT in your machine ran 20+ years — far past its design life.
+
+Haas LCD replacements use the original 9-pin D-Sub. Plug-and-play, ~15 min install, $179.
+
+One module eliminates the CRT failure cycle permanently.
+
+Guides at cncdisplay.com
+
+#Manufacturing #CNC #IndustrialAutomation
