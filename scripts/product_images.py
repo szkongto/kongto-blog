@@ -48,13 +48,13 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
-            'fanuc-a61l-0001-0074-lcd-upgrade.html': [
-        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/a61l-0001-0074-front-400.jpg', 'lcd_front'),
-        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
+                'fanuc-a61l-0001-0074-lcd-upgrade.html': [
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/2018-0074-0094新液晶-V2.5/2018-74-94-0001.jpg', 'lcd_front'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/2018-0074-0094新液晶-V2.5/2018-74-94-0005.jpg', 'lcd_back'),
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/替换效果/0094-0074安装效果背面.jpg', 'effect'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/替换效果/A61L-0001-0094_LCDV2.5-05.jpg', 'effect'),
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/C14C-1472D1F-A61L-0001-0094#A-LABEL.jpg', 'label'),
-        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/A61L-0001-0074 Fanuc CRT显示器.jpg', 'crt'),
-        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AE-接口.jpg', 'connector'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/0074-OLD.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0076-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0076-1.jpg', 'lcd_front'),
