@@ -263,20 +263,10 @@ MANUAL = {
         ('FANUC/0093/原CRT升级LCD模块.jpg', 'effect'),
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
     ],
-    'okuma-osp-crt-lcd-upgrade.html': [
-        ('Okuma 5000-5020/OKUMA 5020-3.jpg', 'lcd_front'),
-        ('Okuma 5000-5020/okuma.jpg', 'lcd_back'),
-        ('Okuma 5000-5020/1-1.jpg', 'crt'),
-    ],
     'okuma-osp5000-lcd-upgrade.html': [
         ('Okuma 5000-5020/OKUMA 5020-3.jpg', 'lcd_front'),
         ('Okuma 5000-5020/OKUMA 5020-9.jpg', 'lcd_back'),
         ('Okuma 5000-5020/2-1.jpg', 'label'),
-    ],
-    'okuma-osp5020-crt-lcd-upgrade.html': [
-        ('Okuma 5000-5020/OKUMA 5020-3.jpg', 'lcd_front'),
-        ('Okuma 5000-5020/OKUMA 5020-8.jpg', 'lcd_back'),
-        ('Okuma 5000-5020/OKUMA 5020-81.jpg', 'effect'),
     ],
     'okuma-osp5020-lcd-upgrade.html': [
         ('Okuma 5000-5020/OKUMA 5020-3.jpg', 'lcd_front'),
