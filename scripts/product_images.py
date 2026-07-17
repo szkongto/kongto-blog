@@ -304,7 +304,7 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
         'mitsubishi-mdt962b-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100-03.jpg', 'lcd_front'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶LCD正面测试效果.jpg', 'lcd_front'),
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/三菱显示器替换效果.jpg', 'effect'),
