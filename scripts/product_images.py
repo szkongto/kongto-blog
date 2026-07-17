@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 /product-images skill engine.
 Batch process all product images: 800x800 white canvas, rembg for lcd_front.
@@ -49,8 +49,8 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
     'fanuc-a61l-0001-0074-lcd-upgrade.html': [
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/Matsushita TX-1450ABA5-A61L-0001-0094#A-1.jpg', 'lcd_front'),
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AE-接口.jpg', 'connector'),
+        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
+        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
         ('FANUC/0074-0094/fanuc 替代效果.jpg', 'effect'),
     ],
     'fanuc-a61l-0001-0076-lcd-upgrade.html': [
@@ -68,9 +68,9 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
-    'fanuc-a61l-0001-0086-lcd-upgrade.html': [
+        'fanuc-a61l-0001-0086-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/A61L-0001-0086  monitor.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/IMG_20160927_171405.jpg', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/Matsushita - CRT TR-9DKYC-A61L-0001-0086.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0087-lcd-upgrade.html': [
@@ -84,9 +84,9 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/A61L-0001-0090-0M-CRT.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0092-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/Fanuc A61L-0001-0092/A61L-0001-0092 MDT947B-1A-1.JPG', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/Fanuc A61L-0001-0092/A61L-0001-0092 MDT947B-1A-2.JPG', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/Fanuc A61L-0001-0092/0092.jpg', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
+        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
     'fanuc-a61l-0001-0093-lcd-upgrade.html': [
         # User GIMP-processed image is already in /images/
@@ -124,10 +124,9 @@ MANUAL = {
         ('FANUC/A61L-0001-0116/A61L-0001-0116 LCD背面图.jpg', 'lcd_back'),
         ('FANUC/A61L-0001-0116/A61L-0001-0116 旧显示背面图1.png', 'crt'),
     ],
-    'fanuc-mdt947b-1a-lcd-upgrade.html': [
+        'fanuc-mdt947b-1a-lcd-upgrade.html': [
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092-1.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/Fanuc A61L-0001-0092/A61L-0001-0092 MDT947B-1A-1.JPG', 'crt'),
     ],
     'fanuc-om-d-display-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
@@ -135,8 +134,8 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
     'fanuc-tx-1424ab-lcd-upgrade.html': [
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AB5-PZRT-A61L-0001-0074#A-1.jpg', 'lcd_front'),
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AE-接口.jpg', 'connector'),
+        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
+        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
     'flickering-screen.html': [
@@ -284,15 +283,15 @@ MANUAL = {
     'mitsubishi-mdt947b-lcd-upgrade.html': [
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092-1.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/Fanuc A61L-0001-0092/A61L-0001-0092 MDT947B-1A-1.JPG', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
     'mitsubishi-mdt962b-lcd-upgrade.html': [
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/信号插头.jpg', 'connector'),
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/大森3i.jpg', 'label'),
     ],
-    'mitsubishi-tx-1450ab-lcd-upgrade.html': [
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AB5-PZRT-A61L-0001-0074#A-1.jpg', 'lcd_front'),
-        ('FANUC/Fanuc发那科A61L-001-0074A61L-0001-0094(V3版)/TX-1450AE-接口.jpg', 'connector'),
+        'mitsubishi-tx-1450ab-lcd-upgrade.html': [
+        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
+        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
     'no-display.html': [
@@ -371,10 +370,10 @@ MANUAL = {
         ('FANUC/0097/A61L-0001-0097 LCD背面照.jpg', 'lcd_back'),
         ('FANUC/0097/A61L-0001-0097 CRT.jpg', 'crt'),
     ],
-    'toshiba-d9mm-11a-lcd-upgrade.html': [
-        ('FANUC/0093/老CRT显示器/D9MM-11A.jpg', 'crt'),
-        ('FANUC/0093/最新款0093-V3.4 LCD/Fanuc oi-M D9MM-11A A61L-0001-0093.jpg', 'lcd_front'),
-        ('FANUC/0093/塘夏案例-上门安装效果/D9MM-11A-LED-02.jpg', 'effect'),
+        'toshiba-d9mm-11a-lcd-upgrade.html': [
+        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
+        ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
+        ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
     ],
 }
 
@@ -551,3 +550,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
