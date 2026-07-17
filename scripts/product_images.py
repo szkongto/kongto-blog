@@ -145,8 +145,9 @@ MANUAL = {
         ('Haas_哈斯/haas_9pin.jpg', 'crt'),
     ],
     'heidenhain-bc110-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/Heidenhain/a.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/Heidenhain/w.jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/Heidenhain/QQ20260718-074514.jpg', 'label'),
     ],
     'image-retention.html': [
         ('FANUC/0096/安装替换效果.jpg', 'effect'),
