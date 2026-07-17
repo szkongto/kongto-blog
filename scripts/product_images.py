@@ -36,8 +36,12 @@ MANUAL = {
     ],
     'fanuc-a02b-0099-c094-lcd-upgrade.html': [
         ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-01.jpg', 'lcd_front'),
-        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-02.jpg', 'lcd_back'),
+        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-04.jpg', 'lcd_back'),
         ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-03.jpg', 'crt'),
+        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-02.jpg', 'label'),
+        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-05.jpg', 'effect'),
+        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-06.jpg', 'connector'),
+        ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/FANUC SERIES O-PD.jpg', 'label'),
     ],
     'fanuc-a02b-0200-c071-lcd-upgrade.html': [
         ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
