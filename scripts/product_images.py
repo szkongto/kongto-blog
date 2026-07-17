@@ -48,9 +48,11 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
-    'fanuc-a61l-0001-0074-lcd-upgrade.html': [
+        'fanuc-a61l-0001-0074-lcd-upgrade.html': [
         ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
         ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/0074-OLD.jpg', 'crt'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/C14C-1472D1F-A61L-0001-0094#A-LABEL.jpg', 'label'),
         ('FANUC/0074-0094/fanuc 替代效果.jpg', 'effect'),
     ],
     'fanuc-a61l-0001-0076-lcd-upgrade.html': [
