@@ -209,7 +209,8 @@ MANUAL = {
         ('MAZAK马扎克-日立/C-5470NS/20160125112843.jpg', 'label'),
     ],
     'mitsubishi-kf-m7099h-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/Matsushita/1.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/Matsushita/0iM替代效果-0093-07.jpg', 'effect'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器-1.jpg', 'label'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
