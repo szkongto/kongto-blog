@@ -177,14 +177,6 @@ MANUAL = {
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
     ],
-    'heidenhain-be211-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
-    ],
-    'heidenhain-be411-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
-        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
-    ],
     'image-retention.html': [
         ('FANUC/0096/安装替换效果.jpg', 'effect'),
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
@@ -301,11 +293,6 @@ MANUAL = {
         ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
         ('SIM西门子/6FC3988-7FA20-PCB.jpg', 'lcd_back'),
     ],
-    'siemens-6fc3998-7fa20-lcd-upgrade.html': [
-        ('SIM西门子/SM西门子新版/6FC3998-7FA20 Siemens-SM0901 9 MONOCHROME 579417 TA.jpg', 'lcd_front'),
-        ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_TFT.jpg', 'lcd_back'),
-        ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_CRT.jpg', 'crt'),
-    ],
     'siemens-6fc5103-lcd-upgrade.html': [
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
         ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
@@ -315,11 +302,6 @@ MANUAL = {
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
         ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
         ('SIM西门子/SM1200 CRT BM.jpg', 'crt'),
-    ],
-    'siemens-8.4-inch-crt-lcd-upgrade.html': [
-        ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
-        ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
-        ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
     ],
     'siemens-sm0901-lcd-upgrade.html': [
         ('SIM西门子/SM西门子新版/Siemens-SM0901 579417TA-LCD.JPG', 'lcd_front'),
