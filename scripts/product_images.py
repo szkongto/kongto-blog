@@ -28,10 +28,11 @@ MANUAL = {
         ('FANUC/0096/A61L-0001-0096-crt.jpg', 'crt'),
         ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
     ],
-    'fanuc-a02b-0094-c022-lcd-upgrade.html': [
+        'fanuc-a02b-0094-c022-lcd-upgrade.html': [
+        ('FANUC/A02B-0094-C022/8DS_0099.JPG', 'lcd_front'),
         ('FANUC/A02B-0094-C022/Fanuc - CRT A02B-0094-C022-BACK.jpg', 'lcd_back'),
-        ('FANUC/A02B-0094-C022/Fanuc - CRT A02B-0094-C022.jpg', 'crt'),
         ('FANUC/A02B-0094-C022/Fanuc - CRT A02B-0094-C022-LABEL.jpg', 'label'),
+        ('FANUC/A02B-0094-C022/Fanuc - CRT A02B-0094-C022.jpg', 'crt'),
     ],
     'fanuc-a02b-0099-c094-lcd-upgrade.html': [
         ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/A02B-01.jpg', 'lcd_front'),
