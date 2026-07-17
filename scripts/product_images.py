@@ -33,9 +33,11 @@ MANUAL = {
         ('FANUC/FANUC Series O-P A02B-0099-C094-PBM单绿色/FANUC SERIES O-PD.jpg', 'label'),
     ],
     'fanuc-a02b-0200-c071-lcd-upgrade.html': [
-        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
-        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
-        ('FANUC/0074-0094/fanuc 替代效果.jpg', 'effect'),
+        ('FANUC/A02B-0200-C071-网上找的型号/s-l1600 (1).webp', 'lcd_front'),
+        ('FANUC/A02B-0200-C071-网上找的型号/8DS_0102.JPG', 'lcd_back'),
+        ('FANUC/A02B-0200-C071-网上找的型号/s-l1600 (2).webp', 'effect'),
+        ('FANUC/A02B-0200-C071-网上找的型号/s-l1600 (5).webp', 'crt'),
+        ('FANUC/A02B-0200-C071-网上找的型号/QQ图片20171020111048.jpg', 'label'),
     ],
     'fanuc-a61l-0001-0072-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0092-0086-0076-BM.jpg', 'lcd_front'),
