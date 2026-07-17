@@ -253,29 +253,37 @@ MANUAL = {
     ],
     'siemens-6fc3988-7fa20-lcd-upgrade.html': [
         ('SIM西门子/6FC3988-7FA20-PIC.jpg', 'lcd_front'),
-        ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
         ('SIM西门子/6FC3988-7FA20-PCB.jpg', 'lcd_back'),
+        ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
+        ('SIM西门子/西门子SINUMERIK 6FC3988-7FA20显示器.jpg', 'label'),
+        ('SIM西门子/SINUMERIK 6FC3988-7FA20 monitor.jpg', 'effect'),
+        ('SIM西门子/6FC3988-7FA20-16PIN.jpg', 'connector'),
     ],
     'siemens-6fc5103-lcd-upgrade.html': [
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
         ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
         ('SIM西门子/SM1200 CRT.jpg', 'crt'),
+        ('SIM西门子/西门子9单色效果.jpg', 'effect'),
     ],
     'siemens-6fc5203-lcd-upgrade.html': [
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
         ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
         ('SIM西门子/SM1200 CRT BM.jpg', 'crt'),
+        ('SIM西门子/西门子9单色效果.jpg', 'effect'),
     ],
     'siemens-sm0901-lcd-upgrade.html': [
         ('SIM西门子/SM西门子新版/Siemens-SM0901 579417TA-LCD.JPG', 'lcd_front'),
         ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_01.jpg', 'lcd_back'),
         ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_CRT.jpg', 'crt'),
         ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_install.jpg', 'effect'),
+        ('SIM西门子/西门子9单色效果.jpg', 'label'),
     ],
     'siemens-sm1200-lcd-upgrade.html': [
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
         ('SIM西门子/Siemens-SM1200 LCD.JPG', 'lcd_back'),
         ('SIM西门子/SM1200 CRT.jpg', 'crt'),
+        ('SIM西门子/SM1200 CRT BM.jpg', 'effect'),
+        ('SIM西门子/西门子9“单色参数.jpg', 'label'),
     ],
     'toshiba-d14cm-01a-lcd-upgrade.html': [
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
