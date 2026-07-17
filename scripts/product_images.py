@@ -258,9 +258,11 @@ MANUAL = {
         ('MAZAK马扎克-日立/CDM1472D1M/1472-02.jpg', 'lcd_back'),
     ],
         'mitsubishi-bm09df-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/MITSUBISHE FCU6-DSE71-1.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/信号插头.jpg', 'connector'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100_2.jpg', 'lcd_front'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/BM09DF-11.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/替代效果正面.jpg', 'effect'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/三菱信号连接线.jpg', 'connector'),
     ],
     'mitsubishi-c3470-crt-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
@@ -274,9 +276,11 @@ MANUAL = {
         ('MAZAK马扎克-日立/C-5470NS/20160125112843.jpg', 'label'),
     ],
         'mitsubishi-fcua-ct100-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/MITSUBISHE FCU6-DSE71-1.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/信号插头.jpg', 'connector'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100-04.jpg', 'lcd_front'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/FCUA-CT1001.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/MDT962B-1A_BM09DF_FCUA-CT100-01.jpg', 'effect'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/FCUA-CT100.jpg', 'label'),
     ],
     'mitsubishi-kf-m7099h-lcd-upgrade.html': [
         ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
@@ -300,9 +304,11 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
         'mitsubishi-mdt962b-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/MITSUBISHE FCU6-DSE71-1.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/信号插头.jpg', 'connector'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100-03.jpg', 'lcd_front'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/三菱显示器替换效果.jpg', 'effect'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A-LABEL.jpg', 'label'),
     ],
         'mitsubishi-tx-1450ab-lcd-upgrade.html': [
         ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
