@@ -423,8 +423,13 @@ def process_image(src_path, dst_path, use_rembg=False):
     if use_rembg:
         try:
             from rembg import remove, new_session
-            # Resize to 1200x900 first for better rembg performance
-            im_small = im.resize((1200, 900), Image.LANCZOS)
+            # Resize to max 1200px on longest side (preserve aspect ratio)
+            max_dim = 1200
+            r = min(max_dim / im.width, max_dim / im.height)
+            if r < 1:
+                im_small = im.resize((int(im.width * r), int(im.height * r)), Image.LANCZOS)
+            else:
+                im_small = im.copy()
             session = new_session('u2net')
             im = remove(im_small, session=session,
                        alpha_matting=True,
