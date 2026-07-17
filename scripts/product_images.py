@@ -105,10 +105,12 @@ MANUAL = {
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/C14C-1472D1F-A61L-0001-0094#A-LABEL.jpg', 'label'),
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/0074-OLD.jpg', 'crt'),
     ],
-    'fanuc-a61l-0001-0095-lcd-upgrade.html': [
-        ('FANUC/0095/A61L-0001-0095 3.jpg', 'lcd_front'),
-        ('FANUC/0095/0095-d9cm-01a.jpg', 'lcd_back'),
-        ('FANUC/0095/20140917095210.jpg', 'crt'),
+        'fanuc-a61l-0001-0095-lcd-upgrade.html': [
+        ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/FANUC A61L-0001-0095 V3.4-01.jpg', 'lcd_front'),
+        ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/FANUC A61L-0001-0095 V3.4-02.jpg', 'lcd_back'),
+        ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/Fanuc-CRT A61L-0001-0095-LABEL.jpg', 'label'),
+        ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/Fanuc-CRT A61L-0001-0095.jpg', 'crt'),
+        ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/FANUC A61L-0001-0095 V3.4-03.jpg', 'effect'),
     ],
     'fanuc-a61l-0001-0096-lcd-upgrade.html': [
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
