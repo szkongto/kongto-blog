@@ -44,7 +44,7 @@ MANUAL = {
         ('FANUC/0074-0094/fanuc 替代效果.jpg', 'effect'),
     ],
     'fanuc-a61l-0001-0072-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0092-0086-0076-BM.jpg', 'lcd_front'),
         ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
@@ -57,9 +57,9 @@ MANUAL = {
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/0074-OLD.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0076-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0076-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0076-3.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0072-3.jpg', 'lcd_front'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0072.jpg', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/Matsushita - CRT  TR-9DK1A-A61L-0001-0072.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0077-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
@@ -72,13 +72,13 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
         'fanuc-a61l-0001-0086-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/A61L-0001-0086  monitor.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/Matsushita - CRT TR-9DKYC-A61L-0001-0086.jpg', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0086.jpg', 'lcd_front'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/MATSUSHITA 0086-CRT.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0087-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/A61L-0001-0086  monitor.jpg', 'label'),
     ],
     'fanuc-a61l-0001-0090-lcd-upgrade.html': [
@@ -88,8 +88,8 @@ MANUAL = {
     ],
     'fanuc-a61l-0001-0092-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/76.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
+        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/QQ图片20190910164309.jpg', 'crt'),
     ],
     'fanuc-a61l-0001-0093-lcd-upgrade.html': [
         # User GIMP-processed image is already in /images/
