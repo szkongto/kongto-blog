@@ -1,654 +1,5232 @@
-<!DOCTYPE html>
-
-<html lang="zh-CN">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ | 江图科技</title>
-
-    <meta name="description" content="FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ汇总。亮度衰减、黑屏、聚焦不良等问题的原因分析，LCD升级前后对比，兼容性与安装常见疑问解答。">
-
-    <meta name="keywords" content="FANUC A61L-0001-0093, A61L-0001-0093 LCD升级, FANUC 9英寸CRT替代, 发那科显示器改装, CNC显示器维修, 工业液晶改造">
-
-    <meta name="author" content="江图科技">
-
-    <link rel="canonical" href="https://cncdisplay.com/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
-
-    <!-- Open Graph -->
-
-    <meta property="og:type" content="article">
-
-    <meta property="og:title" content="FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ">
-
-    <meta property="og:description" content="FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ。亮度衰减、黑屏、聚焦不良等问题分析，LCD升级前后对比。">
-
-    <meta property="og:url" content="https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
-
-    <meta property="og:site_name" content="深圳市江图科技有限公司">
-
-    <meta property="article:published_time" content="2026-05-03">
-
-    <meta property="article:author" content="江图科技">
-
-    <!-- Twitter Card -->
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ">
-
-    <meta name="twitter:description" content="FANUC A61L-0001-0093 9英寸CRT常见故障诊断与LCD升级FAQ。亮度衰减、黑屏、聚焦不良等问题原因分析与解决方案。">
-
-    <link rel="stylesheet" href="/css/style.css?v=7">
-
-    <!-- Structured Data -->
-
-    <script type="application/ld+json">
-
-    {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ",
-  "description": "FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ汇总",
-  "image": "https://cncdisplay.com/images/A6100010093_LCD_new_2.jpg",
-  "author": { "@id": "https://cncdisplay.com/#tech-team" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "深圳市江图科技有限公司",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://cncdisplay.com/zh/images/logo.png"
-    }
-  },
-  "datePublished": "2026-05-03",
-  "dateModified": "2026-05-15"
-}
-
-    </script>
-
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
-
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
-
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
-
-    <meta name="geo.region" content="CN-44">
-
-    <meta name="geo.placename" content="深圳龙岗">
-
-    <meta name="geo.position" content="22.6568;113.9899">
-
-    <meta name="ICBM" content="22.6568, 113.9899">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://cncdisplay.com/#organization",
-  "name": "深圳市江图科技有限公司",
-  "alternateName": "Kongto Technology",
-  "url": "https://cncdisplay.com",
-  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
-  "image": "/images/logo.png",
-  "telephone": "+86-13686889647",
-  "email": "info@cncdisplay.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
-    "addressLocality": "深圳",
-    "addressRegion": "广东",
-    "postalCode": "518000",
-    "addressCountry": "CN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 22.6568,
-    "longitude": 113.9899
-  },
-  "areaServed": [
-    "CN",
-    "US",
-    "DE",
-    "JP",
-    "KR",
-    "SG",
-    "IN",
-    "GB",
-    "FR",
-    "IT"
-  ],
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "sameAs": [
-    "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto"
-  ]
-}
-
-</script>
-
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://cncdisplay.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "FANUC A61L-0001-0093 LCD升级替代方案 | 9英寸CRT改液晶实战 | 江图科技",
-      "item": "https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html"
-    }
-  ]
-}
-
-</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
-
-</head>
-
-<body>    <header>
-        <nav>
-            <a href="/" class="logo">江图科技</a>
-            <div class="nav-links">
-                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/products/">产品</a>
-                <a href="/zh/posts/">文章</a>
-                <a href="/zh/case-studies.html">案例</a>
-                <a href="/zh/docs/">下载</a>
-                <a href="/zh/about.html">关于</a>
-                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">获取报价</a>
-            </div>
-            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
-            <div class="lang-switch">
-                <a href="/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <article class="post">
-
-            <h1>FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ</h1>
-
-            <div style="background:#fff8e1;padding:0.75rem 1rem;border-radius:8px;margin:1rem 0;border-left:4px solid #FF6600;font-size:0.95rem;">
-                <strong>产品页：</strong> <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" style="color:#2563eb;font-weight:600;">FANUC A61L-0001-0093 LCD升级显示器 ($155)</a> — 9英寸CRT转TFT-LCD即插即用方案，2年质保。
-            </div>
-
-            <p class="ai-summary" style="background:#f0f7ff;color:#1d1d1f;padding:1rem 1.25rem;border-radius:8px;margin:1rem 0;font-size:0.95rem;line-height:1.6;border-left:4px solid #2563eb;"><strong>摘要：</strong>本文汇总FANUC A61L-0001-0093（含D9MM-11A）9英寸单色CRT显示器的常见故障诊断方法与LCD升级常见问题。涵盖亮度衰减、黑屏、聚焦不良等典型故障的原因分析与排查建议，以及LCD升级方案的技术参数、兼容性、安装疑问解答。</p>
-
-            <div class="meta">
-
-                <time datetime="2026-05-03">发布：2026-05-03</time>
-
-                <time datetime="2026-05-15">更新：2026-05-15</time>
-
-                <span class="author">作者：江图科技技术部</span>
-
-            </div>
-
-            <!-- 图1：原装CRT整机实拍 -->
-
-            <figure class="article-figure img-hero">
-
-                <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_CRT_old_2.webp" alt="FANUC A61L-0001-0093 原装CRT显示器" loading="lazy"><figcaption>图1：FANUC A61L-0001-0093 原装9英寸单色CRT显示器（使用8-10年后典型老化状态）</figcaption>
-
-            </figure>
-
-            <div class="content">
-
-                <h2>一、设备现状与原厂参数</h2>
-
-                <p>FANUC A61L-0001-0093 是发那科数控系统中广泛使用的<strong>9英寸单色CRT显示器</strong>，主要配套FANUC 0系列、0i系列及OM-D等数控系统。该显示器采用阴极射线管技术，设计寿命约15000小时（3班倒运行约3-5年）。</p>
-
-                <h3>原厂CRT核心参数</h3>
-
-                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-                    <tr>
-
-                        <th>项目</th>
-
-                        <th>参数</th>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>型号</td>
-
-                        <td>A61L-0001-0093</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>显示技术</td>
-
-                        <td>9英寸单色CRT（阴极射线管）</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>显示颜色</td>
-
-                        <td>绿色/琥珀色单色</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>分辨率</td>
-
-                        <td>640×400像素</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>信号接口</td>
-
-                        <td>HONDA 20针</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>电源输入</td>
-
-                        <td>DC 24V（来自CNC主机）</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>功耗</td>
-
-                        <td>25-30W</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>工作温度</td>
-
-                        <td>0~40°C</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>安装尺寸</td>
-
-                        <td>标准9英寸CRT安装孔位</td>
-
-                    </tr>
-
-                </table></div>
-
-                <h3>老化常见故障痛点</h3>
-
-                <p>使用5年以上设备普遍出现以下问题：</p>
-
-                <ul>
-
-                    <li><strong>亮度衰减</strong>：阴极射线管老化导致亮度下降50%以上，白天看不清屏幕</li>
-
-                    <li><strong>聚焦不良</strong>：字符边缘模糊、变形，编程时易看错参数</li>
-
-                    <li><strong>闪烁抖动</strong>：高压电路老化引起画面不稳定，长时间操作易疲劳</li>
-
-                    <li><strong>高压安全隐患</strong>：CRT内部高压包（阳极高压约10-15kV）存在触电风险</li>
-
-                    <li><strong>完全黑屏</strong>：灯丝烧断或高压包损坏，导致设备无法运行</li>
-
-                </ul>
-
-                <h2>二、LCD替代方案</h2>
-
-                <p>江图科技提供<strong>A61L-0001-0093专用LCD液晶升级模块</strong>，采用工业级TFT-LCD显示屏，完美替代原装CRT。</p>
-
-                <!-- 图2：LCD液晶显示屏正面 -->
-
-                <figure class="article-figure img-detail">
-
-                    <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_LCD_new_2.webp" alt="A61L-0001-0093 LCD升级模块正面" loading="lazy"><figcaption>图2：A61L-0001-0093专用LCD升级模块（工业级TFT液晶屏）</figcaption>
-
-                </figure>
-
-                <h3>技术优势对比</h3>
-
-                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-                    <tr>
-
-                        <th>对比项</th>
-
-                        <th>原装CRT</th>
-
-                        <th>江图LCD升级</th>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>显示技术</td>
-
-                        <td>阴极射线管（已淘汰）</td>
-
-                        <td>TFT-LCD工业屏</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>分辨率</td>
-
-                        <td>640×400</td>
-
-                        <td>800×600（更高清）</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>亮度</td>
-
-                        <td>200cd/m²（新机）</td>
-
-                        <td>350-450cd/m²</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>使用寿命</td>
-
-                        <td>15000小时</td>
-
-                        <td>50000+小时</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>功耗</td>
-
-                        <td>25-30W</td>
-
-                        <td>8-12W</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>工作温度</td>
-
-                        <td>0~40°C</td>
-
-                        <td>-10~+60°C</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>安全性</td>
-
-                        <td>高压危险（10-15kV）</td>
-
-                        <td>低压安全（DC 24V）</td>
-
-                    </tr>
-
-                </table></div>
-
-                <!-- 图3：LCD背面接口 -->
-
-                <figure class="article-figure img-detail">
-
-                    <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_LCD_back_3.webp" alt="A61L-0001-0093 LCD升级模块背面接口" loading="lazy"><figcaption>图3：LCD升级模块背面接口（HONDA 20针信号口 + DC 24V电源口）</figcaption>
-
-                </figure>
-
-                <h3>关键设计要点</h3>
-
-                <ul>
-
-                    <li><strong>信号接口完全兼容</strong>：采用原装HONDA 20针接口，直接对接CNC主板，无需改接线</li>
-
-                    <li><strong>安装尺寸一致</strong>：外壳尺寸与原CRT 100%匹配，原安装孔位直接固定</li>
-
-                    <li><strong>电源自适应</strong>：内置DC-DC转换器，直接使用机床原有DC 24V供电</li>
-
-                    <li><strong>OSD菜单调节</strong>：支持亮度、对比度、画面位置、自动关屏时间等参数调整</li>
-
-                    <li><strong>宽电压输入</strong>：支持DC 12V-24V自适应，兼容不同机型电源波动</li>
-
-                </ul>
-
-                <h2>三、系统兼容性</h2>
-
-                <p>本LCD升级方案适用于以下FANUC数控系统：</p>
-
-                <ul>
-
-                    <li>FANUC Series 0 / 0-Mate / 0-TMate</li>
-
-                    <li>FANUC Series 0i-A / 0i-B / 0i-C / 0i-D</li>
-
-                    <li>FANUC Series 16i / 18i / 21i</li>
-
-                    <li>FANUC OM-D / OM-C 数控装置</li>
-
-                    <li>配套A61L-0001-0093显示器的所有CNC机床（加工中心、车床、铣床、磨床等）</li>
-
-                </ul>
-
-                <h2>四、常见问题FAQ</h2>
-
-                <h3>Q1: A61L-0001-0093 CRT显示器老化到什么程度需要更换？</h3>
-                <p>当屏幕亮度显著下降（白天看不清）、字符边缘模糊不清晰、画面出现持续性闪烁抖动，或者完全黑屏无显示时，建议立即更换。CRT平均设计寿命约15000小时（约3-5年三班倒运行），超过年限后故障率大幅上升，且高压包老化存在安全风险。</p>
-
-                <h3>Q2: LCD升级模块是否兼容我的FANUC系统？</h3>
-                <p>江图科技KTO-F0093模块兼容FANUC 0系列、0i-A/B/C/D系列、16i/18i/21i系列以及OM-D/OM-C数控系统。只要原机床使用的是A61L-0001-0093 CRT显示器（HONDA 20针接口 + DC 24V供电），即可直接替换使用，无需额外适配。</p>
-
-                <h3>Q3: LCD升级后需要修改CNC参数或重新校准吗？</h3>
-                <p><strong>完全不需要。</strong>LCD模块采用与原CRT完全一致的信号接口定义和电气参数，CNC系统端无需任何参数修改、无需重新校准坐标系，不影响加工精度。即插即用，30分钟完成安装。</p>
-
-                <h3>Q4: LCD比原CRT亮多少？能适应强光环境吗？</h3>
-                <p>原装CRT新机亮度约200cd/m²，老化后严重衰减。江图LCD模块采用工业级TFT-LCD面板，亮度350-450cd/m²，是CRT老机亮度的3-4倍。即使在车间强光环境下（如靠近窗户、日光灯直射），屏幕内容依然清晰可读。</p>
-
-                <h3>Q5: LCD升级模块的功耗和散热情况如何？</h3>
-                <p>原CRT功耗25-30W，LCD模块仅8-12W，降低约60%。更低的功耗意味着更少的发热量，可有效减少电气柜散热负担，延长周边电子元件寿命。LCD模块工作温度范围-10~+60°C，适应各类工业环境。</p>
-
-                <h3>Q6: LCD模块的质保期是多久？出现故障如何处理？</h3>
-                <p>提供<strong>2年免费质保</strong>（行业最长），非人为损坏免费换新。终身免费电话和远程视频指导，2年质保。如遇质量问题，联系客服后即可安排换新。</p>
-
-                <h3>Q7: 安装需要多长时间？需要专业技术人员吗？</h3>
-                <p>平均安装时间约30分钟，仅需一把十字螺丝刀。操作步骤包括：断电→拆卸旧CRT→固定LCD模块→连接线缆→通电调试。无需专业电工或CNC工程师，普通操作工按指导即可完成。详细安装步骤请参考我们的<a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">分步实操安装指南</a>。</p>
-
-                <h3>Q8: 升级后日常如何维护？</h3>
-                <p>每6个月检查信号线接头是否松动；保持电气柜通风良好；通过LCD面板OSD菜单调节亮度和对比度至舒适水平；如显示异常，优先检查HONDA 20针接口是否氧化。</p>
-
-                <h2>五、质保与服务</h2>
-
-                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
-
-                    <tr>
-
-                        <th>服务项目</th>
-
-                        <th>内容</th>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>质保期</td>
-
-                        <td>2年免费质保（行业最长）</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>技术支持</td>
-
-                        <td>终身免费电话/远程指导</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>退换政策</td>
-
-                        <td>2年质保，不满意全额退款</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>物流</td>
-
-                        <td>全国包邮，顺丰次日达</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>资料支持</td>
-
-                        <td>免费提供安装视频和图文指南</td>
-
-                    </tr>
-
-                </table></div>
-
-                <h2>六、相关文章</h2>
-
-                <ul>
-
-                    <li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操安装指南</a></li>
-
-                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸CRT显示器LCD升级指南</a></li>
-
-                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 松下CRT显示器替代方案</a></li>
-
-                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 9英寸单色显示器升级实战</a></li>
-
-                </ul>
-
-                <h2>联系我们</h2>
-
-                <p><strong>深圳市江图科技有限公司</strong></p>
-
-                <ul>
-
-                    <li>📧 邮箱：<a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a></li>
-
-                    <li>📞 电话：13686889647</li>
-
-                    <li>🌐 官网：<a href="https://cncdisplay.com">cncdisplay.com</a></li>
-
-                </ul>
-
-                <p>专业的事交给专业团队。已为超过500家企业完成FANUC显示器升级，99%客户满意度。</p>
-
-            </div>
-
-        </article>
-
-<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
-    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Fanuc A61L 0001 0093 solution</strong></p>
-    <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
-</div>
-</main>    
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
-                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">江图科技 Kongto Technology</span>
-                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
-            </div>
-            <div class="footer-links">
-                <a href="/zh/posts/">📄 技术文章</a>
-                <a href="/zh/brands/FANUC.html">FANUC方案</a>
-                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
-                <a href="/zh/brands/Siemens.html">西门子方案</a>
-                <a href="/zh/docs/">资料下载</a>
-                <a href="/zh/about.html">关于我们</a>
-                <a href="/zh/privacy.html">隐私政策</a>
-                <a href="/zh/terms.html">服务条款</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/zh/glossary.html">术语表</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
-                <a href="/zh/comparison-tool.html">对比工具</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
-                <a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/privacy.html">隐私</a>
-                <a href="/zh/terms.html">条款</a>
-                <a href="/zh/sitemap.xml">站点地图</a>
-            </div>
-    </footer>
-
-    <script>
-
-    (function(){
-
-        var bp = document.createElement('script');
-
-        var curProtocol = window.location.protocol.split(':')[0];
-
-        if (curProtocol === 'https') {
-
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-
-        } else {
-
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-
-        }
-
-        var s = document.getElementsByTagName("script")[0];
-
-        s.parentNode.insertBefore(bp, s);
-
-    })();
-
-    </script>
-
-</body>
-
-</html>
-
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <title>FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ | 江图科技</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="description" content="FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ汇总。亮度衰减、黑屏、聚焦不良等问题的原因分析，LCD升级前后对比，兼容性与安装常见疑问解答。">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="keywords" content="FANUC A61L-0001-0093, A61L-0001-0093 LCD升级, FANUC 9英寸CRT替代, 发那科显示器改装, CNC显示器维修, 工业液晶改造">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="author" content="江图科技">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="canonical" href="https://cncdisplay.com/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Open Graph -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="og:type" content="article">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="og:title" content="FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="og:description" content="FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ。亮度衰减、黑屏、聚焦不良等问题分析，LCD升级前后对比。">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="og:url" content="https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="og:site_name" content="深圳市江图科技有限公司">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2026-05-03">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta property="article:author" content="江图科技">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Twitter Card -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="twitter:title" content="FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="twitter:description" content="FANUC A61L-0001-0093 9英寸CRT常见故障诊断与LCD升级FAQ。亮度衰减、黑屏、聚焦不良等问题原因分析与解决方案。">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Structured Data -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "TechArticle",
+
+
+
+
+
+
+
+  "headline": "FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ",
+
+
+
+
+
+
+
+  "description": "FANUC A61L-0001-0093 9英寸CRT显示器常见故障诊断与LCD升级FAQ汇总",
+
+
+
+
+
+
+
+  "image": "https://cncdisplay.com/images/A6100010093_LCD_new_2.jpg",
+
+
+
+
+
+
+
+  "author": { "@id": "https://cncdisplay.com/#tech-team" },
+
+
+
+
+
+
+
+  "publisher": {
+
+
+
+
+
+
+
+    "@type": "Organization",
+
+
+
+
+
+
+
+    "name": "深圳市江图科技有限公司",
+
+
+
+
+
+
+
+    "logo": {
+
+
+
+
+
+
+
+      "@type": "ImageObject",
+
+
+
+
+
+
+
+      "url": "https://cncdisplay.com/zh/images/logo.png"
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "datePublished": "2026-05-03",
+
+
+
+
+
+
+
+  "dateModified": "2026-05-15"
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="geo.region" content="CN-44">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="geo.placename" content="深圳龙岗">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="geo.position" content="22.6568;113.9899">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="ICBM" content="22.6568, 113.9899">
+
+
+
+
+
+
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "LocalBusiness",
+
+
+
+
+
+
+
+  "@id": "https://cncdisplay.com/#organization",
+
+
+
+
+
+
+
+  "name": "深圳市江图科技有限公司",
+
+
+
+
+
+
+
+  "alternateName": "Kongto Technology",
+
+
+
+
+
+
+
+  "url": "https://cncdisplay.com",
+
+
+
+
+
+
+
+  "description": "专注工业视频显示升级方案，CNC显示器CRT转LCD升级专家",
+
+
+
+
+
+
+
+  "image": "/images/logo.png",
+
+
+
+
+
+
+
+  "telephone": "+86-13686889647",
+
+
+
+
+
+
+
+  "email": "info@cncdisplay.com",
+
+
+
+
+
+
+
+  "address": {
+
+
+
+
+
+
+
+    "@type": "PostalAddress",
+
+
+
+
+
+
+
+    "streetAddress": "龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+
+
+
+
+
+
+
+    "addressLocality": "深圳",
+
+
+
+
+
+
+
+    "addressRegion": "广东",
+
+
+
+
+
+
+
+    "postalCode": "518000",
+
+
+
+
+
+
+
+    "addressCountry": "CN"
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "geo": {
+
+
+
+
+
+
+
+    "@type": "GeoCoordinates",
+
+
+
+
+
+
+
+    "latitude": 22.6568,
+
+
+
+
+
+
+
+    "longitude": 113.9899
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "areaServed": [
+
+
+
+
+
+
+
+    "CN",
+
+
+
+
+
+
+
+    "US",
+
+
+
+
+
+
+
+    "DE",
+
+
+
+
+
+
+
+    "JP",
+
+
+
+
+
+
+
+    "KR",
+
+
+
+
+
+
+
+    "SG",
+
+
+
+
+
+
+
+    "IN",
+
+
+
+
+
+
+
+    "GB",
+
+
+
+
+
+
+
+    "FR",
+
+
+
+
+
+
+
+    "IT"
+
+
+
+
+
+
+
+  ],
+
+
+
+
+
+
+
+  "priceRange": "$$",
+
+
+
+
+
+
+
+  "openingHours": "Mo-Fr 09:00-18:00",
+
+
+
+
+
+
+
+  "sameAs": [
+
+
+
+
+
+
+
+    "https://github.com/szkongto",
+
+
+
+
+
+
+
+    "https://blog.csdn.net/szkongto"
+
+
+
+
+
+
+
+  ]
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "BreadcrumbList",
+
+
+
+
+
+
+
+  "itemListElement": [
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+      "@type": "ListItem",
+
+
+
+
+
+
+
+      "position": 1,
+
+
+
+
+
+
+
+      "name": "首页",
+
+
+
+
+
+
+
+      "item": "https://cncdisplay.com/"
+
+
+
+
+
+
+
+    },
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+      "@type": "ListItem",
+
+
+
+
+
+
+
+      "position": 2,
+
+
+
+
+
+
+
+      "name": "FANUC A61L-0001-0093 LCD升级替代方案 | 9英寸CRT改液晶实战 | 江图科技",
+
+
+
+
+
+
+
+      "item": "https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html"
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+  ]
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>    <!-- Clarity tracking code for https://cncdisplay.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "wx8gkt3utu");</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>    <header>
+
+
+
+
+
+
+
+        <nav>
+
+
+
+
+
+
+
+            <a href="/" class="logo">江图科技</a>
+
+
+
+
+
+
+
+            <div class="nav-links">
+
+
+
+
+
+
+
+                <a href="/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+
+
+
+
+
+
+
+                <a href="/zh/products/">产品</a>
+
+
+
+
+
+
+
+                <a href="/zh/posts/">文章</a>
+
+
+
+
+
+
+
+                <a href="/zh/case-studies.html">案例</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">下载</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">关于</a>
+
+
+
+
+
+
+
+                <a href="/zh/contact.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
+
+
+
+
+
+
+
+            <div class="lang-switch">
+
+
+
+
+
+
+
+                <a href="/zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html" lang="zh" class="lang-zh">中文</a>
+
+
+
+
+
+
+
+                <span class="divider">|</span>
+
+
+
+
+
+
+
+                <a href="/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html" lang="en" class="lang-en">English</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <article class="post">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1>FANUC A61L-0001-0093 CRT故障诊断与LCD升级常见问题FAQ</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div style="background:#fff8e1;padding:0.75rem 1rem;border-radius:8px;margin:1rem 0;border-left:4px solid #FF6600;font-size:0.95rem;">
+
+
+
+
+
+
+
+                <strong>产品页：</strong> <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" style="color:#2563eb;font-weight:600;">FANUC A61L-0001-0093 LCD升级显示器 ($155)</a> — 9英寸CRT转TFT-LCD即插即用方案，2年质保。
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <p class="ai-summary" style="background:#f0f7ff;color:#1d1d1f;padding:1rem 1.25rem;border-radius:8px;margin:1rem 0;font-size:0.95rem;line-height:1.6;border-left:4px solid #2563eb;"><strong>摘要：</strong>本文汇总FANUC A61L-0001-0093（含D9MM-11A）9英寸单色CRT显示器的常见故障诊断方法与LCD升级常见问题。涵盖亮度衰减、黑屏、聚焦不良等典型故障的原因分析与排查建议，以及LCD升级方案的技术参数、兼容性、安装疑问解答。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <time datetime="2026-05-03">发布：2026-05-03</time>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <time datetime="2026-05-15">更新：2026-05-15</time>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <span class="author">作者：江图科技技术部</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 图1：原装CRT整机实拍 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <figure class="article-figure img-hero">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_CRT_old_2.webp" alt="FANUC A61L-0001-0093 原装CRT显示器" loading="lazy"><figcaption>图1：FANUC A61L-0001-0093 原装9英寸单色CRT显示器（使用8-10年后典型老化状态）</figcaption>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>一、设备现状与原厂参数</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>FANUC A61L-0001-0093 是发那科数控系统中广泛使用的<strong>9英寸单色CRT显示器</strong>，主要配套FANUC 0系列、0i系列及OM-D等数控系统。该显示器采用阴极射线管技术，设计寿命约15000小时（3班倒运行约3-5年）。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>原厂CRT核心参数</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>项目</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>参数</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>型号</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>A61L-0001-0093</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>显示技术</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>9英寸单色CRT（阴极射线管）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>显示颜色</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>绿色/琥珀色单色</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>分辨率</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>640×400像素</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>信号接口</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>HONDA 20针</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>电源输入</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>DC 24V（来自CNC主机）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>功耗</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>25-30W</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>工作温度</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>0~40°C</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>安装尺寸</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>标准9英寸CRT安装孔位</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>老化常见故障痛点</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>使用5年以上设备普遍出现以下问题：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>亮度衰减</strong>：阴极射线管老化导致亮度下降50%以上，白天看不清屏幕</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>聚焦不良</strong>：字符边缘模糊、变形，编程时易看错参数</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>闪烁抖动</strong>：高压电路老化引起画面不稳定，长时间操作易疲劳</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>高压安全隐患</strong>：CRT内部高压包（阳极高压约10-15kV）存在触电风险</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>完全黑屏</strong>：灯丝烧断或高压包损坏，导致设备无法运行</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>二、LCD替代方案</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>江图科技提供<strong>A61L-0001-0093专用LCD液晶升级模块</strong>，采用工业级TFT-LCD显示屏，完美替代原装CRT。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- 图2：LCD液晶显示屏正面 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <figure class="article-figure img-detail">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_LCD_new_2.webp" alt="A61L-0001-0093 LCD升级模块正面" loading="lazy"><figcaption>图2：A61L-0001-0093专用LCD升级模块（工业级TFT液晶屏）</figcaption>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>技术优势对比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>对比项</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>原装CRT</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>江图LCD升级</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>显示技术</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>阴极射线管（已淘汰）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>TFT-LCD工业屏</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>分辨率</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>640×400</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>800×600（更高清）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>亮度</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>200cd/m²（新机）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>350-450cd/m²</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>使用寿命</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>15000小时</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>50000+小时</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>功耗</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>25-30W</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>8-12W</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>工作温度</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>0~40°C</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>-10~+60°C</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>安全性</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>高压危险（10-15kV）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>低压安全（DC 24V）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- 图3：LCD背面接口 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <figure class="article-figure img-detail">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <img width="400" height="300" style="max-width:100%; height:auto; display:block; margin:20px auto;" src="/images/A6100010093_LCD_back_3.webp" alt="A61L-0001-0093 LCD升级模块背面接口" loading="lazy"><figcaption>图3：LCD升级模块背面接口（HONDA 20针信号口 + DC 24V电源口）</figcaption>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>关键设计要点</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>信号接口完全兼容</strong>：采用原装HONDA 20针接口，直接对接CNC主板，无需改接线</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>安装尺寸一致</strong>：外壳尺寸与原CRT 100%匹配，原安装孔位直接固定</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>电源自适应</strong>：内置DC-DC转换器，直接使用机床原有DC 24V供电</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>OSD菜单调节</strong>：支持亮度、对比度、画面位置、自动关屏时间等参数调整</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><strong>宽电压输入</strong>：支持DC 12V-24V自适应，兼容不同机型电源波动</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>三、系统兼容性</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>本LCD升级方案适用于以下FANUC数控系统：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>FANUC Series 0 / 0-Mate / 0-TMate</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>FANUC Series 0i-A / 0i-B / 0i-C / 0i-D</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>FANUC Series 16i / 18i / 21i</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>FANUC OM-D / OM-C 数控装置</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>配套A61L-0001-0093显示器的所有CNC机床（加工中心、车床、铣床、磨床等）</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>四、常见问题FAQ</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q1: A61L-0001-0093 CRT显示器老化到什么程度需要更换？</h3>
+
+
+
+
+
+
+
+                <p>当屏幕亮度显著下降（白天看不清）、字符边缘模糊不清晰、画面出现持续性闪烁抖动，或者完全黑屏无显示时，建议立即更换。CRT平均设计寿命约15000小时（约3-5年三班倒运行），超过年限后故障率大幅上升，且高压包老化存在安全风险。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q2: LCD升级模块是否兼容我的FANUC系统？</h3>
+
+
+
+
+
+
+
+                <p>江图科技KTO-F0093模块兼容FANUC 0系列、0i-A/B/C/D系列、16i/18i/21i系列以及OM-D/OM-C数控系统。只要原机床使用的是A61L-0001-0093 CRT显示器（HONDA 20针接口 + DC 24V供电），即可直接替换使用，无需额外适配。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q3: LCD升级后需要修改CNC参数或重新校准吗？</h3>
+
+
+
+
+
+
+
+                <p><strong>完全不需要。</strong>LCD模块采用与原CRT完全一致的信号接口定义和电气参数，CNC系统端无需任何参数修改、无需重新校准坐标系，不影响加工精度。即插即用，30分钟完成安装。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q4: LCD比原CRT亮多少？能适应强光环境吗？</h3>
+
+
+
+
+
+
+
+                <p>原装CRT新机亮度约200cd/m²，老化后严重衰减。江图LCD模块采用工业级TFT-LCD面板，亮度350-450cd/m²，是CRT老机亮度的3-4倍。即使在车间强光环境下（如靠近窗户、日光灯直射），屏幕内容依然清晰可读。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q5: LCD升级模块的功耗和散热情况如何？</h3>
+
+
+
+
+
+
+
+                <p>原CRT功耗25-30W，LCD模块仅8-12W，降低约60%。更低的功耗意味着更少的发热量，可有效减少电气柜散热负担，延长周边电子元件寿命。LCD模块工作温度范围-10~+60°C，适应各类工业环境。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q6: LCD模块的质保期是多久？出现故障如何处理？</h3>
+
+
+
+
+
+
+
+                <p>提供<strong>2年免费质保</strong>（行业最长），非人为损坏免费换新。终身免费电话和远程视频指导，2年质保。如遇质量问题，联系客服后即可安排换新。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q7: 安装需要多长时间？需要专业技术人员吗？</h3>
+
+
+
+
+
+
+
+                <p>平均安装时间约30分钟，仅需一把十字螺丝刀。操作步骤包括：断电→拆卸旧CRT→固定LCD模块→连接线缆→通电调试。无需专业电工或CNC工程师，普通操作工按指导即可完成。详细安装步骤请参考我们的<a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">分步实操安装指南</a>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h3>Q8: 升级后日常如何维护？</h3>
+
+
+
+
+
+
+
+                <p>每6个月检查信号线接头是否松动；保持电气柜通风良好；通过LCD面板OSD菜单调节亮度和对比度至舒适水平；如显示异常，优先检查HONDA 20针接口是否氧化。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>五、质保与服务</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>服务项目</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <th>内容</th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>质保期</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>2年免费质保（行业最长）</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>技术支持</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>终身免费电话/远程指导</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>退换政策</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>2年质保，不满意全额退款</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>物流</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>全国包邮，顺丰次日达</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>资料支持</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <td>免费提供安装视频和图文指南</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>六、相关文章</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html">FANUC A61L-0001-0093 9英寸CRT改LCD液晶完整替换流程 — 分步实操安装指南</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html">FANUC A61L-0001-0074 14英寸CRT显示器LCD升级指南</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html">FANUC A61L-0001-0086 松下CRT显示器替代方案</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li><a href="/zh/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html">FANUC A61L-0001-0090 9英寸单色显示器升级实战</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>联系我们</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p><strong>深圳市江图科技有限公司</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>📧 邮箱：<a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>📞 电话：13686889647</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>🌐 官网：<a href="https://cncdisplay.com">cncdisplay.com</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>专业的事交给专业团队。已为超过500家企业完成FANUC显示器升级，99%客户满意度。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
+
+
+
+
+
+
+
+    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Fanuc A61L 0001 0093 solution</strong></p>
+
+
+
+
+
+
+
+    <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</main>    
+
+
+
+
+
+
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+
+
+
+
+
+
+
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
+
+
+
+
+
+
+
+            <ul style="margin:0;padding-left:1.2rem;">
+
+
+
+
+
+
+
+                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
+
+
+
+
+
+
+
+                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+
+
+
+
+
+
+
+                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
+
+
+
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+
+
+
+
+
+        <div class="footer-content">
+
+
+
+
+
+
+
+            <div class="footer-brand">
+
+
+
+
+
+
+
+                <span class="footer-logo">江图科技 Kongto Technology</span>
+
+
+
+
+
+
+
+                <p>专注工业视频显示解决方案 — CNC显示器CRT转LCD升级、工业视频信号转换器、非标定制工控显示器</p>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/posts/">📄 技术文章</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/FANUC.html">FANUC方案</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Mitsubishi.html">三菱方案</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Siemens.html">西门子方案</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">资料下载</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">关于我们</a>
+
+
+
+
+
+
+
+                <a href="/zh/privacy.html">隐私政策</a>
+
+
+
+
+
+
+
+                <a href="/zh/terms.html">服务条款</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | 13686889647 | sales@cncdisplay.com</p>
+
+
+
+
+
+
+
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/glossary.html">术语表</a>
+
+
+
+
+
+
+
+                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-tool.html">对比工具</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
+
+
+
+
+
+
+
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+
+
+
+
+
+
+
+                <a href="/zh/privacy.html">隐私</a>
+
+
+
+
+
+
+
+                <a href="/zh/terms.html">条款</a>
+
+
+
+
+
+
+
+                <a href="/zh/sitemap.xml">站点地图</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    (function(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var bp = document.createElement('script');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var curProtocol = window.location.protocol.split(':')[0];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (curProtocol === 'https') {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        } else {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var s = document.getElementsByTagName("script")[0];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        s.parentNode.insertBefore(bp, s);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
