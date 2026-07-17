@@ -17,17 +17,6 @@ IMG  = r'd:\code\seo_deploy\images'
 # Each product -> list of (source_rel_path, image_type)
 # ============================================================
 MANUAL = {
-    'fanuc-0m-0t-crt-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
-    ],
-    'fanuc-16i-18i-21i-lcd-upgrade.html': [
-        ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
-        ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
-        ('FANUC/0096/A61L-0001-0096-crt.jpg', 'crt'),
-        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
-    ],
         'fanuc-a02b-0094-c022-lcd-upgrade.html': [
         ('FANUC/A02B-0094-C022/8DS_0099.JPG', 'lcd_front'),
         ('FANUC/A02B-0094-C022/Fanuc - CRT A02B-0094-C022-BACK.jpg', 'lcd_back'),
@@ -66,25 +55,10 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/FANUC A61L-0001-0092-0086-0076-zm.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0086-0092-0076 LCD效果.jpg', 'crt'),
     ],
-    'fanuc-a61l-0001-0077-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
-    ],
-    'fanuc-a61l-0001-0078-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
-    ],
             'fanuc-a61l-0001-0086-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0086.jpg', 'lcd_front'),
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/MATSUSHITA 0086-CRT.jpg', 'crt'),
-    ],
-    'fanuc-a61l-0001-0087-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/A61L-0001-0086  monitor.jpg', 'label'),
     ],
                 'fanuc-a61l-0001-0090-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/FANUC A61L-0001-0090-800M-02.jpg', 'lcd_front'),
@@ -139,11 +113,6 @@ MANUAL = {
         'fanuc-mdt947b-1a-lcd-upgrade.html': [
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092-1.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092.jpg', 'lcd_back'),
-    ],
-    'fanuc-om-d-display-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/0072-1.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/0072-2.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
     ],
     'fanuc-tx-1424ab-lcd-upgrade.html': [
         ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
