@@ -1,156 +1,1241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siemens Sinumerik CRT to LCD Upgrade Guide | 810 820 810D 840D 6FC3988-7FA20 SM0901 579417TA 6FC4600</title>
-<meta name="description" content="Complete Siemens Sinumerik CRT to LCD upgrade guide. Covers Siemens 810, 810D, 820, 820M, 840D Power Line. Models 6FC3988-7FA20, SM0901, 579417TA, 6FC4600-0AR04. 8.4-inch industrial control CRT replacement. Plug-and-play, $399.">
-<link rel="canonical" href="https://cncdisplay.com/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
-<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
-<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
-	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html" />
-<link rel="stylesheet" href="/css/style.css?v=7">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Siemens Sinumerik CRT to LCD Upgrade Guide">
-<meta property="og:description" content="Complete Siemens Sinumerik CRT to LCD upgrade guide. 810D, 820D, 840D. 6FC3988-7FA20, SM0901.">
-<meta property="og:image" content="https://cncdisplay.com/images/siemens/siemens-579417ta-1.jpg">
-<meta property="og:site_name" content="Kongto Technology">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Siemens Sinumerik CRT to LCD Upgrade Guide","author":{"@type":"Organization","name":"Kongto Technology"},"publisher":{"@type":"Organization","name":"Kongto Technology"},"datePublished":"2026-06-27"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Which Siemens Sinumerik systems are compatible with LCD upgrade?","acceptedAnswer":{"@type":"Answer","text":"Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) systems are all compatible. Models 6FC3988-7FA20, SM0901, and 579417TA are direct replacements."}},
-{"@type":"Question","name":"What power does Siemens Sinumerik CRT use?","acceptedAnswer":{"@type":"Answer","text":"Important: Siemens Sinumerik CRTs use AC 110V or AC 220V power, NOT DC 24V like Fanuc or Mitsubishi. Our LCD modules include a built-in AC power supply compatible with 110-220V. Confirm your machine voltage before ordering."}},
-{"@type":"Question","name":"What connector does Siemens 6FC3988-7FA20 use?","acceptedAnswer":{"@type":"Answer","text":"Siemens 6FC3988-7FA20 uses a DB-25 (25-pin D-Sub) connector for video signal. Our LCD module includes a matching DB-25 connector for plug-and-play compatibility."}}
-]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Siemens Sinumerik CRT to LCD Upgrade","totalTime":"PT30M","step":[
-{"@type":"HowToStep","position":1,"name":"Power off","text":"Turn off Sinumerik system. Unplug AC power cord. Wait 2 minutes for discharge."},
-{"@type":"HowToStep","position":2,"name":"Remove CRT","text":"Unscrew mounting screws. Disconnect DB-25 signal cable and AC power wires."},
-{"@type":"HowToStep","position":3,"name":"Install LCD","text":"Mount LCD module into original position. Align holes, secure with screws."},
-{"@type":"HowToStep","position":4,"name":"Connect","text":"Connect DB-25 cable and AC power. Keyed connectors prevent errors."},
-{"@type":"HowToStep","position":5,"name":"Power on","text":"Restore power. LCD displays automatically. Adjust via OSD."}
-]}</script>
-<style>.p-price{color:#FF6600;font-weight:700;}.warn{background:#fff3cd;border:1px solid #ffc107;padding:1rem;border-radius:8px;margin:1rem 0;}</style>
-</head>
-<body><header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/zh/compatibility-matrix.html">Compatibility</a>
-                <a href="/zh/products/">Products</a>
-                <a href="/zh/posts/">Articles</a>
-                <a href="/zh/case-studies.html">Cases</a>
-                <a href="/zh/docs/">Downloads</a>
-                <a href="/zh/about.html">About</a>
-                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/zh/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch"><span class="divider">&#x4e2d;&#x6587; |</span><a href="/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html" lang="en" class="lang-en">English</a></div>
-        </nav>
-    </header>
-<main style="max-width:980px;margin:0 auto;padding:20px;">
-<article>
-<h1>Siemens Sinumerik CRT to LCD Upgrade Guide</h1>
-<p class="meta" style="color:#666;font-size:0.9rem;">Published: June 27, 2026 | 作者: szkongto01</p>
-<img width="400" height="300" src="/images/siemens/siemens-579417ta-1.webp" alt="Siemens Sinumerik CRT to LCD upgrade module" style="width:100%;border-radius:12px;margin:1.5rem 0;;height:auto" loading="lazy">
-
-<p><strong>Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) controls</strong> are among the most reliable CNC systems ever built — and their aging CRT displays are now failing. The <strong>6FC3988-7FA20, SM0901, 579417TA, and 6FC4600-0AR04</strong> models are widely used across these platforms, including 8.4-inch, 9-inch, and 10.4-inch industrial control CRT form factors.</p>
-
-<p><strong>Critical difference from Fanuc/Mitsubishi:</strong> Siemens Sinumerik CRTs use <strong>AC 110V or AC 220V power</strong>, not DC 24V. Our LCD modules include a built-in AC power supply for direct compatibility. Confirm your machine voltage (110V or 220V) before ordering.</p>
-
-<div class="warn"><strong>&#x26a0;&#xfe0f; Important:</strong> Unlike Fanuc (DC 24V) and Mitsubishi (DC 12/24V), Siemens Sinumerik CRTs use <strong>AC mains power</strong>. Our LCD modules handle both 110V and 220V automatically with built-in PSU. DB-25 connector for signal. <strong>$399</strong> outright, 18-month warranty.</div>
-
-<h2>Siemens CRT Model Cross-Reference</h2>
-<div style="overflow-x:auto;">
-<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
-<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Model</th><th>CRT Type</th><th>Size</th><th>Interface</th><th>Power</th><th>LCD Size</th><th>Price</th><th>Compatible Systems</th></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">6FC3988-7FA20</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810D, 840D</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">SM0901</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810, 820</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">579417TA</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810D, 820D</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">6FC4600-0AR04</td><td>Color CRT</td><td>10.4"</td><td>DB-25</td><td>AC 110/220V</td><td>10.4" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 840D sl</td></tr>
-</table>
-</div>
-
-<h2>CRT Failure Symptoms</h2>
-<div style="overflow-x:auto;">
-<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
-<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Symptom</th><th>Cause</th><th>Action</th></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">No display, LED off</td><td>Power supply failure</td><td>LCD upgrade</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Dim image</td><td>CRT aging</td><td>LCD upgrade</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Flickering</td><td>Flyback / HV</td><td>LCD upgrade</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Geometry distortion</td><td>Deflection circuit</td><td>LCD upgrade</td></tr>
-</table>
-</div>
-
-<h2>Specification Comparison</h2>
-<div style="overflow-x:auto;">
-<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
-<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Spec</th><th>Siemens CRT</th><th>Kongto LCD</th></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Resolution</td><td>640x400</td><td>800x600</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Brightness</td><td>~200 cd/m2</td><td>350-450 cd/m2</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Lifespan</td><td>~15,000 hrs</td><td>50,000+ hrs</td></tr>
-<tr><td style="padding:8px;border:1px solid #ddd;">Interface</td><td>DB-25</td><td>DB-25 direct</td></tr>
-</table>
-</div>
-
-<img width="400" height="300" src="/images/siemens/siemens-6fc3988-7fa20-16pin.webp" alt="Siemens 6FC3988-7FA20 DB-25 connector interface" style="width:100%;max-width:500px;border-radius:8px;margin:1rem 0;;height:auto" loading="lazy">
-
-<h2>Installation</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0;">
-<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">1. Power Down</h3><p>Turn off Sinumerik system. Unplug AC power. Wait 2 minutes.</p></div>
-<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">2. Remove CRT</h3><p>Unscrew the CRT housing. Disconnect DB-25 signal cable and AC power wires.</p></div>
-<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">3. Install LCD</h3><p>Mount LCD module. Holes align 100% with original CRT positions.</p></div>
-<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">4. Connect</h3><p>Plug DB-25 cable into LCD module. Connect AC power. Keyed connectors prevent errors.</p></div>
-<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">5. Test</h3><p>Power on. LCD displays automatically. Adjust OSD.</p></div>
-</div>
-
-<div style="text-align:center;padding:3rem 1rem;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;margin:2rem 0;">
-<h2 style="color:#fff;margin:0 0 0.75rem 0;">Need a Siemens Sinumerik LCD upgrade?</h2>
-<p style="opacity:0.9;margin:0 0 1.5rem 0;">$399 - In Stock - Free Shipping - 18-Month Warranty</p>
-<a href="/zh/quote.html" style="display:inline-block;padding:14px 36px;background:#fff;color:#667eea;border-radius:8px;text-decoration:none;font-weight:700;">Request Quote &rarr;</a>
-</div>
-</article>
-
-<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
-    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Siemens 6Fc3988 7Fa20 solution</strong></p>
-    <a href="/zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
-</div>
-
-    <div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
-        <h3 style="margin-top:0;color:#1e40af;">Related Articles</h3>
-        <ul style="margin-bottom:0;">
-            <li><a href="/zh/posts/siemens-sinumerik-display-troubleshooting-guide.html">siemens-sinumerik-display-troubleshooting-guide</a></li>
-            <li><a href="/zh/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html">Siemens SINUMERIK CNC Display Upgrade Complete Guide</a></li>
-            <li><a href="/zh/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html">Mitsubishi M70 & M700 Display Upgrade</a></li>
-            <li><a href="/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html">FANUC A61L-0001 Series CRT to LCD Upgrade Guide</a></li>
-        </ul>
-    </div>
-
-    </main>
-<footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/zh/posts/">📄 Articles</a>
-                <a href="/zh/brands/FANUC.html">FANUC</a>
-                <a href="/zh/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/zh/brands/Siemens.html">Siemens</a>
-                <a href="/zh/docs/">Downloads</a>
-                <a href="/zh/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/zh/glossary.html">术语表</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
-                <a href="/zh/comparison-tool.html">对比工具</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
-                <a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/privacy.html">隐私</a>
-                <a href="/zh/terms.html">条款</a>
-                <a href="/zh/sitemap.xml">站点地图</a>
-            </div>
-    </footer>
-</body>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+<title>Siemens Sinumerik CRT to LCD Upgrade Guide | 810 820 810D 840D 6FC3988-7FA20 SM0901 579417TA 6FC4600</title>
+
+
+
+
+
+
+
+<meta name="description" content="Complete Siemens Sinumerik CRT to LCD upgrade guide. Covers Siemens 810, 810D, 820, 820M, 840D Power Line. Models 6FC3988-7FA20, SM0901, 579417TA, 6FC4600-0AR04. 8.4-inch industrial control CRT replacement. Plug-and-play, $399.">
+
+
+
+
+
+
+
+<link rel="canonical" href="https://cncdisplay.com/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">
+
+
+
+
+
+
+
+	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html" />
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.css?v=7">
+
+
+
+
+
+
+
+<meta property="og:type" content="article">
+
+
+
+
+
+
+
+<meta property="og:title" content="Siemens Sinumerik CRT to LCD Upgrade Guide">
+
+
+
+
+
+
+
+<meta property="og:description" content="Complete Siemens Sinumerik CRT to LCD upgrade guide. 810D, 820D, 840D. 6FC3988-7FA20, SM0901.">
+
+
+
+
+
+
+
+<meta property="og:image" content="https://cncdisplay.com/images/siemens/siemens-579417ta-1.jpg">
+
+
+
+
+
+
+
+<meta property="og:site_name" content="Kongto Technology">
+
+
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Siemens Sinumerik CRT to LCD Upgrade Guide","author":{"@type":"Organization","name":"Kongto Technology"},"publisher":{"@type":"Organization","name":"Kongto Technology"},"datePublished":"2026-06-27"}</script>
+
+
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+
+
+
+
+
+
+
+{"@type":"Question","name":"Which Siemens Sinumerik systems are compatible with LCD upgrade?","acceptedAnswer":{"@type":"Answer","text":"Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) systems are all compatible. Models 6FC3988-7FA20, SM0901, and 579417TA are direct replacements."}},
+
+
+
+
+
+
+
+{"@type":"Question","name":"What power does Siemens Sinumerik CRT use?","acceptedAnswer":{"@type":"Answer","text":"Important: Siemens Sinumerik CRTs use AC 110V or AC 220V power, NOT DC 24V like Fanuc or Mitsubishi. Our LCD modules include a built-in AC power supply compatible with 110-220V. Confirm your machine voltage before ordering."}},
+
+
+
+
+
+
+
+{"@type":"Question","name":"What connector does Siemens 6FC3988-7FA20 use?","acceptedAnswer":{"@type":"Answer","text":"Siemens 6FC3988-7FA20 uses a DB-25 (25-pin D-Sub) connector for video signal. Our LCD module includes a matching DB-25 connector for plug-and-play compatibility."}}
+
+
+
+
+
+
+
+]}</script>
+
+
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Siemens Sinumerik CRT to LCD Upgrade","totalTime":"PT30M","step":[
+
+
+
+
+
+
+
+{"@type":"HowToStep","position":1,"name":"Power off","text":"Turn off Sinumerik system. Unplug AC power cord. Wait 2 minutes for discharge."},
+
+
+
+
+
+
+
+{"@type":"HowToStep","position":2,"name":"Remove CRT","text":"Unscrew mounting screws. Disconnect DB-25 signal cable and AC power wires."},
+
+
+
+
+
+
+
+{"@type":"HowToStep","position":3,"name":"Install LCD","text":"Mount LCD module into original position. Align holes, secure with screws."},
+
+
+
+
+
+
+
+{"@type":"HowToStep","position":4,"name":"Connect","text":"Connect DB-25 cable and AC power. Keyed connectors prevent errors."},
+
+
+
+
+
+
+
+{"@type":"HowToStep","position":5,"name":"Power on","text":"Restore power. LCD displays automatically. Adjust via OSD."}
+
+
+
+
+
+
+
+]}</script>
+
+
+
+
+
+
+
+<style>.p-price{color:#FF6600;font-weight:700;}.warn{background:#fff3cd;border:1px solid #ffc107;padding:1rem;border-radius:8px;margin:1rem 0;}</style>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body><header>
+
+
+
+
+
+
+
+        <nav>
+
+
+
+
+
+
+
+            <a href="/" class="logo">Kongto Technology</a>
+
+
+
+
+
+
+
+            <div class="nav-links">
+
+
+
+
+
+
+
+                <a href="/">Home</a><a href="/zh/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/zh/products/">Products</a>
+
+
+
+
+
+
+
+                <a href="/zh/posts/">Articles</a>
+
+
+
+
+
+
+
+                <a href="/zh/case-studies.html">Cases</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">About</a>
+
+
+
+
+
+
+
+                <a href="/zh/contact.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a href="/zh/search.html" class="nav-search">🔍 Search</a>
+
+
+
+
+
+
+
+            <div class="lang-switch"><span class="divider">&#x4e2d;&#x6587; |</span><a href="/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html" lang="en" class="lang-en">English</a></div>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+<main style="max-width:980px;margin:0 auto;padding:20px;">
+
+
+
+
+
+
+
+<article>
+
+
+
+
+
+
+
+<h1>Siemens Sinumerik CRT to LCD Upgrade Guide</h1>
+
+
+
+
+
+
+
+<p class="meta" style="color:#666;font-size:0.9rem;">Published: June 27, 2026 | 作者: szkongto01</p>
+
+
+
+
+
+
+
+<img width="400" height="300" src="/images/siemens/siemens-579417ta-1.webp" alt="Siemens Sinumerik CRT to LCD upgrade module" style="width:100%;border-radius:12px;margin:1.5rem 0;;height:auto" loading="lazy">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) controls</strong> are among the most reliable CNC systems ever built — and their aging CRT displays are now failing. The <strong>6FC3988-7FA20, SM0901, 579417TA, and 6FC4600-0AR04</strong> models are widely used across these platforms, including 8.4-inch, 9-inch, and 10.4-inch industrial control CRT form factors.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Critical difference from Fanuc/Mitsubishi:</strong> Siemens Sinumerik CRTs use <strong>AC 110V or AC 220V power</strong>, not DC 24V. Our LCD modules include a built-in AC power supply for direct compatibility. Confirm your machine voltage (110V or 220V) before ordering.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="warn"><strong>&#x26a0;&#xfe0f; Important:</strong> Unlike Fanuc (DC 24V) and Mitsubishi (DC 12/24V), Siemens Sinumerik CRTs use <strong>AC mains power</strong>. Our LCD modules handle both 110V and 220V automatically with built-in PSU. DB-25 connector for signal. <strong>$399</strong> outright, 18-month warranty.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Siemens CRT Model Cross-Reference</h2>
+
+
+
+
+
+
+
+<div style="overflow-x:auto;">
+
+
+
+
+
+
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
+
+
+
+
+
+
+
+<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Model</th><th>CRT Type</th><th>Size</th><th>Interface</th><th>Power</th><th>LCD Size</th><th>Price</th><th>Compatible Systems</th></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">6FC3988-7FA20</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810D, 840D</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">SM0901</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810, 820</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">579417TA</td><td>Monochrome</td><td>9"</td><td>DB-25</td><td>AC 110/220V</td><td>8" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 810D, 820D</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">6FC4600-0AR04</td><td>Color CRT</td><td>10.4"</td><td>DB-25</td><td>AC 110/220V</td><td>10.4" LCD</td><td><span class="p-price">$399</span></td><td>Sinumerik 840D sl</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>CRT Failure Symptoms</h2>
+
+
+
+
+
+
+
+<div style="overflow-x:auto;">
+
+
+
+
+
+
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
+
+
+
+
+
+
+
+<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Symptom</th><th>Cause</th><th>Action</th></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">No display, LED off</td><td>Power supply failure</td><td>LCD upgrade</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Dim image</td><td>CRT aging</td><td>LCD upgrade</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Flickering</td><td>Flyback / HV</td><td>LCD upgrade</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Geometry distortion</td><td>Deflection circuit</td><td>LCD upgrade</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Specification Comparison</h2>
+
+
+
+
+
+
+
+<div style="overflow-x:auto;">
+
+
+
+
+
+
+
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
+
+
+
+
+
+
+
+<tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Spec</th><th>Siemens CRT</th><th>Kongto LCD</th></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Resolution</td><td>640x400</td><td>800x600</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Brightness</td><td>~200 cd/m2</td><td>350-450 cd/m2</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Lifespan</td><td>~15,000 hrs</td><td>50,000+ hrs</td></tr>
+
+
+
+
+
+
+
+<tr><td style="padding:8px;border:1px solid #ddd;">Interface</td><td>DB-25</td><td>DB-25 direct</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="400" height="300" src="/images/siemens/siemens-6fc3988-7fa20-16pin.webp" alt="Siemens 6FC3988-7FA20 DB-25 connector interface" style="width:100%;max-width:500px;border-radius:8px;margin:1rem 0;;height:auto" loading="lazy">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Installation</h2>
+
+
+
+
+
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0;">
+
+
+
+
+
+
+
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">1. Power Down</h3><p>Turn off Sinumerik system. Unplug AC power. Wait 2 minutes.</p></div>
+
+
+
+
+
+
+
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">2. Remove CRT</h3><p>Unscrew the CRT housing. Disconnect DB-25 signal cable and AC power wires.</p></div>
+
+
+
+
+
+
+
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">3. Install LCD</h3><p>Mount LCD module. Holes align 100% with original CRT positions.</p></div>
+
+
+
+
+
+
+
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">4. Connect</h3><p>Plug DB-25 cable into LCD module. Connect AC power. Keyed connectors prevent errors.</p></div>
+
+
+
+
+
+
+
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;"><h3 style="margin-top:0;color:#2563eb;">5. Test</h3><p>Power on. LCD displays automatically. Adjust OSD.</p></div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center;padding:3rem 1rem;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;margin:2rem 0;">
+
+
+
+
+
+
+
+<h2 style="color:#fff;margin:0 0 0.75rem 0;">Need a Siemens Sinumerik LCD upgrade?</h2>
+
+
+
+
+
+
+
+<p style="opacity:0.9;margin:0 0 1.5rem 0;">$399 - In Stock - Free Shipping - 18-Month Warranty</p>
+
+
+
+
+
+
+
+<a href="/zh/contact.html" style="display:inline-block;padding:14px 36px;background:#fff;color:#667eea;border-radius:8px;text-decoration:none;font-weight:700;">Request Quote &rarr;</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
+
+
+
+
+
+
+
+    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Siemens 6Fc3988 7Fa20 solution</strong></p>
+
+
+
+
+
+
+
+    <a href="/zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
+
+
+
+
+
+
+
+        <h3 style="margin-top:0;color:#1e40af;">Related Articles</h3>
+
+
+
+
+
+
+
+        <ul style="margin-bottom:0;">
+
+
+
+
+
+
+
+            <li><a href="/zh/posts/siemens-sinumerik-display-troubleshooting-guide.html">siemens-sinumerik-display-troubleshooting-guide</a></li>
+
+
+
+
+
+
+
+            <li><a href="/zh/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html">Siemens SINUMERIK CNC Display Upgrade Complete Guide</a></li>
+
+
+
+
+
+
+
+            <li><a href="/zh/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html">Mitsubishi M70 & M700 Display Upgrade</a></li>
+
+
+
+
+
+
+
+            <li><a href="/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html">FANUC A61L-0001 Series CRT to LCD Upgrade Guide</a></li>
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+<footer>
+
+
+
+
+
+
+
+        <div class="footer-content">
+
+
+
+
+
+
+
+            <div class="footer-brand">
+
+
+
+
+
+
+
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+
+
+
+
+
+
+
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/posts/">📄 Articles</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/FANUC.html">FANUC</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Mitsubishi.html">Mitsubishi</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Siemens.html">Siemens</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">About Us</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+
+
+
+
+
+
+
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/glossary.html">术语表</a>
+
+
+
+
+
+
+
+                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-tool.html">对比工具</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
+
+
+
+
+
+
+
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+
+
+
+
+
+
+
+                <a href="/zh/privacy.html">隐私</a>
+
+
+
+
+
+
+
+                <a href="/zh/terms.html">条款</a>
+
+
+
+
+
+
+
+                <a href="/zh/sitemap.xml">站点地图</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
 </html>

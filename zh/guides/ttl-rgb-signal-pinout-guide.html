@@ -1,312 +1,2496 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNC TTL RGB Signal Pinout Guide | FANUC Mitsubishi Siemens CRT to LCD Wiring Reference | Kongto</title>
-    <meta name="description" content="Complete CNC TTL RGB signal pinout reference for FANUC (Honda MR-20M), Mitsubishi (20/26-pin), Siemens (DB-25) CRT displays. Includes wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.">
-    <link rel="canonical" href="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html">
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/guides/ttl-rgb-signal-pinout-guide.html" />
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/guides/ttl-rgb-signal-pinout-guide.html" />
-	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html" />
-    <link rel="stylesheet" href="/css/style.css?v=7">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens">
-    <meta property="og:description" content="Complete pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens DB-25 wiring diagrams included.">
-    <meta property="og:url" content="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html">
-    <meta property="og:site_name" content="Kongto Technology">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/x-icon" href="/zh/favicon.ico">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:#1d1d1f;background:#fff}
-        a{color:#2563eb;text-decoration:none}
-        a:hover{text-decoration:underline}
-        header{background:linear-gradient(135deg,#1e3a5f,#2563eb);padding:0;position:sticky;top:0;z-index:100}
-        nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:.85rem 20px}
-        .logo{font-size:1.2rem;font-weight:600;color:#fff}
-        .nav-links{display:flex;gap:.25rem}
-        .nav-links a{color:rgba(255,255,255,.9);padding:.45rem 1.1rem;border-radius:6px;font-size:.95rem}
-        .nav-links a:hover{color:#fff;background:rgba(255,255,255,.18);text-decoration:none}
-        .lang-switch{margin-left:auto;padding:0 .75rem;font-size:.88rem}
-        .lang-switch a{color:rgba(255,255,255,.75)}
-        main{max-width:980px;margin:0 auto;padding:2rem 1.5rem}
-        h1{font-size:2.2rem;font-weight:700;margin-bottom:.5rem;line-height:1.2}
-        h2{font-size:1.6rem;font-weight:600;margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid #e2e8f0}
-        h3{font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem}
-        p{margin-bottom:1rem;color:#374151}
-        .meta{color:#6b7280;font-size:.9rem;margin-bottom:2rem}
-        table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
-        th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
-        td{padding:10px 14px;border:1px solid #e2e8f0}
-        tr:nth-child(even){background:#f8fafc}
-        .pin-table{max-width:500px}
-        ul{margin:1rem 0;padding-left:1.5rem}
-        li{margin-bottom:.4rem}
-        .highlight{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:1.5rem;margin:1.5rem 0}
-        .highlight strong{color:#c2410c}
-        .note{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:8px;padding:1rem;margin:1rem 0;font-size:.9rem}
-        .diagram{font-family:'Courier New',monospace;background:#1e293b;color:#a5f3fc;padding:1.5rem;border-radius:8px;overflow-x:auto;font-size:.85rem;line-height:1.5;margin:1.5rem 0;white-space:pre}
-        .faq-item{margin:1rem 0;padding:1rem;background:#f8fafc;border-radius:8px}
-        .faq-q{font-weight:600;color:#1e3a5f;margin-bottom:.3rem}
-        .faq-a{color:#475569}
-        footer{padding:3rem 1.5rem;background:#f5f5f7;border-top:1px solid #d2d2d7;text-align:center;color:#86868b;font-size:.85rem}
-        .related-links{margin:2rem 0;padding:1.5rem;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0}
-        .related-links a{display:block;padding:.3rem 0}
-        @media(max-width:768px){h1{font-size:1.6rem}.diagram{font-size:.75rem}}
-    </style>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
-  "description": "Complete TTL RGB pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens DB-25 pin mappings with signal voltage specs.",
-  "author": {"@type":"Organization","name":"Kongto Technology"},
-  "datePublished": "2026-06-28",
-  "publisher": {"@type":"Organization","name":"Kongto Technology"}
-}
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"What is TTL RGB signal in CNC displays?","acceptedAnswer":{"@type":"Answer","text":"TTL RGB (Transistor-Transistor Logic Red Green Blue) is a digital video signaling standard used in older CNC CRT displays. It uses 0-5V logic levels for each color channel plus separate horizontal and vertical sync signals. This differs from analog VGA where video signals are 0-0.7V analog."}},
-    {"@type":"Question","name":"Can I connect a TTL RGB CRT to a VGA monitor?","acceptedAnswer":{"@type":"Answer","text":"Not directly. TTL RGB operates at 5V logic levels while VGA uses 0.7V analog. Connecting TTL directly to VGA can damage the monitor. A TTL-to-VGA converter or a direct drop-in LCD replacement module is required. Kongto LCD modules accept TTL RGB directly."}},
-    {"@type":"Question","name":"What connector does FANUC use for CRT displays?","acceptedAnswer":{"@type":"Answer","text":"FANUC CRT displays use the Honda MR-20M 20-pin round connector. Pins 1-3 carry Red/Green/Blue video, pins 4-5 carry H/V sync, and pin 6 is chassis ground. Power is provided separately via DC 24V on pins 8-9 and 18-19."}},
-    {"@type":"Question","name":"What is the pinout for Siemens SINUMERIK CRT displays?","acceptedAnswer":{"@type":"Answer","text":"Siemens SINUMERIK CRT displays typically use a DB-25 (25-pin D-sub) connector. Pin 2 = Red, Pin 3 = Green, Pin 4 = Blue, Pin 6 = HSync, Pin 7 = VSync. Power varies by model — some use AC 110-220V, others DC 24V."}},
-    {"@type":"Question","name":"Do I need to rewire when replacing a CNC CRT with LCD?","acceptedAnswer":{"@type":"Answer","text":"With Kongto plug-and-play LCD modules, no rewiring is needed. Each module uses the exact same connector and pinout as the original CRT — Honda MR-20M for FANUC, 20-pin for Mitsubishi, DB-25 for Siemens. Just unplug the CRT and plug in the LCD."}}
-  ]
-}
-</script>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/zh/compatibility-matrix.html">Compatibility</a>
-                <a href="/zh/products/">Products</a>
-                <a href="/zh/posts/">Articles</a>
-                <a href="/zh/case-studies.html">Cases</a>
-                <a href="/zh/docs/">Downloads</a>
-                <a href="/zh/about.html">About</a>
-                <a href="/zh/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/zh/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="/zh/guides/ttl-rgb-signal-pinout-guide.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <nav style="font-size:.9rem;color:#666;margin-bottom:1rem;">
-            <a href="/">Home</a> / <a href="/zh/posts/">Articles</a> / <strong>TTL RGB Pinout Guide</strong>
-        </nav>
-
-        <h1>CNC TTL RGB Signal Pinout Guide<br><span style="font-size:1.1rem;font-weight:400;color:#6b7280;">FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference</span></h1>
-        <p class="meta">Technical Reference Guide · Updated June 2026 · 10 min read</p>
-
-        <p>When replacing an aging CRT display on a CNC machine with a modern LCD module, understanding the <strong>TTL RGB signal pinout</strong> is critical. Each CNC manufacturer uses a different connector and signal arrangement. This guide provides the complete pin mapping for the three most common protocols: <strong>FANUC Honda MR-20M</strong>, <strong>Mitsubishi 20/26-pin</strong>, and <strong>Siemens DB-25</strong>.</p>
-
-        <div class="highlight">
-            <strong>Key takeaway:</strong> Kongto plug-and-play LCD modules match the original pinout exactly — no rewiring, no adapter boards, no CNC parameter changes needed. This reference is provided for engineers who need to understand the signal path or are working with custom integrations.
-        </div>
-
-        <h2>1. What is TTL RGB?</h2>
-        <p>TTL RGB is a <strong>digital</strong> video signaling standard. Unlike VGA which uses <strong>analog</strong> 0-0.7V signals, TTL RGB operates at <strong>0-5V logic levels</strong> (TTL = Transistor-Transistor Logic). Key differences from VGA:</p>
-        <table>
-            <tr><th>Parameter</th><th>TTL RGB (CNC CRT)</th><th>VGA (Standard Monitor)</th></tr>
-            <tr><td>Video Signal Level</td><td>0-5V Digital (On/Off per channel)</td><td>0-0.7V Analog (Continuous)</td></tr>
-            <tr><td>Number of Colors</td><td>8 (3-bit: 2³ R/G/B)</td><td>16.7M (8-bit per channel)</td></tr>
-            <tr><td>Sync Signal</td><td>Separate H & V (TTL 0-5V)</td><td>Separate or Composite H/V</td></tr>
-            <tr><td>Horizontal Freq</td><td>15.75 kHz (typically)</td><td>31-80 kHz</td></tr>
-            <tr><td>Connector</td><td>Varies by brand (see below)</td><td>DE-15 (HD-15)</td></tr>
-        </table>
-
-        <div class="note">
-            <strong>⚠ Important:</strong> TTL RGB operates at 5V — connecting it directly to a standard VGA monitor input (which expects 0.7V) can damage the monitor's input circuits. Use a TTL-to-VGA converter or a dedicated CNC LCD replacement module.
-        </div>
-
-        <h2>2. FANUC — Honda MR-20M 20-Pin Connector</h2>
-        <p>FANUC CRT displays (A61L series, MDT947B, D9MM-11A, D14CM-01A) use the <strong>Honda MR-20M</strong> 20-pin round connector. This is the most common interface in CNC CRT displays, found on FANUC 0, 0i, 16i, 18i, and 21i series controls.</p>
-
-        <h3>Signal Pinout (viewed from display side)</h3>
-        <div class="diagram">Honda MR-20M (Female, Display Side)
-
-        (1)  (2)  (3)  (4)  (5)
-      (6)  (7)  (8)  (9)  (10)
-
-   (11) (12) (13) (14) (15)
- (16) (17) (18) (19) (20)
-
-Pin  Signal     Color     Notes
-─────────────────────────────────
-1    Red Video  Red       0-5V TTL
-2    Green Video Green    0-5V TTL
-3    Blue Video Blue      0-5V TTL
-4    HSync      Yellow    Horizontal Sync (TTL)
-5    VSync      White     Vertical Sync (TTL)
-6    GND        Black     Chassis Ground
-7    NC          —         Not Connected
-8    DC +24V    Red/White Power Supply (+)
-9    DC +24V    Red/White Power Supply (+)
-10   GND        Black     Power Ground
-11   GND        Black     Signal Ground (Red return)
-12   GND        Black     Signal Ground (Green return)
-13   GND        Black     Signal Ground (Blue return)
-14   GND        Black     Signal Ground (HSync return)
-15   GND        Black     Signal Ground (VSync return)
-16-17 NC         —         Not Connected
-18   DC +24V    Red/White Power Supply (+)
-19   DC +24V    Red/White Power Supply (+)
-20   GND        Black     Power Ground</div>
-
-        <div class="note">
-            <strong>Note:</strong> Some FANUC 9-inch monochrome CRTs use only the Green channel (Pin 2) for video — Red and Blue may be unused. The sync signals are always present on Pins 4 and 5.
-        </div>
-
-        <p><strong>Compatible Kongto LCD modules:</strong> <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">A61L-0001-0093</a>, <a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html">A61L-0001-0074</a>, <a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html">A61L-0001-0092</a>, <a href="">D14CM-01A</a> — all use direct Honda MR-20M connection.</p>
-
-        <h2>3. Mitsubishi — 20-Pin / 26-Pin Connector</h2>
-        <p>Mitsubishi CNC displays (MDT962B, BM09DF, MDT1283B, FCUA-CT100) typically use a <strong>20-pin or 26-pin rectangular connector</strong>. The pinout varies slightly by model generation (M64 vs M500 vs M700).</p>
-
-        <h3>Mitsubishi 20-pin Signal Pinout (MDT962B / BM09DF)</h3>
-        <table class="pin-table">
-            <tr><th>Pin</th><th>Signal</th><th>Notes</th></tr>
-            <tr><td>1</td><td>GND</td><td>Power/Signal Ground</td></tr>
-            <tr><td>2</td><td>GND</td><td>Power/Signal Ground</td></tr>
-            <tr><td>3</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>4</td><td>Red Video</td><td>0-5V TTL</td></tr>
-            <tr><td>5</td><td>Green Video</td><td>0-5V TTL</td></tr>
-            <tr><td>6</td><td>Blue Video</td><td>0-5V TTL</td></tr>
-            <tr><td>7</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>8</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>9</td><td>HSync</td><td>Horizontal Sync (TTL)</td></tr>
-            <tr><td>10</td><td>VSync</td><td>Vertical Sync (TTL)</td></tr>
-            <tr><td>11</td><td>GND</td><td>Ground</td></tr>
-            <tr><td>12</td><td>GND</td><td>Ground</td></tr>
-            <tr><td>13</td><td>DC +24V</td><td>Power Supply</td></tr>
-            <tr><td>14</td><td>DC +24V</td><td>Power Supply</td></tr>
-            <tr><td>15</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>16-20</td><td>GND</td><td>Ground</td></tr>
-        </table>
-
-        <p><strong>Compatible Kongto LCD modules:</strong> <a href="/zh/products/mitsubishi-mdt962b-lcd-upgrade.html">MDT962B LCD Upgrade</a></p>
-
-        <h2>4. Siemens — DB-25 (25-Pin D-Sub) Connector</h2>
-        <p>Siemens SINUMERIK CRT displays (6FC3998-7FA20, 6FC5103-0AB01, 6FC3997-7FA20) use a standard <strong>DB-25 female connector</strong>. The pinout follows the Siemens video interface standard.</p>
-
-        <h3>Siemens DB-25 Signal Pinout</h3>
-        <table class="pin-table">
-            <tr><th>Pin</th><th>Signal</th><th>Notes</th></tr>
-            <tr><td>1</td><td>GND (Chassis)</td><td>Frame Ground</td></tr>
-            <tr><td>2</td><td>Red Video</td><td>0-5V TTL</td></tr>
-            <tr><td>3</td><td>Green Video</td><td>0-5V TTL</td></tr>
-            <tr><td>4</td><td>Blue Video</td><td>0-5V TTL</td></tr>
-            <tr><td>5</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>6</td><td>HSync</td><td>Horizontal Sync (TTL)</td></tr>
-            <tr><td>7</td><td>VSync</td><td>Vertical Sync (TTL)</td></tr>
-            <tr><td>8</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>9</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>10</td><td>NC</td><td>Not Connected</td></tr>
-            <tr><td>11</td><td>GND</td><td>Ground</td></tr>
-            <tr><td>12</td><td>GND</td><td>Ground (Red return)</td></tr>
-            <tr><td>13</td><td>GND</td><td>Ground (Green return)</td></tr>
-            <tr><td>14-18</td><td>GND / NC</td><td>Various ground / not connected</td></tr>
-            <tr><td>19-25</td><td>GND</td><td>Ground</td></tr>
-        </table>
-
-        <div class="note">
-            <strong>Note:</strong> Siemens CRT power varies by model. 6FC3998 series typically uses AC 110-220V internal supply, while 6FC5103 series uses DC 24V. Kongto LCD modules match the original power input of each specific model.
-        </div>
-
-        <p><strong>Compatible Kongto LCD modules:</strong> <a href="">6FC5103-0AB01</a>, <a href="/zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html">6FC3988-7FA20</a></p>
-
-        <h2>5. TTL to VGA Conversion</h2>
-        <p>If you need to convert TTL RGB to standard VGA (e.g., for testing or using a standard monitor), the signal path requires:</p>
-        <ol style="margin:1rem 0;padding-left:1.5rem;">
-            <li><strong>Level shifting:</strong> TTL 5V signals must be attenuated to VGA 0.7V using resistor dividers or a dedicated converter IC</li>
-            <li><strong>Sync adaptation:</strong> TTL sync (15.75 kHz) may need frequency doubling for modern VGA monitors that expect 31 kHz+</li>
-            <li><strong>Connector conversion:</strong> Honda MR-20M or DB-25 to DE-15 (HD-15 VGA connector)</li>
-        </ol>
-        <p>Kongto offers <strong>drop-in LCD replacement modules</strong> that bypass the need for conversion entirely — they accept TTL RGB directly and display at 800x600 or 1024x768 resolution. No level shifting or sync conversion needed.</p>
-
-        <h2>6. Troubleshooting Common Signal Issues</h2>
-        <table>
-            <tr><th>Symptom</th><th>Probable Cause</th><th>Solution</th></tr>
-            <tr><td>No display (black screen)</td><td>Power supply failure, CRT dead, or signal cable disconnected</td><td>Verify DC 24V at connector pins. Check cable continuity. Replace CRT with LCD module.</td></tr>
-            <tr><td>Rolling image (no sync)</td><td>Missing or incorrect H/V sync signal</td><td>Check pins 4 (HSync) and 5 (VSync) continuity. Verify cable pinout matches display spec.</td></tr>
-            <tr><td>Wrong colors or missing color</td><td>One or more R/G/B channels disconnected</td><td>Check pins 1-3 (R/G/B) continuity. On monochrome CRTs, only Green channel is used.</td></tr>
-            <tr><td>Dim display</td><td>CRT tube aging, flyback transformer weak</td><td>Replace CRT with LCD module — brightness increases from ~200 to 400 cd/m².</td></tr>
-            <tr><td>Flickering / jitter</td><td>Power supply ripple, loose connections, CRT aging</td><td>Check DC 24V stability (should be ±5%). Replace CRT with flicker-free LCD.</td></tr>
-        </table>
-
-        <h2>7. Quick Reference: Pinout Comparison</h2>
-        <table>
-            <tr><th>Signal</th><th>FANUC (Honda MR-20M)</th><th>Mitsubishi (20-pin)</th><th>Siemens (DB-25)</th></tr>
-            <tr><td>Red Video</td><td>Pin 1</td><td>Pin 4</td><td>Pin 2</td></tr>
-            <tr><td>Green Video</td><td>Pin 2</td><td>Pin 5</td><td>Pin 3</td></tr>
-            <tr><td>Blue Video</td><td>Pin 3</td><td>Pin 6</td><td>Pin 4</td></tr>
-            <tr><td>HSync</td><td>Pin 4</td><td>Pin 9</td><td>Pin 6</td></tr>
-            <tr><td>VSync</td><td>Pin 5</td><td>Pin 10</td><td>Pin 7</td></tr>
-            <tr><td>Power (DC 24V)</td><td>Pins 8, 9, 18, 19</td><td>Pins 13, 14</td><td>Varies by model</td></tr>
-            <tr><td>Ground</td><td>Pins 6, 10-15, 20</td><td>Pins 1, 2, 11, 12, 16-20</td><td>Pins 1, 11-25</td></tr>
-        </table>
-
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-q">Q: What is the voltage level of CNC TTL RGB signals?</div>
-            <div class="faq-a">A: Standard TTL levels are 0V (logic low) to +5V (logic high). This is consistent across FANUC, Mitsubishi, and Siemens CNC CRT interfaces. Some older systems may use +3.3V logic on newer revisions.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q">Q: Can I test my CNC CRT signals with a multimeter?</div>
-            <div class="faq-a">A: Yes. With the CNC powered on and running, measure DC voltage at the signal pins. H/V sync pins typically show 2-3V DC average (pulsing). Video pins show 0-5V depending on displayed content. A 5V DC reading on a video pin means that color channel is at full intensity.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q">Q: What if my CNC display has a different connector than listed here?</div>
-            <div class="faq-a">A: Some OEMs used custom connectors. Send a clear photo of your CRT display label and connector to <strong>info@cncdisplay.com</strong> — our engineering team will identify the pinout and confirm compatibility within 24 hours.</div>
-        </div>
-
-        <div class="related-links">
-            <p style="font-weight:bold;color:#1e3a5f;margin-bottom:.5rem;">📘 Related Resources</p>
-            <a href="/zh/compatibility-matrix.html">→ 52 Model Compatibility Matrix — Find your CRT model</a>
-            <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">→ FANUC A61L-0001-0093 LCD Replacement (Honda MR-20M)</a>
-            <a href="/zh/products/mitsubishi-mdt962b-lcd-upgrade.html">→ Mitsubishi MDT962B LCD Replacement (20-pin)</a>
-            <a href="">→ Siemens 6FC5103-0AB01 LCD Replacement (DB-25)</a>
-            <a href="">→ Toshiba D14CM-01A LCD Replacement (Honda MR-20M)</a>
-            <a href="/zh/products/no-display.html">→ CNC Monitor No Display — Troubleshooting Guide</a>
-            <a href="/zh/products/flickering-screen.html">→ CRT Flickering Screen — Diagnosis & Fix</a>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/zh/posts/">📄 Articles</a>
-                <a href="/zh/brands/FANUC.html">FANUC</a>
-                <a href="/zh/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/zh/brands/Siemens.html">Siemens</a>
-                <a href="/zh/docs/">Downloads</a>
-                <a href="/zh/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/zh/glossary.html">术语表</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
-                <a href="/zh/comparison-tool.html">对比工具</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
-                <a href="/zh/compatibility-matrix.html">兼容查询</a>
-                <a href="/zh/privacy.html">隐私</a>
-                <a href="/zh/terms.html">条款</a>
-                <a href="/zh/sitemap.xml">站点地图</a>
-            </div>
-    </footer>
-</body>
-</html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+    <title>CNC TTL RGB Signal Pinout Guide | FANUC Mitsubishi Siemens CRT to LCD Wiring Reference | Kongto</title>
+
+
+
+
+
+
+
+    <meta name="description" content="Complete CNC TTL RGB signal pinout reference for FANUC (Honda MR-20M), Mitsubishi (20/26-pin), Siemens (DB-25) CRT displays. Includes wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.">
+
+
+
+
+
+
+
+    <link rel="canonical" href="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html">
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/guides/ttl-rgb-signal-pinout-guide.html" />
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/guides/ttl-rgb-signal-pinout-guide.html" />
+
+
+
+
+
+
+
+	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html" />
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+
+
+
+
+
+
+    <meta property="og:type" content="article">
+
+
+
+
+
+
+
+    <meta property="og:title" content="CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens">
+
+
+
+
+
+
+
+    <meta property="og:description" content="Complete pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens DB-25 wiring diagrams included.">
+
+
+
+
+
+
+
+    <meta property="og:url" content="https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html">
+
+
+
+
+
+
+
+    <meta property="og:site_name" content="Kongto Technology">
+
+
+
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="/zh/favicon.ico">
+
+
+
+
+
+
+
+    <style>
+
+
+
+
+
+
+
+        *{margin:0;padding:0;box-sizing:border-box}
+
+
+
+
+
+
+
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:#1d1d1f;background:#fff}
+
+
+
+
+
+
+
+        a{color:#2563eb;text-decoration:none}
+
+
+
+
+
+
+
+        a:hover{text-decoration:underline}
+
+
+
+
+
+
+
+        header{background:linear-gradient(135deg,#1e3a5f,#2563eb);padding:0;position:sticky;top:0;z-index:100}
+
+
+
+
+
+
+
+        nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:.85rem 20px}
+
+
+
+
+
+
+
+        .logo{font-size:1.2rem;font-weight:600;color:#fff}
+
+
+
+
+
+
+
+        .nav-links{display:flex;gap:.25rem}
+
+
+
+
+
+
+
+        .nav-links a{color:rgba(255,255,255,.9);padding:.45rem 1.1rem;border-radius:6px;font-size:.95rem}
+
+
+
+
+
+
+
+        .nav-links a:hover{color:#fff;background:rgba(255,255,255,.18);text-decoration:none}
+
+
+
+
+
+
+
+        .lang-switch{margin-left:auto;padding:0 .75rem;font-size:.88rem}
+
+
+
+
+
+
+
+        .lang-switch a{color:rgba(255,255,255,.75)}
+
+
+
+
+
+
+
+        main{max-width:980px;margin:0 auto;padding:2rem 1.5rem}
+
+
+
+
+
+
+
+        h1{font-size:2.2rem;font-weight:700;margin-bottom:.5rem;line-height:1.2}
+
+
+
+
+
+
+
+        h2{font-size:1.6rem;font-weight:600;margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid #e2e8f0}
+
+
+
+
+
+
+
+        h3{font-size:1.25rem;font-weight:600;margin:1.5rem 0 .75rem}
+
+
+
+
+
+
+
+        p{margin-bottom:1rem;color:#374151}
+
+
+
+
+
+
+
+        .meta{color:#6b7280;font-size:.9rem;margin-bottom:2rem}
+
+
+
+
+
+
+
+        table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+
+
+
+
+
+
+
+        th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
+
+
+
+
+
+
+
+        td{padding:10px 14px;border:1px solid #e2e8f0}
+
+
+
+
+
+
+
+        tr:nth-child(even){background:#f8fafc}
+
+
+
+
+
+
+
+        .pin-table{max-width:500px}
+
+
+
+
+
+
+
+        ul{margin:1rem 0;padding-left:1.5rem}
+
+
+
+
+
+
+
+        li{margin-bottom:.4rem}
+
+
+
+
+
+
+
+        .highlight{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:1.5rem;margin:1.5rem 0}
+
+
+
+
+
+
+
+        .highlight strong{color:#c2410c}
+
+
+
+
+
+
+
+        .note{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:8px;padding:1rem;margin:1rem 0;font-size:.9rem}
+
+
+
+
+
+
+
+        .diagram{font-family:'Courier New',monospace;background:#1e293b;color:#a5f3fc;padding:1.5rem;border-radius:8px;overflow-x:auto;font-size:.85rem;line-height:1.5;margin:1.5rem 0;white-space:pre}
+
+
+
+
+
+
+
+        .faq-item{margin:1rem 0;padding:1rem;background:#f8fafc;border-radius:8px}
+
+
+
+
+
+
+
+        .faq-q{font-weight:600;color:#1e3a5f;margin-bottom:.3rem}
+
+
+
+
+
+
+
+        .faq-a{color:#475569}
+
+
+
+
+
+
+
+        footer{padding:3rem 1.5rem;background:#f5f5f7;border-top:1px solid #d2d2d7;text-align:center;color:#86868b;font-size:.85rem}
+
+
+
+
+
+
+
+        .related-links{margin:2rem 0;padding:1.5rem;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0}
+
+
+
+
+
+
+
+        .related-links a{display:block;padding:.3rem 0}
+
+
+
+
+
+
+
+        @media(max-width:768px){h1{font-size:1.6rem}.diagram{font-size:.75rem}}
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "TechArticle",
+
+
+
+
+
+
+
+  "headline": "CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
+
+
+
+
+
+
+
+  "description": "Complete TTL RGB pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens DB-25 pin mappings with signal voltage specs.",
+
+
+
+
+
+
+
+  "author": {"@type":"Organization","name":"Kongto Technology"},
+
+
+
+
+
+
+
+  "datePublished": "2026-06-28",
+
+
+
+
+
+
+
+  "publisher": {"@type":"Organization","name":"Kongto Technology"}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "FAQPage",
+
+
+
+
+
+
+
+  "mainEntity": [
+
+
+
+
+
+
+
+    {"@type":"Question","name":"What is TTL RGB signal in CNC displays?","acceptedAnswer":{"@type":"Answer","text":"TTL RGB (Transistor-Transistor Logic Red Green Blue) is a digital video signaling standard used in older CNC CRT displays. It uses 0-5V logic levels for each color channel plus separate horizontal and vertical sync signals. This differs from analog VGA where video signals are 0-0.7V analog."}},
+
+
+
+
+
+
+
+    {"@type":"Question","name":"Can I connect a TTL RGB CRT to a VGA monitor?","acceptedAnswer":{"@type":"Answer","text":"Not directly. TTL RGB operates at 5V logic levels while VGA uses 0.7V analog. Connecting TTL directly to VGA can damage the monitor. A TTL-to-VGA converter or a direct drop-in LCD replacement module is required. Kongto LCD modules accept TTL RGB directly."}},
+
+
+
+
+
+
+
+    {"@type":"Question","name":"What connector does FANUC use for CRT displays?","acceptedAnswer":{"@type":"Answer","text":"FANUC CRT displays use the Honda MR-20M 20-pin round connector. Pins 1-3 carry Red/Green/Blue video, pins 4-5 carry H/V sync, and pin 6 is chassis ground. Power is provided separately via DC 24V on pins 8-9 and 18-19."}},
+
+
+
+
+
+
+
+    {"@type":"Question","name":"What is the pinout for Siemens SINUMERIK CRT displays?","acceptedAnswer":{"@type":"Answer","text":"Siemens SINUMERIK CRT displays typically use a DB-25 (25-pin D-sub) connector. Pin 2 = Red, Pin 3 = Green, Pin 4 = Blue, Pin 6 = HSync, Pin 7 = VSync. Power varies by model — some use AC 110-220V, others DC 24V."}},
+
+
+
+
+
+
+
+    {"@type":"Question","name":"Do I need to rewire when replacing a CNC CRT with LCD?","acceptedAnswer":{"@type":"Answer","text":"With Kongto plug-and-play LCD modules, no rewiring is needed. Each module uses the exact same connector and pinout as the original CRT — Honda MR-20M for FANUC, 20-pin for Mitsubishi, DB-25 for Siemens. Just unplug the CRT and plug in the LCD."}}
+
+
+
+
+
+
+
+  ]
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+    <header>
+
+
+
+
+
+
+
+        <nav>
+
+
+
+
+
+
+
+            <a href="/" class="logo">Kongto Technology</a>
+
+
+
+
+
+
+
+            <div class="nav-links">
+
+
+
+
+
+
+
+                <a href="/">Home</a><a href="/zh/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/zh/products/">Products</a>
+
+
+
+
+
+
+
+                <a href="/zh/posts/">Articles</a>
+
+
+
+
+
+
+
+                <a href="/zh/case-studies.html">Cases</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">About</a>
+
+
+
+
+
+
+
+                <a href="/zh/contact.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a href="/zh/search.html" class="nav-search">🔍 Search</a>
+
+
+
+
+
+
+
+            <div class="lang-switch">
+
+
+
+
+
+
+
+                <a href="/zh/guides/ttl-rgb-signal-pinout-guide.html" lang="en" class="lang-en">English</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+    <main>
+
+
+
+
+
+
+
+        <nav style="font-size:.9rem;color:#666;margin-bottom:1rem;">
+
+
+
+
+
+
+
+            <a href="/">Home</a> / <a href="/zh/posts/">Articles</a> / <strong>TTL RGB Pinout Guide</strong>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h1>CNC TTL RGB Signal Pinout Guide<br><span style="font-size:1.1rem;font-weight:400;color:#6b7280;">FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference</span></h1>
+
+
+
+
+
+
+
+        <p class="meta">Technical Reference Guide · Updated June 2026 · 10 min read</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p>When replacing an aging CRT display on a CNC machine with a modern LCD module, understanding the <strong>TTL RGB signal pinout</strong> is critical. Each CNC manufacturer uses a different connector and signal arrangement. This guide provides the complete pin mapping for the three most common protocols: <strong>FANUC Honda MR-20M</strong>, <strong>Mitsubishi 20/26-pin</strong>, and <strong>Siemens DB-25</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="highlight">
+
+
+
+
+
+
+
+            <strong>Key takeaway:</strong> Kongto plug-and-play LCD modules match the original pinout exactly — no rewiring, no adapter boards, no CNC parameter changes needed. This reference is provided for engineers who need to understand the signal path or are working with custom integrations.
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>1. What is TTL RGB?</h2>
+
+
+
+
+
+
+
+        <p>TTL RGB is a <strong>digital</strong> video signaling standard. Unlike VGA which uses <strong>analog</strong> 0-0.7V signals, TTL RGB operates at <strong>0-5V logic levels</strong> (TTL = Transistor-Transistor Logic). Key differences from VGA:</p>
+
+
+
+
+
+
+
+        <table>
+
+
+
+
+
+
+
+            <tr><th>Parameter</th><th>TTL RGB (CNC CRT)</th><th>VGA (Standard Monitor)</th></tr>
+
+
+
+
+
+
+
+            <tr><td>Video Signal Level</td><td>0-5V Digital (On/Off per channel)</td><td>0-0.7V Analog (Continuous)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Number of Colors</td><td>8 (3-bit: 2³ R/G/B)</td><td>16.7M (8-bit per channel)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Sync Signal</td><td>Separate H & V (TTL 0-5V)</td><td>Separate or Composite H/V</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Horizontal Freq</td><td>15.75 kHz (typically)</td><td>31-80 kHz</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Connector</td><td>Varies by brand (see below)</td><td>DE-15 (HD-15)</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="note">
+
+
+
+
+
+
+
+            <strong>⚠ Important:</strong> TTL RGB operates at 5V — connecting it directly to a standard VGA monitor input (which expects 0.7V) can damage the monitor's input circuits. Use a TTL-to-VGA converter or a dedicated CNC LCD replacement module.
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>2. FANUC — Honda MR-20M 20-Pin Connector</h2>
+
+
+
+
+
+
+
+        <p>FANUC CRT displays (A61L series, MDT947B, D9MM-11A, D14CM-01A) use the <strong>Honda MR-20M</strong> 20-pin round connector. This is the most common interface in CNC CRT displays, found on FANUC 0, 0i, 16i, 18i, and 21i series controls.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>Signal Pinout (viewed from display side)</h3>
+
+
+
+
+
+
+
+        <div class="diagram">Honda MR-20M (Female, Display Side)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        (1)  (2)  (3)  (4)  (5)
+
+
+
+
+
+
+
+      (6)  (7)  (8)  (9)  (10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   (11) (12) (13) (14) (15)
+
+
+
+
+
+
+
+ (16) (17) (18) (19) (20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pin  Signal     Color     Notes
+
+
+
+
+
+
+
+─────────────────────────────────
+
+
+
+
+
+
+
+1    Red Video  Red       0-5V TTL
+
+
+
+
+
+
+
+2    Green Video Green    0-5V TTL
+
+
+
+
+
+
+
+3    Blue Video Blue      0-5V TTL
+
+
+
+
+
+
+
+4    HSync      Yellow    Horizontal Sync (TTL)
+
+
+
+
+
+
+
+5    VSync      White     Vertical Sync (TTL)
+
+
+
+
+
+
+
+6    GND        Black     Chassis Ground
+
+
+
+
+
+
+
+7    NC          —         Not Connected
+
+
+
+
+
+
+
+8    DC +24V    Red/White Power Supply (+)
+
+
+
+
+
+
+
+9    DC +24V    Red/White Power Supply (+)
+
+
+
+
+
+
+
+10   GND        Black     Power Ground
+
+
+
+
+
+
+
+11   GND        Black     Signal Ground (Red return)
+
+
+
+
+
+
+
+12   GND        Black     Signal Ground (Green return)
+
+
+
+
+
+
+
+13   GND        Black     Signal Ground (Blue return)
+
+
+
+
+
+
+
+14   GND        Black     Signal Ground (HSync return)
+
+
+
+
+
+
+
+15   GND        Black     Signal Ground (VSync return)
+
+
+
+
+
+
+
+16-17 NC         —         Not Connected
+
+
+
+
+
+
+
+18   DC +24V    Red/White Power Supply (+)
+
+
+
+
+
+
+
+19   DC +24V    Red/White Power Supply (+)
+
+
+
+
+
+
+
+20   GND        Black     Power Ground</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="note">
+
+
+
+
+
+
+
+            <strong>Note:</strong> Some FANUC 9-inch monochrome CRTs use only the Green channel (Pin 2) for video — Red and Blue may be unused. The sync signals are always present on Pins 4 and 5.
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p><strong>Compatible Kongto LCD modules:</strong> <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">A61L-0001-0093</a>, <a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html">A61L-0001-0074</a>, <a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html">A61L-0001-0092</a>, <a href="">D14CM-01A</a> — all use direct Honda MR-20M connection.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>3. Mitsubishi — 20-Pin / 26-Pin Connector</h2>
+
+
+
+
+
+
+
+        <p>Mitsubishi CNC displays (MDT962B, BM09DF, MDT1283B, FCUA-CT100) typically use a <strong>20-pin or 26-pin rectangular connector</strong>. The pinout varies slightly by model generation (M64 vs M500 vs M700).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>Mitsubishi 20-pin Signal Pinout (MDT962B / BM09DF)</h3>
+
+
+
+
+
+
+
+        <table class="pin-table">
+
+
+
+
+
+
+
+            <tr><th>Pin</th><th>Signal</th><th>Notes</th></tr>
+
+
+
+
+
+
+
+            <tr><td>1</td><td>GND</td><td>Power/Signal Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>2</td><td>GND</td><td>Power/Signal Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>3</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>4</td><td>Red Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>5</td><td>Green Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>6</td><td>Blue Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>7</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>8</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>9</td><td>HSync</td><td>Horizontal Sync (TTL)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>10</td><td>VSync</td><td>Vertical Sync (TTL)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>11</td><td>GND</td><td>Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>12</td><td>GND</td><td>Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>13</td><td>DC +24V</td><td>Power Supply</td></tr>
+
+
+
+
+
+
+
+            <tr><td>14</td><td>DC +24V</td><td>Power Supply</td></tr>
+
+
+
+
+
+
+
+            <tr><td>15</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>16-20</td><td>GND</td><td>Ground</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p><strong>Compatible Kongto LCD modules:</strong> <a href="/zh/products/mitsubishi-mdt962b-lcd-upgrade.html">MDT962B LCD Upgrade</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>4. Siemens — DB-25 (25-Pin D-Sub) Connector</h2>
+
+
+
+
+
+
+
+        <p>Siemens SINUMERIK CRT displays (6FC3998-7FA20, 6FC5103-0AB01, 6FC3997-7FA20) use a standard <strong>DB-25 female connector</strong>. The pinout follows the Siemens video interface standard.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>Siemens DB-25 Signal Pinout</h3>
+
+
+
+
+
+
+
+        <table class="pin-table">
+
+
+
+
+
+
+
+            <tr><th>Pin</th><th>Signal</th><th>Notes</th></tr>
+
+
+
+
+
+
+
+            <tr><td>1</td><td>GND (Chassis)</td><td>Frame Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>2</td><td>Red Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>3</td><td>Green Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>4</td><td>Blue Video</td><td>0-5V TTL</td></tr>
+
+
+
+
+
+
+
+            <tr><td>5</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>6</td><td>HSync</td><td>Horizontal Sync (TTL)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>7</td><td>VSync</td><td>Vertical Sync (TTL)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>8</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>9</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>10</td><td>NC</td><td>Not Connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>11</td><td>GND</td><td>Ground</td></tr>
+
+
+
+
+
+
+
+            <tr><td>12</td><td>GND</td><td>Ground (Red return)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>13</td><td>GND</td><td>Ground (Green return)</td></tr>
+
+
+
+
+
+
+
+            <tr><td>14-18</td><td>GND / NC</td><td>Various ground / not connected</td></tr>
+
+
+
+
+
+
+
+            <tr><td>19-25</td><td>GND</td><td>Ground</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="note">
+
+
+
+
+
+
+
+            <strong>Note:</strong> Siemens CRT power varies by model. 6FC3998 series typically uses AC 110-220V internal supply, while 6FC5103 series uses DC 24V. Kongto LCD modules match the original power input of each specific model.
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p><strong>Compatible Kongto LCD modules:</strong> <a href="">6FC5103-0AB01</a>, <a href="/zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html">6FC3988-7FA20</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>5. TTL to VGA Conversion</h2>
+
+
+
+
+
+
+
+        <p>If you need to convert TTL RGB to standard VGA (e.g., for testing or using a standard monitor), the signal path requires:</p>
+
+
+
+
+
+
+
+        <ol style="margin:1rem 0;padding-left:1.5rem;">
+
+
+
+
+
+
+
+            <li><strong>Level shifting:</strong> TTL 5V signals must be attenuated to VGA 0.7V using resistor dividers or a dedicated converter IC</li>
+
+
+
+
+
+
+
+            <li><strong>Sync adaptation:</strong> TTL sync (15.75 kHz) may need frequency doubling for modern VGA monitors that expect 31 kHz+</li>
+
+
+
+
+
+
+
+            <li><strong>Connector conversion:</strong> Honda MR-20M or DB-25 to DE-15 (HD-15 VGA connector)</li>
+
+
+
+
+
+
+
+        </ol>
+
+
+
+
+
+
+
+        <p>Kongto offers <strong>drop-in LCD replacement modules</strong> that bypass the need for conversion entirely — they accept TTL RGB directly and display at 800x600 or 1024x768 resolution. No level shifting or sync conversion needed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>6. Troubleshooting Common Signal Issues</h2>
+
+
+
+
+
+
+
+        <table>
+
+
+
+
+
+
+
+            <tr><th>Symptom</th><th>Probable Cause</th><th>Solution</th></tr>
+
+
+
+
+
+
+
+            <tr><td>No display (black screen)</td><td>Power supply failure, CRT dead, or signal cable disconnected</td><td>Verify DC 24V at connector pins. Check cable continuity. Replace CRT with LCD module.</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Rolling image (no sync)</td><td>Missing or incorrect H/V sync signal</td><td>Check pins 4 (HSync) and 5 (VSync) continuity. Verify cable pinout matches display spec.</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Wrong colors or missing color</td><td>One or more R/G/B channels disconnected</td><td>Check pins 1-3 (R/G/B) continuity. On monochrome CRTs, only Green channel is used.</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Dim display</td><td>CRT tube aging, flyback transformer weak</td><td>Replace CRT with LCD module — brightness increases from ~200 to 400 cd/m².</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Flickering / jitter</td><td>Power supply ripple, loose connections, CRT aging</td><td>Check DC 24V stability (should be ±5%). Replace CRT with flicker-free LCD.</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>7. Quick Reference: Pinout Comparison</h2>
+
+
+
+
+
+
+
+        <table>
+
+
+
+
+
+
+
+            <tr><th>Signal</th><th>FANUC (Honda MR-20M)</th><th>Mitsubishi (20-pin)</th><th>Siemens (DB-25)</th></tr>
+
+
+
+
+
+
+
+            <tr><td>Red Video</td><td>Pin 1</td><td>Pin 4</td><td>Pin 2</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Green Video</td><td>Pin 2</td><td>Pin 5</td><td>Pin 3</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Blue Video</td><td>Pin 3</td><td>Pin 6</td><td>Pin 4</td></tr>
+
+
+
+
+
+
+
+            <tr><td>HSync</td><td>Pin 4</td><td>Pin 9</td><td>Pin 6</td></tr>
+
+
+
+
+
+
+
+            <tr><td>VSync</td><td>Pin 5</td><td>Pin 10</td><td>Pin 7</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Power (DC 24V)</td><td>Pins 8, 9, 18, 19</td><td>Pins 13, 14</td><td>Varies by model</td></tr>
+
+
+
+
+
+
+
+            <tr><td>Ground</td><td>Pins 6, 10-15, 20</td><td>Pins 1, 2, 11, 12, 16-20</td><td>Pins 1, 11-25</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Frequently Asked Questions</h2>
+
+
+
+
+
+
+
+        <div class="faq-item">
+
+
+
+
+
+
+
+            <div class="faq-q">Q: What is the voltage level of CNC TTL RGB signals?</div>
+
+
+
+
+
+
+
+            <div class="faq-a">A: Standard TTL levels are 0V (logic low) to +5V (logic high). This is consistent across FANUC, Mitsubishi, and Siemens CNC CRT interfaces. Some older systems may use +3.3V logic on newer revisions.</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="faq-item">
+
+
+
+
+
+
+
+            <div class="faq-q">Q: Can I test my CNC CRT signals with a multimeter?</div>
+
+
+
+
+
+
+
+            <div class="faq-a">A: Yes. With the CNC powered on and running, measure DC voltage at the signal pins. H/V sync pins typically show 2-3V DC average (pulsing). Video pins show 0-5V depending on displayed content. A 5V DC reading on a video pin means that color channel is at full intensity.</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="faq-item">
+
+
+
+
+
+
+
+            <div class="faq-q">Q: What if my CNC display has a different connector than listed here?</div>
+
+
+
+
+
+
+
+            <div class="faq-a">A: Some OEMs used custom connectors. Send a clear photo of your CRT display label and connector to <strong>info@cncdisplay.com</strong> — our engineering team will identify the pinout and confirm compatibility within 24 hours.</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="related-links">
+
+
+
+
+
+
+
+            <p style="font-weight:bold;color:#1e3a5f;margin-bottom:.5rem;">📘 Related Resources</p>
+
+
+
+
+
+
+
+            <a href="/zh/compatibility-matrix.html">→ 52 Model Compatibility Matrix — Find your CRT model</a>
+
+
+
+
+
+
+
+            <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">→ FANUC A61L-0001-0093 LCD Replacement (Honda MR-20M)</a>
+
+
+
+
+
+
+
+            <a href="/zh/products/mitsubishi-mdt962b-lcd-upgrade.html">→ Mitsubishi MDT962B LCD Replacement (20-pin)</a>
+
+
+
+
+
+
+
+            <a href="">→ Siemens 6FC5103-0AB01 LCD Replacement (DB-25)</a>
+
+
+
+
+
+
+
+            <a href="">→ Toshiba D14CM-01A LCD Replacement (Honda MR-20M)</a>
+
+
+
+
+
+
+
+            <a href="/zh/products/no-display.html">→ CNC Monitor No Display — Troubleshooting Guide</a>
+
+
+
+
+
+
+
+            <a href="/zh/products/flickering-screen.html">→ CRT Flickering Screen — Diagnosis & Fix</a>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <footer>
+
+
+
+
+
+
+
+        <div class="footer-content">
+
+
+
+
+
+
+
+            <div class="footer-brand">
+
+
+
+
+
+
+
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+
+
+
+
+
+
+
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/posts/">📄 Articles</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/FANUC.html">FANUC</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Mitsubishi.html">Mitsubishi</a>
+
+
+
+
+
+
+
+                <a href="/zh/brands/Siemens.html">Siemens</a>
+
+
+
+
+
+
+
+                <a href="/zh/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/zh/about.html">About Us</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+
+
+
+
+
+
+
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/zh/glossary.html">术语表</a>
+
+
+
+
+
+
+
+                <a href="/zh/crt-dead-symptoms.html">CRT故障</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-tool.html">对比工具</a>
+
+
+
+
+
+
+
+                <a href="/zh/comparison-kongto-vs-competitors.html">竞品对比</a>
+
+
+
+
+
+
+
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+
+
+
+
+
+
+
+                <a href="/zh/privacy.html">隐私</a>
+
+
+
+
+
+
+
+                <a href="/zh/terms.html">条款</a>
+
+
+
+
+
+
+
+                <a href="/zh/sitemap.xml">站点地图</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
