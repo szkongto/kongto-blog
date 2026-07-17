@@ -156,35 +156,34 @@ MANUAL = {
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
     ],
     'haas-12inch-9pin-crt-lcd-upgrade.html': [
-        ('Haas_哈斯/550老版本/Haas_Monitor_03.jpg', 'lcd_front'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_04.jpg', 'lcd_back'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_05.jpg', 'crt'),
+        ('Haas_哈斯/HAAS-V2.5-1904-01.jpg', 'lcd_front'),
+        ('Haas_哈斯/HAAS-V2.5-1904-04.jpg', 'lcd_back'),
     ],
     'haas-28hm-nm4-lcd-upgrade.html': [
-        ('Haas_哈斯/550老版本/Haas_Monitor_03.jpg', 'lcd_front'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_04.jpg', 'lcd_back'),
+        ('Haas_哈斯/HAAS-V2.5-1904-01.jpg', 'lcd_front'),
+        ('Haas_哈斯/HAAS-V2.5-1904-04.jpg', 'lcd_back'),
     ],
     'haas-9-pin-monochrome-lcd-upgrade.html': [
-        ('Haas_哈斯/550老版本/Haas_Monitor_05.jpg', 'lcd_front'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_06.jpg', 'lcd_back'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_09.jpg', 'crt'),
+        ('Haas_哈斯/Haas 9-pin  CRT to lcd.jpg', 'lcd_front'),
+        ('Haas_哈斯/Haas_9pin_LCD.jpg', 'lcd_back'),
+        ('Haas_哈斯/haas_9pin.jpg', 'crt'),
     ],
     'haas-9pin-mono-crt-lcd-upgrade.html': [
-        ('Haas_哈斯/550老版本/Haas_Monitor_03.jpg', 'lcd_front'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_06.jpg', 'lcd_back'),
-        ('Haas_哈斯/550老版本/Haas_Monitor_09.jpg', 'crt'),
+        ('Haas_哈斯/Haas 9-pin display CRT to lcd.jpg', 'lcd_front'),
+        ('Haas_哈斯/Haas_9pin_LCD.jpg', 'lcd_back'),
+        ('Haas_哈斯/haas_9pin.jpg', 'crt'),
     ],
     'heidenhain-bc110-lcd-upgrade.html': [
-        ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
-        ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
     ],
     'heidenhain-be211-lcd-upgrade.html': [
-        ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
-        ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
     ],
     'heidenhain-be411-lcd-upgrade.html': [
-        ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
-        ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS.jpg', 'lcd_front'),
+        ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT-925PS/MDT-925PS(2).jpg', 'lcd_back'),
     ],
     'image-retention.html': [
         ('FANUC/0096/安装替换效果.jpg', 'effect'),
@@ -192,9 +191,9 @@ MANUAL = {
         ('FANUC/0093/发现crt老化问题.jpg', 'crt'),
     ],
     'matsushita-tx1450ab-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器-1.jpg', 'label'),
+        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
     'mazak-14-inch-crt-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
@@ -203,9 +202,9 @@ MANUAL = {
         ('MAZAK马扎克-日立/CDM1472D1M/MAZAK 替代效果.jpg', 'effect'),
     ],
     'mazak-aiqa8dsp40-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/AIQA8DSP40/Mazak  CRT  AIQA8DSP40.jpg', 'crt'),
         ('MAZAK马扎克-日立/AIQA8DSP40/Mazak  AIQA8DSP40.jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/AIQA8DSP40/IMG_20240524_161739.jpg', 'lcd_back'),
+        ('MAZAK马扎克-日立/AIQA8DSP40/Mazak  CRT  AIQA8DSP40.jpg', 'crt'),
     ],
     'mazak-c5470ns-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/C-5470NS/C-5470NS_副本.jpg', 'lcd_front'),
@@ -231,6 +230,7 @@ MANUAL = {
     'mazak-cd1472-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-06.jpg', 'lcd_back'),
+        ('MAZAK马扎克-日立/DR5614 LCD Mazatrol T-32-2/CRT.jpg', 'crt'),
         ('MAZAK马扎克-日立/CDM1472D1M/MAZAK 替代效果.jpg', 'effect'),
     ],
     'mazak-dr5614-lcd-upgrade.html': [
@@ -257,17 +257,10 @@ MANUAL = {
         ('MAZAK马扎克-日立/CDM1472D1M/1472-01.jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/CDM1472D1M/1472-02.jpg', 'lcd_back'),
     ],
-        'mitsubishi-bm09df-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100_2.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/BM09DF-11.jpg', 'crt'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/替代效果正面.jpg', 'effect'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/三菱信号连接线.jpg', 'connector'),
-    ],
     'mitsubishi-c3470-crt-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-06.jpg', 'lcd_back'),
-        ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-02.jpg', 'effect'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100_3.jpg', 'lcd_front'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
+        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
     ],
     'mitsubishi-c5470-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/C-5470NS/C-5470NS_副本.jpg', 'lcd_front'),
@@ -275,17 +268,10 @@ MANUAL = {
         ('MAZAK马扎克-日立/C-5470NS/20160125113005.jpg', 'crt'),
         ('MAZAK马扎克-日立/C-5470NS/20160125112843.jpg', 'label'),
     ],
-        'mitsubishi-fcua-ct100-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100-04.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/FCUA-CT1001.jpg', 'crt'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/MDT962B-1A_BM09DF_FCUA-CT100-01.jpg', 'effect'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/FCUA-CT100.jpg', 'label'),
-    ],
     'mitsubishi-kf-m7099h-lcd-upgrade.html': [
-        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/Matsushita/KF-M7099H显示器-1.jpg', 'label'),
+        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
     'mitsubishi-mdt-1283b-lcd-upgrade.html': [
         ('案例/三菱MDT1283B-1A- 12CRT单色-东莞-KTV148/mdt1283b-1a.jpg', 'lcd_front'),
@@ -302,18 +288,6 @@ MANUAL = {
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092-1.jpg', 'lcd_front'),
         ('其它更多品牌CRT替换方案订制案例/TOTOKU/TOTOKU MDT947B-1B  A61L-0001-0092/MDT947B-1B-A61L-0001-0092.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0.JPG', 'crt'),
-    ],
-        'mitsubishi-mdt962b-lcd-upgrade.html': [
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶LCD正面测试效果.jpg', 'lcd_front'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/LCD背面图.png', 'lcd_back'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A.jpg', 'crt'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/液晶替代效果/三菱显示器替换效果.jpg', 'effect'),
-        ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/老CRT/Totoku Electric - CRT MDT962B-1A-LABEL.jpg', 'label'),
-    ],
-        'mitsubishi-tx-1450ab-lcd-upgrade.html': [
-        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
-        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
-        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
     'no-display.html': [
         ('FANUC/0093/发现crt老化问题.jpg', 'crt'),
@@ -346,14 +320,14 @@ MANUAL = {
         ('Okuma 5000-5020/OKUMA 5020-81.jpg', 'effect'),
     ],
     'siemens-6fc3988-7fa20-lcd-upgrade.html': [
-        ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
         ('SIM西门子/6FC3988-7FA20-PIC.jpg', 'lcd_front'),
+        ('SIM西门子/6FC3988-7FA20-CRT.jpg', 'crt'),
         ('SIM西门子/6FC3988-7FA20-PCB.jpg', 'lcd_back'),
     ],
     'siemens-6fc3998-7fa20-lcd-upgrade.html': [
         ('SIM西门子/SM西门子新版/6FC3998-7FA20 Siemens-SM0901 9 MONOCHROME 579417 TA.jpg', 'lcd_front'),
-        ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_CRT.jpg', 'crt'),
         ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_TFT.jpg', 'lcd_back'),
+        ('SIM西门子/SM西门子新版/Siemens-SM0901-579417 TA_CRT.jpg', 'crt'),
     ],
     'siemens-6fc5103-lcd-upgrade.html': [
         ('SIM西门子/Siemens-SM1200 LCD B.jpg', 'lcd_front'),
@@ -382,19 +356,24 @@ MANUAL = {
         ('SIM西门子/SM1200 CRT.jpg', 'crt'),
     ],
     'toshiba-d14cm-01a-lcd-upgrade.html': [
-        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
         ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
+        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
     ],
     'toshiba-d15cm-lcd-upgrade.html': [
         ('FANUC/0095/0095-d9cm-01a.jpg', 'lcd_front'),
         ('FANUC/0097/A61L-0001-0097 LCD背面照.jpg', 'lcd_back'),
         ('FANUC/0097/A61L-0001-0097 CRT.jpg', 'crt'),
     ],
-        'toshiba-d9mm-11a-lcd-upgrade.html': [
-        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
+    'toshiba-d9mm-11a-lcd-upgrade.html': [
         ('FANUC/0096/A61L-0001-0096 LCD正面照片.JPG', 'lcd_front'),
         ('FANUC/0096/A61L-0001-0096 LCD背面照片.jpg', 'lcd_back'),
+        ('FANUC/0096/D14CM-01A 0096 CRT标签型号.jpg', 'label'),
+    ],
+    'mitsubishi-tx-1450ab-lcd-upgrade.html': [
+        ('FANUC/0074-0094/0074-94.jpg', 'lcd_front'),
+        ('FANUC/0074-0094/0074-94-02.jpg', 'lcd_back'),
+        ('其它更多品牌CRT替换方案订制案例/Matsushita/Matsushita - CRT  KF-M7099H.jpg', 'crt'),
     ],
 }
 
