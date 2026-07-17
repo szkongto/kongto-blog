@@ -93,9 +93,8 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/0092-0086-0076-BM.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/QQ图片20190910164309.jpg', 'crt'),
     ],
-    'fanuc-a61l-0001-0093-lcd-upgrade.html': [
-        # User GIMP-processed image is already in /images/
-        # Keep existing, other images from source
+        'fanuc-a61l-0001-0093-lcd-upgrade.html': [
+        ('FANUC/0093/A61L-0001-0093-12.jpg', 'lcd_front'),
         ('FANUC/0093/最新款0093-V3.4 LCD/Fanuc 0093 背面安装后实拍图.jpg', 'lcd_back'),
         ('FANUC/0093/老CRT显示器/Fanuc - CRT A61L-0001-0093.jpg', 'crt'),
         ('FANUC/0093/老CRT显示器/Fanuc - CRT A61L-0001-0093 LABEL  KF-M7099H.jpg', 'label'),
