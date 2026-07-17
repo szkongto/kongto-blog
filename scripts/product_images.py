@@ -517,6 +517,9 @@ def main():
 
     for fname in products_to_process:
         entries = MANUAL[fname]
+        # Sort by type priority: lcd_front, lcd_back, effect, label, crt, connector
+        type_order = {'lcd_front':0, 'lcd_back':1, 'effect':2, 'label':3, 'crt':4, 'connector':5, 'lcd':6, 'product':7, 'unknown':8}
+        entries.sort(key=lambda e: type_order.get(e[1], 99))
         base = fname.replace('.html', '')
         print(f"\n  {fname}")
 
