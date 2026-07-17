@@ -212,21 +212,6 @@ MANUAL = {
         ('MAZAK马扎克-日立/C-5470NS/20160125113005.jpg', 'crt'),
         ('MAZAK马扎克-日立/C-5470NS/QQ图片20160125112912.jpg', 'label'),
     ],
-    'mazak-cd0910-dm-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-01.jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-02.jpg', 'lcd_back'),
-        ('MAZAK马扎克-日立/CDM1472D1M/MAZAK 替代效果.jpg', 'effect'),
-    ],
-    'mazak-cd1283-d1m-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT-1283B-1A Mazak .jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT1283-2021-V2.62-03.jpg', 'lcd_back'),
-        ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT1283-2021-V2.62-04.jpg', 'crt'),
-    ],
-    'mazak-cd1472-d2m-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-06.jpg', 'lcd_back'),
-        ('MAZAK马扎克-日立/CDM1472D1M/MAZAK 替代效果.jpg', 'effect'),
-    ],
     'mazak-cd1472-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-01.jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/CDM1472D1M/CD1472D1M-06.jpg', 'lcd_back'),
@@ -239,10 +224,6 @@ MANUAL = {
         ('MAZAK马扎克-日立/DR5614 LCD Mazatrol T-32-2/CRT.jpg', 'crt'),
         ('MAZAK马扎克-日立/DR5614 LCD Mazatrol T-32-2/DR5614 LCD Mazatrol T-32-2替代效果.jpg', 'effect'),
     ],
-    'mazak-du3461g-l-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-01.jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-02.jpg', 'lcd_back'),
-    ],
     'mazak-mdt1283b-1a-lcd-upgrade.html': [
         ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT-1283B-1A Mazak .jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT1283-2021-V2.62-03.jpg', 'lcd_back'),
@@ -252,10 +233,6 @@ MANUAL = {
         ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT-1283B-1A Mazak .jpg', 'lcd_front'),
         ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT1283-2021-V2.62-05.jpg', 'lcd_back'),
         ('MAZAK马扎克-日立/MDT-1283-V2.62-1600/MDT1283-2021-V2.62-04.jpg', 'crt'),
-    ],
-    'mazak-t3021-ah-lcd-upgrade.html': [
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-01.jpg', 'lcd_front'),
-        ('MAZAK马扎克-日立/CDM1472D1M/1472-02.jpg', 'lcd_back'),
     ],
     'mitsubishi-c3470-crt-lcd-upgrade.html': [
         ('三菱/SL三菱8.4（MDT962B,BM09DF,FCUA-CT100,FCU6-DSE71-1）/V3.4B/MDT962B-1A_BM09DF_FCUA-CT100_3.jpg', 'lcd_front'),
@@ -377,7 +354,6 @@ MANUAL = {
     ],
 }
 
-
 def find_case_insensitive(base, rel_path):
     """Find file with case-insensitive path matching"""
     parts = rel_path.replace('\\', '/').split('/')
@@ -401,7 +377,6 @@ def find_case_insensitive(base, rel_path):
             else:
                 return None
     return current if os.path.isfile(current) else None
-
 
 def process_image(src_path, dst_path, use_rembg=False):
     """Process single image: resize to 800x800 canvas. Optionally remove bg."""
@@ -451,7 +426,6 @@ def process_image(src_path, dst_path, use_rembg=False):
 
     return True
 
-
 def update_gallery_thumbs(html_path, image_names):
     """Update HTML gallery-thumbs to reference new images"""
     with open(html_path, 'r', encoding='utf-8', errors='replace') as f:
@@ -496,7 +470,6 @@ def update_gallery_thumbs(html_path, image_names):
         f.write(html)
 
     return True
-
 
 def main():
     os.chdir(r'd:\code\seo_deploy')
@@ -555,10 +528,6 @@ def main():
 
     print(f"\nDone! {len(products_to_process)} products processed.")
 
-
 if __name__ == '__main__':
     main()
-
-
-
 
