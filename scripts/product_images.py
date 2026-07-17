@@ -81,12 +81,11 @@ MANUAL = {
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/8DS_1646_副本.JPG', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/A61L-0001-0086  monitor.jpg', 'label'),
     ],
-            'fanuc-a61l-0001-0090-lcd-upgrade.html': [
-        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/FANUC A61L-0001-0090-LED.jpg', 'lcd_front'),
-        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/A61L-0001-0090-0M-SYSTEM.jpg', 'lcd_back'),
-        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/90.jpg', 'effect'),
-        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/A61L-0001-0090-LBL.jpg', 'label'),
+                'fanuc-a61l-0001-0090-lcd-upgrade.html': [
+        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/FANUC A61L-0001-0090-800M-02.jpg', 'lcd_front'),
+        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/FANUC A61L-0001-0090-800M-06.jpg', 'lcd_back'),
         ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/A61L-0001-0090-0M-CRT.jpg', 'crt'),
+        ('FANUC/0072-0076-0086-0090-0092/21  FANUC_A61l-0001-0090/A61L-0001-0090-LBL.jpg', 'label'),
     ],
         'fanuc-a61l-0001-0092-lcd-upgrade.html': [
         ('FANUC/0072-0076-0086-0090-0092/0092-0086-0076-同款白底-NEW/FANUC A61L-0001-0092-0086-0076-zm.jpg', 'lcd_front'),
