@@ -99,11 +99,11 @@ MANUAL = {
         ('FANUC/0093/老CRT显示器/Fanuc - CRT A61L-0001-0093 LABEL  KF-M7099H.jpg', 'label'),
         ('FANUC/0093/最新款0093-V3.4 LCD/替代实拍照.jpg', 'effect'),
     ],
-            'fanuc-a61l-0001-0094-lcd-upgrade.html': [
+                'fanuc-a61l-0001-0094-lcd-upgrade.html': [
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/8DS_0107.JPG', 'lcd_front'),
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/替换效果/0094-0074安装效果背面.jpg', 'effect'),
+        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/替换效果/A61L-0001-0094_LCDV2.5-05.jpg', 'effect'),
         ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/C14C-1472D1F-A61L-0001-0094#A-LABEL.jpg', 'label'),
-        ('FANUC/0074-0094/Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/0094-1.jpg', 'crt'),
     ],
             'fanuc-a61l-0001-0095-lcd-upgrade.html': [
         ('FANUC/0095/2019-FANUC A61L-0001-0095 V3.4/FANUC A61L-0001-0095 V3.4-02.jpg', 'lcd_front'),
