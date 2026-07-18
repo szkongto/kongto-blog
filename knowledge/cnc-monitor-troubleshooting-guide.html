@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CNC Monitor Troubleshooting Guide | Common CRT Display Problems & Fixes | Kongto</title>
+<meta name="description" content="Diagnose and fix common CNC CRT display problems: blank screen, flickering, dim display, no image, intermittent operation. Solutions for FANUC, Mitsubishi, Mazak, Siemens monitors.">
+<link rel="canonical" href="https://cncdisplay.com/knowledge/cnc-monitor-troubleshooting-guide.html">
+<link rel="stylesheet" href="/css/style.css?v=7">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;font-size:16px}
+.page{max-width:860px;margin:0 auto;padding:2rem 1.5rem}
+.page h1{font-size:2rem;font-weight:700;margin:0 0 0.5rem}
+.page .meta{color:#888;font-size:0.9rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #e2e8f0}
+.page h2{font-size:1.4rem;font-weight:700;margin:2rem 0 1rem;border-bottom:2px solid #FF6600;padding-bottom:0.5rem}
+.page h3{font-size:1.15rem;font-weight:700;margin:1.5rem 0 0.75rem}
+.page p{margin:0 0 1rem;color:#444}
+.page ul,.page ol{line-height:1.8;padding-left:1.5rem;margin:0 0 1.2rem}
+.page li{margin-bottom:0.3rem;color:#444}
+.cta-box{background:#f0f7ff;padding:1.5rem;border-radius:12px;margin:2rem 0;text-align:center}
+.cta-box a{display:inline-block;padding:12px 28px;background:#FF6600;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin-top:0.5rem}
+.faq-item{border:1px solid #e0e0e0;border-radius:8px;margin:0.75rem 0;overflow:hidden}
+.faq-q{background:#f5f5f7;padding:12px 16px;font-weight:600;cursor:pointer;font-size:0.95rem}
+.faq-q::after{content:"+";float:right;font-size:1.2rem;font-weight:700;color:#FF6600}
+.faq-q.open::after{content:"-"}
+.faq-a{padding:12px 16px;border-top:1px solid #e0e0e0;font-size:0.9rem;color:#555;line-height:1.7}
+nav{display:flex;align-items:center;padding:1rem 1.5rem;max-width:1200px;margin:0 auto;flex-wrap:wrap;gap:1rem}
+nav .logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:#1d1d1f;margin-right:auto}
+.nav-links a{text-decoration:none;color:#555;font-size:0.9rem;margin:0 0.6rem}
+.nav-links a:hover{color:#FF6600}
+footer{padding:2rem 1.5rem;background:#f5f5f7;border-top:1px solid #d2d2d7;text-align:center;font-size:0.9rem;color:#666;margin-top:3rem}
+</style>
+</head>
+<body>
+<main class="page">
+<h1>CNC Monitor Troubleshooting Guide — Common CRT Display Problems</h1>
+<p class="meta">Kongto Technology Engineering Team | Updated July 2026 | 8 min read</p>
+
+<p>CRT displays on CNC machines fail in predictable ways. This guide helps you diagnose the most common symptoms and determine whether repair or LCD replacement is the best solution for your FANUC, Mitsubishi, Mazak, or Siemens CRT display.</p>
+
+<h2>Symptom 1: Blank Screen / No Display</h2>
+<p><strong>Most likely cause:</strong> Flyback transformer failure. The flyback transformer generates the high voltage (10-15kV) needed for the CRT to produce an image. After years of operation, the transformer windings short or the internal rectifier diodes fail.</p>
+<p><strong>Secondary causes:</strong> Horizontal deflection circuit failure, power supply regulation loss, or CRT heater filament burnout.</p>
+<p><strong>Diagnostic check:</strong> If you hear the characteristic CRT whine but see no picture, the flyback is likely working but the video amplifier circuit failed. If no whine and no picture, the flyback or horizontal drive has failed.</p>
+<p><strong><a href="/products/no-display.html">Solution: LCD replacement →</a></strong></p>
+
+<h2>Symptom 2: Dim or Faint Display</h2>
+<p><strong>Most likely cause:</strong> CRT phosphor wear. The phosphor coating on the inside of the CRT screen degrades over time, reducing light output. This is visible after approximately 10,000-15,000 hours of operation.</p>
+<p><strong>Diagnostic check:</strong> If the display is visible but very dim even at maximum brightness adjustment, phosphor wear is the cause. CRT brightness cannot be restored — the tube must be replaced or upgraded.</p>
+<p><strong><a href="/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">Solution: LCD upgrade (sharper, brighter) →</a></strong></p>
+
+<h2>Symptom 3: Flickering or Shrinking Image</h2>
+<p><strong>Most likely cause:</strong> Electrolytic capacitor degradation. Capacitors in the power supply and deflection circuits dry out over time, causing voltage ripple that manifests as flickering, image shrinking, or vertical/horizontal instability.</p>
+<p><strong>Diagnostic check:</strong> If the image flickers after the machine has been on for 30 minutes, capacitors are failing due to heat. Replacing capacitors is possible but other components may fail soon after.</p>
+<p><strong>Solution: LCD replacement eliminates all capacitor-related issues.</strong></p>
+
+<h2>Symptom 4: No Image / Raster Only</h2>
+<p><strong>Most likely cause:</strong> Video amplifier circuit failure or electron gun defect. The CRT has high voltage and deflection but no video signal processing.</p>
+<p><strong>Repair reality:</strong> Finding replacement video amplifier ICs for 1990s-era CRT displays is increasingly difficult. Most repair shops cannot source these parts.</p>
+<p><strong><a href="/products/flickering-screen.html">Solution: LCD upgrade (plug-and-play) →</a></strong></p>
+
+<h2>Symptom 5: Intermittent Display</h2>
+<p><strong>Most likely cause:</strong> Loose internal connectors, cold solder joints, or failing power supply. The display works intermittently when the machine vibrates or heats up.</p>
+<p><strong>Repair reality:</strong> Tracking down intermittent faults can take hours of technician time, often costing more than an LCD replacement.</p>
+<p><strong>Solution: LCD module swap in 10-15 minutes, permanently resolves the issue.</strong></p>
+
+<h2>Repair vs Replace Decision Guide</h2>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0">
+<tr style="background:#1a1a2e;color:#fff"><th>Scenario</th><th>CRT Repair</th><th>LCD Upgrade</th></tr>
+<tr><td>CRT age &lt; 5 years, minor issue</td><td>$200-400, back in 2-5 days</td><td>$155-350, 10-min install</td></tr>
+<tr><td>CRT age &gt; 5 years, dim display</td><td>Not cost-effective, other failures likely</td><td><strong>Recommended</strong> — new 50k hr lifespan</td></tr>
+<tr><td>Multiple machines with failing CRTs</td><td>Expensive, no improvement</td><td><strong>Bulk discount available</strong></td></tr>
+<tr><td>Need brighter/sharper display</td><td>Not possible with CRT</td><td><strong>Major upgrade</strong> — 800x600, 350+ cd/m²</td></tr>
+</table>
+
+<div class="faq-item"><div class="faq-q">How do I know if my CRT is failing vs the CNC control?</div><div class="faq-a" style="display:none">If the CNC machine operates normally but the display is blank, dim, or flickering, the CRT display is failing. Try connecting a known-working display to confirm.</div></div>
+<div class="faq-item"><div class="faq-q">Is CRT repair worth it for old machines?</div><div class="faq-a" style="display:none">Usually not. A repair might extend life by 1-3 years, but other aged components will likely fail. LCD replacement costs less than one repair and provides a permanent solution.</div></div>
+
+<div class="cta-box">
+<h3>Diagnosing a display problem? We can help.</h3>
+<p>Contact us with your machine model and we'll confirm LCD compatibility within 24 hours.</p>
+<a href="/quote.html">Request Compatibility Check →</a>
+</div>
+</main>
+</body>
+</html>

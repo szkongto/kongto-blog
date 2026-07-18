@@ -206,7 +206,31 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://cncdisplay.com/knowledge/cnc-monitor-troubleshooting-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cncdisplay.com/knowledge/crt-vs-lcd-cnc-display-comparison.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/knowledge/fanuc-crt-to-lcd-replacement-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/knowledge/mazak-crt-to-lcd-retrofit-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/knowledge/mitsubishi-cnc-display-replacement-guide.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
