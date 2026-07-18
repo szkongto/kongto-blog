@@ -64,6 +64,16 @@ for src, dst in list(REDIRECTS.items()):
 
 REDIRECTS.update(ADDITIONS)
 
+# Also add /en/posts/ variants for any /posts/ redirect with non-ASCII chars
+# Google indexed Chinese-filename URLs under /en/posts/ that don't exist
+EN_ADDITIONS = {}
+for src, dst in list(REDIRECTS.items()):
+    if src.startswith('/posts/') and any(ord(c) > 127 for c in src):
+        en_src = '/en' + src
+        if en_src not in REDIRECTS:
+            EN_ADDITIONS[en_src] = dst
+REDIRECTS.update(EN_ADDITIONS)
+
 # Build worker JS
 def js_escape(s):
     """Escape string for JS single-quoted string literal."""
@@ -98,6 +108,13 @@ addEventListener('fetch', event => {{
   // Skip root
   if (path === '/' || path === '') {{
     return event.respondWith(fetch(request));
+  }}
+
+  // Collapse double slashes → 301 to clean URL
+  // Google indexed some // URLs (e.g. /en//posts/...) as duplicates
+  if (path.includes('//')) {{
+    const clean = path.replace(/\\/\\/+/g, '/');
+    return event.respondWith(Response.redirect(`${{url.origin}}${{clean}}`, 301));
   }}
 
   // Try exact match first
