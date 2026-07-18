@@ -144,6 +144,13 @@ addEventListener('fetch', event => {{
     }}
   }}
 
+  // Strip /en/ prefix for posts/ and docs/ (migrated to root)
+  // 164 en/posts/ redirect shells deleted — Worker handles redirect instead
+  if (path.startsWith('/en/posts/') || path.startsWith('/en/docs/')) {{
+    const stripped = path.replace(/^\\/en/, '');
+    return event.respondWith(Response.redirect(`${{url.origin}}${{stripped}}`, 301));
+  }}
+
   // Pass through to origin (GitHub Pages)
   event.respondWith(fetch(request));
 }});
