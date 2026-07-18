@@ -9,7 +9,7 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/about.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -224,6 +224,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://cncdisplay.com/knowledge/haas-crt-monitor-replacement-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cncdisplay.com/knowledge/mazak-crt-to-lcd-retrofit-guide.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -231,6 +237,18 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/knowledge/mitsubishi-cnc-display-replacement-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/knowledge/okuma-crt-to-lcd-replacement-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/knowledge/siemens-crt-to-lcd-upgrade-guide.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

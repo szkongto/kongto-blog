@@ -1,215 +1,1714 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNC CRT Failure Symptoms | When to Upgrade to LCD | Kongto</title>
-    <meta name="description" content="Identify CNC CRT display failure symptoms: flickering, dim display, burn-in, color distortion. Repair vs LCD upgrade cost analysis for FANUC, Mitsubishi, Siemens.">
-    <link rel="stylesheet" href="/css/style.css?v=7">
-    <link rel="canonical" href="https://cncdisplay.com/crt-dead-symptoms.html">
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/crt-dead-symptoms.html" />
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/crt-dead-symptoms.html" />
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/crt-dead-symptoms.html" />
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CNC CRT Failure Symptoms | When to Upgrade to LCD | Kongto">
-    <meta property="og:description" content="Identify CNC CRT display failure symptoms: flickering, dim display, burn-in, color distortion. Repair vs LCD upgrade cost analysis for FANUC, Mitsubishi, Siemens.">
-    <meta property="og:url" content="https://cncdisplay.com/crt-dead-symptoms.html">
-    <meta property="og:site_name" content="Kongto Technology">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kongto Technology",
-  "alternateName": ["深圳市江图科技有限公司", "Kongto Technology", "江图科技"],
-  "url": "https://cncdisplay.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://cncdisplay.com/images/logo_256.png"
-  },
-  "foundingDate": "2013",
-  "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions, video signal converters, and custom industrial displays",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Shenzhen",
-    "addressRegion": "Guangdong",
-    "addressCountry": "CN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+86-13686889647",
-    "email": "info@cncdisplay.com",
-    "contactType": "sales",
-    "availableLanguage": ["Chinese", "English"]
-  },
-  "sameAs": [
-    "https://github.com/szkongto",
-    "https://blog.csdn.net/szkongto"
-  ]
-}
-</script>
-    </head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/products/">Products</a>
-                <a href="/posts/">Articles</a>
-                <a href="/case-studies.html">Cases</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="/zh/crt-dead-symptoms.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/crt-dead-symptoms.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-    <main style="max-width:1100px;margin:40px auto;padding:20px;">
-        <h1>CNC CRT Display Failure Symptoms — Diagnosis & Solutions</h1>
-        <p>CRT displays in CNC machines have a typical lifespan of 10,000–20,000 hours (roughly 5–7 years in continuous operation). After this point, failure symptoms become increasingly frequent. This guide helps you diagnose each symptom and decide whether to repair or upgrade to LCD.</p>
-
-        <h2>Symptom Reference Table</h2>
-        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
-            <tr style="background:#1a1a2e;color:#fff;">
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Symptom</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Likely Cause</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Repair Cost</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">LCD Upgrade Cost</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Recommendation</th>
-            </tr>
-            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Dim / Flickering Display</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Aging CRT tube — electron gun nearing end of life</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$400 (tube replacement)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — CRT repair lasts only 3–6 months</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Screen Burn-in / Ghost Image</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Permanent phosphor damage from static display elements</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$300 (tube swap)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — burn-in is irreversible on CRT</td></tr>
-            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Color Distortion / Tint Shift</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Weak or failing electron gun, degaussing circuit failure</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$350</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — color accuracy will continue degrading</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Intermittent Blackouts</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Failing CRT power supply, bad capacitors, or HV section</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$100–$250</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — power supply failure will recur</td></tr>
-            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Blurry / Out of Focus Text</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Worn focus components in CRT deflection circuit</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$300</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — 800x600+ resolution with permanent sharpness</td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>No Display / Dead Screen</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Complete CRT failure, HV section or tube dead</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$300–$500+</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — repair cost exceeds replacement</td></tr>
-        </table>
-
-        <h2>Symptom-by-Symptom Guide</h2>
-
-        <h3>1. Dim or Flickering Display</h3>
-        <p>The most common early sign of CRT aging. The electron gun loses emission efficiency over time, reducing brightness. Flickering indicates the horizontal deflection circuit is unstable. On FANUC 0i systems, this often appears as a slow brightness fade over weeks. On Mitsubishi M60/M500 controls, flickering may be accompanied by a high-pitched whine from the flyback transformer.</p>
-
-        <h3>2. Screen Burn-in (Ghost Images)</h3>
-        <p>Static elements — axis position readouts, mode indicators, tool number displays — leave permanent marks on the CRT phosphor. This is irreversible. LCDs are immune to burn-in. An LCD upgrade not only fixes the ghost image but provides a sharper, more readable display.</p>
-
-        <h3>3. Color Distortion</h3>
-        <p>When one or more CRT electron guns weaken, the color balance shifts. The display may develop a red, green, or blue tint. Degaussing (internal or manual) provides only temporary relief. The root cause is tube aging — the only permanent fix is replacement.</p>
-
-        <h3>4. Intermittent Blackouts</h3>
-        <p>The CRT works for a period then goes dark, often returning after a cool-down period. This is typically caused by failing electrolytic capacitors in the power supply section. While capacitor replacement is a relatively cheap repair ($50–$100 in parts), the underlying CRT tube and deflection circuits remain aged and will fail again.</p>
-
-        <h3>5. Blurry / Unreadable Text</h3>
-        <p>CRT focus relies on precise voltage in the focusing electrode. As components drift with age, text becomes unreadable. LCD modules offer native 800×600 or higher resolution with pixel-perfect sharpness — no focus adjustment ever needed.</p>
-
-        <h3>6. No Display (Dead Screen)</h3>
-        <p>Complete failure. The CRT or its power supply has stopped working entirely. At this point, repair cost often exceeds replacement value. A third-party LCD module (such as Kongto's $155 A61L-0001-0093 replacement) costs less than a CRT repair quote from most service centers.</p>
-
-        <h2>Repair vs LCD Upgrade: Cost Over Time</h2>
-        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
-            <tr style="background:#1a1a2e;color:#fff;">
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Scenario</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 1</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 2</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 3</th>
-                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">5-Year Total</th>
-            </tr>
-            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;">CRT Repair Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repeat repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$400 (major fix)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$1,150+</strong></td></tr>
-            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD Upgrade Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$199 (one-time)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$199</strong></td></tr>
-        </table>
-
-        <h2>When to Choose LCD Upgrade</h2>
-        <ul>
-            <li>CRT is 7+ years old (past typical lifespan)</li>
-            <li>Any symptom from the table above is present</li>
-            <li>CRT repair cost exceeds $200</li>
-            <li>You need higher resolution or brightness for modern operation</li>
-            <li>Spare CRT monitors are no longer available for your CNC model</li>
-        </ul>
-
-        <h2>Not Sure What You Need?</h2>
-        <p>Send us a photo of your CRT display and CNC model number. We will confirm compatibility and recommend the right LCD upgrade within 24 hours.</p>
-        <p><strong>Email:</strong> <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> | <strong>Phone:</strong> +86-13686889647</p>
-
-        <h2>Brand-Specific CRT Symptoms & Solutions</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1.5rem 0;">
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/FANUC.html">FANUC</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">A61L series CRT failure: flickering, black screen, dim display</p>
-                <a href="/products/fanuc-a61l-0001-0093-lcd-upgrade.html" style="font-size:0.85rem;">0093 LCD Upgrade →</a>
-            </div>
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/Mitsubishi.html">Mitsubishi</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">MDT962B/BM09DF CRT: no display, dim screen, image retention</p>
-                <a href="/products/mitsubishi-mdt962b-lcd-upgrade.html" style="font-size:0.85rem;">MDT962B LCD Upgrade →</a>
-            </div>
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/Siemens.html">Siemens</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">SINUMERIK 840D CRT: horizontal frequency error, blank screen</p>
-                <a href="/products/siemens-6fc5103-lcd-upgrade.html" style="font-size:0.85rem;">840D LCD Upgrade →</a>
-            </div>
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/MAZAK.html">Mazak</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">CD1472/C5470NS CRT: dim display, color distortion, no signal</p>
-                <a href="/products/mazak-cd1472-lcd-upgrade.html" style="font-size:0.85rem;">CD1472 LCD Upgrade →</a>
-            </div>
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/OKUMA.html">Okuma</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">OSP5000/7000 CRT: blank screen, flyback failure, dim display</p>
-                <a href="/products/okuma-osp-crt-lcd-upgrade.html" style="font-size:0.85rem;">OSP5000 LCD Upgrade →</a>
-            </div>
-            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
-                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/HAAS.html">Haas</a></h3>
-                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">VF Series CRT: burn-in, flickering, no power, dim amber display</p>
-                <a href="/products/haas-28hm-nm4-lcd-upgrade.html" style="font-size:0.85rem;">Haas LCD Upgrade →</a>
-            </div>
-        </div>
-    </main>
-
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
-                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/posts/">📄 Articles</a>
-                <a href="/brands/FANUC.html">FANUC</a>
-                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/brands/Siemens.html">Siemens</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/glossary.html">Glossary</a>
-                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
-                <a href="/comparison-tool.html">Compare</a>
-                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
-                <a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-                <a href="/sitemap.xml">Sitemap</a>
-            </div>
-    </footer>
-</body>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+    <title>CNC CRT Failure Symptoms | When to Upgrade to LCD | Kongto</title>
+
+
+
+
+
+
+
+    <meta name="description" content="Identify CNC CRT display failure symptoms: flickering, dim display, burn-in, color distortion. Repair vs LCD upgrade cost analysis for FANUC, Mitsubishi, Siemens.">
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css?v=7">
+
+
+
+
+
+
+
+    <link rel="canonical" href="https://cncdisplay.com/crt-dead-symptoms.html">
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/crt-dead-symptoms.html" />
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/crt-dead-symptoms.html" />
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/crt-dead-symptoms.html" />
+
+
+
+
+
+
+
+    <meta property="og:type" content="website">
+
+
+
+
+
+
+
+    <meta property="og:title" content="CNC CRT Failure Symptoms | When to Upgrade to LCD | Kongto">
+
+
+
+
+
+
+
+    <meta property="og:description" content="Identify CNC CRT display failure symptoms: flickering, dim display, burn-in, color distortion. Repair vs LCD upgrade cost analysis for FANUC, Mitsubishi, Siemens.">
+
+
+
+
+
+
+
+    <meta property="og:url" content="https://cncdisplay.com/crt-dead-symptoms.html">
+
+
+
+
+
+
+
+    <meta property="og:site_name" content="Kongto Technology">
+
+
+
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "Organization",
+
+
+
+
+
+
+
+  "name": "Kongto Technology",
+
+
+
+
+
+
+
+  "alternateName": ["深圳市江图科技有限公司", "Kongto Technology", "江图科技"],
+
+
+
+
+
+
+
+  "url": "https://cncdisplay.com",
+
+
+
+
+
+
+
+  "logo": {
+
+
+
+
+
+
+
+    "@type": "ImageObject",
+
+
+
+
+
+
+
+    "url": "https://cncdisplay.com/images/logo_256.png"
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "foundingDate": "2013",
+
+
+
+
+
+
+
+  "description": "Manufacturer of industrial CNC display CRT-to-LCD retrofit solutions, video signal converters, and custom industrial displays",
+
+
+
+
+
+
+
+  "address": {
+
+
+
+
+
+
+
+    "@type": "PostalAddress",
+
+
+
+
+
+
+
+    "addressLocality": "Shenzhen",
+
+
+
+
+
+
+
+    "addressRegion": "Guangdong",
+
+
+
+
+
+
+
+    "addressCountry": "CN"
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "contactPoint": {
+
+
+
+
+
+
+
+    "@type": "ContactPoint",
+
+
+
+
+
+
+
+    "telephone": "+86-13686889647",
+
+
+
+
+
+
+
+    "email": "info@cncdisplay.com",
+
+
+
+
+
+
+
+    "contactType": "sales",
+
+
+
+
+
+
+
+    "availableLanguage": ["Chinese", "English"]
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "sameAs": [
+
+
+
+
+
+
+
+    "https://github.com/szkongto",
+
+
+
+
+
+
+
+    "https://blog.csdn.net/szkongto"
+
+
+
+
+
+
+
+  ]
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    </head>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+    <header>
+
+
+
+
+
+
+
+        <nav>
+
+
+
+
+
+
+
+            <a href="/" class="logo">Kongto Technology</a>
+
+
+
+
+
+
+
+            <div class="nav-links">
+
+
+
+
+
+
+
+                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/products/">Products</a>
+
+
+
+
+
+
+
+                <a href="/posts/">Articles</a>
+
+
+
+
+
+
+
+                <a href="/case-studies.html">Cases</a>
+<a href="/knowledge/">Knowledge</a>
+
+
+
+
+
+
+
+                <a href="/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/about.html">About</a>
+
+
+
+
+
+
+
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a href="/search.html" class="nav-search">🔍 Search</a>
+
+
+
+
+
+
+
+            <div class="lang-switch">
+
+
+
+
+
+
+
+                <a href="/zh/crt-dead-symptoms.html" lang="zh" class="lang-zh">中文</a>
+
+
+
+
+
+
+
+                <span class="divider">|</span>
+
+
+
+
+
+
+
+                <a href="/crt-dead-symptoms.html" lang="en" class="lang-en">English</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+    <main style="max-width:1100px;margin:40px auto;padding:20px;">
+
+
+
+
+
+
+
+        <h1>CNC CRT Display Failure Symptoms — Diagnosis & Solutions</h1>
+
+
+
+
+
+
+
+        <p>CRT displays in CNC machines have a typical lifespan of 10,000–20,000 hours (roughly 5–7 years in continuous operation). After this point, failure symptoms become increasingly frequent. This guide helps you diagnose each symptom and decide whether to repair or upgrade to LCD.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Symptom Reference Table</h2>
+
+
+
+
+
+
+
+        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+
+
+
+
+
+
+
+            <tr style="background:#1a1a2e;color:#fff;">
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Symptom</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Likely Cause</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Repair Cost</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">LCD Upgrade Cost</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Recommendation</th>
+
+
+
+
+
+
+
+            </tr>
+
+
+
+
+
+
+
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Dim / Flickering Display</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Aging CRT tube — electron gun nearing end of life</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$400 (tube replacement)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — CRT repair lasts only 3–6 months</td></tr>
+
+
+
+
+
+
+
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Screen Burn-in / Ghost Image</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Permanent phosphor damage from static display elements</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$200–$300 (tube swap)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — burn-in is irreversible on CRT</td></tr>
+
+
+
+
+
+
+
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Color Distortion / Tint Shift</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Weak or failing electron gun, degaussing circuit failure</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$350</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — color accuracy will continue degrading</td></tr>
+
+
+
+
+
+
+
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Intermittent Blackouts</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Failing CRT power supply, bad capacitors, or HV section</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$100–$250</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — power supply failure will recur</td></tr>
+
+
+
+
+
+
+
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>Blurry / Out of Focus Text</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Worn focus components in CRT deflection circuit</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$150–$300</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — 800x600+ resolution with permanent sharpness</td></tr>
+
+
+
+
+
+
+
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>No Display / Dead Screen</strong></td><td style="padding:8px 14px;border:1px solid #e2e8f0;">Complete CRT failure, HV section or tube dead</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$300–$500+</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$155–$430</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD upgrade — repair cost exceeds replacement</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Symptom-by-Symptom Guide</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>1. Dim or Flickering Display</h3>
+
+
+
+
+
+
+
+        <p>The most common early sign of CRT aging. The electron gun loses emission efficiency over time, reducing brightness. Flickering indicates the horizontal deflection circuit is unstable. On FANUC 0i systems, this often appears as a slow brightness fade over weeks. On Mitsubishi M60/M500 controls, flickering may be accompanied by a high-pitched whine from the flyback transformer.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>2. Screen Burn-in (Ghost Images)</h3>
+
+
+
+
+
+
+
+        <p>Static elements — axis position readouts, mode indicators, tool number displays — leave permanent marks on the CRT phosphor. This is irreversible. LCDs are immune to burn-in. An LCD upgrade not only fixes the ghost image but provides a sharper, more readable display.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>3. Color Distortion</h3>
+
+
+
+
+
+
+
+        <p>When one or more CRT electron guns weaken, the color balance shifts. The display may develop a red, green, or blue tint. Degaussing (internal or manual) provides only temporary relief. The root cause is tube aging — the only permanent fix is replacement.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>4. Intermittent Blackouts</h3>
+
+
+
+
+
+
+
+        <p>The CRT works for a period then goes dark, often returning after a cool-down period. This is typically caused by failing electrolytic capacitors in the power supply section. While capacitor replacement is a relatively cheap repair ($50–$100 in parts), the underlying CRT tube and deflection circuits remain aged and will fail again.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>5. Blurry / Unreadable Text</h3>
+
+
+
+
+
+
+
+        <p>CRT focus relies on precise voltage in the focusing electrode. As components drift with age, text becomes unreadable. LCD modules offer native 800×600 or higher resolution with pixel-perfect sharpness — no focus adjustment ever needed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3>6. No Display (Dead Screen)</h3>
+
+
+
+
+
+
+
+        <p>Complete failure. The CRT or its power supply has stopped working entirely. At this point, repair cost often exceeds replacement value. A third-party LCD module (such as Kongto's $155 A61L-0001-0093 replacement) costs less than a CRT repair quote from most service centers.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Repair vs LCD Upgrade: Cost Over Time</h2>
+
+
+
+
+
+
+
+        <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+
+
+
+
+
+
+
+            <tr style="background:#1a1a2e;color:#fff;">
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Scenario</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 1</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 2</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">Year 3</th>
+
+
+
+
+
+
+
+                <th style="padding:10px 14px;border:1px solid #333;text-align:left;">5-Year Total</th>
+
+
+
+
+
+
+
+            </tr>
+
+
+
+
+
+
+
+            <tr><td style="padding:8px 14px;border:1px solid #e2e8f0;">CRT Repair Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$250 (repeat repair)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$400 (major fix)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$1,150+</strong></td></tr>
+
+
+
+
+
+
+
+            <tr style="background:#f8fafc;"><td style="padding:8px 14px;border:1px solid #e2e8f0;">LCD Upgrade Path</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$199 (one-time)</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;">$0</td><td style="padding:8px 14px;border:1px solid #e2e8f0;"><strong>$199</strong></td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>When to Choose LCD Upgrade</h2>
+
+
+
+
+
+
+
+        <ul>
+
+
+
+
+
+
+
+            <li>CRT is 7+ years old (past typical lifespan)</li>
+
+
+
+
+
+
+
+            <li>Any symptom from the table above is present</li>
+
+
+
+
+
+
+
+            <li>CRT repair cost exceeds $200</li>
+
+
+
+
+
+
+
+            <li>You need higher resolution or brightness for modern operation</li>
+
+
+
+
+
+
+
+            <li>Spare CRT monitors are no longer available for your CNC model</li>
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Not Sure What You Need?</h2>
+
+
+
+
+
+
+
+        <p>Send us a photo of your CRT display and CNC model number. We will confirm compatibility and recommend the right LCD upgrade within 24 hours.</p>
+
+
+
+
+
+
+
+        <p><strong>Email:</strong> <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> | <strong>Phone:</strong> +86-13686889647</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Brand-Specific CRT Symptoms & Solutions</h2>
+
+
+
+
+
+
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1.5rem 0;">
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/FANUC.html">FANUC</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">A61L series CRT failure: flickering, black screen, dim display</p>
+
+
+
+
+
+
+
+                <a href="/products/fanuc-a61l-0001-0093-lcd-upgrade.html" style="font-size:0.85rem;">0093 LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/Mitsubishi.html">Mitsubishi</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">MDT962B/BM09DF CRT: no display, dim screen, image retention</p>
+
+
+
+
+
+
+
+                <a href="/products/mitsubishi-mdt962b-lcd-upgrade.html" style="font-size:0.85rem;">MDT962B LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/Siemens.html">Siemens</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">SINUMERIK 840D CRT: horizontal frequency error, blank screen</p>
+
+
+
+
+
+
+
+                <a href="/products/siemens-6fc5103-lcd-upgrade.html" style="font-size:0.85rem;">840D LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/MAZAK.html">Mazak</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">CD1472/C5470NS CRT: dim display, color distortion, no signal</p>
+
+
+
+
+
+
+
+                <a href="/products/mazak-cd1472-lcd-upgrade.html" style="font-size:0.85rem;">CD1472 LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/OKUMA.html">Okuma</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">OSP5000/7000 CRT: blank screen, flyback failure, dim display</p>
+
+
+
+
+
+
+
+                <a href="/products/okuma-osp-crt-lcd-upgrade.html" style="font-size:0.85rem;">OSP5000 LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div style="padding:1rem;background:#f0f7ff;border-radius:8px;border:1px solid #bfdbfe;">
+
+
+
+
+
+
+
+                <h3 style="margin:0 0 0.5rem 0;"><a href="/brands/HAAS.html">Haas</a></h3>
+
+
+
+
+
+
+
+                <p style="font-size:0.9rem;margin:0 0 0.5rem 0;">VF Series CRT: burn-in, flickering, no power, dim amber display</p>
+
+
+
+
+
+
+
+                <a href="/products/haas-28hm-nm4-lcd-upgrade.html" style="font-size:0.85rem;">Haas LCD Upgrade →</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+
+
+
+
+
+
+
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
+
+
+
+
+
+
+
+            <ul style="margin:0;padding-left:1.2rem;">
+
+
+
+
+
+
+
+                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
+
+
+
+
+
+
+
+                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+
+
+
+
+
+
+
+                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
+
+
+
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+
+
+
+
+
+        <div class="footer-content">
+
+
+
+
+
+
+
+            <div class="footer-brand">
+
+
+
+
+
+
+
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+
+
+
+
+
+
+
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/posts/">📄 Articles</a>
+
+
+
+
+
+
+
+                <a href="/brands/FANUC.html">FANUC</a>
+
+
+
+
+
+
+
+                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
+
+
+
+
+
+
+
+                <a href="/brands/Siemens.html">Siemens</a>
+
+
+
+
+
+
+
+                <a href="/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/about.html">About Us</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+
+
+
+
+
+
+
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/glossary.html">Glossary</a>
+
+
+
+
+
+
+
+                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
+
+
+
+
+
+
+
+                <a href="/comparison-tool.html">Compare</a>
+
+
+
+
+
+
+
+                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
+
+
+
+
+
+
+
+                <a href="/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/privacy.html">Privacy</a>
+
+
+
+
+
+
+
+                <a href="/terms.html">Terms</a>
+
+
+
+
+
+
+
+                <a href="/sitemap.xml">Sitemap</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
 </html>

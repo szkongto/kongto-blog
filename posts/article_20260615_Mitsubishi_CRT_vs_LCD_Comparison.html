@@ -1,550 +1,4401 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?</title>
-  <meta name="description" content="Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD? Real cost data from 200+ shop installations.">
-  <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
-	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
-  <link rel="canonical" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html">
-  <link rel="stylesheet" href="/css/style.css?v=7">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?",
-    "description": "Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD?",
-    "author": { "@type": "Organization", "name": "Kongto Technology" },
-    "datePublished": "2026-06-15",
-    "dateModified": "2026-06-15"
-  }
-  </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "江图科技技术部",
-  "alternateName": "Kongto Technical Team",
-  "jobTitle": "Industrial Display Engineer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "深圳市江图科技有限公司",
-    "url": "https://cncdisplay.com"
-  },
-  "description": "专注工业视频显示领域12年以上的工程师团队，提供CNC数控系统CRT转LCD升级解决方案",
-  "url": "https://cncdisplay.com",
-  "sameAs": [["https://blog.csdn.net/szkongto", "https://github.com/szkongto", "https://www.youtube.com/@Cncdisplay", "https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/"]]
-}
-    </script>
-
-  <style>
-    body { font-family: Georgia, 'Times New Roman', serif; padding: 40px 24px 80px; line-height: 1.8; color: #1a1a1a; }
-    main.container { max-width: 760px; margin: 0 auto; }
-    h1 { font-size: 1.85em; line-height: 1.35; margin-bottom: 6px; }
-    .subtitle { color: #666; font-size: 0.97em; margin-bottom: 32px; }
-    h2 { font-size: 1.25em; margin-top: 2.6em; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8; color: #222; }
-    h3 { font-size: 1.08em; margin-top: 1.5em; color: #333; }
-    p { margin: 1.1em 0; }
-    ul, ol { padding-left: 22px; }
-    li { margin: 7px 0; }
-
-    .lead { font-size: 1.05em; color: #444; background: #f8f9fa; padding: 20px 24px; border-radius: 6px; margin: 28px 0; }
-
-    /* Option boxes */
-    .option { padding: 22px 26px; margin: 24px 0; border-radius: 6px; border: 1px solid #ddd; }
-    .option-a { border-left: 4px solid #2e7d32; }
-    .option-b { border-left: 4px solid #c62828; }
-    .option-c { border-left: 4px solid #1565c0; background: #f8f9fa; }
-
-    /* Comparison table */
-    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.93em; }
-    .compare-table th, .compare-table td { border: 1px solid #ddd; padding: 11px 14px; text-align: left; vertical-align: top; }
-    .compare-table th { background: #f5f5f5; font-weight: 600; }
-    .compare-table .good { background: #e8f5e9; color: #2e7d32; font-weight: 600; }
-    .compare-table .bad { background: #fce4ec; color: #c62828; }
-    .compare-table .neutral { background: #f8f9fa; }
-
-    /* Cost breakdown */
-    .cost-box { padding: 20px 24px; margin: 24px 0; border-radius: 6px; }
-    .cost-box h3 { margin-top: 0; }
-    .cost-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #eee; }
-    .cost-row.total { font-weight: 700; border-bottom: none; font-size: 1.08em; margin-top: 6px; }
-
-    /* Verdict */
-    .verdict { background: #e8f0fe; border-left: 4px solid #1a73e8; padding: 24px 28px; margin: 36px 0; border-radius: 0 8px 8px 0; }
-    .verdict h2, .verdict h3 { margin-top: 0; color: #1a73e8; border: none; padding: 0; }
-
-    /* When to choose */
-    .when-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
-    .when-item { border: 1px solid #ddd; border-radius: 6px; padding: 18px 22px; }
-    .when-item h3 { margin-top: 0; font-size: 1em; }
-
-    /* FAQ */
-    .faq { margin: 22px 0; }
-    .faq-q { font-weight: 700; color: #1a73e8; margin-bottom: 7px; }
-    .faq-a { color: #333; }
-
-    /* CTA */
-    .cta { background: #1a73e8; color: white; padding: 32px; margin: 48px 0; border-radius: 8px; text-align: center; }
-    .cta a { background: #fbbc04; color: #1a1a1a; padding: 14px 32px; text-decoration: none; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 14px; }
-
-    blockquote { border-left: 3px solid #ddd; padding: 12px 20px; margin: 24px 0; color: #555; font-style: italic; }
-    .note { background: #fff8e1; border-left: 3px solid #f9a825; padding: 14px 18px; margin: 24px 0; font-size: 0.95em; border-radius: 0 4px 4px 0; }
-
-    @media (max-width: 640px) {
-      .when-grid { grid-template-columns: 1fr; }
-      .compare-table { font-size: 0.85em; }
-      .cost-row { flex-direction: column; gap: 2px; }
-    }
-  </style>
-
-<meta property="og:title" content="Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?">
-<meta property="og:description" content="Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD? Real cost data from 200+ shop installations.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
-</head>    <header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/products/">Products</a>
-                <a href="/posts/">Articles</a>
-                <a href="/case-studies.html">Cases</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="/zh/posts/crt-vs-lcd-cnc-display-comparison.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-<main class="container">
-<p style="color: #888; font-size: 0.88em; margin-bottom: 0;">Decision Guide &nbsp;·&nbsp; Updated June 2026</p>
-
-  <h1>Mitsubishi CRT vs LCD Retrofit:<br>Which Makes Sense for Your Shop?</h1>
-  <p class="subtitle">
-    Your Mitsubishi M64/E60/M500 display is failing. You have options — but they're not all equal. 
-    Here's what the numbers actually look like after 200+ installations.
-  </p>
-
-  <div class="lead">
-    <strong>The short version:</strong> 
-    If the machine matters to your production, the LCD retrofit is the cheapest option 
-    long-term — even though it costs more upfront. If the machine is being replaced 
-    in under 6 months, a used CRT might get you through. Here's the full breakdown.
-  </div>
-
-  <!-- SECTION 1: The 3 Options -->
-  <h2>The Three Options (And the Trade-offs Nobody Puts in the Brochure)</h2>
-
-  <div class="option option-a">
-    <h3>Option 1: Repair the Existing CRT</h3>
-    <p>
-      A specialized CRT repair shop can sometimes replace the flyback transformer, 
-      recalibrate the electron gun, or swap the deflection yoke. It's technically 
-      possible — but there's a reason most repair shops stopped accepting industrial 
-      CRTs after 2020.
-    </p>
-    <p><strong>The problem:</strong> Every component inside a 20-year-old CRT is aging 
-      simultaneously. You fix the transformer, and the phosphor fails six months later. 
-      You degauss it, and the CRT socket arcs. It's whack-a-mole with $200 bills.
-    </p>
-    <p><strong>When it makes sense:</strong> The machine is being replaced in &lt;6 months 
-      anyway, and you just need it to limp along. Otherwise — honestly — don't.
-    </p>
-  </div>
-
-  <div class="option option-b">
-    <h3>Option 2: Buy a Used CRT Replacement</h3>
-    <p>
-      There's a market for pulled MDT962B and similar units from decommissioned machines. 
-      You can find them on eBay, industrial surplus sites, and CNC forums. The price 
-      looks attractive — usually $150–$400 depending on condition.
-    </p>
-    <p><strong>The problem:</strong> A "working" used CRT is typically 15–25 years old 
-      itself. You're buying someone else's problem. We've had customers come to us after 
-      their "tested working" used unit failed in 3 months. The seller's "30-day warranty" 
-      doesn't cover your downtime.
-    </p>
-    <p><strong>When it makes sense:</strong> You have multiple identical machines and can 
-      swap parts between them, so downtime is measured in hours not days. Or you're 
-      waiting for an LCD kit to ship and need a stopgap.
-    </p>
-  </div>
-
-  <div class="option option-c">
-    <h3>Option 3: LCD Retrofit Kit (What We Make)</h3>
-    <p>
-      A new-production LCD unit built specifically to replace the CRT. Modern TFT panel, 
-      original mounting pattern, original connector. It's not the cheapest option up front 
-      ($300–$600 depending on the kit) — but it's the only one that actually solves 
-      the problem for good.
-    </p>
-    <p><strong>The upside:</strong> Instant-on, zero flicker, 50,000+ hour lifespan, 
-      and a 1-year warranty. Most installations take under an hour. The machine is 
-      down less than the time it takes to eat lunch.
-    </p>
-    <p><strong>The downside:</strong> Higher upfront cost. And if you're the kind of 
-      person who changes their mind every 6 months about equipment, this locks you in 
-      (though honestly, once you see the LCD, you won't want the CRT back).
-    </p>
-  </div>
-
-  <!-- SECTION 2: Side-by-Side -->
-  <h2>Side-by-Side: How the Options Compare</h2>
-  <p>
-    These numbers come from real customer invoices and downtime reports we've collected 
-    over the past 3 years. Your numbers might be different — but this is what we've seen.
-  </p>
-
-  <div style="overflow-x:auto;margin:1rem 0;"><table class="compare-table">
-    <thead>
-      <tr>
-        <th>Factor</th>
-        <th>Repair CRT</th>
-        <th>Buy Used CRT</th>
-        <th>LCD Retrofit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Upfront cost</strong></td>
-        <td class="neutral">$150–$350 (if available)</td>
-        <td class="neutral">$150–$400</td>
-        <td class="good">$300–$600</td>
-      </tr>
-      <tr>
-        <td><strong>Installation downtime</strong></td>
-        <td class="bad">2–4 weeks (ship out/in)</td>
-        <td class="neutral">2–5 days (shipping)</td>
-        <td class="good">&lt; 1 hour (on-site)</td>
-      </tr>
-      <tr>
-        <td><strong>Expected lifespan</strong></td>
-        <td class="bad">6–18 months</td>
-        <td class="bad">3–12 months (unknown history)</td>
-        <td class="good">50,000+ hours (17+ years)</td>
-      </tr>
-      <tr>
-        <td><strong>Warranty</strong></td>
-        <td class="bad">Usually none</td>
-        <td class="bad">None or 30 days</td>
-        <td class="good">1-years (free replacement)</td>
-      </tr>
-      <tr>
-        <td><strong>Display quality</strong></td>
-        <td class="neutral">Same as before (aging)</td>
-        <td class="bad">Variable (aged unit)</td>
-        <td class="good">Higher (800×600, no flicker)</td>
-      </tr>
-      <tr>
-        <td><strong>Power draw</strong></td>
-        <td class="bad">25–30W (runs hot)</td>
-        <td class="bad">25–30W (runs hot)</td>
-        <td class="good">≤10W (runs cool)</td>
-      </tr>
-      <tr>
-        <td><strong>5-year total cost</strong></td>
-        <td class="bad">$600–$1,200+ (repeat repairs)</td>
-        <td class="bad">$600–$1,200+ (repeat purchases + downtime)</td>
-        <td class="good">$300–$600 (one-time)</td>
-      </tr>
-    </tbody>
-  </table></div>
-
-  <p class="note">
-    <strong>Why the 5-year cost matters:</strong> 
-    A $200 used CRT that fails in 6 months isn't actually cheap. If it fails during 
-    a busy week and costs you a day of downtime ($1,000–$5,000 depending on the 
-    machine), the "cheap" option just became very expensive. The LCD kit looks 
-    expensive until you count the repeats.
-  </p>
-
-  <!-- SECTION 3: Real Cost Math -->
-  <h2>The Real Cost Math (With Actual Numbers)</h2>
-  <p>
-    Let's put specific numbers to this. These are based on real customer scenarios 
-    we've documented — a job shop with 3 Mitsubishi M64 lathes, where machine 
-    downtime costs them roughly $800/day in lost production.
-  </p>
-
-  <div class="cost-box" style="background: #f8f9fa; border: 1px solid #ddd;">
-    <h3 style="margin-top: 0; color: #2e7d32;">LCD Retrofit — Total Cost Over 5 Years</h3>
-    <div class="cost-row">
-      <span>Retrofit kit (one-time, M64, no interface board needed)</span>
-      <span style="font-weight: 600;">$380</span>
-    </div>
-    <div class="cost-row">
-      <span>Installation (1 hour, in-house, no external tech)</span>
-      <span style="font-weight: 600;">$0</span>
-    </div>
-    <div class="cost-row">
-      <span>Downtime (under 1 hour, scheduled weekend)</span>
-      <span style="font-weight: 600;">~$100</span>
-    </div>
-    <div class="cost-row">
-      <span>Replacements needed in 5 years</span>
-      <span style="font-weight: 600;">0</span>
-    </div>
-    <div class="cost-row total" style="color: #2e7d32;">
-      <span>Total (5-year)</span>
-      <span>$480</span>
-    </div>
-  </div>
-
-  <div class="cost-box" style="background: #fff5f5; border: 1px solid #fce4ec;">
-    <h3 style="margin-top: 0; color: #c62828;">Used CRT — Total Cost Over 5 Years</h3>
-    <div class="cost-row">
-      <span>Used CRT (first unit, "tested working")</span>
-      <span style="font-weight: 600;">$250</span>
-    </div>
-    <div class="cost-row">
-      <span>Shipping (both directions, 2-day)</span>
-      <span style="font-weight: 600;">$60</span>
-    </div>
-    <div class="cost-row">
-      <span>Downtime while waiting (avg 3 days × $800/day)</span>
-      <span style="font-weight: 600;">$2,400</span>
-    </div>
-    <div class="cost-row">
-      <span>Replacements needed in 5 years (avg: fails every 14 months)</span>
-      <span style="font-weight: 600;">$1,000 (4 more units + shipping)</span>
-    </div>
-    <div class="cost-row">
-      <span>Downtime for those replacements (4 × 3 days)</span>
-      <span style="font-weight: 600;">$9,600</span>
-    </div>
-    <div class="cost-row total" style="color: #c62828;">
-      <span>Total (5-year)</span>
-      <span>$13,310</span>
-    </div>
-  </div>
-
-  <p>
-    Now, your downtime cost might be lower than $800/day. Or higher. The point isn't 
-    the exact number — it's that <strong>downtime cost usually dwarfs the equipment cost</strong>. 
-    The "cheap" $250 used CRT becomes a $13,000 mistake when you count the repeats 
-    and the downtime. The $380 LCD kit? It's a one-time $480 expense and then 
-    you never think about it again.
-  </p>
-
-  <!-- SECTION 4: When Each Option Makes Sense -->
-  <h2>When Each Option Actually Makes Sense</h2>
-  <p>
-    To be fair: the LCD retrofit isn't the right answer for <em>every</em> situation. 
-    Here's when each option makes sense — and when it doesn't.
-  </p>
-
-  <div class="when-grid">
-    <div class="when-item">
-      <h3 style="color: #2e7d32;">CRT Repair Makes Sense If:</h3>
-      <ul style="padding-left: 18px; margin: 8px 0 0;">
-        <li>The machine is being replaced within 6 months anyway</li>
-        <li>You have a spare CRT on the shelf and just need a temporary fix</li>
-        <li>You're in a country where shipping an LCD kit takes 3+ weeks and you need it running tomorrow</li>
-      </ul>
-    </div>
-    <div class="when-item">
-      <h3 style="color: #1565c0;">Used CRT Makes Sense If:</h3>
-      <ul style="padding-left: 18px; margin: 8px 0 0;">
-        <li>You have multiple identical machines and can swap parts between them</li>
-        <li>You need a stopgap while waiting for an LCD kit to ship from overseas</li>
-        <li>The machine runs only 2–3 hours a week (so downtime is less critical)</li>
-      </ul>
-    </div>
-    <div class="when-item" style="border-left: 4px solid #f9a825; grid-column: 1 / -1;">
-      <h3 style="color: #92400e;">LCD Retrofit Makes Sense If:</h3>
-      <ul style="padding-left: 18px; margin: 8px 0 0;">
-        <li>The machine is critical to production (downtime costs &gt; $500/day)</li>
-        <li>You plan to keep the machine for 2+ more years</li>
-        <li>You want to stop worrying about the display failing at a bad time</li>
-        <li>You have operators complaining of eye strain from flicker</li>
-        <li>You want to actually read the parameters without squinting</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- SECTION 5: Verdict -->
-  <div class="verdict">
-    <h3>Our Actual Recommendation (Based on 200+ Installations)</h3>
-    <p>
-      If the machine matters to your production: <strong>go with the LCD retrofit</strong>. 
-      The numbers are clear once you look at total cost of ownership instead of just 
-      upfront price. The used CRT looks cheap until it fails during a busy week 
-      and costs you a day of production.
-    </p>
-    <p>
-      If the machine is being replaced in under 6 months anyway: repair or used CRT 
-      might get you through. Just know the risks and have a backup plan. And be honest 
-      with yourself about whether "6 months" keeps turning into "well, maybe another 
-      year" — because it usually does.
-    </p>
-    <p>
-      <strong>The one exception:</strong> If you're in a region where we can't ship 
-      the LCD kit to you (sanctions, remote location, etc.), then a used CRT from 
-      a local industrial surplus dealer who will warranty it for 90 days is a reasonable 
-      backup plan. It's not ideal, but it might be what's available.
-    </p>
-  </div>
-
-  <!-- SECTION 6: Installation Time Comparison -->
-  <h2>What Installation Actually Looks Like (Time and Hassle)</h2>
-
-  <h3>LCD Retrofit — What Happens</h3>
-  <ol>
-    <li>Power down the CNC machine (5 minutes)</li>
-    <li>Remove the CRT bezel and unplug the display (10 minutes)</li>
-    <li>Unscrew the CRT and lift it out — they're heavier than they look (5 minutes)</li>
-    <li>Mount the LCD (same holes, same bracket) (10 minutes)</li>
-    <li>Plug in the original connector (2 minutes)</li>
-    <li>If your system needs an interface board (E60, M500, M520): mount it inside the cabinet (extra 20–30 minutes)</li>
-    <li>Power up and verify (5 minutes)</li>
-  </ol>
-  <p><strong>Total:</strong> 45–60 minutes for M64/E60. 75–90 minutes for M500/M520 (because of the interface board). Machine is down less than an hour for the simple ones.</p>
-
-  <h3>CRT Repair — What Happens</h3>
-  <ol>
-    <li>Remove the CRT and ship it to a repair shop (2–3 days just for shipping)</li>
-    <li>Wait for diagnosis and a quote (3–5 days)</li>
-    <li>Approve the repair and wait for completion (5–10 days — they probably have to order parts)</li>
-    <li>Ship back and reinstall (2–3 days)</li>
-  </ol>
-  <p><strong>Total:</strong> 2–4 weeks. Your machine is down the entire time unless you have a spare. This is why most shops end up buying a used CRT as a stopgap while they wait — which means you're paying for both.</p>
-
-  <h3>Used CRT — What Happens</h3>
-  <ol>
-    <li>Find one for sale (1–7 days of searching)</li>
-    <li>Order it and wait for shipping (2–5 days domestic, 1–3 weeks international)</li>
-    <li>Install it (1 hour, same as the LCD kit — the mounting is identical)</li>
-    <li>Cross your fingers and hope it lasts (median: 6–10 months based on what customers tell us)</li>
-  </ol>
-
-  <!-- SECTION 7: FAQ -->
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq">
-    <div class="faq-q">Q: Isn't the LCD kit overpriced compared to a used CRT?</div>
-    <div class="faq-a">
-      A: Up front, yes. But the used CRT will likely need replacing again within a year. 
-      When you add up 3–4 used CRT purchases plus the downtime each time, the LCD kit 
-      is cheaper by year 2. Most of our customers wish they'd done the LCD upgrade 
-      sooner instead of "saving money" on used units first. That said — if budget is 
-      genuinely $0 this month, a used CRT will get you through the week. Just plan for 
-      the real fix later.
-    </div>
-  </div>
-
-  <div class="faq">
-    <div class="faq-q">Q: Will the LCD kit work with my exact Mitsubishi model?</div>
-    <div class="faq-a">
-      A: Send us a photo of your display label and your CNC controller model plate. 
-      We've seen every Mitsubishi variant in the field — M64, E60, M500, M520, and 
-      the various MDT962B sub-versions. We know which interface board goes with which 
-      system. We'll confirm compatibility before you order, free of charge.
-    </div>
-  </div>
-
-  <div class="faq">
-    <div class="faq-q">Q: What if the LCD fails? Is the warranty actually useful?</div>
-    <div class="faq-a">
-      A: Yes. We provide a 1-year warranty and we honor it — it's not a "restocking fee" 
-      situation. If a unit fails from a manufacturing defect, we ship a replacement. 
-      In our experience, failures in the first 1-years are extremely rare — maybe 1 in 200 
-      units. But it's good to know it's covered. The LCD panel itself is rated for 
-      50,000+ hours, and we've had exactly <em>one</em> warranty claim in the past 18 months.
-    </div>
-  </div>
-
-  <div class="faq">
-    <div class="faq-q">Q: Can I see what the LCD looks like before buying?</div>
-    <div class="faq-a">
-      A: We can send you photos of an installed unit, or put you in touch with a customer 
-      near you who has one running. We don't have a "free trial" program (these aren't 
-      $20 gadgets), but we're happy to answer specific questions about what changes and 
-      what doesn't. Most operators notice the brightness and lack of flicker immediately. 
-      The text sharpness improvement is more subtle but noticeable after a few days.
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta">
-    <h3 style="margin-top: 0; color: white;">Not Sure Which Option Fits Your Situation?</h3>
-    <p style="margin: 12px 0;">
-      Tell us your CNC model, how critical the machine is to your production, 
-      and your budget range. We'll give you an honest recommendation — including if we 
-      think a used CRT might actually make sense for your specific situation.
-    </p>
-    <a href="https://cncdisplay.com/contact.html">Get an Honest Recommendation</a>
-  </div>
-
-  <!-- Related -->
-  <hr style="margin: 56px 0 28px; border: none; border-top: 1px solid #e8e8e8;">
-  <p style="color: #888; font-size: 0.9em;">
-    <strong>Related reading:</strong><br>
-    <a href="https://cncdisplay.com/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html" style="color: #1a73e8;">Mitsubishi MDT962B LCD Retrofit — Complete Installation Guide</a><br>
-    </p>
-
-<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
-    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Mitsubishi Mdt962B solution</strong></p>
-    <a href="/products/mitsubishi-mdt962b-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
-</div>
-
-    <div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
-        <h3 style="margin-top:0;color:#1e40af;">Related Articles</h3>
-        <ul style="margin-bottom:0;">
-            <li><a href="/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html">Mitsubishi MDT962B / BM09DF Series CRT to LCD Upgrade Solution — Kongto Technology</a></li>
-            <li><a href="/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html">Mitsubishi BM09DF Industrial Display</a></li>
-            <li><a href="/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html">Mitsubishi FCUA-CT100 Industrial Display</a></li>
-            <li><a href="/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">Mitsubishi MDT962B Industrial LCD Monitor</a></li>
-        </ul>
-    </div>
-
-    </main>    
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
-                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/posts/">📄 Articles</a>
-                <a href="/brands/FANUC.html">FANUC</a>
-                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/brands/Siemens.html">Siemens</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
-        </div>
-    
-            <div class="footer-links">
-                <a href="/glossary.html">Glossary</a>
-                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
-                <a href="/comparison-tool.html">Compare</a>
-                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
-                <a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-                <a href="/sitemap.xml">Sitemap</a>
-            </div>
-    </footer>
-
-</body>
-</html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+  <meta charset="UTF-8">
+
+
+
+
+
+
+
+  <title>Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?</title>
+
+
+
+
+
+
+
+  <meta name="description" content="Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD? Real cost data from 200+ shop installations.">
+
+
+
+
+
+
+
+  <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html">
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
+
+
+
+
+
+
+
+	    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
+
+
+
+
+
+
+
+  <link rel="canonical" href="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/style.css?v=7">
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+
+
+
+
+
+
+
+  {
+
+
+
+
+
+
+
+    "@context": "https://schema.org",
+
+
+
+
+
+
+
+    "@type": "TechArticle",
+
+
+
+
+
+
+
+    "headline": "Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?",
+
+
+
+
+
+
+
+    "description": "Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD?",
+
+
+
+
+
+
+
+    "author": { "@type": "Organization", "name": "Kongto Technology" },
+
+
+
+
+
+
+
+    "datePublished": "2026-06-15",
+
+
+
+
+
+
+
+    "dateModified": "2026-06-15"
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+  "@context": "https://schema.org",
+
+
+
+
+
+
+
+  "@type": "Person",
+
+
+
+
+
+
+
+  "name": "江图科技技术部",
+
+
+
+
+
+
+
+  "alternateName": "Kongto Technical Team",
+
+
+
+
+
+
+
+  "jobTitle": "Industrial Display Engineer",
+
+
+
+
+
+
+
+  "worksFor": {
+
+
+
+
+
+
+
+    "@type": "Organization",
+
+
+
+
+
+
+
+    "name": "深圳市江图科技有限公司",
+
+
+
+
+
+
+
+    "url": "https://cncdisplay.com"
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  "description": "专注工业视频显示领域12年以上的工程师团队，提供CNC数控系统CRT转LCD升级解决方案",
+
+
+
+
+
+
+
+  "url": "https://cncdisplay.com",
+
+
+
+
+
+
+
+  "sameAs": [["https://blog.csdn.net/szkongto", "https://github.com/szkongto", "https://www.youtube.com/@Cncdisplay", "https://www.linkedin.com/in/%E5%AE%87%E6%B3%A2-%E9%83%AD-4b61543b3/"]]
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+
+
+
+
+
+
+
+    body { font-family: Georgia, 'Times New Roman', serif; padding: 40px 24px 80px; line-height: 1.8; color: #1a1a1a; }
+
+
+
+
+
+
+
+    main.container { max-width: 760px; margin: 0 auto; }
+
+
+
+
+
+
+
+    h1 { font-size: 1.85em; line-height: 1.35; margin-bottom: 6px; }
+
+
+
+
+
+
+
+    .subtitle { color: #666; font-size: 0.97em; margin-bottom: 32px; }
+
+
+
+
+
+
+
+    h2 { font-size: 1.25em; margin-top: 2.6em; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8; color: #222; }
+
+
+
+
+
+
+
+    h3 { font-size: 1.08em; margin-top: 1.5em; color: #333; }
+
+
+
+
+
+
+
+    p { margin: 1.1em 0; }
+
+
+
+
+
+
+
+    ul, ol { padding-left: 22px; }
+
+
+
+
+
+
+
+    li { margin: 7px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .lead { font-size: 1.05em; color: #444; background: #f8f9fa; padding: 20px 24px; border-radius: 6px; margin: 28px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Option boxes */
+
+
+
+
+
+
+
+    .option { padding: 22px 26px; margin: 24px 0; border-radius: 6px; border: 1px solid #ddd; }
+
+
+
+
+
+
+
+    .option-a { border-left: 4px solid #2e7d32; }
+
+
+
+
+
+
+
+    .option-b { border-left: 4px solid #c62828; }
+
+
+
+
+
+
+
+    .option-c { border-left: 4px solid #1565c0; background: #f8f9fa; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Comparison table */
+
+
+
+
+
+
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.93em; }
+
+
+
+
+
+
+
+    .compare-table th, .compare-table td { border: 1px solid #ddd; padding: 11px 14px; text-align: left; vertical-align: top; }
+
+
+
+
+
+
+
+    .compare-table th { background: #f5f5f5; font-weight: 600; }
+
+
+
+
+
+
+
+    .compare-table .good { background: #e8f5e9; color: #2e7d32; font-weight: 600; }
+
+
+
+
+
+
+
+    .compare-table .bad { background: #fce4ec; color: #c62828; }
+
+
+
+
+
+
+
+    .compare-table .neutral { background: #f8f9fa; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Cost breakdown */
+
+
+
+
+
+
+
+    .cost-box { padding: 20px 24px; margin: 24px 0; border-radius: 6px; }
+
+
+
+
+
+
+
+    .cost-box h3 { margin-top: 0; }
+
+
+
+
+
+
+
+    .cost-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #eee; }
+
+
+
+
+
+
+
+    .cost-row.total { font-weight: 700; border-bottom: none; font-size: 1.08em; margin-top: 6px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Verdict */
+
+
+
+
+
+
+
+    .verdict { background: #e8f0fe; border-left: 4px solid #1a73e8; padding: 24px 28px; margin: 36px 0; border-radius: 0 8px 8px 0; }
+
+
+
+
+
+
+
+    .verdict h2, .verdict h3 { margin-top: 0; color: #1a73e8; border: none; padding: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* When to choose */
+
+
+
+
+
+
+
+    .when-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+
+
+
+
+
+
+
+    .when-item { border: 1px solid #ddd; border-radius: 6px; padding: 18px 22px; }
+
+
+
+
+
+
+
+    .when-item h3 { margin-top: 0; font-size: 1em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* FAQ */
+
+
+
+
+
+
+
+    .faq { margin: 22px 0; }
+
+
+
+
+
+
+
+    .faq-q { font-weight: 700; color: #1a73e8; margin-bottom: 7px; }
+
+
+
+
+
+
+
+    .faq-a { color: #333; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* CTA */
+
+
+
+
+
+
+
+    .cta { background: #1a73e8; color: white; padding: 32px; margin: 48px 0; border-radius: 8px; text-align: center; }
+
+
+
+
+
+
+
+    .cta a { background: #fbbc04; color: #1a1a1a; padding: 14px 32px; text-decoration: none; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 14px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    blockquote { border-left: 3px solid #ddd; padding: 12px 20px; margin: 24px 0; color: #555; font-style: italic; }
+
+
+
+
+
+
+
+    .note { background: #fff8e1; border-left: 3px solid #f9a825; padding: 14px 18px; margin: 24px 0; font-size: 0.95em; border-radius: 0 4px 4px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 640px) {
+
+
+
+
+
+
+
+      .when-grid { grid-template-columns: 1fr; }
+
+
+
+
+
+
+
+      .compare-table { font-size: 0.85em; }
+
+
+
+
+
+
+
+      .cost-row { flex-direction: column; gap: 2px; }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:title" content="Mitsubishi CRT vs LCD Retrofit: Which Makes Sense for Your Shop?">
+
+
+
+
+
+
+
+<meta property="og:description" content="Your Mitsubishi CNC display is failing. Should you repair the CRT, buy used, or retrofit with LCD? Real cost data from 200+ shop installations.">
+
+
+
+
+
+
+
+<meta property="og:type" content="article">
+
+
+
+
+
+
+
+<meta property="og:url" content="https://cncdisplay.com/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" />
+
+
+
+
+
+
+
+</head>    <header>
+
+
+
+
+
+
+
+        <nav>
+
+
+
+
+
+
+
+            <a href="/" class="logo">Kongto Technology</a>
+
+
+
+
+
+
+
+            <div class="nav-links">
+
+
+
+
+
+
+
+                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/products/">Products</a>
+
+
+
+
+
+
+
+                <a href="/posts/">Articles</a>
+
+
+
+
+
+
+
+                <a href="/case-studies.html">Cases</a>
+<a href="/knowledge/">Knowledge</a>
+
+
+
+
+
+
+
+                <a href="/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/about.html">About</a>
+
+
+
+
+
+
+
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a href="/search.html" class="nav-search">🔍 Search</a>
+
+
+
+
+
+
+
+            <div class="lang-switch">
+
+
+
+
+
+
+
+                <a href="/zh/posts/crt-vs-lcd-cnc-display-comparison.html" lang="zh" class="lang-zh">中文</a>
+
+
+
+
+
+
+
+                <span class="divider">|</span>
+
+
+
+
+
+
+
+                <a href="/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html" lang="en" class="lang-en">English</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </nav>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="container">
+
+
+
+
+
+
+
+<p style="color: #888; font-size: 0.88em; margin-bottom: 0;">Decision Guide &nbsp;·&nbsp; Updated June 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1>Mitsubishi CRT vs LCD Retrofit:<br>Which Makes Sense for Your Shop?</h1>
+
+
+
+
+
+
+
+  <p class="subtitle">
+
+
+
+
+
+
+
+    Your Mitsubishi M64/E60/M500 display is failing. You have options — but they're not all equal. 
+
+
+
+
+
+
+
+    Here's what the numbers actually look like after 200+ installations.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="lead">
+
+
+
+
+
+
+
+    <strong>The short version:</strong> 
+
+
+
+
+
+
+
+    If the machine matters to your production, the LCD retrofit is the cheapest option 
+
+
+
+
+
+
+
+    long-term — even though it costs more upfront. If the machine is being replaced 
+
+
+
+
+
+
+
+    in under 6 months, a used CRT might get you through. Here's the full breakdown.
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 1: The 3 Options -->
+
+
+
+
+
+
+
+  <h2>The Three Options (And the Trade-offs Nobody Puts in the Brochure)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="option option-a">
+
+
+
+
+
+
+
+    <h3>Option 1: Repair the Existing CRT</h3>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      A specialized CRT repair shop can sometimes replace the flyback transformer, 
+
+
+
+
+
+
+
+      recalibrate the electron gun, or swap the deflection yoke. It's technically 
+
+
+
+
+
+
+
+      possible — but there's a reason most repair shops stopped accepting industrial 
+
+
+
+
+
+
+
+      CRTs after 2020.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>The problem:</strong> Every component inside a 20-year-old CRT is aging 
+
+
+
+
+
+
+
+      simultaneously. You fix the transformer, and the phosphor fails six months later. 
+
+
+
+
+
+
+
+      You degauss it, and the CRT socket arcs. It's whack-a-mole with $200 bills.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>When it makes sense:</strong> The machine is being replaced in &lt;6 months 
+
+
+
+
+
+
+
+      anyway, and you just need it to limp along. Otherwise — honestly — don't.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="option option-b">
+
+
+
+
+
+
+
+    <h3>Option 2: Buy a Used CRT Replacement</h3>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      There's a market for pulled MDT962B and similar units from decommissioned machines. 
+
+
+
+
+
+
+
+      You can find them on eBay, industrial surplus sites, and CNC forums. The price 
+
+
+
+
+
+
+
+      looks attractive — usually $150–$400 depending on condition.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>The problem:</strong> A "working" used CRT is typically 15–25 years old 
+
+
+
+
+
+
+
+      itself. You're buying someone else's problem. We've had customers come to us after 
+
+
+
+
+
+
+
+      their "tested working" used unit failed in 3 months. The seller's "30-day warranty" 
+
+
+
+
+
+
+
+      doesn't cover your downtime.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>When it makes sense:</strong> You have multiple identical machines and can 
+
+
+
+
+
+
+
+      swap parts between them, so downtime is measured in hours not days. Or you're 
+
+
+
+
+
+
+
+      waiting for an LCD kit to ship and need a stopgap.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="option option-c">
+
+
+
+
+
+
+
+    <h3>Option 3: LCD Retrofit Kit (What We Make)</h3>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      A new-production LCD unit built specifically to replace the CRT. Modern TFT panel, 
+
+
+
+
+
+
+
+      original mounting pattern, original connector. It's not the cheapest option up front 
+
+
+
+
+
+
+
+      ($300–$600 depending on the kit) — but it's the only one that actually solves 
+
+
+
+
+
+
+
+      the problem for good.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>The upside:</strong> Instant-on, zero flicker, 50,000+ hour lifespan, 
+
+
+
+
+
+
+
+      and a 1-year warranty. Most installations take under an hour. The machine is 
+
+
+
+
+
+
+
+      down less than the time it takes to eat lunch.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p><strong>The downside:</strong> Higher upfront cost. And if you're the kind of 
+
+
+
+
+
+
+
+      person who changes their mind every 6 months about equipment, this locks you in 
+
+
+
+
+
+
+
+      (though honestly, once you see the LCD, you won't want the CRT back).
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 2: Side-by-Side -->
+
+
+
+
+
+
+
+  <h2>Side-by-Side: How the Options Compare</h2>
+
+
+
+
+
+
+
+  <p>
+
+
+
+
+
+
+
+    These numbers come from real customer invoices and downtime reports we've collected 
+
+
+
+
+
+
+
+    over the past 3 years. Your numbers might be different — but this is what we've seen.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="overflow-x:auto;margin:1rem 0;"><table class="compare-table">
+
+
+
+
+
+
+
+    <thead>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <th>Factor</th>
+
+
+
+
+
+
+
+        <th>Repair CRT</th>
+
+
+
+
+
+
+
+        <th>Buy Used CRT</th>
+
+
+
+
+
+
+
+        <th>LCD Retrofit</th>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+    </thead>
+
+
+
+
+
+
+
+    <tbody>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Upfront cost</strong></td>
+
+
+
+
+
+
+
+        <td class="neutral">$150–$350 (if available)</td>
+
+
+
+
+
+
+
+        <td class="neutral">$150–$400</td>
+
+
+
+
+
+
+
+        <td class="good">$300–$600</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Installation downtime</strong></td>
+
+
+
+
+
+
+
+        <td class="bad">2–4 weeks (ship out/in)</td>
+
+
+
+
+
+
+
+        <td class="neutral">2–5 days (shipping)</td>
+
+
+
+
+
+
+
+        <td class="good">&lt; 1 hour (on-site)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Expected lifespan</strong></td>
+
+
+
+
+
+
+
+        <td class="bad">6–18 months</td>
+
+
+
+
+
+
+
+        <td class="bad">3–12 months (unknown history)</td>
+
+
+
+
+
+
+
+        <td class="good">50,000+ hours (17+ years)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Warranty</strong></td>
+
+
+
+
+
+
+
+        <td class="bad">Usually none</td>
+
+
+
+
+
+
+
+        <td class="bad">None or 30 days</td>
+
+
+
+
+
+
+
+        <td class="good">1-years (free replacement)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Display quality</strong></td>
+
+
+
+
+
+
+
+        <td class="neutral">Same as before (aging)</td>
+
+
+
+
+
+
+
+        <td class="bad">Variable (aged unit)</td>
+
+
+
+
+
+
+
+        <td class="good">Higher (800×600, no flicker)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>Power draw</strong></td>
+
+
+
+
+
+
+
+        <td class="bad">25–30W (runs hot)</td>
+
+
+
+
+
+
+
+        <td class="bad">25–30W (runs hot)</td>
+
+
+
+
+
+
+
+        <td class="good">≤10W (runs cool)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+      <tr>
+
+
+
+
+
+
+
+        <td><strong>5-year total cost</strong></td>
+
+
+
+
+
+
+
+        <td class="bad">$600–$1,200+ (repeat repairs)</td>
+
+
+
+
+
+
+
+        <td class="bad">$600–$1,200+ (repeat purchases + downtime)</td>
+
+
+
+
+
+
+
+        <td class="good">$300–$600 (one-time)</td>
+
+
+
+
+
+
+
+      </tr>
+
+
+
+
+
+
+
+    </tbody>
+
+
+
+
+
+
+
+  </table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="note">
+
+
+
+
+
+
+
+    <strong>Why the 5-year cost matters:</strong> 
+
+
+
+
+
+
+
+    A $200 used CRT that fails in 6 months isn't actually cheap. If it fails during 
+
+
+
+
+
+
+
+    a busy week and costs you a day of downtime ($1,000–$5,000 depending on the 
+
+
+
+
+
+
+
+    machine), the "cheap" option just became very expensive. The LCD kit looks 
+
+
+
+
+
+
+
+    expensive until you count the repeats.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 3: Real Cost Math -->
+
+
+
+
+
+
+
+  <h2>The Real Cost Math (With Actual Numbers)</h2>
+
+
+
+
+
+
+
+  <p>
+
+
+
+
+
+
+
+    Let's put specific numbers to this. These are based on real customer scenarios 
+
+
+
+
+
+
+
+    we've documented — a job shop with 3 Mitsubishi M64 lathes, where machine 
+
+
+
+
+
+
+
+    downtime costs them roughly $800/day in lost production.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="cost-box" style="background: #f8f9fa; border: 1px solid #ddd;">
+
+
+
+
+
+
+
+    <h3 style="margin-top: 0; color: #2e7d32;">LCD Retrofit — Total Cost Over 5 Years</h3>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Retrofit kit (one-time, M64, no interface board needed)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$380</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Installation (1 hour, in-house, no external tech)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$0</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Downtime (under 1 hour, scheduled weekend)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">~$100</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Replacements needed in 5 years</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">0</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row total" style="color: #2e7d32;">
+
+
+
+
+
+
+
+      <span>Total (5-year)</span>
+
+
+
+
+
+
+
+      <span>$480</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="cost-box" style="background: #fff5f5; border: 1px solid #fce4ec;">
+
+
+
+
+
+
+
+    <h3 style="margin-top: 0; color: #c62828;">Used CRT — Total Cost Over 5 Years</h3>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Used CRT (first unit, "tested working")</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$250</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Shipping (both directions, 2-day)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$60</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Downtime while waiting (avg 3 days × $800/day)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$2,400</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Replacements needed in 5 years (avg: fails every 14 months)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$1,000 (4 more units + shipping)</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row">
+
+
+
+
+
+
+
+      <span>Downtime for those replacements (4 × 3 days)</span>
+
+
+
+
+
+
+
+      <span style="font-weight: 600;">$9,600</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="cost-row total" style="color: #c62828;">
+
+
+
+
+
+
+
+      <span>Total (5-year)</span>
+
+
+
+
+
+
+
+      <span>$13,310</span>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p>
+
+
+
+
+
+
+
+    Now, your downtime cost might be lower than $800/day. Or higher. The point isn't 
+
+
+
+
+
+
+
+    the exact number — it's that <strong>downtime cost usually dwarfs the equipment cost</strong>. 
+
+
+
+
+
+
+
+    The "cheap" $250 used CRT becomes a $13,000 mistake when you count the repeats 
+
+
+
+
+
+
+
+    and the downtime. The $380 LCD kit? It's a one-time $480 expense and then 
+
+
+
+
+
+
+
+    you never think about it again.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 4: When Each Option Makes Sense -->
+
+
+
+
+
+
+
+  <h2>When Each Option Actually Makes Sense</h2>
+
+
+
+
+
+
+
+  <p>
+
+
+
+
+
+
+
+    To be fair: the LCD retrofit isn't the right answer for <em>every</em> situation. 
+
+
+
+
+
+
+
+    Here's when each option makes sense — and when it doesn't.
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="when-grid">
+
+
+
+
+
+
+
+    <div class="when-item">
+
+
+
+
+
+
+
+      <h3 style="color: #2e7d32;">CRT Repair Makes Sense If:</h3>
+
+
+
+
+
+
+
+      <ul style="padding-left: 18px; margin: 8px 0 0;">
+
+
+
+
+
+
+
+        <li>The machine is being replaced within 6 months anyway</li>
+
+
+
+
+
+
+
+        <li>You have a spare CRT on the shelf and just need a temporary fix</li>
+
+
+
+
+
+
+
+        <li>You're in a country where shipping an LCD kit takes 3+ weeks and you need it running tomorrow</li>
+
+
+
+
+
+
+
+      </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="when-item">
+
+
+
+
+
+
+
+      <h3 style="color: #1565c0;">Used CRT Makes Sense If:</h3>
+
+
+
+
+
+
+
+      <ul style="padding-left: 18px; margin: 8px 0 0;">
+
+
+
+
+
+
+
+        <li>You have multiple identical machines and can swap parts between them</li>
+
+
+
+
+
+
+
+        <li>You need a stopgap while waiting for an LCD kit to ship from overseas</li>
+
+
+
+
+
+
+
+        <li>The machine runs only 2–3 hours a week (so downtime is less critical)</li>
+
+
+
+
+
+
+
+      </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="when-item" style="border-left: 4px solid #f9a825; grid-column: 1 / -1;">
+
+
+
+
+
+
+
+      <h3 style="color: #92400e;">LCD Retrofit Makes Sense If:</h3>
+
+
+
+
+
+
+
+      <ul style="padding-left: 18px; margin: 8px 0 0;">
+
+
+
+
+
+
+
+        <li>The machine is critical to production (downtime costs &gt; $500/day)</li>
+
+
+
+
+
+
+
+        <li>You plan to keep the machine for 2+ more years</li>
+
+
+
+
+
+
+
+        <li>You want to stop worrying about the display failing at a bad time</li>
+
+
+
+
+
+
+
+        <li>You have operators complaining of eye strain from flicker</li>
+
+
+
+
+
+
+
+        <li>You want to actually read the parameters without squinting</li>
+
+
+
+
+
+
+
+      </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 5: Verdict -->
+
+
+
+
+
+
+
+  <div class="verdict">
+
+
+
+
+
+
+
+    <h3>Our Actual Recommendation (Based on 200+ Installations)</h3>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      If the machine matters to your production: <strong>go with the LCD retrofit</strong>. 
+
+
+
+
+
+
+
+      The numbers are clear once you look at total cost of ownership instead of just 
+
+
+
+
+
+
+
+      upfront price. The used CRT looks cheap until it fails during a busy week 
+
+
+
+
+
+
+
+      and costs you a day of production.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      If the machine is being replaced in under 6 months anyway: repair or used CRT 
+
+
+
+
+
+
+
+      might get you through. Just know the risks and have a backup plan. And be honest 
+
+
+
+
+
+
+
+      with yourself about whether "6 months" keeps turning into "well, maybe another 
+
+
+
+
+
+
+
+      year" — because it usually does.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <p>
+
+
+
+
+
+
+
+      <strong>The one exception:</strong> If you're in a region where we can't ship 
+
+
+
+
+
+
+
+      the LCD kit to you (sanctions, remote location, etc.), then a used CRT from 
+
+
+
+
+
+
+
+      a local industrial surplus dealer who will warranty it for 90 days is a reasonable 
+
+
+
+
+
+
+
+      backup plan. It's not ideal, but it might be what's available.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 6: Installation Time Comparison -->
+
+
+
+
+
+
+
+  <h2>What Installation Actually Looks Like (Time and Hassle)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3>LCD Retrofit — What Happens</h3>
+
+
+
+
+
+
+
+  <ol>
+
+
+
+
+
+
+
+    <li>Power down the CNC machine (5 minutes)</li>
+
+
+
+
+
+
+
+    <li>Remove the CRT bezel and unplug the display (10 minutes)</li>
+
+
+
+
+
+
+
+    <li>Unscrew the CRT and lift it out — they're heavier than they look (5 minutes)</li>
+
+
+
+
+
+
+
+    <li>Mount the LCD (same holes, same bracket) (10 minutes)</li>
+
+
+
+
+
+
+
+    <li>Plug in the original connector (2 minutes)</li>
+
+
+
+
+
+
+
+    <li>If your system needs an interface board (E60, M500, M520): mount it inside the cabinet (extra 20–30 minutes)</li>
+
+
+
+
+
+
+
+    <li>Power up and verify (5 minutes)</li>
+
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+  <p><strong>Total:</strong> 45–60 minutes for M64/E60. 75–90 minutes for M500/M520 (because of the interface board). Machine is down less than an hour for the simple ones.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3>CRT Repair — What Happens</h3>
+
+
+
+
+
+
+
+  <ol>
+
+
+
+
+
+
+
+    <li>Remove the CRT and ship it to a repair shop (2–3 days just for shipping)</li>
+
+
+
+
+
+
+
+    <li>Wait for diagnosis and a quote (3–5 days)</li>
+
+
+
+
+
+
+
+    <li>Approve the repair and wait for completion (5–10 days — they probably have to order parts)</li>
+
+
+
+
+
+
+
+    <li>Ship back and reinstall (2–3 days)</li>
+
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+  <p><strong>Total:</strong> 2–4 weeks. Your machine is down the entire time unless you have a spare. This is why most shops end up buying a used CRT as a stopgap while they wait — which means you're paying for both.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3>Used CRT — What Happens</h3>
+
+
+
+
+
+
+
+  <ol>
+
+
+
+
+
+
+
+    <li>Find one for sale (1–7 days of searching)</li>
+
+
+
+
+
+
+
+    <li>Order it and wait for shipping (2–5 days domestic, 1–3 weeks international)</li>
+
+
+
+
+
+
+
+    <li>Install it (1 hour, same as the LCD kit — the mounting is identical)</li>
+
+
+
+
+
+
+
+    <li>Cross your fingers and hope it lasts (median: 6–10 months based on what customers tell us)</li>
+
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 7: FAQ -->
+
+
+
+
+
+
+
+  <h2>Frequently Asked Questions</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="faq">
+
+
+
+
+
+
+
+    <div class="faq-q">Q: Isn't the LCD kit overpriced compared to a used CRT?</div>
+
+
+
+
+
+
+
+    <div class="faq-a">
+
+
+
+
+
+
+
+      A: Up front, yes. But the used CRT will likely need replacing again within a year. 
+
+
+
+
+
+
+
+      When you add up 3–4 used CRT purchases plus the downtime each time, the LCD kit 
+
+
+
+
+
+
+
+      is cheaper by year 2. Most of our customers wish they'd done the LCD upgrade 
+
+
+
+
+
+
+
+      sooner instead of "saving money" on used units first. That said — if budget is 
+
+
+
+
+
+
+
+      genuinely $0 this month, a used CRT will get you through the week. Just plan for 
+
+
+
+
+
+
+
+      the real fix later.
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="faq">
+
+
+
+
+
+
+
+    <div class="faq-q">Q: Will the LCD kit work with my exact Mitsubishi model?</div>
+
+
+
+
+
+
+
+    <div class="faq-a">
+
+
+
+
+
+
+
+      A: Send us a photo of your display label and your CNC controller model plate. 
+
+
+
+
+
+
+
+      We've seen every Mitsubishi variant in the field — M64, E60, M500, M520, and 
+
+
+
+
+
+
+
+      the various MDT962B sub-versions. We know which interface board goes with which 
+
+
+
+
+
+
+
+      system. We'll confirm compatibility before you order, free of charge.
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="faq">
+
+
+
+
+
+
+
+    <div class="faq-q">Q: What if the LCD fails? Is the warranty actually useful?</div>
+
+
+
+
+
+
+
+    <div class="faq-a">
+
+
+
+
+
+
+
+      A: Yes. We provide a 1-year warranty and we honor it — it's not a "restocking fee" 
+
+
+
+
+
+
+
+      situation. If a unit fails from a manufacturing defect, we ship a replacement. 
+
+
+
+
+
+
+
+      In our experience, failures in the first 1-years are extremely rare — maybe 1 in 200 
+
+
+
+
+
+
+
+      units. But it's good to know it's covered. The LCD panel itself is rated for 
+
+
+
+
+
+
+
+      50,000+ hours, and we've had exactly <em>one</em> warranty claim in the past 18 months.
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="faq">
+
+
+
+
+
+
+
+    <div class="faq-q">Q: Can I see what the LCD looks like before buying?</div>
+
+
+
+
+
+
+
+    <div class="faq-a">
+
+
+
+
+
+
+
+      A: We can send you photos of an installed unit, or put you in touch with a customer 
+
+
+
+
+
+
+
+      near you who has one running. We don't have a "free trial" program (these aren't 
+
+
+
+
+
+
+
+      $20 gadgets), but we're happy to answer specific questions about what changes and 
+
+
+
+
+
+
+
+      what doesn't. Most operators notice the brightness and lack of flicker immediately. 
+
+
+
+
+
+
+
+      The text sharpness improvement is more subtle but noticeable after a few days.
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- CTA -->
+
+
+
+
+
+
+
+  <div class="cta">
+
+
+
+
+
+
+
+    <h3 style="margin-top: 0; color: white;">Not Sure Which Option Fits Your Situation?</h3>
+
+
+
+
+
+
+
+    <p style="margin: 12px 0;">
+
+
+
+
+
+
+
+      Tell us your CNC model, how critical the machine is to your production, 
+
+
+
+
+
+
+
+      and your budget range. We'll give you an honest recommendation — including if we 
+
+
+
+
+
+
+
+      think a used CRT might actually make sense for your specific situation.
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <a href="https://cncdisplay.com/contact.html">Get an Honest Recommendation</a>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Related -->
+
+
+
+
+
+
+
+  <hr style="margin: 56px 0 28px; border: none; border-top: 1px solid #e8e8e8;">
+
+
+
+
+
+
+
+  <p style="color: #888; font-size: 0.9em;">
+
+
+
+
+
+
+
+    <strong>Related reading:</strong><br>
+
+
+
+
+
+
+
+    <a href="https://cncdisplay.com/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html" style="color: #1a73e8;">Mitsubishi MDT962B LCD Retrofit — Complete Installation Guide</a><br>
+
+
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e0e0e0;">
+
+
+
+
+
+
+
+    <p style="font-size:1.1rem;margin-bottom:0.75rem;"><strong>🔧 Ready to upgrade? View our Mitsubishi Mdt962B solution</strong></p>
+
+
+
+
+
+
+
+    <a href="/products/mitsubishi-mdt962b-lcd-upgrade.html" class="btn btn-primary" style="display:inline-block;padding:0.75rem 2rem;background:#FF6600;color:#fff;border-radius:980px;font-weight:600;text-decoration:none;">→ View Product Details</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
+
+
+
+
+
+
+
+        <h3 style="margin-top:0;color:#1e40af;">Related Articles</h3>
+
+
+
+
+
+
+
+        <ul style="margin-bottom:0;">
+
+
+
+
+
+
+
+            <li><a href="/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html">Mitsubishi MDT962B / BM09DF Series CRT to LCD Upgrade Solution — Kongto Technology</a></li>
+
+
+
+
+
+
+
+            <li><a href="/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html">Mitsubishi BM09DF Industrial Display</a></li>
+
+
+
+
+
+
+
+            <li><a href="/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html">Mitsubishi FCUA-CT100 Industrial Display</a></li>
+
+
+
+
+
+
+
+            <li><a href="/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html">Mitsubishi MDT962B Industrial LCD Monitor</a></li>
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>    
+
+
+
+
+
+
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+
+
+
+
+
+
+
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📌 Related Resources</p>
+
+
+
+
+
+
+
+            <ul style="margin:0;padding-left:1.2rem;">
+
+
+
+
+
+
+
+                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> — Find your CRT model</li>
+
+
+
+
+
+
+
+                <li><a href="/brands/">Browse by Brand</a> — FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+
+
+
+
+
+
+
+                <li><a href="/quote.html">Get a Quote</a> — Reply within 24 hours</li>
+
+
+
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+
+
+
+
+
+        <div class="footer-content">
+
+
+
+
+
+
+
+            <div class="footer-brand">
+
+
+
+
+
+
+
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+
+
+
+
+
+
+
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/posts/">📄 Articles</a>
+
+
+
+
+
+
+
+                <a href="/brands/FANUC.html">FANUC</a>
+
+
+
+
+
+
+
+                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
+
+
+
+
+
+
+
+                <a href="/brands/Siemens.html">Siemens</a>
+
+
+
+
+
+
+
+                <a href="/docs/">Downloads</a>
+
+
+
+
+
+
+
+                <a href="/about.html">About Us</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+
+
+
+
+
+
+
+	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="footer-links">
+
+
+
+
+
+
+
+                <a href="/glossary.html">Glossary</a>
+
+
+
+
+
+
+
+                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
+
+
+
+
+
+
+
+                <a href="/comparison-tool.html">Compare</a>
+
+
+
+
+
+
+
+                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
+
+
+
+
+
+
+
+                <a href="/compatibility-matrix.html">Compatibility</a>
+
+
+
+
+
+
+
+                <a href="/privacy.html">Privacy</a>
+
+
+
+
+
+
+
+                <a href="/terms.html">Terms</a>
+
+
+
+
+
+
+
+                <a href="/sitemap.xml">Sitemap</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
