@@ -338,3 +338,11 @@
 /images/mitsubishi-lcd-replacement.jpg /products/mitsubishi-bm09df-lcd-upgrade.html 301
 /images/siemens/siemens-579417ta.jpg /posts/siemens-sinumerik-display-troubleshooting-guide.html 301
 /images/siemens/siemens-6fc3988-7fa20-crt.jpg /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+
+# Generic symptom product pages → troubleshooting knowledge article (no specific model, no price)
+/products/no-display.html /knowledge/cnc-monitor-troubleshooting-guide.html 301
+/products/flickering-screen.html /knowledge/cnc-monitor-troubleshooting-guide.html 301
+/products/image-retention.html /knowledge/cnc-monitor-troubleshooting-guide.html 301
+/zh/products/no-display.html /zh/posts/ 301
+/zh/products/flickering-screen.html /zh/posts/ 301
+/zh/products/image-retention.html /zh/posts/ 301
