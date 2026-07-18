@@ -277,5 +277,59 @@
 /en/docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx /docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx 301
 /en/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf /docs/Kongto_CRT_LCD_Upgrade_Guide.pdf 301
 /en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf /docs/MDT-1283_CRT_to_LCD_V2.62.pdf 301
-# /en/ path prefix redirects — EN site is at root / not /en/
-/en/* /:splat 301
+# /en/ -> / (EN site is at root, not /en/)
+# Individual /en/ pages already handled by meta-refresh in en/*.html
+
+# === Missing product pages redirects (broken links in GEO/articles) ===
+/products/heidenhain-be411-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
+/products/heidenhain-be211-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
+/products/fanuc-om-d-display-lcd-upgrade.html /brands/FANUC.html 301
+/products/okuma-osp-crt-lcd-upgrade.html /brands/OKUMA.html 301
+/products/siemens-6fc3998-7fa20-lcd-upgrade.html /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+/products/siemens-8.4-inch-crt-lcd-upgrade.html /brands/Siemens.html 301
+/products/fanuc-0m-0t-crt-lcd-upgrade.html /brands/FANUC.html 301
+/products/fanuc-16i-18i-21i-lcd-upgrade.html /brands/FANUC.html 301
+/products/fanuc-a61l-0001-0077-lcd-upgrade.html /brands/FANUC.html 301
+/products/fanuc-a61l-0001-0078-lcd-upgrade.html /brands/FANUC.html 301
+/products/fanuc-a61l-0001-0087-lcd-upgrade.html /brands/FANUC.html 301
+/products/fanuc-a61l-0001-0136-lcd-upgrade.html /brands/FANUC.html 301
+/products/mazak-cd1472-d2m-lcd-upgrade.html /products/mazak-cd1472-lcd-upgrade.html 301
+/products/mazak-cd0910-dm-lcd-upgrade.html /brands/MAZAK.html 301
+/products/mazak-cd1283-d1m-lcd-upgrade.html /products/mazak-mdt1283b-lcd-upgrade.html 301
+/products/mazak-du3461g-l-lcd-upgrade.html /brands/MAZAK.html 301
+/products/mazak-t3021-ah-lcd-upgrade.html /brands/MAZAK.html 301
+/products/okuma-osp5020-crt-lcd-upgrade.html /products/okuma-osp5020-lcd-upgrade.html 301
+
+# === Missing zh product pages ===
+/zh/products/okuma-osp-crt-lcd-upgrade.html /zh/products/okuma-osp5000-lcd-upgrade.html 301
+
+# === KTV article case fix (links use _Custom_Industrial_Display.html, files have _custom_industrial_display.html) ===
+/posts/article_20260508_KTV104_Custom_Industrial_Display.html /posts/article_20260508_KTV104_custom_industrial_display.html 301
+/posts/article_20260508_KTV148_Custom_Industrial_Display.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
+/posts/article_20260508_KTV800M_Custom_Industrial_Display.html /posts/article_20260508_KTV800M_custom_industrial_display.html 301
+/posts/article_20260508_KTV804_Custom_Industrial_Display.html /posts/article_20260508_KTV804_custom_industrial_display.html 301
+/posts/article_20260507_MDT1283B_LCD.html /posts/article_20260507_MDT1283B_LCD_Replacement.html 301
+
+# === Missing zh posts ===
+/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html /posts/fanuc-crt-to-lcd-step-by-step-guide.html 301
+
+# === Missing images (restored from old Worker rules) ===
+/images/0097_crt.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/0097_interfaces.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/0097_lcd_front.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/0097_lcd_rear.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_crt.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_LCD_front.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_LCD_rear.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_installation.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_interfaces.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/A6100010096_package.jpg /posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html 301
+/images/logo_256.png /index.html 301
+/images/mazak_dr5614_crt.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/images/mazak_dr5614_lcd_front.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/images/mazak_dr5614_lcd_rear.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/images/mazak_dr5614_install.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
+/images/mazak_dr5614_compare.jpg /posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html 301
+/images/mitsubishi-lcd-replacement.jpg /products/mitsubishi-bm09df-lcd-upgrade.html 301
+/images/siemens/siemens-579417ta.jpg /posts/siemens-sinumerik-display-troubleshooting-guide.html 301
+/images/siemens/siemens-6fc3988-7fa20-crt.jpg /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
