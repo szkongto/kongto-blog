@@ -18,6 +18,9 @@ EXCLUDE = [
     "test.txt",
     "_archive_",
     "_templates/",
+    "no-display.html",
+    "flickering-screen.html",
+    "image-retention.html",
 ]
 
 def get_git_lastmod(filepath):

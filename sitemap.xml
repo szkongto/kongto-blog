@@ -1358,12 +1358,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/products/flickering-screen.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/products/haas-12inch-9pin-crt-lcd-upgrade.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1389,12 +1383,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/products/heidenhain-bc110-lcd-upgrade.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/products/image-retention.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1503,12 +1491,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/products/mitsubishi-tx-1450ab-lcd-upgrade.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/products/no-display.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1797,7 +1779,7 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/posts/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2990,12 +2972,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/products/flickering-screen.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/products/haas-12inch-9pin-crt-lcd-upgrade.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -3021,12 +2997,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/products/heidenhain-bc110-lcd-upgrade.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/products/image-retention.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3135,12 +3105,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/products/no-display.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

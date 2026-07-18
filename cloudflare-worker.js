@@ -292,8 +292,10 @@ const REDIRECTS = {
   '/products/fanuc-a61l-0001-0087-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0136-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-om-d-display-lcd-upgrade.html': '/brands/FANUC.html',
+  '/products/flickering-screen.html': '/knowledge/cnc-monitor-troubleshooting-guide.html',
   '/products/heidenhain-be211-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
   '/products/heidenhain-be411-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
+  '/products/image-retention.html': '/knowledge/cnc-monitor-troubleshooting-guide.html',
   '/products/kt809-industrial-converter.html': '/posts/article_20260509_KT809_industrial_converter.html',
   '/products/kt819-industrial-converter.html': '/posts/article_20260509_KT819_industrial_converter.html',
   '/products/mazak-14-inch-crt-lcd-upgrade.html': '/products/mazak-dr5614-lcd-upgrade.html',
@@ -302,6 +304,7 @@ const REDIRECTS = {
   '/products/mazak-cd1472-d2m-lcd-upgrade.html': '/products/mazak-cd1472-lcd-upgrade.html',
   '/products/mazak-du3461g-l-lcd-upgrade.html': '/brands/MAZAK.html',
   '/products/mazak-t3021-ah-lcd-upgrade.html': '/brands/MAZAK.html',
+  '/products/no-display.html': '/knowledge/cnc-monitor-troubleshooting-guide.html',
   '/products/okuma-osp-crt-lcd-upgrade.html': '/brands/OKUMA.html',
   '/products/okuma-osp5020-crt-lcd-upgrade.html': '/products/okuma-osp5020-lcd-upgrade.html',
   '/products/siemens-6fc3998-7fa20-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
@@ -313,6 +316,9 @@ const REDIRECTS = {
   '/weixin:/dl/chat': '/index.html',
   '/zh/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html': '/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html',
   '/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html': '/posts/fanuc-crt-to-lcd-step-by-step-guide.html',
+  '/zh/products/flickering-screen.html': '/zh/posts/',
+  '/zh/products/image-retention.html': '/zh/posts/',
+  '/zh/products/no-display.html': '/zh/posts/',
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
 };
 
