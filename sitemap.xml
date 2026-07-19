@@ -909,7 +909,7 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/posts/cnc-crt-troubleshooting-hub.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1761,7 +1761,7 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1770,6 +1770,12 @@
     <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/knowledge/cnc-monitor-troubleshooting-guide.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/knowledge/crt-vs-lcd-cnc-display-comparison.html</loc>
