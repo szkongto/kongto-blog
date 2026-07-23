@@ -1,0 +1,3 @@
+TITLE: FANUC A61L-0001-0093 display going bad — options?
+
+My FANUC A61L-0001-0093 CRT is showing dim display. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
