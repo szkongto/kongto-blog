@@ -1,0 +1,3 @@
+TITLE: Mazak CNC C-5470NS monitor failing — anyone switched to LCD?
+
+My Mazak C-5470NS CRT is showing image retention / burn-in. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
