@@ -1,144 +1,939 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://cncdisplay.com/glossary.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology">
-    <meta property="og:description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin, and more. Maintained by Kongto Technology, 12-year specialist in industrial display solutions.">
-    <meta property="og:url" content="https://cncdisplay.com/glossary.html">
-    <meta property="og:site_name" content="Kongto Technology">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology">
-    <meta name="twitter:description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin.">
-    <title>CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology</title>
-    <meta name="description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin. Maintained by Kongto Technology, 12-year industrial display specialist.">
-    <link rel="stylesheet" href="/css/style.css?v=6">
-    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/glossary.html" />
-    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/glossary.html" />
-    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "CNC Industrial Display Glossary - CRT, LCD, CGA, EGA, VGA Terminology",
-      "description": "Comprehensive glossary of CNC industrial display terminology maintained by Kongto Technology.",
-      "author": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
-      "publisher": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
-      "datePublished": "2026-06-23",
-      "proficiencyLevel": "Expert"
-    }
-    </script>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Kongto Technology</a>
-            <div class="nav-links">
-                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/products/">Products</a>
-                <a href="/posts/">Articles</a>
-                <a href="/case-studies.html">Cases</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
-            </div>
-            <a href="/search.html" class="nav-search">🔍 Search</a>
-            <div class="lang-switch">
-                <a href="/zh/glossary.html" lang="zh" class="lang-zh">中文</a>
-                <span class="divider">|</span>
-                <a href="/glossary.html" lang="en" class="lang-en">English</a>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1>CNC Industrial Display Terminology Glossary</h1>
-        <p class="lead" style="font-size:1.1rem;color:#666;margin-bottom:2rem;">
-            This glossary is maintained by <strong>Kongto Technology (Shenzhen Jiangtu Technology Co., Ltd.)</strong>,
-            a 12-year specialist in CNC industrial display upgrade solutions. Covers core terminology for
-            CRT-to-LCD retrofits, video signal conversion, and industrial display technology.
-        </p>
-
-        <h2>Display Types</h2>
-        <table class="spec-table glossary-table">
-            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
-            <tr><td><strong>CRT</strong></td><td>Cathode Ray Tube</td><td>A vacuum tube display technology using an electron beam to excite phosphors on a glass screen. Widely used in CNC machine displays (FANUC A61L, Mitsubishi MDT962B, etc.) until the 2010s. CRTs offer good color reproduction but consume 30-80W and have limited lifespan (~15,000 hours).</td></tr>
-            <tr><td><strong>LCD</strong></td><td>Liquid Crystal Display</td><td>A flat-panel technology using liquid crystals modulated by electric fields. Compared to CRT: 70% lower power consumption (8-15W), 80% smaller footprint, 50,000+ hour lifespan, no flicker. Kongto KTO series upgrade modules use industrial-grade TFT-LCD panels.</td></tr>
-            <tr><td><strong>TFT-LCD</strong></td><td>Thin-Film Transistor LCD</td><td>An active-matrix LCD technology where each pixel has its own thin-film transistor switch. Enables high resolution and fast refresh rates. Industrial TFT-LCD panels operate reliably from -20&deg;C to +70&deg;C, far exceeding consumer-grade specifications.</td></tr>
-        </table>
-
-        <h2>Video Signal Standards</h2>
-        <table class="spec-table glossary-table">
-            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
-            <tr><td><strong>CGA</strong></td><td>Color Graphics Adapter</td><td>IBM's 1981 color display standard: 640&times;200 (mono) or 320&times;200 (4-color), 15.75kHz horizontal scan. Many 1980s-90s Japanese CNC systems (early FANUC, Mitsubishi) output CGA signals. Requires a video signal converter to drive modern LCD displays.</td></tr>
-            <tr><td><strong>EGA</strong></td><td>Enhanced Graphics Adapter</td><td>IBM's 1984 standard: 640&times;350, 16-color, dual-frequency (15.75/21.85kHz). Some Siemens SINUMERIK systems use EGA signals. CRT-to-LCD upgrades for EGA systems require RGB&rarr;VGA signal conversion.</td></tr>
-            <tr><td><strong>VGA</strong></td><td>Video Graphics Array</td><td>IBM's 1987 standard: 640&times;480, analog RGB, 31.5kHz. The most common industrial video interface. Most modern LCD modules directly accept VGA input, making it the primary target format for CRT upgrades.</td></tr>
-            <tr><td><strong>RGBHV</strong></td><td>Red-Green-Blue-Horizontal Sync-Vertical Sync</td><td>An analog video signal format separating R/G/B color signals from horizontal and vertical sync pulses. CGA, EGA, and VGA all belong to the RGBHV family, differing in resolution and sync frequency.</td></tr>
-            <tr><td><strong>TTL RGB</strong></td><td>Transistor-Transistor Logic RGB</td><td>Digital-level (0/5V) RGB signals, common in CGA and EGA standards. Limited color count (e.g., 16 colors for CGA). TTL RGB requires analog conversion for modern LCD displays.</td></tr>
-        </table>
-
-        <h2>Connectors &amp; Interfaces</h2>
-        <table class="spec-table glossary-table">
-            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
-            <tr><td><strong>HONDA 20-pin</strong></td><td>HONDA 20-Pin Connector</td><td>A 20-pin rectangular industrial connector by HONDA (Japan). Widely used in FANUC CNC CRT displays for combined signal and power transmission. Kongto KTO-F series modules preserve this interface for plug-and-play replacement.</td></tr>
-            <tr><td><strong>DB-25</strong></td><td>D-Sub 25-Pin Connector</td><td>A classic D-subminiature connector. Siemens SINUMERIK 810/820 series CRT displays commonly use DB-25 for combined signal and power. Verify pinout compatibility before upgrading.</td></tr>
-            <tr><td><strong>LVDS</strong></td><td>Low-Voltage Differential Signaling</td><td>A high-speed, low-power digital interface standard for internal LCD panel connections. CRT-to-LCD upgrades convert legacy TTL/analog signals to LVDS to drive the LCD panel.</td></tr>
-            <tr><td><strong>HDMI</strong></td><td>High-Definition Multimedia Interface</td><td>A fully digital audio/video interface. Modern industrial LCD modules increasingly include HDMI for direct connection to PCs and industrial computers.</td></tr>
-        </table>
-
-        <h2>CNC Brands &amp; Display Compatibility</h2>
-        <table class="spec-table glossary-table">
-            <tr><th width="160">Brand</th><th>Typical CRT Models</th><th>Interface</th><th>Kongto Solution</th></tr>
-            <tr><td><strong>FANUC</strong></td><td>A61L-0001-0074~0097, D9MM-11A</td><td>HONDA 20-pin, DC24V</td><td>KTO-F series plug-and-play modules</td></tr>
-            <tr><td><strong>Mitsubishi</strong></td><td>MDT962B, BM09DF, FCUA-CT100</td><td>HONDA 20-pin, DC24V</td><td>KTO-M series modules</td></tr>
-            <tr><td><strong>Siemens</strong></td><td>6FC3988-7FA20, SM0901</td><td>DB-25, AC110V</td><td>KTO-S series (verify voltage!)</td></tr>
-            <tr><td><strong>Mazak</strong></td><td>CD1472-D1M, C5470-NS, DR5614</td><td>HONDA 20-pin / D-Sub</td><td>KTO-Z series modules</td></tr>
-            <tr><td><strong>Okuma</strong></td><td>OSP 5000/5020 CRT</td><td>D-Sub 14/20-pin, DC24V</td><td>KTO-O series modules</td></tr>
-            <tr><td><strong>Haas</strong></td><td>VF Series 9-inch CRT</td><td>D-Sub 9-pin, DC12V</td><td>KTO-H series modules</td></tr>
-        </table>
-
-        <div style="margin-top:3rem;padding:1.5rem;background:#f5f8fa;border-left:4px solid #2b6cb0;border-radius:4px;">
-            <h3 style="margin-top:0;">Need Expert Advice?</h3>
-            <p>Not sure which display interface your CNC equipment uses? Contact us for a <strong>free technical assessment</strong>.</p>
-            <p>馃摟 Email: <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> &nbsp;|&nbsp; 馃摓 Phone: <a href="tel:+8613686889647">+86-136-8688-9647</a></p>
-            <p style="font-size:0.9rem;color:#666;">Last updated: June 2026. Kongto Technology &copy; 2026</p>
-        </div>
-    </main>
-
-        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
-            <ul style="margin:0;padding-left:1.2rem;">
-                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
-                <li><a href="/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
-                <li><a href="/quote.html">Get a Quote</a> —Reply within 24 hours</li>
-            </ul>
-        </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
-            </div>
-            <div class="footer-links">
-                <a href="/posts/">📄 Articles</a>
-                <a href="/brands/FANUC.html">FANUC</a>
-                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/brands/Siemens.html">Siemens</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About Us</a>
-            </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original. Protected under copyright law. Unauthorized reproduction prohibited. Written by szkongto01.</p>
-        </div>
-    </footer>
-    <div style="text-align:center;padding:20px 0;font-size:12px;color:#888888;border-top:1px solid #e0e0e0;margin-top:40px;">
-        <p style="margin:4px 0;">
-            Kongto Technology &copy; 2026
-            &nbsp;|&nbsp; <a href="/" style="color:#888;">Home</a>
-        </p>
-    </div>
-</body>
-</html>
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+    <link rel="canonical" href="https://cncdisplay.com/glossary.html">
+
+
+
+
+
+
+
+    <meta property="og:type" content="website">
+
+
+
+
+
+
+
+    <meta property="og:title" content="CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology">
+
+
+
+
+
+
+
+    <meta property="og:description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin, and more. Maintained by Kongto Technology, 12-year specialist in industrial display solutions.">
+
+
+
+
+
+
+
+    <meta property="og:url" content="https://cncdisplay.com/glossary.html">
+
+
+
+
+
+
+
+    <meta property="og:site_name" content="Kongto Technology">
+
+
+
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+
+    <meta name="twitter:title" content="CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology">
+
+
+
+
+
+
+
+    <meta name="twitter:description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin.">
+
+
+
+
+
+
+
+    <title>CNC Industrial Display Glossary | CRT/LCD/CGA/EGA/VGA Terms | Kongto Technology</title>
+
+
+
+
+
+
+
+    <meta name="description" content="Comprehensive glossary of CNC industrial display terminology: CRT, LCD, CGA, EGA, VGA, TFT-LCD, LVDS, HONDA 20-pin. Maintained by Kongto Technology, 12-year industrial display specialist.">
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css?v=6">
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/glossary.html" />
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="en" href="https://cncdisplay.com/glossary.html" />
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/" />
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+      "@context": "https://schema.org",
+
+
+
+
+
+
+
+      "@type": "TechArticle",
+
+
+
+
+
+
+
+      "headline": "CNC Industrial Display Glossary - CRT, LCD, CGA, EGA, VGA Terminology",
+
+
+
+
+
+
+
+      "description": "Comprehensive glossary of CNC industrial display terminology maintained by Kongto Technology.",
+
+
+
+
+
+
+
+      "author": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
+
+
+
+
+
+
+
+      "publisher": {"@type": "Organization", "name": "Kongto Technology", "url": "https://cncdisplay.com"},
+
+
+
+
+
+
+
+      "datePublished": "2026-06-23",
+
+
+
+
+
+
+
+      "proficiencyLevel": "Expert"
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+    <header>
+        <nav>
+            <a href="/" class="logo">Kongto Technology</a>
+            <div class="nav-links">
+                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+                <a href="/products/">Products</a>
+                <a href="/posts/">Articles</a>
+                <a href="/case-studies.html">Cases</a>
+                <a href="/docs/">Downloads</a>
+                <a href="/about.html">About</a>
+                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+            </div>
+            <a href="/search.html" class="nav-search">🔍 Search</a>
+            <div class="lang-switch">
+
+
+
+
+
+
+
+                <a href="/zh/glossary.html" lang="zh" class="lang-zh">中文</a>
+
+
+
+
+
+
+
+                <span class="divider">|</span>
+
+
+
+
+
+
+
+                <a href="/glossary.html" lang="en" class="lang-en">English</a>
+
+
+
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="container">
+
+
+
+
+
+
+
+        <h1>CNC Industrial Display Terminology Glossary</h1>
+
+
+
+
+
+
+
+        <p class="lead" style="font-size:1.1rem;color:#666;margin-bottom:2rem;">
+
+
+
+
+
+
+
+            This glossary is maintained by <strong>Kongto Technology (Shenzhen Jiangtu Technology Co., Ltd.)</strong>,
+
+
+
+
+
+
+
+            a 12-year specialist in CNC industrial display upgrade solutions. Covers core terminology for
+
+
+
+
+
+
+
+            CRT-to-LCD retrofits, video signal conversion, and industrial display technology.
+
+
+
+
+
+
+
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Display Types</h2>
+
+
+
+
+
+
+
+        <table class="spec-table glossary-table">
+
+
+
+
+
+
+
+            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>CRT</strong></td><td>Cathode Ray Tube</td><td>A vacuum tube display technology using an electron beam to excite phosphors on a glass screen. Widely used in CNC machine displays (FANUC A61L, Mitsubishi MDT962B, etc.) until the 2010s. CRTs offer good color reproduction but consume 30-80W and have limited lifespan (~15,000 hours).</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>LCD</strong></td><td>Liquid Crystal Display</td><td>A flat-panel technology using liquid crystals modulated by electric fields. Compared to CRT: 70% lower power consumption (8-15W), 80% smaller footprint, 50,000+ hour lifespan, no flicker. Kongto KTO series upgrade modules use industrial-grade TFT-LCD panels.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>TFT-LCD</strong></td><td>Thin-Film Transistor LCD</td><td>An active-matrix LCD technology where each pixel has its own thin-film transistor switch. Enables high resolution and fast refresh rates. Industrial TFT-LCD panels operate reliably from -20&deg;C to +70&deg;C, far exceeding consumer-grade specifications.</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Video Signal Standards</h2>
+
+
+
+
+
+
+
+        <table class="spec-table glossary-table">
+
+
+
+
+
+
+
+            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>CGA</strong></td><td>Color Graphics Adapter</td><td>IBM's 1981 color display standard: 640&times;200 (mono) or 320&times;200 (4-color), 15.75kHz horizontal scan. Many 1980s-90s Japanese CNC systems (early FANUC, Mitsubishi) output CGA signals. Requires a video signal converter to drive modern LCD displays.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>EGA</strong></td><td>Enhanced Graphics Adapter</td><td>IBM's 1984 standard: 640&times;350, 16-color, dual-frequency (15.75/21.85kHz). Some Siemens SINUMERIK systems use EGA signals. CRT-to-LCD upgrades for EGA systems require RGB&rarr;VGA signal conversion.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>VGA</strong></td><td>Video Graphics Array</td><td>IBM's 1987 standard: 640&times;480, analog RGB, 31.5kHz. The most common industrial video interface. Most modern LCD modules directly accept VGA input, making it the primary target format for CRT upgrades.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>RGBHV</strong></td><td>Red-Green-Blue-Horizontal Sync-Vertical Sync</td><td>An analog video signal format separating R/G/B color signals from horizontal and vertical sync pulses. CGA, EGA, and VGA all belong to the RGBHV family, differing in resolution and sync frequency.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>TTL RGB</strong></td><td>Transistor-Transistor Logic RGB</td><td>Digital-level (0/5V) RGB signals, common in CGA and EGA standards. Limited color count (e.g., 16 colors for CGA). TTL RGB requires analog conversion for modern LCD displays.</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Connectors &amp; Interfaces</h2>
+
+
+
+
+
+
+
+        <table class="spec-table glossary-table">
+
+
+
+
+
+
+
+            <tr><th width="200">Term</th><th>Full Name</th><th>Explanation</th></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>HONDA 20-pin</strong></td><td>HONDA 20-Pin Connector</td><td>A 20-pin rectangular industrial connector by HONDA (Japan). Widely used in FANUC CNC CRT displays for combined signal and power transmission. Kongto KTO-F series modules preserve this interface for plug-and-play replacement.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>DB-25</strong></td><td>D-Sub 25-Pin Connector</td><td>A classic D-subminiature connector. Siemens SINUMERIK 810/820 series CRT displays commonly use DB-25 for combined signal and power. Verify pinout compatibility before upgrading.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>LVDS</strong></td><td>Low-Voltage Differential Signaling</td><td>A high-speed, low-power digital interface standard for internal LCD panel connections. CRT-to-LCD upgrades convert legacy TTL/analog signals to LVDS to drive the LCD panel.</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>HDMI</strong></td><td>High-Definition Multimedia Interface</td><td>A fully digital audio/video interface. Modern industrial LCD modules increasingly include HDMI for direct connection to PCs and industrial computers.</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>CNC Brands &amp; Display Compatibility</h2>
+
+
+
+
+
+
+
+        <table class="spec-table glossary-table">
+
+
+
+
+
+
+
+            <tr><th width="160">Brand</th><th>Typical CRT Models</th><th>Interface</th><th>Kongto Solution</th></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>FANUC</strong></td><td>A61L-0001-0074~0097, D9MM-11A</td><td>HONDA 20-pin, DC24V</td><td>KTO-F series plug-and-play modules</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>Mitsubishi</strong></td><td>MDT962B, BM09DF, FCUA-CT100</td><td>HONDA 20-pin, DC24V</td><td>KTO-M series modules</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>Siemens</strong></td><td>6FC3988-7FA20, SM0901</td><td>DB-25, AC110V</td><td>KTO-S series (verify voltage!)</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>Mazak</strong></td><td>CD1472-D1M, C5470-NS, DR5614</td><td>HONDA 20-pin / D-Sub</td><td>KTO-Z series modules</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>Okuma</strong></td><td>OSP 5000/5020 CRT</td><td>D-Sub 14/20-pin, DC24V</td><td>KTO-O series modules</td></tr>
+
+
+
+
+
+
+
+            <tr><td><strong>Haas</strong></td><td>VF Series 9-inch CRT</td><td>D-Sub 9-pin, DC12V</td><td>KTO-H series modules</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div style="margin-top:3rem;padding:1.5rem;background:#f5f8fa;border-left:4px solid #2b6cb0;border-radius:4px;">
+
+
+
+
+
+
+
+            <h3 style="margin-top:0;">Need Expert Advice?</h3>
+
+
+
+
+
+
+
+            <p>Not sure which display interface your CNC equipment uses? Contact us for a <strong>free technical assessment</strong>.</p>
+
+
+
+
+
+
+
+            <p>馃摟 Email: <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> &nbsp;|&nbsp; 馃摓 Phone: <a href="tel:+8613686889647">+86-136-8688-9647</a></p>
+
+
+
+
+
+
+
+            <p style="font-size:0.9rem;color:#666;">Last updated: June 2026. Kongto Technology &copy; 2026</p>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
+
+
+
+
+
+
+
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">📘 Related Resources</p>
+
+
+
+
+
+
+
+            <ul style="margin:0;padding-left:1.2rem;">
+
+
+
+
+
+
+
+                <li><a href="/compatibility-matrix.html">95+ Model Compatibility Matrix</a> —Find your CRT model</li>
+
+
+
+
+
+
+
+                <li><a href="/brands/">Browse by Brand</a> —FANUC/Mitsubishi/Siemens/Mazak/Okuma/Haas</li>
+
+
+
+
+
+
+
+                <li><a href="/quote.html">Get a Quote</a> —Reply within 24 hours</li>
+
+
+
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Kongto Technology 江图科技</span>
+                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+            </div>
+            <div class="footer-links">
+                <a href="/posts/">📄 Articles</a>
+                <a href="/brands/FANUC.html">FANUC</a>
+                <a href="/brands/Mitsubishi.html">Mitsubishi</a>
+                <a href="/brands/Siemens.html">Siemens</a>
+                <a href="/docs/">Downloads</a>
+                <a href="/about.html">About Us</a>
+            </div>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
+            <p class="original-statement" style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original, including text, images, technical specifications, and solutions. Protected under copyright law. Unauthorized reproduction or copying prohibited. Written by szkongto01.</p>
+        </div>
+    
+            <div class="footer-links">
+                <a href="/glossary.html">Glossary</a>
+                <a href="/crt-dead-symptoms.html">CRT Symptoms</a>
+                <a href="/comparison-tool.html">Compare</a>
+                <a href="/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
+                <a href="/compatibility-matrix.html">Compatibility</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+    </footer>
+
+
+
+
+
+
+
+    <div style="text-align:center;padding:20px 0;font-size:12px;color:#888888;border-top:1px solid #e0e0e0;margin-top:40px;">
+
+
+
+
+
+
+
+        <p style="margin:4px 0;">
+
+
+
+
+
+
+
+            Kongto Technology &copy; 2026
+
+
+
+
+
+
+
+            &nbsp;|&nbsp; <a href="/" style="color:#888;">Home</a>
+
+
+
+
+
+
+
+        </p>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
