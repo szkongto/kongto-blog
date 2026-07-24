@@ -223,7 +223,7 @@ Total indexed pages: 241
 - [FANUC A61L-0001-0092 MDT947B 9-inch Monochrome LCD Retrofit Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html)
 - [FANUC A61L-0001-0093 LCD Retrofit Solution | 9-inch CRT to LCD...](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html)
 - [FANUC A61L-0001-0094 9-inch Color LCD Retrofit Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html)
-- [FANUC A61L-0001-0095 9-inch Monochrome LCD Replacement Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html)
+- [FANUC A61L-0001-0095 9-inch Color LCD Replacement Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0095_LCD.html)
 - [FANUC D9MM-11A (A61L-0001-0093) 9-Inch Monochrome Display LCD ...](https://cncdisplay.com/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html)
 - [Mitsubishi BM09DF Industrial Display — TFT Replacement for E60...](https://cncdisplay.com/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html)
 - [Mitsubishi FCUA-CT100 Industrial Display — TFT Replacement for...](https://cncdisplay.com/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html)
