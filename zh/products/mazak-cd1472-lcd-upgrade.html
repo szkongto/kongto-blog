@@ -10,7 +10,7 @@
 
     <title>Mazak CD1472-D1M LCD替换 | 14英寸CRT改LCD | 江图科技</title>
 
-    <meta name="description" content="Mazak CD1472-D1M LCD替换 — 14英寸彩色CRT转LCD，用于Mazatrol T-32/M-32数控。即插即用。$355含2年质保。">
+    <meta name="description" content="Mazak CD1472-D1M LCD替换 — 14英寸彩色CRT转LCD，用于Mazatrol T-32/M-32数控。即插即用。含2年质保。">
 
     <link rel="canonical" href="https://cncdisplay.com/zh/products/mazak-cd1472-lcd-upgrade.html">
 
@@ -30,9 +30,9 @@
 
     <meta property="og:site_name" content="Kongto Technology">
 
-    <meta property="product:price:amount" content="355">
+    
 
-    <meta property="product:price:currency" content="USD">
+    
 
     <meta name="twitter:card" content="summary_large_image">
 
@@ -231,7 +231,7 @@
 
                 <p>14英寸彩色CRT转TFT-LCD即插即用升级方案。无需修改CNC参数，15-30分钟安装。</p>
 
-                <div class="product-price">$355 <span style="font-size:1rem;color:#666;">USD</span></div>
+                
 
                 <p style="color:#28a745;font-weight:600;">现货 — 2年质保</p>
 
@@ -239,17 +239,7 @@
 
             
 
-<!-- PayPal + Shipping Section -->
 
-<div class="paypal-section" style="margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:12px;border:1px solid #e2e8f0;">
-
-  <h3 style="margin-top:0;font-size:1.1rem;">🛒 Buy Now</h3>
-
-  <div style="display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem;">
-
-    <div><label style="font-weight:600;font-size:0.9rem;">Unit Price:</label>
-
-      <span class="paypal-price" style="font-size:1.4rem;font-weight:800;color:#FF6600;"></span></div>
 
     <div><label style="font-weight:600;font-size:0.9rem;">Qty:</label>
 
@@ -285,9 +275,9 @@
 
   </div>
 
-  <div id="paypal-button-container" style="max-width:400px;min-height:45px;"><p style="color:#888;font-size:0.85rem;text-align:center;">Payment button loading...</p></div>
+  
 
-  <p style="font-size:0.8rem;color:#888;margin:0.5rem 0 0 0;">🔒 Secure checkout via PayPal. Credit/debit cards accepted.</p>
+  
 
 </div>
 
@@ -307,7 +297,7 @@
 
     CN: { name:'China', bands:[8,12,16,20,24,28,32,36,44,52,60,68,76,84] },
 
-    // Zone 1: Western Europe — $36.80/1.5kg
+    // Zone 1: Western Europe — ，/1.5kg
 
     BE: { name:'Belgium', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
 
@@ -335,13 +325,13 @@
 
     SE: { name:'Sweden', bands:[26,32,36.8,42,48,54,60,66,78,90,102,114,126,138] },
 
-    // Zone 2: North America — $38.80/1.5kg
+    // Zone 2: North America — ，/1.5kg
 
     US: { name:'United States', bands:[16,28,39,50,60,71,81,92,113,135,156,177,199,220]},
 
     CA: { name:'Canada', bands:[28,34,38.8,44,50,56,62,68,80,94,108,122,136,150] },
 
-    // Zone 3: Asia Pacific — $40.30/1.5kg
+    // Zone 3: Asia Pacific — ，/1.5kg
 
     AU: { name:'Australia', bands:[29,35,40.3,46,52,58,64,70,82,96,110,124,138,152] },
 
@@ -357,7 +347,7 @@
 
     TH: { name:'Thailand', bands:[21,25,28.9,33,38,43,48,53,63,73,83,93,103,113] },
 
-    // Zone 4: Rest of World — $52.30/1.5kg
+    // Zone 4: Rest of World — ，/1.5kg
 
     AF: { name:'Afghanistan', bands:[38,45,52.3,60,68,76,84,92,108,126,144,162,180,198] },
 
@@ -383,11 +373,11 @@
 
     IL: { name:'Israel', bands:[32,38,44,50,58,66,74,82,96,112,128,144,160,176] },
 
-    // Zone 5: Remote — $60.80/1.5kg (Bhutan etc)
+    // Zone 5: Remote — ，/1.5kg (Bhutan etc)
 
     BT: { name:'Bhutan', bands:[44,52,60.8,70,80,90,100,110,130,150,170,190,210,230] },
 
-    // Zone 4b: Africa — $49.10/1.5kg
+    // Zone 4b: Africa — ，/1.5kg
 
     ET: { name:'Ethiopia', bands:[36,43,49.1,56,64,72,80,88,104,120,136,154,172,190] },
 
@@ -451,7 +441,7 @@
 
   // Read product price
 
-  const productPrice = parseFloat(document.querySelector('.product-price')?.textContent?.replace(/[$,]/g,'') || '0');
+  const productPrice = parseFloat(document.querySelector('.product-price')?.textContent?.replace(/[，]/g,'') || '0');
 
   document.querySelector('.paypal-price').textContent = '$' + productPrice.toFixed(2);
 
@@ -511,11 +501,7 @@
 
   document.getElementById('shippingCountry').onchange = function() { selectedCountry = this.value; recalc(); };
 
-  // PayPal SDK
-
-  const s = document.createElement('script');
-
-  s.src = 'https://www.paypal.com/sdk/js?client-id=' + CLIENT_ID + '&currency=USD';
+  
 
   s.onload = function() {
 
