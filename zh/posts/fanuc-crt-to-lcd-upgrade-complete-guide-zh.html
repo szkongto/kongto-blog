@@ -1191,21 +1191,13 @@
 
 
 <style>
-/* Post content layout - force override */
-/* Root cause 1: header's width:100vw overflows page. Force override */
-html, body { overflow-x:hidden !important; max-width:100% !important; }
+/* Post content layout - v2: only fix page-level scroll, don't force table layout */
+html, body { overflow-x:hidden !important; }
 header { width:100% !important; margin-left:0 !important; }
-
-/* Root cause 3: tables need fixed layout to stay within container */
-table { table-layout:fixed; width:100% !important; }
-td, th { word-break:break-word; }
-
-/* Root cause 2: content overflow hidden + table wrap scrollable */
-.post .content { overflow-x:hidden; word-wrap:break-word; max-width:100%; }
+.post .content { max-width:100%; }
 .post .content img { display:block !important; margin:1.5rem auto !important; max-width:100% !important; height:auto !important; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06); }
 .post .content .table-wrap, .post .content .table-responsive,
 .post .content div[style*="overflow-x:auto"] { overflow-x:auto !important; -webkit-overflow-scrolling:touch; max-width:100%; }
-.post .content .table-wrap table, .post .content .table-responsive table { width:100%; }
 .post .content figure { text-align:center; margin:1.5rem 0; }
 .post .content figure img { margin:0 auto 0.5rem !important; }
 .post .content figcaption { font-size:0.85rem; color:#888; }
