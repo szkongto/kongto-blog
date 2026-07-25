@@ -1,6 +1,7 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns='http://www.w3.org/2000/svg' width="800" height="500" viewBox='0 0 800 500'>
 <defs><style>text{font-family:Arial,sans-serif}.title{font-size:18px;font-weight:bold;fill:#1a5fb4}.phase{font-size:13px;font-weight:bold;fill:white}.desc{font-size:11px;fill:#444}.arrow{stroke:#1a5fb4;stroke-width:2;marker-end:url(#ar)}</style><marker id='ar' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'><polygon points='0 0,8 3,0 6' fill='#1a5fb4'/></marker></defs>
-<rect width='800' height='500' fill='#f9f9f9' rx='8'/>
+<rect width="800" height="500" fill='#f9f9f9' rx='8'/>
 <text x='400' y='35' text-anchor='middle' class='title'>FANUC CRT to LCD Upgrade Process Timeline</text>
 <rect x='30' y='70' width='140' height='80' fill='#e74c3c' rx='8' opacity='0.9'/>
 <text x='100' y='100' text-anchor='middle' class='phase'>Phase 1</text><text x='100' y='120' text-anchor='middle' fill='white' font-size='12'>Assessment</text>
