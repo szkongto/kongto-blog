@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width='700' height='900' viewBox='0 0 700 900'>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="900" viewBox='0 0 700 900'>
 <defs><style>text{font-family:Arial,sans-serif}.box{fill:white;stroke:#1a5fb4;stroke-width:2;rx:8}.box-green{fill:#e8f5e9;stroke:#27ae60;stroke-width:2;rx:8}.box-red{fill:#fde8e8;stroke:#c0392b;stroke-width:2;rx:8}.arrow{stroke:#555;stroke-width:2;marker-end:url(#ah)}.title{font-size:18px;font-weight:bold;fill:#1a5fb4}.step{font-size:13px;font-weight:bold;fill:#1a5fb4}.desc{font-size:11px;fill:#444}</style><marker id='ah' markerWidth='10' markerHeight='7' refX='10' refY='3.5' orient='auto'><polygon points='0 0,10 3.5,0 7' fill='#555'/></marker></defs>
-<rect width='700' height='900' fill='#f9f9f9' rx='8'/>
+<rect width="700" height="900" fill='#f9f9f9' rx='8'/>
 <text x='350' y='35' text-anchor='middle' class='title'>Industrial Display Procurement Decision Guide</text>
 <rect x='225' y='60' width='250' height='50' class='box'/><text x='350' y='85' text-anchor='middle' class='step'>Step 1: Define Requirements</text><text x='350' y='100' text-anchor='middle' class='desc'>Display size / Signal type / Environment</text>
 <line x1='350' y1='110' x2='350' y2='140' class='arrow'/>
