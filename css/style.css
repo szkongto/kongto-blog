@@ -66,10 +66,10 @@ main .content figure.article-figure, main .content figure.img-hero {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-/* 单图误用 .img-comparison（grid 两列只放一张图/一侧）退化为整行并居中，不影响双图对比 */
-.img-comparison > *:only-child { grid-column: 1 / -1; }
-.img-comparison > img:only-child,
-.img-comparison > .comparison-side:only-child img { margin: auto; }
+/* 单图误用 .img-comparison（grid 两列只放一张图，figcaption 属不同标签类型，故用 only-of-type 判定单图；不影响双图真实对比）退化为整行并居中 */
+.img-comparison > img:only-of-type { grid-column: 1 / -1; margin: auto !important; }
+.img-comparison > .comparison-side:only-of-type { grid-column: 1 / -1; }
+.img-comparison > .comparison-side:only-of-type img { width: auto; margin: auto !important; }
 /* 窄表格（参数表/对比图表）在正文内水平居中 */
 .post .content table, .post table,
 article .content table, article table,
