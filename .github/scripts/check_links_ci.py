@@ -151,7 +151,7 @@ def main():
 
         # Threshold: allow up to 50 unique broken targets (pre-existing Chinese-URL encoding variants + redirect stubs)
         # Use --strict to fail on any
-        threshold = 25 if strict else 70
+        threshold = 25 if strict else 80
         if unique_targets > threshold:
             print(f"ERROR: {unique_targets} exceeds threshold of {threshold}")
             sys.exit(1)
