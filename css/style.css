@@ -8,3 +8,37 @@ figure.img-hero, figure.img-step, figure.img-detail, figure.img-chart, figure.im
 .img-hero, .img-step, .img-detail, .img-chart, .img-comparison { max-width:100% !important; }
 .post .table-wrap, .post .table-responsive { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .post .table-wrap table, .post .table-responsive table { width:100%; }
+
+
+/* === 全局图片/图表居中兜底 [batch-fix 2026-07-25] === */
+/* 1) 所有正文媒体：图片 + 内联 svg 图表 + object/iframe/canvas 嵌入图，统一居中且响应式 */
+.post .content img, .post img,
+.post .content object, .post object,
+.post .content iframe, .post iframe,
+.post .content canvas, .post canvas {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+.post .content svg, .post svg {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 100% !important;
+}
+/* 2) figure 块级居中（修正旧兜底把左右 margin 归零导致整块偏左的 bug） */
+.post figure, .post .content figure { text-align: center !important; max-width: 100% !important; }
+.post figure.img-hero, .post figure.img-step, .post figure.img-detail,
+.post figure.img-chart, .post figure.article-figure,
+.post .content figure.article-figure,
+.post .content figure.img-hero {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* 3) 单图误用 .img-comparison（grid 两列只放一张图/一侧）退化为整行并居中，不影响双图对比 */
+.img-comparison > *:only-child { grid-column: 1 / -1; }
+.img-comparison > img:only-child,
+.img-comparison > .comparison-side:only-child img { margin: auto; }
+/* 4) 窄表格（参数表/对比图表）在正文内水平居中 */
+.post .content table { margin-left: auto; margin-right: auto; }
+
