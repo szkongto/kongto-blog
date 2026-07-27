@@ -314,6 +314,12 @@ const REDIRECTS = {
   '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  // — missing EN 0093 cannibalization redirects (2026-07-28) —
+  '/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
 function normalise(p) {
