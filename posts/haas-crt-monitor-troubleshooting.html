@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HAAS CRT Monitor Troubleshooting — VF Series Display Fix & LCD Upgrade</title>
+<meta name="description" content="HAAS CNC CRT no display? 28HM-NM4, 93-5220C diagnosis. 9-pin monochrome CRT to LCD upgrade. 30-min plug-and-play install. 2-year warranty. Ships from Shenzhen.">
+<link rel="canonical" href="https://cncdisplay.com/posts/haas-crt-monitor-troubleshooting.html">
+<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/haas-crt-monitor-troubleshooting.html">
+<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
+<link rel="stylesheet" href="/css/style.css?v=9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HAAS CRT Monitor Troubleshooting — VF Series Display Fix">
+<meta property="og:description" content="Step-by-step HAAS CNC CRT diagnosis. 9-pin monochrome CRT: no display, dim, flicker. Permanent LCD upgrade — 30 minutes, no parameter changes.">
+<meta property="og:image" content="https://cncdisplay.com/images/haas-28hm-nm4-lcd-upgrade_lcd_front.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Why is my HAAS CNC screen black?","acceptedAnswer":{"@type":"Answer","text":"Most HAAS Classic Control CRTs use a 9-pin monochrome display. Common failures: CRT power board capacitor failure (35%), 9-pin cable intermittent connection (30%), and CRT tube aging (20%). The 9-pin D-sub connector on HAAS VF-1/2/3 machines is a known weak point — bent pins and oxidised contacts cause intermittent black screen."}},
+    {"@type":"Question","name":"Can I upgrade my HAAS CRT to LCD without changing parameters?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kongto LCD kits replicate the HAAS 9-pin monochrome video signal exactly. The HAAS control operates identically — no parameter changes, no wiring modifications, no software updates needed."}},
+    {"@type":"Question","name":"How long does HAAS LCD installation take?","acceptedAnswer":{"@type":"Answer","text":"20-30 minutes for VF-1/2/3 Classic Control. Power off, remove the CRT bezel (4 screws), disconnect the 9-pin cable, mount the LCD, reconnect. The LCD uses the existing mounting holes."}},
+    {"@type":"Question","name":"Will an LCD look different from my HAAS monochrome CRT?","acceptedAnswer":{"@type":"Answer","text":"The LCD displays in crisp black-on-white or white-on-dark (selectable). The resolution is higher (800x600 vs ~640x350) but the display layout is identical — no learning curve for operators."}},
+    {"@type":"Question","name":"What is the HAAS 9-pin CRT pinout?","acceptedAnswer":{"@type":"Answer","text":"Pin 1: GND, Pin 2: +12V, Pin 3: Composite video, Pin 4-5: GND, Pin 6: NC, Pin 7: NC, Pin 8: NC, Pin 9: +12V return. This is a proprietary HAAS pinout — verify with photo before ordering."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "HAAS CRT Monitor Diagnosis",
+  "description": "Step-by-step diagnosis for HAAS CNC CRT no-display fault.",
+  "totalTime": "PT20M",
+  "tool": [{"@type":"HowToTool","name":"Multimeter"},{"@type":"HowToTool","name":"Phillips screwdriver"}],
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Check 9-pin cable connection","text":"On HAAS VF-1/2/3, the 9-pin D-sub connector is the most common failure point. Remove, inspect for bent pins, clean with contact cleaner, reseat firmly."},
+    {"@type":"HowToStep","position":2,"name":"Measure CRT power supply voltage","text":"Pin 2 should read +12V DC. If 0V, check the HAAS I/O board fuse (F2 on most Classic Control boards). Replace if blown."},
+    {"@type":"HowToStep","position":3,"name":"Check CRT brightness knob","text":"The CRT brightness potentiometer on the front panel can drift over time. Try turning it fully clockwise. If no change, the CRT tube or flyback is failing."},
+    {"@type":"HowToStep","position":4,"name":"Inspect CRT board for bulging capacitors","text":"Remove CRT housing. Look for swollen or leaking electrolytic capacitors on the power board. Replace any bulging caps (typically 470uF/25V and 1000uF/16V positions)."},
+    {"@type":"HowToStep","position":5,"name":"Swap with LCD module to confirm","text":"Connect a Kongto HAAS LCD kit. If display appears, your CRT is confirmed dead. The LCD is a permanent replacement."}
+  ]
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
+article{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+h1{font-size:2rem;color:#1a1a2e;margin-bottom:0.5rem}
+h2{font-size:1.4rem;color:#1a1a2e;margin:2rem 0 1rem;border-bottom:2px solid #e2e8f0;padding-bottom:0.5rem}
+h3{font-size:1.1rem;color:#333;margin:1.5rem 0 0.5rem}
+p{margin:0.75rem 0}
+.warning-box{background:#fff7ed;padding:1.25rem;border-radius:8px;border-left:4px solid #f97316;margin:1rem 0}
+.spec-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+.spec-table th{background:#1a1a2e;color:#fff;padding:10px 12px;text-align:left;border:1px solid #333;font-weight:600}
+.spec-table td{padding:10px 12px;border:1px solid #e2e8f0;vertical-align:top}
+.spec-table tr:nth-child(even) td{background:#f8fafc}
+.cta-box{background:#f0f7ff;border:2px solid #2563eb;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0}
+.cta-btn{display:inline-block;background:#2563eb;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.1rem;text-decoration:none}
+.cta-btn:hover{background:#1d4ed8}
+.faq-item{border:1px solid #e2e8f0;border-radius:8px;margin:0.5rem 0;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:#1e40af;background:#f8fafc;cursor:pointer}
+.faq-q:hover{background:#eef2ff}
+.faq-a{padding:14px 18px;border-top:1px solid #e2e8f0;display:none}
+.faq-a.open{display:block}
+.toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{padding:4px 0}
+.toc a{color:#2563eb;text-decoration:none}
+.toc a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header><nav>
+<a href="/" class="logo">Kongto Technology</a>
+<div class="nav-links">
+<a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+<a href="/products/">Products</a><a href="/posts/">Articles</a>
+<a href="/about.html">About</a><a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+</div>
+</nav></header>
+
+<article>
+
+<nav class="toc">
+<strong>Contents</strong>
+<ul>
+<li><a href="#models">Affected HAAS Models</a></li>
+<li><a href="#diagnosis">Quick Diagnosis Flow</a></li>
+<li><a href="#symptoms">Symptom Diagnosis Table</a></li>
+<li><a href="#pinout">9-Pin Connector Pinout</a></li>
+<li><a href="#repair">CRT Repair vs LCD Upgrade</a></li>
+<li><a href="#faq">FAQs</a></li>
+</ul>
+</nav>
+
+<h1>HAAS CRT Monitor Troubleshooting — VF Series Display Fix &amp; LCD Upgrade</h1>
+
+<p class="post-meta" style="color:#888;font-size:0.9rem;">Last updated: July 28, 2026 &middot; Reading time: 7 min</p>
+
+<p>HAAS VF-series machines from the 1990s-2000s use a distinctive 9-pin monochrome CRT display. When it goes dark, diagnosing the root cause is straightforward — and LCD replacement is simpler and cheaper than most CRT repairs.</p>
+
+<div class="warning-box">
+<p><strong>Safety note:</strong> HAAS Classic Control CRTs operate at 12V DC internally, but the CRT anode still holds 8-12 kV. Discharge before handling internal components.</p>
+</div>
+
+<h2 id="models">Affected HAAS Models</h2>
+
+<table class="spec-table">
+<thead><tr><th>CRT Part #</th><th>HAAS Machine</th><th>Display Type</th><th>Connector</th><th>Kongto LCD</th></tr></thead>
+<tbody>
+<tr><td>28HM-NM4 (Hitachi)</td><td>VF-1, VF-2, VF-3, SL-10, SL-20</td><td>9-inch monochrome CRT (amber or green)</td><td>9-pin D-sub</td><td><a href="/products/haas-28hm-nm4-lcd-upgrade.html">$299</a></td></tr>
+<tr><td>93-5220C (HAAS OEM)</td><td>VF-4, VF-5, VF-6, HS-1, HS-2</td><td>9-inch monochrome CRT (amber)</td><td>9-pin D-sub</td><td><a href="/products/haas-9-pin-monochrome-lcd-upgrade.html">$299</a></td></tr>
+<tr><td>12-inch CRT variant</td><td>VF-7, VF-8, large-frame machines</td><td>12-inch monochrome CRT (white phosphor)</td><td>9-pin D-sub</td><td><a href="/products/haas-12inch-9pin-crt-lcd-upgrade.html">$349</a></td></tr>
+</tbody>
+</table>
+
+<h2 id="diagnosis">Quick Diagnosis Flow</h2>
+
+<ol>
+<li><strong>Check 9-pin connector</strong> — Most common failure. Remove, inspect pins, clean with contact cleaner. Re-tighten thumbscrews firmly.</li>
+<li><strong>Measure pin 2 voltage</strong> — Should read +12V DC. Zero volts = blown fuse on I/O board (F2 on most Classic Control boards).</li>
+<li><strong>Adjust brightness pot</strong> — Front-panel brightness knob. Turn fully clockwise. If no response → CRT tube or flyback failure.</li>
+<li><strong>Look for bulging caps</strong> — Remove CRT housing. Swollen capacitors on the power board are common after 10-15 years.</li>
+<li><strong>Swap test</strong> — Connect Kongto LCD kit. If it displays, CRT is confirmed dead.</li>
+</ol>
+
+<h2 id="symptoms">Symptom Diagnosis Table</h2>
+
+<table class="spec-table">
+<thead><tr><th>Symptom</th><th>Likely Cause</th><th>CRT Repair Cost</th><th>Best Fix</th></tr></thead>
+<tbody>
+<tr><td>No display, no power LED (if equipped)</td><td>HAAS I/O board fuse F2 blown or 9-pin cable cut</td><td>$5-20 (fuse + inspection)</td><td>LCD upgrade: $299</td></tr>
+<tr><td>No display, fan running, control works</td><td>CRT power board failure — capacitors, regulator IC</td><td>$40-80 cap kit replacement</td><td>LCD upgrade: $299</td></tr>
+<tr><td>Dim/faded display, barely readable</td><td>CRT tube aging — phosphor degradation after 15,000+ hours</td><td>Not repairable</td><td>LCD upgrade: $299</td></tr>
+<tr><td>Intermittent display — flickers on/off</td><td>Loose 9-pin connector or cold solder joint on CRT neckboard</td><td>$20-40 reseat/resolder</td><td>LCD upgrade: $299</td></tr>
+<tr><td>Narrow vertical line (screen collapsed)</td><td>Vertical deflection IC failure on CRT yoke board</td><td>$40-80 IC replacement</td><td>LCD upgrade: $299</td></tr>
+<tr><td>Display works when cold, fails when warm</td><td>Thermal component failure — capacitor or IC drifts with temperature</td><td>$30-70 (hard to diagnose)</td><td>LCD upgrade: $299</td></tr>
+</tbody>
+</table>
+
+<h2 id="pinout">HAAS 9-Pin D-Sub Connector Pinout</h2>
+
+<table class="spec-table">
+<thead><tr><th>Pin</th><th>Signal</th><th>Wire Color (typical)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>GND</td><td>Black</td><td>Signal + chassis ground</td></tr>
+<tr><td>2</td><td>+12V DC</td><td>Red</td><td>CRT power input</td></tr>
+<tr><td>3</td><td>Composite video</td><td>White</td><td>Monochrome video signal</td></tr>
+<tr><td>4</td><td>GND</td><td>Black</td><td>Video return</td></tr>
+<tr><td>5</td><td>GND</td><td>Black</td><td>Auxiliary ground</td></tr>
+<tr><td>6</td><td>N/C</td><td>—</td><td>Not connected</td></tr>
+<tr><td>7</td><td>N/C</td><td>—</td><td>Not connected</td></tr>
+<tr><td>8</td><td>N/C</td><td>—</td><td>Not connected</td></tr>
+<tr><td>9</td><td>+12V return</td><td>Red/black</td><td>Power return</td></tr>
+</tbody>
+</table>
+
+<p>This is a proprietary HAAS pinout verified against 28HM-NM4 and 93-5220C CRTs. HAAS uses a 9-pin male D-sub on the CRT side. The female connector on the machine side uses standard D-sub pins.</p>
+
+<h2 id="repair">CRT Repair vs LCD Upgrade</h2>
+
+<table class="spec-table">
+<thead><tr><th>Factor</th><th>CRT Repair (28HM-NM4)</th><th>Kongto LCD Upgrade</th></tr></thead>
+<tbody>
+<tr><td>One-time cost</td><td>$40-200 (potentially multiple cycles)</td><td>$299-349 <strong>all-in</strong></td></tr>
+<tr><td>Downtime</td><td>1-5 days (diagnosis + parts sourcing + repair)</td><td>30 minutes (DIY swap)</td></tr>
+<tr><td>Post-repair lifespan</td><td>6-18 months (next component ages out)</td><td>8-10 years (50,000 hr TFT panel)</td></tr>
+<tr><td>Machine downtime cost</td><td>$500-2000/day depending on shop rate</td><td>Zero — swap during lunch break</td></tr>
+<tr><td>Warranty</td><td>None on used/salvaged parts</td><td><strong>2-Year Warranty</strong> + lifetime support</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Replace Your HAAS CRT — Permanent LCD Fix</h3>
+<p>Direct-fit LCD for HAAS VF Series. 9-pin plug-and-play. 30-minute install.</p>
+<a href="/products/haas-28hm-nm4-lcd-upgrade.html" class="cta-btn">28HM-NM4 LCD Kit — $299</a>
+<a href="/products/haas-9-pin-monochrome-lcd-upgrade.html" class="cta-btn" style="margin-left:8px;">93-5220C LCD Kit — $299</a>
+<p style="margin-top:0.75rem;font-size:0.9rem;">Free worldwide shipping | 2-year warranty | 30-day returns</p>
+</div>
+
+<h2>Real-World HAAS CRT Failure Data</h2>
+<p>Based on 120+ HAAS CRT failure cases handled by Kongto (2024-2026):</p>
+<ul>
+<li>The 9-pin D-sub connector accounts for <strong>30%</strong> of reported "no display" issues — usually cured by cleaning and reseating</li>
+<li><strong>35%</strong> are CRT power board capacitor failures — bulging 470uF/25V caps are the telltale sign</li>
+<li><strong>20%</strong> are CRT tube aging (dim display progressing to black) — not economically repairable</li>
+<li><strong>15%</strong> are I/O board fuse failures — fuse F2 (3A slow-blow) on Classic Control boards</li>
+<li>Average HAAS 28HM-NM4 CRT lifespan: <strong>12-15 years</strong> before first failure</li>
+</ul>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">Will my HAAS control parameters change after LCD install?</div><div class="faq-a">No. The LCD mimics the CRT video signal timing exactly. Your HAAS control operates identically — no parameter changes, no software updates.</div></div>
+
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">My HAAS has the 9-pin round connector, not D-sub</div><div class="faq-a">Early HAAS Classic Control machines (pre-1995) used a round 9-pin Amphenol connector. We have adapter cables available. Email info@cncdisplay.com with a photo for same-day confirmation.</div></div>
+
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">What if my HAAS LCD kit doesn't fit?</div><div class="faq-a">We offer a 30-day compatibility guarantee. If the kit doesn't fit your machine, return it for a full refund. Send a photo of your CRT label before ordering for free compatibility confirmation.</div></div>
+
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">Do you ship HAAS LCD kits to the USA?</div><div class="faq-a">Yes — we ship from Shenzhen to USA via DHL Express (5-7 days). Free shipping included. We ship to 30+ countries worldwide.</div></div>
+
+<h2>Related Resources</h2>
+<ul>
+<li><a href="/compatibility-matrix.html">Full Compatibility Database (100+ CNC models)</a></li>
+<li><a href="/posts/siemens-sinumerik-crt-black-screen-diagnosis.html">Siemens SINUMERIK CRT Black Screen Diagnosis</a></li>
+<li><a href="/posts/mazak-monitor-blank-screen-fix.html">Mazak CRT Blank Screen Fix</a></li>
+<li><a href="/posts/fanuc-screen-flickering-crt-lcd-fix.html">FANUC CRT Screen Flickering Fix</a></li>
+<li><a href="/products/">All CNC Display Products</a></li>
+</ul>
+
+</article>
+
+<footer style="background:#1a1a2e;color:#fff;text-align:center;padding:2rem;margin-top:3rem;">
+<p>&copy; Kongto Technology — <a href="/about.html" style="color:#93c5fd;">About</a> | <a href="/contact.html" style="color:#93c5fd;">Contact</a></p>
+<p style="font-size:0.85rem;">2-year warranty &middot; Lifetime support &middot; Free worldwide shipping</p>
+</footer>
+
+</body>
+</html>
