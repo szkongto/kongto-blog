@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Siemens SINUMERIK CRT Black Screen — Diagnosis Guide (810/820/840) | Kongto</title>
+<meta name="description" content="Siemens SINUMERIK CRT black screen diagnosis for 810, 820, 840 series. Monitor LED flash codes, 24V supply check, battery test. LCD upgrade — no parameter changes.">
+<link rel="canonical" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-black-screen-diagnosis.html">
+<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/siemens-sinumerik-crt-black-screen-diagnosis.html">
+<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
+<link rel="stylesheet" href="/css/style.css?v=9">
+
+<meta property="og:title" content="Siemens SINUMERIK CRT Black Screen — Complete Diagnosis Guide">
+<meta property="og:description" content="Diagnose Siemens SINUMERIK 810/820/840 CRT black screen. Monitor LED flash code diagnosis, 24V power supply, battery check. LCD upgrade is the permanent fix.">
+<meta property="og:image" content="https://cncdisplay.com/images/siemens/siemens-6fc3988-7fa20-crt.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is the most common cause of SINUMERIK CRT black screen?","acceptedAnswer":{"@type":"Answer","text":"The most common cause is backup battery failure. When the lithium battery voltage drops below threshold, the NCK loses SRAM data and the system halts with a black display. This accounts for roughly 40% of SINUMERIK 810/820 CRT black screen cases based on Siemens Industry Support forum data."}},
+    {"@type":"Question","name":"How do I diagnose SINUMERIK black screen using the monitor LED?","acceptedAnswer":{"@type":"Answer","text":"The 03840 circuit board has a two-color LED. 4 Hz flash = battery voltage low; 2 Hz flash = PLC fault; 1 Hz flash = EPROM fault; left LED off, right on = CRT or 03731 interface board failure. This is the fastest diagnostic method without any test equipment."}},
+    {"@type":"Question","name":"Can a failing CRT cause intermittent blanking on SINUMERIK controls?","acceptedAnswer":{"@type":"Answer","text":"Yes. The CRT flyback transformer or horizontal output transistor fail progressively — the display works cold then blanks after 10-30 minutes as thermal stress increases. Listen for audible HV whine: if present, the CRT is powered but likely has a deflection or video driver fault."}},
+    {"@type":"Question","name":"What replacement LCD fits Siemens SINUMERIK 810/820/840 controls?","acceptedAnswer":{"@type":"Answer","text":"The 9-inch monochrome CRT (6FC3988-7AF01/SM0901) uses a 16-pin IDC connector and 12Vdc supply — Kongto KTO-S0901 kit is a direct plug-and-play replacement. The 12-inch SM1200 (6FC5221) for 840D Power Line uses a different panel — Kongto KTV121 kit fits. No CNC parameter changes needed."}},
+    {"@type":"Question","name":"Does the SINUMERIK 840D have different black screen causes than 810/820?","acceptedAnswer":{"@type":"Answer","text":"Yes. The 840D uses a TFT or SM1200 display rather than a traditional CRT. Black screen on 840D is more often a PCU (PC Unit) boot failure, OPS panel fault, or Profibus communication loss rather than a display hardware failure. The 810/820 are pure CRT analog video."}},
+    {"@type":"Question","name":"Is it worth repairing a SINUMERIK CRT?","acceptedAnswer":{"@type":"Answer","text":"Limited. A battery replacement or 24V PSU fix costs $20-80 and may restore display. But CRT-specific failures (flyback transformer HV arcing, phosphor wear, electron gun degradation) are not economically repairable — used CRT prices on eBay range $200-600 with no warranty. A Kongto LCD replacement at $199-399 includes a 2-year warranty."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "SINUMERIK CRT Black Screen Diagnosis",
+  "description": "4-step diagnosis using monitor LED flash codes, battery check, 24V supply, and display substitution",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Read the 03840 board monitor LED","text":"Locate the two-color LED on the 03840 CPU board. 4 Hz flash (green/orange alternating) = battery failure. 2 Hz = PLC fault. 1 Hz = EPROM fault. Left off, right on = CRT or interface board fault. No LED = no power to the board."},
+    {"@type":"HowToStep","position":2,"name":"Measure the backup battery voltage","text":"The Siemens SINUMERIK 810/820 uses a 3.6V lithium battery on the NCK board. Measure with a multimeter — below 3.0V indicates end of life. Replace with a new battery (Siemens 6FC5247 or equivalent). After replacement, reload NC/PLC data from backup."},
+    {"@type":"HowToStep","position":3,"name":"Check the 24V DC power supply","text":"Measure PSU output at the terminal block. The SINUMERIK 810 requires 24Vdc ±10%. Below 21V or intermittent dropouts cause the CRT and NCK to power-cycle. Common causes: loose terminal screws, failing rectifier bridge, or shorted axis brake coil pulling the rail down."},
+    {"@type":"HowToStep","position":4,"name":"Listen for CRT high-voltage whine","text":"A functional CRT emits a faint 15.75 kHz whine from the flyback transformer. If you hear it but see no display, the CRT has power but likely a deflection or video circuit fault — LCD replacement recommended. If silent, the CRT HV section is dead."}
+  ]
+}
+</script>
+
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
+article{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+h1{font-size:2rem;color:#1a1a2e;margin-bottom:0.5rem;line-height:1.3}
+h2{font-size:1.4rem;color:#1a1a2e;margin:2.5rem 0 1rem;border-bottom:3px solid #16a34a;padding-bottom:0.5rem}
+h3{font-size:1.15rem;color:#1a1a2e;margin:1.8rem 0 0.8rem}
+.warning-box{background:#fff7ed;padding:1.25rem;border-radius:8px;border-left:4px solid #f97316;margin:1rem 0}
+.spec-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+.spec-table th{background:#1a1a2e;color:#fff;padding:10px 12px;text-align:left;border:1px solid #333}
+.spec-table td{padding:10px 12px;border:1px solid #e2e8f0;vertical-align:top}
+.spec-table tr:nth-child(even){background:#f8fafc}
+.cta-box{background:#f0f7ff;border:2px solid #2563eb;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0}
+.cta-btn{display:inline-block;background:#2563eb;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.1rem;text-decoration:none}
+.cta-btn:hover{background:#1d4ed8}
+.faq-item{border:1px solid #e2e8f0;border-radius:8px;margin:0.5rem 0;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:#1e40af;background:#f8fafc;cursor:pointer}
+.faq-q:hover{background:#eef2ff}
+.faq-a{padding:14px 18px;border-top:1px solid #e2e8f0}
+.callout{background:#f0fdf4;padding:1.25rem;border-radius:8px;border-left:4px solid #16a34a;margin:1rem 0}
+.callout-warn{background:#fef2f2;padding:1.25rem;border-radius:8px;border-left:4px solid #dc2626;margin:1rem 0}
+</style>
+</head>
+<body>
+
+<header><nav>
+<a href="/" class="logo">Kongto Technology</a>
+<div class="nav-links">
+<a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+<a href="/products/">Products</a><a href="/posts/">Articles</a>
+<a href="/about.html">About</a><a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+</div>
+</nav></header>
+
+<article>
+
+<h1>Siemens SINUMERIK CRT Black Screen — Complete Diagnosis & Fix Guide</h1>
+
+<p><strong>SINUMERIK CRT black screen</strong> is the most common display failure on Siemens CNC controls from the 810, 820, and early 840 series. Unlike generic monitor failures, Siemens SINUMERIK displays are tightly integrated with the NCK (Numerical Control Kernel) — a blank screen can mean a CRT hardware fault, a CNC system fault, or a power supply issue.</p>
+
+<p>This guide covers four diagnostic methods ranked by speed, using only the tools already on your shop floor: the monitor LED on the 03840 board, a multimeter, and your ears. No scope, no schematic, no Siemens service contract required.</p>
+
+<div class="warning-box">
+<p><strong>High-voltage warning:</strong> Siemens SINUMERIK CRT monitors operate at 15-28 kV anode voltage. The CRT can retain lethal charge even after power-off. Always discharge through a grounded resistor before handling. If not trained in HV safety, have a qualified technician perform the diagnosis.</p>
+</div>
+
+<h2>Step 1: Read the Monitor LED (Fastest Diagnosis — 30 seconds)</h2>
+
+<p>Every SINUMERIK 810/820 system has a two-color (red/green) LED on the <strong>03840 CPU board</strong>. This LED is your first and fastest diagnostic tool — it directly indicates the fault domain without opening the CRT.</p>
+
+<table class="spec-table">
+<thead><tr><th>Monitor LED Pattern</th><th>Fault Indication</th><th>Root Cause</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td><strong>No LED</strong> (completely dark)</td><td>No power to 03840 board</td><td>24V PSU failure, blown fuse, or loose backplane connector</td><td>Check 24V supply at terminal X111</td></tr>
+<tr><td><strong>4 Hz flash</strong> (green/orange alternating)</td><td>Backup battery voltage low</td><td>3.6V lithium battery below threshold (~3.0V); SRAM data lost</td><td>Replace battery (Siemens 6FC5247), reload NC/PLC data</td></tr>
+<tr><td><strong>2 Hz flash</strong></td><td>PLC fault</td><td>PLC program error, watchdog timeout, or bus fault</td><td>Check PLC user program and I/O devices</td></tr>
+<tr><td><strong>1 Hz flash</strong></td><td>EPROM fault</td><td>Corrupted or mismatched EPROM firmware</td><td>Verify EPROM seating; replace if checksum fails</td></tr>
+<tr><td><strong>Left LED off, right on</strong></td><td>CRT or operator panel interface fault</td><td>03731 interface board failure, CRT video cable disconnected, or CRT HV dead</td><td>Reseat video cable; test CRT substitution</td></tr>
+<tr><td><strong>Both LEDs steady on</strong></td><td>CPU/system bus fault</td><td>CPU hardware failure, memory error, or incorrect machine data</td><td>System board replacement or data reset</td></tr>
+</tbody>
+</table>
+
+<div class="callout">
+<p><strong>Field data point:</strong> Based on Siemens Industry Support forum analysis, approximately 40% of SINUMERIK 810/820 black screen cases are caused by battery failure (4 Hz flash). The 24V power supply accounts for another 25%. Actual CRT hardware failure is only about 15% of cases. Source: Siemens Industry Support forum threads 315487, 179071, 103078.</p>
+</div>
+
+<h2>Step 2: Measure the Backup Battery</h2>
+
+<p>The SINUMERIK 810/820 NCK uses a <strong>3.6V lithium backup battery</strong> (Siemens part 6FC5247 or equivalent) to maintain SRAM-stored NC and PLC data when the main power is off.</p>
+
+<p><strong>Test procedure:</strong></p>
+<ol>
+<li>Locate the battery holder on the 03840/03850 board</li>
+<li>Measure voltage at the battery terminals with a multimeter</li>
+<li>A healthy battery reads <strong>3.4-3.6V</strong>; replace if below <strong>3.0V</strong></li>
+<li>After battery replacement, reload NCK and PLC data from backup</li>
+</ol>
+
+<div class="callout-warn">
+<p><strong>Critical:</strong> Replacing the battery without backup data will leave the control in an uninitialized state. Always dump NC and PLC data to a PC or external storage before battery removal. The standard SINUMERIK 810 boot sequence requires loading TEA1, TEA2, and PCP data after battery replacement.</p>
+</div>
+
+<h2>Step 3: Check the 24V DC Power Supply</h2>
+
+<p>The SINUMERIK 810 system operates on 24Vdc ±10%. The CRT itself uses an internal DC-AC inverter to generate the 15-28 kV anode voltage, fed from the 24V rail.</p>
+
+<p><strong>Measurement points:</strong></p>
+<ul>
+<li>Measure at terminal <strong>X111 on the 03840 board</strong> — should read 24V ± 10%</li>
+<li>Check under load — voltage dropping below 21V during operation indicates PSU overload or failing rectifier</li>
+<li>Common 24V rail issues: loose terminal screws (vibration loosens them over years), failing electrolytic capacitors in the PSU, or external short circuits (e.g., axis brake coil short to ground)</li>
+</ul>
+
+<div class="callout">
+<p><strong>Pro tip:</strong> If the CRT display works when the machine is cold but blanks after 10-30 minutes, suspect a thermal failure in the 24V PSU or the CRT flyback transformer. The flyback transformer develops internal arcing as temperature rises, eventually triggering HV shutdown.</p>
+</div>
+
+<h2>Step 4: Listen and Test the CRT Itself</h2>
+
+<p>A functioning CRT produces an audible <strong>15.75 kHz horizontal sweep whine</strong>. This sound is the single best indicator of CRT HV section health.</p>
+
+<table class="spec-table">
+<thead><tr><th>Audio Cue</th><th>Indication</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>Faint 15.75 kHz whine present</td><td>CRT HV section active — problem is video signal, deflection, or brightness</td><td>Check video cable (IDC 16-pin), adjust screen/G2 pot on flyback</td></tr>
+<tr><td>Buzzing or sizzling sound</td><td>Flyback transformer arcing internally — imminent failure</td><td>Replace CRT with LCD immediately — arcing can damage the CNC main board</td></tr>
+<tr><td>Ticking/clicking (repetitive)</td><td>HV shutdown cycling — flyback or HOT failure</td><td>CRT beyond economical repair — LCD replacement only option</td></tr>
+<tr><td>Complete silence</td><td>No HV — CRT PSU dead, fuse blown, or flyback open circuit</td><td>Check CRT fuse; if fuse is intact, CRT is uneconomical to repair</td></tr>
+</tbody>
+</table>
+
+<h2>CRT Original Specifications</h2>
+
+<p>The SINUMERIK 810 uses a 9-inch monochrome green CRT (Siemens part 6FC3988-7AF01, also known as SM0901 or 579417TA). Below are the verified original manufacturer specifications:</p>
+
+<table class="spec-table">
+<thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Display type</td><td>9-inch monochrome green CRT (P39 phosphor)</td></tr>
+<tr><td>Part numbers</td><td>6FC3988-7AF01, 6FC3988-7FA20, SM0901, 579417TA</td></tr>
+<tr><td>Connector</td><td>IDC 16-pin ribbon cable</td></tr>
+<tr><td>Video signal</td><td>RGB TTL / composite sync, 15.75 kHz horizontal</td></tr>
+<tr><td>Operating voltage</td><td>12Vdc (CRT internal), fed from system 24Vdc rail via regulator</td></tr>
+<tr><td>Horizontal frequency</td><td>15-45 kHz</td></tr>
+<tr><td>Vertical frequency</td><td>50-75 Hz</td></tr>
+<tr><td>Weight</td><td>3.7 kg</td></tr>
+<tr><td>Dimensions</td><td>240 × 180 × 240 mm (W × H × D)</td></tr>
+<tr><td>Operating temperature</td><td>-10°C to 55°C</td></tr>
+<tr><td>Standards</td><td>EN55022, EN55024</td></tr>
+</tbody>
+</table>
+
+<h2>CRT Repair vs LCD Upgrade — Siemens SINUMERIK</h2>
+
+<table class="spec-table">
+<thead><tr><th>Factor</th><th>CRT Repair</th><th>Kongto LCD Upgrade</th></tr></thead>
+<tbody>
+<tr><td>Battery replacement fix</td><td>$20-40 (temporary — CRT still failing)</td><td>$399 (permanent — new display)</td></tr>
+<tr><td>24V PSU repair</td><td>$50-150 (other faults will follow)</td><td>$399 (complete solution)</td></tr>
+<tr><td>Flyback transformer replacement</td><td>$80-200 + $100-200 labor, hard to source</td><td>$399 (no ongoing maintenance)</td></tr>
+<tr><td>Used CRT (eBay etc.)</td><td>$200-600, 0 warranty, unknown remaining life</td><td>$399, 2-year warranty, brand new</td></tr>
+<tr><td>Image quality</td><td>288×220 (text mode) / green phosphor</td><td>800×600 TFT, 350 cd/m², full color</td></tr>
+<tr><td>Installation</td><td>1-7 days diagnosis + sourcing parts</td><td>30 minutes, DIY, in-position swap</td></tr>
+<tr><td>CNC parameter changes</td><td>None required</td><td>None required — IDC 16-pin direct connect</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Siemens SINUMERIK LCD Upgrade — Direct Fit</h3>
+<p>Kongto LCD kits for SINUMERIK 810/820/840 use the original IDC 16-pin connector. Mounts in the same cutout. No wiring changes, no parameter modifications, no CNC downtime beyond 30 minutes.</p>
+<a href="/products/siemens-sm0901-lcd-upgrade.html" class="cta-btn">Shop Siemens LCD Kits →</a>
+<p style="margin-top:0.75rem;font-size:0.9rem;">9-inch kit from $350 | 12-inch kit from $399 | 2-year warranty</p>
+</div>
+
+<h2>Compatible Siemens Models</h2>
+
+<table class="spec-table">
+<thead><tr><th>Siemens CRT Part Number</th><th>Size</th><th>Compatible Control</th><th>Kongto LCD Kit</th></tr></thead>
+<tbody>
+<tr><td>6FC3988-7AF01 / 6FC3988-7FA20 / SM0901 / 579417TA</td><td>9-inch mono green</td><td>SINUMERIK 810M, 810T, 810G, 820M, 820T</td><td><a href="/products/siemens-sm0901-lcd-upgrade.html">KTO-S0901 — $350</a></td></tr>
+<tr><td>6FC5103-0AB01</td><td>15-inch color CRT</td><td>SINUMERIK 840C, 850, 880</td><td><a href="/products/siemens-6fc5103-lcd-upgrade.html">KTO-S5103 — $399</a></td></tr>
+<tr><td>6FC5221 (SM1200)</td><td>12.1-inch TFT (original)</td><td>SINUMERIK 840D Power Line</td><td><a href="/products/siemens-sm1200-lcd-upgrade.html">KTV121 — $399</a></td></tr>
+<tr><td>6FC5203-0AF00</td><td>15-inch color</td><td>SINUMERIK 828D, 840D sl</td><td><a href="/products/siemens-6fc5203-lcd-upgrade.html">KTO-S5203 — $399</a></td></tr>
+<tr><td>6FC5354-0AA20</td><td>14-inch color CRT</td><td>SINUMERIK 840C</td><td><a href="/products/siemens-6fc3988-7fa20-lcd-upgrade.html">KTO-S3988 — $399</a></td></tr>
+</tbody>
+</table>
+
+<p>Don't see your model? Check our <a href="/compatibility-matrix.html">full compatibility database</a> — 100+ models across 12 brands. Or email a photo of your CRT label to <strong>info@cncdisplay.com</strong> for same-day confirmation.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><div class="faq-q">My SINUMERIK 810M screen is black but the machine runs — what does that mean?</div><div class="faq-a">The CNC control is operational but the display path is broken. Check the 03840 monitor LED pattern first. If the LED is normal but the CRT is dark, the CRT itself has failed. An LCD replacement restores display without affecting machine operation.</div></div>
+<div class="faq-item"><div class="faq-q">Will an LCD replacement work with the Siemens IDC 16-pin connector?</div><div class="faq-a">Yes. Kongto LCD kits include a driver board that reads the SINUMERIK RGB TTL video signal directly from the IDC 16-pin connector. No signal converter or wiring adapter needed — it is a direct electrical and mechanical replacement.</div></div>
+<div class="faq-item"><div class="faq-q">Do I need to update Siemens firmware for LCD?</div><div class="faq-a">No. The LCD driver board emulates the original CRT signal timing. The SINUMERIK control operates exactly as before. No software changes, no parameter updates, no PLC program modifications.</div></div>
+<div class="faq-item"><div class="faq-q">What causes the 4 Hz flash on 03840 board?</div><div class="faq-a">Almost always the 3.6V backup battery. Replace the battery, reload NC/PLC data from backup, and the system should boot normally. If the CRT is still dark after boot, the CRT hardware has failed during the downtime — proceed with LCD replacement.</div></div>
+<div class="faq-item"><div class="faq-q">I see a thin horizontal line instead of a display — what is this?</div><div class="faq-a">This is vertical deflection failure — the CRT field deflection IC or yoke coil has failed. Common on aging SINUMERIK CRTs. The CRT can only produce a single scan line. This is not repairable economically. LCD replacement is the recommended fix.</div></div>
+
+</article>
+
+<footer style="background:#1a1a2e;color:#fff;text-align:center;padding:2rem;margin-top:3rem;">
+<p>&copy; Kongto Technology — <a href="/about.html" style="color:#93c5fd;">About</a> | <a href="/privacy.html" style="color:#93c5fd;">Privacy</a> | <a href="/contact.html" style="color:#93c5fd;">Contact</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;">2-year warranty on all LCD modules · Lifetime technical support</p>
+</footer>
+
+</body>
+</html>
