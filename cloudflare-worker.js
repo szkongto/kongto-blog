@@ -298,6 +298,23 @@ const REDIRECTS = {
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
 };
 
+  // === Compatibility matrix missing product redirects (2026-07-28) ===
+  '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/siemens-6fc5354-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
+  '/products/siemens-sc1200-lcd-upgrade.html': '/products/siemens-sm1200-lcd-upgrade.html',
+  '/products/okuma-osp500l-g-lcd-upgrade.html': '/products/okuma-osp5000-lcd-upgrade.html',
+  '/products/heidenhain-bc120-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
+  '/zh/posts/fanuc-screen-flickering-crt-lcd-fix.html': '/posts/fanuc-screen-flickering-crt-lcd-fix.html',
+
+  // === 0093 Keyword Cannibalization Fix (2026-07-28) ===
+  // Redirect duplicate 0093 articles → main product page
+  '/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
 function normalise(p) {
   try { p = decodeURIComponent(p); } catch(e) {}
