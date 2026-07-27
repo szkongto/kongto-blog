@@ -521,7 +521,7 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
 
   let qty = 1, selectedCountry = null, productWeight = 1.5;
 
-  const DHL = {"CN":{"name":"China","rate":0},"US":{"name":"United States","rate":18},"DE":{"name":"Germany","rate":22},"GB":{"name":"United Kingdom","rate":22},"FR":{"name":"France","rate":22},"IT":{"name":"Italy","rate":22},"ES":{"name":"Spain","rate":22},"NL":{"name":"Netherlands","rate":20},"BE":{"name":"Belgium","rate":20},"CH":{"name":"Switzerland","rate":25},"SG":{"name":"Singapore","rate":15},"JP":{"name":"Japan","rate":15},"KR":{"name":"S.Korea","rate":15},"AU":{"name":"Australia","rate":25},"CA":{"name":"Canada","rate":22},"BR":{"name":"Brazil","rate":35},"IN":{"name":"India","rate":20},"ZA":{"name":"South Africa","rate":28}};
+  var DHL = {"CN":{"name":"China","rate":0},"US":{"name":"United States","rate":18},"DE":{"name":"Germany","rate":22},"GB":{"name":"United Kingdom","rate":22},"FR":{"name":"France","rate":22},"IT":{"name":"Italy","rate":22},"ES":{"name":"Spain","rate":22},"NL":{"name":"Netherlands","rate":20},"BE":{"name":"Belgium","rate":20},"CH":{"name":"Switzerland","rate":25},"SG":{"name":"Singapore","rate":15},"JP":{"name":"Japan","rate":15},"KR":{"name":"S.Korea","rate":15},"AU":{"name":"Australia","rate":25},"CA":{"name":"Canada","rate":22},"BR":{"name":"Brazil","rate":35},"IN":{"name":"India","rate":20},"ZA":{"name":"South Africa","rate":28}};
 
   function getShipping(zone, totalKg) {
 
