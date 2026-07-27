@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FANUC CRT Screen Flickering Fix — Diagnosis & LCD Upgrade | Kongto</title>
+<meta name="description" content="Fix flickering FANUC CRT displays. Diagnose causes: failing caps, flyback transformer, sync loss. Permanent LCD replacement solution — plug-and-play, no parameter changes.">
+<link rel="canonical" href="https://cncdisplay.com/posts/fanuc-screen-flickering-crt-lcd-fix.html">
+<link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/fanuc-screen-flickering-crt-lcd-fix.html">
+<link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/">
+<link rel="stylesheet" href="/css/style.css?v=9">
+<meta property="og:title" content="FANUC CRT Screen Flickering Fix — Complete Diagnosis & LCD Upgrade Guide">
+<meta property="og:description" content="Does your FANUC CRT display flicker, roll, or shake? Diagnose the root cause and learn why LCD replacement is the permanent fix. HONDA 20-pin plug-and-play.">
+<meta property="og:image" content="https://cncdisplay.com/images/fanuc-a61l-0001-0093-lcd-upgrade_lcd_front_0.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What causes FANUC CRT screen flickering?","acceptedAnswer":{"@type":"Answer","text":"Flickering is most often caused by failing electrolytic capacitors in the CRT power supply, a failing flyback transformer, or loss of vertical/horizontal sync signal from the CNC control. Capacitor aging is the most common cause — after 10-15 years, electrolyte dries out and capacitance drops."}},
+    {"@type":"Question","name":"Can I repair the flickering CRT instead of replacing it?","acceptedAnswer":{"@type":"Answer","text":"You can try replacing the electrolytic capacitors on the CRT neckboard and power supply board (cost ~$15-30 in parts). However, the repair is temporary — other CRT components continue aging. The permanent solution is an LCD replacement kit ($155-479) with no ongoing maintenance."}},
+    {"@type":"Question","name":"Will an LCD replacement fix the flickering permanently?","acceptedAnswer":{"@type":"Answer","text":"Yes. LCD displays have no electron gun, no flyback transformer, and no phosphor — the three components that cause CRT flickering. Kongto LCD kits use industrial-grade TFT panels rated for 50,000+ hours with zero flicker over their lifetime."}},
+    {"@type":"Question","name":"Will a LCD upgrade change my CNC machine parameters?","acceptedAnswer":{"@type":"Answer","text":"No. Kongto LCD replacement kits use the original HONDA 20-pin connector (for FANUC) and replicate the exact video signal timing. Your CNC control sees the LCD exactly as it saw the CRT — no parameter changes needed."}},
+    {"@type":"Question","name":"How do I know which LCD kit fits my FANUC monitor?","acceptedAnswer":{"@type":"Answer","text":"Check the model number on the CRT label. FANUC A61L models: 0072/0092/0093/0095 (9-inch) use the KTO-F0093 kit; 0074/0094/0096/0097 (14-inch) use the KTO-F0074 kit. Email info@cncdisplay.com with a photo of your label for instant compatibility confirmation."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Diagnose FANUC CRT Screen Flickering",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Observe the flickering pattern","text":"Determine if the flickering is vertical roll, horizontal shake, or full-screen flash. Vertical roll indicates sync signal issues; horizontal shake points to power supply caps; full flash suggests flyback/HV problems."},
+    {"@type":"HowToStep","position":2,"name":"Check the sync cable connection","text":"Reseat the signal cable between the CNC control and CRT monitor. Inspect HONDA 20-pin connector for bent pins. A loose connection causes intermittent flickering."},
+    {"@type":"HowToStep","position":3,"name":"Listen for high-voltage sounds","text":"A healthy CRT produces a faint 15.75 kHz whine. If you hear buzzing, sizzling, or ticking, the flyback transformer is failing — LCD replacement recommended."},
+    {"@type":"HowToStep","position":4,"name":"Confirm with a second display","text":"Connect a known-working display to the same CNC control. If the second display works cleanly, the problem is in your CRT — not the CNC system."}
+  ]
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
+article{max-width:800px;margin:2rem auto;padding:0 1.5rem}
+h1{font-size:2rem;color:#1a1a2e;margin-bottom:0.5rem}
+h2{font-size:1.4rem;color:#1a1a2e;margin:2rem 0 1rem;border-bottom:2px solid #e2e8f0;padding-bottom:0.5rem}
+.warning-box{background:#fff7ed;padding:1.25rem;border-radius:8px;border-left:4px solid #f97316;margin:1rem 0}
+.spec-table{width:100%;border-collapse:collapse;margin:1rem 0}
+.spec-table th{background:#1a1a2e;color:#fff;padding:10px 12px;text-align:left;border:1px solid #333}
+.spec-table td{padding:10px 12px;border:1px solid #e2e8f0;vertical-align:top}
+.cta-box{background:#f0f7ff;border:2px solid #2563eb;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0}
+.cta-btn{display:inline-block;background:#2563eb;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.1rem;text-decoration:none}
+.cta-btn:hover{background:#1d4ed8}
+.faq-item{border:1px solid #e2e8f0;border-radius:8px;margin:0.5rem 0;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:#1e40af;background:#f8fafc}
+.faq-a{padding:14px 18px;border-top:1px solid #e2e8f0}
+</style>
+</head>
+<body>
+
+<header><nav>
+<a href="/" class="logo">Kongto Technology</a>
+<div class="nav-links">
+<a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
+<a href="/products/">Products</a><a href="/posts/">Articles</a>
+<a href="/about.html">About</a><a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+</div>
+<a href="/search.html" class="nav-search">🔍 Search</a>
+<div class="lang-switch">
+<a href="/posts/fanuc-screen-flickering-crt-lcd-fix.html" lang="en">English</a>
+</div>
+</nav></header>
+
+<article>
+
+<h1>FANUC CRT Screen Flickering — Diagnose the Cause & Upgrade to LCD</h1>
+
+<p><strong>FANUC CRT flickering</strong> is one of the most common failure modes on legacy CNC machines. The screen rolls, shakes, or flashes intermittently — making it impossible to read tool positions, program blocks, or alarms. Over 60% of FANUC 0/0i/16i/18i/21i series displays older than 12 years develop this issue.</p>
+
+<p>This guide walks through a 4-step diagnosis and explains why LCD replacement — not CRT repair — is the cost-effective permanent fix.</p>
+
+<div class="warning-box">
+<p><strong>CRT high-voltage warning:</strong> CRT anode voltages reach 15-28 kV and remain charged after power-off. Always discharge before handling. If unsure, hire a qualified technician.</p>
+</div>
+
+<h2>Why Your FANUC CRT is Flickering</h2>
+
+<p>CRT flickering has three primary causes:</p>
+
+<table class="spec-table">
+<thead><tr><th>Symptom</th><th>Most Likely Cause</th><th>CRT Repair</th><th>LCD Fix</th></tr></thead>
+<tbody>
+<tr><td>Vertical roll (picture scrolls up/down)</td><td>Vertical sync signal loss / deflection IC failure</td><td>$50-100, temporary</td><td>Permanent</td></tr>
+<tr><td>Horizontal shake/jitter</td><td>Failing electrolytic capacitors in power supply (dried after 10-15 yr)</td><td>$15-30 (cap kit), 2-5 yr life</td><td>Permanent</td></tr>
+<tr><td>Full-screen brightness flash</td><td>Flyback transformer HV arcing / CRT socket corrosion</td><td>$80-200, hard to source parts</td><td>Permanent</td></tr>
+<tr><td>Intermittent flickering</td><td>Loose HONDA 20-pin connector, cold solder joint</td><td>$30-80, if found early</td><td>Permanent</td></tr>
+</tbody>
+</table>
+
+<h2>The 4-Step Diagnosis Routine</h2>
+
+<h3>Step 1: Observe the flickering pattern</h3>
+<p>Vertical roll = sync signal path problem. Horizontal shake = power supply capacitors. Full flash = flyback transformer HV. Take a 30-second phone video to identify the pattern.</p>
+
+<h3>Step 2: Check the HONDA 20-pin cable</h3>
+<p>FANUC A61L CRTs use a standard HONDA 20-pin connector. Reseat both ends. Look for bent pins or corrosion. A poor connection is the cheapest fix — but even if it works, CRT wear continues.</p>
+
+<h3>Step 3: Listen for audio cues</h3>
+<ul>
+<li><strong>Normal:</strong> Faint 15.75 kHz whine — CRT is working</li>
+<li><strong>Buzzing/sizzling:</strong> Flyback transformer arcing — needs replacement soon</li>
+<li><strong>Ticking/clicking:</strong> HV shutdown cycling — immediate replacement needed</li>
+<li><strong>Silent:</strong> No HV — CRT is dead</li>
+</ul>
+
+<h3>Step 4: Test with a substitute display</h3>
+<p>Connect a known-working display to the same CNC control. If it works cleanly, the problem is in your CRT — not the CNC system. A Kongto LCD test unit can confirm this in 5 minutes.</p>
+
+<h2>CRT Repair vs LCD Upgrade — Cost Reality</h2>
+
+<table class="spec-table">
+<thead><tr><th>Factor</th><th>CRT Repair</th><th>Kongto LCD Upgrade</th></tr></thead>
+<tbody>
+<tr><td>Parts cost</td><td>$15-30 (caps) + $50-150 (flyback)</td><td>$155-$479 (complete kit)</td></tr>
+<tr><td>Labor cost</td><td>$80-200 (technician)</td><td>$0 (30-min DIY)</td></tr>
+<tr><td>Downtime</td><td>2-7 days</td><td>30 minutes</td></tr>
+<tr><td>Result lifespan</td><td>1-3 years</td><td>8-10 years (50,000+ hr)</td></tr>
+<tr><td>Warranty</td><td>None on used parts</td><td>2-Year Warranty + lifetime support</td></tr>
+<tr><td>Image quality</td><td>Same dim/blurry CRT</td><td>800x600+ resolution, 350 cd/m2</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Stop fixing — upgrade permanently</h3>
+<p>Kongto LCD kits replace your flickering FANUC CRT in 30 minutes. HONDA 20-pin direct connect — no wiring changes, no parameter modifications.</p>
+<a href="/products/fanuc-a61l-0001-0093-lcd-upgrade.html" class="cta-btn">Buy FANUC A61L LCD Kit</a>
+<p style="margin-top:0.75rem;font-size:0.9rem;">Free worldwide shipping | 2-year warranty | 30-day returns</p>
+</div>
+
+<h2>Which LCD Kit Fits Your FANUC CRT?</h2>
+
+<table class="spec-table">
+<thead><tr><th>Your CRT Model</th><th>Size</th><th>LCD Kit</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>A61L-0001-0072 / 0092 / 0093 / 0095</td><td>9-inch</td><td>KTO-F0093</td><td><a href="/products/fanuc-a61l-0001-0093-lcd-upgrade.html">$155</a></td></tr>
+<tr><td>A61L-0001-0086</td><td>8.4-inch</td><td>KTO-F0086</td><td><a href="/products/fanuc-a61l-0001-0086-lcd-upgrade.html">$199</a></td></tr>
+<tr><td>A61L-0001-0074 / 0094 / 0096 / 0097</td><td>14-inch</td><td>KTO-F0074</td><td><a href="/products/fanuc-a61l-0001-0074-lcd-upgrade.html">$479</a></td></tr>
+<tr><td>A61L-0001-0076 / 0078</td><td>12-inch</td><td>KTO-F0076</td><td><a href="/products/fanuc-a61l-0001-0076-lcd-upgrade.html">$329</a></td></tr>
+</tbody>
+</table>
+
+<p>Don't see your model? Check our <a href="/compatibility-matrix.html">full compatibility database</a> (100+ models across 12 brands). Or <a href="/quote.html">send us a photo</a> of your CRT label for instant confirmation.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><div class="faq-q">Does flickering damage my CNC machine?</div><div class="faq-a">No — the flickering is in the CRT display only, not the CNC control. Your machine continues running. However, a failing flyback can cause arcing that trips HV shutdown, making the display go black.</div></div>
+<div class="faq-item"><div class="faq-q">Can I use any LCD screen as replacement?</div><div class="faq-a">No. FANUC CRTs use specific video timing and signal levels (RGB TTL, 15.75 kHz). A generic LCD needs a signal converter. Kongto kits include matched driver boards pre-configured for FANUC.</div></div>
+<div class="faq-item"><div class="faq-q">How long does shipping take?</div><div class="faq-a">DHL/FedEx express shipping: 3-7 days worldwide. US, UK, Germany, Australia typically 4-6 business days. Stock ships within 24 hours.</div></div>
+<div class="faq-item"><div class="faq-q">What if the LCD kit doesn't fit my machine?</div><div class="faq-a">7-day compatibility guarantee. Email a photo of your CRT label before ordering. Returns accepted if incompatible — full refund minus return shipping.</div></div>
+
+</article>
+
+<footer style="background:#1a1a2e;color:#fff;text-align:center;padding:2rem;margin-top:3rem;">
+<p>&copy; Kongto Technology — <a href="/about.html" style="color:#93c5fd;">About</a> | <a href="/privacy.html" style="color:#93c5fd;">Privacy</a> | <a href="/contact.html" style="color:#93c5fd;">Contact</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;">2-year warranty on all LCD modules &middot; Lifetime technical support</p>
+</footer>
+
+</body>
+</html>
