@@ -332,6 +332,10 @@ const REDIRECTS = {
   '/posts/cnc-operator-panel-display-issue-2026-06-30': '/posts/cnc-crt-troubleshooting-hub.html',
   '/create-order': '/index.html',
   '/capture-order': '/index.html',
+
+  // === GSC "alternate with canonical" fixes (2026-07-28): missing .html, renamed files ===
+  '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution': '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html',
+  '/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/fanuc-0i-display-faq-zh.html',
 };
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
