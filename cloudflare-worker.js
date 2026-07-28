@@ -288,6 +288,7 @@ const REDIRECTS = {
   '/products/okuma-osp5020-crt-lcd-upgrade.html': '/products/okuma-osp5020-lcd-upgrade.html',
   '/products/siemens-6fc3998-7fa20-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
   '/products/siemens-8.4-inch-crt-lcd-upgrade.html': '/brands/Siemens.html',
+  '/sitemap': '/sitemap.html',
   '/sitemap.html': '/index.html',
   '/social_20260501_数控显示器升级市场动态与产品速递.html': '/index.html',
   '/used-display-recycling-faq-top10-zh.html': '/zh/posts/faq_20260501_CNC_display_replacement_FAQ.html',
