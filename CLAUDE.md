@@ -48,6 +48,14 @@ pre-commit hook 自动执行：
 
 git push
 
+### Worker 部署规则（重要）
+
+**`_redirects` 是重定向真相源，`cloudflare-worker.js` 会被 `scripts/gen_redirect_worker.py` 覆盖。**
+
+1. 所有重定向加在 `_redirects`，不要直接改 `cloudflare-worker.js`
+2. 程序化逻辑（catch-all、PDF canonical）改 `scripts/gen_redirect_worker.py`
+3. 改完必须验证：GitHub Actions → deploy-worker job success + 测1个URL
+
 ### hook 阻止了提交
 
 1. 看错误信息定位问题
