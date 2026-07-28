@@ -296,7 +296,6 @@ const REDIRECTS = {
   '/zh/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html': '/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html',
   '/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html': '/posts/fanuc-crt-to-lcd-step-by-step-guide.html',
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
-};
 
   // === Compatibility matrix missing product redirects (2026-07-28) ===
   '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
@@ -320,6 +319,20 @@ const REDIRECTS = {
   '/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+
+  // === GSC 404 batch fix (2026-07-28): missing .html, date-paths, old blog URLs ===
+  '/products/a61l-0001-0093': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/a61l-0001-0094': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
+  '/products/mdt962b': '/products/mitsubishi-mdt962b-lcd-upgrade.html',
+  '/products/6fc3988-7fa20/troubleshooting': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
+  '/products/a61l-0001-0093/upgrade_guide/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/a61l-0001-0093/compatibility/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/buy-fanuc-a61l-online-2026-07-06': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/mazak-monitor-replacement-2026-07-06': '/brands/MAZAK.html',
+  '/posts/cnc-operator-panel-display-issue-2026-06-30': '/posts/cnc-crt-troubleshooting-hub.html',
+  '/create-order': '/index.html',
+  '/capture-order': '/index.html',
+};
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
 function normalise(p) {
@@ -372,10 +385,10 @@ addEventListener('fetch', event => {
     }
   }
 
-  // Strip /en/ prefix for posts/ and docs/ (migrated to root)
-  // 164 en/posts/ redirect shells deleted — Worker handles redirect instead
-  if (path.startsWith('/en/posts/') || path.startsWith('/en/docs/')) {
-    const stripped = path.replace(/^\/en/, '');
+  // Strip /en/ prefix — all old /en/ URLs redirect to root path
+  // Phase 0b migration: /en/brands/ /en/products/ /en/guides/ /en/ etc.
+  if (path.startsWith('/en/') || path === '/en') {
+    const stripped = path === '/en' ? '/' : path.replace(/^\/en/, '');
     return event.respondWith(Response.redirect(`${url.origin}${stripped}`, 301));
   }
 
