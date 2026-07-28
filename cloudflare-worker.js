@@ -38,7 +38,7 @@ const REDIRECTS = {
   '/en/posts/article_20260501_CGA_EGA显示器改装为RGBHV工业显示器实战指南.html': '/index.html',
   '/en/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html': '/index.html',
   '/en/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方案.html': '/posts/fanuc-0i-display-faq-zh.html',
-  '/en/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
+  '/en/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/fanuc-0i-display-faq-zh.html',
   '/en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html': 'https://cncdisplay.com/',
   '/en/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html': '/index.html',
   '/en/posts/article_20260501_FANUC数控显示器CRT升级LCD完整指南.html': '/brands/FANUC.html',
@@ -113,13 +113,17 @@ const REDIRECTS = {
   '/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html': '/index.html',
   '/posts/%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E7%B3%BB%E5%88%97.html': '/posts/custom_industrial_display_series.html',
   '/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html': '/posts/article_20260508_KTV148_Custom_Industrial_Display.html',
+  '/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/Shenzhen_Kongto_FANUC_LCD_Retrofit_Press_Release.html': '/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html',
   '/posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%A6%E6%91%B8%E5%B1%8F%E4%B8%8E%E5%B7%A5%E6%8E%A7%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE.html': '/posts/Industrial_Display_Procurement_Selection_Guide.html',
   '/posts/article_20260501_CGA_EGA显示器改装为RGBHV工业显示器实战指南.html': '/index.html',
   '/posts/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html': '/index.html',
   '/posts/article_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html': '/posts/fanuc-0i-display-faq-zh.html',
   '/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方案.html': '/posts/fanuc-0i-display-faq-zh.html',
-  '/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
+  '/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/fanuc-0i-display-faq-zh.html',
   '/posts/article_20260501_FANUC_A61L_0001_0093_LCD%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8_%E8%AE%A9%E8%80%81%E6%97%A7CNC%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%84%95%E5%8F%91%E6%96%B0%E6%B4%BB%E5%8A%9B.html': '/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html',
   '/posts/article_20260501_FANUC_A61L_0001_0093_LCD.html': '/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
   '/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html': 'https://cncdisplay.com/',
@@ -137,6 +141,7 @@ const REDIRECTS = {
   '/posts/article_20260501_cga_ega_to_rgbhv_guide.html': '/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html',
   '/posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html': '/posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html',
   '/posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html': '/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html',
+  '/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html': '/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html',
   '/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳中图科技有限公司实战案例.html': '/brands/FANUC.html',
   '/posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html': '/index.html',
@@ -152,6 +157,8 @@ const REDIRECTS = {
   '/posts/article_20260501_工业触摸屏与工控显示器的区别及选型建议.html': '/index.html',
   '/posts/article_20260501_江图科技工业视频显示产品目录_LCD显示器_转换器_触摸屏.html': '/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html',
   '/posts/article_20260501_深圳中图科技工业视频显示器产品目录_LCD显示器_转接卡_控制器.html': '/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html',
+  '/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/article_20260506_%E4%B8%89%E8%8F%B1BM09DF%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%B1%8FE60%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html': '/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
   '/posts/article_20260506_%E4%B8%89%E8%8F%B1FCUA-CT100%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8M500_M520%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9FTFT%E6%9B%BF%E4%BB%A3.html': '/products/mitsubishi-mdt962b-lcd-upgrade.html',
   '/posts/article_20260506_%E4%B8%89%E8%8F%B1MDT962B%E5%B7%A5%E4%B8%9A%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html': '/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html',
@@ -199,13 +206,18 @@ const REDIRECTS = {
   '/posts/article_20260522_Mazak_DR5614_LCD_CRT.html': '/zh/posts/article_20260522_Mazak_DR5614_LCD_CRT.html',
   '/posts/article_20260522_Mazak_DR5614_LCD_CRT_upgrade.html': '/posts/article_20260522_Mazak_DR5614_LCD_CRT.html',
   '/posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html': '/index.html',
+  '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution': '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html',
   '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html三菱MDT962B系列CRT升级LCD液晶全面替换方案.html': '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html',
   '/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html': '/zh/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html',
   '/posts/article_20260523_三菱MDT962B系列CRT升级LCD液晶全面替换方案.html': 'https://cncdisplay.com/',
+  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/article_20260526_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html': '/index.html',
   '/posts/article_20260615_Siemens_Display_Upgrade_Cost_ROI_Analysis.html': '/index.html',
+  '/posts/buy-fanuc-a61l-online-2026-07-06': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/cnc-crt-to-lcd-cost-comparison.html': '/posts/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html',
   '/posts/cnc-display-installation-guide.html': '/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html',
+  '/posts/cnc-operator-panel-display-issue-2026-06-30': '/posts/cnc-crt-troubleshooting-hub.html',
   '/posts/comparison_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%99%A8%E9%80%89%E5%9E%8B%E6%8C%87%E5%8D%97_VGA%E8%BD%ACVIDEO_vs_HDMI%E8%BD%ACVGA.html': '/posts/comparison_20260501_video_converter_buying_guide.html',
   '/posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html': '/index.html',
   '/posts/comparison_20260501_FANUC_CRT显示维护_vs_LCD升级模组对比.html': '/brands/FANUC.html',
@@ -216,6 +228,7 @@ const REDIRECTS = {
   '/posts/fanuc-a61l-0001-0086-lcd-replacement.html': '/products/fanuc-a61l-0001-0086-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0090-lcd-replacement.html': '/products/fanuc-a61l-0001-0090-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0092-lcd-replacement.html': '/products/fanuc-a61l-0001-0092-lcd-upgrade.html',
+  '/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0094-lcd-replacement.html': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0095-lcd-replacement.html': '/products/fanuc-a61l-0001-0095-lcd-upgrade.html',
   '/posts/faq_20260501_%E6%95%B0%E6%8E%A7%E6%9C%BA%E5%BA%8A%E6%98%BE%E7%A4%BA%E5%99%A8%E6%9B%B4%E6%8D%A2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98TOP10.html': '/posts/faq_20260501_CNC_display_replacement_FAQ.html',
@@ -228,6 +241,7 @@ const REDIRECTS = {
   '/posts/faq_20260501_FANUC_A61L_0001_0093.html': '/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
   '/posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html': 'https://cncdisplay.com/',
   '/posts/faq_20260501_FANUC_A61L_0001_0093显示异常问题故障排除.html': '/brands/FANUC.html',
+  '/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/posts/faq_20260501_二手显示器回收问题TOP10.html': '/posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html',
   '/posts/faq_20260501_数控机床显示器更换常见问题TOP10.html': '/posts/faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html',
   '/posts/gbs-8219-rgb-to-vga-converter.html': '/index.html',
@@ -240,6 +254,7 @@ const REDIRECTS = {
   '/posts/mazak-cd1472d1m-lcd-replacement.html': '/products/mazak-cd1472-lcd-upgrade.html',
   '/posts/mazak-dr5614-lcd-replacement.html': '/products/mazak-c5470ns-lcd-upgrade.html',
   '/posts/mazak-mdt-1283b-lcd-replacement.html': '/products/mazak-mdt1283b-lcd-upgrade.html',
+  '/posts/mazak-monitor-replacement-2026-07-06': '/brands/MAZAK.html',
   '/posts/mitsubishi-bm09df-lcd-replacement.html': '/products/mitsubishi-bm09df-lcd-upgrade.html',
   '/posts/mitsubishi-cnc-display-troubleshooting-zh.html': '/index.html',
   '/posts/mitsubishi-crt-vs-lcd-comparison-zh.html': '/index.html',
@@ -267,13 +282,19 @@ const REDIRECTS = {
   '/posts/非标定制显示器系列.html': '/posts/custom_industrial_display_series_CN.html',
   '/posts/非标订制显示器系列.html': '/index.html',
   '/press_release_20260501_江图科技推出FANUC数控显示器LCD升级解决方案.html': '/index.html',
+  '/products/a61l-0001-0093': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/a61l-0001-0093/compatibility/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/a61l-0001-0093/upgrade_guide/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/a61l-0001-0094': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
   '/products/fanuc-0m-0t-crt-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-16i-18i-21i-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0077-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0078-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0087-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0136-lcd-upgrade.html': '/brands/FANUC.html',
+  '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
   '/products/fanuc-om-d-display-lcd-upgrade.html': '/brands/FANUC.html',
+  '/products/heidenhain-bc120-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
   '/products/heidenhain-be211-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
   '/products/heidenhain-be411-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
   '/products/kt809-industrial-converter.html': '/posts/article_20260509_KT809_industrial_converter.html',
@@ -284,11 +305,14 @@ const REDIRECTS = {
   '/products/mazak-cd1472-d2m-lcd-upgrade.html': '/products/mazak-cd1472-lcd-upgrade.html',
   '/products/mazak-du3461g-l-lcd-upgrade.html': '/brands/MAZAK.html',
   '/products/mazak-t3021-ah-lcd-upgrade.html': '/brands/MAZAK.html',
+  '/products/mdt962b': '/products/mitsubishi-mdt962b-lcd-upgrade.html',
   '/products/okuma-osp-crt-lcd-upgrade.html': '/brands/OKUMA.html',
+  '/products/okuma-osp500l-g-lcd-upgrade.html': '/products/okuma-osp5000-lcd-upgrade.html',
   '/products/okuma-osp5020-crt-lcd-upgrade.html': '/products/okuma-osp5020-lcd-upgrade.html',
   '/products/siemens-6fc3998-7fa20-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
+  '/products/siemens-6fc5354-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
   '/products/siemens-8.4-inch-crt-lcd-upgrade.html': '/brands/Siemens.html',
-  '/sitemap': '/sitemap.html',
+  '/products/siemens-sc1200-lcd-upgrade.html': '/products/siemens-sm1200-lcd-upgrade.html',
   '/sitemap.html': '/index.html',
   '/social_20260501_数控显示器升级市场动态与产品速递.html': '/index.html',
   '/used-display-recycling-faq-top10-zh.html': '/zh/posts/faq_20260501_CNC_display_replacement_FAQ.html',
@@ -297,46 +321,6 @@ const REDIRECTS = {
   '/zh/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html': '/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html',
   '/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html': '/posts/fanuc-crt-to-lcd-step-by-step-guide.html',
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
-
-  // === Compatibility matrix missing product redirects (2026-07-28) ===
-  '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/products/siemens-6fc5354-lcd-upgrade.html': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
-  '/products/siemens-sc1200-lcd-upgrade.html': '/products/siemens-sm1200-lcd-upgrade.html',
-  '/products/okuma-osp500l-g-lcd-upgrade.html': '/products/okuma-osp5000-lcd-upgrade.html',
-  '/products/heidenhain-bc120-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
-  '/zh/posts/fanuc-screen-flickering-crt-lcd-fix.html': '/posts/fanuc-screen-flickering-crt-lcd-fix.html',
-
-  // === 0093 Keyword Cannibalization Fix (2026-07-28) ===
-  // Redirect duplicate 0093 articles → main product page
-  '/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  // — missing EN 0093 cannibalization redirects (2026-07-28) —
-  '/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-
-  // === GSC 404 batch fix (2026-07-28): missing .html, date-paths, old blog URLs ===
-  '/products/a61l-0001-0093': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/products/a61l-0001-0094': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
-  '/products/mdt962b': '/products/mitsubishi-mdt962b-lcd-upgrade.html',
-  '/products/6fc3988-7fa20/troubleshooting': '/products/siemens-6fc3988-7fa20-lcd-upgrade.html',
-  '/products/a61l-0001-0093/upgrade_guide/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/products/a61l-0001-0093/compatibility/2026-06-28': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/buy-fanuc-a61l-online-2026-07-06': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
-  '/posts/mazak-monitor-replacement-2026-07-06': '/brands/MAZAK.html',
-  '/posts/cnc-operator-panel-display-issue-2026-06-30': '/posts/cnc-crt-troubleshooting-hub.html',
-  '/create-order': '/index.html',
-  '/capture-order': '/index.html',
-
-  // === GSC "alternate with canonical" fixes (2026-07-28): missing .html, renamed files ===
-  '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution': '/posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html',
-  '/posts/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/fanuc-0i-display-faq-zh.html',
 };
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
@@ -391,29 +375,16 @@ addEventListener('fetch', event => {
   }
 
   // Strip /en/ prefix — all old /en/ URLs redirect to root path
-  // Phase 0b migration: /en/brands/ /en/products/ /en/guides/ /en/ etc.
+  // Phase 0b migration: /en/brands/ /en/products/ /en/guides/ etc.
   if (path.startsWith('/en/') || path === '/en') {
     const stripped = path === '/en' ? '/' : path.replace(/^\/en/, '');
     return event.respondWith(Response.redirect(`${url.origin}${stripped}`, 301));
   }
 
-  // Strip /en_bak/ prefix — backup directory leaked to production creates duplicates
+  // Strip /en_bak/ prefix — backup directory leaked to production
   if (path.startsWith('/en_bak/') || path === '/en_bak') {
     const stripped = path === '/en_bak' ? '/' : path.replace(/^\/en_bak/, '');
     return event.respondWith(Response.redirect(`${url.origin}${stripped}`, 301));
-  }
-
-  // Add rel=canonical HTTP header for PDFs — prevents duplicate content when
-  // the same PDF is accessible via multiple paths (e.g. en_bak/docs/ vs docs/)
-  if (path.endsWith('.pdf')) {
-    return event.respondWith(
-      fetch(request).then(resp => {
-        const canonUrl = url.origin + url.pathname;
-        const h = new Headers(resp.headers);
-        h.set('Link', `<${canonUrl}>; rel="canonical"`);
-        return new Response(resp.body, {status: resp.status, statusText: resp.statusText, headers: h});
-      })
-    );
   }
 
   // Pass through to origin (GitHub Pages)

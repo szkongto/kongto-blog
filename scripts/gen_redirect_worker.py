@@ -144,10 +144,16 @@ addEventListener('fetch', event => {{
     }}
   }}
 
-  // Strip /en/ prefix for posts/ and docs/ (migrated to root)
-  // 164 en/posts/ redirect shells deleted — Worker handles redirect instead
-  if (path.startsWith('/en/posts/') || path.startsWith('/en/docs/')) {{
-    const stripped = path.replace(/^\\/en/, '');
+  // Strip /en/ prefix — all old /en/ URLs redirect to root path
+  // Phase 0b migration: /en/brands/ /en/products/ /en/guides/ etc.
+  if (path.startsWith('/en/') || path === '/en') {{
+    const stripped = path === '/en' ? '/' : path.replace(/^\\/en/, '');
+    return event.respondWith(Response.redirect(`${{url.origin}}${{stripped}}`, 301));
+  }}
+
+  // Strip /en_bak/ prefix — backup directory leaked to production
+  if (path.startsWith('/en_bak/') || path === '/en_bak') {{
+    const stripped = path === '/en_bak' ? '/' : path.replace(/^\\/en_bak/, '');
     return event.respondWith(Response.redirect(`${{url.origin}}${{stripped}}`, 301));
   }}
 
