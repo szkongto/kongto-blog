@@ -397,6 +397,25 @@ addEventListener('fetch', event => {
     return event.respondWith(Response.redirect(`${url.origin}${stripped}`, 301));
   }
 
+  // Strip /en_bak/ prefix — backup directory leaked to production creates duplicates
+  if (path.startsWith('/en_bak/') || path === '/en_bak') {
+    const stripped = path === '/en_bak' ? '/' : path.replace(/^\/en_bak/, '');
+    return event.respondWith(Response.redirect(`${url.origin}${stripped}`, 301));
+  }
+
+  // Add rel=canonical HTTP header for PDFs — prevents duplicate content when
+  // the same PDF is accessible via multiple paths (e.g. en_bak/docs/ vs docs/)
+  if (path.endsWith('.pdf')) {
+    return event.respondWith(
+      fetch(request).then(resp => {
+        const canonUrl = url.origin + url.pathname;
+        const h = new Headers(resp.headers);
+        h.set('Link', `<${canonUrl}>; rel="canonical"`);
+        return new Response(resp.body, {status: resp.status, statusText: resp.statusText, headers: h});
+      })
+    );
+  }
+
   // Pass through to origin (GitHub Pages)
   event.respondWith(fetch(request));
 });
