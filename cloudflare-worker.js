@@ -219,6 +219,7 @@ const REDIRECTS = {
   '/posts/fanuc-a61l-0001-0086-lcd-replacement.html': '/products/fanuc-a61l-0001-0086-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0090-lcd-replacement.html': '/products/fanuc-a61l-0001-0090-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0092-lcd-replacement.html': '/products/fanuc-a61l-0001-0092-lcd-upgrade.html',
+  '/posts/fanuc-a61l-0001-0093-display-faq-en.html': '/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html',
   '/posts/fanuc-a61l-0001-0094-lcd-replacement.html': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
   '/posts/fanuc-a61l-0001-0095-lcd-replacement.html': '/products/fanuc-a61l-0001-0095-lcd-upgrade.html',
   '/posts/faq_20260501_%E6%95%B0%E6%8E%A7%E6%9C%BA%E5%BA%8A%E6%98%BE%E7%A4%BA%E5%99%A8%E6%9B%B4%E6%8D%A2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98TOP10.html': '/posts/faq_20260501_CNC_display_replacement_FAQ.html',

@@ -340,3 +340,6 @@
 /products/siemens-sc1200-lcd-upgrade.html /products/siemens-sm1200-lcd-upgrade.html 301
 /products/okuma-osp500l-g-lcd-upgrade.html /products/okuma-osp5000-lcd-upgrade.html 301
 /products/heidenhain-bc120-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
+
+# === Old naming convention redirects (2026-07-31) ===
+/posts/fanuc-a61l-0001-0093-display-faq-en.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301

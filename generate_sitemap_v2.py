@@ -21,6 +21,7 @@ EXCLUDE = [
     "no-display.html",
     "flickering-screen.html",
     "image-retention.html",
+    "posts/fanuc-a61l-0001-0093-display-faq-en.html",  # replaced by 301 redirect
 ]
 
 def get_git_lastmod(filepath):
@@ -68,10 +69,19 @@ def get_changefreq(rel_path):
         return "weekly"
     return "monthly"
 
-def should_include(rel_path):
+def should_include(rel_path, fullpath=None):
     for ex in EXCLUDE:
         if ex in rel_path:
             return False
+    # Skip redirect stubs (meta-refresh pages)
+    if fullpath and os.path.isfile(fullpath):
+        try:
+            with open(fullpath, 'r', encoding='utf-8', errors='ignore') as f:
+                first = f.read(500)
+            if 'http-equiv="refresh"' in first:
+                return False
+        except Exception:
+            pass
     return True
 
 def main():
@@ -88,7 +98,7 @@ def main():
             fullpath = os.path.join(root, f)
             rel = os.path.relpath(fullpath, BASE).replace('\\', '/')
 
-            if not should_include(rel):
+            if not should_include(rel, fullpath):
                 continue
 
             # Get accurate lastmod from git (using full path)
