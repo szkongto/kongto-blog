@@ -322,19 +322,6 @@
 /images/mitsubishi-lcd-replacement.jpg /products/mitsubishi-bm09df-lcd-upgrade.html 301
 
 
-# === 0093 Keyword Cannibalization Fix (added 2026-07-28) ===
-/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-
 # === GSC 404 batch fix (2026-07-28): missing .html, date-paths, old blog URLs ===
 /products/a61l-0001-0093 /products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
 /products/a61l-0001-0094 /products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
