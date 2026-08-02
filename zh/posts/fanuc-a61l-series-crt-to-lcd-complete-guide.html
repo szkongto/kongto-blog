@@ -1,1852 +1,252 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-<html lang="en">
-
-
-
-
-
-
-
+<html lang="zh-CN">
 <head>
-
-
-
-
-
-
-
     <meta charset="UTF-8">
-
-
-
-
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
-
-
-
-    <title>FANUC A61L Series CRT to LCD Upgrade Guide | Complete Cross-Reference for 0072-0097</title>
-
-
-
-
-
-
-
-    <meta name="description" content="Complete FANUC A61L-0001 series CRT to LCD upgrade guide. Covers all models 0072 through 0097 including 0093, 0095, 0074. Honda 20-pin interface, plug-and-play installation. -.">
-
-
-
-
-
-
-
+    <title>FANUC A61L系列CRT转LCD升级指南 | 0072-0097全型号对照</title>
+    <meta name="description" content="FANUC A61L-0001系列CRT转LCD升级完整指南。覆盖0072至0097全部型号，包括0093、0095、0074。Honda 20针接口，即插即用安装。现货供应，2年质保。">
     <link rel="canonical" href="https://cncdisplay.com/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html">
-
-
-
-
-
-
-
     <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html">
-
-
-
-
-
-
-
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html">
-
-
-
-
-
-
-
-	    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html" />
-
-
-
-
-
-
-
+    <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html" />
     <link rel="stylesheet" href="/css/style.css?v=9">
-
-
-
-
-
-
-
     <meta property="og:type" content="article">
-
-
-
-
-
-
-
-    <meta property="og:title" content="FANUC A61L Series CRT to LCD Upgrade Guide">
-
-
-
-
-
-
-
-    <meta property="og:description" content="Complete FANUC A61L-0001 series CRT to LCD upgrade guide. Covers 0072-0097. Honda 20-pin plug-and-play, 30-min install.">
-
-
-
-
-
-
-
+    <meta property="og:title" content="FANUC A61L系列CRT转LCD升级指南">
+    <meta property="og:description" content="FANUC A61L-0001系列CRT转LCD升级完整指南。覆盖0072-0097。Honda 20针即插即用，30分钟安装。">
     <meta property="og:image" content="https://cncdisplay.com/images/A6100010093_install_effect_2.jpg">
-
-
-
-
-
-
-
     <meta property="og:site_name" content="Kongto Technology">
-
-
-
-
-
-
-
     <meta name="twitter:card" content="summary_large_image">
-
-
-
-
-
-
-
-    <meta name="twitter:title" content="FANUC A61L Series CRT to LCD Upgrade Guide">
-
-
-
-
-
-
-
+    <meta name="twitter:title" content="FANUC A61L系列CRT转LCD升级指南">
     <meta name="twitter:image" content="https://cncdisplay.com/images/A6100010093_install_effect_2.jpg">
-
-
-
-
-
-
-
     <meta http-equiv="X-Content-Type-Options" content="nosniff"><meta http-equiv="X-Frame-Options" content="SAMEORIGIN"><meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script type="application/ld+json">
-
-
-
-
-
-
-
     {
-
-
-
-
-
-
-
       "@context": "https://schema.org",
-
-
-
-
-
-
-
       "@type": "TechArticle",
-
-
-
-
-
-
-
-      "headline": "FANUC A61L Series CRT to LCD Upgrade Guide",
-
-
-
-
-
-
-
-      "description": "Complete FANUC A61L-0001 series CRT-to-LCD upgrade reference covering models 0072 through 0097, D9MM-11A, and compatible FANUC CNC systems.",
-
-
-
-
-
-
-
+      "headline": "FANUC A61L系列CRT转LCD升级指南",
+      "description": "FANUC A61L-0001系列CRT转LCD升级完整参考，覆盖0072至0097型号、D9MM-11A及兼容的FANUC CNC系统。",
       "author": {"@type": "Organization", "name": "Kongto Technology"},
-
-
-
-
-
-
-
       "publisher": {"@type": "Organization", "name": "Kongto Technology"},
-
-
-
-
-
-
-
       "datePublished": "2026-06-27",
-
-
-
-
-
-
-
       "image": "https://cncdisplay.com/images/A6100010093_install_effect_2.jpg"
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script type="application/ld+json">
-
-
-
-
-
-
-
     {
-
-
-
-
-
-
-
       "@context": "https://schema.org",
-
-
-
-
-
-
-
       "@type": "FAQPage",
-
-
-
-
-
-
-
       "mainEntity": [
-
-
-
-
-
-
-
-        {"@type":"Question","name":"Which FANUC A61L models can be upgraded to LCD?","acceptedAnswer":{"@type":"Answer","text":"All FANUC A61L-0001 series CRT displays from 0072 through 0097, plus D9MM-11A, can be upgraded to industrial LCD. This includes monochrome 9-inch, monochrome 8.4-inch, color 14-inch, and color 12-inch variants."}},
-
-
-
-
-
-
-
-        {"@type":"Question","name":"What connector does FANUC A61L use?","acceptedAnswer":{"@type":"Answer","text":"FANUC A61L-0001 series CRT displays use the Honda MR-20M 20-pin connector (also called HONDA 20-pin). Our LCD modules use the same connector — 100% compatible, no adapter or wiring modification needed."}},
-
-
-
-
-
-
-
-        {"@type":"Question","name":"Is the FANUC LCD upgrade plug-and-play?","acceptedAnswer":{"@type":"Answer","text":"Yes. All Kongto LCD modules are direct drop-in replacements using the original Honda 20-pin signal cable and DC 24V power. No CNC parameter changes, no housing modifications. Installation takes 30 minutes."}},
-
-
-
-
-
-
-
-        {"@type":"Question","name":"Which FANUC CNC systems are compatible?","acceptedAnswer":{"@type":"Answer","text":"FANUC Series 0, 0-Mate, 0i-A/B/C/D, 6M/6T, 10/11/12, 15T, 16i/18i/21i, 30i, Power Mate, and OM-D/OM-C are all compatible. Different A61L models correspond to specific system series — see our compatibility matrix for exact matching."}},
-
-
-
-
-
-
-
-        {"@type":"Question","name":"What is the warranty on FANUC LCD upgrades?","acceptedAnswer":{"@type":"Answer","text":"All Kongto FANUC LCD upgrade modules come with a 2-year warranty, lifetime technical support, and 7-day free returns. Price range $155-$350 depending on model."}}
-
-
-
-
-
-
-
+        {"@type":"Question","name":"哪些FANUC A61L型号可以升级为LCD？","acceptedAnswer":{"@type":"Answer","text":"从0072到0097的全部FANUC A61L-0001系列CRT显示器，加上D9MM-11A，均可升级为工业LCD。包括9寸单色、8.4寸单色、14寸彩色和12寸彩色等型号。"}},
+        {"@type":"Question","name":"FANUC A61L使用什么接口？","acceptedAnswer":{"@type":"Answer","text":"FANUC A61L-0001系列CRT显示器使用Honda MR-20M 20针接口（也称HONDA 20针）。我们的LCD模块使用相同接口——100%兼容，无需转接或改线。"}},
+        {"@type":"Question","name":"FANUC LCD升级是否即插即用？","acceptedAnswer":{"@type":"Answer","text":"是的。所有Kongto LCD模块都是直接替换，使用原装Honda 20针信号线和DC 24V供电。无需更改CNC参数，无需修改外壳。安装约30分钟。"}},
+        {"@type":"Question","name":"兼容哪些FANUC CNC系统？","acceptedAnswer":{"@type":"Answer","text":"FANUC Series 0、0-Mate、0i-A/B/C/D、6M/6T、10/11/12、15T、16i/18i/21i、30i、Power Mate及OM-D/OM-C均兼容。不同A61L型号对应特定系统系列——请参阅我们的兼容矩阵进行精确匹配。"}},
+        {"@type":"Question","name":"FANUC LCD升级的质保期多长？","acceptedAnswer":{"@type":"Answer","text":"所有Kongto FANUC LCD升级模块均提供2年质保、终身技术支持和7天免费退货。价格根据型号为155-350美元。"}}
       ]
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script type="application/ld+json">
-
-
-
-
-
-
-
     {
-
-
-
-
-
-
-
       "@context": "https://schema.org",
-
-
-
-
-
-
-
       "@type": "HowTo",
-
-
-
-
-
-
-
-      "name": "How to Replace FANUC A61L CRT with LCD",
-
-
-
-
-
-
-
-      "description": "Step-by-step guide for replacing any FANUC A61L-0001 series CRT monitor with a Kongto LCD upgrade module",
-
-
-
-
-
-
-
+      "name": "如何用LCD替换FANUC A61L CRT",
+      "description": "用Kongto LCD升级模块替换任意FANUC A61L-0001系列CRT显示器的分步指南",
       "totalTime": "PT30M",
-
-
-
-
-
-
-
-      "tool": [{"@type":"HowToTool","name":"Phillips screwdriver"}],
-
-
-
-
-
-
-
-      "supply": [{"@type":"HowToSupply","name":"FANUC A61L LCD upgrade module"}],
-
-
-
-
-
-
-
+      "tool": [{"@type":"HowToTool","name":"十字螺丝刀"}],
+      "supply": [{"@type":"HowToSupply","name":"FANUC A61L LCD升级模块"}],
       "step": [
-
-
-
-
-
-
-
-        {"@type":"HowToStep","position":1,"name":"Power down","text":"Turn off CNC system main power. Remove the CRT display housing (4 screws). Disconnect the Honda 20-pin signal cable and DC 24V power."},
-
-
-
-
-
-
-
-        {"@type":"HowToStep","position":2,"name":"Install LCD","text":"Place the LCD module into the original CRT mounting position. Screw holes align 100%. Secure with original screws."},
-
-
-
-
-
-
-
-        {"@type":"HowToStep","position":3,"name":"Connect cables","text":"Plug the Honda 20-pin cable into the LCD module. Connect DC 24V power. Keyed design prevents incorrect insertion."},
-
-
-
-
-
-
-
-        {"@type":"HowToStep","position":4,"name":"Power on","text":"Restore power. The LCD displays automatically. Use OSD buttons to adjust brightness and contrast."}
-
-
-
-
-
-
-
+        {"@type":"HowToStep","position":1,"name":"断电","text":"关闭CNC系统主电源。拆下CRT显示器外壳（4颗螺丝）。断开Honda 20针信号线和DC 24V电源。"},
+        {"@type":"HowToStep","position":2,"name":"安装LCD","text":"将LCD模块放入原CRT安装位置。螺丝孔100%对齐。用原螺丝固定。"},
+        {"@type":"HowToStep","position":3,"name":"连接线缆","text":"将Honda 20针线缆插入LCD模块。连接DC 24V电源。防呆设计防止插反。"},
+        {"@type":"HowToStep","position":4,"name":"开机","text":"恢复供电。LCD自动显示画面。使用OSD按键调节亮度和对比度。"}
       ]
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     </script>
-
-
-
-
-
-
-
     <style>
-
-
-
-
-
-
-
         .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem;margin:1rem 0;}
-
-
-
-
-
-
-
         .product-grid a{display:block;padding:0.75rem;background:#fff;border:1px solid #e2e8f0;border-radius:8px;text-decoration:none;color:#333;font-size:0.9rem;transition:all 0.2s;}
-
-
-
-
-
-
-
         .product-grid a:hover{border-color:#FF6600;box-shadow:0 2px 8px rgba(255,102,0,0.15);}
-
-
-
-
-
-
-
         .p-price{color:#FF6600;font-weight:700;}
-
-
-
-
-
-
-
     </style>
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
-
 <body>
-
-
-
-
-
-
-
     <header>
         <nav>
-            <a href="/" class="logo">Kongto Technology</a>
+            <a href="/zh/" class="logo">Kongto Technology</a>
             <div class="nav-links">
-                <a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a>
-                <a href="/products/">Products</a>
-                <a href="/posts/">Articles</a>
-                <a href="/case-studies.html">Cases</a>
-                <a href="/docs/">Downloads</a>
-                <a href="/about.html">About</a>
-                <a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a>
+                <a href="/zh/">首页</a><a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/products/">产品</a>
+                <a href="/zh/posts/">文章</a>
+                <a href="/zh/case-studies.html">案例</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于</a>
+                <a href="/zh/contact.html" style="color:#ff9800;font-weight:700;">获取报价</a>
             </div>
-            <a href="/search.html" class="nav-search">🔍 Search</a>
+            <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
             <div class="lang-switch">
-
-
-
-
-
-
-
-                <span class="divider">&#x4e2d;&#x6587; |</span>
-
-
-
-
-
-
-
+                <span class="divider">中文 |</span>
                 <a href="/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html" lang="en" class="lang-en">English</a>
-
-
-
-
-
-
-
             </div>
         </nav>
     </header>
-
-
-
-
-
-
-
     <main style="max-width:980px;margin:0 auto;padding:20px;">
-
-
-
-
-
-
-
         <article>
-
-
-
-
-
-
-
-            <h1>FANUC A61L-0001 Series CRT to LCD Upgrade Guide</h1>
-
-
-
-
-
-
-
-            <p class="meta" style="color:#666;font-size:0.9rem;">Published: June 27, 2026 | Category: <a href="/zh/brands/FANUC.html">FANUC LCD Retrofit</a> | 作者: szkongto01</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <img width="400" height="300" src="/images/A6100010093_install_effect_2.webp" loading="lazy" alt="FANUC A61L-0001-0093 LCD upgrade module installed on FANUC CNC machine" style="width:100%;border-radius:12px;margin:1.5rem 0;;height:auto" loading="lazy">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <p><strong>FANUC is the world's largest CNC system manufacturer</strong>, and its A61L-0001 series CRT displays were used across millions of machines worldwide — from the Series 0 and 0i to the 16i/18i/21i controls. These CRTs are now fully discontinued, and in-service units are failing at an accelerating rate.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <p>This guide covers every A61L-0001 model from <strong>0072 through 0097</strong>, including the D9MM-11A variant. You'll find model-specific specifications, compatible CNC system lists, a complete cross-reference table, pricing, installation instructions, and links to dedicated product pages for each model.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <h1>FANUC A61L-0001系列CRT转LCD升级指南</h1>
+            <p class="meta" style="color:#666;font-size:0.9rem;">发布日期：2026年6月27日 | 分类：<a href="/zh/brands/FANUC.html">FANUC LCD改造</a> | 作者: szkongto01</p>
+            <img width="400" height="300" src="/images/A6100010093_install_effect_2.webp" loading="lazy" alt="安装于FANUC CNC机床上的FANUC A61L-0001-0093 LCD升级模块" style="width:100%;border-radius:12px;margin:1.5rem 0;;height:auto">
+            <p><strong>FANUC是全球最大的CNC系统制造商</strong>，其A61L-0001系列CRT显示器曾用于全球数百万台机床——从Series 0和0i到16i/18i/21i控制系统。这些CRT现已全面停产，在役设备故障率正加速上升。</p>
+            <p>本指南覆盖从<strong>0072到0097</strong>的全部A61L-0001型号，包括D9MM-11A变体。您将找到各型号规格、兼容CNC系统列表、完整对照表、价格、安装说明以及每个型号的专用产品页链接。</p>
             <div style="background:#fff7ed;padding:1.5rem;border-radius:8px;border:1px solid #fed7aa;margin:2rem 0;">
-
-
-
-
-
-
-
-                <strong>&#x26a0;&#xfe0f; Quick Reference:</strong> All FANUC A61L-0001 CRT displays use the <strong>Honda MR-20M 20-pin connector</strong> and <strong>DC 24V power</strong>. Our LCD modules replace them directly — plug-and-play, <strong>no wiring modifications, no CNC parameter changes</strong>. Prices range from <strong> to </strong>. All include 2-year warranty.
-
-
-
-
-
-
-
-                <div style="margin-top:0.75rem;"><a href="/zh/compatibility-matrix.html" style="display:inline-block;padding:10px 24px;background:#2563eb;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">View Full Compatibility Matrix &rarr;</a></div>
-
-
-
-
-
-
-
+                <strong>&#x26a0;&#xfe0f; 快速参考：</strong> 所有FANUC A61L-0001 CRT显示器均使用<strong>Honda MR-20M 20针接口</strong>和<strong>DC 24V供电</strong>。我们的LCD模块直接替换——即插即用，<strong>无需改线，无需更改CNC参数</strong>。价格根据型号为<strong>155-350美元</strong>。全部含2年质保。
+                <div style="margin-top:0.75rem;"><a href="/zh/compatibility-matrix.html" style="display:inline-block;padding:10px 24px;background:#2563eb;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">查看完整兼容矩阵 &rarr;</a></div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>Complete A61L-0001 Model Cross-Reference</h2>
-
-
-
-
-
-
-
-            <p>Use the table below to find your specific FANUC CRT model and its compatible LCD replacement. Click any model number for detailed product information.</p>
-
-
-
-
-
-
-
+            <h2>A61L-0001全型号对照表</h2>
+            <p>使用下表查找您的FANUC CRT型号及对应LCD替换方案。点击任何型号查看详细产品信息。</p>
             <div style="overflow-x:auto;">
-
-
-
-
-
-
-
             <table style="width:100%;border-collapse:collapse;font-size:13px;margin:1rem 0;">
-
-
-
-
-
-
-
-                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">Model</th><th>CRT Type</th><th>Size</th><th>Resolution</th><th>Interface</th><th>LCD Size</th><th>Price</th><th>Compatible FANUC Systems</th></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0072-lcd-upgrade.html">A61L-0001-0072</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>6M, 6T, 6-MA, 6-TA</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html">A61L-0001-0074</a></td><td style="padding:6px;border:1px solid #ddd;">Color CRT</td><td>14"</td><td>640x480</td><td>Honda 20-pin</td><td>12.1" LCD</td><td><span class="p-price"></span></td><td>15T, 10, 10TE-F</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0076-lcd-upgrade.html">A61L-0001-0076</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>6, 6B, 6BII</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0086-lcd-upgrade.html">A61L-0001-0086</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>6, 10, 11, 0-M, 0-T</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0090-lcd-upgrade.html">A61L-0001-0090</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>0T, 0M, Series 6</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html">A61L-0001-0092</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>6M, 6T, 6-MA/B, 6-TA/B</td></tr>
-
-
-
-
-
-
-
-                <tr style="background:#f0fdf4;"><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">A61L-0001-0093</a></td><td style="padding:6px;border:1px solid #ddd;">Monochrome</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>0, 0i, 16i, 18i, 21i, OM-D</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0094-lcd-upgrade.html">A61L-0001-0094</a></td><td style="padding:6px;border:1px solid #ddd;">Color CRT</td><td>14"</td><td>640x480</td><td>Honda 20-pin</td><td>12.1" LCD</td><td><span class="p-price"></span></td><td>6, 10, 11, 12</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0095-lcd-upgrade.html">A61L-0001-0095</a></td><td style="padding:6px;border:1px solid #ddd;">Color CRT</td><td>9"</td><td>640x400</td><td>Honda 20-pin</td><td>8" LCD</td><td><span class="p-price"></span></td><td>0, 0i, 15, 16, 18, 21</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0096-lcd-upgrade.html">A61L-0001-0096</a></td><td style="padding:6px;border:1px solid #ddd;">Color CRT</td><td>14"</td><td>640x480</td><td>Honda 20-pin</td><td>12.1" LCD</td><td><span class="p-price"></span></td><td>15T, 16, 18, 20, 21 / Toshiba D14CM</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0097-lcd-upgrade.html">A61L-0001-0097</a></td><td style="padding:6px;border:1px solid #ddd;">Color CRT</td><td>14"</td><td>640x480</td><td>Honda 20-pin</td><td>12.1" LCD</td><td><span class="p-price"></span></td><td>0, 0-Mate, 0i Mate</td></tr>
-
-
-
-
-
-
-
+                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:8px;">型号</th><th>CRT类型</th><th>尺寸</th><th>分辨率</th><th>接口</th><th>LCD尺寸</th><th>价格</th><th>兼容FANUC系统</th></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0072-lcd-upgrade.html">A61L-0001-0072</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>6M, 6T, 6-MA, 6-TA</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html">A61L-0001-0074</a></td><td style="padding:6px;border:1px solid #ddd;">彩色CRT</td><td>14寸</td><td>640x480</td><td>Honda 20针</td><td>12.1寸LCD</td><td><span class="p-price"></span></td><td>15T, 10, 10TE-F</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0076-lcd-upgrade.html">A61L-0001-0076</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>6, 6B, 6BII</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0086-lcd-upgrade.html">A61L-0001-0086</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>6, 10, 11, 0-M, 0-T</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0090-lcd-upgrade.html">A61L-0001-0090</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>0T, 0M, Series 6</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html">A61L-0001-0092</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>6M, 6T, 6-MA/B, 6-TA/B</td></tr>
+                <tr style="background:#f0fdf4;"><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html">A61L-0001-0093</a></td><td style="padding:6px;border:1px solid #ddd;">单色</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>0, 0i, 16i, 18i, 21i, OM-D</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0094-lcd-upgrade.html">A61L-0001-0094</a></td><td style="padding:6px;border:1px solid #ddd;">彩色CRT</td><td>14寸</td><td>640x480</td><td>Honda 20针</td><td>12.1寸LCD</td><td><span class="p-price"></span></td><td>6, 10, 11, 12</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0095-lcd-upgrade.html">A61L-0001-0095</a></td><td style="padding:6px;border:1px solid #ddd;">彩色CRT</td><td>9寸</td><td>640x400</td><td>Honda 20针</td><td>8寸LCD</td><td><span class="p-price"></span></td><td>0, 0i, 15, 16, 18, 21</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0096-lcd-upgrade.html">A61L-0001-0096</a></td><td style="padding:6px;border:1px solid #ddd;">彩色CRT</td><td>14寸</td><td>640x480</td><td>Honda 20针</td><td>12.1寸LCD</td><td><span class="p-price"></span></td><td>15T, 16, 18, 20, 21 / Toshiba D14CM</td></tr>
+                <tr><td style="padding:6px;border:1px solid #ddd;"><a href="/zh/products/fanuc-a61l-0001-0097-lcd-upgrade.html">A61L-0001-0097</a></td><td style="padding:6px;border:1px solid #ddd;">彩色CRT</td><td>14寸</td><td>640x480</td><td>Honda 20针</td><td>12.1寸LCD</td><td><span class="p-price"></span></td><td>0, 0-Mate, 0i Mate</td></tr>
             </table>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>FANUC A61L Product Pages (Click for Details)</h2>
-
-
-
-
-
-
-
+            <h2>FANUC A61L产品页（点击查看详情）</h2>
             <div class="product-grid">
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0072-lcd-upgrade.html"><strong>A61L-0001-0072</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html"><strong>A61L-0001-0074</strong><br>14" Color→12" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0076-lcd-upgrade.html"><strong>A61L-0001-0076</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0086-lcd-upgrade.html"><strong>A61L-0001-0086</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0090-lcd-upgrade.html"><strong>A61L-0001-0090</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html"><strong>A61L-0001-0092</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html"><strong>A61L-0001-0093</strong><br>9" Mono→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0094-lcd-upgrade.html"><strong>A61L-0001-0094</strong><br>14" Color→12" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0095-lcd-upgrade.html"><strong>A61L-0001-0095</strong><br>9" Color→8" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0096-lcd-upgrade.html"><strong>A61L-0001-0096</strong><br>14" Color→12" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
-                <a href="/zh/products/fanuc-a61l-0001-0097-lcd-upgrade.html"><strong>A61L-0001-0097</strong><br>14" Color→12" LCD <span class="p-price"></span></a>
-
-
-
-
-
-
-
+                <a href="/zh/products/fanuc-a61l-0001-0072-lcd-upgrade.html"><strong>A61L-0001-0072</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0074-lcd-upgrade.html"><strong>A61L-0001-0074</strong><br>14寸彩色→12寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0076-lcd-upgrade.html"><strong>A61L-0001-0076</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0086-lcd-upgrade.html"><strong>A61L-0001-0086</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0090-lcd-upgrade.html"><strong>A61L-0001-0090</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html"><strong>A61L-0001-0092</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html"><strong>A61L-0001-0093</strong><br>9寸单色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0094-lcd-upgrade.html"><strong>A61L-0001-0094</strong><br>14寸彩色→12寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0095-lcd-upgrade.html"><strong>A61L-0001-0095</strong><br>9寸彩色→8寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0096-lcd-upgrade.html"><strong>A61L-0001-0096</strong><br>14寸彩色→12寸LCD <span class="p-price"></span></a>
+                <a href="/zh/products/fanuc-a61l-0001-0097-lcd-upgrade.html"><strong>A61L-0001-0097</strong><br>14寸彩色→12寸LCD <span class="p-price"></span></a>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>CRT Failure Symptoms on FANUC Systems</h2>
-
-
-
-
-
-
-
+            <h2>FANUC系统CRT故障症状</h2>
             <div style="overflow-x:auto;">
-
-
-
-
-
-
-
             <table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
-
-
-
-
-
-
-
-                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">Symptom</th><th>Likely Cause</th><th>Affected Models</th><th>Solution</th></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Dim/faded display</td><td>CRT phosphor wear</td><td>All A61L</td><td>LCD upgrade</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">No display (black screen)</td><td>HV circuit / flyback failure</td><td>0072-0097</td><td>LCD upgrade</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Flickering image</td><td>Flyback transformer</td><td>All A61L</td><td>LCD upgrade</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Color distortion (color models)</td><td>Color driver circuit</td><td>0074, 0094, 0096, 0097</td><td>LCD upgrade</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Shrinking raster</td><td>Deflection/Yoke failure</td><td>All A61L</td><td>LCD upgrade</td></tr>
-
-
-
-
-
-
-
+                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">症状</th><th>可能原因</th><th>受影响型号</th><th>解决方案</th></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">画面暗淡/褪色</td><td>CRT荧光粉老化</td><td>全部A61L</td><td>LCD升级</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">无显示（黑屏）</td><td>高压电路/行输出故障</td><td>0072-0097</td><td>LCD升级</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">画面闪烁</td><td>行输出变压器</td><td>全部A61L</td><td>LCD升级</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">色彩失真（彩色型号）</td><td>彩色驱动电路</td><td>0074, 0094, 0096, 0097</td><td>LCD升级</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">光栅收缩</td><td>偏转/偏转线圈故障</td><td>全部A61L</td><td>LCD升级</td></tr>
             </table>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>Technical Specification Comparison</h2>
-
-
-
-
-
-
-
+            <h2>技术规格对比</h2>
             <div style="overflow-x:auto;">
-
-
-
-
-
-
-
             <table style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;">
-
-
-
-
-
-
-
-                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">Specification</th><th>Original FANUC CRT</th><th>Kongto LCD Upgrade</th></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Display Tech</td><td>CRT (monochrome or color)</td><td>Industrial TFT-LCD</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Resolution</td><td>640x400 / 640x480</td><td>800x600</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Brightness</td><td>~200 cd/m2</td><td>350-450 cd/m2</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Lifespan</td><td>~15,000 hours</td><td>50,000+ hours</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Power</td><td>25-30W</td><td>8-12W</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Interface</td><td>Honda MR-20M 20-pin</td><td>Honda 20-pin (direct)</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Power Supply</td><td>DC 24V</td><td>DC 24V (original)</td></tr>
-
-
-
-
-
-
-
-                <tr><td style="padding:8px;border:1px solid #ddd;">Safety</td><td>10-15kV (HV hazard)</td><td>Low voltage DC</td></tr>
-
-
-
-
-
-
-
+                <tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;">规格</th><th>原装FANUC CRT</th><th>Kongto LCD升级</th></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">显示技术</td><td>CRT（单色或彩色）</td><td>工业TFT-LCD</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">分辨率</td><td>640x400 / 640x480</td><td>800x600</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">亮度</td><td>约200 cd/m2</td><td>350-450 cd/m2</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">寿命</td><td>约15,000小时</td><td>50,000+小时</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">功耗</td><td>25-30W</td><td>8-12W</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">接口</td><td>Honda MR-20M 20针</td><td>Honda 20针（直连）</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">供电</td><td>DC 24V</td><td>DC 24V（原装）</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;">安全性</td><td>10-15kV（高压危险）</td><td>低压直流</td></tr>
             </table>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>Installation Guide</h2>
-
-
-
-
-
-
-
+            <h2>安装指南</h2>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0;">
-
-
-
-
-
-
-
                 <div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;">
-
-
-
-
-
-
-
-                    <h3 style="margin-top:0;color:#2563eb;">1. Power Down</h3>
-
-
-
-
-
-
-
-                    <p>Turn off CNC main power. Remove CRT housing (4 screws). Disconnect Honda 20-pin signal cable and DC 24V power.</p>
-
-
-
-
-
-
-
+                    <h3 style="margin-top:0;color:#2563eb;">1. 断电</h3>
+                    <p>关闭CNC主电源。拆下CRT外壳（4颗螺丝）。断开Honda 20针信号线和DC 24V电源。</p>
                 </div>
-
-
-
-
-
-
-
                 <div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;">
-
-
-
-
-
-
-
-                    <h3 style="margin-top:0;color:#2563eb;">2. Install LCD</h3>
-
-
-
-
-
-
-
-                    <p>Place LCD module into original CRT position. Holes align 100%. Secure with original screws. No drilling needed.</p>
-
-
-
-
-
-
-
+                    <h3 style="margin-top:0;color:#2563eb;">2. 安装LCD</h3>
+                    <p>将LCD模块放入原CRT位置。孔位100%对齐。用原螺丝固定，无需钻孔。</p>
                 </div>
-
-
-
-
-
-
-
                 <div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;">
-
-
-
-
-
-
-
-                    <h3 style="margin-top:0;color:#2563eb;">3. Connect</h3>
-
-
-
-
-
-
-
-                    <p>Plug Honda 20-pin cable into LCD. Connect DC 24V. Keyed connectors prevent incorrect insertion.</p>
-
-
-
-
-
-
-
+                    <h3 style="margin-top:0;color:#2563eb;">3. 连接</h3>
+                    <p>将Honda 20针线缆插入LCD。连接DC 24V。防呆接口防止插反。</p>
                 </div>
-
-
-
-
-
-
-
                 <div style="background:#f8f9fa;padding:1.2rem;border-radius:8px;border-left:4px solid #2563eb;">
-
-
-
-
-
-
-
-                    <h3 style="margin-top:0;color:#2563eb;">4. Power On</h3>
-
-
-
-
-
-
-
-                    <p>Restore power. LCD displays automatically. Adjust via OSD buttons. Total time: ~30 minutes.</p>
-
-
-
-
-
-
-
+                    <h3 style="margin-top:0;color:#2563eb;">4. 开机</h3>
+                    <p>恢复供电。LCD自动显示画面。通过OSD按键调节。总时长：约30分钟。</p>
                 </div>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <h2>Frequently Asked Questions</h2>
-
-
-
-
-
-
-
+            <h2>常见问题</h2>
             <div style="margin:1.5rem 0;">
-
-
-
-
-
-
-
                 <div style="margin-bottom:1rem;padding:1rem;background:#f8fafc;border-radius:8px;">
-
-
-
-
-
-
-
-                    <strong>Q: How do I identify which A61L model I have?</strong><br>
-
-
-
-
-
-
-
-                    A: Check the label on the back or side of your CRT monitor. The model number is printed as "A61L-0001-XXXX". You can also cross-reference your FANUC CNC system model against our <a href="/zh/compatibility-matrix.html">compatibility matrix</a>.
-
-
-
-
-
-
-
+                    <strong>问：如何识别我的A61L型号？</strong><br>
+                    答：查看CRT显示器背面或侧面的标签。型号印为"A61L-0001-XXXX"。您也可以将您的FANUC CNC系统型号与我们的<a href="/zh/compatibility-matrix.html">兼容矩阵</a>进行对照。
                 </div>
-
-
-
-
-
-
-
                 <div style="margin-bottom:1rem;padding:1rem;background:#f8fafc;border-radius:8px;">
-
-
-
-
-
-
-
-                    <strong>Q: Can I upgrade a color CRT to LCD?</strong><br>
-
-
-
-
-
-
-
-                    A: Yes. Models 0074, 0094, 0096, and 0097 are color CRTs (14-inch). They are replaced with 12.1-inch color TFT-LCD modules. Same Honda 20-pin interface, same DC 24V power.
-
-
-
-
-
-
-
+                    <strong>问：彩色CRT可以升级为LCD吗？</strong><br>
+                    答：可以。型号0074、0094、0096和0097是彩色CRT（14寸）。它们替换为12.1寸彩色TFT-LCD模块。相同Honda 20针接口，相同DC 24V供电。
                 </div>
-
-
-
-
-
-
-
                 <div style="margin-bottom:1rem;padding:1rem;background:#f8fafc;border-radius:8px;">
-
-
-
-
-
-
-
-                    <strong>Q: What if my model isn't listed?</strong><br>
-
-
-
-
-
-
-
-                    A: Contact us with your CRT model number and a photo of the label. We offer custom solutions for non-standard models including KTV custom industrial displays.
-
-
-
-
-
-
-
+                    <strong>问：如果我的型号未列出怎么办？</strong><br>
+                    答：请联系我们并提供您的CRT型号和标签照片。我们为非标型号提供定制方案，包括KTV定制工业显示器。
                 </div>
-
-
-
-
-
-
-
                 <div style="margin-bottom:1rem;padding:1rem;background:#f8fafc;border-radius:8px;">
-
-
-
-
-
-
-
-                    <strong>Q: Do you ship internationally?</strong><br>
-
-
-
-
-
-
-
-                    A: Yes. Worldwide shipping via DHL/FedEx. Free shipping. Delivery to US/EU: 3-7 business days. Ships within 24 hours of order.
-
-
-
-
-
-
-
+                    <strong>问：是否支持国际运输？</strong><br>
+                    答：支持。通过DHL/FedEx全球发货，免运费。发往美国/欧洲：3-7个工作日。下单后24小时内发货。
                 </div>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div style="text-align:center;padding:3rem 1rem;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;margin:2rem 0;">
-
-
-
-
-
-
-
-                <h2 style="color:#fff;margin:0 0 0.75rem 0;">Need help finding your FANUC model?</h2>
-
-
-
-
-
-
-
-                <p style="opacity:0.9;margin:0 0 1.5rem 0;">We've upgraded 500+ FANUC machines worldwide. Reply within 24 hours.</p>
-
-
-
-
-
-
-
-                <a href="/zh/contact.html" style="display:inline-block;padding:14px 36px;background:#fff;color:#667eea;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem;">Get a Quote &rarr;</a>
-
-
-
-
-
-
-
+                <h2 style="color:#fff;margin:0 0 0.75rem 0;">需要帮助查找您的FANUC型号？</h2>
+                <p style="opacity:0.9;margin:0 0 1.5rem 0;">我们已为全球500+台FANUC机床完成升级。24小时内回复。</p>
+                <a href="/zh/contact.html" style="display:inline-block;padding:14px 36px;background:#fff;color:#667eea;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem;">获取报价 &rarr;</a>
                 <p style="margin-top:1rem;font-size:0.85rem;opacity:0.8;">info@cncdisplay.com | <a href="https://wa.me/8613686889647" style="color:#fff;">WhatsApp</a></p>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
         </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="related-products" style="background:#f8fafc;padding:1.5rem;border-radius:8px;margin:2rem 0;border:1px solid #e2e8f0;">
-
-
-
-
-
-
-
-            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">&#x1f4da; Related Resources</p>
-
-
-
-
-
-
-
+            <p style="font-weight:bold;color:#1e40af;margin:0 0 0.75rem 0;">&#x1f4da; 相关资源</p>
             <ul style="margin:0;padding-left:1.2rem;">
-
-
-
-
-
-
-
-                <li><a href="/zh/brands/FANUC.html">All FANUC Display Solutions</a></li>
-
-
-
-
-
-
-
-                <li><a href="/zh/compatibility-matrix.html">95+ Model Compatibility Matrix</a></li>
-
-
-
-
-
-
-
-                <li><a href="/zh/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html">HAAS VF Series CRT to LCD Guide</a></li>
-
-
-
-
-
-
-
-                <li><a href="/zh/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Detailed Guide</a></li>
-
-
-
-
-
-
-
+                <li><a href="/zh/brands/FANUC.html">全部FANUC显示解决方案</a></li>
+                <li><a href="/zh/compatibility-matrix.html">95+型号兼容矩阵</a></li>
+                <li><a href="/zh/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html">HAAS VF系列CRT转LCD指南</a></li>
+                <li><a href="/zh/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT转LCD详细指南</a></li>
             </ul>
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
     <div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
-
-
-
-
-
-
-
-        <h3 style="margin-top:0;color:#1e40af;">Related Articles</h3>
-
-
-
-
-
-
-
+        <h3 style="margin-top:0;color:#1e40af;">相关文章</h3>
         <ul style="margin-bottom:0;">
-
-
-
-
-
-
-
-            <li><a href="/zh/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC CRT to LCD Upgrade Guide — Step by Step</a></li>
-
-
-
-
-
-
-
-            <li><a href="/zh/posts/fanuc-display-compatibility-complete-guide.html">FANUC CNC Display Complete Compatibility Guide</a></li>
-
-
-
-
-
-
-
-            <li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html">FANUC A61L-0001-0093 9-inch CRT to LCD Complete Replacement Guide</a></li>
-
-
-
-
-
-
-
-            <li><a href="/zh/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide — Product & Installation Guide</a></li>
-
-
-
-
-
-
-
+            <li><a href="/zh/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html">FANUC CRT转LCD升级指南 — 逐步操作</a></li>
+            <li><a href="/zh/posts/fanuc-display-compatibility-complete-guide.html">FANUC CNC显示器完整兼容指南</a></li>
+            <li><a href="/zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html">FANUC A61L-0001-0093 9寸CRT转LCD完整替换指南</a></li>
+            <li><a href="/zh/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT转LCD升级完整指南 — 产品与安装</a></li>
         </ul>
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
-
-
-
-
-
-
-
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
                 <span class="footer-logo">Kongto Technology 江图科技</span>
-                <p>Industrial Video Display Solutions — CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays</p>
+                <p>工业视频显示解决方案 — CNC CRT转LCD改造、视频信号转换器、定制工业显示器</p>
             </div>
             <div class="footer-links">
-                <a href="/zh/posts/">📄 Articles</a>
+                <a href="/zh/posts/">📄 文章</a>
                 <a href="/zh/brands/FANUC.html">FANUC</a>
-                <a href="/zh/brands/Mitsubishi.html">Mitsubishi</a>
-                <a href="/zh/brands/Siemens.html">Siemens</a>
-                <a href="/zh/docs/">Downloads</a>
-                <a href="/zh/about.html">About Us</a>
+                <a href="/zh/brands/Mitsubishi.html">三菱</a>
+                <a href="/zh/brands/Siemens.html">西门子</a>
+                <a href="/zh/docs/">下载</a>
+                <a href="/zh/about.html">关于我们</a>
             </div>
-            <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | sales@cncdisplay.com</p>
-            <p class="original-statement" style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original, including text, images, technical specifications, and solutions. Protected under copyright law. Unauthorized reproduction or copying prohibited. Written by szkongto01.</p>
+            <p class="footer-copy">© 2013-2026 Kongto Technology | 深圳, 广东, 中国 | +86-13686889647 | sales@cncdisplay.com</p>
+            <p class="original-statement" style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本站所有内容均为原创，包括文字、图片、技术规格及解决方案。受版权法保护，禁止未经授权转载或复制。作者：szkongto01。</p>
         </div>
-    
             <div class="footer-links">
-                <a href="/zh/glossary.html">Glossary</a>
-                <a href="/zh/crt-dead-symptoms.html">CRT Symptoms</a>
-                <a href="/zh/comparison-tool.html">Compare</a>
-                <a href="/zh/comparison-kongto-vs-competitors.html">Kongto vs Others</a>
-                <a href="/zh/compatibility-matrix.html">Compatibility</a>
-                <a href="/zh/privacy.html">Privacy</a>
-                <a href="/zh/terms.html">Terms</a>
-                <a href="/zh/sitemap.xml">Sitemap</a>
+                <a href="/zh/glossary.html">术语表</a>
+                <a href="/zh/crt-dead-symptoms.html">CRT故障症状</a>
+                <a href="/zh/comparison-tool.html">对比</a>
+                <a href="/zh/comparison-kongto-vs-competitors.html">Kongto对比其他</a>
+                <a href="/zh/compatibility-matrix.html">兼容查询</a>
+                <a href="/zh/privacy.html">隐私</a>
+                <a href="/zh/terms.html">条款</a>
+                <a href="/zh/sitemap.xml">站点地图</a>
             </div>
     </footer>
-
-
-
-
-
-
-
 </body>
-
-
-
-
-
-
-
 </html>
