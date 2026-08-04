@@ -157,6 +157,49 @@ CLUSTERS = [
              'Mitsubishi BM09DF E60 LCD Replacement'),
         ],
     },
+    {
+        'name': 'HAAS',
+        'pillar': '/products/haas-9-pin-monochrome-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260508_Haas_CRT_LCD_Case.html',
+             'HAAS VF series CRT to LCD replacement'),
+            ('posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html',
+             'HAAS VF monitor troubleshooting & LCD upgrade guide'),
+        ],
+        'related_title': 'HAAS — Related Resources',
+        'related': [
+            ('/posts/article_20260508_Haas_CRT_LCD_Case.html',
+             'HAAS CRT to LCD Case Study'),
+            ('/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html',
+             'HAAS VF Monitor Troubleshooting & Upgrade Guide'),
+        ],
+    },
+    {
+        'name': 'MDT1283B',
+        'pillar': '/products/mazak-mdt1283b-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260507_MDT1283B_LCD_Replacement.html',
+             'MAZAK MDT1283B LCD replacement'),
+        ],
+        'related_title': 'MAZAK MDT1283B — Related Resources',
+        'related': [
+            ('/posts/article_20260507_MDT1283B_LCD_Replacement.html',
+             'MAZAK MDT1283B LCD Replacement'),
+        ],
+    },
+    {
+        'name': 'OKUMA',
+        'pillar': '/products/okuma-osp5000-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260508_Okuma_5000_5020_CRT_LCD.html',
+             'OKUMA OSP5000 LCD replacement'),
+        ],
+        'related_title': 'OKUMA OSP — Related Resources',
+        'related': [
+            ('/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html',
+             'OKUMA OSP5000/5020 CRT to LCD'),
+        ],
+    },
 ]
 
 for c in CLUSTERS:
