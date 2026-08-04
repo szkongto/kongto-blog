@@ -56,6 +56,9 @@ for ln in lines:
     sm = MODEL_RE.search(src)
     dm = MODEL_RE.search(dst)
     if sm and dm and model_key(sm.group(0)) != model_key(dm.group(0)):
+        # 已知纠错白名单: 错误型号 → 正确型号(刻意修正, 非错配)
+        if (model_key(sm.group(0)), model_key(dm.group(0))) in (('3998', '3988'),):
+            continue
         hard.append((ln, f'跨型号错配: {sm.group(0)} → {dm.group(0)}'))
 
 if hard:
