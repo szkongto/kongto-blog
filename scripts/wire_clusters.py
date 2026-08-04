@@ -77,6 +77,86 @@ CLUSTERS = [
              'MAZAK DR5614 LCD CNC CRT Replacement'),
         ],
     },
+    {
+        'name': 'FANUC0074',
+        'pillar': '/products/fanuc-a61l-0001-0074-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
+             'FANUC A61L-0001-0074 LCD replacement'),
+        ],
+        'related_title': 'FANUC A61L-0001-0074 — Related Resources',
+        'related': [
+            ('/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
+             'FANUC A61L-0001-0074 LCD Retrofit'),
+        ],
+    },
+    {
+        'name': 'FANUC0086',
+        'pillar': '/products/fanuc-a61l-0001-0086-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260503_FANUC_A61L_0001_0086_LCD.html',
+             'FANUC A61L-0001-0086 LCD replacement'),
+        ],
+        'related_title': 'FANUC A61L-0001-0086 — Related Resources',
+        'related': [
+            ('/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html',
+             'FANUC A61L-0001-0086 LCD Retrofit'),
+        ],
+    },
+    {
+        'name': 'FANUC0097',
+        'pillar': '/products/fanuc-a61l-0001-0097-lcd-upgrade.html',
+        'sats': [
+            ('posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
+             'FANUC A61L-0001-0097 LCD replacement'),
+        ],
+        'related_title': 'FANUC A61L-0001-0097 — Related Resources',
+        'related': [
+            ('/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
+             'FANUC A61L-0001-0097 LCD CNC CRT Replacement'),
+        ],
+    },
+    {
+        'name': 'BM09DF',
+        'pillar': '/products/mitsubishi-bm09df-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
+             'Mitsubishi BM09DF LCD replacement'),
+        ],
+        'related_title': 'Mitsubishi BM09DF — Related Resources',
+        'related': [
+            ('/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
+             'Mitsubishi BM09DF E60 TFT Replacement'),
+        ],
+    },
+    {
+        'name': 'C5470NS',
+        'pillar': '/products/mazak-c5470ns-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260508_Mazak_C5470NS.html',
+             'MAZAK C5470NS LCD replacement'),
+        ],
+        'related_title': 'MAZAK C5470NS — Related Resources',
+        'related': [
+            ('/posts/article_20260508_Mazak_C5470NS.html',
+             'MAZAK C5470NS CRT to LCD Upgrade'),
+        ],
+    },
+    {
+        'name': 'BM09DF2',
+        'pillar': '/products/mitsubishi-bm09df-lcd-upgrade.html',
+        'sats': [
+            ('posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html',
+             'Mitsubishi BM09DF E60 LCD replacement'),
+        ],
+        'related_title': 'Mitsubishi BM09DF — Related Resources',
+        'related': [
+            ('/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
+             'Mitsubishi BM09DF E60 TFT Replacement'),
+            ('/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html',
+             'Mitsubishi BM09DF E60 LCD Replacement'),
+        ],
+    },
 ]
 
 for c in CLUSTERS:
@@ -96,16 +176,17 @@ for c in CLUSTERS:
         else:
             print('FAIL 无header:', sat)
     # 支柱 → 卫星
-    if not os.path.isfile(c['pillar']):
+    pf = c['pillar'].lstrip('/')
+    if not os.path.isfile(pf):
         print('MISS pillar:', c['pillar'])
         continue
-    hp = open(c['pillar'], encoding='utf-8', errors='ignore').read()
+    hp = open(pf, encoding='utf-8', errors='ignore').read()
     if 'id="related-resources"' in hp:
         print('SKIP 已有Related:', c['pillar'])
         continue
     if '</main>' in hp:
         hp = hp.replace('</main>', related_block(c['related_title'], c['related']) + '</main>', 1)
-        open(c['pillar'], 'w', encoding='utf-8', newline='\n').write(hp)
+        open(pf, 'w', encoding='utf-8', newline='\n').write(hp)
         print('Related:', c['pillar'])
     else:
         print('FAIL 无</main>:', c['pillar'])
