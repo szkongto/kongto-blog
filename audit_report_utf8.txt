@@ -1,0 +1,46 @@
+共 285 条，疑似异常 11 条
+
+[目标=首页]
+  /baidu_verify_codeva-MOcuLxbSCp.html /index.html 301
+  候选落地页: []
+
+[型号错配:A61L-0001-0093→0093]
+  /posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
+  候选落地页: ['/docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf']
+
+[目标=首页]
+  /sitemap.html /index.html 301
+  候选落地页: []
+
+[目标不存在:/posts/Video_Signal_Converter_Series_CGA]
+  /posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html /posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+  候选落地页: []
+
+[型号错配:A61L-0001-0093→0093]
+  /posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
+  候选落地页: ['/docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf']
+
+[型号错配:0093→A61L-0001-0093]
+  /docs/FANUC_A61L-0093_CRT显示器故障解析与LCD改造方案.pdf /docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf 301
+  候选落地页: ['/zh/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html', '/zh/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html', '/zh/posts/fanuc-a61l-0001-0093-display-faq-zh.html']
+
+[目标不存在:/posts/Video_Signal_Converter_Series_CGA]
+  /posts/article_20260501_工业视频信号转换器系列_CGA_EGA转VGA_RGB转VGA解决方案.html /posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html 301
+  候选落地页: []
+
+[目标不存在:/docs/]
+  /en/docs/ /docs/ 301
+  候选落地页: []
+
+[源含型号→品牌页]
+  /products/fanuc-a61l-0001-0077-lcd-upgrade.html /brands/FANUC.html 301
+  候选落地页: []
+
+[源含型号→品牌页]
+  /products/fanuc-a61l-0001-0078-lcd-upgrade.html /brands/FANUC.html 301
+  候选落地页: []
+
+[源含型号→品牌页]
+  /products/fanuc-a61l-0001-0087-lcd-upgrade.html /brands/FANUC.html 301
+  候选落地页: []
+

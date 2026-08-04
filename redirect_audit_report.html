@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNC Display 全站重定向审计报告 | 2026-08-05</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+  h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 8px; }
+  h2 { font-size: 22px; color: #16213e; margin: 30px 0 15px; border-bottom: 2px solid #e8ecf1; padding-bottom: 8px; }
+  h3 { font-size: 17px; color: #16213e; margin: 20px 0 10px; }
+  .subtitle { color: #6b7280; font-size: 14px; margin-bottom: 20px; }
+
+  /* Summary cards */
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+  .card { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); text-align: center; }
+  .card .num { font-size: 32px; font-weight: 700; line-height: 1.2; }
+  .card .label { font-size: 12px; color: #6b7280; margin-top: 4px; }
+  .card.critical .num { color: #dc2626; }
+  .card.high .num { color: #ea580c; }
+  .card.medium .num { color: #ca8a04; }
+  .card.ok .num { color: #16a34a; }
+
+  /* Severity badges */
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge-critical { background: #fee2e2; color: #dc2626; }
+  .badge-high { background: #ffedd5; color: #ea580c; }
+  .badge-medium { background: #fef9c3; color: #ca8a04; }
+  .badge-ok { background: #dcfce7; color: #16a34a; }
+  .badge-fixed { background: #dbeafe; color: #2563eb; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  th { background: #f1f5f9; padding: 10px 12px; text-align: left; font-weight: 600; color: #475569; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 12px; border-top: 1px solid #e8ecf1; vertical-align: top; }
+  tr:hover { background: #f8fafc; }
+  .url-cell { word-break: break-all; font-family: "SF Mono", Monaco, monospace; font-size: 12px; color: #475569; }
+  .arrow { color: #dc2626; font-weight: bold; }
+  .arrow-ok { color: #16a34a; font-weight: bold; }
+
+  /* Alert boxes */
+  .alert { border-radius: 8px; padding: 14px 18px; margin: 15px 0; font-size: 14px; }
+  .alert-danger { background: #fef2f2; border-left: 4px solid #dc2626; }
+  .alert-warning { background: #fffbeb; border-left: 4px solid #f59e0b; }
+  .alert-info { background: #eff6ff; border-left: 4px solid #3b82f6; }
+  .alert-success { background: #f0fdf4; border-left: 4px solid #16a34a; }
+
+  /* Section anchors */
+  .section { margin: 25px 0; }
+  .section-title { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+
+  /* Stats bar */
+  .stats-bar { display: flex; gap: 20px; margin: 15px 0; flex-wrap: wrap; }
+  .stat-item { background: #fff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .stat-item .value { font-size: 24px; font-weight: 700; }
+  .stat-item .desc { font-size: 12px; color: #6b7280; }
+
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8ecf1; color: #6b7280; font-size: 12px; text-align: center; }
+  .nowrap { white-space: nowrap; }
+  .highlight-red { background: #fef2f2; }
+  .highlight-green { background: #f0fdf4; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>CNC Display 全站重定向审计报告</h1>
+<p class="subtitle">审计日期：2026-08-05 | 审计范围：_redirects 全部 292 条规则 | 审计人：独立审计（非 VS）</p>
+
+<!-- Executive Summary -->
+<div class="alert alert-danger">
+  <strong>核心结论：</strong>全站 292 条重定向规则中，<strong>127 条存在问题（43.5%）</strong>。
+  其中 VS 已修复 0093 系列（15 条，经 curl 活站验证确认生效），但仍有
+  <strong>至少 37 条规则正在持续丢失关键词排名权重</strong>——这些规则将原来有排名内容的旧 URL
+  301 重定向到首页或品牌页，而不是对应的实际内容页面。这与 0093 事故是同一类错误，只是范围更广。
+</div>
+
+<div class="summary-grid">
+  <div class="card critical"><div class="num">37</div><div class="label">持续丢权重的规则<br>(首页22+品牌8+错配2+404链5)</div></div>
+  <div class="card high"><div class="num">5</div><div class="label">大小写404<br>(Linux上打不开)</div></div>
+  <div class="card ok"><div class="num">15</div><div class="label">VS已修复0093<br>(curl验证生效)</div></div>
+  <div class="card medium"><div class="num">70+</div><div class="label">可接受的规则<br>(品牌规范化/垃圾URL等)</div></div>
+</div>
+
+<!-- VS Fix Verification -->
+<h2>一、VS 声称修复的验证结果</h2>
+
+<div class="alert alert-success">
+  <strong>0093 系列 ✅ 已验证修复并部署生效</strong><br>
+  通过 curl 活站实测（HTTP 状态码 + 重定向目标 + 最终落地页），确认 0093 相关的 15 条重定向
+  全部指向正确的 0093 型号页面，最终返回 HTTP 200。
+</div>
+
+<table>
+  <thead>
+    <tr><th>测试URL</th><th>重定向目标</th><th>最终状态</th><th>判定</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="url-cell">/posts/article_20260501_..._0093_LCD.html</td>
+      <td class="url-cell">/posts/article_20260503_..._0093_LCD.html</td>
+      <td><span class="badge badge-ok">200 OK</span></td>
+      <td><span class="badge badge-fixed">已修复</span></td>
+    </tr>
+    <tr>
+      <td class="url-cell">/posts/faq_20260501_..._0093.html</td>
+      <td class="url-cell">/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html</td>
+      <td><span class="badge badge-ok">200 OK</span></td>
+      <td><span class="badge badge-fixed">已修复</span></td>
+    </tr>
+    <tr>
+      <td class="url-cell">/posts/article_20260501_..._0093_LCD%URL编码版.html</td>
+      <td class="url-cell">/posts/article_20260503_..._0093_LCD.html</td>
+      <td><span class="badge badge-ok">200 OK</span></td>
+      <td><span class="badge badge-fixed">已修复</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert alert-warning">
+  <strong>但 VS 声称修了 DR5614 和 0097，实际仍有遗漏：</strong><br>
+  DR5614 的 Line 23（/posts/mazak-dr5614-lcd-replacement.html）仍然 301 到 /products/mazak-c5470ns-lcd-upgrade.html
+  而不是 /products/mazak-dr5614-lcd-upgrade.html（后者存在且有 30KB 内容）。
+</div>
+
+<!-- Remaining Issues -->
+<h2>二、VS 未修复的问题（按严重程度排列）</h2>
+
+<!-- Category 1: Homepage redirects with real targets -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-critical">P0 严重</span>
+    <h3>22 条旧 URL 被丢到首页，但实际内容页面存在</h3>
+  </div>
+  <p>这些旧 URL 原来有真实内容（文章/FAQ/产品对比），改版后被 301 到 /index.html 或 https://cncdisplay.com/，
+  导致链接权重全部灌入首页，谷歌失去关键词匹配落地页 → 排名清零。<strong>每条都有对应的实际内容页面存在。</strong></p>
+
+  <table>
+    <thead>
+      <tr><th>Line</th><th>旧 URL（被丢到首页）</th><th>当前目标</th><th>正确目标（已验证存在）</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-red"><td>83</td><td class="url-cell">article_20260526_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html</span></td></tr>
+      <tr class="highlight-red"><td>84</td><td class="url-cell">article_20260615_Siemens_Display_Upgrade_Cost_ROI_Analysis.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ siemens-display-upgrade-cost-roi-analysis.html</span></td></tr>
+      <tr class="highlight-red"><td>85</td><td class="url-cell">comparison_..._工业视频信号转换器选型指南.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ comparison_20260501_video_converter_buying_guide.html</span></td></tr>
+      <tr class="highlight-red"><td>86</td><td class="url-cell">faq_..._FANUC_0i系统显示器常见问题.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ fanuc-0i-display-faq-solutions-zh.html</span></td></tr>
+      <tr class="highlight-red"><td>87</td><td class="url-cell">faq_..._FANUC_0i系统显示异常排查大全.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ fanuc-0i-display-faq-zh.html</span></td></tr>
+      <tr class="highlight-red"><td>90</td><td class="url-cell">faq_..._数控机床显示器更换TOP10.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ faq_20260501_CNC_display_replacement_FAQ.html</span></td></tr>
+      <tr class="highlight-red"><td>103</td><td class="url-cell">article_..._工业数控设备显示器故障诊断与维修全攻略.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Industrial_CNC_Display_Troubleshooting_Repair_Guide.html</span></td></tr>
+      <tr class="highlight-red"><td>104</td><td class="url-cell">article_..._工业视频信号转换器在CNC数控系统中的应用.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html</span></td></tr>
+      <tr class="highlight-red"><td>105</td><td class="url-cell">article_..._工业视频信号转换器系列_CGA_EGA转VGA.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html</span></td></tr>
+      <tr class="highlight-red"><td>106</td><td class="url-cell">article_..._工业视频显示在智能工厂中的关键角色.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Industrial_Video_Display_Smart_Factory_Kongto_Solution.html</span></td></tr>
+      <tr class="highlight-red"><td>107</td><td class="url-cell">article_..._江图科技工业视频显示产品目录.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Kongto_Technology_Industrial_Video_Display_Product_Catalog.html</span></td></tr>
+      <tr class="highlight-red"><td>127</td><td class="url-cell">gbs-8219-rgb-to-vga-converter.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260509_GBS-8219_RGB_to_VGA_converter.html</span></td></tr>
+      <tr class="highlight-red"><td>128</td><td class="url-cell">kt809-industrial-converter.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260509_KT809_industrial_converter.html</span></td></tr>
+      <tr class="highlight-red"><td>129</td><td class="url-cell">kt819-industrial-converter.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260509_KT819_industrial_converter.html</span></td></tr>
+      <tr class="highlight-red"><td>168</td><td class="url-cell">article_..._工业显示器RGBHV改造全攻略.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html</span></td></tr>
+      <tr class="highlight-red"><td>169</td><td class="url-cell">article_..._三菱BM09DF工业显示屏E60.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html</span></td></tr>
+      <tr class="highlight-red"><td>170</td><td class="url-cell">article_..._三菱FCUA-CT100工业显示器M500.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html</span></td></tr>
+      <tr class="highlight-red"><td>171</td><td class="url-cell">article_..._三菱MDT962B工业液晶显示器.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html</span></td></tr>
+      <tr class="highlight-red"><td>172</td><td class="url-cell">article_..._三菱MDT962B系列CRT升级LCD.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html</span></td></tr>
+      <tr class="highlight-red"><td>173</td><td class="url-cell">press_release_..._江图科技FANUC LCD升级.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html</span></td></tr>
+      <tr class="highlight-red"><td>174</td><td class="url-cell">social_..._数控显示器升级市场动态.html</td><td class="url-cell"><span class="arrow">→ cncdisplay.com</span></td><td class="url-cell"><span class="arrow-ok">→ Industrial_Display_Market_Trends_Brand_Comparison.html</span></td></tr>
+      <tr class="highlight-red"><td>122</td><td class="url-cell">custom-industrial-display-series-zh.html</td><td class="url-cell"><span class="arrow">→ /index.html</span></td><td class="url-cell"><span class="arrow-ok">→ custom_industrial_display_series.html</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 2: Brand redirects with real targets -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-high">P1 高危</span>
+    <h3>8 条旧 URL 被丢到品牌页，但实际文章页面存在</h3>
+  </div>
+  <p>这些 URL 的链接权重被灌入泛品牌页（/brands/FANUC.html），而非相关的具体文章页。品牌页关键词太泛，
+  无法承接原 URL 的长尾关键词排名。</p>
+
+  <table>
+    <thead>
+      <tr><th>Line</th><th>旧 URL</th><th>当前目标</th><th>正确目标（已验证存在）</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-red"><td>92</td><td class="url-cell">press_release_..._江图科技FANUC LCD升级.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html</span></td></tr>
+      <tr class="highlight-red"><td>101</td><td class="url-cell">article_..._FANUC数控显示器CRT升级LCD完整指南.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html</span></td></tr>
+      <tr class="highlight-red"><td>102</td><td class="url-cell">article_..._如何将FANUC_CRT改装为LCD_深圳江图.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html</span></td></tr>
+      <tr class="highlight-red"><td>120</td><td class="url-cell">comparison_..._FANUC_CRT维修_vs_LCD升级成本对比.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html</span></td></tr>
+      <tr class="highlight-red"><td>124</td><td class="url-cell">faq_..._FANUC_0i系统显示器常见问题与解决方案.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ fanuc-0i-display-faq-solutions-zh.html</span></td></tr>
+      <tr class="highlight-red"><td>234</td><td class="url-cell">article_..._FANUC显示器从CRT到LCD升级指南.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html</span></td></tr>
+      <tr class="highlight-red"><td>235</td><td class="url-cell">article_..._如何将FANUC_CRT改装为LCD_深圳中图.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html</span></td></tr>
+      <tr class="highlight-red"><td>239</td><td class="url-cell">comparison_..._FANUC_CRT显示维护_vs_LCD升级模组对比.html</td><td class="url-cell"><span class="arrow">→ /brands/FANUC.html</span></td><td class="url-cell"><span class="arrow-ok">→ comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 3: Cross-brand/model mismatch -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-critical">P0 严重</span>
+    <h3>2 条跨品牌/跨型号错配</h3>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Line</th><th>旧 URL</th><th>当前错误目标</th><th>正确目标</th><th>验证</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-red">
+        <td>109</td>
+        <td class="url-cell">article_20260506_Mitsubishi_BM09DF_Industrial_Display.html</td>
+        <td class="url-cell"><span class="arrow">→ article_20260503_FANUC_A61L_0001_0074_LCD.html</span><br><strong>三菱 → 发那科！跨品牌！</strong></td>
+        <td class="url-cell"><span class="arrow-ok">→ article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html (84KB)</span></td>
+        <td><span class="badge badge-ok">curl 确认</span></td>
+      </tr>
+      <tr class="highlight-red">
+        <td>23</td>
+        <td class="url-cell">mazak-dr5614-lcd-replacement.html</td>
+        <td class="url-cell"><span class="arrow">→ /products/mazak-c5470ns-lcd-upgrade.html</span><br>(DR5614 → C5470NS)</td>
+        <td class="url-cell"><span class="arrow-ok">→ /products/mazak-dr5614-lcd-upgrade.html (30KB)</span></td>
+        <td><span class="badge badge-ok">curl 确认</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 4: Case sensitivity 404s -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-high">P1 高危</span>
+    <h3>5 条大小写不匹配导致 GitHub Pages 上 404</h3>
+  </div>
+  <p>重定向目标文件名大小写与磁盘文件不一致。Windows 不区分大小写所以本地能打开，但 GitHub Pages
+  运行在 Linux 上（区分大小写），这些重定向实际导向 404 页面。</p>
+
+  <table>
+    <thead>
+      <tr><th>Line</th><th>重定向目标（错误大小写）</th><th>磁盘实际文件名</th><th>影响</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-red"><td>76</td><td class="url-cell">..._GBS-8219_RGB_to_VGA_<strong>Converter</strong>.html</td><td class="url-cell">..._GBS-8219_RGB_to_VGA_<strong>converter</strong>.html</td><td>Linux 404</td></tr>
+      <tr class="highlight-red"><td>77</td><td class="url-cell">..._GBS_8219_RGB_to_VGA_<strong>Converter</strong>.html</td><td class="url-cell">同上</td><td>Linux 404</td></tr>
+      <tr class="highlight-red"><td>78</td><td class="url-cell">..._KT809_<strong>Industrial_Converter</strong>.html</td><td class="url-cell">..._KT809_<strong>industrial_converter</strong>.html</td><td>Linux 404</td></tr>
+      <tr class="highlight-red"><td>79</td><td class="url-cell">..._KT819_<strong>Industrial_Converter</strong>.html</td><td class="url-cell">..._KT819_<strong>industrial_converter</strong>.html</td><td>Linux 404</td></tr>
+      <tr class="highlight-red"><td>219</td><td class="url-cell">..._KT809_<strong>Industrial_Converter</strong>.html</td><td class="url-cell">同上</td><td>Linux 404</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 5: Redirect chains / missing targets -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-medium">P2 中等</span>
+    <h3>重定向链 / 目标文件不存在</h3>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Line</th><th>问题</th><th>详情</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>89,126,159,163</td><td>重定向链（2跳）</td><td>→ faq_20260501_CNC_Display_Replacement_FAQ_TOP10_CN.html（不存在）→ 再 301 到 faq_20260501_CNC_display_replacement_FAQ.html。多一跳重定向，权重传递效率降低。</td></tr>
+      <tr><td>315</td><td>目标404</td><td>→ article_20260522_Mazak_DR5614_LCD_CRT.html（根目录不存在，只有 zh/ 版本）</td></tr>
+      <tr><td>25,146</td><td>目标404</td><td>→ products/okuma-osp-crt-lcd-upgrade.html（不存在）。实际有 okuma-osp5000-lcd-upgrade.html / okuma-osp5020-lcd-upgrade.html / okuma-osp7000-crt-lcd-upgrade.html</td></tr>
+      <tr><td>8</td><td>目标404</td><td>→ /images/wechat-qr.jpg（文件不存在）</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Duplicate rules -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-medium">P2 中等</span>
+    <h3>重复规则（同一源 URL 出现多次，Worker 只认第一条）</h3>
+  </div>
+  <p>_redirects 中同一源 URL 出现在多行，目标不同。Worker 按顺序匹配第一条命中即返回，后续规则成为死代码。
+  这意味着部分"看起来已修复"的行实际从未生效。</p>
+
+  <table>
+    <thead><tr><th>源 URL</th><th>首次出现（生效）</th><th>后续出现（死代码）</th></tr></thead>
+    <tbody>
+      <tr><td class="url-cell">faq_..._FANUC_0i系统显示器常见问题与解决方案.html</td><td>Line 86: → /index.html <span class="badge badge-critical">丢权重</span></td><td>Line 124: → /brands/FANUC.html, Line 159: → faq_..._TOP10_CN.html</td></tr>
+      <tr><td class="url-cell">faq_..._数控机床显示器更换TOP10.html</td><td>Line 90: → /index.html <span class="badge badge-critical">丢权重</span></td><td>Line 126: → faq_..._TOP10_CN.html, Line 163: → faq_..._TOP10_CN.html</td></tr>
+      <tr><td class="url-cell">article_..._FANUC_A61L_0001_0093_LCD液晶显示器...焅发.html</td><td>Line 29: → 0093文章 <span class="badge badge-ok">正确</span></td><td>Line 47: 同（重复但正确）</td></tr>
+      <tr><td class="url-cell">comparison_..._FANUC_CRT显示器维修_vs_LCD.html</td><td>Line 120: → /brands/FANUC.html <span class="badge badge-high">丢权重</span></td><td>Line 220: → /index.html</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Acceptable redirects -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-ok">无需处理</span>
+    <h3>可接受的重定向（70+ 条）</h3>
+  </div>
+  <p>以下类型的重定向是合理的，不需要修改：</p>
+  <ul style="margin-left: 20px; color: #475569;">
+    <li><strong>品牌页扩展名规范化</strong>（Line 180-191）：/brands/FANUC → /brands/FANUC.html — 合理</li>
+    <li><strong>无单独产品页的型号 → 品牌页</strong>（Line 286-300）：fanuc-a61l-0001-0077/0078/0087/0136 等型号没有独立产品页 → 品牌页是最佳可用目标</li>
+    <li><strong>垃圾 URL → 首页</strong>：/weixin:/dl/addcontact、/baidu_verify_codeva 等 — 无 SEO 价值</li>
+    <li><strong>已删除的 PDF/PPTX/DOCX → 首页</strong>：文档已删除，首页兜底可接受</li>
+    <li><strong>Siemens 3998 → 3988</strong>：6FC3998 是 6FC3988 的旧编号，同型号不同写法 — 正确</li>
+    <li><strong>CD1283 → MDT1283B</strong>：Mazak CD1283-D1M 和 MDT-1283B 是同一显示器的不同编号 — 合理</li>
+    <li><strong>6FC5354 → 6FC3988</strong>：6FC5354 是西门子控制器编号，使用的显示器是 6FC3988 — 合理</li>
+  </ul>
+</div>
+
+<!-- Recovery Strategy -->
+<h2>三、排名恢复行动方案</h2>
+
+<div class="alert alert-info">
+  <strong>重要前提：</strong>排名恢复不会立即生效。谷歌需要重新爬取旧 URL 的新 301 目标、重新收录，
+  通常需要 <strong>2-8 周</strong>。但修复越早，恢复越快——每多一天错误重定向在线，就多一天权重流失。
+</div>
+
+<h3>第一阶段：紧急修复（本周内）</h3>
+<table>
+  <thead><tr><th>优先级</th><th>操作</th><th>影响条数</th><th>预期效果</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge badge-critical">P0</span></td><td>修复 22 条→首页的重定向，改为指向实际内容页</td><td>22</td><td>恢复三菱/西门子/FANUC FAQ/转换器等关键词的落地页</td></tr>
+    <tr><td><span class="badge badge-critical">P0</span></td><td>修复 BM09DF → FANUC 0074 跨品牌错配</td><td>1</td><td>恢复三菱 BM09DF 关键词排名</td></tr>
+    <tr><td><span class="badge badge-critical">P0</span></td><td>修复 DR5614 → C5470NS 型号错配</td><td>1</td><td>恢复 Mazak DR5614 关键词排名</td></tr>
+    <tr><td><span class="badge badge-high">P1</span></td><td>修复 8 条→品牌页的重定向，改为指向实际文章页</td><td>8</td><td>恢复 FANUC CRT/LCD 对比、FAQ 等长尾词排名</td></tr>
+    <tr><td><span class="badge badge-high">P1</span></td><td>修复 5 条大小写 404</td><td>5</td><td>消除 GBT/KT 转换器文章的 404 错误</td></tr>
+    <tr><td><span class="badge badge-medium">P2</span></td><td>修复重定向链和目标 404</td><td>4+</td><td>消除多余的 301 跳转，提高权重传递效率</td></tr>
+    <tr><td><span class="badge badge-medium">P2</span></td><td>清理重复规则，确保正确目标在前</td><td>4+</td><td>确保"已修复"的行实际生效</td></tr>
+  </tbody>
+</table>
+
+<h3>第二阶段：验证与提交（修复后 1-3 天）</h3>
+<ol style="margin-left: 20px; color: #475569;">
+  <li><strong>curl 活站逐条验证</strong>：对修复的每条规则，curl 确认 301 → 200 链路完整</li>
+  <li><strong>Google Search Console 提交</strong>：在 GSC 的 URL 检查工具中，手动提交关键旧 URL 请求重新爬取</li>
+  <li><strong>GSC 覆盖率报告</strong>：检查"已排除"和"错误"标签下是否有这些旧 URL 的记录</li>
+  <li><strong>sitemap 更新</strong>：确保所有正确目标页面都在 sitemap 中</li>
+</ol>
+
+<h3>第三阶段：中期恢复（2-8 周）</h3>
+<ol style="margin-left: 20px; color: #475569;">
+  <li><strong>每周检查 GSC</strong>：观察修复后的 URL 是否被重新爬取和收录</li>
+  <li><strong>监控关键词排名</strong>：用 GSC 性能报告跟踪 0093、BM09DF、DR5614、转换器等关键词的展示次数和排名变化</li>
+  <li><strong>内链优化</strong>：在首页和品牌页添加指向这些恢复页面的内部链接，加速权重传递</li>
+  <li><strong>外链建设</strong>：如果有外部链接指向旧 URL，联系对方更新为新 URL（301 会传权重但直接链接更好）</li>
+</ol>
+
+<h3>第四阶段：长期防护</h3>
+<ol style="margin-left: 20px; color: #475569;">
+  <li><strong>建立重定向审计 SOP</strong>：每次修改 _redirects 后，运行审计脚本验证：(a) 目标文件存在 (b) 型号匹配 (c) 无→首页/品牌页的丢权重规则</li>
+  <li><strong>部署前验证门禁</strong>：在 GitHub Actions 的 deploy-worker job 中加入自动检查：如果新规则包含→/index.html 或→/brands/，报警阻止部署</li>
+  <li><strong>定期全站审计</strong>：每月运行一次 scripts/audit_full.py 和 scripts/deep_audit.py</li>
+</ol>
+
+<div class="alert alert-warning">
+  <strong>诚实边界：</strong>本次审计覆盖了 _redirects 中的全部 292 条规则，但以下方面未覆盖：
+  <ul style="margin: 8px 0 0 20px;">
+    <li>Google Search Console 中的实际排名数据（需要你登录 GSC 查看）</li>
+    <li>canonical 标签是否与重定向目标一致（可能有 canonical 冲突）</li>
+    <li>hreflang 标签是否正确指向新 URL</li>
+    <li>站内链接是否还有指向旧 URL 的（需要全站扫描）</li>
+    <li>sitemap.xml 是否包含所有正确目标页面</li>
+  </ul>
+  建议后续补充这些方面的检查。
+</div>
+
+<div class="footer">
+  审计工具：scripts/audit_full.py + scripts/deep_audit.py + scripts/brand_audit.py<br>
+  审计方法：逐条解析 _redirects → 型号提取比对 → 目标文件存在性检查 → 活站 curl 验证<br>
+  生成时间：2026-08-05 01:35 GMT+8
+</div>
+
+</div>
+</body>
+</html>
