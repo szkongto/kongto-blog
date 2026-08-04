@@ -74,4 +74,14 @@ with open('redirect_link_equity_audit.md', 'w', encoding='utf-8') as f:
     for ln in cats['品牌页(兜底)']:
         f.write('- `%s`\n' % ln)
     f.write('\n')
+    # 全量逐条清单
+    f.write('## 全量 301 规则清单（%d 条，逐条）\n\n' % total)
+    f.write('| # | 分类 | 规则 |\n|---|---|---|\n')
+    order = ['正确(同主题)', '首页(泄漏)', '品牌页(兜底)', '跨型号错配', '目标404', '自循环', '格式异常']
+    idx = 1
+    for cat in order:
+        for ln in cats[cat]:
+            f.write('| %d | %s | `%s` |\n' % (idx, cat, ln))
+            idx += 1
+    f.write('\n')
 print('written: redirect_link_equity_audit.md')
