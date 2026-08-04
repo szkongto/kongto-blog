@@ -57,6 +57,21 @@ git push
 3. 改完必须验证：GitHub Actions → deploy-worker job success + **curl 抓活站**确认 301/200 落正确页（不是看文件、不是看 CI 过）
 4. **提交前必须跑 `python scripts/audit_redirects.py`**（pre-commit 已内置硬错门禁：自循环/目标404/跨型号错配 阻止提交）。全量审计用 audit_redirects.py，全站每次大改后跑一遍
 
+### 产品页标准布局（2026-08-05 统一，严格位置）
+
+**每个位置严格放什么（勿随意挪动/堆叠）：**
+1. `<h1>` 产品标题
+2. `<p class="desc">` 产品描述
+3. **View Specs & Guide** 按钮（顶部**唯一**文章入口，橙色 #FF6600，padding 12px 24px）
+4. `price-row`（价格/库存）
+5. `paypal-section`（购买区：数量/国家/运费/合计/PayPal 按钮）
+6. 产品详情/规格表
+7. Warranty & Service
+8. "Ready to replace your CRT?" CTA
+9. `id="related-resources"`（**页底**，`</main>` 前）
+
+**禁止**：产品页顶部放 Get a Quote 按钮（批量询价走导航菜单/邮件/电话）；顶部堆叠两个文章链接（View Specs 按钮 与 Related Resources 不得相邻）。
+
 ### 排名/流量异常处置（2026-08-05 教训，铁律）
 
 1. **用户报排名掉/流量崩/关键词丢失 → 第一步 curl 活站查重定向 + 跑 audit_redirects.py，禁止回答"SEO 正常/等收录/迁移期掉排名"**
