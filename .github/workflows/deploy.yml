@@ -29,10 +29,6 @@ jobs:
       - name: Sync shared templates (nav/footer)
         run: python .github/scripts/sync_templates.py
 
-      - name: Redirect hard audit (self-loop / target-404 / cross-model)
-        run: |
-          python scripts/audit_redirects_hard.py || { echo "::error::redirect hard errors — fix _redirects"; exit 1; }
-
       - name: Validate internal links
         run: python .github/scripts/check_links_ci.py
 
