@@ -54,7 +54,18 @@ git push
 
 1. 所有重定向加在 `_redirects`，不要直接改 `cloudflare-worker.js`
 2. 程序化逻辑（catch-all、PDF canonical）改 `scripts/gen_redirect_worker.py`
-3. 改完必须验证：GitHub Actions → deploy-worker job success + 测1个URL
+3. 改完必须验证：GitHub Actions → deploy-worker job success + **curl 抓活站**确认 301/200 落正确页（不是看文件、不是看 CI 过）
+4. **提交前必须跑 `python scripts/audit_redirects.py`**（pre-commit 已内置硬错门禁：自循环/目标404/跨型号错配 阻止提交）。全量审计用 audit_redirects.py，全站每次大改后跑一遍
+
+### 排名/流量异常处置（2026-08-05 教训，铁律）
+
+1. **用户报排名掉/流量崩/关键词丢失 → 第一步 curl 活站查重定向 + 跑 audit_redirects.py，禁止回答"SEO 正常/等收录/迁移期掉排名"**
+2. 只有查证过重定向、页面 200、无错配，才能谈"等谷歌重新收录"
+3. 一切"已确认/已上线/验证过"的结论，必须带 curl/HTTP 实证，空口声明无效
+
+### 关键操作模型分级
+
+**改重定向 / 删页 / 改价 / 部署 / Schema 结构变更 = 关键操作，必须用强模型（opus/sonnet）**，禁止用 flash 档执行或"确认"。flash 档只做内容生成类（文章/翻译/文案）。
 
 ### hook 阻止了提交
 
