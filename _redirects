@@ -29,11 +29,11 @@
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301
 /posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html /index.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT替代方案.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
 /posts/article_20260507_MDT1283B_LCD替换方案.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
 # Percent-encoded versions for Cloudflare Pages compatibility
 /posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /index.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
 /posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
 
 # === Auto-generated redirects for broken link fixes ===
@@ -50,7 +50,7 @@
 /posts/article_20260506_%E4%B8%89%E8%8F%B1MDT962B%E5%B7%A5%E4%B8%9A%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html 301
 /posts/article_20260507_Mazak_CD1472D1M_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
 /posts/article_20260507_MDT1283B_LCD%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%A1%88.html /zh/posts/article_20260507_MDT1283B_LCD.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /index.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
 /posts/article_20260508_KTV104_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV148_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV148_Custom_Industrial_Display_CN.html 301
 /posts/article_20260508_KTV800M_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html /posts/article_20260508_KTV800M_Custom_Industrial_Display_CN.html 301
@@ -116,7 +116,7 @@
 /posts/article_20260509_KT809_工业转换器.html /posts/article_20260509_KT809_industrial_converter.html 301
 /posts/article_20260509_KT819_工业转换器.html /posts/article_20260509_KT819_industrial_converter.html 301
 /posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
-/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT替代方案.html /brands/FANUC.html 301
+/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT替代方案.html /posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
 /posts/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html /brands/FANUC.html 301
 /posts/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html /index.html 301
 /posts/custom-industrial-display-series-zh.html /index.html 301
