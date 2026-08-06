@@ -17,6 +17,8 @@ EXCLUDE = [
     "baidu_verify_",
     "test.txt",
     "_archive_",
+    "audit-verification",
+    "workers/",
     "_templates/",
     "no-display.html",
     "flickering-screen.html",
