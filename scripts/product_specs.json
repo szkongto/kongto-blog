@@ -237,12 +237,12 @@
   "siemens-6fc5103-lcd-upgrade": {
     "title": "SIEMENS 6FC5103 15-inch CRT to 15-inch LCD Upgrade | SINUMERIK Color Display Replacement | Kongto",
     "crt": "15-inch Color CRT",
-    "lcd": "15-inch TFT-LCD Industrial Panel"
+    "lcd": "10.4-inch TFT-LCD Industrial Panel"
   },
   "siemens-6fc5203-lcd-upgrade": {
     "title": "SIEMENS 6FC5203 15-inch CRT to 15-inch LCD Upgrade | SINUMERIK Color Monitor CRT Replacement | Kongto",
     "crt": "15-inch Color CRT",
-    "lcd": "15-inch TFT-LCD Industrial Panel"
+    "lcd": "10.4-inch TFT-LCD Industrial Panel"
   },
   "siemens-sm0901-lcd-upgrade": {
     "title": "SIEMENS SM0901 9-inch CRT to 8-inch LCD Upgrade | SINUMERIK 579417TA Display Upgrade | Kongto",
@@ -262,7 +262,7 @@
   "toshiba-d15cm-lcd-upgrade": {
     "title": "TOSHIBA D15CM 15-inch CRT to 15-inch LCD Upgrade | Toshiba D15CM Color Display Replacement | Kongto",
     "crt": "15-inch Color CRT",
-    "lcd": "15-inch TFT-LCD Industrial Panel"
+    "lcd": "12.1-inch TFT-LCD Industrial Panel"
   },
   "toshiba-d9mm-11a-lcd-upgrade": {
     "title": "TOSHIBA D9MM-11A 9-inch CRT to 8-inch LCD Upgrade | Toshiba D9MM-11A OEM FANUC LCD | Kongto",
