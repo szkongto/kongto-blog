@@ -51,6 +51,16 @@
   },
   {
     "brand": "FANUC",
+    "crt_model": "MDT-947",
+    "size_type": "8.4\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8.4\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/products/fanuc-a61l-0001-0086-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
     "crt_model": "A61L-0001-0090",
     "size_type": "9\" Monochrome CRT",
     "cnc_system": "FANUC 0-TC/0-MC",
@@ -128,6 +138,26 @@
     "resolution": "800x600",
     "status": "Available",
     "url": "/products/fanuc-a61l-0001-0092-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "MDT947B-2B",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/products/fanuc-a61l-0001-0093-lcd-upgrade.html"
+  },
+  {
+    "brand": "FANUC",
+    "crt_model": "MDT947B-2A",
+    "size_type": "9\" Monochrome CRT",
+    "cnc_system": "FANUC 0/0i",
+    "lcd_replacement": "Kongto 8\" TFT-LCD",
+    "resolution": "800x600",
+    "status": "Available",
+    "url": "/products/fanuc-a61l-0001-0093-lcd-upgrade.html"
   },
   {
     "brand": "FANUC",
