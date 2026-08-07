@@ -1,0 +1,3 @@
+TITLE: Mazak MDT1283B display going bad — options?
+
+My Mazak MDT1283B CRT is showing image retention / burn-in. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
