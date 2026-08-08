@@ -118,8 +118,8 @@
 /posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
 /posts/faq_20260501_FANUC_0i系统显示器.html /posts/fanuc-0i-display-faq-solutions-zh.html 301
 /posts/press_release_20260501_南京中晶科技推出FANUC全系列显示器LCDUpgrade /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
-/posts/非标定制显示器系列.html /zh/posts/custom_industrial_display_series_CN.html 301
-/posts/custom_industrial_display_series_CN.html /zh/posts/custom_industrial_display_series_CN.html 301
+/posts/非标定制显示器系列.html /zh/posts/custom_industrial_display_series.html 301
+/posts/custom_industrial_display_series_CN.html /zh/posts/custom_industrial_display_series.html 301
 /posts/faq_20260501_数控机床显示器更换常见问题TOP10.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
 
 /posts/faq_20260501_FANUC_A61L_0001_0093显示器常见故障及解决方案.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301
@@ -285,7 +285,7 @@
 
 # === Old naming convention redirects (2026-07-31) ===
 /posts/fanuc-a61l-0001-0093-display-faq-en.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301
-/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html /zh/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html 301
+/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html /zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html 301
 /posts/fanuc-0i-display-faq-solutions-zh.html /zh/posts/fanuc-0i-display-faq-solutions-zh.html 301
 /posts/fanuc-0i-display-faq-zh.html /zh/posts/fanuc-0i-display-faq-zh.html 301
 /posts/fanuc-a61l-0001-0093-display-faq-zh.html /zh/posts/fanuc-a61l-0001-0093-display-faq-zh.html 301
@@ -297,7 +297,7 @@
 /posts/industrial-rgbhv-retrofit-cga-ega-to-hd-zh.html /zh/posts/industrial-rgbhv-retrofit-cga-ega-to-hd-zh.html 301
 /posts/industrial-video-display-smart-factory-kongto-zh.html /zh/posts/industrial-video-display-smart-factory-kongto-zh.html 301
 /posts/kongto-industrial-video-display-catalog-zh.html /zh/posts/kongto-industrial-video-display-catalog-zh.html 301
-/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html /zh/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html 301
+/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html 301
 /posts/mitsubishi-mdt962b-series-crt-lcd-upgrade-solution-zh.html /zh/posts/mitsubishi-mdt962b-series-crt-lcd-upgrade-solution-zh.html 301
 /posts/siemens-display-upgrade-cost-roi-analysis-zh.html /zh/posts/siemens-display-upgrade-cost-roi-analysis-zh.html 301
 /posts/siemens-sinumerik-display-troubleshooting-zh.html /zh/posts/siemens-sinumerik-display-troubleshooting-zh.html 301
@@ -332,3 +332,15 @@
 /zh/posts/index.html /zh/posts/ 301
 /zh/docs/index.html /zh/docs/ 301
 /zh/brands/index.html /zh/brands/ 301
+/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
+/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
+/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html /posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html 301
+/zh/posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html /zh/posts/article_20260508_KTV104_custom_industrial_display.html 301
+/zh/posts/article_20260508_KTV800M_Custom_Industrial_Display_CN.html /zh/posts/article_20260508_KTV800M_custom_industrial_display.html 301
+/zh/posts/article_20260508_KTV804_Custom_Industrial_Display_CN.html /zh/posts/article_20260508_KTV804_custom_industrial_display.html 301
+/zh/posts/article_20260509_GBS_8219_RGB_to_VGA_Converter_CN.html /zh/posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html 301
+/zh/posts/article_20260509_KT819_Industrial_Converter_CN.html /zh/posts/article_20260509_KT819_industrial_converter.html 301
+/zh/posts/cga-ega-to-rgbhv-industrial-display-retrofit-guide-zh.html /zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html 301
+/zh/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html /zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html 301
+/zh/posts/article_20260509_KT809_Industrial_Converter_CN.html /zh/posts/article_20260509_KT809_industrial_converter.html 301
+/zh/posts/custom_industrial_display_series_CN.html /zh/posts/custom_industrial_display_series.html 301
