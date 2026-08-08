@@ -68,19 +68,23 @@ def check_file(rel):
     for name, rx in HARD:
         if not rx.search(text):
             problems.append(f'[HARD] 缺 {name}')
-    for name, rx in WARN:
-        if not rx.search(text):
-            problems.append(f'[WARN] 缺 {name}')
+
+    # 壳页(meta-refresh 跳转桩)的 viewport/desc/hreflang 无意义, 跳过 warn
+    is_shell = 'http-equiv="refresh"' in text
+    if not is_shell:
+        for name, rx in WARN:
+            if not rx.search(text):
+                problems.append(f'[WARN] 缺 {name}')
 
     # 4. canonical 目录形式（不链 /index.html）— hard
     m = re.search(r'rel=["\']canonical["\'] href=["\']([^"\']+)', text)
     if m and m.group(1).endswith('index.html'):
         problems.append(f'[HARD] canonical 用 index.html 形式: {m.group(1)}')
 
-    # 5. lang 与路径匹配 — warn（EN路径含中文内容页属合法，不硬拦）
+    # 5. lang 与路径匹配 — warn（EN路径含中文内容页属合法，不硬拦；壳页跳过）
     lang_m = re.search(r'<html[^>]*lang=["\']([a-zA-Z-]+)["\']', text)
     is_zh = rel.startswith('zh/')
-    if lang_m:
+    if lang_m and not is_shell:
         lang = lang_m.group(1)
         if is_zh and not lang.startswith('zh'):
             problems.append(f'[WARN] zh路径但lang={lang}')
