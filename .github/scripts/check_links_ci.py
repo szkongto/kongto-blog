@@ -45,6 +45,9 @@ def is_page_link(href):
     # JS template vars (e.g. ${r.url} in search.html) are not page links
     if '${' in href:
         return False
+    # Cloudflare email 混淆伪路径（边缘 JS 处理, 本地非文件）
+    if 'cdn-cgi/l/email-protection' in href:
+        return False
     # Static assets are not page links regardless of absolute/relative form
     ext = href.split('?')[0].split('#')[0].rsplit('.', 1)[-1].lower() if '.' in href else ''
     if ext in STATIC_EXTS:
