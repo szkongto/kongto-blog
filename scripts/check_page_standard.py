@@ -37,6 +37,19 @@ WARN = [
 ]
 
 
+def norm_url(u):
+    """规范化 URL 为站点相对路径（去 protocol/host/query/fragment），用于比较。
+    如 https://cncdisplay.com/posts/a.html -> /posts/a.html"""
+    u = u.strip().split('#')[0].split('?')[0]
+    if not u:
+        return None
+    if '://' in u:
+        u = re.sub(r'^[a-z]+://[^/]+', '', u, flags=re.I)
+    if not u.startswith('/'):
+        u = '/' + u
+    return u.rstrip('/') or '/'
+
+
 def html_files():
     for root, dirs, files in os.walk('.'):
         dirs[:] = [d for d in dirs if not d.startswith('.') and d not in SKIP_DIRS]
@@ -92,6 +105,15 @@ def check_file(rel):
             problems.append(f'[WARN] zh路径但lang={lang}')
         elif not is_zh and ZH_OK.match(lang):
             problems.append(f'[WARN] 非zh路径但lang={lang}')
+
+    # 6. 壳页自循环检测（meta-refresh → 自身 = 死循环，HARD）— 2026-08-09 第7个漏网教训
+    # url 值通常无引号包裹（content="0;url=/path"），捕获到引号/边界即止
+    refresh_m = re.search(r'http-equiv=["\']refresh["\'][^>]*url=([^"\'>]+)', text, re.I)
+    if refresh_m:
+        target = norm_url(refresh_m.group(1))
+        cur = norm_url('/' + rel)
+        if target and cur and target == cur:
+            problems.append(f'[HARD] 壳页自循环: refresh→自身 {target}')
 
     return problems, True
 
