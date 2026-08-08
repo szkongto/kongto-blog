@@ -1,0 +1,20 @@
+{
+  "company": {
+    "name_zh": "深圳市江图科技有限公司",
+    "name_en": "Kongto Technology (Shenzhen) Co., Ltd.",
+    "brand": "Kongto Technology"
+  },
+  "contact": {
+    "phone_display": "+86-13686889647",
+    "phone_tel": "+86-13686889647",
+    "whatsapp_number": "8613686889647",
+    "email_info": "info@cncdisplay.com",
+    "email_sales": "sales@cncdisplay.com"
+  },
+  "address": {
+    "zh": "深圳市龙岗区横岗街道深坑综合楼2号楼C栋4楼",
+    "city_zh": "深圳",
+    "province_zh": "广东",
+    "country_en": "China"
+  }
+}
