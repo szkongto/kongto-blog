@@ -84,8 +84,9 @@ def main():
         if parent and parent != '.':
             known_dirs.add(parent)
 
-    # Parse _redirects
+    # Parse _redirects: both sources (linkable URLs) and targets (must exist)
     redirect_sources = set()
+    redirect_targets = set()
     rf = ROOT / '_redirects'
     if rf.exists():
         with open(rf, 'r', encoding='utf-8', errors='ignore') as fh:
@@ -95,6 +96,50 @@ def main():
                     parts = line.split()
                     if parts:
                         redirect_sources.add(parts[0].lstrip('/'))
+                        if len(parts) > 1:
+                            t = parts[1]
+                            if t.startswith('http'):
+                                parsed = urlparse(t)
+                                if parsed.netloc and 'cncdisplay.com' not in parsed.netloc:
+                                    continue  # external target, not validated here
+                                t = parsed.path
+                            t = unquote(t).lstrip('/').split('?')[0].split('#')[0]
+                            if t:
+                                redirect_targets.add(t)
+
+    # Real files on disk. os.walk preserves actual on-disk case, and Python set
+    # membership is case-sensitive — so this models GitHub Pages (Linux)
+    # case-sensitivity exactly, unlike os.path.isfile (Windows insensitive).
+    REAL_SKIP = {'.git', '.github', 'node_modules', 'en_bak', '_archive_audit',
+                 '.claude', 'backlinks_output', 'backlinks_daily'}
+    real_files = set()
+    for dirpath, dirnames, filenames in os.walk(str(ROOT)):
+        rel = Path(dirpath).relative_to(ROOT)
+        if set(rel.parts) & REAL_SKIP:
+            continue
+        for fn in filenames:
+            real_files.add(normalize(rel / fn))
+
+    # P0-A fix: every redirect target must resolve to a real file. Before this,
+    # redirect sources were merged into all_files so dangling targets were never
+    # validated — a link to any redirect source always "passed" CI, even when
+    # the redirect pointed at a non-existent file.
+    broken_targets = []
+    for t in sorted(redirect_targets):
+        clean = t.rstrip('/')
+        if clean in real_files or clean in redirect_sources:
+            continue
+        if clean + '/index.html' in real_files:
+            continue
+        if clean + '.html' in real_files:
+            continue
+        broken_targets.append(t)
+    if broken_targets:
+        print(f"Redirect targets missing: {len(broken_targets)}")
+        for t in sorted(broken_targets)[:25]:
+            print(f"  -> 404: /{t}")
+        print("\nFAIL: dangling redirect targets (see _redirects).")
+        sys.exit(1)
 
     all_files = known_files | redirect_sources
 
