@@ -82,13 +82,15 @@ def check_file(rel):
         problems.append(f'[HARD] canonical 用 index.html 形式: {m.group(1)}')
 
     # 5. lang 与路径匹配 — warn（EN路径含中文内容页属合法，不硬拦；壳页跳过）
+    # 精确匹配 zh / zh-XX（区域变体）。用 startswith('zh') 会放走 lang="zh-" 半截值。
     lang_m = re.search(r'<html[^>]*lang=["\']([a-zA-Z-]+)["\']', text)
     is_zh = rel.startswith('zh/')
+    ZH_OK = re.compile(r'zh(-[A-Za-z]{2})?$')
     if lang_m and not is_shell:
         lang = lang_m.group(1)
-        if is_zh and not lang.startswith('zh'):
+        if is_zh and not ZH_OK.match(lang):
             problems.append(f'[WARN] zh路径但lang={lang}')
-        elif not is_zh and lang.startswith('zh'):
+        elif not is_zh and ZH_OK.match(lang):
             problems.append(f'[WARN] 非zh路径但lang={lang}')
 
     return problems, True
