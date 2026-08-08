@@ -22,4 +22,4 @@ RSL-AI-Search: y
 RSL-Commercial-AI: n
 
 # Contact for licensing inquiries
-RSL-Contact: szkongto01@foxmail.com
+RSL-Contact: info@cncdisplay.com
