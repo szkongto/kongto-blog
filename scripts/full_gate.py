@@ -24,6 +24,7 @@ GATES = [
     ("knowledge_data",      ["python", "scripts/validate_knowledge_data.py"],  False),
     ("redirect_audit",      ["python", "scripts/audit_redirects.py"],          False),
     ("jsonld",              ["python", "scripts/validate_jsonld.py"],          False),
+    ("aggressive_dup",      ["python", "scripts/audit_aggressive.py"],         True),
 ]
 
 
