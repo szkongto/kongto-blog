@@ -119,7 +119,8 @@ def main():
         'article_entries_missing': build_article_entries(),
     }
     with open(OUT, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
+        # sort_keys 保证确定性输出，避免每次 commit 因字典顺序变化产生巨量 diff
+        json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=True)
 
     print(f"site_map.json 生成: {len(data['models'])} 型号, "
           f"{len(data['zh_en_pairs'])} 中英对, "
