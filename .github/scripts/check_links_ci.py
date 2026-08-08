@@ -20,7 +20,8 @@ SKIP_DIRS = {'.git', '.github', '_archive_audit', 'node_modules',
 
 STATIC_EXTS = {'jpg', 'jpeg', 'png', 'gif', 'svg', 'webp', 'ico', 'bmp',
                'css', 'js', 'json', 'xml', 'txt', 'pdf', 'zip', 'exe',
-               'woff', 'woff2', 'ttf', 'eot', 'mp4', 'webm'}
+               'woff', 'woff2', 'ttf', 'eot', 'mp4', 'webm',
+               'docx', 'doc', 'xlsx', 'pptx', 'csv'}
 
 def find_html_files():
     files = []
@@ -41,10 +42,16 @@ def is_page_link(href):
         return False
     if href.startswith('mailto:') or href.startswith('tel:'):
         return False
+    # JS template vars (e.g. ${r.url} in search.html) are not page links
+    if '${' in href:
+        return False
+    # Static assets are not page links regardless of absolute/relative form
+    ext = href.split('?')[0].split('#')[0].rsplit('.', 1)[-1].lower() if '.' in href else ''
+    if ext in STATIC_EXTS:
+        return False
     if href.startswith('http'):
         return 'cncdisplay.com' in href
-    ext = href.split('?')[0].split('#')[0].rsplit('.', 1)[-1].lower() if '.' in href else ''
-    return ext not in STATIC_EXTS
+    return True
 
 def resolve_href(from_file, href):
     if href.startswith('http'):
@@ -115,7 +122,9 @@ def main():
             # Check existence
             if clean in all_files:
                 continue
-            if clean + '/index.html' in all_files:
+            # Directory form (e.g. /brands/) resolves to <dir>/index.html
+            dir_clean = clean.rstrip('/')
+            if dir_clean + '/index.html' in all_files:
                 continue
             if clean + '.html' in all_files:
                 continue

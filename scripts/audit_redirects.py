@@ -7,8 +7,11 @@ MODEL_RE = re.compile(r'(A61L[- ]0001[- ]\d{4}|A02B[- ]\d{4}[- ][A-Z]\d{3}|A05B[
 
 def dec(s): return urllib.parse.unquote(s)
 def exists(urlpath):
+    """支持目录形式(/products/)与根(/)——目录目标由 index.html 承载"""
     p = dec(urlpath).lstrip('/').split('?')[0]
-    if not p or p.endswith('/'): return False
+    if not p: return True
+    if p.endswith('/'):
+        return os.path.isdir(p) or os.path.isfile(p + 'index.html')
     return os.path.isfile(p)
 
 # 建候选池
@@ -38,14 +41,21 @@ for ln in lines:
     src, dst, code = m.group(1), m.group(2), m.group(3)
     issues = []
     if src == dst or dec(src) == dec(dst): issues.append('自循环')
-    if dst in ('/', '/index.html', 'https://cncdisplay.com/', 'https://cncdisplay.com'):
+    # 根统一 /index.html → / 是标准 consolidation，不视为问题
+    if dst in ('/', '/index.html', 'https://cncdisplay.com/', 'https://cncdisplay.com') and not (dec(src) == '/index.html' and dst in ('/', 'https://cncdisplay.com/')):
         issues.append('目标=首页')
     if not dst.startswith('http') and not exists(dst):
         issues.append(f'目标不存在:{dec(dst)[:40]}')
+    # 已知合法型号归一化（简写↔全称、笔误纠正），不视为错配
+    KNOWN_GOOD = {
+        ('0093', 'A61L-0001-0093'), ('A61L-0001-0093', '0093'),
+        ('6FC3998', '6FC3988'),
+    }
     sm, dm = MODEL_RE.search(src), MODEL_RE.search(dst)
-    if sm and dm and sm.group(0).replace('-','').replace(' ','')[:6] != dm.group(0).replace('-','').replace(' ','')[:6]:
+    if sm and dm and (sm.group(0), dm.group(0)) not in KNOWN_GOOD and sm.group(0).replace('-','').replace(' ','')[:6] != dm.group(0).replace('-','').replace(' ','')[:6]:
         issues.append(f'型号错配:{sm.group(0)}→{dm.group(0)}')
-    if sm and '/brands/' in dst: issues.append('源含型号→品牌页')
+    if sm and '/brands/' in dst and find_candidates(src):
+        issues.append('源含型号→品牌页(存在更具体产品页)')
     if issues:
         flags.append((ln, '; '.join(issues), dec(src), find_candidates(src)))
 
