@@ -28,6 +28,7 @@ fix_*.py
 fix_progress*
 hashnode_debug.png
 images_backup_compressed/
+images_backup_2*/
 kongto-blog*
 memory/
 openclaw/
