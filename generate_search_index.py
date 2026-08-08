@@ -78,7 +78,7 @@ def main():
             'node_modules', 'backlinks_daily', 'backlinks_output',
             'seo_backup', '__pycache__', 'fonts', 'images',
             'output', '_archive_audit', '_templates', 'patches',
-            'screaming_frog_reports'
+            'screaming_frog_reports', 'en_bak'
         )]
         for fname in files:
             if not fname.endswith('.html'):
@@ -118,6 +118,13 @@ def main():
     outpath = os.path.join(ROOT, 'search-index.json')
     with open(outpath, 'w', encoding='utf-8') as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
+
+    # search.html loads search-index.js (initSearchIndex(...)), keep it in sync
+    js_path = os.path.join(ROOT, 'search-index.js')
+    with open(js_path, 'w', encoding='utf-8') as f:
+        f.write('initSearchIndex(')
+        json.dump(entries, f, ensure_ascii=False)
+        f.write(');')
 
     print(f"Generated search-index.json with {len(entries)} entries")
     cats = {}
