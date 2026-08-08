@@ -16,6 +16,7 @@ GATES = [
     ("redirect_hard",       ["python", "scripts/audit_redirects_hard.py"],     True),
     ("link_check",          ["python", ".github/scripts/check_links_ci.py"],   True),
     ("entry_check(5入口)",  ["python", "scripts/site_map.py", "--check"],      True),
+    ("page_standard",       ["python", "scripts/check_page_standard.py"],      True),
     ("canonical",           ["python", "scripts/check_canonical.py"],          False),
     ("lang_switch",         ["python", "scripts/check_lang_switch.py"],        False),
     ("link_correctness",    ["python", "scripts/check_link_correctness.py"],   False),

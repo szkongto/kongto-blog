@@ -61,6 +61,24 @@ for ln in lines:
             continue
         hard.append((ln, f'跨型号错配: {sm.group(0)} → {dm.group(0)}'))
 
+    # 语义错配: 源含型号, 目标是具体产品/文章页, 但目标页内容不含该型号 → 落地页语义不对
+    # 跳过聚合页(品牌/指南/索引/方案/对比) — 它们合法地不逐型号提及
+    if sm:
+        dkey = model_key(sm.group(0))
+        dst_file = dec(dst).lstrip('/').split('?')[0]
+        if (not dst.startswith('http') and dst_file and os.path.isfile(dst_file)
+                and not dst_file.endswith('/')):
+            base_l = dst_file.lower()
+            if ('.pdf' in base_l or 'brands/' in base_l or 'index.' in base_l
+                    or any(t in base_l for t in ('guide', 'solution', 'faq',
+                                                 'comparison', 'catalog', 'overview',
+                                                 'troubleshoot', 'maintenance',
+                                                 'compatib', 'knowledge'))):
+                continue  # PDF二进制/聚合/通用页, 不判
+            dcontent = open(dst_file, encoding='utf-8', errors='ignore').read()
+            if dkey not in dcontent:
+                hard.append((ln, f'语义错配: 源含型号{sm.group(0)}但目标页({dst_file})不含该型号'))
+
 if hard:
     print(f'\n[REDIRECT-AUDIT] 发现 {len(hard)} 条硬错，阻止提交:')
     for ln, why in hard:
