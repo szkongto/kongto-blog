@@ -318,3 +318,19 @@
 /posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT_upgrade.html /posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
 /zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_upgrade.html /zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html 301
 /zh/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT_upgrade.html /zh/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
+
+# 2026-08-08: 大写 Converter 变体 404 → 小写真文章 (审计遗留)
+/posts/article_20260509_GBS-8219_RGB_to_VGA_Converter.html /posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html 301
+/posts/article_20260509_KT809_Industrial_Converter.html /posts/article_20260509_KT809_industrial_converter.html 301
+/posts/article_20260509_KT819_Industrial_Converter.html /posts/article_20260509_KT819_industrial_converter.html 301
+# 2026-08-08: /index.html 重复 URL → 目录形式 (审计遗留)
+/index.html / 301
+/products/index.html /products/ 301
+/posts/index.html /posts/ 301
+/docs/index.html /docs/ 301
+/brands/index.html /brands/ 301
+/zh/index.html /zh/ 301
+/zh/products/index.html /zh/products/ 301
+/zh/posts/index.html /zh/posts/ 301
+/zh/docs/index.html /zh/docs/ 301
+/zh/brands/index.html /zh/brands/ 301
