@@ -1,7 +1,6 @@
-共 829 URL: 200=542, 重定向=285, 404=1, 异常=1, 其他=0
+共 828 URL: 200=542, 重定向=286, 404=0, 异常=0, 其他=0
 
 === 404（需判断：本地有文件=部署问题；_redirects源=断链）===
-  /cdn-cgi/l/email-protection  [redirect源]
 
 === 异常重定向(非预期) ===
   /article_20260501_CGA_EGA%E6%98%BE%E7%A4%BA%E5%99%A8%E6%94%B9%E9%80%A0%E4%B8%BARGBHV%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97.html 301→https://cncdisplay.com/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html
@@ -77,4 +76,3 @@
   /zh/products/a61l-0001-0094 301→https://cncdisplay.com/zh/products/a61l-0001-0094/  [本地有文件却重定向!]
 
 === 异常(ERR/其他) ===
-  /posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html  [<urlopen error _ssl.c:1063: The handshake operation timed ou]

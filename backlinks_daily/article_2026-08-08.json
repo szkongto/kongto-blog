@@ -1,0 +1,39 @@
+{
+  "title": "Okuma OSP 5020 CRT flyback transformer whine: cost comparison",
+  "devto_tags": [
+    "cnc",
+    "manufacturing",
+    "engineering",
+    "okuma"
+  ],
+  "canonical": "https://cncdisplay.com/brands/OKUMA.html",
+  "body_devto": "## If you operate a Okuma CNC machine with a OSP 5020 CRT display, you may have noticed it developing flyback transformer whine. This isn't surprising — these CRTs were designed for 10-15 years of service, and most are now past 20.\n\n## Cost Comparison: Repair vs Replace\n\n| Option | Cost | Lifespan |\n|--------|------|----------|\n| CRT repair (rebuilt HV section) | $229–458 each | 3-12 months |\n| CRT repair (donor tube swap) | $329–529 | 6-18 months |\n| Used CRT on eBay | $458–687 | Unknown (already aged) |\n| LCD replacement module | $229 (one-time) | 5-7 years continuous |\n\nAvoid the CRT repair treadmill. A $229 LCD breaks even on the second repair visit.\n\n## Technical Details\n\nKey specs for Okuma OSP 5020: connector = 14-pin or 20-pin, power = DC 24V, compatible with OSP 5000, OSP 5020, OSP 7000. The LCD module matches all these specs exactly, making it a direct swap.\n\nThe high-pitched whine (15-20 kHz) signals a failing flyback transformer. This component generates the 20-30kV needed for the CRT — when it fails, you get a blank screen.\n\n## Important Note\n\nOSP 5000/5020 use a 14-pin connector. OSP 7000 uses 20-pin. They are NOT cross-compatible. Check the label on the back of your CRT housing before ordering.\n\n## Summary\n\nAn LCD module eliminates the Okuma CRT failure cycle permanently. Full Okuma upgrade guide and compatibility info: https://cncdisplay.com/brands/OKUMA.html",
+  "brand": {
+    "name": "Okuma",
+    "name_cn": "大隈",
+    "models": [
+      "OSP 5000",
+      "OSP 5020",
+      "OSP 7000"
+    ],
+    "connector": "14-pin or 20-pin",
+    "power": "DC 24V",
+    "controls": [
+      "OSP 5000",
+      "OSP 5020",
+      "OSP 7000"
+    ],
+    "price": "$229",
+    "page": "https://cncdisplay.com/brands/OKUMA.html"
+  },
+  "model": "OSP 5020",
+  "failure": {
+    "name": "高压包异响",
+    "en": "flyback transformer whine",
+    "desc": "high-pitched noise from failing HV section"
+  },
+  "angle": {
+    "en": "cost comparison",
+    "zh": "成本对比分析"
+  }
+}
