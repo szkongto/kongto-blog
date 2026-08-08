@@ -75,3 +75,48 @@ main .content figure.article-figure, main .content figure.img-hero {
 article .content table, article table,
 main .content table, main table { margin-left: auto; margin-right: auto; }
 
+/* ===== P1-1: 首页内联样式提取为类（值逐字来自原内联串，零值变更） ===== */
+/* hero 深色渐变带 */
+.hero-band { background: linear-gradient(135deg,#1e3a5f 0%,#2563eb 100%); color:#fff; padding:3rem 0; }
+.hero-glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.2); }
+.hero-band-title { font-size:2.5rem; font-weight:800; color:#fff; }
+.hero-band .hero-band-sub { color: rgba(255,255,255,0.85); font-size:1.1rem; }
+.hero-band .hero-band-note { color: rgba(255,255,255,0.6); font-size:0.85rem; }
+/* 产品卡片（EN 首页） */
+.prod-grid { display:flex; flex-wrap:wrap; gap:0.9rem; justify-content:center; }
+.prod-card { flex:1; min-width:195px; max-width:250px; background:#fff; border:1px solid #e1e8ed; border-radius:8px; padding:0.9rem 1rem; text-decoration:none; color:#1e3c72; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+.prod-card:hover { color:#1e3c72; text-decoration:none; } /* 守卫：原内联免疫 a:hover 蓝色 */
+.prod-card-desc { color:#666; font-size:0.85em; }
+/* 尺寸标签 */
+.size-tag { display:inline-block; padding:8px 20px; margin:4px; background:#1a1a2e; color:#fff; border-radius:6px; text-decoration:none; }
+.size-tag:hover { color:#fff; text-decoration:none; } /* 守卫：原内联免疫 a:hover 蓝色 */
+/* 区块容器 */
+.section { max-width:1200px; margin:2rem auto; padding:0 1.5rem; text-align:center; }
+.section-narrow { max-width:980px; margin:2rem auto; padding:0 1.5rem; text-align:center; }
+.container-1100 { max-width:1100px; margin:0 auto; padding:0 20px; }
+/* 区块标题 */
+.section-head { font-size:2rem; font-weight:600; text-align:center; color:#1d1d1f; margin-bottom:.5rem; }
+.section-head-sub { font-size:1rem; color:#86868b; text-align:center; margin-bottom:2rem; }
+.center-title { text-align:center; margin-bottom:0.5rem; }
+.center-subtitle { text-align:center; color:#555; margin-bottom:1.4rem; }
+/* 信息/特性盒 */
+.feature-box { background:#f8fafc; padding:2.2rem 1.5rem; margin:1.5rem 0; border-radius:10px; border:1px solid #e1e8ed; }
+.tip-box { background:#f8fafc; padding:1.5rem; border-radius:8px; margin:2rem 0; border:1px solid #e2e8f0; }
+.tip-box-title { font-weight:bold; color:#1e40af; margin:0 0 0.75rem 0; }
+.list-flush { margin:0; padding-left:1.2rem; }
+/* 文本工具类 */
+.text-muted { color:#888; }
+.text-muted:hover { color:#888; } /* 守卫：homepage 上用于 <a> */
+a.text-accent { color:#ff9800; font-weight:700; }
+a.text-accent:hover { color:#ff9800; } /* 守卫：homepage 上用于 <a> */
+.text-white { color:#fff; }
+.text-white-80 { color: rgba(255,255,255,0.8); }
+.text-center { text-align:center; }
+.bg-light { background:#f5f5f7; }
+/* 页脚 */
+.footer-note { text-align:center; padding:20px 0; font-size:12px; color:#888888; border-top:1px solid #e0e0e0; margin-top:40px; }
+.footer-micro { font-size:0.7rem; color:#999; margin-top:0.5rem; padding-top:0.5rem; border-top:1px solid #e0e0e0; }
+/* 间距 */
+.mt-15 { margin-top:1.5rem; }
+.mb-0 { margin:4px 0; }
+
