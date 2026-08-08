@@ -534,7 +534,6 @@
    "products/fanuc-a61l-0001-0094-lcd-upgrade.html",
    "products/index.html",
    "products/matsushita-tx1450ab-lcd-upgrade.html",
-   "products/mitsubishi-tx-1450ab-lcd-upgrade.html",
    "zh/comparison-tool.html",
    "zh/compatibility-matrix.html",
    "zh/sitemap.html",
@@ -554,7 +553,6 @@
    "zh/products/image-retention.html",
    "zh/products/index.html",
    "zh/products/matsushita-tx1450ab-lcd-upgrade.html",
-   "zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html",
    "zh/products/no-display.html",
    "zh/products/a61l-0001-0094/index.html"
   ],
@@ -1360,7 +1358,6 @@
    "products/flickering-screen.html",
    "products/image-retention.html",
    "products/index.html",
-   "products/mitsubishi-tx-1450ab-lcd-upgrade.html",
    "products/no-display.html",
    "zh/comparison-tool.html",
    "zh/compatibility-matrix.html",
@@ -1376,7 +1373,6 @@
    "zh/products/image-retention.html",
    "zh/products/index.html",
    "zh/products/matsushita-tx1450ab-lcd-upgrade.html",
-   "zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html",
    "zh/products/no-display.html"
   ],
   "A61L00010095": [
@@ -1885,7 +1881,6 @@
    "zh/posts/index.html",
    "zh/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html",
    "zh/products/index.html",
-   "zh/products/mazak-mdt1283b-1a-lcd-upgrade.html",
    "zh/products/mazak-mdt1283b-lcd-upgrade.html",
    "zh/products/mitsubishi-mdt-1283b-lcd-upgrade.html"
   ],
@@ -1945,10 +1940,8 @@
    "zh/products/fanuc-a61l-0001-0086-lcd-upgrade.html",
    "zh/products/fanuc-a61l-0001-0092-lcd-upgrade.html",
    "zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html",
-   "zh/products/fanuc-mdt947b-1a-lcd-upgrade.html",
    "zh/products/flickering-screen.html",
    "zh/products/image-retention.html",
-   "zh/products/mitsubishi-mdt947b-lcd-upgrade.html",
    "zh/products/no-display.html"
   ],
   "MDT948": [
@@ -2150,10 +2143,8 @@
    "posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html",
    "products/index.html",
    "products/matsushita-tx1450ab-lcd-upgrade.html",
-   "products/mitsubishi-tx-1450ab-lcd-upgrade.html",
    "products/panasonic-9inch-green-crt-lcd-upgrade.html",
-   "zh/products/matsushita-tx1450ab-lcd-upgrade.html",
-   "zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html"
+   "zh/products/matsushita-tx1450ab-lcd-upgrade.html"
   ],
   "TX901": [
    "posts/article_20260503_FANUC_A61L_0001_0090_LCD.html",
@@ -2408,7 +2399,6 @@
   "zh/products/mitsubishi-mdt925ps-lcd-upgrade.html": "products/mitsubishi-mdt925ps-lcd-upgrade.html",
   "zh/products/mitsubishi-mdt947b-lcd-upgrade.html": "products/mitsubishi-mdt947b-lcd-upgrade.html",
   "zh/products/mitsubishi-mdt962b-lcd-upgrade.html": "products/mitsubishi-mdt962b-lcd-upgrade.html",
-  "zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html": "products/mitsubishi-tx-1450ab-lcd-upgrade.html",
   "zh/products/no-display.html": "products/no-display.html",
   "zh/products/okuma-osp5000-lcd-upgrade.html": "products/okuma-osp5000-lcd-upgrade.html",
   "zh/products/okuma-osp5020-lcd-upgrade.html": "products/okuma-osp5020-lcd-upgrade.html",

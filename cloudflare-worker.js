@@ -324,6 +324,7 @@ const REDIRECTS = {
   '/products/mazak-du3461g-l-lcd-upgrade.html': '/brands/MAZAK.html',
   '/products/mazak-t3021-ah-lcd-upgrade.html': '/brands/MAZAK.html',
   '/products/mdt962b': '/products/mitsubishi-mdt962b-lcd-upgrade.html',
+  '/products/mitsubishi-tx-1450ab-lcd-upgrade.html': '/products/matsushita-tx1450ab-lcd-upgrade.html',
   '/products/okuma-osp-crt-lcd-upgrade.html': '/brands/OKUMA.html',
   '/products/okuma-osp500l-g-lcd-upgrade.html': '/products/okuma-osp5000-lcd-upgrade.html',
   '/products/okuma-osp5020-crt-lcd-upgrade.html': '/products/okuma-osp5020-lcd-upgrade.html',
@@ -352,8 +353,17 @@ const REDIRECTS = {
   '/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html': '/posts/fanuc-crt-to-lcd-step-by-step-guide.html',
   '/zh/posts/index.html': '/zh/posts/',
   '/zh/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html': '/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html',
+  '/zh/products/fanuc-mdt947b-1a-lcd-upgrade.html': '/products/fanuc-mdt947b-1a-lcd-upgrade.html',
+  '/zh/products/haas-9-pin-monochrome-lcd-upgrade.html': '/products/haas-9-pin-monochrome-lcd-upgrade.html',
+  '/zh/products/haas-9pin-mono-crt-lcd-upgrade.html': '/products/haas-9pin-mono-crt-lcd-upgrade.html',
+  '/zh/products/heidenhain-bc110-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',
   '/zh/products/index.html': '/zh/products/',
+  '/zh/products/mazak-mdt1283b-1a-lcd-upgrade.html': '/products/mazak-mdt1283b-1a-lcd-upgrade.html',
+  '/zh/products/mitsubishi-mdt947b-lcd-upgrade.html': '/products/mitsubishi-mdt947b-lcd-upgrade.html',
+  '/zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html': '/zh/products/matsushita-tx1450ab-lcd-upgrade.html',
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
+  '/zh/products/okuma-osp7000-crt-lcd-upgrade.html': '/products/okuma-osp7000-crt-lcd-upgrade.html',
+  '/zh/products/toshiba-d15cm-lcd-upgrade.html': '/products/toshiba-d15cm-lcd-upgrade.html',
 };
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
