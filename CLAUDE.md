@@ -5,14 +5,29 @@
 > **pre-commit hook 自动检查。不要用 --no-verify 绕过。**
 > hook 挡住就修，别跳过。
 
+## 强制 Skill（改动/审计/重定向，开工第一步）
+
+**任何对本站的改动，先调用对应 skill，再动手：**
+- `/cncdisplay-change` — 任何修改的强制 SOP（查关联图→中英平行→5入口→全量验证→活站实证）
+- `/cncdisplay-audit` — 全站审计方法论（建基线→核活站→机器+可见元素→闭环回归）
+- `/cncdisplay-redirect-rebuild` — 重定向烂账清算重建
+
+**全站关联图（改前必查）**：`data/site_map.json`（由 `scripts/site_map.py` 生成）
+- 改型号/产品 → 查 `models`：该型号被哪些页面引用，连带全改
+- 查中英孪生 → `zh_en_pairs`
+- 任何修改步骤 0 先 query 这张图，**不存在"只改一个文件"的修改**
+
 ## 修改流程
 
-### Step 0: 规划（跨文件必做）
+### Step 0: 查关联图 + 规划
 
-/plan
+```bash
+python -c "import json; m=json.load(open('data/site_map.json',encoding='utf-8')); print(m['models'].get('A61L00010093'))"
+```
 
-分析需求→出架构→列文件→确认后写代码。
-**杜绝边猜边写导致连带bug。**
+- 查型号引用/中英孪生，列"连带修改清单"
+- 跨文件/新增功能 → /plan
+- **杜绝边猜边写导致连带bug。**
 
 ### Step 1: 修改代码
 
@@ -25,6 +40,7 @@
 
 git diff --stat          # 确认只改了目标文件
 git diff                 # 逐行检查每个改动
+python scripts/full_gate.py --quick   # 硬门禁: site_checker+redirect+link+5入口，全过才提交
 
 ### Step 3: 审查（改量大时推荐）
 
