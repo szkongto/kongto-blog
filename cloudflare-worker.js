@@ -13,7 +13,6 @@ const REDIRECTS = {
   '/brands/OKUMA': '/brands/OKUMA.html',
   '/brands/Siemens': '/brands/Siemens.html',
   '/brands/index.html': '/brands/',
-  '/cdn-cgi/l/email-protection': '/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
   '/comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html': '/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html',
   '/comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html': '/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html',
   '/docs/CNC_CRT_to_LCD_Cross_数控换液晶对照全表.pdf': '/docs/cnc-crt-to-lcd-cross-reference.pdf',

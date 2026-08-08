@@ -19,6 +19,7 @@ GATES = [
     ("page_standard",       ["python", "scripts/check_page_standard.py"],      True),
     ("canonical",           ["python", "scripts/check_canonical.py"],          False),
     ("lang_switch",         ["python", "scripts/check_lang_switch.py"],        False),
+    ("lang_reverse",        ["python", "scripts/check_lang_reverse.py"],       False),
     ("link_correctness",    ["python", "scripts/check_link_correctness.py"],   False),
     ("knowledge_data",      ["python", "scripts/validate_knowledge_data.py"],  False),
     ("redirect_audit",      ["python", "scripts/audit_redirects.py"],          False),
