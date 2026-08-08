@@ -58,6 +58,19 @@ def main():
     bad = []
     warnings = []
 
+    # 真实文件集合(大小写敏感): os.walk 保留磁盘实际大小写 + set 精确匹配,
+    # 模拟 GitHub Pages(Linux) 大小写语义. os.path.isfile 在 Windows 大小写不敏感,
+    # 会把磁盘上不存在(仅大小写不同)的目标误判为存在 → 断链漏检.
+    SKIP = ('en_bak', '_archive', '_archive_audit', 'node_modules', '.git',
+            '.github', 'backlinks_output', 'backlinks_daily')
+    real_files = set()
+    for dirpath, dirnames, filenames in os.walk('.'):
+        dp = dirpath.replace('\\', '/').rstrip('/').lstrip('./')
+        if any(part in SKIP for part in dp.split('/') if part):
+            continue
+        for fn in filenames:
+            real_files.add((dp + '/' + fn).lstrip('/'))
+
     # 遍历所有 html
     for f in glob.glob('**/*.html', recursive=True):
         fs = f.replace('\\', '/')
@@ -80,8 +93,8 @@ def main():
             # 1) 断链 (解析重定向后判定)
             final = final_target('/' + p, redir) if p.startswith(('posts', 'products', 'zh/', 'guides', 'brands', 'en/')) else '/' + p
             fp = final.lstrip('/').split('?')[0]
-            if not fp.endswith('/') and not os.path.isfile(fp):
-                if not (os.path.isdir(fp) and os.path.isfile(fp + 'index.html')):
+            if not fp.endswith('/') and fp not in real_files:
+                if fp + '/index.html' not in real_files:
                     if p != fp and p in redir:
                         bad.append((fs, url, f'重定向目标不存在: {url}→{final}'))
                     else:

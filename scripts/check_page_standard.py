@@ -12,7 +12,8 @@ os.chdir(ROOT)
 SKIP_DIRS = {'en_bak', '_archive_audit', '_templates', '__pycache__',
              'backlinks_daily', 'backlinks_output', 'node_modules',
              'fonts', 'images', 'output', 'screaming_frog_reports',
-             'data', '.git', '.github', 'schema', 'css', 'patches', 'docs', 'workers'}
+             'data', '.git', '.github', 'schema', 'css', 'patches', 'docs', 'workers',
+             'seo_reports'}
 
 # 已知 mojibake 模式（Latin-1 误读 UTF-8 的特征序列）
 MOJIBAKE_RE = re.compile(r'Ã[\x80-\xbf]|Â[\x80-\xbf]|â€[™"œ]|æ\x80|å\x9c|é\x9a|æ²')

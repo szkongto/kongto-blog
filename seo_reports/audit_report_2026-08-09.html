@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cncdisplay.com 全站深度审计报告 — 2026-08-09</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: 0 auto; padding: 24px; background: #f5f7fa; }
+  .report { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  h1 { color: #1a365d; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2c5282; margin-top: 34px; border-left: 4px solid #2b6cb0; padding-left: 10px; }
+  h3 { color: #4a5568; }
+  .timestamp { color: #718096; font-size: 0.9em; }
+  .meta { background: #ebf4ff; padding: 12px 16px; border-radius: 6px; margin: 16px 0; font-size: 0.92em; }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.93em; }
+  th { background: #2b6cb0; color: #fff; padding: 10px; text-align: left; }
+  td { padding: 9px 10px; border-bottom: 1px solid #e2e8f0; }
+  tr:hover { background: #f7fafc; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.82em; font-weight: 600; }
+  .badge-p0 { background: #fed7d7; color: #9b2c2c; }
+  .badge-p1 { background: #feebc8; color: #9c4221; }
+  .badge-p2 { background: #c6f6d5; color: #22543d; }
+  .ok { color: #2f855a; font-weight: 600; }
+  .warn { color: #b7791f; font-weight: 600; }
+  .err { color: #c53030; font-weight: 600; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 18px 0; }
+  .card { background: linear-gradient(135deg, #2b6cb0, #4299e1); color: #fff; padding: 16px; border-radius: 8px; text-align: center; }
+  .card .v { font-size: 1.9em; font-weight: 700; }
+  .card .l { font-size: 0.82em; opacity: 0.92; }
+  .score-row { display: flex; gap: 10px; align-items: center; margin: 6px 0; }
+  .score-bar { height: 14px; border-radius: 7px; background: #e2e8f0; flex: 1; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 7px; }
+  code { background: #edf2f7; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  pre { background: #2d3748; color: #e2e8f0; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 0.85em; }
+  .note { font-size: 0.85em; color: #718096; }
+  .footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 0.85em; color: #718096; }
+</style>
+</head>
+<body>
+<div class="report">
+  <h1>cncdisplay.com 全站深度审计报告</h1>
+  <p class="timestamp">生成时间：2026-08-09　|　审计对象：https://cncdisplay.com（GitHub Pages + Cloudflare Worker）　|　仓库：szkongto/kongto-blog</p>
+
+  <div class="meta">
+    <strong>方法说明：</strong>本报告基于三层实证——① 本地仓库代码核实（<code>d:/code/seo_deploy</code>，git 跟踪 555 个 HTML）；② 活站 curl 扫描；③ 竞品网站抓取。所有数据均标注来源，区分<b>已核实事实</b>与<b>推断</b>。外部 AI 审计草稿中的主张经逐项核实后修正 2 处（页数、en_bak）。
+  </div>
+
+  <h2>执行摘要</h2>
+  <div class="cards">
+    <div class="card"><div class="v">555</div><div class="l">git 跟踪 HTML 页</div></div>
+    <div class="card"><div class="v">351</div><div class="l">重定向规则</div></div>
+    <div class="card"><div class="v">12</div><div class="l">门禁检查项</div></div>
+    <div class="card"><div class="v">0</div><div class="l">断链/死循环壳页</div></div>
+    <div class="card"><div class="v">6.0</div><div class="l">综合评分 /10</div></div>
+  </div>
+  <p><b>结论：</b>cncdisplay.com 正处于<b>从"小型展示站"向"工业化 B2B 平台"过渡的修复期</b>。核心优势：CRT-to-LCD 细分定位精准、设计现代化、近 3 个月补上了完整的门禁体系（pre-commit hook / full_gate / site_map 关联图）。核心短板：无 SSG 导致 nav/header/footer 全量硬编码重复、CSS 三层混用、命名混乱依赖 351 条重定向兜底、历史上曾发生灾难性 SEO 误操作（119 页 noindex、150 页 hreflang 错指）。审计时点全站已回归干净基线：<b>零断链、零死循环壳页、零重复 title、零 target404</b>。</p>
+
+  <h2>一、网站架构审计（7 维度）</h2>
+
+  <h3>1.1 目录结构与文件组织</h3>
+  <table>
+    <tr><th>项</th><th>实证</th><th>状态</th></tr>
+    <tr><td>技术栈</td><td>纯手写静态 HTML，<code>.nojekyll</code> 存在（非 Jekyll/Hugo）</td><td class="warn">✓ 无 SSG</td></tr>
+    <tr><td>入口</td><td><code>index.html</code>、<code>404.html</code></td><td class="ok">✓</td></tr>
+    <tr><td>内容目录</td><td><code>products/ posts/ brands/ guides/ docs/ zh/</code>（中英镜像）</td><td class="ok">✓</td></tr>
+    <tr><td>工具链</td><td><code>scripts/</code>（site_checker/full_gate/audit_redirects/site_map）+ <code>data/site_map.json</code></td><td class="ok">✓ 门禁体系</td></tr>
+    <tr><td>重定向</td><td><code>_redirects</code>（真相源 351 条）+ <code>cloudflare-worker.js</code>（生成产物）</td><td class="ok">✓</td></tr>
+    <tr><td>垃圾文件</td><td><code>__pycache__/</code>、<code>CLAUDE.md.original</code>、根目录散图 2 张（6FC3988-*.jpg）入库</td><td class="err">✗ 已确认</td></tr>
+    <tr><td>第三方污染</td><td><code>.claude/plugins/klaude-plugin/</code>（Go/K8s 代码审查插件）216 文件整体入库，与业务无关</td><td class="err">✗ 已确认</td></tr>
+    <tr><td>备份</td><td><code>en_bak/</code> 已不入库（0 tracked）</td><td class="ok">✓</td></tr>
+  </table>
+
+  <h3>1.2 页面创建机制</h3>
+  <p>无静态站点生成器。每页独立完整 HTML，<code>nav/header/footer</code> 逐字复制——实测 <code>class="nav-links"</code> 出现 <b>120 处</b>。近 3 个月才建立模板化补救：<code>_templates/</code>（nav_en/zh、footer_en/zh、page-template）+ scaffold 脚手架。命名三套混存（日期前缀 <code>article_20260503_*</code>、英文标题 <code>FANUC_CRT_to_LCD_*</code>、中文 URL），靠 <code>_redirects</code> 中大量中文 URL → 英文 URL 301 兜底。</p>
+
+  <h3>1.3 配置文件</h3>
+  <table>
+    <tr><th>文件</th><th>状态</th><th>要点</th></tr>
+    <tr><td><code>robots.txt</code></td><td class="ok">✓ 规范</td><td>AI 爬虫白名单（GPTBot/ClaudeBot 允许）、Crawl-delay、双 sitemap、llms.txt 引用</td></tr>
+    <tr><td><code>sitemap.xml</code></td><td class="ok">✓</td><td>450 URL，有效 XML</td></tr>
+    <tr><td><code>_redirects</code></td><td class="warn">⚠ 庞大</td><td>351 条，含大量编码补救；注释自述历史问题（self-redirect/跨目录错配）</td></tr>
+    <tr><td><code>CNAME</code>/<code>BingSiteAuth.xml</code></td><td class="ok">✓</td><td>cncdisplay.com + Bing 验证</td></tr>
+  </table>
+
+  <h3>1.4 代码规范</h3>
+  <table>
+    <tr><th>问题</th><th>实证</th><th>状态</th></tr>
+    <tr><td>CSS 三层混用</td><td>外链 <code>style.css?v=9</code> + 页内 <code>&lt;style&gt;</code> 块 + <b>44 处</b> inline style（产品页单页）</td><td class="err">✗</td></tr>
+    <tr><td>og:title 语法错误</td><td><code>content="...Kongto" CRT to LCD | Kongto"</code> —— 属性值含未转义引号，提前截断</td><td class="err">✗ 已确认</td></tr>
+    <tr><td>多余闭合标签</td><td>产品页 <code>&lt;/script&gt;</code> 9 个 vs <code>&lt;script</code> 8 个</td><td class="err">✗ 已确认</td></tr>
+    <tr><td>nav 硬编码</td><td>全站 120 处重复，改导航需全站批量替换</td><td class="err">✗</td></tr>
+    <tr><td>面包屑</td><td>仅 JSON-LD BreadcrumbList，无可见 HTML 面包屑</td><td class="warn">⚠</td></tr>
+  </table>
+
+  <h3>1.5 SEO 设置</h3>
+  <table>
+    <tr><th>项</th><th>实证</th><th>状态</th></tr>
+    <tr><td>TDK</td><td>title/description/canonical 每页独立</td><td class="ok">✓</td></tr>
+    <tr><td>hreflang</td><td>en/zh-CN/x-default 三组，但曾 150 页错指（commit be17192 已修）</td><td class="warn">⚠ 历史重灾区</td></tr>
+    <tr><td>JSON-LD</td><td>首页 LocalBusiness+ItemList+WebSite；产品页 Product+FAQ+HowTo+Breadcrumb（4 块/页）</td><td class="warn">⚠ 堆砌</td></tr>
+    <tr><td>灾难史</td><td>119 内容页曾误加 noindex（排名崩根因，commit a2c8645 已修）</td><td class="err">✗ 历史教训</td></tr>
+    <tr><td>安全头</td><td>meta http-equiv CSP/X-Content-Type-Options/X-Frame-Options</td><td class="ok">✓</td></tr>
+  </table>
+
+  <h3>1.6 链接结构</h3>
+  <p>导航菜单每页硬编码。内链组织：首页 Featured Models 卡片区（硬编码 12 产品）+ 产品页 <code>View Specs &amp; Guide</code> 橙色按钮（CLAUDE.md 规定顶部唯一文章入口）+ 页底 <code>related-resources</code>。审计时点 <b>断链 0</b>（link_check PASS）、重定向落点全部 200、5 入口门禁全过。曾严重失控（4 产品页 CTA 指错文章、DR5614 跨型号错配），现由 pre-commit 审计兜底。</p>
+
+  <h3>1.7 历史问题痕迹</h3>
+  <table>
+    <tr><th>日期</th><th>commit</th><th>问题</th></tr>
+    <tr><td>08-05</td><td><code>a2c8645</code></td><td><b>119 内容页误加 noindex → 排名崩塌</b></td></tr>
+    <tr><td>08-06</td><td><code>d1b93fc</code></td><td>16 文件编造"免运费/行业最长"虚假声明</td></tr>
+    <tr><td>08-06</td><td><code>be17192</code></td><td>150 个 zh 页 hreflang 自指/指错</td></tr>
+    <tr><td>08-07</td><td><code>1c6bcf3</code></td><td>MDT947 型号交叉引用全站数据错误</td></tr>
+    <tr><td>08-08</td><td>多项</td><td>46 页 meta 债、9 个自循环死壳页、3 个乱码孤儿页</td></tr>
+  </table>
+  <p class="note">注：以上为近期高频 fix 的代表性记录，反映"出事后补窟窿"型开发模式。</p>
+
+  <h2>二、问题清单分级</h2>
+  <table>
+    <tr><th>级别</th><th>问题</th><th>影响</th></tr>
+    <tr><td><span class="badge badge-p0">P0</span></td><td>无 SSG / 模板继承缺失，829→555 页全量重复 nav/header/footer</td><td>维护成本随规模线性暴涨，改导航易漏页</td></tr>
+    <tr><td><span class="badge badge-p0">P0</span></td><td>代码规范失控：CSS 三层混用 + og:title 引号 bug + 多余 <code>&lt;/script&gt;</code></td><td>HTML 语法错影响社交抓取/页面解析</td></tr>
+    <tr><td><span class="badge badge-p1">P1</span></td><td>命名三套并存，靠 351 条重定向兜底</td><td>重定向烂账持续膨胀，审计成本高</td></tr>
+    <tr><td><span class="badge badge-p1">P1</span></td><td>垃圾文件入库（<code>__pycache__</code>/<code>klaude-plugin</code>/散图）</td><td>仓库膨胀、CI 变慢、维护噪音</td></tr>
+    <tr><td><span class="badge badge-p1">P1</span></td><td>SEO 内容矩阵弱：OEM 品牌覆盖少（FANUC 为主）、无报警代码/本地页类长尾资产</td><td>对比竞品流量入口少</td></tr>
+    <tr><td><span class="badge badge-p2">P2</span></td><td>JSON-LD 每页 4 块堆砌</td><td>可维护性差、验证成本高</td></tr>
+    <tr><td><span class="badge badge-p2">P2</span></td><td>面包屑仅 JSON-LD 无可见版</td><td>UX 弱，用户返回路径缺失</td></tr>
+  </table>
+
+  <h2>三、竞品对比（B2B 工业显示器替换）</h2>
+  <table>
+    <tr><th>维度</th><th>cncdisplay.com</th><th>industrial-panels.com</th><th>tristarcnc.com</th><th>i-techcompany.com</th></tr>
+    <tr><td>定位</td><td>CRT→LCD 专精</td><td>CRT 替换 + 军用 COTS</td><td>FANUC 维修 + LCD 改造</td><td>泛工业显示器</td></tr>
+    <tr><td>OEM 兼容</td><td>FANUC 为主（1-2 品牌）</td><td>12+ 品牌</td><td>FANUC/GE FANUC</td><td>通用</td></tr>
+    <tr><td>页面规模</td><td>555</td><td>中</td><td>中偏多</td><td>300-500+</td></tr>
+    <tr><td>SEO 内容矩阵</td><td><b class="err">弱</b></td><td>中（OEM 词覆盖）</td><td><b>强</b>（报警代码+本地页+FAQ）</td><td>强（海量长尾页）</td></tr>
+    <tr><td>询盘工具</td><td>Contact/Quote 页</td><td><b>交叉对照搜索</b>+Quote</td><td>配件搜索+电话+报价</td><td>免费评估表单</td></tr>
+    <tr><td>价格透明</td><td>无</td><td>无</td><td>有（$1,400-1,600）</td><td>无</td></tr>
+    <tr><td>质保</td><td>2 年</td><td>未明示</td><td>1 年</td><td>未明示</td></tr>
+    <tr><td>设计现代化</td><td><b>高</b></td><td>中低</td><td>中</td><td>低</td></tr>
+    <tr><td>移动端</td><td>好</td><td>一般</td><td>一般</td><td>差</td></tr>
+  </table>
+  <p><b>关键洞察：</b>① cncdisplay.com 是唯一 CRT 专精 + 现代设计的站，这是差异化优势；② 最大短板是 SEO 内容矩阵（无报警代码/本地页/交叉对照工具）；③ industrial-panels 的 <b>Replacement Cross-Reference 交叉对照搜索</b>是本领域最强转化工具，值得参考；④ tristarcnc 的价格透明 + FAQ 折叠利于 Featured Snippets。</p>
+
+  <h2>四、评分</h2>
+  <p><b>综合：6.0 / 10</b>（基于实证，区别于外部草稿的 7.0 与早期 Gemini 的 4.0——后者均基于过时状态）</p>
+  <div class="score-row"><span style="width:120px">技术架构</span><div class="score-bar"><div class="score-fill" style="width:70%;background:#2b6cb0"></div></div><b>7.0</b></div>
+  <div class="score-row"><span style="width:120px">代码规范</span><div class="score-bar"><div class="score-fill" style="width:50%;background:#d69e2e"></div></div><b>5.0</b></div>
+  <div class="score-row"><span style="width:120px">SEO 设置</span><div class="score-bar"><div class="score-fill" style="width:70%;background:#2b6cb0"></div></div><b>7.0</b></div>
+  <div class="score-row"><span style="width:120px">内容矩阵</span><div class="score-bar"><div class="score-fill" style="width:50%;background:#d69e2e"></div></div><b>5.0</b></div>
+  <div class="score-row"><span style="width:120px">链接体系</span><div class="score-bar"><div class="score-fill" style="width:65%;background:#38a169"></div></div><b>6.5</b></div>
+  <div class="score-row"><span style="width:120px">工程化</span><div class="score-bar"><div class="score-fill" style="width:60%;background:#38a169"></div></div><b>6.0</b></div>
+
+  <h2>五、整改建议（按优先级）</h2>
+  <h3>短期（止血）</h3>
+  <ol>
+    <li><b>修复代码规范硬伤</b>：og:title 引号 bug（全站 grep 同类问题）、多余 <code>&lt;/script&gt;</code>、清理 CSS 内联层。</li>
+    <li><b>清理仓库垃圾</b>：git rm <code>__pycache__/</code>、<code>CLAUDE.md.original</code>、<code>.claude/plugins/klaude-plugin/</code>（216 文件）、根目录散图迁入 <code>images/</code>。</li>
+    <li><b>统一命名</b>：存量靠 301 兜底，新页强制 kebab-case + 无中文 URL（已有 site-standards 门禁）。</li>
+  </ol>
+  <h3>中期（SEO 增长）</h3>
+  <ol start="4">
+    <li><b>建交叉对照搜索</b>：参考 industrial-panels 的 Replacement Cross-Reference，按原 CRT 型号→推荐 LCD。</li>
+    <li><b>扩 OEM 品牌覆盖</b>：Siemens/Okuma/Mazak/Haas 各建产品页 + 兼容矩阵页（已有 brands/ 目录基础）。</li>
+    <li><b>补 SEO 内容矩阵</b>：报警代码库（仿 tristarcnc）、尺寸/安装方式长尾页（仿 i-techcompany）、技术博客。</li>
+  </ol>
+  <h3>长期（工程化）</h3>
+  <ol start="7">
+    <li><b>评估引入 SSG</b>：当前门禁体系已缓解无 SSG 之痛，但 500+ 页规模下 nav/footer 重复仍是根本债；Hugo/Eleventy 抽离 Layout 后一改全改。</li>
+    <li><b>价格透明试验</b>：仿 tristarcnc 公开起价，B2B 工业品领域稀缺且有效。</li>
+  </ol>
+
+  <div class="footer">
+    <p><b>数据来源：</b>本地仓库核实（555 HTML / 351 redirects / 450 sitemap / 代码规范）/ 活站 curl / 竞品抓取（industrial-panels.com、tristarcnc.com、i-techcompany.com）/ 外部审计草稿（已修正 2 处错误）。</p>
+    <p>本报告为审计快照，基于 2026-08-09 时点。未核实项已标注，禁止推断为已确认事实。</p>
+  </div>
+</div>
+</body>
+</html>
