@@ -20,9 +20,6 @@ EXCLUDE = [
     "audit-verification",
     "workers/",
     "_templates/",
-    "no-display.html",
-    "flickering-screen.html",
-    "image-retention.html",
     "posts/fanuc-a61l-0001-0093-display-faq-en.html",  # replaced by 301 redirect
 ]
 

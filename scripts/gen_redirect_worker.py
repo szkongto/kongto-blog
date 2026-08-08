@@ -110,6 +110,11 @@ addEventListener('fetch', event => {{
     return event.respondWith(fetch(request));
   }}
 
+  // Block access to config files (2026-08-08 audit: _redirects was publicly downloadable)
+  if (path === '/_redirects' || path === '/_headers') {{
+    return event.respondWith(new Response('Not Found', {{ status: 404 }}));
+  }}
+
   // Collapse double slashes → 301 to clean URL
   // Google indexed some // URLs (e.g. /en//posts/...) as duplicates
   if (path.includes('//')) {{

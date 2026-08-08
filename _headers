@@ -25,3 +25,7 @@
 
 /*.pdf
   Cache-Control: public, max-age=86400
+
+/_redirects
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow

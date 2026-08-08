@@ -59,7 +59,7 @@ const REDIRECTS = {
   '/en/posts/article_20260506_三菱MDT962B工业液晶显示器CRT替代方案.html': '/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html',
   '/en/posts/article_20260507_MDT1283B_LCD替换方案.html': '/zh/posts/article_20260507_MDT1283B_LCD.html',
   '/en/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html': '/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html',
-  '/en/posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD.html',
+  '/en/posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html',
   '/en/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html': '/posts/article_20260507_Siemens_6FC3988-7FA20_LCD.html',
   '/en/posts/article_20260508_KTV104_非标定制工业显示器.html': '/posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html',
   '/en/posts/article_20260508_KTV104_非标订制工业显示器.html': '/posts/article_20260508_KTV104_custom_industrial_display.html',
@@ -163,7 +163,9 @@ const REDIRECTS = {
   '/posts/article_20260507_Mazak_CD1472D1M_LCD.html': '/zh/posts/article_20260507_Mazak_CD1472D1M_LCD.html',
   '/posts/article_20260507_Mazak_CD1472D1M_LCD_upgrade.html': '/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html',
   '/posts/article_20260507_Mazak_CD1472D1M_LCD替换方案.html': '/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html',
-  '/posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD.html',
+  '/posts/article_20260507_Sharp_AIQA8DSP40_LCD.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html',
+  '/posts/article_20260507_Sharp_AIQA8DSP40_LCD_upgrade.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html',
+  '/posts/article_20260507_Sharp_AIQA8DSP40_LCD替换方案.html': '/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html',
   '/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html': '/posts/article_20260507_Siemens_6FC3988-7FA20_LCD.html',
   '/posts/article_20260508_KTV104_%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E5%B7%A5%E4%B8%9A%E6%98%BE%E7%A4%BA%E5%99%A8.html': '/posts/article_20260508_KTV104_Custom_Industrial_Display_CN.html',
   '/posts/article_20260508_KTV104_Custom_Industrial_Display.html': '/posts/article_20260508_KTV104_custom_industrial_display.html',
@@ -190,6 +192,8 @@ const REDIRECTS = {
   '/posts/article_20260509_KT819_Industrial_Converter_CN.html': '/posts/article_20260509_KT819_industrial_converter.html',
   '/posts/article_20260509_KT819_工业转换器.html': '/posts/article_20260509_KT819_industrial_converter.html',
   '/posts/article_20260514_FANUC_A61L-0001-0093_LCD液晶显示器升级方案.html': '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html',
+  '/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT.html': '/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
+  '/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT_upgrade.html': '/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
   '/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT替代方案.html': '/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
   '/posts/article_20260522_Mazak_DR5614_LCD_CRT%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88.html': '/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html',
   '/posts/article_20260522_Mazak_DR5614_LCD_CRT.html': '/zh/posts/article_20260522_Mazak_DR5614_LCD_CRT.html',
@@ -250,7 +254,7 @@ const REDIRECTS = {
   '/posts/mazak-c5470ns-lcd-replacement.html': '/posts/article_20260508_Mazak_C5470NS_CRT_LCD_Case.html',
   '/posts/mazak-cd1472-lcd-replacement-guide.html': '/products/mazak-cd1472-lcd-upgrade.html',
   '/posts/mazak-cd1472d1m-lcd-replacement.html': '/products/mazak-cd1472-lcd-upgrade.html',
-  '/posts/mazak-dr5614-lcd-replacement.html': '/products/mazak-c5470ns-lcd-upgrade.html',
+  '/posts/mazak-dr5614-lcd-replacement.html': '/products/mazak-dr5614-lcd-upgrade.html',
   '/posts/mazak-mdt-1283b-lcd-replacement.html': '/products/mazak-mdt1283b-lcd-upgrade.html',
   '/posts/mazak-monitor-replacement-2026-07-06': '/brands/MAZAK.html',
   '/posts/mitsubishi-bm09df-lcd-replacement.html': '/products/mitsubishi-bm09df-lcd-upgrade.html',
@@ -322,7 +326,9 @@ const REDIRECTS = {
   '/social_20260501_数控显示器升级市场动态与产品速递.html': '/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html',
   '/used-display-recycling-faq-top10-zh.html': '/zh/posts/faq_20260501_CNC_display_replacement_FAQ.html',
   '/zh/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html': '/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html',
+  '/zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_upgrade.html': '/zh/posts/article_20260507_Sharp_AIQA8DSP40_LCD_Replacement.html',
   '/zh/posts/article_20260507_Siemens_6FC3998-7FA20_LCD.html': '/zh/posts/article_20260507_Siemens_6FC3988-7FA20_LCD.html',
+  '/zh/posts/article_20260522_FANUC_A61L_0001_0097_LCD_CRT_upgrade.html': '/zh/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html',
   '/zh/posts/fanuc-crt-to-lcd-step-by-step-guide.html': '/posts/fanuc-crt-to-lcd-step-by-step-guide.html',
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
 };
@@ -342,6 +348,11 @@ addEventListener('fetch', event => {
   // Skip root
   if (path === '/' || path === '') {
     return event.respondWith(fetch(request));
+  }
+
+  // Block access to config files (2026-08-08 audit: _redirects was publicly downloadable)
+  if (path === '/_redirects' || path === '/_headers') {
+    return event.respondWith(new Response('Not Found', { status: 404 }));
   }
 
   // Collapse double slashes → 301 to clean URL
