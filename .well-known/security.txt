@@ -1,5 +1,5 @@
 # Security Contact
-Contact: mailto:szkongto01@foxmail.com
+Contact: mailto:info@cncdisplay.com
 Preferred-Languages: zh, en
 Canonical: https://cncdisplay.com/.well-known/security.txt
 Expires: 2027-06-19T00:00:00.000Z

@@ -21,7 +21,7 @@
 ## Contact
 
 - **Web:** [https://cncdisplay.com](https://cncdisplay.com)
-- **Email:** szkongto01@foxmail.com
+- **Email:** info@cncdisplay.com
 - **Phone:** +86-136-8688-9647
 - **Location:** Shenzhen, Guangdong, China
 
