@@ -6,7 +6,6 @@ const REDIRECTS = {
   '/article_20260501_CGA_EGA显示器改造为RGBHV工业显示器实战指南.html': '/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html',
   '/article_20260501_FANUC_0i系统显示器常见问题与解决方档.html': '/posts/FANUC_0i_System_Display_FAQ_Solutions.html',
   '/article_20260501_工业显示器RGBHV改造全攻略_从CGA_EGA到高清显示.html': '/posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html',
-  '/baidu_verify_codeva-MOcuLxbSCp.html': '/index.html',
   '/brands/': '/brands/FANUC.html',
   '/brands/FANUC': '/brands/FANUC.html',
   '/brands/HAAS': '/brands/HAAS.html',
