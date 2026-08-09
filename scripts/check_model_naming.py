@@ -14,8 +14,12 @@ SKIP = {'en_bak','_archive','_archive_audit','_templates','node_modules','.git',
 TOOL_PAGES = {'redirect_audit_report.html','sitemap.html','404.html','robots.txt',
               'baidu_verify_codeva-MOcuLxbSCp.html','google7478b8e743977291.html'}
 
-# 下划线型号: 大写字母开头含数字, 至少2组下划线分隔数字组
-UNDER_MODEL = re.compile(r'(?<![A-Za-z0-9])([A-Z]{1,6}[A-Z0-9]*\d_[A-Z0-9]+_[A-Z0-9]+)(?![A-Za-z0-9])')
+# 下划线型号: 大写字母开头、含数字、下划线分隔的型号编号 (SM0901_579417_TA / A61L_0001_0093)
+# 三段式: [大写开头字母数字][数字]_[含数字组]_[含数字组]
+# 2026-08-09 修复: 原正则 [A-Z0-9]*\d_ 要求下划线前是数字, 漏掉 A61L_0001_0093 (下划线前是字母 L)
+# 新正则首组以大写字母开头且含至少1数字, 后两组各含至少1数字, 排除纯日期(2026_08_09 无大写)和单词
+UNDER_MODEL = re.compile(
+    r'(?<![A-Za-z0-9])([A-Z][A-Za-z0-9]*\d[A-Za-z0-9]*_[A-Za-z0-9]*\d[A-Za-z0-9]*_[A-Za-z0-9]*\d[A-Za-z0-9]*)(?![A-Za-z0-9])')
 
 files = [f.replace('\\','/') for f in glob.glob('**/*.html', recursive=True)]
 files = [f for f in files if not any(f.startswith(s+'/') or '/node_modules/' in f for s in SKIP)]
