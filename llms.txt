@@ -9,6 +9,8 @@
 CRT-to-LCD retrofit modules for legacy CNC display systems across all major brands.
 Plug-and-play replacement using original connectors and mounting. No CNC parameter
 changes required. Custom solutions for non-standard signal interfaces available.
+Replacement LCDs use the original CRT's connector pinout and are drop-in — no
+rewiring, no machine modification.
 
 ## CNC Brands Covered
 - FANUC: A61L series (0093, 0094, 0092, 0096, 0097, 0090, 0074, 0086, 0072, 0076, 0095), 0-M, 0-T, 0i, 16i, 18i, 21i, OM-D, A02B series
@@ -21,6 +23,76 @@ changes required. Custom solutions for non-standard signal interfaces available.
 - Toshiba: D9MM-11A, D14CM-01A, D15CM-04A
 - Matsushita: KF-M7099H, TX-1450AB
 - Other: Totoku, NUM, FAGOR, KME, Delem, Planeta (KBA)
+
+## Replacement Specs by Model
+Kongto LCD replacement modules. Every replacement uses the original CRT's
+connector and mounts in the original frame. Signal is converted internally —
+machine controls see an unchanged video signal.
+
+- FANUC A61L-0001-0093: 9" mono CRT → 8" TFT-LCD, 800x600, 350-450 cd/m², 50,000+ hrs,
+  DC 24V, 20-pin Honda MR-20M (direct compatible). https://cncdisplay.com/products/fanuc-a61l-0001-0093-lcd-upgrade.html
+- FANUC A61L-0001-0116 (0i-D): 9" → 8" TFT-LCD, 800x600, 350-450 cd/m², DC 24V.
+  https://cncdisplay.com/products/fanuc-a61l-0001-0116-lcd-upgrade.html
+- FANUC MDT947B / A61L-0001-0092: 9" → 8" TFT-LCD, 800x600, DC 24V, 20-pin Honda.
+  https://cncdisplay.com/products/fanuc-mdt947b-1a-lcd-upgrade.html
+- FANUC A61L-0001-0094 / A02B-0099-C094: 14" color CRT → 12.1" TFT-LCD, 800x600, 400 cd/m².
+  https://cncdisplay.com/products/fanuc-a61l-0001-0094-lcd-upgrade.html
+- Mitsubishi MDT962B / BM09DF / FCUA-CT100: 9" mono CRT → 8" TFT-LCD, 800x600,
+  350-450 cd/m², AC 110-220V, Mitsubishi 10-pin, TTL/LVDS.
+  https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html
+- Mitsubishi MDT925PS: 9" → 8" TFT-LCD, 800x600, AC 110-220V.
+  https://cncdisplay.com/products/mitsubishi-mdt925ps-lcd-upgrade.html
+- Mitsubishi MDT-1283B / Mazak MDT1283B: 12" mono CRT → 10.4" TFT-LCD, 800x600, 400 cd/m²,
+  AC 110-220V, Mazak 3-row 15-pin. https://cncdisplay.com/products/mazak-mdt1283b-lcd-upgrade.html
+- Siemens SM0901 (579417-TA): 9" mono CRT → 8" TFT-LCD, 800x600, 350-450 cd/m²,
+  AC 110-220V, Siemens 2-row 16-pin, TTL. https://cncdisplay.com/products/siemens-sm0901-lcd-upgrade.html
+- Siemens 6FC3988-7FA20: 9" mono CRT → 8" TFT-LCD, 800x600, Siemens 2-row 16-pin, TTL.
+  https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html
+- Siemens 6FC5103: 10.4" CRT → 10.4" TFT-LCD, 800x600, 400 cd/m², AC 110-220V.
+  https://cncdisplay.com/products/siemens-6fc5103-lcd-upgrade.html
+- Mazak 14" color (CD1472, C5470NS, DR5614, AIQA8DSP40): 14" → 12.1" TFT-LCD, 800x600, 400 cd/m².
+  https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html
+- Mazak DR5614 (Mazatrol T-32): 14" → 12.1" TFT-LCD.
+  https://cncdisplay.com/products/mazak-dr5614-lcd-upgrade.html
+- Okuma OSP5000 / OSP5020: 12" mono CRT → 10.4" TFT-LCD, 800x600, 400 cd/m², AC 110-220V.
+  https://cncdisplay.com/products/okuma-osp5000-lcd-upgrade.html
+- Okuma OSP7000: 12" → 10.4" TFT-LCD, 800x600, 400 cd/m².
+  https://cncdisplay.com/products/okuma-osp7000-crt-lcd-upgrade.html
+- Haas VF 9-pin mono / 12-inch 9-pin: 9"→8" or 12"→10.4" TFT-LCD, 9-pin D-sub, AC 110-220V.
+  https://cncdisplay.com/products/haas-12inch-9pin-crt-lcd-upgrade.html
+- Haas 28HM-NM4 (93-5220C): 12" → 10.4" TFT-LCD.
+  https://cncdisplay.com/products/haas-28hm-nm4-lcd-upgrade.html
+- Heidenhain BC110: 9" mono CRT → 8" TFT-LCD, 800x600, DC 24V.
+  https://cncdisplay.com/products/heidenhain-bc110-lcd-upgrade.html
+- Toshiba D9MM-11A: 9" mono CRT → 8" TFT-LCD, 800x600, 20-pin Honda MR-20M, TTL.
+  https://cncdisplay.com/products/toshiba-d9mm-11a-lcd-upgrade.html
+- Toshiba D14CM-01A: 14" color → 12.1" TFT-LCD, 800x600, 400 cd/m².
+  https://cncdisplay.com/products/toshiba-d14cm-01a-lcd-upgrade.html
+- Matsushita TX1450AB: 14" color → 12.1" TFT-LCD, AC 110-220V.
+  https://cncdisplay.com/products/matsushita-tx1450ab-lcd-upgrade.html
+- FANUC 0-M/0-T: 9" mono CRT → 9" TFT-LCD, 800x600, 350-450 cd/m², DC 24V, 20-pin Honda.
+  https://cncdisplay.com/products/fanuc-0m-0t-crt-lcd-upgrade.html
+
+Full spec table for every model lives on its product page above (Spec / Original CRT / Kongto LCD).
+
+## Frequently Asked Questions
+- Does the replacement work with my CNC machine? Yes. The LCD uses the same connector
+  and pinout as the original CRT, and the video signal is converted internally. No CNC
+  parameter changes and no machine modification are needed. It is plug-and-play.
+- Can you match a non-listed FANUC A61L-xxxx-xxxx part number? Usually yes. Most FANUC
+  9" and 14" CRTs map to a standard 8" or 12.1" replacement. Send your part number via
+  the quote form and we confirm compatibility the same day.
+- What about the high-voltage CRT risk? The replacement runs on low-voltage DC (24V) or
+  AC 110-220V instead of the 10-15kV CRT anode supply — safer and longer-lived.
+- What is the LCD lifetime? 50,000+ hours vs roughly 15,000 hours for a worn CRT tube.
+  Brightness holds at 350-450 cd/m² versus ~200 cd/m² for an aging tube.
+- Do I keep the original brightness/contrast controls? Yes, the original front-panel
+  controls continue to work with the replacement module.
+- Shipping to my country? We ship factory-direct worldwide — USA, Germany, UK, Japan,
+  South Korea, Singapore, India, Thailand, Malaysia, Vietnam, Philippines. See the
+  country pages below for details.
+- Do you offer custom sizes/signals? Yes. Non-standard interfaces and sizes (KTV custom
+  series) are available for OEM and batch orders.
 
 ## Important Resources
 - Product catalog by brand: https://cncdisplay.com/products/
