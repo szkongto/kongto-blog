@@ -379,7 +379,7 @@
 /zh/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html /zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
 /zh/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html /zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
 /zh/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
-/zh/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
+/zh/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /zh/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html /posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html 301
 /zh/posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html /posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
 /zh/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html /posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html 301
@@ -447,5 +447,9 @@
 # 2026-08-09 0093/0074 崩盘修复：合并双文章页 + 修0074 404
 /posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /posts/FANUC_A61L_0001_0074_LCD_CNC_Upgrade_Replacement.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
+# 2026-08-10 0093 蚕食池收敛：薄模板文章页(与B重复无独有价值) 301→B权威页
+/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
+/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html /zh/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
+/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /posts/fanuc-a61l-0001-0074-crt-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
 /posts/fanuc-a61l-0001-0074-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
