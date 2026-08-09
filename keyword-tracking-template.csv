@@ -1,3 +1,4 @@
+﻿﻿﻿﻿品牌,型号/关键词,URL,优先级,是否收录,当前排名,内容完整度(1-5),下次检查日期,备注
 ﻿品牌,型号/关键词,URL,优先级,是否收录,当前排名,内容完整度(1-5),下次检查日期,备注
 FANUC,A61L-0001-0072,/products/fanuc-a61l-0001-0072-lcd-upgrade.html,,,,,,
 FANUC,A61L-0001-0074,/products/fanuc-a61l-0001-0074-lcd-upgrade.html,,,,,,
@@ -24,7 +25,7 @@ Mitsubishi,KF-M7099H,/products/mitsubishi-kf-m7099h-lcd-upgrade.html,,,,,,
 Mitsubishi,Mitsubishi MDT962B LCD replacement,,高,,,,,
 Mitsubishi,Mitsubishi CRT to LCD replacement,,中（品牌词）,,,,,
 Siemens,6FC3988-7FA20,/products/siemens-6fc3988-7fa20-lcd-upgrade.html,,,,,,
-Siemens,6FC3998-7FA20,/products/siemens-6fc3998-7fa20-lcd-upgrade.html,,,,,,
+Siemens,Siemens 810T / 820T LCD replacement,/products/siemens-810t-820t-lcd-upgrade.html,高,新页2026-08-09,,,,9寸单色CRT->8寸TFT(用户确认)
 Siemens,6FC5103-0AB01,/products/siemens-6fc5103-lcd-upgrade.html,,,,,,
 Siemens,6FC5203,/products/siemens-6fc5203-lcd-upgrade.html,,,,,,
 Siemens,SM0901,/products/siemens-sm0901-lcd-upgrade.html,,,,,,
@@ -33,7 +34,7 @@ Siemens,Siemens SINUMERIK CRT to LCD replacement,,高,,,,,SM1200+840C 1周后查
 Siemens,Siemens 6FC3988-7FA20 LCD,,高,,,,,SM1200+840C 1周后查收录
 Siemens,Siemens SM0901 display replacement,,中,,,,,SM1200+840C 1周后查收录
 Siemens,Siemens SM1200 LCD upgrade,,中（新页）,,,,,SM1200+840C 1周后查收录
-Siemens,Siemens 840C CRT replacement,,中（新页）,,,,,SM1200+840C 1周后查收录
+Siemens,Siemens 840C / 840D / 880 CRT to LCD,/products/siemens-840c-840d-880-lcd-upgrade.html,高,新页2026-08-09,,,,12寸单色CRT->10.4寸TFT(用户确认)
 Mazak,CD1472-D1M,/products/mazak-cd1472-lcd-upgrade.html,,,,,,
 Mazak,C5470NS,/products/mazak-c5470ns-lcd-upgrade.html,,,,,,
 Mazak,DR5614,/products/mazak-dr5614-lcd-upgrade.html,,,,,,

@@ -811,7 +811,8 @@
    "zh/products/index.html",
    "zh/products/no-display.html",
    "zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html",
-   "zh/products/siemens-6fc5103-lcd-upgrade.html"
+   "zh/products/siemens-6fc5103-lcd-upgrade.html",
+   "zh/products/siemens-810t-820t-lcd-upgrade.html"
   ],
   "6FC3997": [
    "compatibility-matrix.html",
@@ -2379,6 +2380,8 @@
   "zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html": "products/siemens-6fc3988-7fa20-lcd-upgrade.html",
   "zh/products/siemens-6fc5103-lcd-upgrade.html": "products/siemens-6fc5103-lcd-upgrade.html",
   "zh/products/siemens-6fc5203-lcd-upgrade.html": "products/siemens-6fc5203-lcd-upgrade.html",
+  "zh/products/siemens-810t-820t-lcd-upgrade.html": "products/siemens-810t-820t-lcd-upgrade.html",
+  "zh/products/siemens-840c-840d-880-lcd-upgrade.html": "products/siemens-840c-840d-880-lcd-upgrade.html",
   "zh/products/siemens-sm0901-lcd-upgrade.html": "products/siemens-sm0901-lcd-upgrade.html",
   "zh/products/siemens-sm1200-lcd-upgrade.html": "products/siemens-sm1200-lcd-upgrade.html",
   "zh/products/toshiba-d14cm-01a-lcd-upgrade.html": "products/toshiba-d15cm-lcd-upgrade.html",
