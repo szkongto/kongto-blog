@@ -25,6 +25,7 @@ GATES = [
     ("redirect_audit",      ["python", "scripts/audit_redirects.py"],          False),
     ("jsonld",              ["python", "scripts/validate_jsonld.py"],          False),
     ("aggressive_dup",      ["python", "scripts/audit_aggressive.py"],         True),
+    ("model_naming",        ["python", "scripts/check_model_naming.py"],        True),
 ]
 
 
