@@ -1,0 +1,38 @@
+{
+  "description": "AI 可见度监测配置。对核心型号 query 问 Perplexity/ChatGPT,判断 cncdisplay.com 是否被引用+引用深度。每次重跑用同一组 query 保证可比。",
+  "llms": ["perplexity", "chatgpt"],
+  "queries": [
+    {
+      "model": "FANUC A61L-0001-0093",
+      "query": "What is the best replacement LCD display for a FANUC A61L-0001-0093 CRT monitor on a CNC machine?",
+      "note": "Perplexity 已 #1,主看 ChatGPT 是否能从'引 PDF'进步到'引产品页'"
+    },
+    {
+      "model": "Siemens 6FC3988 / SM0901",
+      "query": "What LCD replacement works for a Siemens SINUMERIK 6FC3988-7FA20 / SM0901 9-inch CRT display?",
+      "note": "Perplexity 已 #1; ChatGPT 完全缺席,主攻目标"
+    },
+    {
+      "model": "Mitsubishi MDT962B",
+      "query": "What is a good LCD replacement for a Mitsubishi MDT962B (or BM09DF/FCUA-CT100) CNC display?",
+      "note": "ChatGPT 曾引主页排 #4 带后缀 caveat,看是否进步到产品页"
+    },
+    {
+      "model": "FANUC A61L-0001-0116",
+      "query": "What LCD monitor replaces a FANUC A61L-0001-0116 9-inch CRT on a 0i-D system?",
+      "note": "ChatGPT 首轮未测,补测基线"
+    },
+    {
+      "model": "Mazak MDT1283B / DR5614",
+      "query": "What LCD upgrade replaces a Mazak MDT1283B or DR5614 Mazatrol CRT display?",
+      "note": "Perplexity 曾引 4 次但 Dynamic 排 #1; 看 llms.txt 扩后能否超越"
+    }
+  ],
+  "score_criteria": {
+    "referenced": "answer 是否出现 cncdisplay.com",
+    "rank": "cncdisplay 在推荐列表中的位次 (1=首位,0=未入推荐)",
+    "cited_url_type": "被引 URL 类型: product_page / home / pdf / article / none",
+    "reason_given": "是否给出选中理由 (agent 越信任越给理由)"
+  },
+  "baseline": "baseline_2026-08-09.json"
+}

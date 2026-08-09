@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-09",
+  "note": "基线抽测 —— llms.txt 扩展(commit 453ff071)之前。用 Bright Data web_data_*_ai_insights 跑核心型号 query。Kongto=cncdisplay 品牌名。raw_fragment 留空 = 原始回答在会话转录里,重跑时用同一 query 可比。",
+  "results": [
+    {
+      "model": "FANUC A61L-0001-0093",
+      "llm": "perplexity",
+      "referenced": true,
+      "rank": 1,
+      "cited_url_type": "product_page",
+      "reason_given": true,
+      "note": "cncdisplay #1,引具体产品页"
+    },
+    {
+      "model": "FANUC A61L-0001-0093",
+      "llm": "chatgpt",
+      "referenced": true,
+      "rank": 2,
+      "cited_url_type": "pdf",
+      "reason_given": false,
+      "note": "被引(/en/docs/*.pdf)但 Dynamic Displays #1 —— 主攻对象"
+    },
+    {
+      "model": "Siemens 6FC3988 / SM0901",
+      "llm": "perplexity",
+      "referenced": true,
+      "rank": 1,
+      "cited_url_type": "product_page",
+      "reason_given": true,
+      "note": "Kongto #1"
+    },
+    {
+      "model": "Siemens 6FC3988 / SM0901",
+      "llm": "chatgpt",
+      "referenced": false,
+      "rank": 0,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "note": "完全缺席 —— 主攻对象"
+    },
+    {
+      "model": "Mitsubishi MDT962B",
+      "llm": "perplexity",
+      "referenced": true,
+      "rank": 1,
+      "cited_url_type": "product_page",
+      "reason_given": true,
+      "note": "Kongto #1"
+    },
+    {
+      "model": "Mitsubishi MDT962B",
+      "llm": "chatgpt",
+      "referenced": true,
+      "rank": 2,
+      "cited_url_type": "home",
+      "reason_given": false,
+      "note": "引主页 cncdisplay.com/?utm 排 #4,仅后缀不定时推荐"
+    },
+    {
+      "model": "FANUC A61L-0001-0116",
+      "llm": "perplexity",
+      "referenced": true,
+      "rank": 1,
+      "cited_url_type": "product_page",
+      "reason_given": true,
+      "note": "Kongto #1"
+    },
+    {
+      "model": "FANUC A61L-0001-0116",
+      "llm": "chatgpt",
+      "referenced": false,
+      "rank": 0,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "note": "首轮未测 —— 补基线"
+    },
+    {
+      "model": "Mazak MDT1283B / DR5614",
+      "llm": "perplexity",
+      "referenced": true,
+      "rank": 2,
+      "cited_url_type": "product_page",
+      "reason_given": true,
+      "note": "被引 4 次但 Dynamic Displays #1"
+    },
+    {
+      "model": "Mazak MDT1283B / DR5614",
+      "llm": "chatgpt",
+      "referenced": false,
+      "rank": 0,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "note": "完全缺席"
+    }
+  ]
+}
