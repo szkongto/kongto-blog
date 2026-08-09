@@ -26,6 +26,7 @@ GATES = [
     ("jsonld",              ["python", "scripts/validate_jsonld.py"],          False),
     ("aggressive_dup",      ["python", "scripts/audit_aggressive.py"],         True),
     ("model_naming",        ["python", "scripts/check_model_naming.py"],        True),
+    ("image_size",          ["python", "scripts/check_image_size.py"],          True),
 ]
 
 
