@@ -7,7 +7,7 @@
 <link rel="alternate" hreflang="zh-CN" href="https://cncdisplay.com/zh/posts/siemens-810t-820t-crt-lcd-upgrade-guide.html">
 <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/zh/posts/siemens-810t-820t-crt-lcd-upgrade-guide.html">
 <link rel="alternate" hreflang="en" href="https://cncdisplay.com/posts/siemens-810t-820t-crt-lcd-upgrade-guide.html" />
-<link rel="stylesheet" href="/css/style.css?v=9">
+<link rel="stylesheet" href="/css/style.css?v=13">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Siemens Sinumerik 810T/820T CRT转LCD升级指南">
 <meta property="og:description" content="Siemens 810T 820T CRT转LCD升级完整指南。6FC3988-7FA20、6FC3988-7FA21。即插即用，30分钟安装。">
@@ -40,7 +40,7 @@
                 <a href="/zh/case-studies.html">案例</a>
                 <a href="/zh/docs/">下载</a>
                 <a href="/zh/about.html">关于</a>
-                <a href="/zh/contact.html" style="color:#ff9800;font-weight:700;">获取报价</a>
+                <a href="/zh/contact.html" class="text-accent">获取报价</a>
             </div>
             <a href="/zh/search.html" class="nav-search">🔍 搜索</a>
             <div class="lang-switch">
@@ -50,10 +50,10 @@
             </div>
         </nav>
     </header>
-<main style="max-width:980px;margin:0 auto;padding:20px;">
+<main class="w-max980-pad">
 <article>
 <h1>Siemens Sinumerik 810T/820T CRT转LCD升级 — 完整指南</h1>
-<p class="meta" style="color:#666;font-size:0.9rem;">发布日期：2026年7月12日 | 更新：2026年7月12日 | 作者: szkongto01</p>
+<p class="meta text-small">发布日期：2026年7月12日 | 更新：2026年7月12日 | 作者: szkongto01</p>
 <img width="400" height="300" src="/images/siemens/siemens-579417ta-1.webp" loading="lazy" alt="Siemens Sinumerik 810T LCD替换模块" style="width:100%;border-radius:12px;margin:1.5rem 0;;height:auto">
 <h2>概述</h2>
 <p>Siemens Sinumerik 810T和820T是欧洲机床中使用最广泛的CNC控制系统之一——应用于Deckel Maho、Hermle、DMG及众多德国制造的机床。这些控制系统使用9寸单色或彩色CRT显示器，目前已远超设计寿命。如果您的810T或820T显示器出现画面变暗、闪烁或黑屏，LCD升级是最经济有效的解决方案。</p>
@@ -61,7 +61,7 @@
 <strong>⚠ 重要提示：</strong> 与使用DC 24V的FANUC和三菱不同，Siemens Sinumerik CRT使用<strong>AC 110V或AC 220V</strong>供电。我们的LCD模块内置宽范围AC电源，兼容两种电压。订购前请确认您的机床电压。
 </div>
 <h2>兼容的Siemens型号</h2>
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<div class="table-scroll-mt"><table class="spec-table">
 <tr><th>Siemens控制系统</th><th>CRT模块</th><th>屏幕</th><th>接口</th><th>供电</th><th>LCD套件</th></tr>
 <tr><td>Sinumerik 810T (GA2/GA3)</td><td>6FC3988-7FA20</td><td>9寸单色</td><td>DB-25</td><td>AC 110/220V</td><td>KTO-SI9M — </td></tr>
 <tr><td>Sinumerik 820T (GA2/GA3)</td><td>6FC3988-7FA20</td><td>9寸单色</td><td>DB-25</td><td>AC 110/220V</td><td>KTO-SI9M — </td></tr>
@@ -77,7 +77,7 @@
 <li><strong>拍照</strong>CRT标签并发送至<a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a>——我们将在24小时内确认兼容性。</li>
 </ol>
 <h2>CRT与LCD规格对比</h2>
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<div class="table-scroll-mt"><table class="spec-table">
 <tr><th>规格</th><th>原装Siemens CRT（6FC3988）</th><th>Kongto LCD升级</th></tr>
 <tr><td>显示类型</td><td>9寸单色CRT</td><td>8.4寸工业TFT LCD</td></tr>
 <tr><td>分辨率</td><td>640×400（CRT）</td><td>800×600（LCD）— 清晰2倍</td></tr>
@@ -109,7 +109,7 @@
 </ol>
 <h2>信号引脚定义 — Siemens DB-25转LCD</h2>
 <p>Siemens 810T/820T通过DB-25接口输出标准RGB视频信号。我们的LCD模块可直接接收此信号——无需转换器或适配器。</p>
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<div class="table-scroll-mt"><table class="spec-table">
 <tr><th>DB-25引脚</th><th>信号</th><th>颜色</th><th>说明</th></tr>
 <tr><td>1</td><td>地线</td><td>黑色</td><td>信号公共端</td></tr>
 <tr><td>2</td><td>红色视频</td><td>红色</td><td>模拟RGB（0.7V p-p）</td></tr>
@@ -142,11 +142,11 @@
 <strong>⚠ 安全提示：</strong> Siemens Sinumerik CRT含有高压组件（阳极电压10-15 kV）。请勿自行打开或维修CRT。放电时间：断电后至少3分钟。
 </div>
 <h2>维修vs替换 — 成本分析</h2>
-<div style="overflow-x:auto;margin:1rem 0;"><table class="spec-table">
+<div class="table-scroll-mt"><table class="spec-table">
 <tr><th>方案</th><th>成本</th><th>停机时间</th><th>结果</th></tr>
 <tr><td>CRT维修（换显像管）</td><td>–</td><td>3–10天</td><td>临时解决——CRT仍会再次故障（6–18个月）</td></tr>
 <tr><td>二手CRT（二手市场）</td><td>–</td><td>不定</td><td>状态不明——可能立即故障</td></tr>
-<tr><td style="background:#e8f5e9;font-weight:700;">Kongto LCD升级</td><td style="background:#e8f5e9;font-weight:700;"></td><td style="background:#e8f5e9;font-weight:700;">30分钟</td><td style="background:#e8f5e9;font-weight:700;">50,000+小时寿命，2年质保</td></tr>
+<tr><td class="cell-green-soft">Kongto LCD升级</td><td class="cell-green-soft"></td><td class="cell-green-soft">30分钟</td><td class="cell-green-soft">50,000+小时寿命，2年质保</td></tr>
 </table></div>
 <p>810T和820T CRT已被Siemens停产超过15年。OEM替换件已不可得。二手商处的二手CRT本身已使用15–25年且正在老化。LCD升级是唯一实用的长期解决方案。</p>
 <h2>为什么Siemens 810T/820T LCD升级值得选择</h2>
@@ -167,9 +167,9 @@
 </ul>
 <p><strong>邮箱：</strong> <a href="mailto:info@cncdisplay.com">info@cncdisplay.com</a> | <strong>电话：</strong> +86-13686889647</p>
 </article>
-<div class="related-articles" style="background:#f0f7ff;padding:20px;border-radius:8px;margin:2rem 0;">
-    <h3 style="margin-top:0;color:#1e40af;">相关文章</h3>
-    <ul style="margin-bottom:0;">
+<div class="related-articles box-blue-lg">
+    <h3 class="text-indigo-mt0">相关文章</h3>
+    <ul class="mb-zero">
         <li><a href="/zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html">Siemens Sinumerik CRT转LCD指南</a> — 完整系列覆盖</li>
         <li><a href="/zh/posts/siemens-display-upgrade-cost-roi-analysis.html">Siemens显示器升级成本与ROI分析</a></li>
         <li><a href="/zh/posts/siemens-sinumerik-display-troubleshooting-guide.html">Siemens Sinumerik显示器故障排查</a></li>
@@ -194,7 +194,7 @@
                 <a href="/zh/terms.html">服务条款</a>
             </div>
             <p class="footer-copy">© 2013-2026 深圳市江图科技有限公司 | 龙岗区横岗街道深坑综合楼2号楼C栋4楼 | +86-13686889647 | info@cncdisplay.com</p>
-	    <p style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01。</p>
+	    <p class="footer-micro">本网站所有内容均为原创，包括文字、图片、技术参数、解决方案等。受著作权法保护，未经授权禁止转载或复制。作者：szkongto01。</p>
         </div>
             <div class="footer-links">
                 <a href="/zh/glossary.html">术语表</a>
