@@ -444,3 +444,8 @@
 /zh/posts/used-display-recycling-faq-top10-zh.html /posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html 301
 /zh/products/9mvb3-0a/index.html /products/ 301
 /zh/products/a61l-0001-0094/index.html /products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
+# 2026-08-09 0093/0074 崩盘修复：合并双文章页 + 修0074 404
+/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
+/posts/FANUC_A61L_0001_0074_LCD_CNC_Upgrade_Replacement.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
+/posts/fanuc-a61l-0001-0074-crt-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
+/posts/fanuc-a61l-0001-0074-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
