@@ -5,7 +5,7 @@
 <meta name="description" content="Complete CNC CRT display troubleshooting guide. Black screen, dim display, flickering, burn-in, color issues — diagnose and fix legacy CNC monitor problems.">
 <meta name="keywords" content="CNC CRT troubleshooting, CNC display black screen fix, CRT flickering repair, CNC monitor no display, industrial CRT failure diagnosis">
 <link rel="canonical" href="https://cncdisplay.com/posts/cnc-crt-troubleshooting-hub.html">
-<link rel="stylesheet" href="/css/style.css?v=9">
+<link rel="stylesheet" href="/css/style.css?v=13">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why did my CNC CRT display go black?","acceptedAnswer":{"@type":"Answer","text":"The most common cause is CRT high-voltage section failure. The flyback transformer or horizontal output transistor fails, cutting the HV supply to the CRT anode. The CNC control still runs — you just can't see the display. An LCD replacement restores it."}},{"@type":"Question","name":"Can a dim CRT be repaired?","acceptedAnswer":{"@type":"Answer","text":"CRT dimming is caused by phosphor degradation and electron gun emission loss — both are permanent physical wear. No repair can restore original brightness. LCD replacement is the only effective solution."}},{"@type":"Question","name":"What causes CRT screen flickering?","acceptedAnswer":{"@type":"Answer","text":"Flickering is usually caused by failing electrolytic capacitors in the CRT's power supply or deflection circuit. Replacing capacitors can temporarily fix it, but the underlying CRT wear continues. LCD replacement eliminates flicker permanently."}}]}</script>
     <link rel="alternate" hreflang="x-default" href="https://cncdisplay.com/posts/cnc-crt-troubleshooting-hub.html">
     <meta property="og:type" content="article">
@@ -18,8 +18,8 @@
     <meta name="twitter:description" content="Complete CNC CRT display troubleshooting guide. Black screen, dim display, flickering, burn-in, color issues — diagnose and fix legacy CNC monitor problems.">
     
 <body>
-<header><nav><a href="/" class="logo">Kongto Technology</a><div class="nav-links"><a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a><a href="/posts/">Articles</a><a href="/products/">Products</a><a href="/quote.html" style="color:#ff9800;font-weight:700;">Get Quote</a></div></nav></header>
-<main style="max-width:860px;margin:0 auto;padding:20px;">
+<header><nav><a href="/" class="logo">Kongto Technology</a><div class="nav-links"><a href="/">Home</a><a href="/compatibility-matrix.html">Compatibility</a><a href="/posts/">Articles</a><a href="/products/">Products</a><a href="/quote.html" class="text-accent">Get Quote</a></div></nav></header>
+<main class="w-max860">
 <article>
 <h1>CNC CRT Display Troubleshooting Guide — Diagnose & Fix Common Faults</h1>
 <p>CRT displays on legacy CNC equipment fail in predictable ways. This guide helps you diagnose the symptom, understand the root cause, and choose the right fix — whether it's a simple cable reseat, a component-level repair, or an LCD upgrade.</p>
@@ -29,17 +29,17 @@
 </div>
 
 <h2>Quick Symptom Lookup</h2>
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
-<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">Symptom</th><th style="padding:10px;border:1px solid #333;">Likely Cause</th><th style="padding:10px;border:1px solid #333;">Fix</th></tr></thead>
+<table class="tbl-full">
+<thead><tr class="bg-navy"><th class="cell-dark">Symptom</th><th class="cell-dark">Likely Cause</th><th class="cell-dark">Fix</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px;border:1px solid #e2e8f0;"><a href="/knowledge/cnc-monitor-troubleshooting-guide.html">Black screen / no display</a></td><td>HV section failure, flyback transformer, HOT transistor</td><td>LCD replacement</td></tr>
-<tr style="background:#f8f9fa;"><td><a href="/knowledge/cnc-monitor-troubleshooting-guide.html">Screen flickering / rolling</a></td><td>Failing electrolytic capacitors, sync signal loss</td><td>Cap replacement or LCD</td></tr>
+<tr><td class="cell-e2"><a href="/knowledge/cnc-monitor-troubleshooting-guide.html">Black screen / no display</a></td><td>HV section failure, flyback transformer, HOT transistor</td><td>LCD replacement</td></tr>
+<tr class="bg-mist"><td><a href="/knowledge/cnc-monitor-troubleshooting-guide.html">Screen flickering / rolling</a></td><td>Failing electrolytic capacitors, sync signal loss</td><td>Cap replacement or LCD</td></tr>
 <tr><td><a href="/knowledge/cnc-monitor-troubleshooting-guide.html">Burn-in / ghosting</a></td><td>Permanent phosphor damage</td><td>LCD replacement (irreversible)</td></tr>
-<tr style="background:#f8f9fa;"><td>Dim display / low brightness</td><td>Phosphor wear, electron gun degradation</td><td>LCD replacement</td></tr>
+<tr class="bg-mist"><td>Dim display / low brightness</td><td>Phosphor wear, electron gun degradation</td><td>LCD replacement</td></tr>
 <tr><td>Color shift / missing colors</td><td>CRT gun driver failure, shadow mask warp</td><td>LCD replacement</td></tr>
-<tr style="background:#f8f9fa;"><td>Horizontal line / image collapse</td><td>Vertical deflection IC failure, yoke fault</td><td>LCD replacement</td></tr>
+<tr class="bg-mist"><td>Horizontal line / image collapse</td><td>Vertical deflection IC failure, yoke fault</td><td>LCD replacement</td></tr>
 <tr><td>Geometric distortion (pincushion)</td><td>Deflection coil aging, pincushion circuit</td><td>Component repair or LCD</td></tr>
-<tr style="background:#f8f9fa;"><td>High voltage buzz / arcing</td><td>Flyback transformer crack, humidity ingress</td><td>LCD replacement (safety risk)</td></tr>
+<tr class="bg-mist"><td>High voltage buzz / arcing</td><td>Flyback transformer crack, humidity ingress</td><td>LCD replacement (safety risk)</td></tr>
 <tr><td>Intermittent display / goes dark after warm-up</td><td>Thermal failure — bad solder joints, failing caps</td><td>Component repair or LCD</td></tr>
 </tbody>
 </table>
@@ -97,26 +97,26 @@
 <p><strong>⚠️ Safety hazard:</strong> Arcing indicates insulation breakdown. The CRT can develop unpredictable HV paths. This should be addressed immediately — either discharge and retire the CRT, or replace with LCD.</p>
 
 <h2>CRT Repair vs LCD Replacement Decision Guide</h2>
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
-<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">Scenario</th><th style="padding:10px;border:1px solid #333;">Repair?</th><th style="padding:10px;border:1px solid #333;">LCD Upgrade?</th></tr></thead>
+<table class="tbl-full">
+<thead><tr class="bg-navy"><th class="cell-dark">Scenario</th><th class="cell-dark">Repair?</th><th class="cell-dark">LCD Upgrade?</th></tr></thead>
 <tbody>
-<tr><td>Black screen (HV failure)</td><td>Possible (-600), temporary</td><td style="color:#16a34a;font-weight:700;">Recommended</td></tr>
-<tr style="background:#f8f9fa;"><td>Dim display (>10 years old)</td><td style="color:#dc2626;">Not possible</td><td style="color:#16a34a;font-weight:700;">Recommended</td></tr>
-<tr><td>Flickering (bad caps)</td><td>Possible (-150), 6-18 month life</td><td style="color:#16a34a;font-weight:700;">Better value</td></tr>
-<tr style="background:#f8f9fa;"><td>Burn-in</td><td style="color:#dc2626;">Not possible</td><td style="color:#16a34a;font-weight:700;">Required</td></tr>
-<tr><td>Color failure</td><td>Possible (-300), depends on parts</td><td style="color:#16a34a;font-weight:700;">More reliable</td></tr>
-<tr style="background:#f8f9fa;"><td>HV arcing</td><td style="color:#dc2626;">Safety hazard — replace</td><td style="color:#16a34a;font-weight:700;">Required</td></tr>
+<tr><td>Black screen (HV failure)</td><td>Possible (-600), temporary</td><td class="text-green-700">Recommended</td></tr>
+<tr class="bg-mist"><td>Dim display (>10 years old)</td><td style="color:#dc2626;">Not possible</td><td class="text-green-700">Recommended</td></tr>
+<tr><td>Flickering (bad caps)</td><td>Possible (-150), 6-18 month life</td><td class="text-green-700">Better value</td></tr>
+<tr class="bg-mist"><td>Burn-in</td><td style="color:#dc2626;">Not possible</td><td class="text-green-700">Required</td></tr>
+<tr><td>Color failure</td><td>Possible (-300), depends on parts</td><td class="text-green-700">More reliable</td></tr>
+<tr class="bg-mist"><td>HV arcing</td><td style="color:#dc2626;">Safety hazard — replace</td><td class="text-green-700">Required</td></tr>
 </tbody>
 </table>
 
 <h2>CRT Life Expectancy by Age</h2>
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;">
-<thead><tr style="background:#1a1a2e;color:#fff;"><th style="padding:10px;border:1px solid #333;">CRT Age</th><th style="padding:10px;border:1px solid #333;">Remaining Brightness</th><th style="padding:10px;border:1px solid #333;">Failure Probability</th><th style="padding:10px;border:1px solid #333;">Recommendation</th></tr></thead>
+<table class="tbl-full">
+<thead><tr class="bg-navy"><th class="cell-dark">CRT Age</th><th class="cell-dark">Remaining Brightness</th><th class="cell-dark">Failure Probability</th><th class="cell-dark">Recommendation</th></tr></thead>
 <tbody>
 <tr><td>0-5 years</td><td>100-85%</td><td>Low</td><td>Continue use</td></tr>
-<tr style="background:#f8f9fa;"><td>5-8 years</td><td>85-60%</td><td>Moderate</td><td>Monitor, plan upgrade</td></tr>
+<tr class="bg-mist"><td>5-8 years</td><td>85-60%</td><td>Moderate</td><td>Monitor, plan upgrade</td></tr>
 <tr><td>8-12 years</td><td>60-35%</td><td>High</td><td>Consider LCD upgrade</td></tr>
-<tr style="background:#f8f9fa;"><td>12-15 years</td><td>35-20%</td><td>Very high</td><td style="font-weight:700;color:#16a34a;">Replace with LCD</td></tr>
+<tr class="bg-mist"><td>12-15 years</td><td>35-20%</td><td>Very high</td><td class="text-green-700">Replace with LCD</td></tr>
 <tr><td>15+ years</td><td>Below 20%</td><td>Critical</td><td style="font-weight:700;color:#dc2626;">Immediate replacement</td></tr>
 </tbody>
 </table>
@@ -149,7 +149,7 @@
                 <a href="/about.html">About Us</a>
             </div>
             <p class="footer-copy">© 2013-2026 Kongto Technology | Shenzhen, Guangdong, China | +86-13686889647 | info@cncdisplay.com</p>
-            <p class="original-statement" style="font-size:0.7rem;color:#999;margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid #e0e0e0;">All content on this site is original, including text, images, technical specifications, and solutions. Protected under copyright law. Unauthorized reproduction or copying prohibited. Written by szkongto01.</p>
+            <p class="original-statement footer-micro">All content on this site is original, including text, images, technical specifications, and solutions. Protected under copyright law. Unauthorized reproduction or copying prohibited. Written by szkongto01.</p>
         </div>
     
             <div class="footer-links">
