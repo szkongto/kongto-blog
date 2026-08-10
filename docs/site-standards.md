@@ -60,6 +60,7 @@
 
 - 产品页必须 `application/ld+json` Product schema，含：name / brand / offers(price, priceCurrency, availability)
 - **offers 相关字段（shippingDetails / hasMerchantReturnPolicy / warranty）无真实数据必须写 `null` 或省略，禁止编造**（no-fabricate 铁律）
+- **诊断/方案类页面（flickering-screen / image-retention / no-display 等，非可售产品）用 `TechArticle` schema，禁用 Product + offers**——Product 无有效 offers(price) 触发 GSC 富媒体 error（2026-08-10 修复）
 - 面包屑 BreadcrumbList 必须与页面路径一致
 
 ## 5. 乱码/内码规范
