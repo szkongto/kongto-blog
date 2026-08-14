@@ -31,7 +31,14 @@
   "hasMerchantReturnPolicy": {
    "@type": "MerchantReturnPolicy",
    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-   "merchantReturnLink": "https://cncdisplay.com/contact.html"
+   "merchantReturnLink": "https://cncdisplay.com/contact.html",
+   "applicableCountry": "US"
+  },
+  "shippingDetails": {
+   "@type": "OfferShippingDetails",
+   "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"},
+   "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"},
+   "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "unitCode": "DAY", "minValue": 0, "maxValue": 1}, "transitTime": {"@type": "QuantitativeValue", "unitCode": "DAY", "minValue": 1, "maxValue": 2}}
   },
   "priceCurrency": "USD",
   "price": "155",
