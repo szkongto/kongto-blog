@@ -469,3 +469,11 @@
 /zh/docs/fanuc-a61l-0093-crt-lcd-teardown.pdf /docs/fanuc-a61l-0093-crt-lcd-teardown-CN.pdf 301
 /zh/docs/mazak-cd1472-crt-lcd-display.pdf /docs/mazak-cd1472-crt-lcd-display-CN.pdf 301
 /zh/docs/mitsubishi-m64-cnc-display-sl804.pdf /docs/mitsubishi-m64-cnc-display-sl804-CN.pdf 301
+# 2026-08-17 GSC 224页"自动重定向"真404修复：7条缺失旧URL补规则(活站逐条验证曾404)
+/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
+/en/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html /posts/article_20260508_KTV148_custom_industrial_display.html 301
+/en/posts/FANUC_A61L_0001_0095_LCD_CNC_Upgrade_Replacement.html /products/fanuc-a61l-0001-0095-lcd-upgrade.html 301
+/en/posts/article_20260501_FANUC_A61L_0001_0093_LCD_Revitalize_CNC.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
+/en/posts/fanuc-a61l-0001-0093-lcd-replacement.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
+/posts/article_20260506_Mitsubishi_BM09DF_E60_TFT_Replacement_CN.html /posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html 301
+/en/posts/fanuc-a61l-0001-0097-lcd-replacement.html /posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
