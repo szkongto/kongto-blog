@@ -149,11 +149,11 @@
 /article_20260501_FANUC_0i系统显示器常见问题与解决方档.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
 /comparison_20260501_FANUC_CRT显示器维修_vs_LCD升级模块成本对比.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
 /comparison_20260501_工业视频信号转换器选购指南_VGA转VIDEO_vs_HDMI转VGA.html /posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html 301
-/docs/CNC_CRT_to_LCD_Cross_数控换液晶对照全表.pdf /docs/cnc-crt-to-lcd-cross-reference.pdf 301
+/docs/CNC_CRT_to_LCD_Cross_数控换液晶对照全表.pdf /docs/cnc-crt-to-lcd-cross-reference-CN.pdf 301
 /docs/FANUC_A61L-0093_CRT显示器故障解析与LCD改造方案.pdf /docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf 301
-/docs/三菱M64_E60_M500_M520_数控系统显示器SL804.pdf /docs/mitsubishi-m64-cnc-display-sl804.pdf 301
-/docs/数控CRT转LCD替换型号总表（全品牌优化版）.pdf /docs/cnc-crt-to-lcd-model-list.pdf 301
-/docs/马扎克_Mazak_CD1472_D1M_A1QA8DSP40_MDT-1283B_数控机床显示器.pdf /docs/mazak-cd1472-crt-lcd-display.pdf 301
+/docs/三菱M64_E60_M500_M520_数控系统显示器SL804.pdf /docs/mitsubishi-m64-cnc-display-sl804-CN.pdf 301
+/docs/数控CRT转LCD替换型号总表（全品牌优化版）.pdf /docs/cnc-crt-to-lcd-model-list-CN.pdf 301
+/docs/马扎克_Mazak_CD1472_D1M_A1QA8DSP40_MDT-1283B_数控机床显示器.pdf /docs/mazak-cd1472-crt-lcd-display-CN.pdf 301
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焕发新活力.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /posts/article_20260501_如何将FANUC_CRT显示器改装为LCD_深圳市江图科技有限公司实战案例.html /posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html 301
 /posts/article_20260501_工业显示器RGBHV信号全解析_从CGA_EGA到高清显示.html /posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html 301
@@ -212,13 +212,13 @@
 # Phase 0b: /en/docs/ → /docs/
 /en/docs/ /docs/ 301
 /en/docs/index.html /docs/index.html 301
-/en/docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology.pdf /docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology.pdf 301
+/en/docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology.pdf /docs/CNC_CRT_to_LCD_Complete_Guide_Kongto_Technology-EN.pdf 301
 /en/docs/CNC_to_LCD_Model_List.docx /docs/CNC_to_LCD_Model_List.docx 301
 /en/docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf /docs/FANUC_A61L-0001-0093_CRT_to_LCD.pdf 301
 /en/docs/FANUC_A61L-0001-0096.pdf /docs/FANUC_A61L-0001-0096.pdf 301
 /en/docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx /docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx 301
 /en/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf /docs/Kongto_CRT_LCD_Upgrade_Guide.pdf 301
-/en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf /docs/MDT-1283_CRT_to_LCD_V2.62.pdf 301
+/en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf /docs/MDT-1283_CRT_to_LCD_V2.62-EN.pdf 301
 # /en/ -> / (EN site is at root, not /en/)
 # Individual /en/ pages already handled by meta-refresh in en/*.html
 
@@ -453,10 +453,10 @@
 /posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
 /posts/fanuc-a61l-0001-0074-crt-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
 /posts/fanuc-a61l-0001-0074-lcd-upgrade.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
-/zh/docs/cnc-crt-to-lcd-complete-guide-kongto.pdf /docs/cnc-crt-to-lcd-complete-guide-kongto.pdf 301
-/zh/docs/cnc-crt-to-lcd-cross-reference.pdf /docs/cnc-crt-to-lcd-cross-reference.pdf 301
-/zh/docs/cnc-crt-to-lcd-model-list.pdf /docs/cnc-crt-to-lcd-model-list.pdf 301
-/zh/docs/fanuc-a61l-0093-crt-fault-lcd-guide.pdf /docs/fanuc-a61l-0093-crt-fault-lcd-guide.pdf 301
-/zh/docs/fanuc-a61l-0093-crt-lcd-teardown.pdf /docs/fanuc-a61l-0093-crt-lcd-teardown.pdf 301
-/zh/docs/mazak-cd1472-crt-lcd-display.pdf /docs/mazak-cd1472-crt-lcd-display.pdf 301
-/zh/docs/mitsubishi-m64-cnc-display-sl804.pdf /docs/mitsubishi-m64-cnc-display-sl804.pdf 301
+/zh/docs/cnc-crt-to-lcd-complete-guide-kongto.pdf /docs/cnc-crt-to-lcd-complete-guide-kongto-CN.pdf 301
+/zh/docs/cnc-crt-to-lcd-cross-reference.pdf /docs/cnc-crt-to-lcd-cross-reference-CN.pdf 301
+/zh/docs/cnc-crt-to-lcd-model-list.pdf /docs/cnc-crt-to-lcd-model-list-CN.pdf 301
+/zh/docs/fanuc-a61l-0093-crt-fault-lcd-guide.pdf /docs/fanuc-a61l-0093-crt-fault-lcd-guide-CN.pdf 301
+/zh/docs/fanuc-a61l-0093-crt-lcd-teardown.pdf /docs/fanuc-a61l-0093-crt-lcd-teardown-CN.pdf 301
+/zh/docs/mazak-cd1472-crt-lcd-display.pdf /docs/mazak-cd1472-crt-lcd-display-CN.pdf 301
+/zh/docs/mitsubishi-m64-cnc-display-sl804.pdf /docs/mitsubishi-m64-cnc-display-sl804-CN.pdf 301
