@@ -210,10 +210,10 @@
 # Double-slash URL fixes
 
 # Phase 0b: EN articles → root (EN now at root)
-/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html /zh/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
-/posts/article_20260507_Mazak_CD1472D1M_LCD.html /zh/posts/article_20260507_Mazak_CD1472D1M_LCD.html 301
-/posts/article_20260522_Mazak_DR5614_LCD_CRT.html /zh/posts/article_20260522_Mazak_DR5614_LCD_CRT.html 301
-/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html /zh/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html 301
+/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/article_20260507_Mazak_CD1472D1M_LCD.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
+/posts/article_20260522_Mazak_DR5614_LCD_CRT.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
+/posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html /posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
 
 # Missing PPTX
 /docs/FANUC_CRT至LCD升级改造技术分享.pptx /docs/FANUC_CRT_to_LCD_Upgrade_Technical_Sharing.pptx 301
