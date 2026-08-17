@@ -19,9 +19,9 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What causes a Mazak CRT monitor to go blank?","acceptedAnswer":{"@type":"Answer","text":"Most common: HV flyback transformer failure (40%), video board capacitor degradation (30%), and loose IDC/ribbon cable (15%). On MDT1283B 14-inch CRTs, horizontal deflection failure is also common due to thermal stress on the yoke driver IC."}},
+    {"@type":"Question","name":"What causes a Mazak CRT monitor to go blank?","acceptedAnswer":{"@type":"Answer","text":"Most common: HV flyback transformer failure (40%), video board capacitor degradation (30%), and loose 3-row 15-pin signal connector (15%). On MDT1283B 12-inch monochrome CRTs, horizontal deflection failure is also common due to thermal stress on the yoke driver IC."}},
     {"@type":"Question","name":"Can a Mazak CRT black screen be repaired temporarily?","acceptedAnswer":{"@type":"Answer","text":"Some faults — capacitor replacement ($20-40) or flyback re-soldering — can restore display temporarily, but CRTs have multiple aging components. The repaired CRT typically fails again within 6-18 months. LCD replacement is a permanent fix."}},
-    {"@type":"Question","name":"Is the Mazak CRT connector the same as FANUC?","acceptedAnswer":{"@type":"Answer","text":"MDT1283B uses a 20-pin Honda MR-20M connector — electrically compatible with FANUC A61L series LCD modules. CD1472 uses a 10-pin IDC flat cable. Verify your model before ordering."}},
+    {"@type":"Question","name":"Is the Mazak CRT connector the same as FANUC?","acceptedAnswer":{"@type":"Answer","text":"Mazak displays use a 3-row 15-pin connector — MDT1283B uses 6 pins, other models (CD1472, DR5614) use 10 pins. Verify your model before ordering."}},
     {"@type":"Question","name":"Does LCD replacement require Mazatrol parameter changes?","acceptedAnswer":{"@type":"Answer","text":"No. The LCD module replicates the original CRT video timing. The Mazatrol control operates identically — same resolution, same display layout, same touch/panel operation."}},
     {"@type":"Question","name":"What is the installation time for a Mazak LCD kit?","acceptedAnswer":{"@type":"Answer","text":"15-25 minutes for most models. Remove power, disconnect CRT cables, swap in the LCD module, reconnect. No soldering or CNC parameter changes needed."}}
   ]
@@ -38,7 +38,7 @@
   "step": [
     {"@type":"HowToStep","position":1,"name":"Check Power LED","text":"If the power LED is off, check the CRT power supply — fuse blown? PSU capacitor swollen? Measure DC output voltage at the power connector."},
     {"@type":"HowToStep","position":2,"name":"Listen for HV whine","text":"If the LED is on but no display, listen near the CRT neck for a high-pitched 15kHz whine. No whine = HV section failure (flyback transformer or horizontal deflection)."},
-    {"@type":"HowToStep","position":3,"name":"Inspect video cable","text":"Check the IDC ribbon or Honda connector for bent pins, corrosion, or loose fitting. Reseat both ends. On CD1472 — the 10-pin IDC cable is a known failure point."},
+    {"@type":"HowToStep","position":3,"name":"Inspect video cable","text":"Check the 3-row 15-pin connector for bent pins, corrosion, or loose fitting. Reseat both ends. On CD1472/DR5614 — the 3-row 15-pin connector is a known failure point."},
     {"@type":"HowToStep","position":4,"name":"Check for raster with flashlight","text":"Shine a flashlight at the screen at an angle. If you see a faint raster (scan lines), the CRT tube is alive but video signal is missing — video board fault."},
     {"@type":"HowToStep","position":5,"name":"Test with known-good LCD","text":"Connect a compatible LCD module to confirm the CRT is the problem, not the CNC control output. If LCD works, your CRT is confirmed dead."}
   ]
@@ -111,10 +111,10 @@ p{margin:0.75rem 0}
 <table class="spec-table">
 <thead><tr><th>CRT Model</th><th>Mazak CNC System</th><th>Display</th><th>Connector</th><th>Kongto LCD Kit</th></tr></thead>
 <tbody>
-<tr><td><strong>CD1472</strong></td><td>Mazatrol M-32, T-32</td><td>9-inch green monochrome CRT</td><td>IDC 10-pin</td><td><a href="/products/mazak-cd1472-lcd-upgrade.html">$350</a></td></tr>
-<tr><td><strong>DR5614</strong></td><td>Mazatrol T-Plus, Fusion 640</td><td>9-inch amber monochrome CRT</td><td>IDC 10-pin</td><td><a href="/products/mazak-dr5614-lcd-upgrade.html">$380</a></td></tr>
-<tr><td><strong>MDT1283B</strong></td><td>Mazatrol M-32, T-32, T-Plus</td><td>14-inch color CRT</td><td>20-pin Honda MR-20M</td><td><a href="/products/mazak-mdt1283b-lcd-upgrade.html">$480</a></td></tr>
-<tr><td><strong>14-inch color CRT</strong></td><td>Mazatrol Fusion 640</td><td>14-inch color CRT</td><td>20-pin Honda</td><td><a href="/products/mazak-14-inch-crt-lcd-upgrade.html">$480</a></td></tr>
+<tr><td><strong>CD1472</strong></td><td>Mazatrol M-32, T-32</td><td>14-inch color CRT</td><td>3-row 15-pin (10-pin used)</td><td><a href="/products/mazak-cd1472-lcd-upgrade.html">$350</a></td></tr>
+<tr><td><strong>DR5614</strong></td><td>Mazatrol T-Plus, Fusion 640</td><td>9-inch amber monochrome CRT</td><td>3-row 15-pin (10-pin used)</td><td><a href="/products/mazak-dr5614-lcd-upgrade.html">$380</a></td></tr>
+<tr><td><strong>MDT1283B</strong></td><td>Mazatrol M-32, T-32, T-Plus</td><td>12-inch monochrome CRT</td><td>3-row 15-pin (6-pin used)</td><td><a href="/products/mazak-mdt1283b-lcd-upgrade.html">$480</a></td></tr>
+<tr><td><strong>14-inch color CRT</strong></td><td>Mazatrol Fusion 640</td><td>14-inch color CRT</td><td>3-row 15-pin (10-pin used)</td><td><a href="/products/mazak-14-inch-crt-lcd-upgrade.html">$480</a></td></tr>
 </tbody>
 </table>
 
@@ -123,7 +123,7 @@ p{margin:0.75rem 0}
 <ol>
 <li><strong>Power LED?</strong> If off → check PSU fuse/capacitors. Common: RIFA cap failure in MDT1283B PSU.</li>
 <li><strong>15kHz whine?</strong> No whine = HV failure (flyback transformer). Most common on 14-inch color CRTs.</li>
-<li><strong>Video cable?</strong> IDC 10-pin on CD1472/DR5614 is a known failure point — bent pins or corroded contacts.</li>
+<li><strong>Video cable?</strong> The 3-row 15-pin connector on CD1472/DR5614 is a known failure point — bent pins or corroded contacts.</li>
 <li><strong>Flashlight test?</strong> Faint scan lines visible = CRT tube alive but missing video signal → video board fault.</li>
 <li><strong>Swap test?</strong> Connect known-good LCD module. If it works, your CRT is confirmed dead.</li>
 </ol>
@@ -155,24 +155,11 @@ p{margin:0.75rem 0}
 </tbody>
 </table>
 
-<h2 id="connector">Connector Pinout Reference — MDT1283B (20-pin Honda MR-20M)</h2>
+<h2 id="connector">Connector Reference — Mazak Displays (3-row 15-pin)</h2>
 
-<table class="spec-table">
-<thead><tr><th>Pin</th><th>Signal</th><th>Color (typical)</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>GND</td><td>Black</td><td>Signal ground</td></tr>
-<tr><td>2</td><td>+24V DC</td><td>Red</td><td>Power input</td></tr>
-<tr><td>3</td><td>GND</td><td>Black</td><td>Power ground</td></tr>
-<tr><td>4</td><td>Video-R</td><td>Red/white</td><td>Red video signal</td></tr>
-<tr><td>5</td><td>Video-G</td><td>Green/white</td><td>Green video signal</td></tr>
-<tr><td>6</td><td>Video-B</td><td>Blue/white</td><td>Blue video signal</td></tr>
-<tr><td>7</td><td>HSync</td><td>Yellow</td><td>Horizontal sync</td></tr>
-<tr><td>8</td><td>VSync</td><td>White</td><td>Vertical sync</td></tr>
-<tr><td>9-20</td><td>N/C / Shield</td><td>—</td><td>Not connected or chassis ground</td></tr>
-</tbody>
-</table>
+<p>Mazak display modules use a 3-row 15-pin signal connector. Most models (CD1472, DR5614, Fusion 640) use 10 pins; the MDT1283B uses 6 pins. The exact pin-level mapping varies by production year and control generation, so we do not publish a fixed pinout. Email us a photo of your CRT label and we will confirm the correct wiring for your machine within 24 hours.</p>
 
-<p>Note: CD1472 and DR5614 use a 10-pin IDC ribbon cable carrying composite video + power. Pinout varies by production year — email us a photo of your CRT label for same-day confirmation.</p>
+<p>Note: CD1472 and DR5614 use a 3-row 15-pin connector (10 pins used). Pin mapping varies by production year — email us a photo of your CRT label for same-day confirmation.</p>
 
 <div class="cta-box">
 <h3>Permanent LCD Fix for Your Mazak</h3>
@@ -185,15 +172,15 @@ p{margin:0.75rem 0}
 <h2>Real-World Field Data</h2>
 <p>Based on 80+ Mazak CRT failure cases handled by Kongto over 24 months (2024-2026):</p>
 <ul>
-<li>MDT1283B 14-inch color CRTs fail most frequently — HV flyback accounts for <strong>40%</strong> of failures</li>
-<li>CD1472 9-inch mono CRTs have the longest average lifespan (18+ years before failure)</li>
+<li>MDT1283B 12-inch monochrome CRTs fail most frequently — HV flyback accounts for <strong>40%</strong> of failures</li>
+<li>CD1472 14-inch color CRTs have the longest average lifespan (18+ years before failure)</li>
 <li>DR5614 amber CRTs: video board capacitor failure is the #1 cause (<strong>55%</strong>)</li>
 <li>Over <strong>90%</strong> of Mazak customers who ordered a Kongto LCD kit reported successful DIY install within 30 minutes</li>
 </ul>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
-<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">Does my Mazak CRT have a standard pinout?</div><div class="faq-a">MDT1283B uses a 20-pin Honda MR-20M — same connector as FANUC A61L series. CD1472/DR5614 use 10-pin IDC. The pinouts differ between production years; we confirm compatibility with a photo of your CRT label.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">Does my Mazak CRT have a standard pinout?</div><div class="faq-a">Mazak displays use a 3-row 15-pin connector — MDT1283B uses 6 pins, CD1472/DR5614 use 10 pins. The exact pin mapping differs between production years; we confirm compatibility with a photo of your CRT label.</div></div>
 
 <div class="faq-item"><div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open')">Can I keep my Mazak CRT and just repair it?</div><div class="faq-a">Short-term yes, but expect recurring failures. One repair costs -200 and the CRT will fail again (different component) within 6-18 months. LCD replacement is - one-time with an 8-10 year lifespan.</div></div>
 
