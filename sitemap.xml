@@ -217,12 +217,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/guides/ttl-rgb-signal-pinout-guide.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/hub/aftermarket-cnc-display-manufacturer.html</loc>
     <lastmod>2026-08-02</lastmod>
@@ -259,12 +254,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/crt-vs-lcd-cnc-display-comparison.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/knowledge/fanuc-crt-to-lcd-replacement-guide.html</loc>
     <lastmod>2026-08-02</lastmod>
@@ -355,18 +345,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
+  
   <url>
     <loc>https://cncdisplay.com/posts/FANUC_A61L_0001_0096_LCD_CNC_Upgrade_Replacement.html</loc>
     <lastmod>2026-08-06</lastmod>
@@ -379,24 +359,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/FANUC_CRT_Maintenance_vs_LCD_Upgrade_Module_Comparison.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html</loc>
     <lastmod>2026-08-05</lastmod>
@@ -421,12 +391,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/Industrial_Display_Market_Trends_Brand_Comparison.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/Industrial_Display_Procurement_Selection_Guide.html</loc>
     <lastmod>2026-07-28</lastmod>
@@ -493,12 +458,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html</loc>
     <lastmod>2026-07-31</lastmod>
@@ -577,12 +537,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD_Replacement.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html</loc>
     <lastmod>2026-08-05</lastmod>
@@ -805,12 +760,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/posts/comparison_20260501_video_converter_buying_guide.html</loc>
     <lastmod>2026-08-05</lastmod>
@@ -1207,24 +1157,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/products/heidenhain-bc120-lcd-upgrade.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/products/heidenhain-be211-lcd-upgrade.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/products/heidenhain-be411-lcd-upgrade.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
+  
+  
   <url>
     <loc>https://cncdisplay.com/products/image-retention.html</loc>
     <lastmod>2026-08-06</lastmod>
@@ -1243,12 +1178,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/products/mazak-aiqa8dsp40-lcd-upgrade.html</loc>
     <lastmod>2026-08-06</lastmod>
@@ -1741,12 +1671,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html</loc>
     <lastmod>2026-08-07</lastmod>
@@ -1803,6 +1728,12 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2533,12 +2464,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/sitemap.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/zh/terms.html</loc>
     <lastmod>2026-08-07</lastmod>
@@ -2551,12 +2477,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/fanuc-a61l-0001-0093-display-faq-en.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
   <url>
     <loc>https://cncdisplay.com/products/siemens-810t-820t-lcd-upgrade.html</loc>
     <lastmod>2026-08-11</lastmod>
