@@ -2490,4 +2490,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://cncdisplay.com/posts/Industrial_Display_Market_Trends_Brand_Comparison.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/products/siemens-810t-820t-lcd-upgrade.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/products/siemens-840c-840d-880-lcd-upgrade.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
