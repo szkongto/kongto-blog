@@ -21,7 +21,7 @@ Allow: /
 User-agent: Baiduspider-image
 Allow: /
 
-# AI Crawlers - Open for GEO - Open for GEO
+# AI Crawlers - Open for GEO
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
@@ -34,21 +34,25 @@ User-agent: ClaudeBot
 Allow: /
 User-agent: PerplexityBot
 Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Claude-User
+Allow: /
 User-agent: Google-Extended
 Allow: /
 User-agent: meta-externalagent
 Allow: /
 User-agent: OAI-SearchBot
 Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
 User-agent: Bytespider
 Disallow: /
-User-agent: Amazonbot
-Disallow: /
-User-agent: Applebot-Extended
-Disallow: /
 
-Content-Signal: search=yes,ai-train=no
+Content-Signal: search=yes,ai-train=yes
 
 # llms.txt - AI crawler content discovery
 Llms: /llms.txt
