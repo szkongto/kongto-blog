@@ -141,9 +141,6 @@
 /brands/Mitsubishi /brands/Mitsubishi.html 301
 /brands/OKUMA /brands/OKUMA.html 301
 /brands/Siemens /brands/Siemens.html 301
-# Model split redirects
-/products/mazak-14-inch-crt-lcd-upgrade.html /products/mazak-dr5614-lcd-upgrade.html 301
-
 # === GSC 404 fixes (59 entries) ===
 # Generated: 2026-07-04
 /article_20260501_FANUC_0i系统显示器常见问题与解决方档.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
