@@ -1,0 +1,39 @@
+{
+  "title": "Okuma OSP 5020 CRT flyback transformer whine: installation tutorial",
+  "devto_tags": [
+    "cnc",
+    "manufacturing",
+    "engineering",
+    "okuma"
+  ],
+  "canonical": "https://cncdisplay.com/brands/OKUMA.html",
+  "body_devto": "## Installation\n\n1. Power off CNC machine and verify power is off with multimeter\n2. Remove 4 mounting bolts from the CRT bezel\n3. Disconnect the 14-pin or 20-pin cable\n4. Connect same cable to the replacement LCD module\n5. Mount LCD using original screw holes (same pattern)\n6. Power on — no CNC parameter changes required\n\nTotal time: ~15 minutes. The LCD draws DC 24V, matching the original CRT power supply.\n\nFull guide: https://cncdisplay.com/brands/OKUMA.html\n\n## Technical Details\n\nKey specs for Okuma OSP 5020: connector = 14-pin or 20-pin, power = DC 24V, compatible with OSP 5000, OSP 5020, OSP 7000. The LCD module matches all these specs exactly, making it a direct swap.\n\nThe high-pitched whine (15-20 kHz) signals a failing flyback transformer. This component generates the 20-30kV needed for the CRT — when it fails, you get a blank screen.\n\n## Cost Comparison: Repair vs Replace\n\n| Option | Cost | Lifespan |\n|--------|------|----------|\n| CRT repair (rebuilt HV section) | $229–458 each | 3-12 months |\n| CRT repair (donor tube swap) | $329–529 | 6-18 months |\n| Used CRT on eBay | $458–687 | Unknown (already aged) |\n| LCD replacement module | $229 (one-time) | 5-7 years continuous |\n\nAvoid the CRT repair treadmill. A $229 LCD breaks even on the second repair visit.\n\n## Summary\n\nEvery Okuma OSP 5000 CRT will eventually fail. Plan the upgrade now instead of scrambling during a production emergency. Details: https://cncdisplay.com/brands/OKUMA.html",
+  "brand": {
+    "name": "Okuma",
+    "name_cn": "大隈",
+    "models": [
+      "OSP 5000",
+      "OSP 5020",
+      "OSP 7000"
+    ],
+    "connector": "14-pin or 20-pin",
+    "power": "DC 24V",
+    "controls": [
+      "OSP 5000",
+      "OSP 5020",
+      "OSP 7000"
+    ],
+    "price": "$229",
+    "page": "https://cncdisplay.com/brands/OKUMA.html"
+  },
+  "model": "OSP 5020",
+  "failure": {
+    "name": "高压包异响",
+    "en": "flyback transformer whine",
+    "desc": "high-pitched noise from failing HV section"
+  },
+  "angle": {
+    "en": "installation tutorial",
+    "zh": "安装教程"
+  }
+}
