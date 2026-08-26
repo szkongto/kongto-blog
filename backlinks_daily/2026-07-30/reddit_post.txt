@@ -1,3 +1,0 @@
-TITLE: Mitsubishi CNC MDT1283B monitor failing — anyone switched to LCD?
-
-My Mitsubishi MDT1283B CRT is showing flickering screen. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

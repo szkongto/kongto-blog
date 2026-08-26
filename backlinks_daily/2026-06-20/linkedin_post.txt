@@ -1,9 +1,0 @@
-Manufacturing fact: Your 1998 FANUC is mechanically bulletproof. The CRT? Designed for 10-15 years. It's now at year 28.
-
-Plug-and-play LCD replacements exist for every major CNC brand. Original connectors. Same power. 10 minute install.
-
-$150-300 extends a $50K+ machine by 5-7 years.
-
-I have guides for FANUC, Mitsubishi, Mazak, Siemens, Okuma, Haas at cncdisplay.com
-
-#Manufacturing #CNC #IndustrialAutomation

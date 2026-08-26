@@ -1,3 +1,0 @@
-TITLE: How hard is Siemens SM0901 CRT to LCD swap?
-
-My Siemens SM0901 CRT is showing no display / black screen. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

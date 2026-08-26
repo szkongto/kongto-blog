@@ -1,3 +1,0 @@
-TITLE: Siemens CNC SM0901 monitor failing — anyone switched to LCD?
-
-My Siemens SM0901 CRT is showing no display / black screen. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

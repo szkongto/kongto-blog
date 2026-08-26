@@ -35,3 +35,6 @@ openclaw/
 optimization_verification_report.txt
 .claude/worktrees/
 en_bak/
+
+# Cron 自动数据（pre-commit hook git add -A 会混入）
+backlinks_daily/

@@ -1,7 +1,0 @@
-TITLE: FANUC CRT getting dim — repair or replace?
-
-My FANUC 0-TC amber CRT is getting harder to read every month. At 100% brightness and still too dim.
-
-These CRTs were discontinued 15+ years ago. Anyone here repaired the HV section? Did it last? Or just went LCD?
-
-Machine is mechanically solid — ways tight, spindle good. This screen is the only issue.

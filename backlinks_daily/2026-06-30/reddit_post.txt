@@ -1,3 +1,0 @@
-TITLE: Mitsubishi CNC BM09DF monitor failing — anyone switched to LCD?
-
-My Mitsubishi BM09DF CRT is showing flickering screen. Machine is mechanically solid — this screen is the only issue. Went LCD yet?
