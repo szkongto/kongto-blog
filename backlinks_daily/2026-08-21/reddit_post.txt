@@ -1,0 +1,3 @@
+TITLE: How hard is Haas 15-pin VGA CRT to LCD swap?
+
+My Haas 15-pin VGA CRT is showing distorted / shrinking image. Machine is mechanically solid — this screen is the only issue. Went LCD yet?

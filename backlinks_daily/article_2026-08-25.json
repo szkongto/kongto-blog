@@ -1,0 +1,41 @@
+{
+  "title": "How to Fix Mazak C-5470NS image retention / burn-in — Complete Guide",
+  "devto_tags": [
+    "cnc",
+    "manufacturing",
+    "engineering",
+    "mazak"
+  ],
+  "canonical": "https://cncdisplay.com/brands/MAZAK.html",
+  "body_devto": "## Important Note\n\nSome suppliers list 'FANUC/Mazak compatible' displays. These are physically incompatible — Mazak uses a 26-pin connector, FANUC uses 20-pin Honda MR-20M.\n\n## CNC maintenance note: Mazak C-5470NS CRTs from the 1990s are now reaching end-of-life. image retention / burn-in is a classic symptom. Here's the practical approach.\n\n## Technical Details\n\nThe C-5470NS CRT in Mazak systems connects via 26-pin proprietary and runs on DC 24V. It's compatible with Mazatrol T-32, Mazatrol M-32, M-Plus controls. The LCD replacement uses the same connector and power — no adapter needed. Price: $249.\n\nPhosphor burn-in is permanent. That ghosted CNC parameter screen is etched into the tube. LCD modules use TFT technology — no phosphor layer, no burn-in, ever.\n\n## Summary\n\nStop repairing that 20+ year old Mazak CRT. A $249 LCD module solves it permanently. Guide: https://cncdisplay.com/brands/MAZAK.html",
+  "brand": {
+    "name": "Mazak",
+    "name_cn": "马扎克",
+    "models": [
+      "CD1472-D1M",
+      "C-5470NS",
+      "DR5614",
+      "MDT1283B"
+    ],
+    "connector": "26-pin proprietary",
+    "power": "DC 24V",
+    "controls": [
+      "Mazatrol T-32",
+      "Mazatrol M-32",
+      "M-Plus",
+      "Fusion 640"
+    ],
+    "price": "$249",
+    "page": "https://cncdisplay.com/brands/MAZAK.html"
+  },
+  "model": "C-5470NS",
+  "failure": {
+    "name": "烧屏残影",
+    "en": "image retention / burn-in",
+    "desc": "permanent ghost image from static CNC UI displays"
+  },
+  "angle": {
+    "en": "warning alert",
+    "zh": "重要警告"
+  }
+}
