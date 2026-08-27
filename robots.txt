@@ -54,8 +54,4 @@ Disallow: /
 
 Content-Signal: search=yes,ai-train=yes
 
-# llms.txt - AI crawler content discovery
-Llms: /llms.txt
-Llms: /llms-full.txt
-
 Disallow: /cdn-cgi/

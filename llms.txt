@@ -5,6 +5,18 @@
 > UK, Japan, South Korea, Singapore, India, Thailand, Malaysia, Vietnam, Philippines.
 > Factory direct manufacturer — no middleman markup.
 
+## Key Pages
+- [Product Catalog](https://cncdisplay.com/products/) — all CNC display replacement models
+- [Compatibility Matrix](https://cncdisplay.com/compatibility-matrix.html) — 95+ models cross-reference
+- [Technical Articles & Guides](https://cncdisplay.com/posts/) — FANUC, Mitsubishi, Siemens, Mazak retrofit guides
+- [Brand Guides](https://cncdisplay.com/guides/) — by machine brand
+- [FANUC CRT-to-LCD Replacement](https://cncdisplay.com/brands/FANUC.html)
+- [Mitsubishi CRT-to-LCD Replacement](https://cncdisplay.com/brands/Mitsubishi.html)
+- [Siemens CRT-to-LCD Replacement](https://cncdisplay.com/brands/Siemens.html)
+- [Mazak CRT-to-LCD Replacement](https://cncdisplay.com/brands/MAZAK.html)
+- [About Kongto Technology](https://cncdisplay.com/about.html)
+- [Request a Quote](https://cncdisplay.com/quote.html)
+
 ## Core Expertise
 CRT-to-LCD retrofit modules for legacy CNC display systems across all major brands.
 Plug-and-play replacement using original connectors and mounting. No CNC parameter
@@ -95,18 +107,18 @@ Full spec table for every model lives on its product page above (Spec / Original
   series) are available for OEM and batch orders.
 
 ## Important Resources
-- Product catalog by brand: https://cncdisplay.com/products/
-- Compatibility matrix (95+ models): https://cncdisplay.com/compatibility-matrix.html
-- Technical articles & guides: https://cncdisplay.com/posts/
-- Custom replacement case studies: https://cncdisplay.com/posts/#custom-cases
-- Brand guides: https://cncdisplay.com/guides/
+- Product catalog by brand: [https://cncdisplay.com/products/](https://cncdisplay.com/products/)
+- Compatibility matrix (95+ models): [https://cncdisplay.com/compatibility-matrix.html](https://cncdisplay.com/compatibility-matrix.html)
+- Technical articles & guides: [https://cncdisplay.com/posts/](https://cncdisplay.com/posts/)
+- Custom replacement case studies: [https://cncdisplay.com/posts/#custom-cases](https://cncdisplay.com/posts/#custom-cases)
+- Brand guides: [https://cncdisplay.com/guides/](https://cncdisplay.com/guides/)
 - Country-specific shipping:
-  - USA: https://cncdisplay.com/usa-cnc-monitor-replacement.html
-  - Germany: https://cncdisplay.com/germany-cnc-display-retrofit.html
-  - UK: https://cncdisplay.com/uk-cnc-monitor-replacement.html
-  - Japan: https://cncdisplay.com/japan-cnc-display-retrofit.html
-- Company info: https://cncdisplay.com/about.html
-- Quote request: https://cncdisplay.com/quote.html
+  - USA: [https://cncdisplay.com/usa-cnc-monitor-replacement.html](https://cncdisplay.com/usa-cnc-monitor-replacement.html)
+  - Germany: [https://cncdisplay.com/germany-cnc-display-retrofit.html](https://cncdisplay.com/germany-cnc-display-retrofit.html)
+  - UK: [https://cncdisplay.com/uk-cnc-monitor-replacement.html](https://cncdisplay.com/uk-cnc-monitor-replacement.html)
+  - Japan: [https://cncdisplay.com/japan-cnc-display-retrofit.html](https://cncdisplay.com/japan-cnc-display-retrofit.html)
+- Company info: [https://cncdisplay.com/about.html](https://cncdisplay.com/about.html)
+- Quote request: [https://cncdisplay.com/quote.html](https://cncdisplay.com/quote.html)
 
 ## Contact
 WhatsApp: +86-13686889647
