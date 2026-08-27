@@ -10,17 +10,17 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a02b-0200-c071-lcd-upgrade": {
-  "title": "FANUC A02B-0200-C071 14-inch Color CRT to 12.1-inch LCD Upgrade | CNC Display Replacement | Kongto",
+  "title": "FANUC A02B-0200-C071 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0072-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0072 9-inch LCD Upgrade CNC Display | CRT Replacement Monitor | Kongto",
+  "title": "FANUC A61L-0001-0072 9-inch CRT to LCD Upgrade | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0074-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0074 14-inch CRT Replacement CNC | Color Display LCD Upgrade 12.1-inch | Kongto",
+  "title": "FANUC A61L-0001-0074 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch Industrial TFT LCD"
  },
@@ -45,12 +45,12 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0093-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0093 8-inch LCD Upgrade Display | CRT Replacement for CNC 0/0i Series | Kongto",
+  "title": "FANUC A61L-0001-0093 9-inch CRT to LCD Replacement (MDT947B-2A/2B) | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0094-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0094 14-inch CRT Replacement CNC | 12.1-inch Color Display LCD Upgrade | Kongto",
+  "title": "FANUC A61L-0001-0094 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
@@ -60,17 +60,17 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0096-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0096 14-inch Color CRT to 12.1-inch LCD Upgrade | CNC Display Replacement | Kongto",
+  "title": "FANUC A61L-0001-0096 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0097-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0097 14-inch Color CRT to 12.1-inch LCD Upgrade | CNC Display Replacement | Kongto",
+  "title": "FANUC A61L-0001-0097 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "fanuc-a61l-0001-0116-lcd-upgrade": {
-  "title": "FANUC A61L-0001-0116 9-inch LCD CNC Display | CRT Replacement Monitor Upgrade | Kongto",
+  "title": "FANUC A61L-0001-0116 9-inch CRT to LCD Upgrade | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
@@ -110,7 +110,7 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "heidenhain-bc110-lcd-upgrade": {
-  "title": "HEIDENHAIN BC110 9-inch CRT to 8-inch LCD Upgrade | Heidenhain BC110 CNC Display Upgrade | Kongto",
+  "title": "HEIDENHAIN BC110 9-inch CRT to LCD Upgrade | CNC Display Upgrade | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
@@ -120,42 +120,42 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "matsushita-tx1450ab-lcd-upgrade": {
-  "title": "MATSUSHITA TX1450AB 14-inch CRT to 12.1-inch LCD Upgrade | Matsushita TX-1450AB CRT to LCD | Kongto",
+  "title": "MATSUSHITA TX1450AB 14-inch CRT to LCD Upgrade | TX-1450AB CRT to LCD | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-14-inch-crt-lcd-upgrade": {
-  "title": "MAZAK 14-INCH-CRT 14-inch CRT to 12.1-inch LCD Upgrade | Mazak 14 CRT Monitor LCD Upgrade | Kongto",
+  "title": "MAZAK 14-inch CRT to LCD Upgrade | Mazak 14 CRT Monitor Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-aiqa8dsp40-lcd-upgrade": {
-  "title": "MAZAK AIQA8DSP40 14-inch CRT to 12.1-inch LCD Upgrade | Sharp Mazak AIQA8DSP40 LCD Upgrade | Kongto",
+  "title": "MAZAK AIQA8DSP40 14-inch CRT to LCD Upgrade | Sharp Mazak AIQA8DSP40 LCD Upgrade | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-c5470ns-lcd-upgrade": {
-  "title": "MAZAK C5470NS 14-inch CRT to 12.1-inch LCD Upgrade | Mazatrol CRT Display Replacement | Kongto",
+  "title": "MAZAK C5470NS 14-inch CRT to LCD Upgrade | Mazatrol CRT Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-cd1472-lcd-upgrade": {
-  "title": "MAZAK CD1472-D1M 14-inch CRT to 12.1-inch LCD Upgrade | Mazatrol Display LCD Kit | Kongto",
+  "title": "MAZAK CD1472-D1M 14-inch CRT to LCD Upgrade | Mazatrol Display LCD Kit | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-dr5614-lcd-upgrade": {
-  "title": "MAZAK DR5614 14-inch CRT to 12.1-inch LCD Upgrade | Mazatrol T-32 Display Upgrade | Kongto",
+  "title": "MAZAK DR5614 14-inch CRT to LCD Upgrade | Mazatrol T-32 Display Replacement | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mazak-mdt1283b-1a-lcd-upgrade": {
-  "title": "MAZAK MDT1283B-1A 12-inch CRT to 10.4-inch LCD Upgrade | Mazak MDT1283B-1A Display LCD Kit | Kongto",
+  "title": "MAZAK MDT1283B-1A 12-inch CRT to LCD Upgrade | MDT1283B-1A Display LCD Kit | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "mazak-mdt1283b-lcd-upgrade": {
-  "title": "MAZAK MDT1283B 12-inch CRT to 10.4-inch LCD Upgrade | Mazak MDT1283B CRT Replacement | Kongto",
+  "title": "MAZAK MDT1283B 12-inch CRT to LCD Upgrade | MDT1283B CRT Replacement | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
@@ -165,12 +165,12 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-c3470-crt-lcd-upgrade": {
-  "title": "Mazak C3470 14-inch Color CRT to 12.1-inch LCD Upgrade | CD1472 Display | Kongto",
+  "title": "Mazak C3470 14-inch CRT to LCD Upgrade | CD1472 Display | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-c5470-lcd-upgrade": {
-  "title": "Mazak C5470 14-inch Color CRT to 12.1-inch LCD Upgrade | Mazatrol Display | Kongto",
+  "title": "Mazak C5470 14-inch CRT to LCD Upgrade | Mazatrol Display | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
@@ -180,22 +180,22 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-kf-m7099h-lcd-upgrade": {
-  "title": "KF-M7099H 9-inch CRT to 8-inch LCD Upgrade | FANUC 0093 Compatible | Kongto",
+  "title": "KF-M7099H 9-inch CRT to LCD Upgrade | FANUC 0093 Compatible | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-mdt-1283b-lcd-upgrade": {
-  "title": "Mazak MDT1283B 12-inch Mono CRT to 10.4-inch LCD Upgrade | Kongto",
+  "title": "MAZAK MDT1283B 12-inch CRT to LCD Upgrade | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-mdt925ps-lcd-upgrade": {
-  "title": "MITSUBISHI MDT925PS 9-inch CRT to 8-inch LCD Upgrade | Mitsubishi MDT925PS CNC Display Replacement | Kongto",
+  "title": "MITSUBISHI MDT925PS 9-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-mdt947b-lcd-upgrade": {
-  "title": "MDT947B A61L-0001-0092 9-inch CRT to 8-inch LCD Upgrade | FANUC Display | Kongto",
+  "title": "MDT947B A61L-0001-0092 9-inch CRT to LCD Upgrade | FANUC Display | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
@@ -205,7 +205,7 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "mitsubishi-tx-1450ab-lcd-upgrade": {
-  "title": "TX-1450AB 14-inch Color CRT to 12.1-inch LCD Upgrade | FANUC 0094 Compatible | Kongto",
+  "title": "TX-1450AB 14-inch CRT to LCD Upgrade | FANUC 0094 Compatible | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
@@ -215,67 +215,67 @@
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "okuma-osp5000-lcd-upgrade": {
-  "title": "OKUMA OSP5000 12-inch CRT to 10.4-inch LCD Upgrade | Okuma OSP5000 CRT LCD Replacement | Kongto",
+  "title": "OKUMA OSP5000 12-inch CRT to LCD Upgrade | OSP5000 CRT LCD Replacement | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "okuma-osp5020-lcd-upgrade": {
-  "title": "OKUMA OSP5020 12-inch CRT to 10.4-inch LCD Upgrade | Okuma OSP5020 LCD Upgrade CNC | Kongto",
+  "title": "OKUMA OSP5020 12-inch CRT to LCD Upgrade | OSP5020 LCD Upgrade CNC | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "okuma-osp7000-crt-lcd-upgrade": {
-  "title": "OKUMA OSP7000-CRT 12-inch CRT to 10.4-inch LCD Upgrade | Okuma OSP7000 Display Replacement | Kongto",
+  "title": "OKUMA OSP7000-CRT 12-inch CRT to LCD Upgrade | OSP7000 Display Replacement | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "siemens-6fc3988-7fa20-lcd-upgrade": {
-  "title": "SIEMENS 6FC3988-7FA20 9-inch CRT to 8-inch LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto",
+  "title": "SIEMENS 6FC3988-7FA20 9-inch CRT to LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "siemens-6fc5103-lcd-upgrade": {
-  "title": "SIEMENS 6FC5103 15-inch CRT to 15-inch LCD Upgrade | SINUMERIK Color Display Replacement | Kongto",
+  "title": "SIEMENS 6FC5103 15-inch CRT to LCD Upgrade | SINUMERIK Color Display Replacement | Kongto",
   "crt": "15-inch Color CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "siemens-6fc5203-lcd-upgrade": {
-  "title": "SIEMENS 6FC5203 15-inch CRT to 15-inch LCD Upgrade | SINUMERIK Color Monitor CRT Replacement | Kongto",
+  "title": "SIEMENS 6FC5203 15-inch CRT to LCD Upgrade | SINUMERIK Color Monitor CRT Replacement | Kongto",
   "crt": "15-inch Color CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "siemens-sm0901-lcd-upgrade": {
-  "title": "SIEMENS SM0901 9-inch CRT to 8-inch LCD Upgrade | SINUMERIK 579417TA Display Upgrade | Kongto",
+  "title": "SIEMENS SM0901 9-inch CRT to LCD Upgrade | SINUMERIK 579417TA Display Upgrade | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "siemens-sm1200-lcd-upgrade": {
-  "title": "SIEMENS SM1200 12-inch CRT to 10.4-inch LCD Upgrade | SINUMERIK Large Display Upgrade | Kongto",
+  "title": "SIEMENS SM1200 12-inch CRT to LCD Upgrade | SINUMERIK Large Display Upgrade | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  },
  "toshiba-d14cm-01a-lcd-upgrade": {
-  "title": "TOSHIBA D14CM-01A 14-inch CRT to 12.1-inch LCD Upgrade | Toshiba D14CM-01A OEM FANUC Display | Kongto",
+  "title": "TOSHIBA D14CM-01A 14-inch CRT to LCD Upgrade | OEM FANUC Display | Kongto",
   "crt": "14-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "toshiba-d15cm-lcd-upgrade": {
-  "title": "TOSHIBA D15CM 15-inch CRT to 15-inch LCD Upgrade | Toshiba D15CM Color Display Replacement | Kongto",
+  "title": "TOSHIBA D15CM 15-inch CRT to LCD Upgrade | Color Display Replacement | Kongto",
   "crt": "15-inch Color CRT",
   "lcd": "12.1-inch TFT-LCD Industrial Panel"
  },
  "toshiba-d9mm-11a-lcd-upgrade": {
-  "title": "TOSHIBA D9MM-11A 9-inch CRT to 8-inch LCD Upgrade | Toshiba D9MM-11A OEM FANUC LCD | Kongto",
+  "title": "TOSHIBA D9MM-11A 9-inch CRT to LCD Upgrade | OEM FANUC LCD | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "siemens-810t-820t-lcd-upgrade": {
-  "title": "SIEMENS 810T / 820T 9-inch CRT to 8-inch LCD Upgrade | SINUMERIK 810T/820T CRT Monitor Replacement | Kongto",
+  "title": "SIEMENS 810T / 820T 9-inch CRT to LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto",
   "crt": "9-inch Monochrome CRT",
   "lcd": "8-inch TFT-LCD Industrial Panel"
  },
  "siemens-840c-840d-880-lcd-upgrade": {
-  "title": "SIEMENS 840C / 840D / 880 12-inch CRT to 10.4-inch LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto",
+  "title": "SIEMENS 840C / 840D / 880 12-inch CRT to LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto",
   "crt": "12-inch Monochrome CRT",
   "lcd": "10.4-inch TFT-LCD Industrial Panel"
  }
