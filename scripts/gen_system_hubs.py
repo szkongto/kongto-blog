@@ -164,7 +164,7 @@ PAGES = [
     {
         'slug': 'mitsubishi-e60.html',
         'title': 'Mitsubishi E60 LCD Upgrade — CRT to LCD Replacement | Kongto',
-        'meta_desc': 'Mitsubishi E60/E68 CNC display CRT-to-LCD upgrade. MDT962B and BM09DF 9-inch monochrome LCD modules. Plug-and-play, 2-year warranty.',
+        'meta_desc': 'Mitsubishi E60/E68 CNC display CRT-to-LCD upgrade. MDT962B and BM09DF 8-inch TFT-LCD modules. Plug-and-play, 2-year warranty.',
         'h1': 'Mitsubishi E60 LCD Upgrade — CRT to LCD Replacement Guide',
         'intro': 'Mitsubishi E60/E68 controls use 9-inch monochrome CRT displays. Our LCD modules are drop-in replacements using the original connector. Compatible models: MDT962B and BM09DF.',
         'system_name': 'Mitsubishi E60',

@@ -79,7 +79,7 @@ MODELS = [
         'en_intro': 'The FANUC Series 0-P (also known as the A02B-0099-C094) is a monochrome green-phosphor CRT display assembly used on the classic FANUC 0 series and 0-Mate CNC controls. This 9-inch PBM (Panel Built-in Monitor) unit was standard equipment on countless machine tools from the 1980s through 1990s.',
         'en_detail': 'Our LCD replacement module for the Series 0-P offers a drop-in upgrade: same 9-inch form factor, same 20-pin Honda connector, same DC 24V power. The LCD uses a high-contrast green monochrome TFT panel that preserves the classic CRT aesthetic while delivering 800×600 resolution, no flicker at any refresh rate, and 50,000+ hour reliability. No machine parameter changes, no wiring modifications, no bracket fabrication required.',
         'zh_title': 'FANUC Series 0-P A02B-0099-C094 CRT改LCD | 单绿色显示屏 | 江图科技',
-        'zh_desc': 'FANUC Series 0-P A02B-0099-C094 单绿色CRT改LCD方案。用于FANUC 0系列/0-Mate经典数控。9英寸单绿色TFT液晶，即插即用，不改参数。2年质保。',
+        'zh_desc': 'FANUC Series 0-P A02B-0099-C094 单绿色CRT改LCD方案。用于FANUC 0系列/0-Mate经典数控。8英寸单绿色TFT液晶，即插即用，不改参数。2年质保。',
         'zh_h1': 'FANUC Series 0-P 单绿色CRT改LCD升级',
         'zh_intro': 'FANUC Series 0-P（亦称A02B-0099-C094）是用于经典FANUC 0系列和0-Mate数控系统的单绿色CRT显示器组件。这种9英寸PBM（面板内置显示器）单元从1980年代到1990年代是无数机床的标准配置。',
         'zh_detail': '我们的Series 0-P LCD替换模组提供直接升级方案：相同9英寸外形尺寸、相同20针Honda接口、相同DC 24V电源。LCD采用高对比度单绿色TFT面板，保留经典CRT的显示风格，同时提供800×600分辨率、无闪烁显示和50,000+小时寿命。无需修改机床参数、无需改动线路、无需制作安装支架。',
