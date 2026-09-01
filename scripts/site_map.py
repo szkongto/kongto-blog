@@ -76,6 +76,24 @@ def build_zh_en_pairs():
 MODEL_ART_RE = re.compile(r'/(article_|comparison_|faq_)')
 
 
+def redirect_sources():
+    """被 _redirects 301/302 的源路径集合（相对路径，去前导/）。
+    这些页面已废弃、由重定向兜底，不参与索引，不要求 5 入口（与 meta-refresh 壳页同理）。"""
+    try:
+        txt = open('_redirects', encoding='utf-8', errors='ignore').read()
+    except Exception:
+        return set()
+    srcs = set()
+    for line in txt.splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        parts = line.split()
+        if len(parts) >= 3 and parts[-1] in ('301', '302'):
+            srcs.add(parts[0].lstrip('/'))
+    return srcs
+
+
 def build_article_entries():
     """模型文章入口检查（CLAUDE.md铁律3）。
     只对 article_/comparison_ 前缀的型号文章硬校验 posts index（EN/ZH）——
@@ -102,10 +120,10 @@ def build_article_entries():
             continue  # 重定向壳页,真内容在别处,不要求入口
         base = os.path.basename(n)
         if is_zh:
-            if base not in posts_zh_idx:
+            if base not in posts_zh_idx and n not in redirect_sources():
                 entries[n] = ['zh_posts_index']
         else:
-            if base not in posts_en_idx:
+            if base not in posts_en_idx and n not in redirect_sources():
                 entries[n] = ['posts_index_EN']
     return entries
 
