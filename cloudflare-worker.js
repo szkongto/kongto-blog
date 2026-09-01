@@ -152,6 +152,7 @@ const REDIRECTS = {
   '/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html': '/posts/Industrial_Video_Display_Color_Scanning_Technology.html',
   '/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html': '/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html',
   '/posts/Shenzhen_Kongto_FANUC_LCD_Retrofit_Press_Release.html': '/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html',
+  '/posts/Shenzhen_Kongto_Industrial_Video_Display_Product_Catalog.html': '/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html',
   '/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html': '/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html',
   '/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html': '/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html',
   '/posts/Used_Display_Recycling_FAQ_TOP10.html': '/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html',
