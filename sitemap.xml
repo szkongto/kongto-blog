@@ -455,12 +455,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -759,12 +753,6 @@
   <url>
     <loc>https://cncdisplay.com/posts/fanuc-a02b-0099-c094-lcd-upgrade-guide.html</loc>
     <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html</loc>
-    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

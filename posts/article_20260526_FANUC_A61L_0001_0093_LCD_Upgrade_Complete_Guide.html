@@ -980,6 +980,87 @@
 
 
 
+,
+    {
+      "@type": "Question",
+      "name": "Q: What connector does the A61L-0001-0093 use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: A HONDA 20-pin connector (HRS blue shell) carrying GND, R, G, B, INTENSITY, HSYNC, VSYNC, and DC 24V. The Kongto LCD uses the identical connector."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: What is the OEM equivalent of the A61L-0001-0093?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: The most common OEM-equivalent code is KF-M7099H. You will also see MDT947B-2B, D9MM-11A, and TX-901AB used for the same 9-inch amber unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Which FANUC controls is it compatible with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: FANUC 0 / 0-Mate / 0-TMate, 0i-A / 0i-B / 0i-C / 0i-D, OM / OM-D / OM-C, and 16i / 18i / 21i. See the compatibility section on this page for the full list."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Can I keep the original CRT instead of upgrading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: A direct CRT replacement is possible, but the tube is a 15,000-hour part that dims roughly 40% over its life and carries up to 28 kV. The LCD upgrade is brighter, longer-lived, and safer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: How much brighter is the LCD versus the CRT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: The original CRT is about 200 cd/m\u00b2; the Kongto LCD delivers 350-450 cd/m\u00b2 \u2014roughly 75-125% brighter, readable without a flashlight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Is there a warranty on the Kongto LCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: Yes \u2014a 2-year free warranty covering non-human damage. Contact info@cncdisplay.com for current terms on the A61L-0001-0093 LCD module."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: How long does the installation take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: About 15 minutes of hands-on work, up to 30 minutes end to end once discharge and verification are included. Most machines do not require control removal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Is it safe to do myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: The swap itself is intermediate-level, but the CRT discharge step involves 15-28 kV. If you are not trained in high-voltage lockout and discharge, have a qualified technician perform the teardown or confirm the old tube is safe first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Do I need to change any CNC parameters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: No. The signal conversion happens inside the LCD; the control outputs the same HONDA 20-pin TTL/RGB it always did. No parameters, offsets, or programs change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Q: Will the LCD fix burn-in or ghosting on my screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A: Burn-in is permanent phosphor damage on a CRT and cannot be reversed \u2014but replacing the CRT with the Kongto LCD eliminates it entirely, since the new panel has no phosphor."
+      }
+    }
 
   ]
 
@@ -1292,6 +1373,28 @@
 
 </div>
 
+
+
+<h2>Before You Replace: Diagnose the Fault</h2>
+                <p>Before spending on a replacement, confirm the CRT itself is the fault. Many "dead display" callouts turn out to be a loose cable, a blown fuse, or a mainboard issue &mdash;none fixed by a new screen. Work through the checklist below before you condemn the tube.</p>
+                <h3>Common CRT Aging Symptoms</h3>
+                <ul>
+                    <li><strong>Gradual dimming:</strong> An aged tube loses roughly 40% of its brightness over its 15,000-hour life; units past 12 years typically sit below 35% brightness &mdash;the point where a flashlight no longer helps.</li>
+                    <li><strong>Poor focusing:</strong> Blurred character edges and distortion make offsets and programs hard to read during programming.</li>
+                    <li><strong>Flickering and jitter:</strong> Aging high-voltage circuits cause image instability and operator fatigue during prolonged use.</li>
+                    <li><strong>Burn-in / ghosting:</strong> Permanent phosphor damage from static screens &mdash;irreversible on a CRT.</li>
+                </ul>
+                <h3>Quick Decision Tree</h3>
+                <ol>
+                    <li><strong>Does the control power on?</strong> If not, check the AC supply, fuse, and PSU first &mdash;a dead PSU means no clean 24V reaches the display.</li>
+                    <li><strong>Is the display indicator on?</strong> If dark, reseat the HONDA 20-pin and DC 24V leads &mdash;a half-seated connector mimics a dead tube.</li>
+                    <li><strong>Is brightness present?</strong> Good power rails but a dim or dark screen points to the tube itself.</li>
+                    <li><strong>Is the image normal?</strong> Bright but garbled or missing picture points to the CNC or software, not the display.</li>
+                    <li><strong>Is sync stable?</strong> Vertical or horizontal roll means HSYNC/VSYNC trouble; if the cable checks out and sync won't lock, replace the display.</li>
+                </ol>
+                <div class="warning-box">
+                    <strong>&#9888; Safety First:</strong> A CRT is a high-voltage tube. The anode cap holds <strong>15-28 kV</strong> of residual charge long after power-off. Before touching the tube: power down, lock out and tag out the AC disconnect, wait 5-10 minutes, then discharge the anode with a proper insulated high-voltage probe against chassis ground and verify ~0 V with a multimeter. If you are not trained in HV discharge, bring in a qualified technician.
+                </div>
 <h2>Step 1: Product Model Identification and Verification</h2>
 
 
@@ -1500,7 +1603,16 @@
 
 
 
-                <h3>Kongto LCD Upgrade Module Identification</h3>
+                                <h3>OEM-Equivalent and Cross-Reference Codes</h3>
+                <p>The A61L-0001-0093 is cross-referenced under several OEM and third-party codes. Any of the following on the tube label or a quote identifies the same 9-inch amber unit:</p>
+                <ul>
+                    <li><strong>KF-M7099H</strong> &mdash;the most common OEM-equivalent code, printed on the original nameplate</li>
+                    <li><strong>MDT947B-2B</strong> &mdash;cross-reference part code for the same 9-inch unit</li>
+                    <li><strong>D9MM-11A</strong> &mdash;variant designation within the same 9-inch family</li>
+                    <li><strong>TX-901AB</strong> &mdash;third-party equivalent designation</li>
+                </ul>
+                <p>Note: the <strong>A61L-0001-0095</strong> is a 9-inch CGA/EGA variant and the <strong>A61L-0001-0094</strong> is a 14-inch unit &mdash;different signal families, not direct swaps. Confirm the original tube label (Model / KF-M7099H, see figure below) before ordering.</p>
+<h3>Kongto LCD Upgrade Module Identification</h3>
 
 
 
@@ -1980,7 +2092,12 @@
 
 
 
-                <h2>Step 3: Physical Installation Procedure</h2>
+                                <h3>2.3 Signal Compatibility &mdash;Why It's Plug-and-Play</h3>
+                <p>Engineers reasonably worry that an LCD won't "speak" the old CRT's video language. With this module it does, and here is the technical reason.</p>
+                <p>The <strong>HONDA 20-pin connector</strong> (HRS blue shell) carries everything the display needs: GND, R, G, B, INTENSITY, HSYNC, VSYNC, and DC 24V. There is no separate video board, external scaler, or LVDS bridge to wire &mdash;the Kongto LCD accepts that exact pinout on the same connector.</p>
+                <p>FANUC 9-inch CRTs in the A61L-0001-009X family use <strong>TTL/RGB (CGA) monochrome signaling</strong> at a line frequency of ~15.7 kHz and a frame rate of 50-60 Hz. The native CRT resolution is 640&times;400, accepting up to 640&times;480 over RGB. The Kongto panel converts that old signal path internally (TTL/RGB &rarr; VGA &rarr; TFT-LCD) and upscales to 800&times;600 on a modern TFT panel.</p>
+                <p>Because the conversion happens entirely inside the module, the CNC mainboard still outputs the same HONDA 20-pin TTL/RGB it always did &mdash;<strong>no parameter to edit, no video mode to select, no handshake</strong>. Machine parameters, offsets, and programs stay exactly as they are.</p>
+<h2>Step 3: Physical Installation Procedure</h2>
 
 
 
@@ -2060,7 +2177,7 @@
 
 
 
-                    <li>Wait at least 2 minutes to ensure internal capacitors are fully discharged</li>
+                    <li>Wait at least 5-10 minutes for the CRT high-voltage anode residual charge to bleed off (see safety note below)</li>
 
 
 
@@ -2108,7 +2225,11 @@
 
 
 
-                <h3><span class="step-num">2</span> Remove Old CRT</h3>
+                
+                <div class="warning-box">
+                    <strong>&#9888; High-Voltage Safety:</strong> A CRT is a high-voltage tube &mdash;the anode cap holds 15-28 kV of residual charge long after power-off. Before touching the old tube, lock out and tag out the AC disconnect, wait 5-10 minutes, then discharge the anode with a proper insulated high-voltage probe against chassis ground and verify ~0 V with a multimeter. If you are not trained in HV discharge, bring in a qualified technician.
+                </div>
+<h3><span class="step-num">2</span> Remove Old CRT</h3>
 
 
 
@@ -3260,7 +3381,26 @@
 
 
 
-                <h2>Post-Installation Maintenance</h2>
+                                <h3>Compatibility Verified Across Tested Platforms</h3>
+                <p>Beyond the system list above, the A61L-0001-0093 LCD replacement kit has been tested and validated on specific FANUC control platforms:</p>
+                <ul>
+                    <li><strong>FANUC 0iM</strong> &mdash;the most common milling control, widely used in machining centers</li>
+                    <li><strong>FANUC O-T</strong> &mdash;lathe/turning control with 9-inch monochrome CRT</li>
+                    <li><strong>FANUC O-MD</strong> &mdash;older milling/drilling control with standard CRT interface</li>
+                    <li><strong>FANUC TOME</strong> &mdash;specialized control variant with custom display requirements</li>
+                </ul>
+                <p>Each test included signal compatibility verification, resolution auto-detection, power stability testing, and a <strong>72-hour burn-in</strong>. The LCD module automatically adapts to the RGB/EGA/CGA signal output of each FANUC control version &mdash;no manual configuration or parameter changes required.</p>
+
+
+<h2>Is the LCD Upgrade Worth It? 5-Year Cost Analysis</h2>
+                <p>The Kongto A61L-0001-0093 LCD upgrade module is priced at <strong>$155</strong> with a 2-year warranty. Compare that against the alternatives over a five-year horizon:</p>
+                <ul>
+                    <li><strong>Repeated CRT repairs:</strong> A CRT is a 15,000-hour part, and field repairs on an aging tube recur &mdash;the tube is still heading for failure. The LCD removes recurring repair cost entirely.</li>
+                    <li><strong>Full control replacement:</strong> Swapping an entire control because of a dead screen is dramatically more expensive once you add unit cost, labor, and downtime. A $155 display swap that avoids that is an easy call.</li>
+                    <li><strong>Downtime risk:</strong> A dim screen that misleads an operator on a Z-offset can scrap a costly workpiece in a single shift. The LCD upgrade eliminates the dimming failure mode at the source.</li>
+                </ul>
+                <p>Even at list price, the LCD pays for itself the moment it avoids the first CRT repair &mdash;and it eliminates recurring dimming, burn-in, and the high-voltage hazard for the rest of the machine's life.</p>
+<h2>Post-Installation Maintenance</h2>
 
 
 
@@ -3996,6 +4136,58 @@
 
 
 
+
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: What connector does the A61L-0001-0093 use?</h3>
+<p class="text-slate-mt03">A: A HONDA 20-pin connector (HRS blue shell) carrying GND, R, G, B, INTENSITY, HSYNC, VSYNC, and DC 24V. The Kongto LCD uses the identical connector.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: What is the OEM equivalent of the A61L-0001-0093?</h3>
+<p class="text-slate-mt03">A: The most common OEM-equivalent code is KF-M7099H. You will also see MDT947B-2B, D9MM-11A, and TX-901AB used for the same 9-inch amber unit.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Which FANUC controls is it compatible with?</h3>
+<p class="text-slate-mt03">A: FANUC 0 / 0-Mate / 0-TMate, 0i-A / 0i-B / 0i-C / 0i-D, OM / OM-D / OM-C, and 16i / 18i / 21i. See the compatibility section on this page for the full list.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Can I keep the original CRT instead of upgrading?</h3>
+<p class="text-slate-mt03">A: A direct CRT replacement is possible, but the tube is a 15,000-hour part that dims roughly 40% over its life and carries up to 28 kV. The LCD upgrade is brighter, longer-lived, and safer.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: How much brighter is the LCD versus the CRT?</h3>
+<p class="text-slate-mt03">A: The original CRT is about 200 cd/m&sup2;; the Kongto LCD delivers 350-450 cd/m&sup2; &mdash;roughly 75-125% brighter, readable without a flashlight.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Is there a warranty on the Kongto LCD?</h3>
+<p class="text-slate-mt03">A: Yes &mdash;a 2-year free warranty covering non-human damage. Contact info@cncdisplay.com for current terms on the A61L-0001-0093 LCD module.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: How long does the installation take?</h3>
+<p class="text-slate-mt03">A: About 15 minutes of hands-on work, up to 30 minutes end to end once discharge and verification are included. Most machines do not require control removal.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Is it safe to do myself?</h3>
+<p class="text-slate-mt03">A: The swap itself is intermediate-level, but the CRT discharge step involves 15-28 kV. If you are not trained in high-voltage lockout and discharge, have a qualified technician perform the teardown or confirm the old tube is safe first.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Do I need to change any CNC parameters?</h3>
+<p class="text-slate-mt03">A: No. The signal conversion happens inside the LCD; the control outputs the same HONDA 20-pin TTL/RGB it always did. No parameters, offsets, or programs change.</p>
+</div>
+
+<div class="divider-mb">
+<h3 class="text-blue-lg">Q: Will the LCD fix burn-in or ghosting on my screen?</h3>
+<p class="text-slate-mt03">A: Burn-in is permanent phosphor damage on a CRT and cannot be reversed &mdash;but replacing the CRT with the Kongto LCD eliminates it entirely, since the new panel has no phosphor.</p>
+</div>
+
 </section>
 
 
@@ -4036,7 +4228,7 @@
 
 
 
-    <ul class="grid-gap05"><li><a href="/posts/article_20260503_FANUC_A61L_0001_0093_LCD.html">FANUC A61L-0001-0093 LCD Retrofit Solution | Kongto Technology</a></li><li><a href="/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
+    <ul class="grid-gap05"><li><a href="/posts/article_20260503_FANUC_D9MM_11A_0093_LCD.html">FANUC D9MM-11A (A61L-0001-0093) 9-inch CRT to LCD Retrofit | Kongto</a></li><li><a href="/posts/FANUC_A61L_0001_0093_Display_FAQ_Solutions.html">FANUC A61L-0001-0093 Display FAQ Solutions | Kongto</a></li><li><a href="/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html">FANUC CRT to LCD Upgrade Complete Guide | Kongto Technology</a></li></ul>
 
 
 
