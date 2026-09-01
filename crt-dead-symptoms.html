@@ -406,6 +406,62 @@
 
 
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is my CNC display dim or flickering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common early sign of CRT aging. The electron gun loses emission efficiency over time, reducing brightness. Flickering indicates the horizontal deflection circuit is unstable. On FANUC 0i systems, this often appears as a slow brightness fade over weeks. On Mitsubishi M60/M500 controls, flickering may be accompanied by a high-pitched whine from the flyback transformer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can CRT screen burn-in (ghost images) be fixed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Static elements — axis position readouts, mode indicators, tool number displays — leave permanent marks on the CRT phosphor. This is irreversible. LCDs are immune to burn-in. An LCD upgrade not only fixes the ghost image but provides a sharper, more readable display."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my CNC display showing a color tint or distortion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When one or more CRT electron guns weaken, the color balance shifts. The display may develop a red, green, or blue tint. Degaussing (internal or manual) provides only temporary relief. The root cause is tube aging — the only permanent fix is replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my CRT work for a while then go dark intermittently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The CRT works for a period then goes dark, often returning after a cool-down period. This is typically caused by failing electrolytic capacitors in the power supply section. While capacitor replacement is a relatively cheap repair, the underlying CRT tube and deflection circuits remain aged and will fail again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the text on my CNC display blurry or unreadable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CRT focus relies on precise voltage in the focusing electrode. As components drift with age, text becomes unreadable. LCD modules offer native 800×600 or higher resolution with pixel-perfect sharpness — no focus adjustment ever needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I repair or replace my dead CRT display?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Complete failure. The CRT or its power supply has stopped working entirely. At this point, repair cost often exceeds replacement value. A third-party LCD module (such as Kongto's $155 A61L-0001-0093 replacement) costs less than a CRT repair quote from most service centers."
+      }
+    }
+  ]
+}
+    </script>
     </head>
 
 
@@ -645,6 +701,19 @@
 
 
 
+        <h2>Frequently Asked Questions</h2>
+        <h3>Q: Why is my CNC display dim or flickering?</h3>
+        <p>A: The most common early sign of CRT aging. The electron gun loses emission efficiency over time, reducing brightness. Flickering indicates the horizontal deflection circuit is unstable. On FANUC 0i systems, this often appears as a slow brightness fade over weeks. On Mitsubishi M60/M500 controls, flickering may be accompanied by a high-pitched whine from the flyback transformer.</p>
+        <h3>Q: Can CRT screen burn-in (ghost images) be fixed?</h3>
+        <p>A: Static elements — axis position readouts, mode indicators, tool number displays — leave permanent marks on the CRT phosphor. This is irreversible. LCDs are immune to burn-in. An LCD upgrade not only fixes the ghost image but provides a sharper, more readable display.</p>
+        <h3>Q: Why is my CNC display showing a color tint or distortion?</h3>
+        <p>A: When one or more CRT electron guns weaken, the color balance shifts. The display may develop a red, green, or blue tint. Degaussing (internal or manual) provides only temporary relief. The root cause is tube aging — the only permanent fix is replacement.</p>
+        <h3>Q: Why does my CRT work for a while then go dark intermittently?</h3>
+        <p>A: The CRT works for a period then goes dark, often returning after a cool-down period. This is typically caused by failing electrolytic capacitors in the power supply section. While capacitor replacement is a relatively cheap repair, the underlying CRT tube and deflection circuits remain aged and will fail again.</p>
+        <h3>Q: Why is the text on my CNC display blurry or unreadable?</h3>
+        <p>A: CRT focus relies on precise voltage in the focusing electrode. As components drift with age, text becomes unreadable. LCD modules offer native 800×600 or higher resolution with pixel-perfect sharpness — no focus adjustment ever needed.</p>
+        <h3>Q: Should I repair or replace my dead CRT display?</h3>
+        <p>A: Complete failure. The CRT or its power supply has stopped working entirely. At this point, repair cost often exceeds replacement value. A third-party LCD module (such as Kongto's $155 A61L-0001-0093 replacement) costs less than a CRT repair quote from most service centers.</p>
         <h2>Symptom-by-Symptom Guide</h2>
 
 
