@@ -356,7 +356,7 @@
 /zh/products/haas-9-pin-monochrome-lcd-upgrade.html /products/haas-9-pin-monochrome-lcd-upgrade.html 301
 /zh/products/haas-9pin-mono-crt-lcd-upgrade.html /products/haas-9pin-mono-crt-lcd-upgrade.html 301
 /zh/products/heidenhain-bc110-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
-/zh/products/mazak-mdt1283b-1a-lcd-upgrade.html /products/mazak-mdt1283b-1a-lcd-upgrade.html 301
+/zh/products/mazak-mdt1283b-1a-lcd-upgrade.html /zh/products/mazak-mdt1283b-lcd-upgrade.html 301
 /zh/products/mitsubishi-mdt947b-lcd-upgrade.html /products/mitsubishi-mdt947b-lcd-upgrade.html 301
 /zh/products/okuma-osp7000-crt-lcd-upgrade.html /products/okuma-osp7000-crt-lcd-upgrade.html 301
 /zh/products/toshiba-d15cm-lcd-upgrade.html /products/toshiba-d15cm-lcd-upgrade.html 301
@@ -527,3 +527,5 @@
 # 2026-09-02 P1 去冗余 Cluster 4: Siemens 2合并源(complete-guide/troubleshooting) 301 → crt-to-lcd 权威页
 /posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
 /posts/siemens-sinumerik-display-troubleshooting-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
+# 2026-09-02 P1 去冗余 Cluster 5: mazak-mdt1283b-1a 产品页 301 → mazak-mdt1283b 权威页(desc 已含 MDT1283B-1A/MDT-1283-02, 零信息丢失)
+/products/mazak-mdt1283b-1a-lcd-upgrade.html /products/mazak-mdt1283b-lcd-upgrade.html 301
