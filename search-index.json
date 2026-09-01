@@ -418,50 +418,6 @@
     "search_text": "Technical Downloads - Kongto Technology Download technical documentation for FANUC CRT to LCD retrofit kits, MDT-1283 conversion guides, and industrial display upgrade manuals from Kongto Technology. Technical Documentation Downloads "
   },
   {
-    "title": "FANUC CRT to LCD Upgrade Guide | Complete Replacement | Kongto",
-    "description": "Complete FANUC CRT to LCD upgrade guide. Covers A61L-0001 series, D9MM-11A, OM-D. Includes model identification, installation steps, wiring diagram, FAQ.",
-    "h1": "FANUC CRT to LCD Upgrade — Complete Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/guides/fanuc-crt-to-lcd-guide.html",
-    "search_text": "FANUC CRT to LCD Upgrade Guide | Complete Replacement | Kongto Complete FANUC CRT to LCD upgrade guide. Covers A61L-0001 series, D9MM-11A, OM-D. Includes model identification, installation steps, wiring diagram, FAQ. FANUC CRT to LCD Upgrade — Complete Guide "
-  },
-  {
-    "title": "Mazak CRT to LCD Upgrade Guide | Mazatrol Display | Kongto",
-    "description": "Mazak CRT to LCD upgrade guide for Mazatrol T-32/M-32 CNC. CD1472, C5470NS, MDT1283B replacement. Model lookup, installation, wiring.",
-    "h1": "Mazak CRT to LCD Upgrade Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/guides/mazak-crt-to-lcd-guide.html",
-    "search_text": "Mazak CRT to LCD Upgrade Guide | Mazatrol Display | Kongto Mazak CRT to LCD upgrade guide for Mazatrol T-32/M-32 CNC. CD1472, C5470NS, MDT1283B replacement. Model lookup, installation, wiring. Mazak CRT to LCD Upgrade Guide "
-  },
-  {
-    "title": "Mitsubishi CRT to LCD Upgrade Guide | MELDAS Display | Kongto",
-    "description": "Mitsubishi CRT to LCD upgrade guide for MELDAS M60/M64/M500 CNC. MDT962B, BM09DF, FCUA-CT100 replacement. Installation steps, wiring, FAQ.",
-    "h1": "Mitsubishi CRT to LCD Upgrade Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/guides/mitsubishi-crt-to-lcd-guide.html",
-    "search_text": "Mitsubishi CRT to LCD Upgrade Guide | MELDAS Display | Kongto Mitsubishi CRT to LCD upgrade guide for MELDAS M60/M64/M500 CNC. MDT962B, BM09DF, FCUA-CT100 replacement. Installation steps, wiring, FAQ. Mitsubishi CRT to LCD Upgrade Guide "
-  },
-  {
-    "title": "Siemens CRT to LCD Upgrade Guide | SINUMERIK Display | Kongto",
-    "description": "Siemens CRT to LCD upgrade guide for SINUMERIK 810/820/840D. 6FC5103, 6FC3988, SM0901 replacement. Installation steps, DB-25 wiring, FAQ.",
-    "h1": "Siemens CRT to LCD Upgrade Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/guides/siemens-crt-to-lcd-guide.html",
-    "search_text": "Siemens CRT to LCD Upgrade Guide | SINUMERIK Display | Kongto Siemens CRT to LCD upgrade guide for SINUMERIK 810/820/840D. 6FC5103, 6FC3988, SM0901 replacement. Installation steps, DB-25 wiring, FAQ. Siemens CRT to LCD Upgrade Guide "
-  },
-  {
     "title": "CNC TTL RGB Signal Pinout Guide | CRT to LCD Wiring | Kongto",
     "description": "CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.",
     "h1": "CNC TTL RGB Signal Pinout Guide FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
@@ -625,72 +581,6 @@
     "date": "",
     "url": "/knowledge/crt-vs-lcd-cnc-display-comparison.html",
     "search_text": "CRT vs LCD for CNC Displays: Comparison Guide | Kongto Technical comparison of CRT vs LCD displays for CNC machines. Lifespan, brightness, resolution, power, cost analysis for FANUC, Mazak, Mitsubishi, Siemens. CRT vs LCD for CNC Displays: Complete Technical Comparison Guide "
-  },
-  {
-    "title": "FANUC CRT to LCD Replacement Guide | A61L Monitor Upgrade | Kongto",
-    "description": "Complete guide to replacing FANUC CRT displays with LCD. Covers A61L-0001 series: 0092, 0093, 0094, 0096, 0097. Drop-in for 0/0i/16i/18i/21i controls.",
-    "h1": "FANUC CRT to LCD Replacement Complete Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/fanuc-crt-to-lcd-replacement-guide.html",
-    "search_text": "FANUC CRT to LCD Replacement Guide | A61L Monitor Upgrade | Kongto Complete guide to replacing FANUC CRT displays with LCD. Covers A61L-0001 series: 0092, 0093, 0094, 0096, 0097. Drop-in for 0/0i/16i/18i/21i controls. FANUC CRT to LCD Replacement Complete Guide "
-  },
-  {
-    "title": "Haas CRT Monitor Replacement Guide | LCD Upgrade VF/SL | Kongto",
-    "description": "Guide to replacing Haas CNC CRT monitors with LCD. Covers 9-pin monochrome, 12-inch, and 28HM-NM4 displays for Haas VF and SL series machines.",
-    "h1": "Haas CRT Monitor Replacement Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/haas-crt-monitor-replacement-guide.html",
-    "search_text": "Haas CRT Monitor Replacement Guide | LCD Upgrade VF/SL | Kongto Guide to replacing Haas CNC CRT monitors with LCD. Covers 9-pin monochrome, 12-inch, and 28HM-NM4 displays for Haas VF and SL series machines. Haas CRT Monitor Replacement Guide "
-  },
-  {
-    "title": "Mazak CRT to LCD Retrofit Guide | Mazatrol Display Upgrade | Kongto",
-    "description": "Guide to replacing Mazak CRT displays with LCD modules. Covers CD1472, MDT1283B, DR5614, AIQA8DSP40 models for Mazak Mazatrol T/M series controls.",
-    "h1": "Mazak CRT to LCD Retrofit Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/mazak-crt-to-lcd-retrofit-guide.html",
-    "search_text": "Mazak CRT to LCD Retrofit Guide | Mazatrol Display Upgrade | Kongto Guide to replacing Mazak CRT displays with LCD modules. Covers CD1472, MDT1283B, DR5614, AIQA8DSP40 models for Mazak Mazatrol T/M series controls. Mazak CRT to LCD Retrofit Guide "
-  },
-  {
-    "title": "Mitsubishi CNC Display Replacement Guide | CRT to LCD | Kongto",
-    "description": "Guide to replacing Mitsubishi CNC CRT displays with LCD. Covers MDT962B, FCUA-CT100, BM09DF, MDT925PS models for M500/M500/M60/M64/M70/M700 controls.",
-    "h1": "Mitsubishi CNC Display Replacement Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/mitsubishi-cnc-display-replacement-guide.html",
-    "search_text": "Mitsubishi CNC Display Replacement Guide | CRT to LCD | Kongto Guide to replacing Mitsubishi CNC CRT displays with LCD. Covers MDT962B, FCUA-CT100, BM09DF, MDT925PS models for M500/M500/M60/M64/M70/M700 controls. Mitsubishi CNC Display Replacement Guide "
-  },
-  {
-    "title": "Okuma CRT to LCD Replacement Guide | OSP Display Upgrade | Kongto",
-    "description": "Guide to replacing Okuma OSP CRT displays with LCD modules. Covers OSP5000, OSP5020, OSP7000 control systems. Factory direct LCD replacement from Shenzhen.",
-    "h1": "Okuma CRT to LCD Replacement Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/okuma-crt-to-lcd-replacement-guide.html",
-    "search_text": "Okuma CRT to LCD Replacement Guide | OSP Display Upgrade | Kongto Guide to replacing Okuma OSP CRT displays with LCD modules. Covers OSP5000, OSP5020, OSP7000 control systems. Factory direct LCD replacement from Shenzhen. Okuma CRT to LCD Replacement Guide "
-  },
-  {
-    "title": "Siemens CRT to LCD Upgrade Guide | Sinumerik Display | Kongto",
-    "description": "Siemens Sinumerik CRT to LCD upgrade for 810T, 820T, 840C, 840D. Covers 6FC3988-7FA20, 6FC5103, 6FC5203, SM0901, SM1200.",
-    "h1": "Siemens CRT to LCD Upgrade Guide",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/knowledge/siemens-crt-to-lcd-upgrade-guide.html",
-    "search_text": "Siemens CRT to LCD Upgrade Guide | Sinumerik Display | Kongto Siemens Sinumerik CRT to LCD upgrade for 810T, 820T, 840C, 840D. Covers 6FC3988-7FA20, 6FC5103, 6FC5203, SM0901, SM1200. Siemens CRT to LCD Upgrade Guide "
   },
   {
     "title": "FANUC A61L-0001-0093 LCD: Breathe New Life into Aging CNC | Kongto",

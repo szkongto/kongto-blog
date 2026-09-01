@@ -181,30 +181,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://cncdisplay.com/guides/fanuc-crt-to-lcd-guide.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/guides/mazak-crt-to-lcd-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/guides/mitsubishi-crt-to-lcd-guide.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/guides/siemens-crt-to-lcd-guide.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
   
   <url>
     <loc>https://cncdisplay.com/hub/aftermarket-cnc-display-manufacturer.html</loc>
@@ -243,42 +219,6 @@
     <priority>0.7</priority>
   </url>
   
-  <url>
-    <loc>https://cncdisplay.com/knowledge/fanuc-crt-to-lcd-replacement-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/haas-crt-monitor-replacement-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/mazak-crt-to-lcd-retrofit-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/mitsubishi-cnc-display-replacement-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/okuma-crt-to-lcd-replacement-guide.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/knowledge/siemens-crt-to-lcd-upgrade-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
   <url>
     <loc>https://cncdisplay.com/oem-supplier.html</loc>
     <lastmod>2026-08-18</lastmod>
