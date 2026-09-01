@@ -330,6 +330,7 @@ const REDIRECTS = {
   '/posts/mitsubishi-bm09df-lcd-replacement.html': '/products/mitsubishi-bm09df-lcd-upgrade.html',
   '/posts/mitsubishi-cnc-display-troubleshooting-zh.html': '/posts/article_20260615_Mitsubishi_CNC_Display_Troubleshooting.html',
   '/posts/mitsubishi-crt-vs-lcd-comparison-zh.html': '/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html',
+  '/posts/mitsubishi-fcua-ct100-lcd-replacement-zh-content.html': '/zh/products/mitsubishi-fcua-ct100-lcd-upgrade.html',
   '/posts/mitsubishi-fcua-ct100-lcd-replacement.html': '/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html',
   '/posts/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html': '/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html',
   '/posts/mitsubishi-mdt962b-crt-lcd-replacement-zh.html': '/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html',
