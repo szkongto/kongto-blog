@@ -513,3 +513,14 @@
 /posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
 /posts/cnc-monitor-replace-vs-repair-cost.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
 /posts/crt-repair-vs-lcd-cost-truth.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
+# 2026-09-02 P1 去冗余 Cluster 3: 10个薄品牌指南页(guides/knowledge) 301 → posts 权威页
+/guides/fanuc-crt-to-lcd-guide.html /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
+/knowledge/fanuc-crt-to-lcd-replacement-guide.html /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
+/guides/mazak-crt-to-lcd-guide.html /posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html 301
+/knowledge/mazak-crt-to-lcd-retrofit-guide.html /posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html 301
+/guides/mitsubishi-crt-to-lcd-guide.html /posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html 301
+/knowledge/mitsubishi-cnc-display-replacement-guide.html /posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html 301
+/guides/siemens-crt-to-lcd-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
+/knowledge/siemens-crt-to-lcd-upgrade-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
+/knowledge/haas-crt-monitor-replacement-guide.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
+/knowledge/okuma-crt-to-lcd-replacement-guide.html /posts/okuma-osp-crt-to-lcd-upgrade-guide.html 301

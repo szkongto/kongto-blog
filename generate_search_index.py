@@ -97,6 +97,21 @@ def main():
             if fname in ('404.html', 'baidu_verify_codeva-MOcuLxbSCp.html'):
                 continue
 
+            # Skip 301'd guide/knowledge pages (P1 dedup Cluster 3, 2026-09-02) — redirect to posts/ authorities
+            if rel in (
+                'guides/fanuc-crt-to-lcd-guide.html',
+                'guides/mazak-crt-to-lcd-guide.html',
+                'guides/mitsubishi-crt-to-lcd-guide.html',
+                'guides/siemens-crt-to-lcd-guide.html',
+                'knowledge/fanuc-crt-to-lcd-replacement-guide.html',
+                'knowledge/haas-crt-monitor-replacement-guide.html',
+                'knowledge/mazak-crt-to-lcd-retrofit-guide.html',
+                'knowledge/mitsubishi-cnc-display-replacement-guide.html',
+                'knowledge/okuma-crt-to-lcd-replacement-guide.html',
+                'knowledge/siemens-crt-to-lcd-upgrade-guide.html',
+            ):
+                continue
+
             # Skip redirect pages
             with open(fp, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read(5000)
