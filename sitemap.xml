@@ -387,12 +387,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -472,18 +466,6 @@
     <priority>0.7</priority>
   </url>
   
-  <url>
-    <loc>https://cncdisplay.com/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
   <url>
     <loc>https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html</loc>
     <lastmod>2026-08-28</lastmod>

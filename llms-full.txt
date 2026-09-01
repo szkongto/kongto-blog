@@ -227,7 +227,6 @@ Total indexed pages: 241
 - [FANUC CRT Repair vs LCD Retrofit — Cost Comparison | Replacement | Kongto Technology](https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html)
 - [FANUC CRT Repair vs LCD Retrofit — Cost Comparison | Replacement | Kongto Technology](https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html)
 - [FANUC CRT to LCD Upgrade Complete Guide | Replacement | Kongto Technology](https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html)
-- [FANUC CRT to LCD Upgrade Complete Guide | Replacement | Kongto Technology](https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html)
 - [How to Retrofit FANUC CRT to LCD — Kongto Technology Case Study](https://cncdisplay.com/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html)
 - [Industrial Controller Display Troubleshooting & Maintenance Guide](https://cncdisplay.com/posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html)
 - [Industrial Controller Display Troubleshooting & Maintenance Guide](https://cncdisplay.com/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html)
