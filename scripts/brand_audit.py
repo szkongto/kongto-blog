@@ -5,13 +5,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 posts = set(os.listdir(os.path.join(ROOT, 'posts')))
 
 checks = [
-    (92, 'press_release FANUC LCD', ['Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release', 'press_release']),
+    (92, 'press_release FANUC LCD', ['press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution', 'press_release']),
     (101, 'FANUC CRT to LCD guide', ['FANUC_CRT_Maintenance_vs_LCD_Upgrade', 'fanuc-crt-to-lcd-step-by-step']),
-    (102, 'FANUC CRT to LCD case', ['Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release', 'FANUC_CRT_Maintenance']),
+    (102, 'FANUC CRT to LCD case', ['press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution', 'FANUC_CRT_Maintenance']),
     (120, 'FANUC CRT vs LCD cost comparison', ['comparison_20260501_fanuc_crt_vs_lcd', 'fanuc_crt_vs_lcd']),
     (124, 'FANUC 0i FAQ solutions', ['fanuc-0i-display-faq', 'fanuc_0i_display_faq']),
     (234, 'FANUC CRT to LCD guide', ['FANUC_CRT_Maintenance_vs_LCD_Upgrade', 'fanuc-crt-to-lcd-step-by-step']),
-    (235, 'FANUC CRT to LCD case', ['Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release']),
+    (235, 'FANUC CRT to LCD case', ['press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution']),
     (239, 'FANUC CRT vs LCD comparison', ['comparison_20260501_fanuc_crt_vs_lcd']),
     (286, 'fanuc-om-d-display product', ['fanuc-om', 'fanuc-0m']),
     (290, 'fanuc-0m-0t product', ['fanuc-0m', 'fanuc-0t']),

@@ -212,7 +212,7 @@ Total indexed pages: 241
 - [Technical Downloads - Kongto Technology](https://cncdisplay.com/docs/index.html)
 
 ## English Articles
-- [Kongto Technology Launches FANUC CNC Display LCD Upgrade Solut...](https://cncdisplay.com/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html)
+- [Kongto Technology Launches FANUC CNC Display LCD Upgrade Solut...](https://cncdisplay.com/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html)
 - [CGA/EGA to RGBHV Industrial Display Retrofit Guide | Kongto Technology](https://cncdisplay.com/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html)
 - [Custom Industrial Display Series | Kongto Technology](https://cncdisplay.com/posts/Custom_Industrial_Display_Series.html)
 - [FANUC 0i System Display Abnormality Troubleshooting](https://cncdisplay.com/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html)
@@ -240,8 +240,8 @@ Total indexed pages: 241
 - [Key Color & Scanning Technologies in Industrial Video Architec...](https://cncdisplay.com/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html)
 - [Kongto Technology Industrial Display Product Catalog](https://cncdisplay.com/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html)
 - [Mazak DR5614 LCD Upgrade — CRT to LCD Replacement for Mazatrol...](https://cncdisplay.com/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html)
-- [Kongto FANUC LCD Solution | Replacement | Kongto Technology](https://cncdisplay.com/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html)
-- [Kongto Technology Launches FANUC Full-Series LCD Retrofit Solu...](https://cncdisplay.com/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html)
+- [Kongto FANUC LCD Solution | Replacement | Kongto Technology](https://cncdisplay.com/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html)
+- [Kongto Technology Launches FANUC Full-Series LCD Retrofit Solu...](https://cncdisplay.com/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html)
 - [Kongto Technology Industrial Display Product Catalog](https://cncdisplay.com/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html)
 - [Used Display Recycling FAQ | Replacement | Kongto Technology](https://cncdisplay.com/posts/Used_Display_Recycling_FAQ_TOP10.html)
 - [Used Industrial Display Recycling FAQ — Top 10 Questions](https://cncdisplay.com/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html)
