@@ -112,6 +112,8 @@ def main():
                 'posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html',
                 'posts/siemens-sinumerik-display-troubleshooting-guide.html',
                 'products/mazak-mdt1283b-1a-lcd-upgrade.html',
+                'posts/haas-crt-monitor-troubleshooting.html',
+                'products/haas-9pin-mono-crt-lcd-upgrade.html',
             ):
                 continue
 

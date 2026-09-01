@@ -60,7 +60,6 @@ Total indexed pages: 241
 - [HAAS 12-inch 9-pin CRT to 10.4-inch LCD Upgrade | VF Series CNC Display](https://cncdisplay.com/products/haas-12inch-9pin-crt-lcd-upgrade.html)
 - [HAAS 28HM-NM4 93-5220C 12-inch CRT to 10.4-inch LCD Upgrade | VF Series](https://cncdisplay.com/products/haas-28hm-nm4-lcd-upgrade.html)
 - [HAAS 9-pin Monochrome CRT to 8-inch LCD Upgrade | VF Series CNC Display](https://cncdisplay.com/products/haas-9-pin-monochrome-lcd-upgrade.html)
-- [HAAS 9-pin Mono CRT to 8-inch LCD Upgrade | VF Series CNC Display](https://cncdisplay.com/products/haas-9pin-mono-crt-lcd-upgrade.html)
 - [HEIDENHAIN BC110 9-inch CRT to 8-inch LCD Upgrade | Heidenhain BC110 CNC Display Upgrade](https://cncdisplay.com/products/heidenhain-bc110-lcd-upgrade.html)
 - [Heidenhain BC120 CRT to LCD Replacement — TNC 310/320](https://cncdisplay.com/products/heidenhain-bc120-lcd-upgrade.html)
 - [Heidenhain BE211 / BE211B CRT to LCD Upgrade — CNC Display Replacement](https://cncdisplay.com/products/heidenhain-be211-lcd-upgrade.html)

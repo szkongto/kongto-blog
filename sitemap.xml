@@ -718,12 +718,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/posts/haas-crt-monitor-troubleshooting.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -989,12 +983,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/products/haas-9-pin-monochrome-lcd-upgrade.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/products/haas-9pin-mono-crt-lcd-upgrade.html</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
