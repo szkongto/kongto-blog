@@ -97,7 +97,7 @@ def main():
             if fname in ('404.html', 'baidu_verify_codeva-MOcuLxbSCp.html'):
                 continue
 
-            # Skip 301'd guide/knowledge pages (P1 dedup Cluster 3, 2026-09-02) — redirect to posts/ authorities
+            # Skip 301'd guide/knowledge/product pages (P1 dedup Cluster 3/5, 2026-09-02) — redirect to authorities
             if rel in (
                 'guides/fanuc-crt-to-lcd-guide.html',
                 'guides/mazak-crt-to-lcd-guide.html',
@@ -111,6 +111,7 @@ def main():
                 'knowledge/siemens-crt-to-lcd-upgrade-guide.html',
                 'posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html',
                 'posts/siemens-sinumerik-display-troubleshooting-guide.html',
+                'products/mazak-mdt1283b-1a-lcd-upgrade.html',
             ):
                 continue
 
