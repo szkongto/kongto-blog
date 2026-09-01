@@ -126,39 +126,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-
-
-
-
-
-
-
-{"@type":"Question","name":"Which Siemens Sinumerik systems are compatible with LCD upgrade?","acceptedAnswer":{"@type":"Answer","text":"Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) systems are all compatible. Models 6FC3988-7FA20, SM0901, and 579417TA are direct replacements."}},
-
-
-
-
-
-
-
-{"@type":"Question","name":"What power does Siemens Sinumerik CRT use?","acceptedAnswer":{"@type":"Answer","text":"Important: Siemens Sinumerik CRTs use AC 110V or AC 220V power, NOT DC 24V like Fanuc or Mitsubishi. Our LCD modules include a built-in AC power supply compatible with 110-220V. Confirm your machine voltage before ordering."}},
-
-
-
-
-
-
-
-{"@type":"Question","name":"What connector does Siemens 6FC3988-7FA20 use?","acceptedAnswer":{"@type":"Answer","text":"Siemens 6FC3988-7FA20 uses a DB-25 (25-pin D-Sub) connector for video signal. Our LCD module includes a matching DB-25 connector for plug-and-play compatibility."}}
-
-
-
-
-
-
-
-]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which Siemens Sinumerik systems are compatible with LCD upgrade?", "acceptedAnswer": {"@type": "Answer", "text": "Siemens Sinumerik 810, 810D, 820, 820M, and 840D (Power Line) systems are all compatible. Models 6FC3988-7FA20, SM0901, and 579417TA are direct replacements."}}, {"@type": "Question", "name": "Is it really plug-and-play? No parameter changes?", "acceptedAnswer": {"@type": "Answer", "text": "For the vast majority of installations, yes. Our LCD modules accept the same video signal as the original display. No PLC parameter changes, no software configuration, no adapter cables. Some 840D Power Line systems may need a parameter check - we guide you through it."}}, {"@type": "Question", "name": "What power does the Siemens CRT use - AC or DC?", "acceptedAnswer": {"@type": "Answer", "text": "Siemens Sinumerik CRTs use AC 110V or AC 220V power, NOT DC 24V like Fanuc or Mitsubishi. Our LCD modules include a built-in AC power supply compatible with 110-220V. Confirm your machine voltage before ordering."}}, {"@type": "Question", "name": "Can I repair the backlight myself?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes, but it requires opening the display housing, discharging high voltage (inverters can hold a charge), and handling fragile CCFL tubes. Unless you have experience, we recommend sending it to us or replacing the unit."}}, {"@type": "Question", "name": "How long does a Siemens display typically last?", "acceptedAnswer": {"@type": "Answer", "text": "The display panel itself can last 15+ years, but the backlight (CCFL tubes) typically fails after 8-11 years of normal use. The inverter often fails around the same time. LCD upgrades replace the failing backlight system with reliable LEDs."}}, {"@type": "Question", "name": "My display is completely dead. Can I ship it to you for diagnosis?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer a diagnostic service - send us the display, we'll tell you exactly what's wrong and give you a repair or replacement quote. If you proceed with us, the diagnosis is free. Turnaround is typically 2-3 business days."}}, {"@type": "Question", "name": "Do you have replacements in stock, or is there a lead time?", "acceptedAnswer": {"@type": "Answer", "text": "We stock LCD upgrade kits for all common Siemens SINUMERIK displays (6FC3988 series, SM0901, and others). Most orders ship within 24 hours. Custom configurations: lead time typically 5-7 business days."}}, {"@type": "Question", "name": "Can I upgrade the display and keep using my existing SINUMERIK control?", "acceptedAnswer": {"@type": "Answer", "text": "Yes - that is the whole point. The LCD module replaces only the display unit. Your SINUMERIK NCU/PLC, drives, motors, and all machine functions remain unchanged."}}, {"@type": "Question", "name": "How does Kongto compare to Monitech for Siemens displays?", "acceptedAnswer": {"@type": "Answer", "text": "Kongto is the factory (30-50% lower pricing), 2-year warranty, lifetime tech support, and custom configuration available. See cncdisplay.com/posts/kongto-vs-monitech-siemens-lcd-upgrade.html for the detailed comparison."}}]}</script>
 
 
 
@@ -452,6 +420,60 @@
 
 
 
+<h2>SINUMERIK System Compatibility Guide</h2>
+
+<div class="box-gray">
+<h3>SINUMERIK 808D (entry-level)</h3>
+<p>The 808D uses a compact color LCD (typically 7" or 10"). These are still in production and replacements are available from Siemens. No upgrade urgency unless the display is physically damaged.</p>
+</div>
+
+<div class="box-gray">
+<h3>SINUMERIK 828D (mid-range)</h3>
+<p>The 828D uses a 10.4" color TFT display (part number 6FC5203 series). These are still available but expensive (~$2,000&ndash;$2,500 from Siemens). Third-party replacements from Kongto cost significantly less. <a href="/products/siemens-6fc5203-lcd-upgrade.html">View replacement &rarr;</a></p>
+</div>
+
+<div class="box-gray">
+<h3>SINUMERIK 840C (high-end, 1990s)</h3>
+<p>The 840C was a flagship CNC used on large mills, transfer lines, and heavy machinery. Its CRT displays (9" mono or 14" color) are now 25-35 years old. Siemens has discontinued all 840C display parts.</p>
+<p><strong>Good news:</strong> The 840C uses the same signal interface as the 810/820/880 family. Our KTV-series modules are confirmed compatible. <a href="/posts/siemens-sinumerik-840c-crt-lcd-upgrade.html">See our 840C-specific guide &rarr;</a></p>
+</div>
+
+<div class="box-gray">
+<h3>SINUMERIK 810D / 840D (powerful, older)</h3>
+<p><strong>Most display failures happen here.</strong> These systems from the early 2000s used the 6FC3988 series and SM0901. They are now 15-20 years old and failing regularly. Siemens has discontinued most of these displays.</p>
+<p><strong>Upgrade strongly recommended</strong> &mdash; don't wait for failure. If you have a 810D/840D machine, proactively upgrade. Our factory-direct modules start at <strong>$399</strong> with a 2-year warranty.</p>
+</div>
+
+<div class="box-gray">
+<h3>SINUMERIK 840D sl / 828D sl (newer)</h3>
+<p>The "sl" (solution line) systems use modern color LCDs with standard interfaces. These displays are still available from Siemens, though third-party options offer better value and faster delivery.</p>
+</div>
+
+<div class="box-gray">
+<h3>SINUMERIK 850 / 880 (legacy)</h3>
+<p>The 850 and 880 controls from the 1980s-1990s use the 6FC3988-7FA20 CRT display. These are long discontinued. <a href="/brands/Siemens.html">See replacement &rarr;</a></p>
+</div>
+
+<h2>Product Deep Dives</h2>
+
+<h3>6FC3988-7FA20 &mdash; The Most Common Siemens Display</h3>
+<p><a href="/products/siemens-6fc3988-7fa20-lcd-upgrade.html">6FC3988-7FA20</a> is a 9" monochrome CRT/LCD found on SINUMERIK 810D/840D controls. It is the display that fails most often and the one we sell most replacements for. Common failure: backlight goes dark (CCFL tube burnout) or video board stops outputting image. Our KTV148 replacement is a direct drop-in &mdash; same mounting holes, same connector, same power.</p>
+
+<h3>6FC3988-7FA20 &mdash; SINUMERIK 850/880 Display</h3>
+<p>The <a href="/brands/Siemens.html">6FC3988-7FA20</a> is a variant used on the larger SINUMERIK 850 and 880 controls. Functionally similar to the 6FC3988 but with slight differences in mounting bracket and cable routing. Our replacement module covers both.</p>
+
+<h3>6FC5103-0AB01 &mdash; 840D/810D Color CRT Upgrade</h3>
+<p>The <a href="/products/siemens-6fc5103-lcd-upgrade.html">6FC5103-0AB01</a> is a color CRT used on SINUMERIK 840D/810D controls. Our replacement module includes the correct interface cable for a clean drop-in fit.</p>
+
+<h3>SM0901 / 579417 TA &mdash; Siemens-Indramat Display</h3>
+<p>The <a href="/products/siemens-sm0901-lcd-upgrade.html">SM0901</a> (also labeled 579417 TA) is a 9" display used on SINUMERIK 810D/840D and some Indramat (Bosch Rexroth) controls. Because it cross-brands, getting a replacement from either Siemens or Indramat is slow. Our LCD module replaces it regardless of which CNC control it is connected to.</p>
+
+<h3>SM1200 &mdash; 840D Power Line Color TFT</h3>
+<p>The <a href="/products/siemens-sm1200-lcd-upgrade.html">SM1200</a> (6FC5221-0AA01) is a 12.1" color TFT display used on SINUMERIK 840D Power Line systems. It is a higher-end display compared to the monochrome units. Our KTV121 replacement is a factory-direct alternative at a fraction of the Siemens OEM price.</p>
+
+<h3>8.4" Industrial CRT &mdash; Compact Siemens Display</h3>
+<p>The <a href="/products/siemens-8.4-inch-crt-lcd-upgrade.html">8.4" industrial CRT</a> was used on SINUMERIK 810/820/840D systems where panel space was limited. Our LCD replacement matches the compact footprint.</p>
+
 <h2>CRT Failure Symptoms</h2>
 
 
@@ -716,6 +738,53 @@
 
 
 
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<div class="faq-q">Q: Which Siemens SINUMERIK displays do you cover?</div>
+<div class="faq-a">A: All common models. See the Cross-Reference table above &mdash; we have factory-direct LCD replacements for 6FC3988-7FA20, 6FC5103, 6FC5203, SM0901, SM1200, and 8.4" industrial CRT models. If your model isn't listed, contact us with the part number and we'll confirm.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Is it really plug-and-play? No parameter changes?</div>
+<div class="faq-a">A: For the vast majority of installations, yes. Our LCD modules accept the same video signal as the original display. No PLC parameter changes, no software configuration, no adapter cables. Some 840D Power Line systems may need a parameter check &mdash; we guide you through it.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: What power does the Siemens CRT use &mdash; AC or DC?</div>
+<div class="faq-a">A: Important: Siemens Sinumerik CRTs use AC 110V or AC 220V power, NOT DC 24V like Fanuc or Mitsubishi. Our LCD modules include a built-in AC power supply compatible with 110-220V. Confirm your machine voltage before ordering.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Can I repair the backlight myself?</div>
+<div class="faq-a">A: Technically yes, but it requires opening the display housing, discharging high voltage (inverters can hold a charge), and handling fragile CCFL tubes. Unless you have experience, we recommend sending it to us or replacing the unit. The cost of a new CCFL tube plus your time usually exceeds the cost of an LCD upgrade.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How long does a Siemens display typically last?</div>
+<div class="faq-a">A: The display panel itself can last 15+ years, but the backlight (CCFL tubes) typically fails after 8-11 years of normal use. The inverter often fails around the same time. This is why LCD upgrades are so popular &mdash; you keep the good panel but replace the failing backlight system with reliable LEDs.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: My display is completely dead. Can I ship it to you for diagnosis?</div>
+<div class="faq-a">A: Absolutely. We offer a diagnostic service &mdash; send us the display, we'll tell you exactly what's wrong and give you a repair or replacement quote. If you proceed with us, the diagnosis is free. Turnaround is typically 2-3 business days.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Do you have replacements in stock, or is there a lead time?</div>
+<div class="faq-a">A: We stock LCD upgrade kits for all common Siemens SINUMERIK displays (6FC3988 series, SM0901, and others). Most orders ship within 24 hours. If you need a custom configuration, lead time is typically 5-7 business days.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Can I upgrade the display and keep using my existing SINUMERIK control?</div>
+<div class="faq-a">A: Yes &mdash; that is the whole point. The LCD module replaces only the display unit. Your SINUMERIK NCU/PLC, drives, motors, and all machine functions remain unchanged. You keep the same control, just with a reliable modern display.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How does Kongto compare to Monitech for Siemens displays?</div>
+<div class="faq-a">A: See our <a href="/posts/kongto-vs-monitech-siemens-lcd-upgrade.html">detailed comparison page</a>. Key differences: Kongto is the factory (30-50% lower pricing), 2-year warranty, lifetime tech support, and custom configuration available.</div>
+</div>
+
 <div class="cta-gradient">
 
 
@@ -836,7 +905,7 @@
 
 
 
-            <li><a href="/posts/siemens-sinumerik-display-troubleshooting-guide.html">siemens-sinumerik-display-troubleshooting-guide</a></li>
+            <li><a href="/posts/siemens-sinumerik-crt-black-screen-diagnosis.html">Siemens SINUMERIK CRT Black Screen Diagnosis</a></li>
 
 
 
@@ -844,7 +913,7 @@
 
 
 
-            <li><a href="/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html">Siemens SINUMERIK CNC Display Upgrade Complete Guide</a></li>
+            <li><a href="/posts/siemens-sinumerik-840c-crt-lcd-upgrade.html">Siemens SINUMERIK 840C CRT to LCD Upgrade</a></li>
 
 
 
@@ -935,6 +1004,15 @@
 
 
 
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('active');
+  });
+});
+</script>
 
 </body>
 
