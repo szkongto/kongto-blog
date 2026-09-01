@@ -475,6 +475,7 @@ const REDIRECTS = {
   '/zh/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html': '/posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html',
   '/zh/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display.html': '/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html',
   '/zh/posts/article_20260506_Mitsubishi_BM09DF_Industrial_Display_E60_TFT_Replacement.html': '/zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html',
+  '/zh/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html': '/zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html',
   '/zh/posts/article_20260506_Mitsubishi_MDT962B_Industrial_LCD_CRT_Replacement.html': '/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html',
   '/zh/posts/article_20260507_MDT1283B_LCD_Replacement.html': '/posts/article_20260507_MDT1283B_LCD_Replacement.html',
   '/zh/posts/article_20260507_MDT1283B_LCD_upgrade.html': '/zh/posts/article_20260507_MDT1283B_LCD.html',
