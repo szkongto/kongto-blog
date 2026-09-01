@@ -201,7 +201,7 @@
 /posts/haas-vf-crt-lcd-replacement.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
 /posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html /posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
 /posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
-/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
 /posts/article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
 
 # Double-slash URL fixes
@@ -476,3 +476,25 @@
 /en/posts/fanuc-a61l-0001-0097-lcd-replacement.html /posts/FANUC_A61L_0001_0097_LCD_CNC_CRT_Replacement.html 301
 /posts/mitsubishi-bm09df-lcd-replacement-zh-content.html /zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html 301
 /en/posts/mitsubishi-bm09df-lcd-replacement-zh-content.html /zh/posts/article_20260506_mitsubishi_bm09df_e60_lcd_replacement.html 301
+# 2026-09-01 GSC 404 修复：8条en壳页断链 + 13条真404 → 正确落点
+/en/posts/article_20260501_industrial_video_display_in_smart-factory_key-role_and_kongto.html /posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
+/en/posts/article_20260501_工业视频显示技术架构中的关键色彩与扫描线技术.html /posts/Industrial_Video_Display_Color_Scanning_Technology.html 301
+/en/posts/article_20260501_工业视频信号转换器在CNC控制系统中的应用.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html 301
+/en/posts/article_20260501_工业显示器采购与工业显示器选型和进阶.html /posts/Industrial_Display_Procurement_Selection_Guide.html 301
+/en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html /posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html 301
+/en/posts/faq_20260501_FANUC_0i系统显示异常排查大全.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
+/en/posts/faq_20260501_二手工业显示器回收常见问题TOP10.html /posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html 301
+/en/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/retrofitting-old-cnc-display-2026-07-02 /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
+/products/6fc3988-7fa20/troubleshooting /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+/capture-order /contact.html 301
+/create-order /contact.html 301
+/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html /posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
+/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html /posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html 301
+/faq_20260501_fanuc_a61l_0001_0093_display_faq.html /posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html 301
+/docs/技术干货_FANUC_A61L-0001-0093_CRT升级液晶全流程拆解.pdf /docs/fanuc-a61l-0093-crt-lcd-teardown-CN.pdf 301
+/posts/Video_Signal_Converter_Series_CGA_EGA_to_VGA_Solution.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html 301
+/docs/老旧数控机床CRT改液晶全攻略_江图科技_.pdf /docs/cnc-crt-to-lcd-complete-guide-kongto-CN.pdf 301
+/posts/article_20260506_Mitsubishi_FCUA_CT100_M500_M520_TFT_Replacement_CN.html /posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html 301
+/posts/press_release_20260501_Kongto%20Technology推出FANUC数控显示器LCD升级解决方案.html /posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html 301
+/posts/article_20260501_工业视频信号转换器在CNC控制系统中的应用.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Solution.html 301
