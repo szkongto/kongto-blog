@@ -372,7 +372,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
+  <url>
+    <loc>https://cncdisplay.com/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://cncdisplay.com/posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html</loc>
     <lastmod>2026-08-28</lastmod>
@@ -2034,12 +2041,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/posts/fanuc-a61l-series-crt-to-lcd-complete-guide.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/fanuc-crt-repair-vs-lcd-upgrade-cost-comparison-zh.html</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
