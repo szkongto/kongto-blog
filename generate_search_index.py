@@ -114,6 +114,9 @@ def main():
                 'products/mazak-mdt1283b-1a-lcd-upgrade.html',
                 'posts/haas-crt-monitor-troubleshooting.html',
                 'products/haas-9pin-mono-crt-lcd-upgrade.html',
+                'posts/article_20260503_FANUC_A61L_0001_0093_LCD.html',
+                'posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html',
+                'posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html',
             ):
                 continue
 
