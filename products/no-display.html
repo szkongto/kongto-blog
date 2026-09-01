@@ -79,6 +79,47 @@
 }
     </script>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When the display is black, is the CNC system still running?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, the CNC system itself is still running normally (machining can continue), but the operator cannot observe or interact with it via the display. In some cases, black screen is caused by a total CNC system power failure — in which case the machine is completely stopped. We recommend first confirming whether the CNC system is running before troubleshooting the display."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a regular computer monitor as a replacement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not recommended. Regular computer monitors lack industrial-grade interference resistance and fail easily in CNC shop environments. Mounting dimensions and mounting methods don't match the original CRT either. Industrial monitors are the best choice for CNC applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I try restarting first or replace immediately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can try a full power cycle — cut the machine's main power, wait 30 seconds, then restart. Some black screens are caused by static buildup or temporary software freezes, and restarting may restore normal operation. If the black screen recurs repeatedly, the display needs replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I tell if the display is broken vs. the CNC motherboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most reliable method: connect a known-good display (from another machine of the same model) to the CNC system in question. If the good display shows an image, the original display is faulty. If it stays black too, the problem is in the CNC motherboard's video output circuit."
+      }
+    }
+  ]
+}
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f1419; color: #e8e8e8; line-height: 1.7; }
