@@ -531,3 +531,5 @@
 # 2026-09-02 P1 去冗余 Cluster 6: Haas 9-pin 两处合并 → 权威页(文章=vf-series guide, 产品=9-pin-monochrome)
 /posts/haas-crt-monitor-troubleshooting.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
 /products/haas-9pin-mono-crt-lcd-upgrade.html /products/haas-9-pin-monochrome-lcd-upgrade.html 301
+# 2026-09-02 GSC重复规范 404修复: FCUA-CT100 zh 混合大小写旧URL → 小写孪生(无内链/非sitemap, 历史URL补301)
+/zh/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html /zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html 301
