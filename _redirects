@@ -298,7 +298,7 @@
 /posts/fanuc-0i-display-faq-zh.html /zh/posts/fanuc-0i-display-faq-zh.html 301
 /posts/fanuc-a61l-0001-0093-display-faq-zh.html /zh/posts/fanuc-a61l-0001-0093-display-faq-zh.html 301
 /posts/fanuc-a61l-0001-0093-lcd-upgrade-guide-v2-zh.html /zh/posts/fanuc-a61l-0001-0093-lcd-upgrade-guide-v2-zh.html 301
-/posts/fanuc-crt-repair-vs-lcd-upgrade-cost-comparison-zh.html /zh/posts/fanuc-crt-repair-vs-lcd-upgrade-cost-comparison-zh.html 301
+/posts/fanuc-crt-repair-vs-lcd-upgrade-cost-comparison-zh.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
 /posts/fanuc-crt-to-lcd-kongto-case-study-zh.html /zh/posts/fanuc-crt-to-lcd-kongto-case-study-zh.html 301
 /posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html /zh/posts/fanuc-crt-to-lcd-upgrade-complete-guide-zh.html 301
 /posts/industrial-cnc-display-troubleshooting-repair-guide-zh.html /zh/posts/industrial-cnc-display-troubleshooting-repair-guide-zh.html 301
@@ -508,3 +508,7 @@
 /posts/FANUC_CRT_to_LCD_Upgrade_Guide.html /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
 /posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
 /posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html /posts/How_to_Retrofit_FANUC_CRT_to_LCD_Kongto_Case_Study.html 301
+# 2026-09-01 P1 去冗余：cost comparison 簇 3 篇合并 → FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison 权威
+/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
+/posts/cnc-monitor-replace-vs-repair-cost.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
+/posts/crt-repair-vs-lcd-cost-truth.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
