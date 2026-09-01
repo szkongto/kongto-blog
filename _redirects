@@ -533,3 +533,8 @@
 /products/haas-9pin-mono-crt-lcd-upgrade.html /products/haas-9-pin-monochrome-lcd-upgrade.html 301
 # 2026-09-02 GSC重复规范 404修复: FCUA-CT100 zh 混合大小写旧URL → 小写孪生(无内链/非sitemap, 历史URL补301)
 /zh/posts/article_20260506_Mitsubishi_FCUA-CT100_Industrial_Display_M500_M520_TFT_Replacement.html /zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html 301
+# 2026-09-02 GSC 404修复: faq FANUC_0i GBK乱码URL(解码=绯荤粺鏄剧ず寮傚父鎺掓煡澶у叏, 实为"系统显示异常排查大全") → Troubleshooting权威页
+/posts/faq_20260501_FANUC_0i%E7%BB%AF%E8%8D%A4%E7%B2%BA%E9%8F%84%E5%89%A7%E3%81%9A%E5%AF%AE%E5%82%9A%E7%88%B6%E9%8E%BA%E6%8E%93%E7%85%A1%E6%BE%B6%D1%83%E5%8F%8F.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
+/en/posts/faq_20260501_FANUC_0i%E7%BB%AF%E8%8D%A4%E7%B2%BA%E9%8F%84%E5%89%A7%E3%81%9A%E5%AF%AE%E5%82%9A%E7%88%B6%E9%8E%BA%E6%8E%93%E7%85%A1%E6%BE%B6%D1%83%E5%8F%8F.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
+# 2026-09-02 GSC 404修复: 0093 LCD旧文章 焅发错字URL → 0093权威 Complete_Guide
+/posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
