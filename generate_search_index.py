@@ -109,6 +109,8 @@ def main():
                 'knowledge/mitsubishi-cnc-display-replacement-guide.html',
                 'knowledge/okuma-crt-to-lcd-replacement-guide.html',
                 'knowledge/siemens-crt-to-lcd-upgrade-guide.html',
+                'posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html',
+                'posts/siemens-sinumerik-display-troubleshooting-guide.html',
             ):
                 continue
 

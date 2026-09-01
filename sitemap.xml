@@ -796,12 +796,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/posts/siemens-sinumerik-crt-black-screen-diagnosis.html</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -810,12 +804,6 @@
   <url>
     <loc>https://cncdisplay.com/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html</loc>
     <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/posts/siemens-sinumerik-display-troubleshooting-guide.html</loc>
-    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

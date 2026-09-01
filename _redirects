@@ -448,9 +448,9 @@
 /zh/posts/mitsubishi-mdt962b-cnc-crt-to-lcd-upgrade-guide.html /zh/posts/mitsubishi-mdt962b-series-crt-lcd-upgrade-solution-zh.html 301
 /zh/posts/okuma-osp-crt-to-lcd-upgrade-guide.html /zh/posts/article_20260508_Okuma_5000_5020_CRT_LCD.html 301
 /zh/posts/siemens-display-upgrade-cost-roi-analysis.html /posts/siemens-display-upgrade-cost-roi-analysis.html 301
-/zh/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html /posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html 301
+/zh/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
 /zh/posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html /zh/posts/siemens-sinumerik-840c-crt-lcd-upgrade-zh.html 301
-/zh/posts/siemens-sinumerik-display-troubleshooting-guide.html /posts/siemens-sinumerik-display-troubleshooting-guide.html 301
+/zh/posts/siemens-sinumerik-display-troubleshooting-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
 /zh/posts/siemens-vs-fanuc-cnc-display-comparison.html /posts/siemens-vs-fanuc-cnc-display-comparison.html 301
 /zh/posts/used-display-recycling-faq-top10-zh.html /zh/posts/faq_20260501_CNC_display_replacement_FAQ.html 301
 /zh/products/9mvb3-0a/index.html /products/ 301
@@ -524,3 +524,6 @@
 /knowledge/siemens-crt-to-lcd-upgrade-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
 /knowledge/haas-crt-monitor-replacement-guide.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
 /knowledge/okuma-crt-to-lcd-replacement-guide.html /posts/okuma-osp-crt-to-lcd-upgrade-guide.html 301
+# 2026-09-02 P1 去冗余 Cluster 4: Siemens 2合并源(complete-guide/troubleshooting) 301 → crt-to-lcd 权威页
+/posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
+/posts/siemens-sinumerik-display-troubleshooting-guide.html /posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html 301
