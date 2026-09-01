@@ -52,7 +52,7 @@
 /posts/article_20260501_FANUC_0i%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E5%99%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html /posts/fanuc-0i-display-faq-zh.html 301
 /posts/faq_20260501_%E6%95%B0%E6%8E%A7%E6%9C%BA%E5%BA%8A%E6%98%BE%E7%A4%BA%E5%99%A8%E6%9B%B4%E6%8D%A2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98TOP10.html /posts/faq_20260501_CNC_display_replacement_FAQ.html 301
 /posts/comparison_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2%E5%99%A8%E9%80%89%E5%9E%8B%E6%8C%87%E5%8D%97_VGA%E8%BD%ACVIDEO_vs_HDMI%E8%BD%ACVGA.html /posts/comparison_20260501_video_converter_buying_guide.html 301
-/posts/Shenzhen_Kongto_FANUC_LCD_Retrofit_Press_Release.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/Shenzhen_Kongto_FANUC_LCD_Retrofit_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /posts/article_20260501_%E5%B7%A5%E4%B8%9A%E8%A7%A6%E6%91%B8%E5%B1%8F%E4%B8%8E%E5%B7%A5%E6%8E%A7%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE.html /posts/Industrial_Display_Procurement_Selection_Guide.html 301
 /posts/%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E7%B3%BB%E5%88%97.html /posts/custom_industrial_display_series.html 301
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8_%E8%AE%A9%E8%80%81%E6%97%A7CNC%E6%95%B0%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%84%95%E5%8F%91%E6%96%B0%E6%B4%BB%E5%8A%9B.html /posts/article_20260503_FANUC_A61L_0001_0093_LCD.html 301
@@ -117,7 +117,7 @@
 /posts/article_20260508_KTV804_非标定制工业显示器.html /posts/article_20260508_KTV804_Custom_Industrial_Display_CN.html 301
 /posts/faq_20260501_FANUC_0i系统显示器常见问题与解决方案.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
 /posts/faq_20260501_FANUC_0i系统显示器.html /posts/fanuc-0i-display-faq-solutions-zh.html 301
-/posts/press_release_20260501_南京中晶科技推出FANUC全系列显示器LCDUpgrade /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/press_release_20260501_南京中晶科技推出FANUC全系列显示器LCDUpgrade /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /posts/非标定制显示器系列.html /zh/posts/custom_industrial_display_series.html 301
 /posts/custom_industrial_display_series_CN.html /zh/posts/custom_industrial_display_series.html 301
 /posts/faq_20260501_数控机床显示器更换常见问题TOP10.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
@@ -201,13 +201,15 @@
 /posts/haas-vf-crt-lcd-replacement.html /posts/haas-vf-series-crt-monitor-troubleshooting-lcd-upgrade-guide.html 301
 /posts/article_20260501_cnc_industrial_video_signal-converter_in_system.html /posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html 301
 /posts/article_20260501_cga_ega_vga_rgb_vga_industrial_video_signal-converter_solution.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
-/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /posts/article_20260501_lcd_kongto_industrial_video_display_catalog_converter.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
 
 # Double-slash URL fixes
 
 # Phase 0b: EN articles → root (EN now at root)
-/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
+/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
+/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /posts/article_20260507_Mazak_CD1472D1M_LCD.html /posts/article_20260507_Mazak_CD1472D1M_LCD_Replacement.html 301
 /posts/article_20260522_Mazak_DR5614_LCD_CRT.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
 /posts/article_20260523_mdt962b_crt_lcd_upgrade_complete_replacement_solution.html /posts/article_20260523_Mitsubishi_MDT962B_Series_CRT_LCD_Upgrade_Solution.html 301
@@ -379,7 +381,7 @@
 /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html /zh/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Guide.html 301
 /posts/faq_20260501_CNC_display_replacement_FAQ.html /zh/posts/faq_20260501_CNC_display_replacement_FAQ.html 301
 /posts/social_20260501_cnc_display_upgrade_market-trends_and_product-update.html /zh/posts/social_20260501_cnc_display_upgrade_market-trends_and_product-update.html 301
-/zh/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html /posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html 301
+/zh/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /zh/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
 /zh/posts/FANUC_0i_System_Display_FAQ_Solutions.html /posts/FANUC_0i_System_Display_FAQ_Solutions.html 301
 /zh/posts/FANUC_A61L_0001_0093_Display_Abnormality_Troubleshooting.html /zh/products/fanuc-a61l-0001-0093-lcd-upgrade.html 301
@@ -401,8 +403,8 @@
 /zh/posts/Industrial_Video_Display_Smart_Factory_Kongto_Solution.html /zh/posts/Industrial_Video_Display_Color_Scanning_Technology.html 301
 /zh/posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
 /zh/posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html /posts/Mazak_DR5614_LCD_CNC_CRT_Replacement.html 301
-/zh/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
-/zh/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html 301
+/zh/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
+/zh/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /zh/posts/Shenzhen_Zhongtu_Industrial_Video_Display_Catalog.html /posts/Kongto_Technology_Industrial_Video_Display_Product_Catalog.html 301
 /zh/posts/Used_Display_Recycling_FAQ_TOP10.html /posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html 301
 /zh/posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html /zh/posts/faq_20260501_CNC_display_replacement_FAQ.html 301
@@ -484,7 +486,7 @@
 /en/posts/comparison_20260501_FANUC_CRTcrt_repair_vs_lcd_cost_comparison.html /posts/FANUC_CRT_Repair_vs_LCD_Retrofit_Cost_Comparison.html 301
 /en/posts/faq_20260501_FANUC_0i系统显示异常排查大全.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
 /en/posts/faq_20260501_二手工业显示器回收常见问题TOP10.html /posts/Used_Industrial_Display_Recycling_FAQ_TOP10.html 301
-/en/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html 301
+/en/posts/press_release_20260501_南京中晶科技发布FANUC全系列显示器LCDUpgrade%20Solutions.html /posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html 301
 /posts/retrofitting-old-cnc-display-2026-07-02 /posts/FANUC_CRT_to_LCD_Upgrade_Complete_Guide.html 301
 /products/6fc3988-7fa20/troubleshooting /products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
 /capture-order /contact.html 301
