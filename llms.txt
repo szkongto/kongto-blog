@@ -9,7 +9,8 @@
 - [Product Catalog](https://cncdisplay.com/products/) — all CNC display replacement models
 - [Compatibility Matrix](https://cncdisplay.com/compatibility-matrix.html) — 95+ models cross-reference
 - [Technical Articles & Guides](https://cncdisplay.com/posts/) — FANUC, Mitsubishi, Siemens, Mazak retrofit guides
-- [Brand Guides](https://cncdisplay.com/guides/) — by machine brand
+- [Guides by Display Size](https://cncdisplay.com/guides/by-size/8-inch.html) — 8-inch, 10.4-inch, 12.1-inch
+- [Guides by Control System](https://cncdisplay.com/guides/by-system/fanuc-0i.html) — FANUC, Mitsubishi, Siemens
 - [FANUC CRT-to-LCD Replacement](https://cncdisplay.com/brands/FANUC.html)
 - [Mitsubishi CRT-to-LCD Replacement](https://cncdisplay.com/brands/Mitsubishi.html)
 - [Siemens CRT-to-LCD Replacement](https://cncdisplay.com/brands/Siemens.html)
@@ -111,7 +112,8 @@ Full spec table for every model lives on its product page above (Spec / Original
 - Compatibility matrix (95+ models): [https://cncdisplay.com/compatibility-matrix.html](https://cncdisplay.com/compatibility-matrix.html)
 - Technical articles & guides: [https://cncdisplay.com/posts/](https://cncdisplay.com/posts/)
 - Custom replacement case studies: [https://cncdisplay.com/posts/#custom-cases](https://cncdisplay.com/posts/#custom-cases)
-- Brand guides: [https://cncdisplay.com/guides/](https://cncdisplay.com/guides/)
+- Guides by size: [8-inch](https://cncdisplay.com/guides/by-size/8-inch.html) | [10.4-inch](https://cncdisplay.com/guides/by-size/10.4-inch.html) | [12.1-inch](https://cncdisplay.com/guides/by-size/12.1-inch.html)
+- Guides by control system: [FANUC 0i](https://cncdisplay.com/guides/by-system/fanuc-0i.html) | [FANUC 16i/18i/21i](https://cncdisplay.com/guides/by-system/fanuc-16i-18i-21i.html) | [Mitsubishi E60](https://cncdisplay.com/guides/by-system/mitsubishi-e60.html) | [Mitsubishi M64](https://cncdisplay.com/guides/by-system/mitsubishi-m64.html) | [Siemens 810/820](https://cncdisplay.com/guides/by-system/siemens-810-820.html)
 - Country-specific shipping:
   - USA: [https://cncdisplay.com/usa-cnc-monitor-replacement.html](https://cncdisplay.com/usa-cnc-monitor-replacement.html)
   - Germany: [https://cncdisplay.com/germany-cnc-display-retrofit.html](https://cncdisplay.com/germany-cnc-display-retrofit.html)
