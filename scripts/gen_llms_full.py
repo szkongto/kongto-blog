@@ -11,6 +11,7 @@ sitemap.xml 是已被门禁约束的权威清单，因此以它为唯一数据�
 用法：
     python scripts/gen_llms_full.py            # 预览统计，不写文件
     python scripts/gen_llms_full.py --write    # 写入 llms-full.txt
+    python scripts/gen_llms_full.py --check    # 门禁用：与重新生成结果不一致则退出 1
 """
 
 import html
@@ -90,6 +91,7 @@ def classify(url: str):
 
 def main():
     write = '--write' in sys.argv
+    check = '--check' in sys.argv
     text = SITEMAP.read_text(encoding='utf-8')
     urls = re.findall(r'<loc>([^<]+)</loc>', text)
     urls = [u.strip() for u in urls]
@@ -131,8 +133,37 @@ def main():
     if write:
         OUT.write_text(out, encoding='utf-8')
         print(f'\n已写入 {OUT.relative_to(ROOT)} ({len(out)} 字节)')
-    else:
-        print('\n预览模式，未写文件。加 --write 落盘。')
+        return
+
+    if check:
+        # 门禁用：文件必须与「以 sitemap 为源重新生成」的结果逐字节一致。
+        # 不一致说明有人在手工改它，或者 sitemap 变了没重新生成 —— 两种都要拦。
+        current = OUT.read_text(encoding='utf-8') if OUT.exists() else ''
+        if current == out:
+            print(f'[LLMS-FULL] OK — 与 sitemap 重新生成的结果一致（{len(urls)} 条）')
+            return
+        cur_urls = set(re.findall(r'\((https://cncdisplay\.com[^)]*)\)', current))
+        new_urls = set(re.findall(r'\((https://cncdisplay\.com[^)]*)\)', out))
+        print('[LLMS-FULL] FAIL — llms-full.txt 与 sitemap 不同步', file=sys.stderr)
+        print(f'  磁盘条目 {len(cur_urls)} 条 / 重新生成 {len(new_urls)} 条', file=sys.stderr)
+        stale = sorted(cur_urls - new_urls)
+        missing = sorted(new_urls - cur_urls)
+        if stale:
+            print(f'  应删除的陈旧 URL {len(stale)} 条:', file=sys.stderr)
+            for u in stale[:15]:
+                print(f'    - {u}', file=sys.stderr)
+            if len(stale) > 15:
+                print(f'    ... 另有 {len(stale) - 15} 条', file=sys.stderr)
+        if missing:
+            print(f'  应补充的 URL {len(missing)} 条:', file=sys.stderr)
+            for u in missing[:15]:
+                print(f'    + {u}', file=sys.stderr)
+            if len(missing) > 15:
+                print(f'    ... 另有 {len(missing) - 15} 条', file=sys.stderr)
+        print('  修法：python scripts/gen_llms_full.py --write', file=sys.stderr)
+        sys.exit(1)
+
+    print('\n预览模式，未写文件。加 --write 落盘，加 --check 做门禁校验。')
 
 
 if __name__ == '__main__':

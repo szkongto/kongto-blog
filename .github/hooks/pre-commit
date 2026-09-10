@@ -1,0 +1,26 @@
+#!/bin/bash
+# Pre-commit hook: 全量硬门禁
+#
+# 单一入口，跑 scripts/full_gate.py --quick，任何一项不过就拒绝提交。
+# 覆盖：site_checker / redirect_hard / link_check / 5入口 / page_standard /
+#       aggressive_dup / model_naming / image_size / llms_index
+#
+# CI（.github/workflows/deploy.yml）跑同一个 gate，所以本地拦不住的，
+# 部署前还会再拦一次。
+#
+# 安装（新克隆的仓库需要跑一次）：
+#     python scripts/install_hooks.py
+#
+# 禁止用 --no-verify 绕过。绕过的坏内容会在 CI 被拦，白推一次。
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+python "$REPO_ROOT/scripts/full_gate.py" --quick
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ COMMIT BLOCKED: 硬门禁未过。"
+    echo "   按上面 FAIL 的那一项修掉再提交。"
+    exit 1
+fi
+
+exit 0

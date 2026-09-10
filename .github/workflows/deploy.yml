@@ -32,6 +32,12 @@ jobs:
       - name: Validate internal links
         run: python .github/scripts/check_links_ci.py
 
+      # 硬门禁：site_checker / redirect / link / 5入口 / page_standard /
+      # aggressive_dup / model_naming / image_size / llms_index
+      # 拦住就说明这次 push 有问题，宁可不部署也别把坏内容发上去。
+      - name: Full gate
+        run: python scripts/full_gate.py --quick
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
