@@ -122,6 +122,7 @@ def check_file(rel):
 def main():
     fix = '--fix' in sys.argv
     quiet = '--quiet' in sys.argv
+    list_warn = '--list' in sys.argv
     total = hard_bad = warn_bad = 0
     for rel in sorted(html_files()):
         total += 1
@@ -138,6 +139,10 @@ def main():
                     print(f'   - {p}')
         if warn:
             warn_bad += 1
+            if list_warn:
+                print(f'[WARN] {rel}')
+                for p in warn[:6]:
+                    print(f'   - {p}')
     print(f'checked {total} pages, {hard_bad} hard-error, {warn_bad} warn')
     if hard_bad:
         print(f'FAIL: {hard_bad} 页有硬错误（乱码/编码/title/canonical），必须修')

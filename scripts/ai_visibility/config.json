@@ -19,7 +19,7 @@
     },
     {
       "model": "FANUC A61L-0001-0116",
-      "query": "What LCD monitor replaces a FANUC A61L-0001-0116 9-inch CRT on a 0i-D system?",
+      "query": "What LCD monitor replaces a FANUC A61L-0001-0116 9-inch plasma (PDP) display on a 0i-D system?",
       "note": "ChatGPT 首轮未测,补测基线"
     },
     {
