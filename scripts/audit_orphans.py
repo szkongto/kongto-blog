@@ -53,10 +53,17 @@ def active_images():
     return out
 
 
-def build_refs():
-    """返回 (regex命中集, 子串命中集)。子串集用于中文名。"""
+def build_refs(needles=()):
+    """返回 (regex命中集, 子串命中集)。
+
+    子串集对正则抓不全的文件名可靠: IMG_PAT 的 \\w 遇到空格即断,
+    所以 "Mitsubishi jum-1482A.webp" 只抓到 "jum-1482A.webp",
+    含空格/中文的真实文件名永远匹配不上, 会被误报成孤儿。
+    这里额外对每个真实 basename 做一次直接子串测试。
+    """
     refs = set()          # 正则抓到 basename.lower()
     substring = set()     # 完整文件名字符串 (含扩展名, 全小写)
+    needles = sorted({n.lower() for n in needles})
     for f in glob.glob('**/*', recursive=True):
         fs = f.replace('\\', '/')
         if os.path.isdir(fs) or not ok(fs):
@@ -72,6 +79,9 @@ def build_refs():
             refs.add(m.group(1).lower())
             # 正则截断的边界 -> 也把整个匹配片段加上 (防 srcset 里的数字后缀)
             substring.add(m.group(1).lower())
+        for n in needles:
+            if n in t:
+                substring.add(n)
     return refs, substring
 
 
@@ -92,7 +102,7 @@ def main():
 
     imgs = active_images()
     by = group_images(imgs)
-    refs, substring = build_refs()
+    refs, substring = build_refs(os.path.basename(f) for f in imgs)
 
     orphans = []       # (file, size, group_status, is_cn)
     for (d, stem), files in sorted(by.items()):
