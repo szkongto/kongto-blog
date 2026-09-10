@@ -406,6 +406,7 @@
    "posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html",
    "posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html",
    "posts/Video_Signal_Converter_Buying_Guide.html",
+   "products/fanuc-0m-0t-crt-lcd-upgrade.html",
    "products/fanuc-a61l-0001-0093-lcd-upgrade.html",
    "products/flickering-screen.html",
    "products/image-retention.html",
@@ -1565,9 +1566,11 @@
    "products/index.html",
    "zh/comparison-tool.html",
    "zh/compatibility-matrix.html",
+   "zh/brands/FANUC.html",
    "zh/posts/fanuc-a61l-0001-0116-lcd-upgrade-guide.html",
    "zh/posts/index.html",
-   "zh/products/fanuc-a61l-0001-0116-lcd-upgrade.html"
+   "zh/products/fanuc-a61l-0001-0116-lcd-upgrade.html",
+   "zh/products/index.html"
   ],
   "A61L00010136": [
    "posts/fanuc-display-compatibility-complete-guide.html"
@@ -2237,6 +2240,7 @@
   "zh/guides/ttl-rgb-signal-pinout-guide.html": "guides/ttl-rgb-signal-pinout-guide.html",
   "zh/knowledge/": "knowledge/index.html",
   "zh/knowledge/cnc-monitor-troubleshooting-guide.html": "knowledge/cnc-monitor-troubleshooting-guide.html",
+  "zh/knowledge/crt-vs-lcd-cnc-display-comparison.html": "knowledge/crt-vs-lcd-cnc-display-comparison.html",
   "zh/knowledge/index.html": "knowledge/",
   "zh/posts/": "posts/index.html",
   "zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html": "posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html",
