@@ -27,6 +27,8 @@ GATES = [
     ("aggressive_dup",      ["python", "scripts/audit_aggressive.py"],         True),
     ("model_naming",        ["python", "scripts/check_model_naming.py"],        True),
     ("image_size",          ["python", "scripts/check_image_size.py"],          True),
+    ("llms_index",          ["python", "scripts/check_llms.py"],                True),
+    ("css_comments",        ["python", "scripts/check_css_comments.py"],        True),
 ]
 
 
