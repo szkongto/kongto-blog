@@ -139,7 +139,7 @@
     "category": "page",
     "lang": "zh",
     "date": "",
-    "url": "/index.html",
+    "url": "/",
     "search_text": "CNC CRT to LCD Replacement | Factory Direct Factory direct CNC CRT to LCD replacement for FANUC, Mitsubishi, Siemens, Mazak. Engineer-led support, 2-year warranty, no middleman markup. Factory Direct CRT-to-LCD Replacement For Legacy CNC Machine Tools "
   },
   {
@@ -414,7 +414,7 @@
     "category": "download",
     "lang": "zh",
     "date": "",
-    "url": "/docs/index.html",
+    "url": "/docs/",
     "search_text": "Technical Downloads - Kongto Technology Download technical documentation for FANUC CRT to LCD retrofit kits, MDT-1283 conversion guides, and industrial display upgrade manuals from Kongto Technology. Technical Documentation Downloads "
   },
   {
@@ -570,39 +570,6 @@
     "date": "",
     "url": "/knowledge/crt-vs-lcd-cnc-display-comparison.html",
     "search_text": "CRT vs LCD for CNC Displays: Comparison Guide | Kongto Technical comparison of CRT vs LCD displays for CNC machines. Lifespan, brightness, resolution, power, cost analysis for FANUC, Mazak, Mitsubishi, Siemens. CRT vs LCD for CNC Displays: Complete Technical Comparison Guide "
-  },
-  {
-    "title": "FANUC A61L-0001-0093 LCD: Breathe New Life into Aging CNC | Kongto",
-    "description": "FANUC A61L-0001-0093 LCD display specifications, compatibility, and CRT-to-LCD upgrade benefits for CNC systems.",
-    "h1": "FANUC A61L-0001-0093 LCD Display —Breathe New Life into Aging CNC Systems",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "20260501",
-    "url": "/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html",
-    "search_text": "FANUC A61L-0001-0093 LCD: Breathe New Life into Aging CNC | Kongto FANUC A61L-0001-0093 LCD display specifications, compatibility, and CRT-to-LCD upgrade benefits for CNC systems. FANUC A61L-0001-0093 LCD Display —Breathe New Life into Aging CNC Systems "
-  },
-  {
-    "title": "FANUC CRT to LCD Upgrade Guide - Step by Step | Kongto",
-    "description": "Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.",
-    "h1": "FANUC CRT to LCD Upgrade Guide — Step by Step",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "20260501",
-    "url": "/posts/article_20260501_fanuc_crt_lcd_cnc_display_upgrade_guide.html",
-    "search_text": "FANUC CRT to LCD Upgrade Guide - Step by Step | Kongto Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations. FANUC CRT to LCD Upgrade Guide — Step by Step "
-  },
-  {
-    "title": "FANUC CRT to LCD Practical Installation Case - Kongto Case Study",
-    "description": "Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results.",
-    "h1": "FANUC CRT to LCD Upgrade — Practical Installation Case —Kongto Technology Case Study",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "20260501",
-    "url": "/posts/article_20260501_fanuc_crt_lcd_display_to_kongto_practical_case-study.html",
-    "search_text": "FANUC CRT to LCD Practical Installation Case - Kongto Case Study Real-world case study of FANUC CRT to LCD retrofit by Kongto Technology, including installation process and results. FANUC CRT to LCD Upgrade — Practical Installation Case —Kongto Technology Case Study "
   },
   {
     "title": "FANUC A61L-0001-0074 14\" Color CRT to LCD Retrofit",
@@ -1144,17 +1111,6 @@
     "search_text": "CNC CRT Display Troubleshooting Guide - Common Faults & Fixes | Kongto Complete CNC CRT display troubleshooting guide. Black screen, dim display, flickering, burn-in, color issues — diagnose and fix legacy CNC monitor problems. CNC CRT Display Troubleshooting Guide — Diagnose & Fix Common Faults CNC CRT troubleshooting, CNC display black screen fix, CRT flickering repair, CNC monitor no display, industrial CRT failure diagnosis"
   },
   {
-    "title": "CNC Monitor Replacement vs Repair Cost Guide | Kongto",
-    "description": "CNC monitor replace vs repair cost analysis. CRT repair vs LCD upgrade pricing for FANUC, Mazak, Siemens, Haas, Mitsubishi displays.",
-    "h1": "CNC Monitor Replacement vs Repair Cost — Complete Comparison Guide",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/cnc-monitor-replace-vs-repair-cost.html",
-    "search_text": "CNC Monitor Replacement vs Repair Cost Guide | Kongto CNC monitor replace vs repair cost analysis. CRT repair vs LCD upgrade pricing for FANUC, Mazak, Siemens, Haas, Mitsubishi displays. CNC Monitor Replacement vs Repair Cost — Complete Comparison Guide "
-  },
-  {
     "title": "FANUC CRT Repair vs LCD Retrofit - Cost Comparison | Kongto",
     "description": "Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis.",
     "h1": "FANUC CRT Repair vs LCD Retrofit —Cost Comparison",
@@ -1175,17 +1131,6 @@
     "date": "",
     "url": "/posts/comparison_20260501_video_converter_buying_guide.html",
     "search_text": "Video Signal Converter Selection | Replacement Guide for VGA to VIDEO vs HDMI to VGA converter selection Video Signal Converter Selection Guide "
-  },
-  {
-    "title": "CRT Repair vs LCD Upgrade: The 5-Year Cost Truth | Real Cases",
-    "description": "Based on real FANUC 0-TC 4-repair cycle and Mitsubishi M64 fleet data: CRT repair cost ,850/18mo vs LCD retrofit /10yr+. Including downtime cost.",
-    "h1": "CRT Repair vs LCD Upgrade: The 5-Year Cost Truth",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/crt-repair-vs-lcd-cost-truth.html",
-    "search_text": "CRT Repair vs LCD Upgrade: The 5-Year Cost Truth | Real Cases Based on real FANUC 0-TC 4-repair cycle and Mitsubishi M64 fleet data: CRT repair cost ,850/18mo vs LCD retrofit /10yr+. Including downtime cost. CRT Repair vs LCD Upgrade: The 5-Year Cost Truth "
   },
   {
     "title": "CRT vs LCD: Comparison for CNC Display Upgrades | Kongto",
@@ -1241,17 +1186,6 @@
     "date": "",
     "url": "/posts/fanuc-a02b-0099-c094-lcd-upgrade-guide.html",
     "search_text": "FANUC A02B-0099-C094 CRT to LCD Upgrade Guide | Kongto FANUC A02B-0099-C094 monochrome CRT to LCD replacement for 0/OMate controls. Plug-and-play 9-inch green monochrome LCD, 2-year warranty. FANUC Series 0-P A02B-0099-C094 CRT to LCD - Complete CRT to LCD Upgrade Guide "
-  },
-  {
-    "title": "FANUC A61L-0001-0093 Display FAQ: Troubleshooting & LCD Upgrade",
-    "description": "FANUC A61L-0001-0093 CNC display FAQ. Common issues: blank screen, flickering, dim display, image retention. LCD upgrade solution with 2-year warranty.",
-    "h1": "FANUC A61L-0001-0093 CNC Display FAQ",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/fanuc-a61l-0001-0093-display-faq-en.html",
-    "search_text": "FANUC A61L-0001-0093 Display FAQ: Troubleshooting & LCD Upgrade FANUC A61L-0001-0093 CNC display FAQ. Common issues: blank screen, flickering, dim display, image retention. LCD upgrade solution with 2-year warranty. FANUC A61L-0001-0093 CNC Display FAQ "
   },
   {
     "title": "FANUC A61L-0001-0116 LCD Upgrade Guide | Kongto",
@@ -1364,17 +1298,6 @@
     "search_text": "FANUC A61L-0001-0093 Display FAQ Solutions | Kongto FAQ and solutions for FANUC A61L-0001-0093 display issues. Common problems and repair solutions for industrial CNC displays. FANUC A61L-0001-0093 Display FAQ Solutions "
   },
   {
-    "title": "Breathe New Life into Your Aging CNC: A61L-0001-0093 LCD Restore Guide",
-    "description": "FANUC A61L-0001-0093 LCD display breathes new life into aging CNC systems. Plug-and-play CRT to LCD upgrade solution with full compatibility.",
-    "h1": "Breathe New Life into Your Aging CNC: A61L-0001-0093 LCD Restore Guide",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/FANUC_A61L_0001_0093_LCD_Display_Breathe_New_Life_CNC.html",
-    "search_text": "Breathe New Life into Your Aging CNC: A61L-0001-0093 LCD Restore Guide FANUC A61L-0001-0093 LCD display breathes new life into aging CNC systems. Plug-and-play CRT to LCD upgrade solution with full compatibility. Breathe New Life into Your Aging CNC: A61L-0001-0093 LCD Restore Guide "
-  },
-  {
     "title": "FANUC A61L-0001-0096 LCD Replacement - Direct-Fit CRT Upgrade | Kongto",
     "description": "FANUC A61L-0001-0096 CRT to LCD replacement. Direct-fit, plug-and-play, no rewiring. Industrial TFT-LCD panel, 50,000-hour lifespan, fits 0i/16i/18i.",
     "h1": "FANUC A61L-0001-0096 LCD Display Replacement —No-Modification Direct-Fit CRT Upgrade",
@@ -1419,17 +1342,6 @@
     "search_text": "FANUC CRT Repair vs LCD Retrofit - Cost Analysis | Kongto Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis. FANUC CRT Repair vs LCD Retrofit — Cost Analysis "
   },
   {
-    "title": "FANUC CRT Repair vs LCD Upgrade - Cost Comparison | Kongto",
-    "description": "Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis.",
-    "h1": "FANUC CRT Repair vs LCD Upgrade — Cost Comparison",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/FANUC_CRT_Repair_vs_LCD_Upgrade_Cost_Comparison.html",
-    "search_text": "FANUC CRT Repair vs LCD Upgrade - Cost Comparison | Kongto Side-by-side cost comparison of FANUC CRT repair versus LCD retrofit modules, including total cost of ownership analysis. FANUC CRT Repair vs LCD Upgrade — Cost Comparison "
-  },
-  {
     "title": "FANUC CRT to LCD Upgrade Complete Guide",
     "description": "Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.",
     "h1": "FANUC CRT to LCD Upgrade Complete Guide — Product &amp; Installation Guide",
@@ -1441,17 +1353,6 @@
     "search_text": "FANUC CRT to LCD Upgrade Complete Guide Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations. FANUC CRT to LCD Upgrade Complete Guide — Product &amp; Installation Guide "
   },
   {
-    "title": "FANUC CRT to LCD Upgrade Guide - Technical Reference | Kongto",
-    "description": "Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations.",
-    "h1": "FANUC CRT to LCD Upgrade Guide — Technical Reference",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/FANUC_CRT_to_LCD_Upgrade_Guide.html",
-    "search_text": "FANUC CRT to LCD Upgrade Guide - Technical Reference | Kongto Step-by-step FANUC CRT to LCD upgrade guide covering technical principles, installation, and product recommendations. FANUC CRT to LCD Upgrade Guide — Technical Reference "
-  },
-  {
     "title": "FANUC 0i Display Troubleshooting | Replacement",
     "description": "Troubleshooting guide for FANUC 0i system display issues",
     "h1": "FANUC 0i System Display Troubleshooting",
@@ -1461,17 +1362,6 @@
     "date": "",
     "url": "/posts/faq_20260501_FANUC_0idisplay_faq.html",
     "search_text": "FANUC 0i Display Troubleshooting | Replacement Troubleshooting guide for FANUC 0i system display issues FANUC 0i System Display Troubleshooting "
-  },
-  {
-    "title": "A61L-0001-0093 Display Troubleshooting FAQ | Kongto",
-    "description": "FANUC A61L-0001-0093 display troubleshooting: black screen, flickering, dimming, color distortion. From Kongto Technology, 12+ years in display upgrades.",
-    "h1": "FANUC A61L-0001-0093 Display Troubleshooting",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/faq_20260501_fanuc_a61l_0001_0093_display_faq.html",
-    "search_text": "A61L-0001-0093 Display Troubleshooting FAQ | Kongto FANUC A61L-0001-0093 display troubleshooting: black screen, flickering, dimming, color distortion. From Kongto Technology, 12+ years in display upgrades. FANUC A61L-0001-0093 Display Troubleshooting "
   },
   {
     "title": "HAAS VF Series CRT Monitor Troubleshooting & LCD Upgrade Guide",
@@ -1639,17 +1529,6 @@
     "search_text": "Mitsubishi MDT962B CRT to LCD Upgrade Guide | MDT947B BM09DF Complete Mitsubishi CNC CRT to LCD upgrade guide. Covers MDT962B, BM09DF, FCUA-CT100, MDT947B, MDT1283B. 10-pin interface, plug-and-play. Mitsubishi MDT962B Series CRT to LCD Upgrade Guide "
   },
   {
-    "title": "Kongto FANUC LCD Solution | Replacement",
-    "description": "Kongto releases FANUC full-series display LCD upgrade solution, providing plug-and-play upgrade path for global CNC systems.",
-    "h1": "Kongto FANUC LCD Upgrade Solution",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/Nanjing_Zhongjing_FANUC_LCD_Upgrade_Press_Release.html",
-    "search_text": "Kongto FANUC LCD Solution | Replacement Kongto releases FANUC full-series display LCD upgrade solution, providing plug-and-play upgrade path for global CNC systems. Kongto FANUC LCD Upgrade Solution "
-  },
-  {
     "title": "Okuma OSP CRT to LCD Upgrade Guide | OSP5000 5020 7000",
     "description": "Okuma OSP CRT to LCD upgrade guide. Covers OSP500L-G MDT-1005, 5000/5020 mono, 7000 colour monitors. 12-inch and 14-inch CRT replacement from $480.",
     "h1": "Okuma OSP CRT to LCD Upgrade Guide",
@@ -1681,17 +1560,6 @@
     "date": "",
     "url": "/posts/rgb-to-vga-industrial-converter-cnc.html",
     "search_text": "RGB to VGA Industrial Converter for CNC Displays | Kongto RGB to VGA industrial converter for CNC CRT to LCD upgrades. CGA/EGA/TTL to VGA signal conversion. Plug-and-play, no configuration needed. Ships from stock. RGB to VGA Industrial Converter for CNC Displays "
-  },
-  {
-    "title": "Kongto Launches FANUC Full-Series LCD Retrofit Solution",
-    "description": "Press release: Kongto Technology announces comprehensive LCD retrofit solutions for the entire FANUC display series.",
-    "h1": "Kongto Technology Launches FANUC Full-Series LCD Retrofit Solution",
-    "keywords": "",
-    "category": "article",
-    "lang": "zh",
-    "date": "",
-    "url": "/posts/Shenzhen_Zhongtu_FANUC_LCD_Retrofit_Press_Release.html",
-    "search_text": "Kongto Launches FANUC Full-Series LCD Retrofit Solution Press release: Kongto Technology announces comprehensive LCD retrofit solutions for the entire FANUC display series. Kongto Technology Launches FANUC Full-Series LCD Retrofit Solution "
   },
   {
     "title": "Siemens 810T/820T CRT to LCD Upgrade Guide | 6FC3988",
@@ -2110,17 +1978,6 @@
     "date": "",
     "url": "/products/heidenhain-bc110-lcd-upgrade.html",
     "search_text": "HEIDENHAIN BC110 9-inch CRT to LCD Upgrade | CNC Display Upgrade | Kongto Heidenhain BC110 9-inch CRT to 8-inch TFT-LCD upgrade. Factory direct replacement for Heidenhain CNC systems. Plug-and-play. HEIDENHAIN BC110 9-inch CRT to LCD Upgrade | CNC Display Upgrade "
-  },
-  {
-    "title": "Heidenhain BC120 CRT to LCD Replacement | TNC 310/320 Upgrade",
-    "description": "Heidenhain BC120 9-inch monochrome CRT to 8-inch TFT-LCD upgrade. For TNC 310/320 controls. IDC 10-pin plug-and-play. 2-year warranty.",
-    "h1": "Heidenhain BC120 CRT to LCD Replacement — TNC 310/320",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/products/heidenhain-bc120-lcd-upgrade.html",
-    "search_text": "Heidenhain BC120 CRT to LCD Replacement | TNC 310/320 Upgrade Heidenhain BC120 9-inch monochrome CRT to 8-inch TFT-LCD upgrade. For TNC 310/320 controls. IDC 10-pin plug-and-play. 2-year warranty. Heidenhain BC120 CRT to LCD Replacement — TNC 310/320 "
   },
   {
     "title": "Image Retention / Burn-in Fix for CNC Displays | Kongto",
@@ -2913,17 +2770,6 @@
     "date": "20260501",
     "url": "/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html",
     "search_text": "CGA/EGA显示器改造为RGBHV工业显示器实战指南 本文介绍CGA/EGA显示器改造为RGBHV工业显示器的实战方法，涵盖需求分析、转换器选型、实施步骤与维护要点，帮助工程师完成老旧显示设备升级改造。 CGA/EGA显示器改造为RGBHV工业显示器实战指南 CGA显示器改造,CGA EGA转VGA,RGB信号转换"
-  },
-  {
-    "title": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力",
-    "description": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。",
-    "h1": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "20260501",
-    "url": "/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html",
-    "search_text": "FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力 FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力。江图科技12年工业显示经验，覆盖FANUC发那科、三菱、西门子、马扎克等全品牌CNC数控系统CRT转LCD升级改造方案，即插即用零改装，2年质保。 FANUC A61L-0001-0093 LCD液晶显示器 — 让老旧CNC数控系统焕发新活力 "
   },
   {
     "title": "工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示",
