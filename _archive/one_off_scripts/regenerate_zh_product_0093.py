@@ -1,4 +1,24 @@
-"""Regenerate ZH product page from EN version with clean UTF-8 Chinese."""
+"""Regenerate ZH product page from EN version with clean UTF-8 Chinese.
+
+已归档，勿运行（2026-09-11 从 scripts/ 移入 _archive/one_off_scripts/）。
+
+归档原因：
+  1. 第 4 行 DIR 硬编码 d:\\code\\seo_deploy —— 那是同一 remote 的另一份陈旧
+     克隆，不是本仓库。跑它读的是那边的旧 EN 页，写回的也还是那边，对本仓库
+     零作用；若把 DIR 改成本仓库再跑，则是拿一份旧模板整体覆写 zh 产品页
+  2. 第 238-258 行的导航替换针对 /en/posts/、/en/brands/、/en/docs/ 等前缀，
+     该 /en/ 目录 2026-08-28 已废弃（GSC 实测 Google 选根版 canonical），
+     替换目标已不存在
+  3. 里面的文案匹配串已经过时。例如第 20-21 行拿
+     '<title>... | 8-inch TFT $199 | Kongto Technology</title>' 去匹配，
+     而现价是 $155，匹配不上，该替换实际是静默空操作
+  4. 全仓库零引用
+
+  仅剩的两处 HowTo 字样在第 78、84 行的注释，字符串替换两侧自 commit
+  0054c52f 起均已不存在，同样是空操作。
+
+需要再生成 zh 产品页时，另写脚本，勿解封此文件。
+"""
 import os
 
 DIR = r'd:\code\seo_deploy'
