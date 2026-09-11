@@ -176,7 +176,7 @@ for p in PAGES:
 <h2>{p['sys_cn']} 兼容显示器型号</h2>
 <p>在下方找到你的 CRT 型号——全部采用原机接口即插即用，无需改参数、无需重新接线。</p>
 <table class="model-table">
-<thead><tr><th>CRT 型号</th><th>LCD 尺寸</th></tr></thead>
+<thead><tr><th>CRT 型号</th><th>CRT 尺寸/类型</th></tr></thead>
 <tbody>
 {rows}
 </tbody>
