@@ -3,6 +3,29 @@ import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
+
+def load_redirect_map():
+    """读 _redirects，返回 源URL -> 目标URL。
+
+    以前这里是一份手写元组，每次做去重只把当次收口的那几个页面补进去，
+    之后新加的规则全部漏登记，索引里于是长期留着已 301 的 URL
+    （2026-09-11 实测 16 条）。改为以 _redirects 为唯一事实源。
+    """
+    rmap = {}
+    path = os.path.join(ROOT, '_redirects')
+    if not os.path.exists(path):
+        return rmap
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            raw = line.strip()
+            if not raw or raw.startswith('#'):
+                continue
+            parts = raw.split()
+            if len(parts) >= 2:
+                rmap[parts[0]] = parts[1]
+    return rmap
+
+
 def strip_html(text):
     text = re.sub(r'<[^>]+>', ' ', text)
     text = re.sub(r'\s+', ' ', text)
@@ -97,30 +120,8 @@ def main():
             if fname in ('404.html', 'baidu_verify_codeva-MOcuLxbSCp.html'):
                 continue
 
-            # Skip 301'd guide/knowledge/product pages (P1 dedup Cluster 3/5, 2026-09-02) — redirect to authorities
-            if rel in (
-                'guides/fanuc-crt-to-lcd-guide.html',
-                'guides/mazak-crt-to-lcd-guide.html',
-                'guides/mitsubishi-crt-to-lcd-guide.html',
-                'guides/siemens-crt-to-lcd-guide.html',
-                'guides/ttl-rgb-signal-pinout-guide.html',
-                'zh/guides/ttl-rgb-signal-pinout-guide.html',
-                'knowledge/fanuc-crt-to-lcd-replacement-guide.html',
-                'knowledge/haas-crt-monitor-replacement-guide.html',
-                'knowledge/mazak-crt-to-lcd-retrofit-guide.html',
-                'knowledge/mitsubishi-cnc-display-replacement-guide.html',
-                'knowledge/okuma-crt-to-lcd-replacement-guide.html',
-                'knowledge/siemens-crt-to-lcd-upgrade-guide.html',
-                'posts/siemens-sinumerik-cnc-display-upgrade-complete-guide.html',
-                'posts/siemens-sinumerik-display-troubleshooting-guide.html',
-                'products/mazak-mdt1283b-1a-lcd-upgrade.html',
-                'posts/haas-crt-monitor-troubleshooting.html',
-                'products/haas-9pin-mono-crt-lcd-upgrade.html',
-                'posts/article_20260503_FANUC_A61L_0001_0093_LCD.html',
-                'posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html',
-                'posts/fanuc-a61l-0001-0093-crt-lcd-upgrade.html',
-            ):
-                continue
+            # 301 收口页不在这里判，统一放到末尾按 load_redirect_map() 处理，
+            # 因为「跳过」还是「改写目标」要看目标页有没有自己的索引条目。
 
             # Skip redirect pages
             with open(fp, 'r', encoding='utf-8', errors='replace') as f:
@@ -139,6 +140,30 @@ def main():
             info['url'] = url
             entries.append(info)
 
+    # 301 收口：索引里不该留已重定向的 URL。分两种处理：
+    #   目标页自己也是索引条目（去重合并场景）→ 源页整条丢弃，否则同一页面
+    #     会出现两条，且旧条目的 title/description 与目标页不符
+    #   目标页没有条目（/index.html -> /、/docs/index.html -> /docs/ 这类
+    #     目录规范化）→ 把 URL 改写成目标，否则首页和下载页会从站内搜索消失
+    rmap = load_redirect_map()
+    entry_urls = {e['url'] for e in entries}
+    final, kept_urls, dropped, rewritten = [], set(), [], []
+    for e in entries:
+        url = e['url']
+        if url in rmap:
+            tgt = rmap[url]
+            if tgt in entry_urls:
+                dropped.append(url)
+                continue
+            e['url'] = tgt
+            rewritten.append((url, tgt))
+            url = tgt
+        if url in kept_urls:
+            continue
+        kept_urls.add(url)
+        final.append(e)
+    entries = final
+
     # Write the index
     outpath = os.path.join(ROOT, 'search-index.json')
     with open(outpath, 'w', encoding='utf-8') as f:
@@ -152,6 +177,9 @@ def main():
         f.write(');')
 
     print(f"Generated search-index.json with {len(entries)} entries")
+    print(f"301 丢弃 {len(dropped)} 条, URL 改写 {len(rewritten)} 条")
+    for u, t in rewritten:
+        print(f"  改写 {u} -> {t}")
     cats = {}
     for e in entries:
         cats[e['category']] = cats.get(e['category'], 0) + 1

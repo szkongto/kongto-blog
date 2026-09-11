@@ -1,3 +1,16 @@
+# 已归档，勿运行（2026-09-11 从 scripts/ 移入 _archive/one_off_scripts/）。
+#
+# 归档原因：
+#   1. 模板里仍内嵌 HowTo schema，而 HowTo 富结果 Google 已于 2023-09 停用，
+#      全站其余文件在 commit 0054c52f 中已清干净，只此一处会把它重新灌回页面
+#   2. 模板导航指向 /en/ 前缀，该目录 2026-08-28 已废弃（GSC 实测 Google 选根版
+#      canonical），跑一次就会生成一批指向死路径的页面
+#   3. MODELS 第 4 行本身已语法损坏（'A61L-0001-{'part': ... 少一个引号闭合），
+#      无论如何都跑不起来
+#   4. 全仓库无任何文件引用此脚本（含 .github/ 与 scripts/full_gate.py）
+#
+# 需要再生成 FANUC 型号页时，另写脚本，勿解封此文件。
+
 # FANUC A61L Part number data
 # Pricing provided by seller - do not change without confirmation
 MODELS = [
