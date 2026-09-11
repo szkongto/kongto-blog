@@ -1,3 +1,16 @@
+r"""已归档，勿运行（2026-09-11 从 scripts/ 移入 _archive/one_off_scripts/）。
+
+归档原因：
+  1. 路径硬编码 d:\code\seo_deploy —— 同一 remote 的另一份陈旧克隆，不是本
+     仓库。今天跑它读写都在那边，对本仓库无影响；但一旦有人把路径改指本仓库，
+     它会按下面这些过时内容整体覆写线上页面
+  2. 全仓库零引用（含 .github/ 与 scripts/full_gate.py）
+  3. 属一次性生成脚本，产物早已上线并被后续修改取代，重跑即回退
+
+  4. 把整页 HTML 字面量写入 posts/fanuc-crt-to-lcd-step-by-step-guide.html
+     （现 13069 字节），重跑即用这份旧稿覆盖线上页面
+"""
+
 """Write step-by-step replacement guide for GEO."""
 import os
 

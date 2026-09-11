@@ -1,3 +1,19 @@
+r"""已归档，勿运行（2026-09-11 从 scripts/ 移入 _archive/one_off_scripts/）。
+
+归档原因：
+  1. 路径硬编码 d:\code\seo_deploy —— 同一 remote 的另一份陈旧克隆，不是本
+     仓库。今天跑它读写都在那边，对本仓库无影响；但一旦有人把路径改指本仓库，
+     它会按下面这些过时内容整体覆写线上页面
+  2. 全仓库零引用（含 .github/ 与 scripts/full_gate.py）
+  3. 属一次性生成脚本，产物早已上线并被后续修改取代，重跑即回退
+
+  4. MODELS 里的价格与线上不符，重跑会把价格改错：
+     脚本 0076=255 0086=255 0092=255 0074=350 0094=350
+     线上 0076=280 0086=280 0092=280 0074=299 0094=299
+     （线上值取自各产品页产品区，是权威值）
+  5. MODELS 里的 guide 列全指向 /en/posts/... 前缀，该目录 2026-08-28 已废弃
+"""
+
 # Quick script to regenerate EN product pages with corrected data
 import os
 
