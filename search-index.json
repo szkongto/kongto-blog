@@ -418,17 +418,6 @@
     "search_text": "Technical Downloads - Kongto Technology Download technical documentation for FANUC CRT to LCD retrofit kits, MDT-1283 conversion guides, and industrial display upgrade manuals from Kongto Technology. Technical Documentation Downloads "
   },
   {
-    "title": "CNC TTL RGB Signal Pinout Guide | CRT to LCD Wiring | Kongto",
-    "description": "CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.",
-    "h1": "CNC TTL RGB Signal Pinout Guide FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/guides/ttl-rgb-signal-pinout-guide.html",
-    "search_text": "CNC TTL RGB Signal Pinout Guide | CRT to LCD Wiring | Kongto CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide. CNC TTL RGB Signal Pinout Guide FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference "
-  },
-  {
     "title": "10.4 Inch LCD Replacement for CNC CRT Displays | Kongto",
     "description": "10.4-inch TFT-LCD replacement for 12-inch CNC CRT monitors. FANUC 0074/0094, Matsushita, Siemens SM0901, and more. Plug-and-play, 2-year warranty.",
     "h1": "10.4 Inch LCD Replacement — CNC CRT to 10.4\" LCD Upgrade Guide",
@@ -1266,14 +1255,14 @@
   },
   {
     "title": "FANUC A61L-0001-0116 LCD Upgrade Guide | Kongto",
-    "description": "FANUC A61L-0001-0116 LCD upgrade: replace aging CRT with 8-inch TFT LCD. Fits 0i/16i/18i/21i, plug-and-play, 2-year warranty.",
-    "h1": "FANUC A61L-0001-0116 LCD Upgrade Display - Complete CRT to LCD Upgrade Guide",
+    "description": "FANUC A61L-0001-0116 LCD upgrade: replace the aging 9-inch plasma (PDP) display with an 8-inch TFT LCD. Fits 0i/16i/18i/21i, plug-and-play, 2-year warranty.",
+    "h1": "FANUC A61L-0001-0116 LCD Upgrade Display - Complete Plasma (PDP) to LCD Upgrade Guide",
     "keywords": "",
     "category": "article",
     "lang": "zh",
     "date": "",
     "url": "/posts/fanuc-a61l-0001-0116-lcd-upgrade-guide.html",
-    "search_text": "FANUC A61L-0001-0116 LCD Upgrade Guide | Kongto FANUC A61L-0001-0116 LCD upgrade: replace aging CRT with 8-inch TFT LCD. Fits 0i/16i/18i/21i, plug-and-play, 2-year warranty. FANUC A61L-0001-0116 LCD Upgrade Display - Complete CRT to LCD Upgrade Guide "
+    "search_text": "FANUC A61L-0001-0116 LCD Upgrade Guide | Kongto FANUC A61L-0001-0116 LCD upgrade: replace the aging 9-inch plasma (PDP) display with an 8-inch TFT LCD. Fits 0i/16i/18i/21i, plug-and-play, 2-year warranty. FANUC A61L-0001-0116 LCD Upgrade Display - Complete Plasma (PDP) to LCD Upgrade Guide "
   },
   {
     "title": "FANUC A61L Series CRT to LCD Upgrade Guide | 0072-0097",
@@ -2024,15 +2013,15 @@
     "search_text": "FANUC A61L-0001-0097 14-inch CRT to LCD Upgrade | CNC Display Replacement | Kongto FANUC A61L-0001-0097 14-inch color CRT to 12.1-inch TFT-LCD replacement. Factory direct, direct fit, plug-and-play, ships today. FANUC A61L-0001-0097 14-inch CRT to LCD Upgrade | CNC Display Replacement "
   },
   {
-    "title": "FANUC A61L-0001-0116 9-inch CRT to LCD Upgrade | Kongto",
-    "description": "FANUC A61L-0001-0116 9-inch CRT to 8-inch TFT-LCD upgrade. Factory direct, plug-and-play, in-position replacement.",
-    "h1": "FANUC A61L-0001-0116 9-inch CRT to LCD Upgrade",
+    "title": "FANUC A61L-0001-0116 9-inch Plasma (PDP) to LCD Upgrade | Kongto",
+    "description": "FANUC A61L-0001-0116 9-inch plasma (PDP) to 8-inch TFT-LCD upgrade. Factory direct, plug-and-play, in-position replacement.",
+    "h1": "FANUC A61L-0001-0116 9-inch Plasma (PDP) to LCD Upgrade",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/products/fanuc-a61l-0001-0116-lcd-upgrade.html",
-    "search_text": "FANUC A61L-0001-0116 9-inch CRT to LCD Upgrade | Kongto FANUC A61L-0001-0116 9-inch CRT to 8-inch TFT-LCD upgrade. Factory direct, plug-and-play, in-position replacement. FANUC A61L-0001-0116 9-inch CRT to LCD Upgrade "
+    "search_text": "FANUC A61L-0001-0116 9-inch Plasma (PDP) to LCD Upgrade | Kongto FANUC A61L-0001-0116 9-inch plasma (PDP) to 8-inch TFT-LCD upgrade. Factory direct, plug-and-play, in-position replacement. FANUC A61L-0001-0116 9-inch Plasma (PDP) to LCD Upgrade "
   },
   {
     "title": "FANUC D9CM-01A 9-inch CRT to LCD Upgrade | Kongto",
@@ -2409,26 +2398,26 @@
     "search_text": "SIEMENS 6FC3988-7FA20 9-inch CRT to LCD Upgrade | SINUMERIK CRT Monitor Replacement | Kongto Siemens 6FC3988-7FA20 9-inch monochrome CRT to 8-inch TFT-LCD upgrade. Compatible with SINUMERIK 810/820 systems. Factory direct, plug-and-play. SIEMENS 6FC3988-7FA20 9-inch CRT to LCD Upgrade | SINUMERIK CRT Monitor Replacement "
   },
   {
-    "title": "SIEMENS 6FC5103 15-inch CRT to LCD Upgrade | SINUMERIK Color Display Replacement | Kongto",
-    "description": "Siemens 6FC5103-0AB01 10.4-inch color CRT to TFT-LCD upgrade. Compatible with SINUMERIK 840D systems. Factory direct.",
-    "h1": "SIEMENS 6FC5103 15-inch CRT to LCD Upgrade | SINUMERIK Color Display Replacement",
+    "title": "SIEMENS 6FC5103 14-inch CRT to LCD Upgrade | SINUMERIK 840C Color Display Replacement | Kongto",
+    "description": "Siemens 6FC5103-0AB01 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Compatible with SINUMERIK 840C/840CE systems. Factory direct.",
+    "h1": "SIEMENS 6FC5103 14-inch CRT to LCD Upgrade | SINUMERIK 840C Color Display Replacement",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/products/siemens-6fc5103-lcd-upgrade.html",
-    "search_text": "SIEMENS 6FC5103 15-inch CRT to LCD Upgrade | SINUMERIK Color Display Replacement | Kongto Siemens 6FC5103-0AB01 10.4-inch color CRT to TFT-LCD upgrade. Compatible with SINUMERIK 840D systems. Factory direct. SIEMENS 6FC5103 15-inch CRT to LCD Upgrade | SINUMERIK Color Display Replacement "
+    "search_text": "SIEMENS 6FC5103 14-inch CRT to LCD Upgrade | SINUMERIK 840C Color Display Replacement | Kongto Siemens 6FC5103-0AB01 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Compatible with SINUMERIK 840C/840CE systems. Factory direct. SIEMENS 6FC5103 14-inch CRT to LCD Upgrade | SINUMERIK 840C Color Display Replacement "
   },
   {
-    "title": "SIEMENS 6FC5203 15-inch CRT to LCD Upgrade | SINUMERIK Color Monitor CRT Replacement | Kongto",
-    "description": "Siemens 6FC5203 10.4-inch color CRT to TFT-LCD upgrade. Compatible with SINUMERIK systems. Factory direct, plug-and-play.",
-    "h1": "SIEMENS 6FC5203 15-inch CRT to LCD Upgrade | SINUMERIK Color Monitor CRT Replacement",
+    "title": "SIEMENS 6FC5203 14-inch CRT to LCD Upgrade | SINUMERIK 840D Color Monitor CRT Replacement | Kongto",
+    "description": "Siemens 6FC5203 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Compatible with SINUMERIK 840D systems. Factory direct, plug-and-play.",
+    "h1": "SIEMENS 6FC5203 14-inch CRT to LCD Upgrade | SINUMERIK 840D Color Monitor CRT Replacement",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/products/siemens-6fc5203-lcd-upgrade.html",
-    "search_text": "SIEMENS 6FC5203 15-inch CRT to LCD Upgrade | SINUMERIK Color Monitor CRT Replacement | Kongto Siemens 6FC5203 10.4-inch color CRT to TFT-LCD upgrade. Compatible with SINUMERIK systems. Factory direct, plug-and-play. SIEMENS 6FC5203 15-inch CRT to LCD Upgrade | SINUMERIK Color Monitor CRT Replacement "
+    "search_text": "SIEMENS 6FC5203 14-inch CRT to LCD Upgrade | SINUMERIK 840D Color Monitor CRT Replacement | Kongto Siemens 6FC5203 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Compatible with SINUMERIK 840D systems. Factory direct, plug-and-play. SIEMENS 6FC5203 14-inch CRT to LCD Upgrade | SINUMERIK 840D Color Monitor CRT Replacement "
   },
   {
     "title": "Siemens 8.4\" Industrial CRT to LCD | SINUMERIK | Kongto",
@@ -2836,17 +2825,6 @@
     "date": "",
     "url": "/zh/guides/fanuc-crt-to-lcd-guide.html",
     "search_text": "FANUC CRT转LCD升级指南 | 完整替换方案 | 江图科技 FANUC CRT转LCD完整升级指南。覆盖A61L-0001系列、D9MM-11A、OM-D等型号。含型号识别、安装步骤、接线图、常见问题解答。 FANUC CRT转LCD升级 — 完整指南 "
-  },
-  {
-    "title": "CNC TTL RGB信号引脚定义指南 | FANUC 三菱 西门子 CRT转LCD接线参考 | Kongto",
-    "description": "CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.",
-    "h1": "CNC TTL RGB Signal Pinout Guide FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
-    "keywords": "",
-    "category": "page",
-    "lang": "zh",
-    "date": "",
-    "url": "/zh/guides/ttl-rgb-signal-pinout-guide.html",
-    "search_text": "CNC TTL RGB信号引脚定义指南 | FANUC 三菱 西门子 CRT转LCD接线参考 | Kongto CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide. CNC TTL RGB Signal Pinout Guide FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference "
   },
   {
     "title": "FANUC 0i 系列 CRT转LCD升级指南 | 江图科技",
@@ -3608,15 +3586,15 @@
     "search_text": "FANUC A61L-0001-0093工业显示器——完美CRT升级LCD方案，适配0-M/0-T/16/18系统 FANUC A61L-0001-0093 CRT显示器LCD液晶升级方案，即插即用，安装孔位100%一致，适配FANUC 0-TC/0-MC/16T/18T/16M/18M等数控系统 FANUC A61L-0001-0093工业显示器——完美CRT升级LCD方案 FANUC CRT升级LCD,FANUC数控显示器,FANUC A61L LCD替代,工业显示器"
   },
   {
-    "title": "FANUC A61L-0001-0116 LCD升级显示屏 - CRT转LCD完整升级指南 | 江图科技",
-    "description": "FANUC A61L-0001-0116 9英寸CRT改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。",
-    "h1": "FANUC A61L-0001-0116 LCD升级显示屏 - CRT转LCD完整升级指南",
+    "title": "FANUC A61L-0001-0116 LCD升级显示屏 - 等离子(PDP)转LCD完整升级指南 | 江图科技",
+    "description": "FANUC A61L-0001-0116 9英寸等离子(PDP)屏改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。",
+    "h1": "FANUC A61L-0001-0116 LCD升级显示屏 - 等离子(PDP)转LCD完整升级指南",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/zh/posts/fanuc-a61l-0001-0116-lcd-upgrade-guide.html",
-    "search_text": "FANUC A61L-0001-0116 LCD升级显示屏 - CRT转LCD完整升级指南 | 江图科技 FANUC A61L-0001-0116 9英寸CRT改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。 FANUC A61L-0001-0116 LCD升级显示屏 - CRT转LCD完整升级指南 "
+    "search_text": "FANUC A61L-0001-0116 LCD升级显示屏 - 等离子(PDP)转LCD完整升级指南 | 江图科技 FANUC A61L-0001-0116 9英寸等离子(PDP)屏改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。 FANUC A61L-0001-0116 LCD升级显示屏 - 等离子(PDP)转LCD完整升级指南 "
   },
   {
     "title": "FANUC A61L系列CRT转LCD升级指南 | 0072-0097全型号对照",
@@ -4103,15 +4081,15 @@
     "search_text": "FANUC A61L-0001-0097 LCD替换 | 14英寸CRT转LCD | 江图科技 FANUC A61L-0001-0097 LCD替换 — 12.1英寸TFT，即插即用。与原CRT同接口。800×600。含2年质保，当天发货。 FANUC A61L-0001-0097 LCD升级显示器 "
   },
   {
-    "title": "FANUC A61L-0001-0116 LCD升级 | 9英寸CRT改LCD | 江图科技",
-    "description": "FANUC A61L-0001-0116 9英寸CRT改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。",
+    "title": "FANUC A61L-0001-0116 LCD升级 | 9英寸等离子(PDP)改LCD | 江图科技",
+    "description": "FANUC A61L-0001-0116 9英寸等离子(PDP)屏改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。",
     "h1": "FANUC A61L-0001-0116 LCD升级显示屏",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/zh/products/fanuc-a61l-0001-0116-lcd-upgrade.html",
-    "search_text": "FANUC A61L-0001-0116 LCD升级 | 9英寸CRT改LCD | 江图科技 FANUC A61L-0001-0116 9英寸CRT改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。 FANUC A61L-0001-0116 LCD升级显示屏 "
+    "search_text": "FANUC A61L-0001-0116 LCD升级 | 9英寸等离子(PDP)改LCD | 江图科技 FANUC A61L-0001-0116 9英寸等离子(PDP)屏改LCD升级方案。兼容FANUC 0i/16i/18i/21i系列。即插即用，不改参数。2年质保，现货当天发货。 FANUC A61L-0001-0116 LCD升级显示屏 "
   },
   {
     "title": "FANUC TX-1424AB CRT 转 LCD 升级 | 与A61L-0001-0074同款方案",
@@ -4378,15 +4356,15 @@
     "search_text": "Siemens 6FC3988-7FA20 CRT 转 LCD 升级 | SINUMERIK 显示器替换 Siemens 6FC3988-7FA20 SINUMERIK 810/840 CRT显示器转LCD升级。即插即用，2年保修。 Siemens 6FC3988-7FA20 CRT 转 LCD 升级方案 "
   },
   {
-    "title": "Siemens 6FC5103-0AB01 CRT 转 LCD 升级 | SINUMERIK 840D 显示器替换",
-    "description": "Siemens 6FC5103-0AB01 SINUMERIK 840D CRT显示器转LCD升级。即插即用，2年保修。",
+    "title": "Siemens 6FC5103-0AB01 CRT 转 LCD 升级 | SINUMERIK 840C 显示器替换",
+    "description": "Siemens 6FC5103-0AB01 SINUMERIK 840C CRT显示器转LCD升级。即插即用，2年保修。",
     "h1": "Siemens 6FC5103-0AB01 CRT 转 LCD 升级方案",
     "keywords": "",
     "category": "page",
     "lang": "zh",
     "date": "",
     "url": "/zh/products/siemens-6fc5103-lcd-upgrade.html",
-    "search_text": "Siemens 6FC5103-0AB01 CRT 转 LCD 升级 | SINUMERIK 840D 显示器替换 Siemens 6FC5103-0AB01 SINUMERIK 840D CRT显示器转LCD升级。即插即用，2年保修。 Siemens 6FC5103-0AB01 CRT 转 LCD 升级方案 "
+    "search_text": "Siemens 6FC5103-0AB01 CRT 转 LCD 升级 | SINUMERIK 840C 显示器替换 Siemens 6FC5103-0AB01 SINUMERIK 840C CRT显示器转LCD升级。即插即用，2年保修。 Siemens 6FC5103-0AB01 CRT 转 LCD 升级方案 "
   },
   {
     "title": "Siemens 6FC5203-0AA CRT 转 LCD 升级 | SINUMERIK 840D 显示器替换",

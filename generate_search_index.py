@@ -103,6 +103,8 @@ def main():
                 'guides/mazak-crt-to-lcd-guide.html',
                 'guides/mitsubishi-crt-to-lcd-guide.html',
                 'guides/siemens-crt-to-lcd-guide.html',
+                'guides/ttl-rgb-signal-pinout-guide.html',
+                'zh/guides/ttl-rgb-signal-pinout-guide.html',
                 'knowledge/fanuc-crt-to-lcd-replacement-guide.html',
                 'knowledge/haas-crt-monitor-replacement-guide.html',
                 'knowledge/mazak-crt-to-lcd-retrofit-guide.html',

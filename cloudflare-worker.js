@@ -442,6 +442,7 @@ const REDIRECTS = {
   '/zh/docs/index.html': '/zh/docs/',
   '/zh/docs/mazak-cd1472-crt-lcd-display.pdf': '/docs/mazak-cd1472-crt-lcd-display-CN.pdf',
   '/zh/docs/mitsubishi-m64-cnc-display-sl804.pdf': '/docs/mitsubishi-m64-cnc-display-sl804-CN.pdf',
+  '/zh/guides/ttl-rgb-signal-pinout-guide.html': '/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html',
   '/zh/index.html': '/zh/',
   '/zh/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html': '/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html',
   '/zh/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html': '/posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html',

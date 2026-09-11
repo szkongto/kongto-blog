@@ -2,7 +2,7 @@
 
 ## Kongto Technology (Jiangtu Technology)
 Industrial Video Display Solutions - CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays
-Total indexed pages: 385
+Total indexed pages: 384
 
 ## Main Pages (24)
 - [CNC CRT to LCD Replacement | Factory Direct | Kongto Technology](https://cncdisplay.com/)
@@ -393,14 +393,13 @@ Total indexed pages: 385
 - [Mitsubishi M64 LCD Upgrade — CRT to LCD Replacement | Kongto](https://cncdisplay.com/guides/by-system/mitsubishi-m64.html)
 - [Siemens SINUMERIK 810/820 LCD Upgrade — CRT Replacement | Kongto](https://cncdisplay.com/guides/by-system/siemens-810-820.html)
 
-## Guides (中文) (7)
+## Guides (中文) (6)
 - [FANUC 0i 系列 CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/fanuc-0i.html)
 - [FANUC 16i/18i/21i CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/fanuc-16i-18i-21i.html)
 - [三菱 E60 CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/mitsubishi-e60.html)
 - [三菱 M64 CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/mitsubishi-m64.html)
 - [西门子 SINUMERIK 810/820 CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/siemens-810-820.html)
 - [FANUC CRT转LCD升级指南 | 完整替换方案 | 江图科技](https://cncdisplay.com/zh/guides/fanuc-crt-to-lcd-guide.html)
-- [CNC TTL RGB信号引脚定义指南 | FANUC 三菱 西门子 CRT转LCD接线参考 | Kongto](https://cncdisplay.com/zh/guides/ttl-rgb-signal-pinout-guide.html)
 
 ## Knowledge Base (1)
 - [CNC Monitor Troubleshooting Guide | CRT Problems & Fixes | Kongto](https://cncdisplay.com/knowledge/cnc-monitor-troubleshooting-guide.html)
