@@ -302,9 +302,9 @@
  {
   "brand": "Siemens",
   "crt_model": "6FC5103-0AB01",
-  "size_type": "15\" Color CRT",
-  "cnc_system": "SINUMERIK 840D",
-  "lcd_replacement": "Kongto 15\" TFT-LCD",
+  "size_type": "14\" Color CRT",
+  "cnc_system": "SINUMERIK 840C",
+  "lcd_replacement": "Kongto 12.1\" TFT-LCD",
   "resolution": "1024x768",
   "status": "Available",
   "url": "/products/siemens-6fc5103-lcd-upgrade.html"

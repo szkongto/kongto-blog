@@ -17,7 +17,7 @@ OUT = os.path.join(ROOT, 'data', 'site_map.json')
 MODEL_RE = re.compile(
     r'(A61L[- ]0001[- ]\d{4}|A02B[- ]\d{4}[- ][A-Z]\d{3}|A05B[- ]\d{4}[- ][A-Z]\d{3}|'
     r'\d{4}-\d{5}|009\d|008\d|007\d|006\d|D9MM[- ]11A|MDT[- ]?94\d|TX[- ]\d+|'
-    r'C14C[- ]1472DF|DR5614|6FC3\d{3}|BM09DF|A20B[- ]\d{4}|C5470NS|CD1472|KFM7099H|'
+    r'C14C[- ]1472DF|DR5614|6FC\d{4}|BM09DF|A20B[- ]\d{4}|C5470NS|CD1472|KFM7099H|'
     r'MDT962B|MDT947B|MDT1283B|SM0901|A61L0001\d{4})')
 
 SKIP_DIRS = {'en_bak', '_archive_audit', '_templates', '__pycache__',
