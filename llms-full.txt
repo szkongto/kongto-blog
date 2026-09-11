@@ -213,7 +213,7 @@ Total indexed pages: 392
 - [Video Signal Converter Selection Guide | Kongto Technology](https://cncdisplay.com/posts/Video_Signal_Converter_Buying_Guide.html)
 - [Video Signal Converters in CNC Control Systems | Kongto Technology](https://cncdisplay.com/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html)
 - [FANUC A61L-0001-0074 14" Color CRT to LCD Retrofit | Kongto Technology](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html)
-- [FANUC A61L-0001-0086 Color CRT to LCD Complete Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html)
+- [FANUC A61L-0001-0086 Monochrome CRT to LCD Complete Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html)
 - [FANUC A61L-0001-0090 9" Monochrome CRT to LCD Retrofit | Kongto](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0090_LCD.html)
 - [FANUC A61L-0001-0092 MDT947B 9-inch Monochrome CRT to LCD Retrofit Guide](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0092_LCD.html)
 - [FANUC A61L-0001-0094 14-inch CRT to LCD Retrofit Guide | Kongto](https://cncdisplay.com/posts/article_20260503_FANUC_A61L_0001_0094_LCD.html)
