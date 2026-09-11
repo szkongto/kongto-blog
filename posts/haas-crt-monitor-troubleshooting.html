@@ -27,23 +27,6 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "HAAS CRT Monitor Diagnosis",
-  "description": "Step-by-step diagnosis for HAAS CNC CRT no-display fault.",
-  "totalTime": "PT20M",
-  "tool": [{"@type":"HowToTool","name":"Multimeter"},{"@type":"HowToTool","name":"Phillips screwdriver"}],
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Check 9-pin cable connection","text":"On HAAS VF-1/2/3, the 9-pin D-sub connector is the most common failure point. Remove, inspect for bent pins, clean with contact cleaner, reseat firmly."},
-    {"@type":"HowToStep","position":2,"name":"Measure CRT power supply voltage","text":"Pin 2 should read +12V DC. If 0V, check the HAAS I/O board fuse (F2 on most Classic Control boards). Replace if blown."},
-    {"@type":"HowToStep","position":3,"name":"Check CRT brightness knob","text":"The CRT brightness potentiometer on the front panel can drift over time. Try turning it fully clockwise. If no change, the CRT tube or flyback is failing."},
-    {"@type":"HowToStep","position":4,"name":"Inspect CRT board for bulging capacitors","text":"Remove CRT housing. Look for swollen or leaking electrolytic capacitors on the power board. Replace any bulging caps (typically 470uF/25V and 1000uF/16V positions)."},
-    {"@type":"HowToStep","position":5,"name":"Swap with LCD module to confirm","text":"Connect a Kongto HAAS LCD kit. If display appears, your CRT is confirmed dead. The LCD is a permanent replacement."}
-  ]
-}
-</script>
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
 article{max-width:800px;margin:2rem auto;padding:0 1.5rem}

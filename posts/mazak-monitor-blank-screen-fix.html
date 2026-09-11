@@ -27,23 +27,6 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Mazak CRT Monitor Diagnosis",
-  "description": "Step-by-step diagnosis for Mazak CNC CRT blank screen.",
-  "totalTime": "PT30M",
-  "tool": [{"@type":"HowToTool","name":"Multimeter"},{"@type":"HowToTool","name":"Phillips screwdriver"},{"@type":"HowToTool","name":"Flashlight"}],
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Check Power LED","text":"If the power LED is off, check the CRT power supply — fuse blown? PSU capacitor swollen? Measure DC output voltage at the power connector."},
-    {"@type":"HowToStep","position":2,"name":"Listen for HV whine","text":"If the LED is on but no display, listen near the CRT neck for a high-pitched 15kHz whine. No whine = HV section failure (flyback transformer or horizontal deflection)."},
-    {"@type":"HowToStep","position":3,"name":"Inspect video cable","text":"Check the 3-row 15-pin connector for bent pins, corrosion, or loose fitting. Reseat both ends. On CD1472/DR5614 — the 3-row 15-pin connector is a known failure point."},
-    {"@type":"HowToStep","position":4,"name":"Check for raster with flashlight","text":"Shine a flashlight at the screen at an angle. If you see a faint raster (scan lines), the CRT tube is alive but video signal is missing — video board fault."},
-    {"@type":"HowToStep","position":5,"name":"Test with known-good LCD","text":"Connect a compatible LCD module to confirm the CRT is the problem, not the CNC control output. If LCD works, your CRT is confirmed dead."}
-  ]
-}
-</script>
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
 article{max-width:800px;margin:2rem auto;padding:0 1.5rem}
