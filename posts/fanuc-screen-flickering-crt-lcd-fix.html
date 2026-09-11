@@ -25,19 +25,6 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Diagnose FANUC CRT Screen Flickering",
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Observe the flickering pattern","text":"Determine if the flickering is vertical roll, horizontal shake, or full-screen flash. Vertical roll indicates sync signal issues; horizontal shake points to power supply caps; full flash suggests flyback/HV problems."},
-    {"@type":"HowToStep","position":2,"name":"Check the sync cable connection","text":"Reseat the signal cable between the CNC control and CRT monitor. Inspect HONDA 20-pin connector for bent pins. A loose connection causes intermittent flickering."},
-    {"@type":"HowToStep","position":3,"name":"Listen for high-voltage sounds","text":"A healthy CRT produces a faint 15.75 kHz whine. If you hear buzzing, sizzling, or ticking, the flyback transformer is failing — LCD replacement recommended."},
-    {"@type":"HowToStep","position":4,"name":"Confirm with a second display","text":"Connect a known-working display to the same CNC control. If the second display works cleanly, the problem is in your CRT — not the CNC system."}
-  ]
-}
-</script>
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
 article{max-width:800px;margin:2rem auto;padding:0 1.5rem}

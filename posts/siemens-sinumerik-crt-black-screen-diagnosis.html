@@ -29,20 +29,6 @@
 }
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "SINUMERIK CRT Black Screen Diagnosis",
-  "description": "4-step diagnosis using monitor LED flash codes, battery check, 24V supply, and display substitution",
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Read the 03840 board monitor LED","text":"Locate the two-color LED on the 03840 CPU board. 4 Hz flash (green/orange alternating) = battery failure. 2 Hz = PLC fault. 1 Hz = EPROM fault. Left off, right on = CRT or interface board fault. No LED = no power to the board."},
-    {"@type":"HowToStep","position":2,"name":"Measure the backup battery voltage","text":"The Siemens SINUMERIK 810/820 uses a 3.6V lithium battery on the NCK board. Measure with a multimeter — below 3.0V indicates end of life. Replace with a new battery (Siemens 6FC5247 or equivalent). After replacement, reload NC/PLC data from backup."},
-    {"@type":"HowToStep","position":3,"name":"Check the 24V DC power supply","text":"Measure PSU output at the terminal block. The SINUMERIK 810 requires 24Vdc ±10%. Below 21V or intermittent dropouts cause the CRT and NCK to power-cycle. Common causes: loose terminal screws, failing rectifier bridge, or shorted axis brake coil pulling the rail down."},
-    {"@type":"HowToStep","position":4,"name":"Listen for CRT high-voltage whine","text":"A functional CRT emits a faint 15.75 kHz whine from the flyback transformer. If you hear it but see no display, the CRT has power but likely a deflection or video circuit fault — LCD replacement recommended. If silent, the CRT HV section is dead."}
-  ]
-}
-</script>
 
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.8;color:#1d1d1f;background:#fff;margin:0}
