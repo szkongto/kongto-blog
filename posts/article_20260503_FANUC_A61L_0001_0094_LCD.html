@@ -699,7 +699,7 @@
                     <tr><td>Color Depth</td><td>16 colors / 8 colors (system-dependent)</td></tr>
                     <tr><td>Brightness</td><td>~200 cd/m² (decaying with age)</td></tr>
                     <tr><td>Interface</td><td>20-pin Honda MR-20M signal connector</td></tr>
-                    <tr><td>Power Input</td><td>DC 24V (from CNC host power supply)</td></tr>
+                    <tr><td>Power Input</td><td>AC 110V-220V (from the machine mains supply)</td></tr>
                     <tr><td>Safety</td><td>High voltage internal circuit (10-15kV)</td></tr>
                     <tr><td>Typical Service Life</td><td>~15,000 operating hours</td></tr>
                 </table></div>
@@ -713,7 +713,7 @@
                     <li><strong>Obsolete Parts Supply</strong>: the CRT and its components are long discontinued; used pull-outs are scarce, costly and near end-of-life, so repairs get slower and pricier.</li>
                 </ul>
 <h2>3. LCD Retrofit Solution and Technical Design</h2>
-                <p>Kongto Technology builds the <strong>KTV148 series industrial LCD replacement module</strong> for the FANUC A61L-0001-0094 color CRT. The module uses an industrial TFT-LCD panel with LED backlight and is a direct drop-in replacement — same 20-pin Honda signal path, same DC 24V supply, same mounting points. No control parameter changes, adapters or rewiring are required.</p>
+                <p>Kongto Technology builds the <strong>KTV148 series industrial LCD replacement module</strong> for the FANUC A61L-0001-0094 color CRT. The module uses an industrial TFT-LCD panel with LED backlight and is a direct drop-in replacement — same 20-pin Honda signal path, same AC 110V-220V supply, same mounting points. No control parameter changes, adapters or rewiring are required.</p>
                 <h3>3.1 LCD Replacement Module Specifications</h3>
                 <div class="table-scroll-mt"><table class="spec-table">
                     <tr><th>Parameter</th><th>Specification</th></tr>
@@ -722,7 +722,7 @@
                     <tr><td>Resolution</td><td>800×600 (accepts 640×480 input signals)</td></tr>
                     <tr><td>Brightness</td><td>400 cd/m²</td></tr>
                     <tr><td>Interface</td><td>20-pin Honda — direct compatible with original cable</td></tr>
-                    <tr><td>Power Input</td><td>DC 24V using the original machine power (no extra adapter)</td></tr>
+                    <tr><td>Power Input</td><td>AC 110V-220V using the original machine mains supply (no extra adapter)</td></tr>
                     <tr><td>Service Life</td><td>50,000+ hours</td></tr>
                     <tr><td>Weight</td><td>3.5 kg</td></tr>
                     <tr><td>Safety</td><td>Low-voltage DC design — no high-voltage hazard</td></tr>
@@ -732,7 +732,7 @@
                     <img width="600" height="450" class="img-block" loading="lazy" src="https://cncdisplay.com/images/A61L-0001-0094_lcd_module.jpg" alt="FANUC A61L-0001-0094 KTV148 LCD Upgrade Module"><figcaption class="text-muted-c">KTV148 LCD upgrade module for A61L-0001-0094 — 12.1-inch industrial TFT panel</figcaption>
                 </figure>
                 <figure class="img-hero"><img width="600" height="450" class="img-block" loading="lazy" src="/images/A6100010094_lcd_front.webp" alt="A61L-0001-0094 LCD Front View Installed"><figcaption class="text-muted-c">Module mounted in the original CRT cut-out — no cabinet modification</figcaption></figure>
-                <figure class="img-hero"><img width="600" height="450" class="img-block" loading="lazy" src="https://cncdisplay.com/images/A61L-0001-0094_lcd_back_full.jpg" alt="A61L-0001-0094 LCD Back View with Cables"><figcaption class="text-muted-c">Rear of the kit — 20-pin Honda signal + DC 24V power, plug-and-play</figcaption></figure>
+                <figure class="img-hero"><img width="600" height="450" class="img-block" loading="lazy" src="https://cncdisplay.com/images/A61L-0001-0094_lcd_back_full.jpg" alt="A61L-0001-0094 LCD Back View with Cables"><figcaption class="text-muted-c">Rear of the kit — 20-pin Honda signal + AC 110V-220V power, plug-and-play</figcaption></figure>
                 <h3>3.2 System Compatibility</h3>
                 <p>The KTV148 kit for A61L-0001-0094 supports FANUC controls that use a 14-inch color CRT on the 20-pin Honda interface:</p>
                 <ul>
@@ -749,10 +749,10 @@
                     <tr><td>Resolution</td><td>640×480</td><td>800×600 (accepts 640×480)</td></tr>
                     <tr><td>Brightness</td><td>~200 cd/m² (decaying)</td><td>400 cd/m² (stable)</td></tr>
                     <tr><td>Service Life</td><td>~15,000 hours</td><td>50,000+ hours</td></tr>
-                    <tr><td>Power Supply</td><td>DC 24V</td><td>DC 24V (original PSU)</td></tr>
+                    <tr><td>Power Supply</td><td>AC 110V-220V</td><td>AC 110V-220V (original PSU)</td></tr>
                     <tr><td>Interface</td><td>20-pin Honda MR-20M</td><td>20-pin Honda (direct compatible)</td></tr>
                     <tr><td>Image Stability</td><td>Flicker and drift prone</td><td>Zero flicker, stable output</td></tr>
-                    <tr><td>Safety</td><td>High voltage (10-15kV)</td><td>Low-voltage DC 24V</td></tr>
+                    <tr><td>Safety</td><td>High voltage (10-15kV)</td><td>No high-voltage section</td></tr>
                     <tr><td>Weight</td><td>Bulky CRT assembly</td><td>3.5 kg LCD module</td></tr>
                     <tr><td>Mounting</td><td>Original unit only</td><td>Drop-in, original holes, no modification</td></tr>
                     <tr><td>Maintenance</td><td>Periodic focus/brightness adjustment</td><td>Maintenance-free</td></tr>
@@ -770,7 +770,7 @@
                 <h3>5.2 Original CRT Removal</h3>
                 <ol class="install-steps">
                     <li>Disconnect the 20-pin Honda signal cable from the rear of the CRT (press the release latch, pull gently).</li>
-                    <li>Disconnect the DC 24V power cable from the CRT power connector.</li>
+                    <li>Disconnect the AC supply cable from the CRT power connector.</li>
                     <li>Remove the mounting screws securing the CRT bezel to the control cabinet.</li>
                     <li>Lift the CRT assembly out with both hands — it is heavy and fragile, so never carry it by the signal cable or connector neck.</li>
                 </ol>
@@ -784,7 +784,7 @@
                 <h3>5.4 Cable Connection</h3>
                 <ol class="install-steps">
                     <li>Connect the original 20-pin Honda signal cable to the module. The connector is keyed — if it will not slide in, do not force it; reverse and retry.</li>
-                    <li>Connect the original DC 24V power cable to the module. It runs straight from the machine supply; no adapter or converter is needed.</li>
+                    <li>Connect the original AC supply cable to the module. It runs straight from the machine mains supply; no adapter or converter is needed.</li>
                     <li>Confirm each connector is fully seated and any latch is engaged. Gently tug each cable to verify.</li>
                 </ol>
                 <h3>5.5 Power-On Test and Calibration</h3>
@@ -801,7 +801,7 @@
                     <ul>
                         <li>This retrofit needs <strong>no CNC parameter changes</strong>. The module is electrically and mechanically transparent to the control.</li>
                         <li>Do <strong>not</strong> open the old CRT housing. It stores a dangerous high-voltage charge for hours after power-off.</li>
-                        <li>If the module shows nothing after install, reseat the 20-pin Honda connector first, then verify 24V DC at the power connector.</li>
+                        <li>If the module shows nothing after install, reseat the 20-pin Honda connector first, then verify the AC 110V-220V supply at the power connector.</li>
                     </ul>
                 </div>
                 <figure class="img-hero"><img width="600" height="450" class="img-block" loading="lazy" src="https://cncdisplay.com/images/A61L-0001-0094_effect.jpg" alt="A61L-0001-0094 LCD Replacement Effect on FANUC 15M"><figcaption class="text-muted-c">Completed A61L-0001-0094 retrofit on a FANUC 15M system — crisp, stable color display</figcaption></figure>
@@ -810,7 +810,7 @@
                     <li><strong>1:1 Drop-In Fit</strong>: the KTV148 module uses the original cut-out, mounting holes and cables. No drilling, cutting or rewiring.</li>
                     <li><strong>Full Signal Compatibility</strong>: the 20-pin Honda interface matches the original CRT protocol, so the module locks onto the existing video signal automatically.</li>
                     <li><strong>Brighter, Sharper Image</strong>: 400 cd/m² and 800×600 (vs. ~200 cd/m² and 640×480 for the aging CRT) keep text readable under workshop lighting and crane aisles.</li>
-                    <li><strong>No High-Voltage Hazard</strong>: the LCD runs on low-voltage DC 24V only, eliminating the 10-15kV CRT risk during service.</li>
+                    <li><strong>No High-Voltage Hazard</strong>: the LCD has no high-voltage section, eliminating the 10-15kV CRT risk during service.</li>
                     <li><strong>Long Life, Less Downtime</strong>: 50,000+ hours vs. ~15,000 hours for the CRT cuts unplanned display failures on 24/7 production lines.</li>
                     <li><strong>Factory-Direct Price</strong>: <strong>$299</strong> with 2-year warranty, versus US$799-849 for comparable 12.1-inch kits from North-American resellers. See the market-price table on our <a href="/products/fanuc-a61l-0001-0094-lcd-upgrade.html">A61L-0001-0094 product page</a>.</li>
                 </ul>
@@ -818,7 +818,7 @@
                 <h3>7.1 Periodic Inspection (Every 6 Months)</h3>
                 <ul>
                     <li>Inspect the 20-pin Honda cable for looseness, oxidation or bent pins; reseat if needed.</li>
-                    <li>Check the DC 24V connection and measure voltage at the connector (21-27V DC under load).</li>
+                    <li>Check the AC supply connection and measure the voltage at the connector under load.</li>
                     <li>Clean the front panel with a soft, lint-free cloth lightly dampened with 70%+ isopropyl alcohol. Do <strong>not</strong> use ammonia cleaners — they strip the anti-glare coating.</li>
                     <li>Confirm the OSD still opens and brightness/contrast have not drifted.</li>
                 </ul>
@@ -830,7 +830,7 @@
                 <h3>7.3 Troubleshooting Guide</h3>
                 <div class="table-scroll-mt"><table class="spec-table">
                     <tr><th>Symptom</th><th>Possible Cause</th><th>Corrective Action</th></tr>
-                    <tr><td>No display after install</td><td>20-pin connector not seated; no 24V power</td><td>Reseat connectors; verify 24V at the power connector</td></tr>
+                    <tr><td>No display after install</td><td>20-pin connector not seated; no supply power</td><td>Reseat connectors; verify the supply voltage at the power connector</td></tr>
                     <tr><td>Shifted image or black border</td><td>Screen position out of range</td><td>Adjust position via OSD (auto-adjust available)</td></tr>
                     <tr><td>Flicker or unstable image</td><td>Timing/phase mismatch</td><td>Adjust phase and clock in the OSD</td></tr>
                     <tr><td>Wrong colors (e.g. red tint)</td><td>Bent signal pin; OSD color temperature changed</td><td>Inspect cable; reset OSD to factory defaults</td></tr>
