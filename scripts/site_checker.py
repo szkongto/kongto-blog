@@ -16,8 +16,11 @@ sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 from collections import defaultdict
 
-ROOT = Path(__file__).parent if __file__ else Path(".")
-# Auto-detect project root: if we're in d:\code, use seo_deploy/ as web root
+# 仓库根目录 = 本脚本所在目录的上一级（scripts/ 的父目录）。
+# 旧写法 Path(__file__).parent 得到的是 scripts/ 本身，导致 WEB_ROOT
+# 落在 scripts/ 下、扫到 0 个 HTML 文件，门禁空过。
+ROOT = Path(__file__).resolve().parent.parent if __file__ else Path(".").resolve()
+# 兼容旧布局：若仓库根下存在 seo_deploy/ 子目录，则以它为站点根
 WEB_ROOT = (ROOT / "seo_deploy") if (ROOT / "seo_deploy").exists() else ROOT
 EXCLUDE_DIRS = {".git", "screaming_frog_reports", "backlinks_output", "_archive_audit",
                  "24game", "ai-creation-workshop", "node_modules", "patches",
@@ -98,6 +101,13 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
 
     lines = content.split("\n")
 
+    # ─── 0. 非 HTML 文件跳过 ───
+    # 站点根目录下的 Google / Bing 站点验证文件是纯文本，
+    # 用 .html 后缀只是验证规则要求，不适用任何 HTML 检查。
+    if "<html" not in content.lower():
+        result.info(rel, 0, "非 HTML 文件（纯文本），跳过 HTML 检查")
+        return
+
     # ─── 1. BOM检测 ───
     if raw.startswith(b'\xef\xbb\xbf'):
         result.warn(rel, 1, "文件包含 UTF-8 BOM（大多数浏览器正常，但建议移除）",
@@ -118,8 +128,9 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
         result.warn(rel, 1, "缺少 `<!DOCTYPE html>`", "添加 `<!DOCTYPE html>`")
 
     # ─── 4. </html>检测 ───
+    # `</html>` 结束标签在 HTML5 中允许省略，缺失只提示不阻断。
     if "</html>" not in content:
-        result.error(rel, 0, "缺少 `</html>` 关闭标签")
+        result.warn(rel, 0, "缺少 `</html>` 关闭标签（HTML5 允许省略，建议补上）")
     elif content.rstrip().endswith("</html>"):
         pass  # OK
     else:
@@ -270,13 +281,34 @@ def scan_file(filepath: Path, result: ScanResult, fix=False):
         result.warn(rel, 0, f"多个 H1 标签 ({h1_count}个)")
 
     # ─── 14. 未关闭的HTML标签检查 ───
-    # 使用正则匹配完整的开标签和闭标签
+    # 按 HTML 规范区分可省略与不可省略的结束标签：
+    #   html / head / body 的结束标签在 text/html 中允许省略（不影响解析），
+    #   记 INFO 供人工确认，不阻断部署；
+    #   main / footer 的结束标签不可省略，缺失是真错误。
+    OMITTABLE_END = {"html", "head", "body"}
     for tag in ["html", "head", "body", "main", "footer"]:
         open_count = len(re.findall(rf'<{tag}(\s[^>]*)?>', content))
         close_count = len(re.findall(rf'</{tag}>', content))
         diff = open_count - close_count
-        if diff > 0:
+        if diff > 1:
+            # 多出一个以上开标签，无论哪种标签都只能是真错误
             result.error(rel, 0, f"`<{tag}>` 未关闭 (多 {diff} 个开标签)")
+        elif diff == 1:
+            if tag in OMITTABLE_END:
+                result.info(rel, 0, f"`<{tag}>` 结束标签省略 (HTML5 允许，可忽略)")
+            else:
+                result.error(rel, 0, f"`<{tag}>` 未关闭 (多 1 个开标签，结束标签不可省略)")
+        elif diff < 0:
+            result.error(rel, 0, f"`</{tag}>` 多余 {abs(diff)} 个 (无匹配开标签)")
+
+    # ─── 14b. 相邻重复的结构标签 ───
+    # 模板生成器会整段重复输出，例如 `</head>\n</head>\n<body>\n<body>`。
+    # 这种重复标签在计数上可能自平衡，必须单独查。
+    for tag in ["html", "head", "body", "main", "footer"]:
+        m = re.search(rf'(</{tag}>\s*</{tag}>|<{tag}(?:\s[^>]*)?>\s*<{tag}(?:\s[^>]*)?>)', content)
+        if m:
+            line = content[:m.start()].count("\n") + 1
+            result.error(rel, line, f"相邻重复的 `<{tag}>` 标签 — 模板重复输出，删掉多余一个")
 
     # ─── 15. Navigation Link 存在性（仅查主内容页/品牌页） ───
     if any(p in rel for p in ["brands/", "products/", "about", "index"]):
