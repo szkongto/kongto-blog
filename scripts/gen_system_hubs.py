@@ -105,7 +105,7 @@ def build_page(slug, title, meta_desc, h1, intro, system_name, pattern, faqs):
 <h2>Compatible Display Models for {html.escape(system_name)}</h2>
 <p>Find your CRT model below — every one is a drop-in replacement using the original connector. No CNC parameter changes, no rewiring.</p>
 <table class="model-table">
-<thead><tr><th>CRT Model</th><th>LCD Size</th></tr></thead>
+<thead><tr><th>CRT Model</th><th>CRT Size / Type</th></tr></thead>
 <tbody>
 {rows}
 </tbody>
