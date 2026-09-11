@@ -61,7 +61,7 @@ machine controls see an unchanged video signal.
   AC 110-220V, Siemens 2-row 16-pin, TTL. https://cncdisplay.com/products/siemens-sm0901-lcd-upgrade.html
 - Siemens 6FC3988-7FA20: 9" mono CRT → 8" TFT-LCD, 800x600, Siemens 2-row 16-pin, TTL.
   https://cncdisplay.com/products/siemens-6fc3988-7fa20-lcd-upgrade.html
-- Siemens 6FC5103: 10.4" CRT → 10.4" TFT-LCD, 800x600, 400 cd/m², AC 110-220V.
+- Siemens 6FC5103: 14" CRT → 10.4" TFT-LCD, 800x600, 400 cd/m², AC 110-220V.
   https://cncdisplay.com/products/siemens-6fc5103-lcd-upgrade.html
 - Mazak 14" color (CD1472, C5470NS, DR5614, AIQA8DSP40): 14" → 12.1" TFT-LCD, 800x600, 400 cd/m².
   https://cncdisplay.com/products/mazak-14-inch-crt-lcd-upgrade.html
