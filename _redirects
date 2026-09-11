@@ -3,6 +3,7 @@
 
 # /guides/ -> /docs/ 规范路径统一
 /guides/ttl-rgb-signal-pinout-guide.html /posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html 301
+/zh/guides/ttl-rgb-signal-pinout-guide.html /zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html 301
 /products/kt809-industrial-converter.html /posts/article_20260509_KT809_industrial_converter.html 301
 /products/kt819-industrial-converter.html /posts/article_20260509_KT819_industrial_converter.html 301
 # (removed — self-redirect, source is the real article page)
