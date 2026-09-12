@@ -100,13 +100,7 @@ HEAD = '''<!DOCTYPE html>
   "image": "https://cncdisplay.com/images/logo_256.png",
   "offers": {
     "@type": "Offer", "price": "{pnum}.00", "priceCurrency": "USD", "validFrom": "2026-07-13",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
-      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["CN","US","DE","JP","KR","SG","IN","GB","FR","IT"] },
-      "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 7, "unitCode": "DAY" } }
-    },
-    "hasMerchantReturnPolicy": {"@type":"MerchantReturnPolicy","applicableCountry":"CN","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"},
+    "hasMerchantReturnPolicy": {"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnLink":"https://cncdisplay.com/contact.html"},
     "availability": "https://schema.org/InStock",
     "url": "https://cncdisplay.com/products/{slug}.html"
   }
