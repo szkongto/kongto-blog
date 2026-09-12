@@ -98,7 +98,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--commit', action='store_true')
     ap.add_argument('--report', action='store_true', help='写清单到 seo_reports/')
+    ap.add_argument('--all', action='store_true',
+                    help='含单件 stem 图。默认只查同 stem 兄弟组, 单件 stem 一律跳过 -> '
+                         '会漏报全部零引用单图（2026-09-12 发现: 默认跑出"0 孤儿"是假象）')
     a = ap.parse_args()
+
+    if a.commit and a.all:
+        print('拒绝: --all 只用于盘点, 不与 --commit 同用')
+        sys.exit(2)
 
     imgs = active_images()
     by = group_images(imgs)
@@ -106,7 +113,7 @@ def main():
 
     orphans = []       # (file, size, group_status, is_cn)
     for (d, stem), files in sorted(by.items()):
-        if len(files) <= 1:
+        if len(files) <= 1 and not a.all:
             continue
         ref_in = [f for f in files if os.path.basename(f).lower() in refs
                   or os.path.basename(f).lower() in substring]
