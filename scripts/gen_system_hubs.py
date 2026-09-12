@@ -3,7 +3,18 @@
 Template modeled on existing guides/by-size pages. Rich data for GEO/rich results.
 """
 
-import os, json, html
+import os, json, html, sys
+
+# --- 过期守卫（2026-09-13 加）---
+# 本脚本生成的 by-system hub 页已累积多处人工改进。重跑会静默回退它们，
+# 而 full_gate / pre-commit 都查不出来 —— 跑完仍报 ALL GATES PASSED。
+# hub 页现在只能手改 HTML。详见 memory: cncdisplay-hub-generators-stale
+if '--force' not in sys.argv:
+    sys.exit(
+        '⛔ 本脚本已过期，默认不运行。\n'
+        '   重跑会回退 hub 页上的人工改进，而门禁查不出来。\n'
+        '   确实要跑：加 --force，跑完必须逐页 git diff 审查。'
+    )
 
 BASE = os.path.dirname(os.path.dirname(__file__))
 OUT_DIR = os.path.join(BASE, 'guides', 'by-system')
