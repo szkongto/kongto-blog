@@ -116,6 +116,12 @@ def check_file(rel):
         if target and cur and target == cur:
             problems.append(f'[HARD] 壳页自循环: refresh→自身 {target}')
 
+    # 7. meta content 值里裸 ASCII 双引号 → 属性提前截断（og:title/twitter:title 被砍半）
+    # 英寸符号必须写 &quot;（title 元素内可用字面 "）。2026-09-12 修 4 处后补的门禁。
+    m = re.search(r'<meta\b[^>]*content="[^"]*"\s+[^=>]*"', text)
+    if m:
+        problems.append(f'[HARD] meta content 含裸双引号(属性截断): {m.group(0)[:80]}')
+
     return problems, True
 
 
