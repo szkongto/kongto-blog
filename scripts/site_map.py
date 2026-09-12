@@ -8,7 +8,13 @@
 用法: python scripts/site_map.py          # 生成 data/site_map.json
       python scripts/site_map.py --check  # 打印所有文章入口缺失(给 full_gate/pre-commit 用)
 """
-import re, os, json, sys
+import re, os, json, sys, io
+
+# stdout 必须显式切 utf-8。Windows 下 stdout 被重定向到管道时 Python 走
+# locale(GBK) 编码, --check 输出的中文在 GBK 里编不出去会抛 UnicodeEncodeError
+# 并以 1 退出 —— full_gate 把 entry_check 判成硬失败, 但真实原因是编码不是入口缺失。
+# 同一写法见 check_llms.py / full_gate.py。
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)

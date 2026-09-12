@@ -4,10 +4,17 @@
 警告(不阻止): 目标=首页 / 源含型号→品牌页（上下文相关，需人工判断）
 退出码: 0=通过, 1=有硬错
 """
+import io
 import re
 import os
 import sys
 import urllib.parse
+
+# stdout 必须显式切 utf-8。Windows 下 stdout 被重定向到管道时 Python 走
+# locale(GBK) 编码, 本脚本输出的中文在 GBK 里编不出去会抛 UnicodeEncodeError
+# 并以 1 退出 —— full_gate 会把这条当成真实硬错, 而真正原因是编码不是重定向。
+# 同一写法见 check_llms.py / full_gate.py。
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 SRC = '_redirects'
 # re.IGNORECASE 不可省: _redirects 的路径一律小写, 而候选里 MDT1283/CD1472/
