@@ -76,5 +76,16 @@ if __name__ == "__main__":
             print(json.dumps(r, ensure_ascii=False))
         print(f"\n合计 {len(res)} 条 | 被引 {sum(1 for r in res if r['referenced'])} | "
               f"产品页 {sum(1 for r in res if r['cited_url_type']=='product_page')}")
+        # --out: 写成 baseline 同构的 json,供 compare.py 直接比对。
+        if len(sys.argv) > 3 and sys.argv[2] == "--out":
+            src = json.load(open(sys.argv[1], encoding='utf-8'))
+            payload = {
+                "date": src.get("date", ""),
+                "note": src.get("note", ""),
+                "results": res,
+            }
+            with open(sys.argv[3], 'w', encoding='utf-8') as f:
+                json.dump(payload, f, ensure_ascii=False, indent=2)
+            print(f"scored -> {sys.argv[3]}")
     else:
-        print("用法: score.py <result.json>  |  score.py --interactive")
+        print("用法: score.py <result.json> [--out <scored.json>] | score.py --interactive")

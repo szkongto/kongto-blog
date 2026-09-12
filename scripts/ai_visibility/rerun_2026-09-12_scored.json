@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-12",
+  "note": "复测：与 baseline_2026-08-09.json 同一组 query、同一来源 (Bright Data web_data_chatgpt_ai_insights)。对照组是 llms.txt 扩展(commit 453ff071, 2026-08-09)+110 条标题重写(commit 854a1c3d, 2026-09-12)之后。Perplexity 侧本轮取不到：web_data_perplexity_ai_insights 连续 3 次 600 秒超时，同日 search_engine 正常说明账号未停，属工具侧故障，待恢复补跑。",
+  "results": [
+    {
+      "model": "FANUC A61L-0001-0093",
+      "llm": "chatgpt",
+      "referenced": true,
+      "rank": 2,
+      "cited_url_type": "none",
+      "reason_given": true,
+      "raw_fragment": "For a **FANUC A61L-0001-0093**, I'd replace the aging CRT with a **purpose-built industrial LCD retrofit**, rather than trying to source another used CRT.\n\n### My top choices\n\n1.  **Industrial Panels QES1508-057 - 8.4\" TFT-LCD**\n    *   Specifically designed as a drop-in replacement for the **A61L-0001-0093**.\n    *   **24 VDC** input.\n    *   Accepts the legacy **TTL/CGA/EGA/MDA** video signals u"
+    },
+    {
+      "model": "Siemens 6FC3988 / SM0901",
+      "llm": "chatgpt",
+      "referenced": true,
+      "rank": 2,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "raw_fragment": "Yes. For the **Siemens SINUMERIK 6FC3988-7FA20 / SM0901 9-inch monochrome CRT**, there are purpose-built **CRT-to-LCD retrofit modules** rather than a generic LCD panel.\n\n### Recommended replacement\n\nA **9-inch industrial TFT/LCD retrofit specifically listed for 6FC3988-7FA20 / SM0901** is the safest choice. Current retrofit listings specify:\n\n*   **9-inch LCD/TFT**\n*   **800 x 600** resolution\n* "
+    },
+    {
+      "model": "Mitsubishi MDT962B",
+      "llm": "chatgpt",
+      "referenced": true,
+      "rank": 1,
+      "cited_url_type": "none",
+      "reason_given": true,
+      "raw_fragment": "Yes. For a **Mitsubishi MDT962B / BM09DF / FCUA-CT100**, I would use a **purpose-built industrial TFT-LCD retrofit**, rather than trying to adapt a normal VGA monitor.\n\n### Best replacement\n\nA current retrofit marketed specifically for **MDT962B / BM09DF / FCUA-CT100** is the safest choice. These are designed to accept the Mitsubishi's unusual video timing and connector arrangement.\n\nOne currently"
+    },
+    {
+      "model": "FANUC A61L-0001-0116",
+      "llm": "chatgpt",
+      "referenced": false,
+      "rank": 0,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "raw_fragment": "For a **FANUC 0i-D** using the **A61L-0001-0116 9-inch color plasma (PDP)**, the most directly documented LCD replacement is:\n\n### Recommended replacement\n\n**FANUC A13B-0166-C011 LCD display unit**\n\n*   **Replaces:** A61L-0001-0116\n*   **Type:** 9-inch color LCD\n*   **Application:** FANUC 16/18/21 and Power Mate i-series systems; the same PDP unit is also cataloged for the 0i family.\n*   Radwell s"
+    },
+    {
+      "model": "Mazak MDT1283B / DR5614",
+      "llm": "chatgpt",
+      "referenced": false,
+      "rank": 0,
+      "cited_url_type": "none",
+      "reason_given": false,
+      "raw_fragment": "Yes. There are **direct LCD/LED replacements** for both the Mazak/Mazatrol **MDT1283B** and **DR5614** CRTs.\n\n*   **MDT1283B / MDT1283B-1A** - the common replacement is **QES1510-050**, a **10.4\" LED-backlit LCD** designed as a plug-and-play replacement for the original 12\" monochrome amber CRT. It retains the original mounting arrangement and TTL video interface. [1]\n*   **DR5614 / P/N 800291** -"
+    }
+  ]
+}
