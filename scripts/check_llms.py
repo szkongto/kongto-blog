@@ -22,10 +22,17 @@
     python scripts/check_llms.py -v       # 多打印一些过程信息
 """
 
+import io
 import pathlib
 import re
 import subprocess
 import sys
+
+# stdout 必须显式切 utf-8。Windows 控制台默认 GBK, 而本脚本输出的
+# "—" 等字符在 GBK 里编不出去, print/sys.stdout.write 会抛
+# UnicodeEncodeError 并以 1 退出 —— 门禁被当成 FAIL, 但真实原因是编码,
+# 不是内容。full_gate.py 用同样写法, 照抄。
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://cncdisplay.com'
@@ -109,8 +116,12 @@ def main():
     # 规则 3：llms-full.txt 必须与生成器一致
     gen = ROOT / 'scripts' / 'gen_llms_full.py'
     if gen.exists():
+        # encoding 必须显式给 utf-8: Windows 下 text=True 走 locale(GBK),
+        # 子进程一旦输出非 ASCII 就抛 UnicodeDecodeError, r.stdout 变 None,
+        # 门禁假 FAIL 且看不到真实原因。
         r = subprocess.run([sys.executable, str(gen), '--check'],
-                           cwd=str(ROOT), capture_output=True, text=True)
+                           cwd=str(ROOT), capture_output=True, text=True,
+                           encoding='utf-8', errors='replace')
         sys.stdout.write(r.stdout)
         if r.returncode != 0:
             sys.stderr.write(r.stderr)

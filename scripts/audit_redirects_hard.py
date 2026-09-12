@@ -10,10 +10,74 @@ import sys
 import urllib.parse
 
 SRC = '_redirects'
+# re.IGNORECASE 不可省: _redirects 的路径一律小写, 而候选里 MDT1283/CD1472/
+# DR5614/BM09DF 等是大写字面量——没有 IGNORECASE 时它们对小写 URL 永不命中,
+# 跨型号错配与语义错配两项对整类型号静默失效。
 MODEL_RE = re.compile(
     r'(A61L[- ]0001[- ]\d{4}|A02B[- ]\d{4}[- ][A-Z]\d{3}|A05B[- ]\d{4}[- ][A-Z]\d{3}|'
     r'\d{4}-\d{5}|009\d|008\d|007\d|006\d|D9MM[- ]11A|MDT[- ]?94\d|TX[- ]\d+|'
-    r'C14C[- ]1472DF|DR5614|6FC3\d{3}|BM09DF|A20B[- ]\d{4})')
+    r'C14C[- ]1472DF|DR5614|6FC3\d{3}|BM09DF|A20B[- ]\d{4})', re.IGNORECASE)
+
+# 人工别名表 — 补 MODEL_RE 的 token 盲区。
+#
+# MODEL_RE 认不出的别名会让 `if sm and dm` 短路: 两侧只要一侧认不出, 这条
+# 重定向就既不报错也不进警告, 等于没审。已知实例: _redirects L248
+#   /products/mazak-cd1283-d1m-lcd-upgrade.html → .../mazak-mdt1283b-...
+# CD1283 不在 MODEL_RE 里, 导致这条 301 从未被型号比对覆盖过。
+#
+# 键 = 归一化别名(大写/去连字符/去空格); 值 = 规范 key, 与 model_key() 同空间。
+# 录表即等于宣布"这两个名字是同一显示器" —— 录多了会盖掉真错配, 所以每条
+# 必须能指出站内依据; 依据不足不录。
+ALIAS_TABLE = {
+    # CD1283-D1M 与 MDT-1283B 是同一显示器的两个编号(redirect_audit_report.html
+    # 记为合理), _redirects L248 已 301 归并。
+    'CD1283D1M': '1283',
+    # NC6225 = MDT1283B, NC6212 = MDT962B —— 候选型号收敛别名, 见
+    # memory cncdisplay-candidates-resolved-20260904; 两者都无独立页。
+    'NC6225': '1283',
+    'NC6212': '962',
+    # MDT1283B / MDT962B 不在候选表里 (只有 MDT[- ]?94\d)。补进来,
+    # 否则它们作为重定向目标时永远算不出 key, 整条再次短路。
+    'MDT1283B': '1283',
+    'MDT962B': '962',
+}
+_ALIAS_KEYS = sorted(ALIAS_TABLE, key=len, reverse=True)
+
+# 待裁决清单 — 本次修正(IGNORECASE + 别名表)后新暴露、但依据不足以自行改动的错配。
+#
+# 与 ALIAS_TABLE 性质相反: 别名表是"已确认同一物, 放行"; 这里是"已确认有问题,
+# 但不知道该改到哪"。所以不放进别名表(那等于谎称同一物), 也不静默吞掉(那等于
+# 门禁说谎)。每次运行都打印, 交用户裁决。
+#
+# 每条必须写清: 判错的依据 + 候选落点 + 缺什么证据。缺一条就不要登记。
+PENDING = {
+    ('/products/fanuc-c14c-1472df-lcd-upgrade.html',
+     '/products/fanuc-a61l-0001-0093-lcd-upgrade.html'):
+        '源在 compatibility-matrix 行内自述 14" Color CRT / FANUC 0i / 12.1" TFT-LCD 1024x768; '
+        '但目标页自述 9-inch Monochrome CRT → 8-inch TFT, 尺寸与屏型都对不上, 判为错配。'
+        '候选一 /products/fanuc-a61l-0001-0094-lcd-upgrade.html (14-inch Color CRT → 12.1-inch '
+        'TFT-LCD, 与矩阵行规格逐项一致, 品牌同为 FANUC); 候选二 /products/mazak-cd1472-lcd-upgrade.html '
+        '(规格同, 但品牌 Mazak, 与矩阵行 FANUC 不符)。'
+        '「C14C-1472DF 与 0094 是否同一显示器」全站无依据 (product_specs.json 只有 '
+        'mazak-cd1472 一条 1472 记录), 故不自行改动。',
+}
+
+
+def find_model(text):
+    """取文本里的型号 token。返回匹配到的字符串, 无则 None。
+
+    先走 MODEL_RE; 正则认不出时查人工别名表兜底。src 与 dst 两侧都必须用
+    本函数, 只用 MODEL_RE 会把认不出的整条重定向丢掉(静默不审)。
+    """
+    m = MODEL_RE.search(text)
+    if m:
+        return m.group(0)
+    if text:
+        n = text.replace('-', '').replace(' ', '').upper()
+        for alias in _ALIAS_KEYS:
+            if alias in n:
+                return alias
+    return None
 
 
 def dec(s):
@@ -29,8 +93,10 @@ def target_exists(urlpath):
 
 def model_key(m):
     """型号身份键：取尾部 4 位数字（0093 vs A61L-0001-0093 视为同型号）；
-    无 4 位数字则用全归一化串（如 BM09DF）。"""
+    无 4 位数字则用全归一化串（如 BM09DF）。别名表优先。"""
     n = m.replace('-', '').replace(' ', '').upper()
+    if n in ALIAS_TABLE:
+        return ALIAS_TABLE[n]
     import re as _re
     digits = _re.findall(r'\d{4}', n)
     return digits[-1] if digits else n
@@ -39,6 +105,7 @@ def model_key(m):
 lines = [l for l in open(SRC, encoding='utf-8').read().splitlines()
          if l.strip() and not l.startswith('#')]
 hard = []
+pending = []
 for ln in lines:
     m = re.match(r'^(\S+)\s+(\S+)\s+(30[12])\s*$', ln)
     if not m:
@@ -52,19 +119,22 @@ for ln in lines:
     if not dst.startswith('http') and not target_exists(dst):
         hard.append((ln, f'目标不存在: {dec(dst)[:50]}'))
         continue
-    # 跨型号错配
-    sm = MODEL_RE.search(src)
-    dm = MODEL_RE.search(dst)
-    if sm and dm and model_key(sm.group(0)) != model_key(dm.group(0)):
+    # 跨型号错配 (已登记为待裁决的, 转 pending, 同时跳过后面的语义错配判定)
+    if (src, dst) in PENDING:
+        pending.append(((src, dst), PENDING[(src, dst)]))
+        continue
+    sm = find_model(src)
+    dm = find_model(dst)
+    if sm and dm and model_key(sm) != model_key(dm):
         # 已知纠错白名单: 错误型号 → 正确型号(刻意修正, 非错配)
-        if (model_key(sm.group(0)), model_key(dm.group(0))) in (('3998', '3988'),):
+        if (model_key(sm), model_key(dm)) in (('3998', '3988'),):
             continue
-        hard.append((ln, f'跨型号错配: {sm.group(0)} → {dm.group(0)}'))
+        hard.append((ln, f'跨型号错配: {sm} → {dm}'))
 
     # 语义错配: 源含型号, 目标是具体产品/文章页, 但目标页内容不含该型号 → 落地页语义不对
     # 跳过聚合页(品牌/指南/索引/方案/对比) — 它们合法地不逐型号提及
     if sm:
-        dkey = model_key(sm.group(0))
+        dkey = model_key(sm)
         dst_file = dec(dst).lstrip('/').split('?')[0]
         if (not dst.startswith('http') and dst_file and os.path.isfile(dst_file)
                 and not dst_file.endswith('/')):
@@ -77,7 +147,7 @@ for ln in lines:
                 continue  # PDF二进制/聚合/通用页, 不判
             dcontent = open(dst_file, encoding='utf-8', errors='ignore').read()
             if dkey not in dcontent:
-                hard.append((ln, f'语义错配: 源含型号{sm.group(0)}但目标页({dst_file})不含该型号'))
+                hard.append((ln, f'语义错配: 源含型号{sm}但目标页({dst_file})不含该型号'))
 
 if hard:
     print(f'\n[REDIRECT-AUDIT] 发现 {len(hard)} 条硬错，阻止提交:')
@@ -86,4 +156,8 @@ if hard:
     print('\n修复 _redirects 后重试。参考: python scripts/audit_redirects.py')
     sys.exit(1)
 print('[REDIRECT-AUDIT] OK — 无自循环/目标404/跨型号错配')
+if pending:
+    print(f'\n[REDIRECT-PENDING] {len(pending)} 条待裁决(不阻止提交, 但未修复):')
+    for (s, d), why in pending:
+        print(f'  {s} → {d}\n    {why}')
 sys.exit(0)

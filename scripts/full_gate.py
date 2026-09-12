@@ -39,7 +39,11 @@ def run():
     for name, cmd, hard in GATES:
         if quick and not hard:
             continue
-        r = subprocess.run(cmd, capture_output=True, text=True, errors='replace')
+        # encoding='utf-8' 不可省: 子脚本都以 utf-8 输出, 而 Windows 下
+        # text=True 走 locale(GBK), 结果每条 PASS/FAIL 的原因都是乱码 ——
+        # 门禁拦下提交时, 用户看不到为什么被拦。
+        r = subprocess.run(cmd, capture_output=True, text=True,
+                           encoding='utf-8', errors='replace')
         tail = (r.stdout or '').strip().splitlines()
         tail = tail[-1] if tail else ''
         ok = r.returncode == 0
