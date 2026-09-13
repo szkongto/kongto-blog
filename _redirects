@@ -362,6 +362,14 @@
 /zh/products/toshiba-d15cm-lcd-upgrade.html /products/toshiba-d15cm-lcd-upgrade.html 301
 /products/mitsubishi-tx-1450ab-lcd-upgrade.html /products/matsushita-tx1450ab-lcd-upgrade.html 301
 /zh/products/mitsubishi-tx-1450ab-lcd-upgrade.html /zh/products/matsushita-tx1450ab-lcd-upgrade.html 301
+# 2026-09-14 品牌纠正: KF-M7099H 是 Matsushita 件号(与 FANUC A61L-0001-0093 / Toshiba D9MM-11A 同一款), 非 Mitsubishi → slug 改名
+/products/mitsubishi-kf-m7099h-lcd-upgrade.html /products/matsushita-kf-m7099h-lcd-upgrade.html 301
+/zh/products/mitsubishi-kf-m7099h-lcd-upgrade.html /zh/products/matsushita-kf-m7099h-lcd-upgrade.html 301
+# 同批图库改名(仅该产品页引用), 老图 URL 补 301 防已收录图片 404
+/images/mitsubishi-kf-m7099h-lcd-upgrade_lcd_front_0.jpg /images/matsushita-kf-m7099h-lcd-upgrade_lcd_front_0.jpg 301
+/images/mitsubishi-kf-m7099h-lcd-upgrade_effect_1.jpg /images/matsushita-kf-m7099h-lcd-upgrade_effect_1.jpg 301
+/images/mitsubishi-kf-m7099h-lcd-upgrade_label_2.jpg /images/matsushita-kf-m7099h-lcd-upgrade_label_2.jpg 301
+/images/mitsubishi-kf-m7099h-lcd-upgrade_crt_3.jpg /images/matsushita-kf-m7099h-lcd-upgrade_crt_3.jpg 301
 /posts/Industrial_CNCDisplay_Troubleshooting_Repair_Guide.html /posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
 /posts/Industrial_Controller_Display_Troubleshooting_Maintenance_Guide.html /posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html 301
 /posts/Industrial_RGBHV_Retrofit_Guide_CGA_EGA_to_HD.html /posts/Industrial_RGBHV_Signal_Analysis_CGA_EGA_to_HD_Display.html 301
