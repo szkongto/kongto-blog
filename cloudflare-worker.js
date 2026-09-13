@@ -407,7 +407,7 @@ const REDIRECTS = {
   '/products/fanuc-a61l-0001-0078-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0087-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/fanuc-a61l-0001-0136-lcd-upgrade.html': '/brands/FANUC.html',
-  '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0093-lcd-upgrade.html',
+  '/products/fanuc-c14c-1472df-lcd-upgrade.html': '/products/fanuc-a61l-0001-0094-lcd-upgrade.html',
   '/products/fanuc-om-d-display-lcd-upgrade.html': '/brands/FANUC.html',
   '/products/haas-9pin-mono-crt-lcd-upgrade.html': '/products/haas-9-pin-monochrome-lcd-upgrade.html',
   '/products/heidenhain-bc120-lcd-upgrade.html': '/products/heidenhain-bc110-lcd-upgrade.html',

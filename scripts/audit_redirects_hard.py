@@ -47,6 +47,14 @@ ALIAS_TABLE = {
     # 否则它们作为重定向目标时永远算不出 key, 整条再次短路。
     'MDT1283B': '1283',
     'MDT962B': '962',
+    # C14C-1472DF 与 A61L-0001-0094 是同一台显示器的两个编号(件号), 依据为实物标签照片:
+    # D:/工作资料/KONGTO/产品图片/FANUC/0074-0094/
+    #   Fanuc发那科A61L-001-0074A61L-0001-0094 new/CRT/
+    #   C14C-1472D1F-A61L-0001-0094#A-LABEL.jpg
+    # HITACHI 标签同一行印有 'MOD. NO. C14C-1472D1F-A' 与 'A61L-0001-0094#A'。
+    # 注意: 矩阵登记写作 C14C-1472DF, 标签实为 C14C-1472D1F-A, 差一个 1 且多 -A 后缀;
+    # 视为同一物, 但该差异未在本表中消除。
+    'C14C1472DF': '0094',
 }
 _ALIAS_KEYS = sorted(ALIAS_TABLE, key=len, reverse=True)
 
@@ -58,15 +66,12 @@ _ALIAS_KEYS = sorted(ALIAS_TABLE, key=len, reverse=True)
 #
 # 每条必须写清: 判错的依据 + 候选落点 + 缺什么证据。缺一条就不要登记。
 PENDING = {
-    ('/products/fanuc-c14c-1472df-lcd-upgrade.html',
-     '/products/fanuc-a61l-0001-0093-lcd-upgrade.html'):
-        '源在 compatibility-matrix 行内自述 14" Color CRT / FANUC 0i / 12.1" TFT-LCD 1024x768; '
-        '但目标页自述 9-inch Monochrome CRT → 8-inch TFT, 尺寸与屏型都对不上, 判为错配。'
-        '候选一 /products/fanuc-a61l-0001-0094-lcd-upgrade.html (14-inch Color CRT → 12.1-inch '
-        'TFT-LCD, 与矩阵行规格逐项一致, 品牌同为 FANUC); 候选二 /products/mazak-cd1472-lcd-upgrade.html '
-        '(规格同, 但品牌 Mazak, 与矩阵行 FANUC 不符)。'
-        '「C14C-1472DF 与 0094 是否同一显示器」全站无依据 (product_specs.json 只有 '
-        'mazak-cd1472 一条 1472 记录), 故不自行改动。',
+    # 2026-09-13 清空。原唯一一条 (fanuc-c14c-1472df-lcd-upgrade.html →
+    # a61l-0001-0093-lcd-upgrade.html) 已裁决: 依据实物标签照片确认 C14C-1472D1F
+    # 与 A61L-0001-0094 同一显示器, 落点改指 0094 (_redirects L288 /
+    # cloudflare-worker.js L410 / compatibility-matrix.html 表格行 + COMPAT_DATA 数组),
+    # 并把 C14C1472DF 登记进 ALIAS_TABLE —— 否则源 key '1472' 与目标 key '0094'
+    # 不等, 门禁会立刻报跨型号错配。
 }
 
 
