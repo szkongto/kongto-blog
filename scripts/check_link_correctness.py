@@ -131,6 +131,9 @@ def main():
         fs = f.replace('\\', '/')
         if fs.startswith('en_bak/') or fs.startswith('_archive') or '/node_modules/' in fs:
             continue
+        # 临时调试文件（未跟踪、不部署），不是站点内容
+        if os.path.basename(fs).startswith('tmp_'):
+            continue
         h = open(f, encoding='utf-8', errors='ignore').read()
         for m in re.finditer(r'<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', h, re.S):
             url = m.group(1)

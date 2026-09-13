@@ -26,6 +26,8 @@ EXCLUDE_DIRS = {".git", "screaming_frog_reports", "backlinks_output", "_archive_
                  "24game", "ai-creation-workshop", "node_modules", "patches",
                  "MediaCrawler", "output", "ppt-master", "seo_backup", "_templates"}
 EXCLUDE_FILES = {"package-lock.json", "package.json"}
+# 临时调试文件（未跟踪、不部署），不是站点内容
+EXCLUDE_PREFIXES = ("tmp_",)
 NAV_LINKS = [
     ("/", "首页"),
     ("/compatibility-matrix.html", "兼容查询"),
@@ -346,6 +348,8 @@ def find_html_files():
         if any(excl in rel for excl in EXCLUDE_DIRS):
             continue
         if f.name in EXCLUDE_FILES:
+            continue
+        if f.name.startswith(EXCLUDE_PREFIXES):
             continue
         if ".git" in rel.split(os.sep):
             continue
