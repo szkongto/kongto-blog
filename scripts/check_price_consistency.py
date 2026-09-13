@@ -22,8 +22,18 @@
 
 `products/index.html` 是列表页，天然列多个价格，排除。
 
+## 盲区补灯：命中价格模式但抽不出数字 → WARN（2026-09-13 加）
+
+上面的断言全部建立在「抽得出数字」之上。em dash 吃掉数字的形态 B
+（`$480 — In Stock` → `$— In Stock`）把数字整个抹掉，正则一条都匹配不上，
+页面被 `continue` 静默跳过，门禁照报「全部一致」——数字没了反而没人管。
+
+这条只 WARN 不 FAIL：它是防回归的补灯，而合法的无价容器（例如
+"Request a quote"）会撞上同样的形状，做成 HARD 会为低频风险抬高整条门禁的
+误伤面。WARN 只亮不拦，人工看一眼即可。
+
 用法：python scripts/check_price_consistency.py
-退出码 0 = 全过，1 = 有页面不一致。
+退出码 0 = 无价格冲突（可能带 WARN），1 = 有页面不一致。
 """
 import io
 import pathlib
@@ -41,6 +51,18 @@ JSONLD_RE = re.compile(r'"price"\s*:\s*"([\d.]+)"')
 PRICE_RE = re.compile(r'<(?:span|div) class="price">\s*\$?([\d,]+)')
 CTA_PRICE_RE = re.compile(r'\$([\d,]+)\s*—\s*In Stock\s*—\s*Ships within 24 hours')
 
+# —— 盲区补灯用（只 WARN）——
+# 价格声明：值可能是空的或被 em dash 顶掉，所以 group 用 [^"]* 而不是 [\d.]+。
+DECL_RES = (
+    ('og meta product:price:amount', re.compile(r'product:price:amount" content="([^"]*)"')),
+    ('JSON-LD price', re.compile(r'"price"\s*:\s*"([^"]*)"')),
+    ('底部 CTA 行', re.compile(r'\$([^\s<]*)\s*—\s*In Stock')),
+)
+# 任何带 price 字样的 class 属性（含 product-price / price 两种写法）。
+CONTAINER_RE = re.compile(r'class="[^"]*price[^"]*"', re.I)
+# 该容器后面真的跟了数字。
+CONTAINER_DIGIT_RE = re.compile(r'<\w+[^>]*class="[^"]*price[^"]*"[^>]*>\s*\$?\s*\d', re.I)
+
 
 def norm(s):
     return s.replace(',', '').strip()
@@ -48,6 +70,7 @@ def norm(s):
 
 def main():
     problems = []
+    warns = []
     checked = 0
 
     for p in sorted(PRODUCTS.glob('*.html')):
@@ -55,6 +78,19 @@ def main():
             continue
         with open(p, encoding='utf-8', newline='') as fh:
             text = fh.read()
+
+        # 盲区补灯：命中价格容器/价格声明，却抽不出数字。必须在下面的
+        # `continue` 之前跑，否则这些页面正好是被静默跳过的那一批。
+        for label, rex in DECL_RES:
+            hit = rex.search(text)
+            if hit and not re.search(r'\d', hit.group(1)):
+                warns.append(
+                    f'{p.name}: {label} 命中但抽不出数字（实际值 {hit.group(1)!r}）'
+                    f' — 疑似 em dash 吃掉数字，人工看这一行')
+        if CONTAINER_RE.search(text) and not CONTAINER_DIGIT_RE.search(text):
+            warns.append(
+                f'{p.name}: 有价格容器 class 但整页容器里抽不出数字'
+                f' — 疑似 em dash 吃掉数字；若本就是无价容器（"Request a quote"）可忽略')
 
         meta = META_RE.search(text)
         jsonld = JSONLD_RE.search(text)
@@ -73,6 +109,11 @@ def main():
         if len(set(vals.values())) > 1:
             detail = '  '.join(f'{k}={v}' for k, v in vals.items())
             problems.append(f'{p.name}: 页面内价格不一致 — {detail}')
+
+    if warns:
+        print(f'价格一致性 WARN — {len(warns)} 条盲区提示（不拦提交，人工确认）')
+        for x in warns:
+            print(f'  WARN {x}')
 
     if problems:
         print(f'价格一致性 FAIL — 检查 {checked} 页，{len(problems)} 处问题')
