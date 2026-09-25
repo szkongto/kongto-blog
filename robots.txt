@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Crawl-delay: 2
+Disallow: /cdn-cgi/l/email-protection
 Sitemap: https://cncdisplay.com/sitemap.xml
 Sitemap: https://cncdisplay.com/sitemap-images.xml
 
@@ -11,6 +12,7 @@ Crawl-delay: 1
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+Disallow: /cdn-cgi/l/email-protection
 
 User-agent: Bingbot
 Allow: /
@@ -53,5 +55,3 @@ User-agent: Bytespider
 Disallow: /
 
 Content-Signal: search=yes,ai-train=yes
-
-Disallow: /cdn-cgi/

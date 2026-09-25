@@ -547,3 +547,8 @@
 /en/posts/faq_20260501_FANUC_0i%E7%BB%AF%E8%8D%A4%E7%B2%BA%E9%8F%84%E5%89%A7%E3%81%9A%E5%AF%AE%E5%82%9A%E7%88%B6%E9%8E%BA%E6%8E%93%E7%85%A1%E6%BE%B6%D1%83%E5%8F%8F.html /posts/FANUC_0i_System_Display_Abnormality_Troubleshooting.html 301
 # 2026-09-02 GSC 404修复: 0093 LCD旧文章 焅发错字URL → 0093权威 Complete_Guide
 /posts/article_20260501_FANUC_A61L_0001_0093_LCD液晶显示器_让老旧CNC数控系统焅发新活力.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
+# 2026-09-26 GSC 404修复: Custom_Industrial_Display_Series 首字母大写变体(GitHub Pages 区分大小写, 实际文件为小写) → 小写孪生
+/posts/Custom_Industrial_Display_Series.html /posts/custom_industrial_display_series.html 301
+/en/posts/Custom_Industrial_Display_Series.html /posts/custom_industrial_display_series.html 301
+# 2026-09-26 GSC 404修复: zh/workers 目录已移出仓库(522ff7e1, Pages path:'.' 永不发布), 该 URL 无文件可恢复 → zh 联系页
+/zh/workers/paypal-button-template.html /zh/contact.html 301

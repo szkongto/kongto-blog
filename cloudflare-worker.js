@@ -46,6 +46,7 @@ const REDIRECTS = {
   '/en/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf': '/docs/Kongto_CRT_LCD_Upgrade_Guide.pdf',
   '/en/docs/MDT-1283_CRT_to_LCD_V2.62.pdf': '/docs/MDT-1283_CRT_to_LCD_V2.62-EN.pdf',
   '/en/docs/index.html': '/docs/index.html',
+  '/en/posts/Custom_Industrial_Display_Series.html': '/posts/custom_industrial_display_series.html',
   '/en/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html': '/posts/article_20260508_KTV148_custom_industrial_display.html',
   '/en/posts/FANUC_A61L_0001_0095_LCD_CNC_Upgrade_Replacement.html': '/products/fanuc-a61l-0001-0095-lcd-upgrade.html',
   '/en/posts/article_20260501_CGA_EGA显示器改装为RGBHV工业显示器实战指南.html': '/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html',
@@ -156,6 +157,7 @@ const REDIRECTS = {
   '/mitsubishi-m70-m700-crt-lcd-upgrade-zh.html': '/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html',
   '/posts/%E9%9D%9E%E6%A0%87%E8%AE%A2%E5%88%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E7%B3%BB%E5%88%97.html': '/posts/custom_industrial_display_series.html',
   '/posts/Beijing_Zhongbo_FANUC_LCD_Upgrade_Press_Release.html': '/posts/press_release_20260501_fanuc_lcd_kongto_launch_cnc_display_upgrade_solution.html',
+  '/posts/Custom_Industrial_Display_Series.html': '/posts/custom_industrial_display_series.html',
   '/posts/Custom_Industrial_Display_Series.htmlarticle_20260508_KTV148_Custom_Industrial_Display.html': '/posts/article_20260508_KTV148_custom_industrial_display.html',
   '/posts/FANUC_A61L_0001_0074_LCD_CNC_Upgrade_Replacement.html': '/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html',
   '/posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html': '/posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html',
@@ -549,6 +551,7 @@ const REDIRECTS = {
   '/zh/products/okuma-osp-crt-lcd-upgrade.html': '/zh/products/okuma-osp5000-lcd-upgrade.html',
   '/zh/products/okuma-osp7000-crt-lcd-upgrade.html': '/products/okuma-osp7000-crt-lcd-upgrade.html',
   '/zh/products/toshiba-d15cm-lcd-upgrade.html': '/products/toshiba-d15cm-lcd-upgrade.html',
+  '/zh/workers/paypal-button-template.html': '/zh/contact.html',
 };
 
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
