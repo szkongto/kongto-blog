@@ -444,7 +444,7 @@
 /zh/posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html /posts/article_20260615_Mitsubishi_CRT_vs_LCD_Comparison.html 301
 /zh/posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html /posts/article_20260615_Mitsubishi_M70_M700_LCD_Upgrade_Guide.html 301
 /zh/posts/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html /posts/comparison_20260501_fanuc_crt_vs_lcd_display_repair_upgrade_comparison.html 301
-/zh/posts/comparison_20260501_video_converter_buying_guide.html /posts/comparison_20260501_video_converter_buying_guide.html 301
+/zh/posts/comparison_20260501_video_converter_buying_guide.html /zh/posts/Video_Signal_Converter_Buying_Guide.html 301
 /zh/posts/custom-industrial-display-series-zh.html /zh/posts/custom_industrial_display_series.html 301
 /zh/posts/fanuc-cnc-display-troubleshooting-decision-tree.html /posts/fanuc-cnc-display-troubleshooting-decision-tree.html 301
 /zh/posts/fanuc-display-compatibility-complete-guide.html /posts/fanuc-display-compatibility-complete-guide.html 301
@@ -558,3 +558,9 @@
 /hub/cnc-monitor-suppliers.html /oem-supplier.html 301
 /hub/aftermarket-cnc-display-manufacturer.html /oem-supplier.html 301
 /hub/buy-cnc-monitor-replacement.html /products/index.html 301
+
+# 2026-09-27 合并 4 个 92 天 0 展示的同题薄页（CGA/EGA/TTL/RGB to VGA 信号转换）
+/posts/ttl-to-vga-signal-converter-cnc.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
+/posts/cga-ega-to-vga-industrial-converter.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
+/posts/rgb-to-vga-industrial-converter-cnc.html /posts/Video_Signal_Converter_Buying_Guide.html 301
+/posts/comparison_20260501_video_converter_buying_guide.html /posts/Video_Signal_Converter_Buying_Guide.html 301
