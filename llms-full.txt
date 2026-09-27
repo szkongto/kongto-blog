@@ -2,7 +2,7 @@
 
 ## Kongto Technology (Jiangtu Technology)
 Industrial Video Display Solutions - CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays
-Total indexed pages: 392
+Total indexed pages: 388
 
 ## Main Pages (24)
 - [CNC Monitor & LCD Screen Replacement | CRT to LCD](https://cncdisplay.com/)
@@ -415,9 +415,3 @@ Total indexed pages: 392
 ## Knowledge Base (中文) (2)
 - [CNC显示器故障排查指南 | CRT黑屏/闪烁/无显示 | 江图科技](https://cncdisplay.com/zh/knowledge/cnc-monitor-troubleshooting-guide.html)
 - [CRT与LCD数控显示器完整对比指南 | CRT替换LCD | 江图科技](https://cncdisplay.com/zh/knowledge/crt-vs-lcd-cnc-display-comparison.html)
-
-## Hub Pages (4)
-- [Aftermarket CNC Display Manufacturer | CRT to LCD | Kongto](https://cncdisplay.com/hub/aftermarket-cnc-display-manufacturer.html)
-- [Buy CNC Monitor Replacement | CRT to LCD Upgrade | Kongto](https://cncdisplay.com/hub/buy-cnc-monitor-replacement.html)
-- [CNC Monitor Suppliers USA | Industrial LCD Replacement | Kongto](https://cncdisplay.com/hub/cnc-monitor-suppliers.html)
-- [Wholesale Industrial LCD Monitors | CNC Display OEM | Kongto](https://cncdisplay.com/hub/wholesale-industrial-lcd-monitors.html)

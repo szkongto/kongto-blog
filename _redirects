@@ -553,3 +553,8 @@
 /en/posts/Custom_Industrial_Display_Series.html /posts/custom_industrial_display_series.html 301
 # 2026-09-26 GSC 404修复: zh/workers 目录已移出仓库(522ff7e1, Pages path:'.' 永不发布), 该 URL 无文件可恢复 → zh 联系页
 /zh/workers/paypal-button-template.html /zh/contact.html 301
+# 2026-09-27 清理批量生成的孤儿 hub 页(782dd39c, 站内零引用/92天零展示) -> 同题已有落地页
+/hub/wholesale-industrial-lcd-monitors.html /wholesale.html 301
+/hub/cnc-monitor-suppliers.html /oem-supplier.html 301
+/hub/aftermarket-cnc-display-manufacturer.html /oem-supplier.html 301
+/hub/buy-cnc-monitor-replacement.html /products/index.html 301
