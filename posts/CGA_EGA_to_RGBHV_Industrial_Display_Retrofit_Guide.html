@@ -5661,6 +5661,58 @@ Pins 14-15: +12V / +5V (do not connect &mdash; for original CRT only)</div>
 
 
 
+<h2>What is TTL RGB?</h2>
+<p>TTL RGB is a <strong>digital</strong> video signaling standard. Unlike VGA which uses <strong>analog</strong> 0-0.7V signals, TTL RGB operates at <strong>0-5V logic levels</strong> (TTL = Transistor-Transistor Logic). Key differences from VGA:</p>
+<table class="tbl-full-14">
+<tr><th class="cell-p10">Parameter</th><th class="cell-p10">TTL RGB (CNC CRT)</th><th class="cell-p10">VGA (Standard Monitor)</th></tr>
+<tr><td class="cell-ddd">Video Signal Level</td><td class="cell-ddd">0-5V Digital (On/Off per channel)</td><td class="cell-ddd">0-0.7V Analog (Continuous)</td></tr>
+<tr><td class="cell-ddd">Number of Colors</td><td class="cell-ddd">8 (3-bit: 2³ R/G/B)</td><td class="cell-ddd">16.7M (8-bit per channel)</td></tr>
+<tr><td class="cell-ddd">Sync Signal</td><td class="cell-ddd">Separate H & V (TTL 0-5V)</td><td class="cell-ddd">Separate or Composite H/V</td></tr>
+<tr><td class="cell-ddd">Horizontal Freq</td><td class="cell-ddd">15.75 kHz (typically)</td><td class="cell-ddd">31-80 kHz</td></tr>
+<tr><td class="cell-ddd">Connector</td><td class="cell-ddd">Varies by brand (see below)</td><td class="cell-ddd">DE-15 (HD-15)</td></tr>
+</table>
+<div class="note">
+<strong>⚠ Important:</strong> TTL RGB operates at 5V — connecting it directly to a standard VGA monitor input (which expects 0.7V) can damage the monitor's input circuits. Use a TTL-to-VGA converter or a dedicated CNC LCD replacement module.
+</div>
+
+<h2>Mazak — 3-Row 15-Pin Connector</h2>
+<p>Mazak Mazatrol controls (M-2, T-2, M-32, T-32, T-Plus, M-Plus, Fusion 640) drive the display through a <strong>3-row 15-pin connector</strong>. Mazak built the CNC, not the monitor — the CRTs came from Japanese display OEMs, so one 15-pin housing covers several CRT part numbers with a different number of pins actually wired.</p>
+<h3>Mazak 3-row 15-pin family — pins in use by CRT model</h3>
+<table class="pin-table">
+<tr><th class="cell-p10">CRT model</th><th class="cell-p10">Original display</th><th class="cell-p10">Interface</th><th class="cell-p10">Pins in use</th></tr>
+<tr><td class="cell-ddd">CD1472-D1M</td><td class="cell-ddd">14" color CRT</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">10</td></tr>
+<tr><td class="cell-ddd">C5470NS</td><td class="cell-ddd">14" color CRT</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">10</td></tr>
+<tr><td class="cell-ddd">DR5614</td><td class="cell-ddd">14" color CRT</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">10</td></tr>
+<tr><td class="cell-ddd">AIQA8DSP40</td><td class="cell-ddd">14" color CRT (Sharp)</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">10</td></tr>
+<tr><td class="cell-ddd">MDT1283B</td><td class="cell-ddd">12" monochrome amber CRT</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">6</td></tr>
+<tr><td class="cell-ddd">TR-120S9C</td><td class="cell-ddd">9" monochrome CRT</td><td class="cell-ddd">3-row 15-pin</td><td class="cell-ddd">Not published</td></tr>
+</table>
+<p>We publish the connector type and the number of pins in use. Mazak per-pin signal assignment is model-specific, so we do not print a guessed pin map — send a clear photo of the display label and connector to <strong>info@cncdisplay.com</strong> and our engineers return the pin-by-pin map for your exact unit within 24 hours.</p>
+<p><strong>Connector cross-reference:</strong> the service documentation for the 12-inch Mazak monitor (MDT1283B / HM-12PDB, Dynamic Displays QES1510-050) lists the video input as <strong>Molex 15-pin #03-06-2151</strong> with a Molex 3-pin #19-09-2037 power inlet. The MDT1283B-1A itself carried several OEM labels — Totoku, Toshiba and Omni Vision LP1224FN9-LA.</p>
+<p><strong>TR-120S9C:</strong> we have no measured pin count for this model, so the table leaves it blank. Its 9-inch monochrome tube and the shared 15-pin housing make it more likely to match the 6-pin MDT1283B than the 10-pin 14-inch units — that is an inference, not a measurement, and we will correct the table once one is on the bench.</p>
+<h3>Adjusting the replacement display (OSD)</h3>
+<p>The original CRTs had no user controls — brightness, size and centering were set with internal potentiometers by a technician. Every Kongto LCD module for this family replaces that with an on-screen display (OSD) menu: <strong>brightness, contrast, horizontal and vertical position</strong> and auto-tune are adjustable from the module. No Mazatrol parameter is touched.</p>
+<p><strong>Compatible Kongto LCD modules:</strong> <a href="/products/mazak-cd1472-lcd-upgrade.html">CD1472-D1M</a>, <a href="/products/mazak-c5470ns-lcd-upgrade.html">C5470NS</a>, <a href="/products/mazak-dr5614-lcd-upgrade.html">DR5614</a>, <a href="/products/mazak-aiqa8dsp40-lcd-upgrade.html">AIQA8DSP40</a>, <a href="/products/mazak-mdt1283b-lcd-upgrade.html">MDT1283B</a></p>
+
+<h2>TTL to VGA Conversion</h2>
+<p>If you need to convert TTL RGB to standard VGA (e.g., for testing or using a standard monitor), the signal path requires:</p>
+<ol style="margin:1rem 0;padding-left:1.5rem;">
+<li><strong>Level shifting:</strong> TTL 5V signals must be attenuated to VGA 0.7V using resistor dividers or a dedicated converter IC</li>
+<li><strong>Sync adaptation:</strong> TTL sync (15.75 kHz) may need frequency doubling for modern VGA monitors that expect 31 kHz+</li>
+<li><strong>Connector conversion:</strong> Honda MR-20M or 2-row 16-pin to DE-15 (HD-15 VGA connector)</li>
+</ol>
+<p>Kongto offers <strong>drop-in LCD replacement modules</strong> that bypass the need for conversion entirely — they accept TTL RGB directly and display at 800x600 or 1024x768 resolution. No level shifting or sync conversion needed.</p>
+
+<h2>Troubleshooting Common Signal Issues</h2>
+<table class="tbl-full-14">
+<tr><th class="cell-p10">Symptom</th><th class="cell-p10">Probable Cause</th><th class="cell-p10">Solution</th></tr>
+<tr><td class="cell-ddd">No display (black screen)</td><td class="cell-ddd">Power supply failure, CRT dead, or signal cable disconnected</td><td class="cell-ddd">Verify the supply voltage at the connector pins. Check cable continuity. Replace CRT with LCD module.</td></tr>
+<tr><td class="cell-ddd">Rolling image (no sync)</td><td class="cell-ddd">Missing or incorrect H/V sync signal</td><td class="cell-ddd">Check pins 4 (HSync) and 5 (VSync) continuity. Verify cable pinout matches display spec.</td></tr>
+<tr><td class="cell-ddd">Wrong colors or missing color</td><td class="cell-ddd">One or more R/G/B channels disconnected</td><td class="cell-ddd">Check pins 1-3 (R/G/B) continuity. On monochrome CRTs, only Green channel is used.</td></tr>
+<tr><td class="cell-ddd">Dim display</td><td class="cell-ddd">CRT tube aging, flyback transformer weak</td><td class="cell-ddd">Replace CRT with LCD module — brightness increases from ~200 to 400 cd/m².</td></tr>
+<tr><td class="cell-ddd">Flickering / jitter</td><td class="cell-ddd">Power supply ripple, loose connections, CRT aging</td><td class="cell-ddd">Check supply voltage stability (should be ±5%). Replace CRT with flicker-free LCD.</td></tr>
+</table>
+
 <div class="share-buttons">
 
 
