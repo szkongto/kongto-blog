@@ -46,7 +46,7 @@
 
 
 
-    <meta name="description" content="CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.">
+    <meta name="description" content="CNC TTL RGB signal pinout reference for FANUC, Mitsubishi, Siemens, Mazak CRT displays. Wiring diagrams, signal voltage specs, and CRT-to-LCD conversion guide.">
 
 
 
@@ -110,7 +110,7 @@
 
 
 
-    <meta property="og:description" content="Complete pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens 2-row 16-pin wiring diagrams included.">
+    <meta property="og:description" content="Complete pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens 2-row 16-pin and Mazak 3-row 15-pin wiring diagrams included.">
 
 
 
@@ -486,7 +486,7 @@
 
 
 
-  "headline": "CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference",
+  "headline": "CNC TTL RGB Signal Pinout Guide — FANUC, Mitsubishi, Siemens, Mazak CRT to LCD Wiring Reference",
 
 
 
@@ -494,7 +494,7 @@
 
 
 
-  "description": "Complete TTL RGB pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens 2-row 16-pin pin mappings with signal voltage specs.",
+  "description": "Complete TTL RGB pinout reference for CNC CRT displays. Honda MR-20M, Mitsubishi 20/26-pin, Siemens 2-row 16-pin and Mazak 3-row 15-pin pin mappings with signal voltage specs.",
 
 
 
@@ -599,6 +599,7 @@
 
 
     {"@type":"Question","name":"What connector does FANUC use for CRT displays?","acceptedAnswer":{"@type":"Answer","text":"FANUC CRT displays use the Honda MR-20M 20-pin round connector. Pins 1-3 carry Red/Green/Blue video, pins 4-5 carry H/V sync, and pin 6 is chassis ground. Power is provided separately via DC 24V on pins 8-9 and 18-19."}},
+    {"@type":"Question","name":"What connector do Mazak CRT displays use?","acceptedAnswer":{"@type":"Answer","text":"Mazak Mazatrol displays use a 3-row 15-pin connector. The 14-inch color models (CD1472-D1M, C5470NS, DR5614, AIQA8DSP40) use 10 of the 15 pins; the 12-inch monochrome MDT1283B uses 6. Per-pin numbering is model-specific, so we publish the connector and the pin count instead of an unverified pin map — send a photo of the display label and we confirm within 24 hours. Every Kongto module is drop-in on the original connector and has an on-screen display (OSD) menu for brightness, contrast and image position."}},
 
 
 
@@ -741,7 +742,7 @@
 
 
 
-        <h1>CNC TTL RGB Signal Pinout Guide<br><span style="font-size:1.1rem;font-weight:400;color:#6b7280;">FANUC, Mitsubishi, Siemens CRT to LCD Wiring Reference</span></h1>
+        <h1>CNC TTL RGB Signal Pinout Guide<br><span style="font-size:1.1rem;font-weight:400;color:#6b7280;">FANUC, Mitsubishi, Siemens, Mazak CRT to LCD Wiring Reference</span></h1>
 
 
 
@@ -765,7 +766,7 @@
 
 
 
-        <p>When replacing an aging CRT display on a CNC machine with a modern LCD module, understanding the <strong>TTL RGB signal pinout</strong> is critical. Each CNC manufacturer uses a different connector and signal arrangement. This guide provides the complete pin mapping for the three most common protocols: <strong>FANUC Honda MR-20M</strong>, <strong>Mitsubishi 20/26-pin</strong>, and <strong>Siemens 2-row 16-pin</strong>.</p>
+        <p>When replacing an aging CRT display on a CNC machine with a modern LCD module, understanding the <strong>TTL RGB signal pinout</strong> is critical. Each CNC manufacturer uses a different connector and signal arrangement. This guide provides the complete pin mapping for the four most common protocols: <strong>FANUC Honda MR-20M</strong>, <strong>Mitsubishi 20/26-pin</strong>, <strong>Siemens 2-row 16-pin</strong>, and <strong>Mazak 3-row 15-pin</strong>.</p>
 
 
 
@@ -1261,7 +1262,7 @@ Pin  Signal     Color     Notes
 
 
 
-        <p>Mitsubishi CNC displays (MDT962B, BM09DF, MDT1283B, FCUA-CT100) typically use a <strong>20-pin or 26-pin rectangular connector</strong>. The pinout varies slightly by model generation (M64 vs M500 vs M700).</p>
+        <p>Mitsubishi CNC displays (MDT962B, BM09DF, FCUA-CT100) typically use a <strong>20-pin or 26-pin rectangular connector</strong>. The pinout varies slightly by model generation (M64 vs M500 vs M700).</p>
 
 
 
@@ -1461,7 +1462,144 @@ Pin  Signal     Color     Notes
 
 
 
-        <h2>4. Siemens — 2-Row 16-Pin Connector</h2>
+        <h2>4. Mazak — 3-Row 15-Pin Connector</h2>
+
+
+
+
+
+
+
+        <p>Mazak Mazatrol controls (M-2, T-2, M-32, T-32, T-Plus, M-Plus, Fusion 640) drive the display through a <strong>3-row 15-pin connector</strong>. Mazak built the CNC, not the monitor — the CRTs came from Japanese display OEMs, so one 15-pin housing covers several CRT part numbers with a different number of pins actually wired.</p>
+
+
+
+
+
+
+
+        <h3>Mazak 3-row 15-pin family — pins in use by CRT model</h3>
+
+
+
+
+
+
+
+        <table class="pin-table">
+
+
+
+
+
+
+
+            <tr><th>CRT model</th><th>Original display</th><th>Interface</th><th>Pins in use</th></tr>
+
+
+
+
+
+
+
+            <tr><td>CD1472-D1M</td><td>14" color CRT</td><td>3-row 15-pin</td><td>10</td></tr>
+
+
+
+
+
+
+
+            <tr><td>C5470NS</td><td>14" color CRT</td><td>3-row 15-pin</td><td>10</td></tr>
+
+
+
+
+
+
+
+            <tr><td>DR5614</td><td>14" color CRT</td><td>3-row 15-pin</td><td>10</td></tr>
+
+
+
+
+
+
+
+            <tr><td>AIQA8DSP40</td><td>14" color CRT (Sharp)</td><td>3-row 15-pin</td><td>10</td></tr>
+
+
+
+
+
+
+
+            <tr><td>MDT1283B</td><td>12" monochrome amber CRT</td><td>3-row 15-pin</td><td>6</td></tr>
+
+
+
+
+
+
+
+            <tr><td>TR-120S9C</td><td>9" monochrome CRT</td><td>3-row 15-pin</td><td>Not published</td></tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+        <p>We publish the connector type and the number of pins in use. Mazak per-pin signal assignment is model-specific, so we do not print a guessed pin map — send a clear photo of the display label and connector to <strong>info@cncdisplay.com</strong> and our engineers return the pin-by-pin map for your exact unit within 24 hours.</p>
+
+
+
+
+
+
+
+        <p><strong>Connector cross-reference:</strong> the service documentation for the 12-inch Mazak monitor (MDT1283B / HM-12PDB, Dynamic Displays QES1510-050) lists the video input as <strong>Molex 15-pin #03-06-2151</strong> with a Molex 3-pin #19-09-2037 power inlet. The MDT1283B-1A itself carried several OEM labels — Totoku, Toshiba and Omni Vision LP1224FN9-LA.</p>
+
+
+
+
+
+
+
+        <p><strong>TR-120S9C:</strong> we have no measured pin count for this model, so the table leaves it blank. Its 9-inch monochrome tube and the shared 15-pin housing make it more likely to match the 6-pin MDT1283B than the 10-pin 14-inch units — that is an inference, not a measurement, and we will correct the table once one is on the bench.</p>
+
+
+
+
+
+
+
+        <h3>Adjusting the replacement display (OSD)</h3>
+
+
+
+
+
+
+
+        <p>The original CRTs had no user controls — brightness, size and centering were set with internal potentiometers by a technician. Every Kongto LCD module for this family replaces that with an on-screen display (OSD) menu: <strong>brightness, contrast, horizontal and vertical position</strong> and auto-tune are adjustable from the module. No Mazatrol parameter is touched.</p>
+
+
+
+
+
+
+
+        <p><strong>Compatible Kongto LCD modules:</strong> <a href="/products/mazak-cd1472-lcd-upgrade.html">CD1472-D1M</a>, <a href="/products/mazak-c5470ns-lcd-upgrade.html">C5470NS</a>, <a href="/products/mazak-dr5614-lcd-upgrade.html">DR5614</a>, <a href="/products/mazak-aiqa8dsp40-lcd-upgrade.html">AIQA8DSP40</a>, <a href="/products/mazak-mdt1283b-lcd-upgrade.html">MDT1283B</a></p>
+        <h2>5. Siemens — 2-Row 16-Pin Connector</h2>
 
 
 
@@ -1693,7 +1831,7 @@ Pin  Signal     Color     Notes
 
 
 
-        <h2>5. TTL to VGA Conversion</h2>
+        <h2>6. TTL to VGA Conversion</h2>
 
 
 
@@ -1765,7 +1903,7 @@ Pin  Signal     Color     Notes
 
 
 
-        <h2>6. Troubleshooting Common Signal Issues</h2>
+        <h2>7. Troubleshooting Common Signal Issues</h2>
 
 
 
@@ -1845,7 +1983,7 @@ Pin  Signal     Color     Notes
 
 
 
-        <h2>7. Quick Reference: Pinout Comparison</h2>
+        <h2>8. Quick Reference: Pinout Comparison</h2>
 
 
 
@@ -1926,6 +2064,7 @@ Pin  Signal     Color     Notes
 
 
         </table>
+        <p><strong>Mazak is not in the table above</strong> — Mazak Mazatrol displays use the separate 3-row 15-pin connector covered in section 4. The 14-inch color models (CD1472-D1M, C5470NS, DR5614, AIQA8DSP40) use 10 of the 15 pins and the 12-inch monochrome MDT1283B uses 6. Pin numbering within that housing is model-specific, so we publish the pin counts rather than an unverified per-pin map.</p>
 
 
 
@@ -1942,6 +2081,31 @@ Pin  Signal     Color     Notes
 
 
         <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+
+
+
+
+
+
+
+            <div class="faq-q">Q: What connector do Mazak CRT displays use?</div>
+
+
+
+
+
+
+
+            <div class="faq-a">A: A 3-row 15-pin connector (section 4). The 14-inch color models — CD1472-D1M, C5470NS, DR5614 and AIQA8DSP40 — use 10 of the 15 pins; the 12-inch monochrome MDT1283B uses 6. Per-pin numbering is model-specific, so we publish the pin count rather than guess a map: send a photo of your display label to info@cncdisplay.com and we confirm within 24 hours. Every Kongto module plugs into the original connector and carries an OSD menu for brightness, contrast and image position.</div>
+
+
+
+
+
+
+
+        </div>
 
 
 
