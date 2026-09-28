@@ -12,7 +12,7 @@ This is a technical reference for anyone maintaining or upgrading legacy CNC mac
 |-------|-----------|-------|-------|
 | FANUC | Honda MR-20M (20-pin) | DC 24V | Most common industrial CNC connector |
 | Mitsubishi | 20-pin or 26-pin | DC 24V | M64/E60/M500/M520 systems |
-| Mazak | 26-pin | DC 24V | T-32/M-32/T-Plus/M-Plus |
+| Mazak | 3-row 15-pin (10 pins used) | AC 100-240V | T-32/M-32/T-Plus/M-Plus |
 | Siemens | DB-25 (25-pin) | **AC 110V** | Important: AC, not DC! |
 | Okuma | 14-pin or 20-pin | DC 24V | OSP 5000/5020/7000 |
 | Haas | 9-pin D-Sub | DC 12V | VF/ST/SL series |

@@ -260,12 +260,12 @@
   "url": "/en/quote.html"
  },
  {
-  "brand": "Mitsubishi",
+  "brand": "Totoku",
   "crt_model": "MDT1283B",
   "size_type": "12\" Monochrome CRT",
-  "cnc_system": "Mitsubishi M64/M3/M300",
+  "cnc_system": "Mazak Mazatrol M32/T32 (OEM display)",
   "lcd_replacement": "Kongto 10.4\" TFT-LCD",
-  "resolution": "1024x768",
+  "resolution": "800x600",
   "status": "Available",
   "url": "/products/mazak-mdt1283b-lcd-upgrade.html"
  },

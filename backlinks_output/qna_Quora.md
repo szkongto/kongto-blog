@@ -10,14 +10,15 @@ Four critical things to verify before ordering:
 **1. Connector Type** (this is the most common mistake)
 - FANUC: Honda MR-20M (20-pin)
 - Mitsubishi: 20-pin or 26-pin
-- Mazak: 26-pin
+- Mazak: 3-row 15-pin (10 pins used)
 - Siemens: DB-25 (25-pin D-Sub)
 - Okuma: 14-pin or 20-pin
 - Haas: 9-pin D-Sub
 → These are NOT interchangeable. Check your actual connector.
 
 **2. Power Supply Voltage**
-- FANUC/Mitsubishi/Mazak/Okuma: DC24V
+- FANUC/Mitsubishi/Okuma: DC24V
+- Mazak: AC100-240V
 - Siemens: AC110V ⚠️ (very important — DC LCD on AC machine = instant damage)
 - Haas early models: DC12V
 

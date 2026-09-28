@@ -17,7 +17,7 @@ I've now retrofitted 3 machines from CRT to LCD — a FANUC 18T, a Mitsubishi M6
 3. The connector type matters more than the brand name:
    - FANUC = Honda MR-20M (20-pin)
    - Mitsubishi = 20-pin or 26-pin
-   - Mazak = 26-pin
+   - Mazak = 3-row 15-pin (10 pins used)
    - Siemens = DB-25, and uses AC110V (don't mix with DC!)
 
 4. Consumer LCD panels WILL die in a shop environment. Vibration, oil mist, temperature swings. Industrial-grade Sharp/AUO panels only.

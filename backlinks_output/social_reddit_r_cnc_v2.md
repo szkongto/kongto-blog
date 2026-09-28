@@ -11,7 +11,7 @@ Sharing because this confused me at first — different CNC brands use completel
 
 - FANUC: Honda MR-20M (20-pin), DC24V
 - Mitsubishi: 20-pin or 26-pin, DC24V
-- Mazak: 26-pin, DC24V
+- Mazak: 3-row 15-pin (10 pins used), AC100-240V
 - Siemens SINUMERIK: DB-25 (25-pin D-Sub), AC110V — IMPORTANT: AC, not DC!
 - Okuma: 14-pin or 20-pin, DC24V
 - Haas early models: 9-pin D-Sub, DC12V

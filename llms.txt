@@ -27,7 +27,7 @@ rewiring, no machine modification.
 
 ## CNC Brands Covered
 - FANUC: A61L series (0093, 0094, 0092, 0096, 0097, 0090, 0074, 0086, 0072, 0076, 0095), 0-M, 0-T, 0i, 16i, 18i, 21i, OM-D, A02B series
-- Mitsubishi: MDT962B, BM09DF, FCUA-CT100, MDT925PS, MDT947B, C-3470, C-5470, MDT-1283B
+- Mitsubishi: MDT962B, BM09DF, FCUA-CT100, MDT925PS, MDT947B, C-3470, C-5470
 - Siemens: SINUMERIK 6FC5103, 6FC3988, 6FC3998, 6FC5203, SM0901, 840D, 810D, 850/880
 - Mazak: Mazatrol M-32, T-32, CD1472, MDT1283B, C5470NS, DR5614, AIQA8DSP40
 - Okuma: OSP5000, OSP5020, OSP7000, OSP500L-G
@@ -55,7 +55,7 @@ machine controls see an unchanged video signal.
   https://cncdisplay.com/products/mitsubishi-mdt962b-lcd-upgrade.html
 - Mitsubishi MDT925PS: 9" → 8" TFT-LCD, 800x600, AC 100-240V.
   https://cncdisplay.com/products/mitsubishi-mdt925ps-lcd-upgrade.html
-- Mitsubishi MDT-1283B / Mazak MDT1283B: 12" mono CRT → 10.4" TFT-LCD, 800x600, 400 cd/m²,
+- Totoku MDT1283B / Mazak MDT1283B: 12" mono CRT → 10.4" TFT-LCD, 800x600, 400 cd/m²,
   AC 100-240V, Mazak 3-row 15-pin. https://cncdisplay.com/products/mazak-mdt1283b-lcd-upgrade.html
 - Siemens SM0901 (579417-TA): 9" mono CRT → 8" TFT-LCD, 800x600, 350-450 cd/m²,
   power via signal cable, Siemens 2-row 16-pin, TTL. https://cncdisplay.com/products/siemens-sm0901-lcd-upgrade.html

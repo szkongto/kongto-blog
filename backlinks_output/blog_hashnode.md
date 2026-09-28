@@ -36,7 +36,7 @@ Modern LCD retrofit modules contain:
 |-------|-----------|---------------|-------|
 | FANUC | Honda MR-20M (20-pin) | Composite video | DC24V |
 | Mitsubishi | 20-pin / 26-pin | Composite video | DC24V |
-| Mazak | 26-pin | Composite video | DC24V |
+| Mazak | 3-row 15-pin (10 pins used) | Composite video | AC100-240V |
 | Siemens | DB-25 | VGA-like analog | AC110V |
 | Okuma | 14-pin / 20-pin | Composite video | DC24V |
 | Haas | 9-pin D-Sub | VGA-like analog | DC12V |

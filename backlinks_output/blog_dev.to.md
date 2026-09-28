@@ -20,8 +20,8 @@ There's a much better way.
 
 Modern LCD retrofit kits are designed to be literal drop-in replacements:
 
-- **Same connector** — uses the original Honda MR-20M (FANUC), 20/26-pin (Mitsubishi/Mazak), DB-25 (Siemens)
-- **Same power** — DC24V for Japanese CNCs, AC110V for Siemens
+- **Same connector** — uses the original Honda MR-20M (FANUC), 20/26-pin (Mitsubishi), 3-row 15-pin (Mazak), DB-25 (Siemens)
+- **Same power** — matches the original CRT supply (DC24V, AC100-240V or AC110V depending on model)
 - **Same mounting** — identical bolt pattern to original CRT
 - **No parameter changes** — the CNC controller receives the exact same signal
 - **10 minute installation** — power off, 4 screws, 1 connector, power on
@@ -65,7 +65,7 @@ CRT displays were discontinued globally over 15 years ago. "Repair" shops use co
 ## What to Watch For
 
 1. **Connector type** — Different brands use different connectors. Check before ordering.
-2. **Power supply** — Siemens uses AC110V. Everything else is DC24V. Don't mix them up.
+2. **Power supply** — Siemens uses AC110V and the Mazak / 14-inch modules use AC100-240V; several 9-inch models use DC24V. Don't mix them up.
 3. **Panel quality** — Industrial-grade (Sharp/AUO) panels only. Consumer panels die quickly in shop environments.
 4. **Warranty** — Look for at least 1-year warranty. Good suppliers offer 2 years.
 
