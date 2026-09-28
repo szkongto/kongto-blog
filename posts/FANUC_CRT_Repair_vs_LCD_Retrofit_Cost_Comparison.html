@@ -6787,6 +6787,56 @@
 
 
 
+<h2>Cost Comparison: Repair vs Replace</h2>
+<p><strong>Short-term view:</strong> A single CRT repair ($80-$200) may appear cheaper than an LCD upgrade ($155-$399). However, 50-70% of repaired CRTs fail again within 12-18 months due to the age of remaining components.</p>
+<p><strong>3-year cost projection:</strong></p>
+<ul>
+<li><strong>CRT repair route</strong>: $200 (first repair) + $200 (second repair, 70% probability) + $400 (final tube replacement when parts become unavailable) = ~$800-$900 over 3 years</li>
+<li><strong>LCD upgrade route</strong>: $155-$399 (one-time purchase with 2-year warranty) = <strong>$155-$399 total over 3+ years</strong> — no ongoing maintenance</li>
+</ul>
+
+<h2>Other Factors to Consider</h2>
+<ul>
+<li><strong>Image quality</strong>: LCD provides 800×600+ resolution vs 640×400 for CRTs, with 350-450 cd/m² brightness and no geometric distortion</li>
+<li><strong>Power consumption</strong>: LCD uses 70% less power than CRT — savings of $50-$100/year in continuous operation</li>
+<li><strong>Parts availability</strong>: CRT components (flyback transformers, CRT tubes) are increasingly hard to find. LCD parts are readily available globally</li>
+<li><strong>Installation</strong>: LCD upgrade takes 10-15 minutes, no CNC parameter changes needed. Repairs require specialized CRT technician knowledge</li>
+</ul>
+
+<h2>Case 1: FANUC 0-TC, 4 Repairs in 18 Months</h2>
+<table class="tbl-w100">
+<tr><th class="cell-ccc">Timeline</th><th class="cell-ccc">Fault</th><th class="cell-ccc">Cost</th><th class="cell-ccc">Downtime</th></tr>
+<tr><td class="cell-ccc">Month 0</td><td class="cell-ccc">Flyback fail, black screen</td><td class="cell-ccc">$400</td><td class="cell-ccc">3 days</td></tr>
+<tr><td class="cell-ccc">Month 8</td><td class="cell-ccc">Flickering</td><td class="cell-ccc">$350</td><td class="cell-ccc">2 days</td></tr>
+<tr><td class="cell-ccc">Month 14</td><td class="cell-ccc">Dim display</td><td class="cell-ccc">$600</td><td class="cell-ccc">4 days</td></tr>
+<tr><td class="cell-ccc">Month 18</td><td class="cell-ccc">Black screen &rarr; LCD upgrade</td><td class="cell-ccc">$250</td><td class="cell-ccc">30 min</td></tr>
+</table>
+<p><strong>18-month total: $1,850 + 9 days downtime (~$5,400). LCD: $250, zero subsequent repairs.</strong></p>
+
+<h2>Brand Cost Quick Reference</h2>
+<table class="tbl-w100">
+<tr><th class="cell-ccc">Model</th><th class="cell-ccc">OEM CRT</th><th class="cell-ccc">LCD Retrofit</th><th class="cell-ccc">Savings</th></tr>
+<tr><td class="cell-ccc">FANUC A61L-0001-0093</td><td class="cell-ccc">$155-1,500</td><td class="cell-ccc">$155-299</td><td class="cell-ccc">~77%</td></tr>
+<tr><td class="cell-ccc">Mitsubishi MDT962B</td><td class="cell-ccc">$175-1,200</td><td class="cell-ccc">$175-299</td><td class="cell-ccc">~70%</td></tr>
+<tr><td class="cell-ccc">Siemens 840D 6FC3988</td><td class="cell-ccc">€800-1,500</td><td class="cell-ccc">$299-500</td><td class="cell-ccc">~70%</td></tr>
+</table>
+
+<h2>Breaking Down the Real Costs</h2>
+<p>When a CNC CRT fails, shop managers face three options: repair, source a used OEM CRT, or upgrade to LCD. Each path has very different cost profiles.</p>
+<table class="tbl-full">
+<thead><tr class="bg-navy"><th class="cell-dark">Option</th><th class="cell-dark">Upfront Cost</th><th class="cell-dark">5-Year Cost</th><th class="cell-dark">Downtime</th></tr></thead>
+<tbody>
+<tr><td class="cell-ddd">CRT repair</td><td class="cell-ddd">$200-600</td><td class="cell-ddd">$1,000-3,000</td><td class="cell-ddd">3-7 days</td></tr>
+<tr class="bg-mist"><td class="cell-ddd">Used OEM CRT</td><td class="cell-ddd">$500-1,500</td><td class="cell-ddd">$500-1,500</td><td class="cell-ddd">1-2 weeks</td></tr>
+<tr><td class="cell-ddd">LCD upgrade</td><td class="cell-ddd">$155-550</td><td class="cell-ddd">$155-550</td><td class="cell-ddd">15-30 min</td></tr>
+</tbody>
+</table>
+<p>The LCD upgrade pays for itself the moment it avoids the first CRT repair. Each repair cycle costs more in downtime than the repair itself.</p>
+<h3 style="color:#1a1a2e;">Hidden Cost: Dim-Screen Operator Errors</h3>
+<p>A dim CRT forces operators to lean in and guess at readouts. A single misread tool offset can scrap a $4,000 workpiece. Shops that have switched to LCD report zero "I couldn't read the screen" errors.</p>
+</body>
+</html>
+
 <div class="share-buttons">
 
 
