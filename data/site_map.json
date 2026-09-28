@@ -494,7 +494,6 @@
    "zh/products/flickering-screen.html",
    "zh/products/image-retention.html",
    "zh/products/index.html",
-   "zh/products/mitsubishi-mdt925ps-lcd-upgrade.html",
    "zh/products/no-display.html",
    "zh/products/toshiba-d9mm-11a-lcd-upgrade.html"
   ],
@@ -799,6 +798,7 @@
    "products/index.html",
    "products/no-display.html",
    "products/siemens-6fc3988-7fa20-lcd-upgrade.html",
+   "products/siemens-sm0901-579417-ta-lcd-upgrade.html",
    "products/siemens-sm0901-lcd-upgrade.html",
    "products/siemens-sm1200-lcd-upgrade.html",
    "seo_reports/audit_report_2026-08-09.html",
@@ -859,6 +859,7 @@
    "posts/index.html",
    "posts/siemens-810t-820t-crt-lcd-upgrade-guide.html",
    "posts/siemens-sinumerik-crt-to-lcd-upgrade-guide.html",
+   "products/siemens-sm0901-579417-ta-lcd-upgrade.html",
    "zh/posts/siemens-810t-820t-crt-lcd-upgrade-guide.html"
   ],
   "6FC5103": [
