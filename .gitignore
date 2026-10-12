@@ -38,3 +38,8 @@ en_bak/
 
 # Cron 自动数据（pre-commit hook git add -A 会混入）
 backlinks_daily/
+
+# 凭据：绝不进仓库。仓库根 = 站点根（GitHub Pages 上传 path: '.'），
+# 一旦被跟踪，等于在 GitHub 和 cncdisplay.com 上同时公开。
+auto_poster_config.json
+.mcp.json

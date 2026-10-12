@@ -50,8 +50,8 @@ User-agent: Amazonbot
 Allow: /
 User-agent: Applebot-Extended
 Allow: /
-
+# ByteDance / Doubao retrieval layer (豆包 / 抖音搜索 / 头条搜索)
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 Content-Signal: search=yes,ai-train=yes
