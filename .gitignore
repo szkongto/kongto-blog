@@ -46,3 +46,48 @@ auto_poster_config.json
 
 # 部署产物（由 scripts/build_site_artifact.py 生成）
 _site/
+
+# ==== 内部资料：只存本地硬盘，绝不进仓库 / 线上 ====
+# 原则：GitHub 与 cncdisplay.com 只放站点必需文件（站点内容 + CI 构建脚本）。
+# 以下为调查/策略/计划/审计/凭据/临时产物，线上不再出现，本地保留。
+.claude/
+.vscode/
+_archive/
+data/
+schema/
+patches/
+seo_reports/
+backlinks_output/
+screaming_frog_reports/
+cross_poster/
+scripts/ai_visibility/
+CLAUDE.md
+CLAUDE.md.original
+p1-3_rules.txt
+SAFETY-CHECKLIST.md
+SEO_OPTIMIZATION_REPORT_*.md
+seo_optimization_plan.md
+seo_audit_report.json
+company-info-template.md
+profile_readme.md
+keyword-tracking-template.csv
+live_scan_report.txt
+audit_*.txt
+cache-buster.md
+_model_corrections.json
+article_mapping.json
+test.txt
+name
+setup_scheduled_task.bat
+daily_backlinks.py
+netlify.toml
+_headers
+cloudflare-worker.js
+redirect_audit_report.html
+_backlinks_plan.md
+
+# 临时/草稿产物（勿提交）
+tmp_*
+_*.py
+*.out
+*.err

@@ -101,7 +101,9 @@ def main():
             'node_modules', 'backlinks_daily', 'backlinks_output',
             'seo_backup', '__pycache__', 'fonts', 'images',
             'output', '_archive_audit', '_templates', 'patches',
-            'screaming_frog_reports', 'en_bak'
+            'screaming_frog_reports', 'en_bak',
+            # 内部目录：不进站内搜索索引（否则生成指向非发布路径的死条目）
+            'seo_reports', 'schema', 'data', 'cross_poster', '_archive'
         )]
         for fname in files:
             if not fname.endswith('.html'):

@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -76,31 +77,80 @@ def load_redirect_sources() -> set[str]:
     return srcs
 
 
+def tracked_files() -> set[str] | None:
+    """仓库已跟踪文件（POSIX 相对路径）；失败返回 None（回退全量拷贝）。
+
+    只发布 git 跟踪的文件 —— 本地草稿（tmp_*.html、未提交的临时页）不会被误发上线。
+    历史缺陷：此前按文件系统 glob 取根目录 *.html，实测把未跟踪的 tmp_orig_crt.html
+    一起发到了 cncdisplay.com。
+    """
+    try:
+        r = subprocess.run(
+            ["git", "-C", str(ROOT), "ls-files", "-z"],
+            capture_output=True, check=True,
+        )
+    except Exception:
+        return None
+    return {p.decode("utf-8", "replace") for p in r.stdout.split(b"\0") if p}
+
+
 def build() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
 
+    tracked = tracked_files()
+    if tracked is None:
+        print("  [warn] 取不到 git 跟踪列表，回退为按目录全量拷贝")
+
     copied = 0
+    skipped: list[str] = []
+
+    def emit(src: Path, rel: str) -> None:
+        nonlocal copied
+        dst = OUT / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        copied += 1
+
     for name in INCLUDE_DIRS:
         src = ROOT / name
         if not src.exists():
             print(f"  [warn] 目录不存在，跳过: {name}")
             continue
-        shutil.copytree(src, OUT / name, symlinks=False)
-        copied += sum(1 for _ in (OUT / name).rglob("*") if _.is_file())
+        if tracked is None:
+            shutil.copytree(src, OUT / name, symlinks=False)
+            copied += sum(1 for _ in (OUT / name).rglob("*") if _.is_file())
+            continue
+        for f in sorted(src.rglob("*")):
+            if not f.is_file():
+                continue
+            rel = f.relative_to(ROOT).as_posix()
+            if rel in tracked:
+                emit(f, rel)
+            else:
+                skipped.append(rel)
 
     for p in sorted(ROOT.glob("*.html")):
-        shutil.copy2(p, OUT / p.name)
-        copied += 1
+        if tracked is not None and p.name not in tracked:
+            skipped.append(p.name)
+            continue
+        emit(p, p.name)
 
     for name in INCLUDE_ROOT_FILES:
         src = ROOT / name
-        if src.exists():
-            shutil.copy2(src, OUT / name)
-            copied += 1
-        else:
+        if not src.exists():
             print(f"  [warn] 根文件不存在，跳过: {name}")
+            continue
+        if tracked is not None and name not in tracked:
+            skipped.append(name)
+            continue
+        emit(src, name)
+
+    if skipped:
+        print(f"  未进产物（未被 git 跟踪的本地文件，共 {len(skipped)} 个，前 20）:")
+        for rel in skipped[:20]:
+            print(f"    - {rel}")
 
     size = sum(f.stat().st_size for f in OUT.rglob("*") if f.is_file())
     print(f"产物: {OUT}  文件 {copied} 个 / {size / 1048576:.1f} MB")
