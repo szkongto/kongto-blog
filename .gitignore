@@ -43,3 +43,6 @@ backlinks_daily/
 # 一旦被跟踪，等于在 GitHub 和 cncdisplay.com 上同时公开。
 auto_poster_config.json
 .mcp.json
+
+# 部署产物（由 scripts/build_site_artifact.py 生成）
+_site/

@@ -38,13 +38,20 @@ jobs:
       - name: Full gate
         run: python scripts/full_gate.py --quick
 
+      # 只发布站点文件。此前上传 path '.'（仓库根即站点根），导致
+      # scripts/ 、CLAUDE.md 、seo_reports/ 、backlinks_output/ 、tmp_*.txt
+      # 等内部资料全部成为公网 URL。该步骤构建 _site/ 并自检引用完整性，
+      # 产物缺页面会直接让部署失败。
+      - name: Build deploy artifact
+        run: python scripts/build_site_artifact.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
