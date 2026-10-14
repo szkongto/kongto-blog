@@ -93,6 +93,29 @@ const REDIRECTS = {{
 {entries_str}
 }};
 
+// ── 安全响应头 ─────────────────────────────────────────────
+// GitHub Pages 上 _headers / netlify.toml 是死配置（实测线上 6 个头全缺），
+// 改由边缘 Worker 注入。CSP 刻意放宽：站点内含 1605 处内联脚本 /
+// 866 处内联事件处理器，收紧 script-src 会直接打断 PayPal 结账等交互；
+// 仍保留 object-src / base-uri / frame-ancestors 三项硬限制。
+const SECURITY_HEADERS = {{
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=*',
+  'Content-Security-Policy': "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https:; media-src 'self' https: data: blob:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'self'; upgrade-insecure-requests",
+}};
+
+// 只给真正的内容响应注入（301 不必包，浏览器会跟到最终响应）
+function harden(resp) {{
+  const out = new Response(resp.body, resp);
+  for (const k in SECURITY_HEADERS) {{
+    out.headers.set(k, SECURITY_HEADERS[k]);
+  }}
+  return out;
+}}
+
 // Normalise a URL path: decode percent-encoding once, collapse double slashes
 function normalise(p) {{
   try {{ p = decodeURIComponent(p); }} catch(e) {{}}
@@ -107,7 +130,7 @@ addEventListener('fetch', event => {{
 
   // Skip root
   if (path === '/' || path === '') {{
-    return event.respondWith(fetch(request));
+    return event.respondWith(fetch(request).then(harden));
   }}
 
   // Block access to config files (2026-08-08 audit: _redirects was publicly downloadable)
@@ -163,7 +186,7 @@ addEventListener('fetch', event => {{
   }}
 
   // Pass through to origin (GitHub Pages)
-  event.respondWith(fetch(request));
+  event.respondWith(fetch(request).then(harden));
 }});
 '''
 
