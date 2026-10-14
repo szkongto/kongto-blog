@@ -84,6 +84,8 @@ netlify.toml
 _headers
 cloudflare-worker.js
 redirect_audit_report.html
+docs/site-standards.md
+images/**/*.txt
 _backlinks_plan.md
 
 # 临时/草稿产物（勿提交）
