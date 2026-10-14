@@ -126,3 +126,30 @@ Full spec table for every model lives on its product page above (Spec / Original
 WhatsApp: +86-13686889647
 Email: info@cncdisplay.com
 LinkedIn: https://www.linkedin.com/company/71301374
+
+## 中文版页面 (Chinese Pages)
+江图科技中文站 —— 面向中文用户的 CNC 显示器 CRT 转 LCD 升级方案与技术支持。
+
+- [中文首页](https://cncdisplay.com/zh/) — 江图科技中文站首页 — CNC 显示器 CRT 转 LCD 升级
+- [产品目录](https://cncdisplay.com/zh/products/) — 全部 CNC 显示器替换型号
+- [兼容性查询](https://cncdisplay.com/zh/compatibility-matrix.html) — 95+ 型号交叉对照
+- [CNC显示器知识库](https://cncdisplay.com/zh/knowledge/) — CRT转LCD技术指南与故障排查
+- [FANUC CRT转LCD替换完整指南](https://cncdisplay.com/zh/knowledge/fanuc-crt-to-lcd-replacement-guide.html) — A61L 全系列型号与安装步骤
+- [马扎克Mazak CRT转LCD改装指南](https://cncdisplay.com/zh/knowledge/mazak-crt-to-lcd-retrofit-guide.html) — CD1472/MDT1283B/DR5614/AIQA8DSP40
+- [三菱CNC显示器替换指南](https://cncdisplay.com/zh/knowledge/mitsubishi-cnc-display-replacement-guide.html) — MDT962B/FCUA-CT100/BM09DF/MDT925PS
+- [西门子CRT转LCD升级指南](https://cncdisplay.com/zh/knowledge/siemens-crt-to-lcd-upgrade-guide.html) — 6FC3988/6FC5103/6FC5203/SM0901/SM1200
+- [哈斯Haas CRT显示器替换指南](https://cncdisplay.com/zh/knowledge/haas-crt-monitor-replacement-guide.html) — VF/SL 系列 9针与12英寸
+- [大隈Okuma CRT转LCD替换指南](https://cncdisplay.com/zh/knowledge/okuma-crt-to-lcd-replacement-guide.html) — OSP5000/OSP5020/OSP7000
+- [CNC显示器故障排查指南](https://cncdisplay.com/zh/knowledge/cnc-monitor-troubleshooting-guide.html) — 黑屏/闪烁/昏暗诊断
+- [CRT与LCD完整对比指南](https://cncdisplay.com/zh/knowledge/crt-vs-lcd-cnc-display-comparison.html) — 维修与升级决策
+- [马扎克CRT转LCD升级指南](https://cncdisplay.com/zh/guides/mazak-crt-to-lcd-guide.html) — Mazatrol T-32/M-32
+- [三菱CRT转LCD升级指南](https://cncdisplay.com/zh/guides/mitsubishi-crt-to-lcd-guide.html) — MELDAS MDT962B/BM09DF/FCUA-CT100
+- [西门子CRT转LCD升级指南](https://cncdisplay.com/zh/guides/siemens-crt-to-lcd-guide.html) — SINUMERIK 810/820/840D/850/880
+- [FANUC方案](https://cncdisplay.com/zh/brands/FANUC.html) — FANUC CRT 替换方案
+- [三菱方案](https://cncdisplay.com/zh/brands/Mitsubishi.html) — 三菱 CRT 替换方案
+- [西门子方案](https://cncdisplay.com/zh/brands/Siemens.html) — 西门子 CRT 替换方案
+- [马扎克方案](https://cncdisplay.com/zh/brands/MAZAK.html) — 马扎克 CRT 替换方案
+- [大隈方案](https://cncdisplay.com/zh/brands/OKUMA.html) — Okuma CRT 替换方案
+- [哈斯方案](https://cncdisplay.com/zh/brands/HAAS.html) — Haas CRT 替换方案
+- [客户案例](https://cncdisplay.com/zh/case-studies.html) — CRT转LCD升级案例
+- [获取报价](https://cncdisplay.com/zh/contact.html) — 24 小时内答复
