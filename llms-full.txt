@@ -2,9 +2,9 @@
 
 ## Kongto Technology (Jiangtu Technology)
 Industrial Video Display Solutions - CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays
-Total indexed pages: 384
+Total indexed pages: 382
 
-## Main Pages (24)
+## Main Pages (23)
 - [CNC Monitor & LCD Screen Replacement | CRT to LCD](https://cncdisplay.com/)
 - [About Us — Factory Direct CNC CRT to LCD | Kongto Technology](https://cncdisplay.com/about.html)
 - [Kongto Technical Team | 12 Years Display Expert](https://cncdisplay.com/author.html)
@@ -26,11 +26,10 @@ Total indexed pages: 384
 - [CNC LCD Module Quality Testing Process | Kongto Technology](https://cncdisplay.com/quality-testing.html)
 - [CNC Display Price Quote | FANUC Mitsubishi Siemens LCD Upgrade Kits](https://cncdisplay.com/quote.html)
 - [CNC CRT to LCD Resources | Downloads & Guides | Kongto](https://cncdisplay.com/resources.html)
-- [Site Search | Kongto Technology](https://cncdisplay.com/search.html)
 - [Terms of Service | Kongto Technology](https://cncdisplay.com/terms.html)
 - [CNC Display Wholesale & OEM | Bulk Pricing | Kongto Technology](https://cncdisplay.com/wholesale.html)
 
-## Main Pages (中文) (22)
+## Main Pages (中文) (21)
 - [源头工厂 CNC CRT 转 LCD | 十余年工控显示 | 非标信号定制 | 深圳江图科技](https://cncdisplay.com/zh/)
 - [关于江图科技 | 12年专注CNC工业显示器升级改造 | 深圳江图科技](https://cncdisplay.com/zh/about.html)
 - [技术团队 | 江图科技 — 12年工业视频显示专家 | CNC显示器升级](https://cncdisplay.com/zh/author.html)
@@ -50,7 +49,6 @@ Total indexed pages: 384
 - [产品中心 — CNC显示器解决方案 | 江图科技](https://cncdisplay.com/zh/products/)
 - [获取报价 — CNC 显示器升级方案 | Kongto 江图科技](https://cncdisplay.com/zh/quote.html)
 - [CNC CRT改LCD资源下载中心 | 安装手册·接线图·选购指南](https://cncdisplay.com/zh/resources.html)
-- [站内搜索 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/search.html)
 - [服务条款 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/terms.html)
 - [CNC显示器批发采购 | OEM定制 | 江图科技 — 厂家现货直发](https://cncdisplay.com/zh/wholesale.html)
 
