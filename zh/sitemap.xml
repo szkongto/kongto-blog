@@ -241,18 +241,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260501_fanuc_a61l_0001_0093_lcd_cnc_lcd_display_system_revitalize.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -355,12 +343,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260507_Siemens_6FC3988-7FA20_LCD.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260507_Siemens_SM0901_579417_TA.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -379,12 +361,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260508_KTV104_custom_industrial_display.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260508_KTV148_custom_industrial_display.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -397,20 +373,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260508_KTV800M_custom_industrial_display.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260508_KTV804_custom_industrial_display.html</loc>
     <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260508_KTV804_custom_industrial_display.html</loc>
-    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -433,32 +397,14 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260509_GBS-8219_RGB_to_VGA_converter.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260509_KT809_industrial_converter.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260509_KT809_industrial_converter.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/article_20260509_KT819_industrial_converter.html</loc>
     <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260509_KT819_industrial_converter.html</loc>
-    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -577,12 +523,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/posts/cnc-display-troubleshooting-guide.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -603,12 +543,6 @@
   <url>
     <loc>https://cncdisplay.com/zh/posts/custom_industrial_display_series.html</loc>
     <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/custom_industrial_display_series.html</loc>
-    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -729,12 +663,6 @@
   <url>
     <loc>https://cncdisplay.com/zh/posts/mazak-mazatrol-crt-to-lcd-upgrade-guide.html</loc>
     <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html</loc>
-    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1021,12 +949,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cncdisplay.com/zh/products/matsushita-tx1450ab-lcd-upgrade.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://cncdisplay.com/zh/products/okuma-osp5000-lcd-upgrade.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1088,12 +1010,6 @@
   </url>
   <url>
     <loc>https://cncdisplay.com/zh/resources.html</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cncdisplay.com/zh/search.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

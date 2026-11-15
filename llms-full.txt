@@ -2,7 +2,7 @@
 
 ## Kongto Technology (Jiangtu Technology)
 Industrial Video Display Solutions - CNC CRT-to-LCD Retrofit, Video Signal Converters, Custom Industrial Displays
-Total indexed pages: 400
+Total indexed pages: 390
 
 ## Main Pages (23)
 - [CNC Monitor & LCD Screen Replacement | CRT to LCD](https://cncdisplay.com/)
@@ -288,7 +288,7 @@ Total indexed pages: 400
 - [MDT-1283B: Three Names, One Display — Replacement Guide](https://cncdisplay.com/posts/article_20260507_MDT1283B_LCD_Replacement.html)
 - [Industrial Display Market Trends & Brand Comparison](https://cncdisplay.com/posts/Industrial_Display_Market_Trends_Brand_Comparison.html)
 
-## Articles (中文) (95)
+## Articles (中文) (94)
 - [CGA/EGA转RGBHV工业显示器改造指南 | 江图科技](https://cncdisplay.com/zh/posts/CGA_EGA_to_RGBHV_Industrial_Display_Retrofit_Guide.html)
 - [工业控制器显示器故障排查与维修指南](https://cncdisplay.com/zh/posts/Industrial_CNC_Display_Troubleshooting_Repair_Guide.html)
 - [工业显示器采购与选型指南 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/Industrial_Display_Procurement_Selection_Guide.html)
@@ -298,7 +298,6 @@ Total indexed pages: 400
 - [工业视频信号转换器选购指南：VGA转VIDEO与HDMI转VGA对比 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/Video_Signal_Converter_Buying_Guide.html)
 - [数控系统中视频信号转换器应用指南 | 江图科技](https://cncdisplay.com/zh/posts/Video_Signal_Converters_in_CNC_Numerical_Control_Systems.html)
 - [CGA/EGA显示器改造为RGBHV工业显示器实战指南 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/article_20260501_cga_ega_rgbhv_display_retrofit_to_industrial_practical_guide.html)
-- [工业显示器RGBHV改造全攻略——从CGA/EGA到高清显示 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/article_20260501_rgbhv_cga_ega_industrial_display_retrofit_complete-guide_from_to.html)
 - [FANUC A61L-0001-0074 14英寸彩色CRT显示器LCD升级完整指南 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0074_LCD.html)
 - [FANUC A61L-0001-0076 CRT显示器LCD替换方案 | 江图科技](https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0076_LCD.html)
 - [FANUC A61L-0001-0086 松下CRT显示器LCD替换方案 | 工业显示器升级专家](https://cncdisplay.com/zh/posts/article_20260503_FANUC_A61L_0001_0086_LCD.html)
@@ -385,7 +384,7 @@ Total indexed pages: 400
 - [三菱 FCUA-CT100 显示屏 LCD 替换 | M500/M520](https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_fcua_ct100_m500_lcd_replacement.html)
 - [三菱MDT962B工业液晶显示器——完美CRT替代方案，适配M64/E60/M500/M520 | 深圳市江图科技有限公司](https://cncdisplay.com/zh/posts/article_20260506_mitsubishi_mdt962b_crt_lcd_replacement.html)
 
-## Guides (11)
+## Guides (8)
 - [10.4 Inch LCD Replacement for CNC CRT Displays | Kongto](https://cncdisplay.com/guides/by-size/10.4-inch.html)
 - [12.1 Inch LCD Replacement for CNC CRT Displays | Kongto](https://cncdisplay.com/guides/by-size/12.1-inch.html)
 - [8 Inch LCD Replacement for CNC CRT Displays | Kongto](https://cncdisplay.com/guides/by-size/8-inch.html)
@@ -394,9 +393,6 @@ Total indexed pages: 400
 - [Mitsubishi E60 LCD Upgrade — CRT to LCD Replacement | Kongto](https://cncdisplay.com/guides/by-system/mitsubishi-e60.html)
 - [Mitsubishi M64 LCD Upgrade — CRT to LCD Replacement | Kongto](https://cncdisplay.com/guides/by-system/mitsubishi-m64.html)
 - [Siemens SINUMERIK 810/820 LCD Upgrade — CRT Replacement | Kongto](https://cncdisplay.com/guides/by-system/siemens-810-820.html)
-- [Mazak CRT to LCD Upgrade Guide | Mazatrol Display | Kongto](https://cncdisplay.com/guides/mazak-crt-to-lcd-guide.html)
-- [Mitsubishi CRT to LCD Upgrade Guide | MELDAS Display | Kongto](https://cncdisplay.com/guides/mitsubishi-crt-to-lcd-guide.html)
-- [Siemens CRT to LCD Upgrade Guide | SINUMERIK Display | Kongto](https://cncdisplay.com/guides/siemens-crt-to-lcd-guide.html)
 
 ## Guides (中文) (9)
 - [FANUC 0i 系列 CRT转LCD升级指南 | 江图科技](https://cncdisplay.com/zh/guides/by-system/fanuc-0i.html)
@@ -409,14 +405,8 @@ Total indexed pages: 400
 - [三菱CRT转LCD升级指南 | MELDAS显示器 | 江图科技](https://cncdisplay.com/zh/guides/mitsubishi-crt-to-lcd-guide.html)
 - [西门子CRT转LCD升级指南 | SINUMERIK显示器 | 江图科技](https://cncdisplay.com/zh/guides/siemens-crt-to-lcd-guide.html)
 
-## Knowledge Base (7)
+## Knowledge Base (1)
 - [CNC Monitor Troubleshooting Guide | CRT Problems & Fixes | Kongto](https://cncdisplay.com/knowledge/cnc-monitor-troubleshooting-guide.html)
-- [FANUC CRT to LCD Replacement Guide | A61L Monitor Upgrade | Kongto](https://cncdisplay.com/knowledge/fanuc-crt-to-lcd-replacement-guide.html)
-- [Haas CRT Monitor Replacement Guide | LCD Upgrade VF/SL | Kongto](https://cncdisplay.com/knowledge/haas-crt-monitor-replacement-guide.html)
-- [Mazak CRT to LCD Retrofit Guide | Mazatrol Display Upgrade | Kongto](https://cncdisplay.com/knowledge/mazak-crt-to-lcd-retrofit-guide.html)
-- [Mitsubishi CNC Display Replacement Guide | CRT to LCD | Kongto](https://cncdisplay.com/knowledge/mitsubishi-cnc-display-replacement-guide.html)
-- [Okuma CRT to LCD Replacement Guide | OSP Display Upgrade | Kongto](https://cncdisplay.com/knowledge/okuma-crt-to-lcd-replacement-guide.html)
-- [Siemens CRT to LCD Upgrade Guide | Sinumerik Display | Kongto](https://cncdisplay.com/knowledge/siemens-crt-to-lcd-upgrade-guide.html)
 
 ## Knowledge Base (中文) (8)
 - [CNC显示器故障排查指南 | CRT黑屏/闪烁/无显示 | 江图科技](https://cncdisplay.com/zh/knowledge/cnc-monitor-troubleshooting-guide.html)

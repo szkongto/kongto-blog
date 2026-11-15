@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+import sys
+
+sys.exit(
+    "DEPRECATED 2026-11-16: 本脚本会向 sitemap.xml 追加 20 条脏 URL"
+    "（10 条 /en/products/... 已全 301 淘汰 + lastmod 硬编码 2026-06-27），"
+    "且硬编码 d:/code/seo_deploy 路径。sitemap URL 集改为手工维护，"
+    "lastmod 用 scripts/update_sitemap_lastmod.py，质量用 "
+    "scripts/audit_sitemap_quality.py 门禁。不要运行本脚本。"
+)
+
 import re, os
 
 # Fix Product schema JSON error in EN brand page
