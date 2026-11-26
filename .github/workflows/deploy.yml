@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 失败后要重新部署必须开新 run: 重跑(re-run)会在同一 run 里再上传一份
+  # github-pages artifact, deploy-pages 报 "Multiple artifacts ... count is 2" 直接失败。
+  workflow_dispatch:
 
 permissions:
   contents: read
