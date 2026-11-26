@@ -1,0 +1,24 @@
+name = "cncdisplay-orders"
+main = "src/index.js"
+compatibility_date = "2026-11-25"
+
+# Created with: npx wrangler kv namespace create ORDERS
+[[kv_namespaces]]
+binding = "ORDERS"
+id = "80a18171c0344a5ea52694bcd46bc6a0"
+
+# Order notification mail. Requires at least one verified destination address
+# in Cloudflare Email Routing for this zone. Uncomment both blocks once the
+# address is known.
+# [[send_email]]
+# name = "NOTIFY"
+# destination_address = "REPLACE_WITH_VERIFIED_ADDRESS"
+
+[vars]
+NOTIFY_TO = ""
+
+# Served under the site; the zone is already proxied through Cloudflare and the
+# site has no /api/ pages, so nothing else is shadowed.
+[[routes]]
+pattern = "cncdisplay.com/api/*"
+zone_name = "cncdisplay.com"
