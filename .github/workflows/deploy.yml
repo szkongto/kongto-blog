@@ -23,7 +23,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -62,6 +62,23 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      # GitHub 的 run artifact API 有最终一致性延迟: upload-pages-artifact 刚报
+      # success, deploy-pages 下一秒查询却返回
+      # 'No artifacts named "github-pages" were found for this workflow run'
+      # (2026-11-26 实测, 同时 gh api 能查到那份 55MB artifact)。
+      # 失败就重试一次, 两次都失败才让 pipeline 红。
+      - name: Retry deploy to GitHub Pages
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if both deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: |
+          echo "Page deployment failed twice"
+          exit 1
 
   deploy-worker:
     needs: deploy
