@@ -589,7 +589,8 @@ async function handleCsv(env) {
 // filter cannot hide an order. Requires the Transaction Search feature on the
 // REST app; when unavailable the error is returned to the admin UI.
 async function handlePaypalSync(url, env) {
-  const days = Math.min(Math.max(Number(url.searchParams.get('days') || 30), 1), 90);
+  // PayPal caps one reporting query at 31 days.
+  const days = Math.min(Math.max(Number(url.searchParams.get('days') || 30), 1), 31);
   const end = new Date();
   const start = new Date(end.getTime() - days * 86400 * 1000);
   const fmt = (d) => d.toISOString().replace(/\.\d+Z$/, 'Z');
