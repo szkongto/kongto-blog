@@ -7,9 +7,10 @@
  * Public:
  *   GET  /api/health
  *   POST /api/paypal-webhook        PayPal webhook receiver, signature verified
+ *   POST /api/inquiry               website contact form (stored in KV, mail copy)
  *
  * Admin (cookie session; ?token=ADMIN_TOKEN still works for scripts):
- *   GET    /admin                   order desk UI
+ *   GET    /admin                   order desk UI: orders / inquiries / traffic
  *   POST   /api/login               { password } -> sets session cookie
  *   POST   /api/logout
  *   GET    /api/orders              JSON list (?q=&stage=&limit=)
@@ -20,6 +21,10 @@
  *   POST   /api/orders/manual       create an order by hand
  *   GET    /api/orders.csv          spreadsheet export
  *   POST   /api/paypal-sync         pull missing captures from PayPal reporting
+ *   GET    /api/inquiries           list (?q=&status=)
+ *   PATCH  /api/inquiries/:id       { status, note }
+ *   DELETE /api/inquiries/:id
+ *   GET    /api/traffic?days=N      Cloudflare RUM + Search Console summary
  *
  * Bindings / secrets:
  *   PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_WEBHOOK_ID
@@ -28,7 +33,11 @@
  *   SESSION_SECRET   HMAC key for the session cookie
  *   ORDERS           KV namespace
  *   NOTIFY, NOTIFY_TO  optional mail copy
+ *   CF_ANALYTICS_TOKEN, CF_ACCOUNT_ID, RUM_SITE_TAG
+ *   GSC_CLIENT_ID, GSC_CLIENT_SECRET, GSC_REFRESH_TOKEN, GSC_PROPERTY
  */
+
+import { adminPage } from './admin.js';
 
 const PAYPAL_API = 'https://api-m.paypal.com';
 const SESSION_COOKIE = 'cncd_admin';
@@ -784,334 +793,271 @@ async function handlePaypalSelftest(url, env) {
   }
 }
 
-/* -------------------------------------------------------------- admin UI */
+/* ------------------------------------------------------------- inquiries */
 
-function adminPage() {
-  return `<!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>cncdisplay order desk</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f6f7f9;color:#1c2530}
-header{display:flex;align-items:center;gap:12px;padding:12px 18px;background:#10202f;color:#fff;flex-wrap:wrap}
-header h1{font-size:16px;margin:0 auto 0 0;font-weight:600}
-button,a.btn{font:inherit;padding:7px 12px;border-radius:6px;border:1px solid #cfd6df;background:#fff;color:#1c2530;cursor:pointer;text-decoration:none}
-header button,header a.btn{background:#1f3b57;color:#fff;border-color:#35546f}
-.bar{display:flex;gap:8px;padding:12px 18px;flex-wrap:wrap;align-items:center}
-.bar input,.bar select{font:inherit;padding:7px 10px;border:1px solid #cfd6df;border-radius:6px;background:#fff}
-.bar input{min-width:260px}
-#stat{color:#5b6b7c;margin-left:auto}
-table{width:100%;border-collapse:collapse;background:#fff}
-th,td{padding:9px 10px;border-bottom:1px solid #e6eaef;text-align:left;vertical-align:top}
-th{background:#eef2f6;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#48596b}
-tr.row{cursor:pointer}
-tr.row:hover{background:#f0f6ff}
-.pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:#e4e9ef}
-.pill.new{background:#fde8c8}.pill.paid{background:#d8ecff}.pill.packed{background:#e4e0ff}
-.pill.shipped{background:#d7f2e2}.pill.delivered{background:#c9edc9}.pill.cancelled{background:#f3d6d6}
-.warn{color:#b00020;font-size:12px}
-.muted{color:#78889a}
-.panel{position:fixed;inset:0;background:rgba(12,20,28,.45);display:flex;justify-content:flex-end;z-index:20}
-.panel[hidden]{display:none}
-.card{background:#fff;width:min(560px,100%);height:100%;overflow:auto;padding:18px}
-.card h2{font-size:16px;margin:0 0 4px}
-.grid{display:grid;grid-template-columns:120px 1fr;gap:8px 10px;margin:14px 0;align-items:start}
-.grid label{color:#5b6b7c;padding-top:7px}
-.grid input,.grid select,.grid textarea{font:inherit;padding:7px 9px;border:1px solid #cfd6df;border-radius:6px;width:100%}
-.grid textarea{min-height:70px;resize:vertical}
-.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.actions .danger{margin-left:auto;color:#b00020;border-color:#e3b4b4}
-dl.kv{display:grid;grid-template-columns:120px 1fr;gap:4px 10px;margin:10px 0;font-size:13px}
-dl.kv dt{color:#78889a}
-dl.kv dd{margin:0;word-break:break-word}
-.hist{font-size:12px;color:#5b6b7c;max-height:120px;overflow:auto;border-top:1px solid #e6eaef;padding-top:8px}
-.login{max-width:320px;margin:80px auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 24px rgba(16,32,47,.12)}
-.login h1{font-size:17px;margin:0 0 14px}
-.login input{font:inherit;width:100%;padding:9px 10px;border:1px solid #cfd6df;border-radius:6px}
-.login button{margin-top:12px;width:100%;padding:9px;background:#10202f;color:#fff;border:0;border-radius:6px;font:inherit;cursor:pointer}
-.err{color:#b00020;font-size:13px;margin-top:8px;min-height:18px}
-@media (max-width:720px){.bar input{min-width:0;width:100%}table{font-size:13px}th:nth-child(6),td:nth-child(6){display:none}}
-</style>
-<body>
-<div class="login" id="loginBox">
-  <h1>cncdisplay order desk</h1>
-  <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
-  <button id="loginBtn">Log in</button>
-  <div class="err" id="loginErr"></div>
-</div>
-<div id="app" hidden>
-  <header>
-    <h1>Order desk</h1>
-    <button id="btnSync" title="Import captures PayPal knows about but the webhook missed">Sync PayPal</button>
-    <button id="btnManual">Manual order</button>
-    <a class="btn" href="/api/orders.csv">CSV</a>
-    <button id="btnPw">Change password</button>
-    <button id="btnOut">Log out</button>
-  </header>
-  <div class="bar">
-    <input id="q" placeholder="Search name, email, phone, capture, product">
-    <select id="stage">
-      <option value="">All stages</option>
-      <option value="new">New</option>
-      <option value="paid">Paid</option>
-      <option value="packed">Packed</option>
-      <option value="shipped">Shipped</option>
-      <option value="delivered">Delivered</option>
-      <option value="cancelled">Cancelled</option>
-    </select>
-    <span id="stat"></span>
-  </div>
-  <table>
-    <thead><tr><th>Received</th><th>Stage</th><th>Amount</th><th>Item</th><th>Buyer</th><th>Ship to</th><th>Tracking</th></tr></thead>
-    <tbody id="rows"></tbody>
-  </table>
-  <div class="panel" id="panel" hidden>
-    <div class="card" id="card"></div>
-  </div>
-</div>
-<script>
-(function () {
-  var state = { orders: [], current: null };
+const INQ_PREFIX = 'inquiry:';
+const INQ_STAGES = ['new', 'following', 'quoted', 'done', 'spam'];
 
-  function el(id) { return document.getElementById(id); }
-  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-  }); }
-  function api(path, opts) {
-    opts = opts || {};
-    opts.headers = Object.assign({ 'Content-Type': 'application/json' }, opts.headers || {});
-    return fetch(path, opts).then(function (r) {
-      return r.json().catch(function () { return {}; }).then(function (d) {
-        if (!r.ok) throw new Error(d.error || (path + ' -> ' + r.status));
-        return d;
-      });
+async function notifyInquiry(rec, env) {
+  if (!env.NOTIFY || !env.NOTIFY_TO) return 'skipped';
+  try {
+    await env.NOTIFY.send({
+      to: env.NOTIFY_TO,
+      from: { email: 'orders@cncdisplay.com', name: 'cncdisplay website' },
+      subject: `[INQUIRY] ${rec.name || rec.email || 'website visitor'} - ${(rec.page || 'contact').split('/').pop()}`,
+      text: [
+        `New website inquiry ${rec.receivedAt}`,
+        '',
+        `Name    : ${rec.name || '-'}`,
+        `Email   : ${rec.email || '-'}`,
+        `Phone   : ${rec.phone || '-'}`,
+        `Company : ${rec.company || '-'}`,
+        `Machine : ${rec.machine || '-'}`,
+        `Page    : ${rec.page || '-'}`,
+        '',
+        rec.message || '',
+        '',
+        'Order desk: https://cncdisplay.com/admin',
+      ].join('\n'),
     });
+    return 'sent';
+  } catch (e) {
+    return `failed: ${e.message || e}`;
   }
+}
 
-  function showApp(on) {
-    el('loginBox').hidden = on;
-    el('app').hidden = !on;
+async function handleInquiry(request, env) {
+  const ct = request.headers.get('Content-Type') || '';
+  let body = {};
+  if (ct.includes('application/json')) {
+    body = await request.json().catch(() => ({}));
+  } else {
+    const form = await request.formData().catch(() => null);
+    if (form) {
+      for (const [k, v] of form.entries()) body[k] = typeof v === 'string' ? v : '';
+    }
   }
+  const clean = (v) => String(v == null ? '' : v).trim().slice(0, 2000);
 
-  function load() {
-    var q = encodeURIComponent(el('q').value.trim());
-    var stage = encodeURIComponent(el('stage').value);
-    return api('/api/orders?q=' + q + '&stage=' + stage).then(function (d) {
-      state.orders = d.orders;
-      render(d.counts);
-    }).catch(function (e) {
-      if (/unauthorized/.test(e.message)) showApp(false);
-      else el('stat').textContent = e.message;
-    });
-  }
+  // Honeypot: real people never fill a hidden field.
+  if (clean(body._hp)) return new Response('OK', { status: 200 });
 
-  function render(counts) {
-    var html = '';
-    state.orders.forEach(function (o, i) {
-      var issues = (o.warn || []).length;
-      html += '<tr class="row" data-i="' + i + '">' +
-        '<td>' + esc((o.receivedAt || '').slice(0, 16).replace('T', ' ')) + '</td>' +
-        '<td><span class="pill ' + esc(o.stage || 'new') + '">' + esc(o.stage || 'new') + '</span></td>' +
-        '<td>' + esc((o.amount == null ? '' : o.amount) + ' ' + (o.currency || '')) + '</td>' +
-        '<td>' + esc(o.slug || (o.items && o.items[0] && o.items[0].name) || '-') +
-          (issues ? '<div class="warn">' + issues + ' issue(s)</div>' : '') + '</td>' +
-        '<td>' + esc(o.payerName || o.shipToName || '-') + '<div class="muted">' + esc(o.payerEmail || '') + '</div>' +
-          (o.phone ? '<div class="muted">' + esc(o.phone) + '</div>' : '') + '</td>' +
-        '<td>' + esc((o.addressLines || []).join(', ') || o.shipTo || '-') + '</td>' +
-        '<td>' + esc(o.tracking || '-') + '</td></tr>';
-    });
-    el('rows').innerHTML = html || '<tr><td colspan="7" class="muted">No orders yet.</td></tr>';
-    var c = counts || {};
-    el('stat').textContent = Object.keys(c).filter(function (k) { return c[k]; })
-      .map(function (k) { return k + ': ' + c[k]; }).join('  ');
-    Array.prototype.forEach.call(document.querySelectorAll('tr.row'), function (tr) {
-      tr.onclick = function () { open(state.orders[Number(tr.getAttribute('data-i'))]); };
-    });
-  }
-
-  function open(o) {
-    state.current = o;
-    var stages = ['new', 'paid', 'packed', 'shipped', 'delivered', 'cancelled'];
-    var opts = stages.map(function (s) {
-      return '<option value="' + s + '"' + (o.stage === s ? ' selected' : '') + '>' + s + '</option>';
-    }).join('');
-    var items = (o.items || []).map(function (i) { return i.name + ' x' + i.quantity; }).join('; ');
-    var hist = (o.history || []).map(function (h) {
-      return esc((h.at || '').slice(0, 16).replace('T', ' ')) + ' - ' + esc(h.what);
-    }).join('<br>');
-    var warns = (o.warn || []).map(function (w) { return '<div class="warn">' + esc(w) + '</div>'; }).join('');
-    var notes = (o.notes || []).map(function (n) {
-      return esc((n.at || '').slice(0, 16).replace('T', ' ')) + ' - ' + esc(n.text);
-    }).join('<br>');
-
-    el('card').innerHTML =
-      '<h2>' + esc(o.slug || o.captureId) + '</h2>' +
-      '<div class="muted">' + esc(o.captureId) + (o.source ? ' - ' + esc(o.source) : '') + '</div>' +
-      '<dl class="kv">' +
-      '<dt>Amount</dt><dd>' + esc((o.amount == null ? '' : o.amount) + ' ' + (o.currency || '')) + '</dd>' +
-      '<dt>Received</dt><dd>' + esc((o.receivedAt || '').slice(0, 19).replace('T', ' ')) + '</dd>' +
-      '<dt>Items</dt><dd>' + esc(items || '-') + '</dd>' +
-      '<dt>Payer</dt><dd>' + esc(o.payerName || '-') + '</dd>' +
-      '<dt>Email</dt><dd>' + esc(o.payerEmail || '-') + '</dd>' +
-      '</dl>' + warns +
-      '<div class="grid">' +
-      '<label>Stage</label><select id="fStage">' + opts + '</select>' +
-      '<label>Carrier</label><input id="fCarrier" value="' + esc(o.carrier || '') + '" placeholder="DHL">' +
-      '<label>Tracking</label><input id="fTracking" value="' + esc(o.tracking || '') + '">' +
-      '<label>Ship name</label><input id="fShipToName" value="' + esc(o.shipToName || '') + '">' +
-      '<label>Company</label><input id="fCompany" value="' + esc(o.company || '') + '">' +
-      '<label>Phone</label><input id="fPhone" value="' + esc(o.phone || '') + '">' +
-      '<label>Destination</label><input id="fDest" value="' + esc(o.dest || o.countryCode || '') + '" placeholder="US">' +
-      '<label>Address</label><textarea id="fAddress">' + esc((o.addressLines || []).join('\\n')) + '</textarea>' +
-      '<label>Add note</label><textarea id="fNote" placeholder="Supplier, ETA, buyer reply..."></textarea>' +
-      '</div>' +
-      '<div class="actions">' +
-      '<button id="btnSave">Save</button>' +
-      '<button id="btnClose">Close</button>' +
-      '<button id="btnDel" class="danger">Delete</button>' +
-      '</div>' +
-      '<div class="err" id="saveErr"></div>' +
-      '<h3 style="font-size:13px;margin:16px 0 4px">Notes</h3><div class="hist">' + (notes || '<span class="muted">none</span>') + '</div>' +
-      '<h3 style="font-size:13px;margin:16px 0 4px">History</h3><div class="hist">' + (hist || '<span class="muted">none</span>') + '</div>';
-
-    el('panel').hidden = false;
-    el('btnClose').onclick = function () { el('panel').hidden = true; };
-    el('btnSave').onclick = save;
-    el('btnDel').onclick = del;
-  }
-
-  function save() {
-    var o = state.current;
-    var body = {
-      stage: el('fStage').value,
-      carrier: el('fCarrier').value,
-      tracking: el('fTracking').value,
-      shipToName: el('fShipToName').value,
-      company: el('fCompany').value,
-      phone: el('fPhone').value,
-      dest: el('fDest').value,
-      addressLines: el('fAddress').value.split('\\n'),
-      note: el('fNote').value
-    };
-    api('/api/orders/' + encodeURIComponent(o.captureId), { method: 'PATCH', body: JSON.stringify(body) })
-      .then(function (d) { el('panel').hidden = true; state.current = d.order; load(); })
-      .catch(function (e) { el('saveErr').textContent = e.message; });
-  }
-
-  function del() {
-    var o = state.current;
-    if (!confirm('Delete ' + o.captureId + ' from the order desk?')) return;
-    api('/api/orders/' + encodeURIComponent(o.captureId), { method: 'DELETE' })
-      .then(function () { el('panel').hidden = true; load(); })
-      .catch(function (e) { el('saveErr').textContent = e.message; });
-  }
-
-  function manual() {
-    el('card').innerHTML =
-      '<h2>Manual order</h2>' +
-      '<div class="grid">' +
-      '<label>Buyer</label><input id="mName">' +
-      '<label>Email</label><input id="mEmail">' +
-      '<label>Company</label><input id="mCompany">' +
-      '<label>Phone</label><input id="mPhone">' +
-      '<label>Item</label><input id="mItem" placeholder="FANUC A61L-0001-0093 9-inch CRT to LCD">' +
-      '<label>Amount</label><input id="mAmount" placeholder="507.00">' +
-      '<label>Qty</label><input id="mQty" value="1">' +
-      '<label>Destination</label><input id="mDest" placeholder="US">' +
-      '<label>Address</label><textarea id="mAddress" placeholder="street\\ncity, state zip\\ncountry"></textarea>' +
-      '<label>PayPal ID</label><input id="mPaypal" placeholder="capture or order id">' +
-      '<label>Note</label><textarea id="mNote"></textarea>' +
-      '</div>' +
-      '<div class="actions"><button id="mSave">Create</button><button id="mClose">Close</button></div>' +
-      '<div class="err" id="mErr"></div>';
-    el('panel').hidden = false;
-    el('mClose').onclick = function () { el('panel').hidden = true; };
-    el('mSave').onclick = function () {
-      var body = {
-        payerName: el('mName').value, payerEmail: el('mEmail').value, company: el('mCompany').value,
-        phone: el('mPhone').value, item: el('mItem').value, amount: el('mAmount').value,
-        qty: el('mQty').value, dest: el('mDest').value, address: el('mAddress').value,
-        orderId: el('mPaypal').value, note: el('mNote').value,
-        paypalStatus: null, stage: 'paid'
-      };
-      api('/api/orders/manual', { method: 'POST', body: JSON.stringify(body) })
-        .then(function () { el('panel').hidden = true; load(); })
-        .catch(function (e) { el('mErr').textContent = e.message; });
-    };
-  }
-
-  function sync() {
-    el('btnSync').disabled = true;
-    el('btnSync').textContent = 'Syncing...';
-    api('/api/paypal-sync', { method: 'POST' })
-      .then(function (d) {
-        el('btnSync').textContent = 'Synced';
-        setTimeout(function () { el('btnSync').textContent = 'Sync PayPal'; el('btnSync').disabled = false; }, 1500);
-        alert('Scanned ' + d.scanned + ', imported ' + d.imported.length + '.');
-        load();
-      })
-      .catch(function (e) {
-        el('btnSync').textContent = 'Sync PayPal';
-        el('btnSync').disabled = false;
-        alert(e.message);
-      });
-  }
-
-  el('loginBtn').onclick = function () {
-    fetch('/api/login', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password: el('pw').value })
-    }).then(function (r) {
-      if (r.ok) { el('loginErr').textContent = ''; showApp(true); load(); }
-      else el('loginErr').textContent = 'Wrong password.';
-    });
+  const rec = {
+    id: `${Date.now().toString(36).toUpperCase()}-${randomHex(3)}`,
+    receivedAt: new Date().toISOString(),
+    status: 'new',
+    name: clean(body.name),
+    email: clean(body.email),
+    phone: clean(body.phone),
+    company: clean(body.company),
+    machine: clean(body.machine || body.product),
+    message: clean(body.message),
+    page: clean(body.page) || 'https://cncdisplay.com/contact.html',
+    ip: request.headers.get('CF-Connecting-IP') || null,
+    country: request.headers.get('CF-IPCountry') || null,
+    ua: (request.headers.get('User-Agent') || '').slice(0, 300),
+    notes: [],
+    history: [{ at: new Date().toISOString(), what: 'received' }],
   };
-  el('pw').onkeydown = function (e) { if (e.key === 'Enter') el('loginBtn').click(); };
-  el('btnOut').onclick = function () {
-    fetch('/api/logout', { method: 'POST' }).then(function () { showApp(false); });
-  };
-  function password() {
-    el('card').innerHTML =
-      '<h2>Change password</h2>' +
-      '<div class="grid">' +
-      '<label>Current</label><input id="pwCur" type="password" autocomplete="current-password">' +
-      '<label>New</label><input id="pwNew" type="password" autocomplete="new-password" placeholder="at least 8 characters">' +
-      '<label>Repeat new</label><input id="pwNew2" type="password" autocomplete="new-password">' +
-      '</div>' +
-      '<div class="actions"><button id="pwSave">Save</button><button id="pwClose">Close</button></div>' +
-      '<div class="err" id="pwErr"></div>';
-    el('panel').hidden = false;
-    el('pwClose').onclick = function () { el('panel').hidden = true; };
-    el('pwSave').onclick = function () {
-      if (el('pwNew').value !== el('pwNew2').value) {
-        el('pwErr').textContent = 'New passwords do not match.';
-        return;
-      }
-      api('/api/password', {
-        method: 'POST',
-        body: JSON.stringify({ current: el('pwCur').value, next: el('pwNew').value })
-      }).then(function () {
-        el('panel').hidden = true;
-        alert('Password changed. It takes effect for new logins within about a minute.');
-      }).catch(function (e) { el('pwErr').textContent = e.message; });
-    };
+  if (!rec.email && !rec.phone) return json({ error: 'email or phone required' }, 400);
+  if (!rec.message) return json({ error: 'message required' }, 400);
+
+  await env.ORDERS.put(`${INQ_PREFIX}${rec.id}`, JSON.stringify(rec));
+  const mail = await notifyInquiry(rec, env);
+
+  const redirect = clean(body.redirect);
+  if (redirect && /^https:\/\/cncdisplay\.com\//.test(redirect)) {
+    return Response.redirect(redirect, 303);
   }
+  return json({ ok: true, id: rec.id, mail });
+}
 
-  el('btnManual').onclick = manual;
-  el('btnSync').onclick = sync;
-  el('btnPw').onclick = password;
-  el('q').oninput = function () { clearTimeout(window.__t); window.__t = setTimeout(load, 250); };
-  el('stage').onchange = load;
+async function loadInquiries(env, limit = 500) {
+  const list = await env.ORDERS.list({ prefix: INQ_PREFIX, limit });
+  const out = [];
+  for (const k of list.keys) {
+    const v = await env.ORDERS.get(k.name);
+    if (!v) continue;
+    try {
+      out.push(JSON.parse(v));
+    } catch (e) { /* skip broken */ }
+  }
+  out.sort((a, b) => (a.receivedAt < b.receivedAt ? 1 : -1));
+  return out;
+}
 
-  api('/api/orders?limit=1').then(function () { showApp(true); load(); })
-    .catch(function () { showApp(false); });
-})();
-</script>
-</body>
-</html>`;
+async function handleInquiryList(url, env) {
+  const q = String(url.searchParams.get('q') || '').toLowerCase();
+  const status = url.searchParams.get('status') || '';
+  let rows = await loadInquiries(env);
+  if (status) rows = rows.filter((r) => r.status === status);
+  if (q) {
+    rows = rows.filter((r) => [r.name, r.email, r.phone, r.company, r.machine, r.message, r.page]
+      .join(' ').toLowerCase().includes(q));
+  }
+  const counts = {};
+  for (const s of INQ_STAGES) counts[s] = 0;
+  for (const r of await loadInquiries(env)) counts[r.status] = (counts[r.status] || 0) + 1;
+  return json({ count: rows.length, counts, inquiries: rows });
+}
+
+async function handleInquiryUpdate(request, env, id) {
+  const raw = await env.ORDERS.get(`${INQ_PREFIX}${id}`);
+  if (!raw) return json({ error: 'not found' }, 404);
+  const rec = JSON.parse(raw);
+  const body = await request.json().catch(() => ({}));
+  const changes = [];
+  if (typeof body.status === 'string') {
+    if (!INQ_STAGES.includes(body.status)) return json({ error: `bad status, use ${INQ_STAGES.join('|')}` }, 400);
+    if (body.status !== rec.status) {
+      changes.push(`status ${rec.status} -> ${body.status}`);
+      rec.status = body.status;
+    }
+  }
+  if (typeof body.note === 'string' && body.note.trim()) {
+    rec.notes = rec.notes || [];
+    rec.notes.push({ at: new Date().toISOString(), text: body.note.trim() });
+    changes.push('note added');
+  }
+  if (!changes.length) return json({ ok: true, unchanged: true, inquiry: rec });
+  rec.updatedAt = new Date().toISOString();
+  rec.history = rec.history || [];
+  rec.history.push({ at: rec.updatedAt, what: changes.join('; ') });
+  await env.ORDERS.put(`${INQ_PREFIX}${id}`, JSON.stringify(rec));
+  return json({ ok: true, changes, inquiry: rec });
+}
+
+async function handleInquiryDelete(env, id) {
+  const raw = await env.ORDERS.get(`${INQ_PREFIX}${id}`);
+  if (!raw) return json({ error: 'not found' }, 404);
+  await env.ORDERS.delete(`${INQ_PREFIX}${id}`);
+  return json({ ok: true, deleted: id });
+}
+
+/* --------------------------------------------------------------- traffic */
+
+async function cfGql(env, query) {
+  if (!env.CF_ANALYTICS_TOKEN) throw new Error('CF_ANALYTICS_TOKEN not configured');
+  const res = await fetch('https://api.cloudflare.com/client/v4/graphql', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.CF_ANALYTICS_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (data.errors) throw new Error(`Cloudflare GraphQL: ${JSON.stringify(data.errors).slice(0, 300)}`);
+  return data.data;
+}
+
+function isoDaysAgo(n) {
+  return new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
+}
+
+async function trafficRum(env, days) {
+  const acc = env.CF_ACCOUNT_ID;
+  const tag = env.RUM_SITE_TAG;
+  if (!acc || !tag) throw new Error('CF_ACCOUNT_ID / RUM_SITE_TAG not configured');
+  const start = isoDaysAgo(days - 1);
+  const filter = `date_geq:"${start}", siteTag:"${tag}", bot:0`;
+  const grp = (alias, dims, order = 'count_DESC', limit = 25) => (
+    `${alias}: rumPageloadEventsAdaptiveGroups(limit:${limit}, orderBy:[${order}], filter:{${filter}}){count sum{visits} dimensions{${dims}}}`
+  );
+  const query = `query {viewer{accounts(filter:{accountTag:"${acc}"}){`
+    + `total: rumPageloadEventsAdaptiveGroups(limit:1, filter:{${filter}}){count sum{visits}} `
+    + `daily: rumPageloadEventsAdaptiveGroups(limit:100, orderBy:[date_ASC], filter:{${filter}}){count sum{visits} dimensions{date}} `
+    + grp('pages', 'requestPath', 'count_DESC', 30) + ' '
+    + grp('referers', 'refererHost', 'count_DESC', 20) + ' '
+    // Entry pair: which outside site sent people to which page. This is the
+    // most specific referrer the browser sends; search terms are not attached.
+    + grp('entries', 'refererHost requestPath', 'count_DESC', 30) + ' '
+    + grp('countries', 'countryName', 'count_DESC', 15) + ' '
+    + '}}}';
+  const data = await cfGql(env, query);
+  const a = data.viewer.accounts[0] || {};
+  const t = (a.total && a.total[0]) || { count: 0, sum: { visits: 0 } };
+  const map = (rows, fn) => (rows || []).map((r) => fn(r.dimensions, r.count, (r.sum || {}).visits || 0));
+  return {
+    days,
+    pageviews: t.count || 0,
+    visits: (t.sum || {}).visits || 0,
+    daily: map(a.daily, (d, c, v) => ({ date: d.date, pageviews: c, visits: v })),
+    pages: map(a.pages, (d, c, v) => ({ path: d.requestPath, pageviews: c, visits: v })),
+    referers: map(a.referers, (d, c, v) => ({ host: d.refererHost || '', pageviews: c, visits: v })),
+    entries: map(a.entries, (d, c, v) => ({
+      host: d.refererHost || '', path: d.requestPath, pageviews: c, visits: v,
+    })),
+    countries: map(a.countries, (d, c, v) => ({ name: d.countryName, pageviews: c, visits: v })),
+  };
+}
+
+async function gscToken(env) {
+  const body = new URLSearchParams({
+    client_id: env.GSC_CLIENT_ID || '',
+    client_secret: env.GSC_CLIENT_SECRET || '',
+    refresh_token: env.GSC_REFRESH_TOKEN || '',
+    grant_type: 'refresh_token',
+  });
+  const res = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', body });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`GSC oauth ${res.status}: ${data.error_description || data.error || ''}`);
+  return data.access_token;
+}
+
+async function gscRows(env, token, start, end, dims, limit) {
+  const site = encodeURIComponent(env.GSC_PROPERTY || 'https://cncdisplay.com/');
+  const res = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${site}/searchAnalytics/query`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ startDate: start, endDate: end, dimensions: dims, rowLimit: limit, dataState: 'final' }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`GSC ${res.status}: ${data.error?.message || ''}`);
+  return data.rows || [];
+}
+
+async function trafficGsc(env, days) {
+  const token = await gscToken(env);
+  // GSC lags 2-3 days, so the window ends yesterday.
+  const end = isoDaysAgo(1);
+  const start = isoDaysAgo(days);
+  const daily = await gscRows(env, token, start, end, ['date'], 200);
+  const totals = daily.reduce((acc, r) => {
+    acc.clicks += r.clicks; acc.impressions += r.impressions;
+    acc.pos += r.position * r.impressions;
+    return acc;
+  }, { clicks: 0, impressions: 0, pos: 0 });
+  const queries = await gscRows(env, token, start, end, ['query'], 30);
+  const queryPages = await gscRows(env, token, start, end, ['query', 'page'], 30);
+  return {
+    range: { start, end },
+    clicks: totals.clicks,
+    impressions: totals.impressions,
+    ctr: totals.impressions ? (totals.clicks / totals.impressions) * 100 : 0,
+    position: totals.impressions ? totals.pos / totals.impressions : 0,
+    queries: queries.map((r) => ({
+      query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+      ctr: r.ctr * 100, position: r.position,
+    })),
+    queryPages: queryPages.map((r) => ({
+      query: r.keys[0], page: r.keys[1], clicks: r.clicks,
+      impressions: r.impressions, ctr: r.ctr * 100, position: r.position,
+    })),
+  };
+}
+
+async function handleTraffic(url, env) {
+  const days = Math.min(Math.max(Number(url.searchParams.get('days') || 7), 1), 90);
+  const out = { days, generatedAt: new Date().toISOString() };
+  try {
+    out.cf = await trafficRum(env, days);
+  } catch (e) {
+    out.cfError = e.message || String(e);
+  }
+  try {
+    out.gsc = await trafficGsc(env, days);
+  } catch (e) {
+    out.gscError = e.message || String(e);
+  }
+  return json(out);
 }
 
 /* ------------------------------------------------------------------ router */
@@ -1141,6 +1087,11 @@ export default {
       return handleTestNotify(url, env);
     }
 
+    // Public contact form. No auth: this is what the website posts to.
+    if (path === '/api/inquiry' && request.method === 'POST') {
+      return handleInquiry(request, env);
+    }
+
     const authed = await isAdmin(request, url, env).catch(() => false);
 
     // The page itself carries no data: it probes /api/orders and shows a login
@@ -1163,6 +1114,15 @@ export default {
     if (path === '/api/orders' && request.method === 'POST') return handleManual(request, env);
     if (path === '/api/orders/manual' && request.method === 'POST') return handleManual(request, env);
     if (path === '/api/paypal-sync' && request.method === 'POST') return handlePaypalSync(url, env);
+    if (path === '/api/traffic' && request.method === 'GET') return handleTraffic(url, env);
+    if (path === '/api/inquiries' && request.method === 'GET') return handleInquiryList(url, env);
+
+    const mi = path.match(/^\/api\/inquiries\/([^/]+)$/);
+    if (mi) {
+      const id = decodeURIComponent(mi[1]);
+      if (request.method === 'PATCH') return handleInquiryUpdate(request, env, id);
+      if (request.method === 'DELETE') return handleInquiryDelete(env, id);
+    }
 
     const m = path.match(/^\/api\/orders\/([^/]+)$/);
     if (m) {
