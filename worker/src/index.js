@@ -75,6 +75,23 @@ function money(value, currency) {
   return `${Number.isFinite(n) ? n.toFixed(2) : value} ${currency || ''}`.trim();
 }
 
+// Shipping cannot be booked without these. Surface gaps in the mail instead of
+// letting the order sit unnoticed.
+function shipWarn({ phone, dest, countryCode, addressLines, addr }) {
+  const s = (v) => (v == null ? '' : String(v).trim());
+  const warn = [];
+  if (!phone) warn.push('No phone number - DHL needs it, ask the buyer before shipping.');
+  if (!addressLines.length) {
+    warn.push('No ship-to address from PayPal - ask the buyer for the full address.');
+  } else if (!s(addr.address_line_1) || !s(addr.admin_area_2) || !s(addr.postal_code)) {
+    warn.push('Ship-to address looks incomplete (street / city / postal code missing).');
+  }
+  if (dest && countryCode && dest !== countryCode) {
+    warn.push(`Country mismatch: checkout selected ${dest}, PayPal address is ${countryCode}.`);
+  }
+  return warn;
+}
+
 function buildRecord(event, order) {
   const cap = event.resource || {};
   const payer = (order && order.payer) || {};
@@ -103,6 +120,8 @@ function buildRecord(event, order) {
     || (typeof cap.payer?.name === 'string' ? cap.payer.name : null);
   const [slug, qtyPart, destPart, telPart] = String(cap.custom_id || '').split('|');
   const sitePhone = telPart ? line(telPart.replace('tel=', '')) : null;
+  const dest = destPart ? destPart.replace('dest=', '') : null;
+  const countryCode = line(addr.country_code) || null;
 
   const phone =
     line(payer.phone?.phone_number?.national_number) ||
@@ -110,6 +129,8 @@ function buildRecord(event, order) {
     line(ship.phone_number) ||
     sitePhone ||
     null;
+
+  const warn = shipWarn({ phone, dest, countryCode, addressLines, addr });
 
   return {
     receivedAt: new Date().toISOString(),
@@ -122,7 +143,7 @@ function buildRecord(event, order) {
     customId: cap.custom_id,
     slug: slug || null,
     qty: qtyPart ? qtyPart.replace('qty=', '') : null,
-    dest: destPart ? destPart.replace('dest=', '') : null,
+    dest,
     items,
     payerName,
     payerEmail: payer.email_address || null,
@@ -132,6 +153,8 @@ function buildRecord(event, order) {
     shipToName: ship.name?.full_name || payerName,
     shipTo: full || null,
     addressLines,
+    countryCode,
+    warn,
     raw: { capture: cap, orderId: order && order.id },
   };
 }
@@ -162,6 +185,11 @@ function emailParts(r) {
     `Email    : ${r.payerEmail || '?'}`,
     ...addrBlock.map((l, i) => `${i === 0 ? 'Address  : ' : '           '}${l}`),
     '',
+    '--- CHECKS ---',
+    ...(r.warn && r.warn.length
+      ? r.warn.map((w) => `WARN: ${w}`)
+      : ['OK: phone, address and destination present']),
+    '',
     '--- IDS ---',
     `Invoice  : ${r.invoiceId}`,
     `Capture  : ${r.captureId}`,
@@ -182,6 +210,7 @@ function emailParts(r) {
     ['Phone', r.phone || ''],
     ['Email', r.payerEmail || ''],
     ['Address', addrBlock],
+    ['Checks', r.warn && r.warn.length ? r.warn : ['OK: phone, address and destination present']],
     ['Invoice', r.invoiceId],
     ['Capture ID', r.captureId],
     ['Order ID', r.orderId],
@@ -251,6 +280,7 @@ async function handleTestNotify(url, env) {
   if (url.searchParams.get('token') !== env.ADMIN_TOKEN) {
     return json({ error: 'unauthorized' }, 401);
   }
+  const incomplete = url.searchParams.get('incomplete') === '1';
   const sample = {
     receivedAt: new Date().toISOString(),
     captureId: 'TEST-CAPTURE',
@@ -272,9 +302,29 @@ async function handleTestNotify(url, env) {
     shipTo: '2635 Paldan Drive, Auburn Hills, MI 48326, US',
     shipToName: 'Test Buyer',
     addressLines: ['2635 Paldan Drive', 'Auburn Hills, MI 48326', 'US'],
+    countryCode: 'US',
+    warn: [],
   };
+  if (incomplete) {
+    Object.assign(sample, {
+      phone: null,
+      company: null,
+      shipTo: null,
+      addressLines: [],
+      countryCode: null,
+      dest: 'US',
+      payerName: 'Incomplete Test Buyer',
+    });
+    sample.warn = shipWarn({
+      phone: sample.phone,
+      dest: sample.dest,
+      countryCode: sample.countryCode,
+      addressLines: sample.addressLines,
+      addr: {},
+    });
+  }
   const result = await notify(sample, env);
-  return json({ ok: result === 'sent', result, to: env.NOTIFY_TO || null });
+  return json({ ok: result === 'sent', result, to: env.NOTIFY_TO || null, incomplete });
 }
 
 async function handlePaypalSelftest(url, env) {
@@ -314,7 +364,7 @@ async function handleList(url, env) {
   records.sort((a, b) => (a.receivedAt < b.receivedAt ? 1 : -1));
 
   if (url.searchParams.get('format') === 'html') {
-    const rows = records.map((r) => `<tr><td>${escapeHtml(r.receivedAt)}</td><td>${escapeHtml(money(r.amount, r.currency))}</td><td>${escapeHtml(r.slug)}</td><td>${escapeHtml(r.payerName)}<br>${escapeHtml(r.payerEmail)}<br>${escapeHtml(r.phone)}</td><td>${escapeHtml(r.shipToName)}${r.company ? `<br>${escapeHtml(r.company)}` : ''}<br>${(r.addressLines || [r.shipTo || '']).map(escapeHtml).join('<br>')}</td><td>${escapeHtml(r.captureId)}</td></tr>`).join('');
+    const rows = records.map((r) => `<tr><td>${escapeHtml(r.receivedAt)}</td><td>${escapeHtml(money(r.amount, r.currency))}</td><td>${escapeHtml(r.slug)}</td><td>${escapeHtml(r.payerName)}<br>${escapeHtml(r.payerEmail)}<br>${escapeHtml(r.phone)}</td><td>${escapeHtml(r.shipToName)}${r.company ? `<br>${escapeHtml(r.company)}` : ''}<br>${(r.addressLines || [r.shipTo || '']).map(escapeHtml).join('<br>')}${r.warn && r.warn.length ? `<br><span style="color:#c00">&#9888; ${r.warn.length} issue(s): ${r.warn.map(escapeHtml).join(' / ')}</span>` : ''}</td><td>${escapeHtml(r.captureId)}</td></tr>`).join('');
     return new Response(
       `<!doctype html><meta charset="utf-8"><title>cncdisplay orders</title><body style="font:14px system-ui;padding:20px"><h2>Orders (${records.length})</h2><table cellpadding="6" style="border-collapse:collapse"><tr><th>Received</th><th>Amount</th><th>Page</th><th>Buyer</th><th>Ship to</th><th>Capture</th></tr>${rows}</table></body>`,
       { headers: { 'Content-Type': 'text/html; charset=utf-8' } },

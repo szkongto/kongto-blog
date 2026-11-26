@@ -239,15 +239,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;l
 
           </div>
 
-            <div><label class="th-bold">Phone:</label>
-
-              <input id="buyerPhone" class="qty-input" type="tel" inputmode="tel" autocomplete="tel" maxlength="32" placeholder="For DHL delivery" style="width:180px">
-
+            <div><label class="th-bold">Phone <span style="color:#c00">*</span>:</label>
+              <input id="buyerPhone" class="qty-input" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" maxlength="32" placeholder="Required - DHL needs it" style="width:180px" oninput="var e=document.getElementById('ppFormError');if(e){e.style.display='none'}">
             </div>
+            <div id="ppFormError" role="alert" style="display:none;color:#c00;font-size:13px;margin:6px 0"></div>
 
           <div id="paypal-button-container" class="qty-row"><p class="text-muted-sm-c">Payment button loading...</p></div>
 
           <p class="hint-sm">🔒 Secure checkout via PayPal. Credit/debit cards accepted.</p>
+          <p class="hint-sm">📦 Your full ship-to address (street, city, postal code) is entered on the PayPal page. Incomplete address or missing phone delays shipment.</p>
 
         </div>
           </div>
@@ -745,6 +745,27 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
   if (ppEl && priceEl) ppEl.textContent = '$' + parseFloat(priceEl.textContent.replace(/[$,]/g,'')).toFixed(2);
 
   paypal.Buttons({
+    onClick: function(data, actions) {
+      var _perr = document.getElementById('ppFormError');
+      var _pcountry = document.getElementById('shippingCountry');
+      var _pinput = document.getElementById('buyerPhone');
+      var _pdigits = _pinput ? String(_pinput.value || '').replace(/\D/g, '') : '';
+      var _pmsg = '';
+      if (!_pcountry || !_pcountry.value) {
+        _pmsg = 'Please select a shipping country.';
+      } else if (_pdigits.length < 7 || _pdigits.length > 15) {
+        _pmsg = 'Please enter your phone number with country code (7-15 digits). DHL needs a phone number to deliver.';
+      }
+      if (_pmsg) {
+        if (_perr) { _perr.textContent = _pmsg; _perr.style.display = 'block'; }
+        if (_pdigits.length < 7 && _pinput) { _pinput.focus(); }
+        if (actions && actions.reject) { return actions.reject(); }
+        return false;
+      }
+      if (_perr) { _perr.style.display = 'none'; _perr.textContent = ''; }
+      return actions && actions.resolve ? actions.resolve() : true;
+    },
+
 
     createOrder: function(data, actions) {
 
