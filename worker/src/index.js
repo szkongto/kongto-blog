@@ -747,6 +747,7 @@ function adminPage() {
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>cncdisplay order desk</title>
 <style>
 *{box-sizing:border-box}
@@ -1073,7 +1074,11 @@ export default {
     // box when that returns 401.
     if (path === '/admin' || path.startsWith('/admin/') || path === '/api/admin') {
       return new Response(adminPage(), {
-        headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'no-store',
+          'X-Robots-Tag': 'noindex, nofollow',
+        },
       });
     }
 
