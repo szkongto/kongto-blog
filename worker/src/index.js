@@ -337,6 +337,50 @@ function safeEqual(a, b) {
   return diff === 0;
 }
 
+// Password lives in KV once changed from the desk, so the owner can rotate it
+// without touching Cloudflare secrets. ADMIN_PASSWORD stays as the bootstrap
+// value until then.
+const PW_KEY = 'admin:password';
+
+async function sha256Hex(s) {
+  const d = await crypto.subtle.digest('SHA-256', enc.encode(s));
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+function randomHex(bytes) {
+  const a = new Uint8Array(bytes);
+  crypto.getRandomValues(a);
+  return [...a].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function checkPassword(env, pw) {
+  const raw = await env.ORDERS.get(PW_KEY);
+  if (raw) {
+    const rec = JSON.parse(raw);
+    return safeEqual(await sha256Hex(`${rec.salt}|${pw}`), rec.hash);
+  }
+  return !!env.ADMIN_PASSWORD && safeEqual(pw, env.ADMIN_PASSWORD);
+}
+
+async function setPassword(env, pw) {
+  const salt = randomHex(16);
+  await env.ORDERS.put(PW_KEY, JSON.stringify({
+    salt,
+    hash: await sha256Hex(`${salt}|${pw}`),
+    updatedAt: new Date().toISOString(),
+  }));
+}
+
+async function handlePassword(request, env) {
+  const body = await request.json().catch(() => ({}));
+  const current = String(body.current || '');
+  const next = String(body.next || '');
+  if (!(await checkPassword(env, current))) return json({ error: 'current password wrong' }, 401);
+  if (next.length < 8) return json({ error: 'new password must be at least 8 characters' }, 400);
+  await setPassword(env, next);
+  return json({ ok: true });
+}
+
 async function makeSession(env) {
   const exp = String(Date.now() + SESSION_TTL * 1000);
   return `${exp}.${await hmacHex(env.SESSION_SECRET, `v1|${exp}`)}`;
@@ -404,8 +448,7 @@ async function handleWebhook(request, env) {
 async function handleLogin(request, env) {
   const body = await request.json().catch(() => ({}));
   const password = String(body.password || '');
-  if (!env.ADMIN_PASSWORD) return json({ error: 'ADMIN_PASSWORD not configured' }, 500);
-  if (!safeEqual(password, env.ADMIN_PASSWORD)) return json({ error: 'wrong password' }, 401);
+  if (!(await checkPassword(env, password))) return json({ error: 'wrong password' }, 401);
   const cookie = await makeSession(env);
   return new Response(JSON.stringify({ ok: true }), {
     headers: {
@@ -805,6 +848,7 @@ dl.kv dd{margin:0;word-break:break-word}
     <button id="btnSync" title="Import captures PayPal knows about but the webhook missed">Sync PayPal</button>
     <button id="btnManual">Manual order</button>
     <a class="btn" href="/api/orders.csv">CSV</a>
+    <button id="btnPw">Change password</button>
     <button id="btnOut">Log out</button>
   </header>
   <div class="bar">
@@ -1029,8 +1073,36 @@ dl.kv dd{margin:0;word-break:break-word}
   el('btnOut').onclick = function () {
     fetch('/api/logout', { method: 'POST' }).then(function () { showApp(false); });
   };
+  function password() {
+    el('card').innerHTML =
+      '<h2>Change password</h2>' +
+      '<div class="grid">' +
+      '<label>Current</label><input id="pwCur" type="password" autocomplete="current-password">' +
+      '<label>New</label><input id="pwNew" type="password" autocomplete="new-password" placeholder="at least 8 characters">' +
+      '<label>Repeat new</label><input id="pwNew2" type="password" autocomplete="new-password">' +
+      '</div>' +
+      '<div class="actions"><button id="pwSave">Save</button><button id="pwClose">Close</button></div>' +
+      '<div class="err" id="pwErr"></div>';
+    el('panel').hidden = false;
+    el('pwClose').onclick = function () { el('panel').hidden = true; };
+    el('pwSave').onclick = function () {
+      if (el('pwNew').value !== el('pwNew2').value) {
+        el('pwErr').textContent = 'New passwords do not match.';
+        return;
+      }
+      api('/api/password', {
+        method: 'POST',
+        body: JSON.stringify({ current: el('pwCur').value, next: el('pwNew').value })
+      }).then(function () {
+        el('panel').hidden = true;
+        alert('Password changed. It takes effect for new logins within about a minute.');
+      }).catch(function (e) { el('pwErr').textContent = e.message; });
+    };
+  }
+
   el('btnManual').onclick = manual;
   el('btnSync').onclick = sync;
+  el('btnPw').onclick = password;
   el('q').oninput = function () { clearTimeout(window.__t); window.__t = setTimeout(load, 250); };
   el('stage').onchange = load;
 
@@ -1085,6 +1157,7 @@ export default {
 
     if (!authed) return json({ error: 'unauthorized' }, 401);
 
+    if (path === '/api/password' && request.method === 'POST') return handlePassword(request, env);
     if (path === '/api/orders.csv' && request.method === 'GET') return handleCsv(env);
     if (path === '/api/orders' && request.method === 'GET') return handleList(url, env);
     if (path === '/api/orders' && request.method === 'POST') return handleManual(request, env);
