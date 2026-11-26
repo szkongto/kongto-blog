@@ -7,15 +7,14 @@ compatibility_date = "2026-11-25"
 binding = "ORDERS"
 id = "80a18171c0344a5ea52694bcd46bc6a0"
 
-# Order notification mail. Requires at least one verified destination address
-# in Cloudflare Email Routing for this zone. Uncomment both blocks once the
-# address is known.
-# [[send_email]]
-# name = "NOTIFY"
-# destination_address = "REPLACE_WITH_VERIFIED_ADDRESS"
+# Order notification mail. Destination must be a verified address in Cloudflare
+# Email Routing for this zone (free plan restriction).
+[[send_email]]
+name = "NOTIFY"
+destination_address = "szkongto01@foxmail.com"
 
 [vars]
-NOTIFY_TO = ""
+NOTIFY_TO = "szkongto01@foxmail.com"
 
 # Served under the site; the zone is already proxied through Cloudflare and the
 # site has no /api/ pages, so nothing else is shadowed.

@@ -171,7 +171,7 @@ async function notify(record, env) {
   try {
     await env.NOTIFY.send({
       to: env.NOTIFY_TO,
-      from: { name: 'cncdisplay orders', address: 'orders@cncdisplay.com' },
+      from: { email: 'orders@cncdisplay.com', name: 'cncdisplay orders' },
       subject,
       text,
       html,
@@ -215,6 +215,33 @@ async function handleWebhook(request, env) {
   return json({ ok: true, captureId: record.captureId, mail });
 }
 
+async function handleTestNotify(url, env) {
+  if (url.searchParams.get('token') !== env.ADMIN_TOKEN) {
+    return json({ error: 'unauthorized' }, 401);
+  }
+  const sample = {
+    receivedAt: new Date().toISOString(),
+    captureId: 'TEST-CAPTURE',
+    orderId: 'TEST-ORDER',
+    status: 'COMPLETED',
+    amount: '507.00',
+    currency: 'USD',
+    invoiceId: 'CNCD-TEST',
+    customId: 'fanuc-a61l-0001-0072-lcd-upgrade|qty=1|dest=US',
+    slug: 'fanuc-a61l-0001-0072-lcd-upgrade',
+    qty: '1',
+    dest: 'US',
+    items: [{ name: 'FANUC A61L-0001-0072 9-inch CRT to LCD Upgrade', quantity: 1, unit: '480.00' }],
+    payerName: 'Test Buyer',
+    payerEmail: 'buyer@example.com',
+    payerId: null,
+    shipTo: '2635 Paldan Drive, Auburn Hills, MI, 48326, US',
+    shipToName: 'Test Buyer',
+  };
+  const result = await notify(sample, env);
+  return json({ ok: result === 'sent', result, to: env.NOTIFY_TO || null });
+}
+
 async function handleList(url, env) {
   const token = url.searchParams.get('token');
   if (!token || token !== env.ADMIN_TOKEN) return json({ error: 'unauthorized' }, 401);
@@ -246,6 +273,9 @@ export default {
     }
     if (url.pathname === '/api/orders' && request.method === 'GET') {
       return handleList(url, env);
+    }
+    if (url.pathname === '/api/test-notify' && request.method === 'POST') {
+      return handleTestNotify(url, env);
     }
     return json({ error: 'not found' }, 404);
   },
