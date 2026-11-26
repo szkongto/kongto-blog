@@ -3,9 +3,10 @@
 
 标准:
   - 文章标题含明确型号 -> 页头 Get Quote 指向该型号 /products/<slug>.html
-  - 系列/通用文章       -> 保持 /quote.html
+  - 系列/通用文章       -> /quote.html
   - 只改 <header> 内的那一个 Get Quote; 正文与页脚的 /quote.html 不动
   - 只处理英文 posts/*.html, 中文页不动
+  - 页头若缺 Get Quote（老页面的短导航）, 补进 .nav-links, 不改其它导航项
 
 映射来源: scripts/build_article_product_map.py 的 build()（不读 data/ CSV,
 因为 data/ 被 .gitignore 排除, CI 上不存在该文件）。
@@ -16,7 +17,6 @@ lang-switch 的页头。那里的同名逻辑必须与本脚本一致, 否则本
 
 用法: python scripts/fix_nav_quote.py [--apply]
 """
-import io
 import os
 import re
 import sys
@@ -33,28 +33,37 @@ import build_article_product_map as apm  # noqa: E402
 
 HEADER_RE = re.compile(r'<header>.*?</header>', re.DOTALL)
 QUOTE_RE = re.compile(r'<a href="[^"]*" class="text-accent">Get Quote</a>')
+NAVLINKS_RE = re.compile(r'(<div class="nav-links">)(.*?)(</div>)', re.DOTALL)
+ANCHOR = '<a href="%s" class="text-accent">Get Quote</a>'
 
 
 def main():
     apply = '--apply' in sys.argv
-    changed = same = missing = 0
-    missing_files = []
+    changed = same = inserted = 0
+    problems = []
     for rel, url, match_type, _note in apm.build():
-        if match_type != 'model':
-            continue
+        want = url if match_type == 'model' else '/quote.html'
         text = open(rel, encoding='utf-8').read()
         m = HEADER_RE.search(text)
         if not m:
-            missing += 1
-            missing_files.append(rel + ' (no <header>)')
+            problems.append(rel + ' (no <header>)')
             continue
         header = m.group(0)
-        new_header, n = QUOTE_RE.subn(
-            '<a href="%s" class="text-accent">Get Quote</a>' % url, header)
+        new_header, n = QUOTE_RE.subn(ANCHOR % want, header)
         if n == 0:
-            missing += 1
-            missing_files.append(rel)
-            continue
+            # 老短导航没有 Get Quote: 补进 .nav-links 末尾, 其它导航项不动
+            new_header, n = NAVLINKS_RE.subn(
+                lambda mm: mm.group(1) + mm.group(2) + ANCHOR % want + mm.group(3),
+                header)
+            if n == 0:
+                # `.nav-links` 未闭合的页面（mazak 页如此）: 放在 </nav> 前,
+                # 不顺手补 </div> —— 结构修复不属本次范围
+                new_header, n = re.subn(r'</nav>', ANCHOR % want + '</nav>',
+                                        header, count=1)
+            if n == 0:
+                problems.append(rel + ' (no .nav-links)')
+                continue
+            inserted += 1
         if new_header == header:
             same += 1
             continue
@@ -64,9 +73,11 @@ def main():
             with open(rel, 'w', encoding='utf-8', newline='') as f:
                 f.write(text)
     print(f"{'APPLIED' if apply else 'DRY-RUN'}: changed={changed} already-ok={same} "
-          f"no-get-quote={missing}")
-    for f in missing_files:
-        print('  ! ' + f)
+          f"inserted={inserted} problems={len(problems)}")
+    for p in problems:
+        print('  ! ' + p)
+    if problems:
+        sys.exit(1)
 
 
 if __name__ == '__main__':

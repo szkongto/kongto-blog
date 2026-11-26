@@ -76,12 +76,18 @@ def main():
             problems.append('%s: 残留旧按钮文案/类名' % rel)
 
         hdr = HEADER_RE.search(text)
-        if hdr:
-            q = QUOTE_RE.search(hdr.group(0))
-            if q:
-                want = url if match_type == 'model' else '/quote.html'
-                if q.group(1) != want:
-                    problems.append('%s: 页头 Get Quote=%s 应为 %s' % (rel, q.group(1), want))
+        if not hdr:
+            problems.append('%s: 缺 <header>' % rel)
+        else:
+            quotes = QUOTE_RE.findall(hdr.group(0))
+            want = url if match_type == 'model' else '/quote.html'
+            if not quotes:
+                # 老短导航常整条缺 Get Quote, 静默放过就等于标准形同虚设
+                problems.append('%s: 页头缺 Get Quote（应为 %s）' % (rel, want))
+            elif len(quotes) != 1:
+                problems.append('%s: 页头 Get Quote %d 个（应为 1）' % (rel, len(quotes)))
+            elif quotes[0] != want:
+                problems.append('%s: 页头 Get Quote=%s 应为 %s' % (rel, quotes[0], want))
 
     # posts/ 下真实页（非跳转桩）必须都在映射里, 且非文章页不得带购买按钮
     for f in sorted(os.listdir('posts')):
