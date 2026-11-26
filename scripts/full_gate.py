@@ -29,6 +29,7 @@ GATES = [
     ("model_naming",        ["python", "scripts/check_model_naming.py"],        True),
     ("image_size",          ["python", "scripts/check_image_size.py"],          True),
     ("price_consistency",   ["python", "scripts/check_price_consistency.py"],   True),
+    ("checkout_payload",    ["python", "scripts/check_checkout_payload.py"],    True),
     ("llms_index",          ["python", "scripts/check_llms.py"],                True),
     ("css_comments",        ["python", "scripts/check_css_comments.py"],        True),
     ("cta_links",           ["python", "scripts/check_cta_links.py"],           True),
