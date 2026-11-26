@@ -23,6 +23,7 @@
  *   POST   /api/paypal-sync         pull missing captures from PayPal reporting
  *   GET    /api/inquiries           list (?q=&status=)
  *   PATCH  /api/inquiries/:id       { status, note }
+ *   POST   /api/inquiries/:id/reply multipart: text + files[] (mail to customer)
  *   DELETE /api/inquiries/:id
  *   GET    /api/traffic?days=N      Cloudflare RUM + Search Console summary
  *
@@ -804,6 +805,9 @@ async function notifyInquiry(rec, env) {
     await env.NOTIFY.send({
       to: env.NOTIFY_TO,
       from: { email: 'orders@cncdisplay.com', name: 'cncdisplay website' },
+      // Without this, hitting Reply in the mailbox answers orders@cncdisplay.com
+      // instead of the visitor.
+      replyTo: rec.email || undefined,
       subject: `[INQUIRY] ${rec.name || rec.email || 'website visitor'} - ${(rec.page || 'contact').split('/').pop()}`,
       text: [
         `New website inquiry ${rec.receivedAt}`,
@@ -925,6 +929,105 @@ async function handleInquiryUpdate(request, env, id) {
   rec.history.push({ at: rec.updatedAt, what: changes.join('; ') });
   await env.ORDERS.put(`${INQ_PREFIX}${id}`, JSON.stringify(rec));
   return json({ ok: true, changes, inquiry: rec });
+}
+
+// Reply straight from the desk. Sends through the send_email binding, so the
+// customer gets the mail from orders@cncdisplay.com and the desk keeps a copy.
+// Free-plan accounts can only send to verified destination addresses; the raw
+// platform error is surfaced instead of being hidden.
+const REPLY_MAX_FILES = 5;
+const REPLY_MAX_BYTES = 3 * 1024 * 1024;
+
+async function handleInquiryReply(request, env, id) {
+  const raw = await env.ORDERS.get(`${INQ_PREFIX}${id}`);
+  if (!raw) return json({ error: 'not found' }, 404);
+  const rec = JSON.parse(raw);
+  if (!rec.email) return json({ error: '这条留言没有邮箱，无法回复。请先用电话联系，或补一个邮箱。' }, 400);
+
+  const form = await request.formData().catch(() => null);
+  if (!form) return json({ error: 'multipart form required' }, 400);
+  const text = String(form.get('text') || '').trim().slice(0, 20000);
+  const files = form.getAll('files').filter((f) => typeof f === 'object' && f.size > 0);
+  if (!text && !files.length) return json({ error: '正文和附件不能都为空' }, 400);
+  if (files.length > REPLY_MAX_FILES) return json({ error: `附件最多 ${REPLY_MAX_FILES} 个` }, 400);
+  let total = 0;
+  for (const f of files) total += f.size;
+  if (total > REPLY_MAX_BYTES) {
+    return json({ error: `附件合计 ${(total / 1048576).toFixed(1)} MB，上限 3 MB` }, 413);
+  }
+
+  const attachments = [];
+  const inlines = [];
+  for (let i = 0; i < files.length; i++) {
+    const f = files[i];
+    const buf = await f.arrayBuffer();
+    const type = f.type || 'application/octet-stream';
+    const name = String(f.name || `file-${i + 1}`).slice(0, 120);
+    if (/^image\//.test(type)) {
+      const contentId = `img${i}@cncdisplay.com`;
+      attachments.push({ content: buf, filename: name, type, disposition: 'inline', contentId });
+      inlines.push({ contentId, name });
+    } else {
+      attachments.push({ content: buf, filename: name, type, disposition: 'attachment' });
+    }
+  }
+
+  const subject = `Re: ${rec.machine ? `${rec.machine} - ` : ''}your inquiry to cncdisplay`;
+  const textBody = [
+    text,
+    '',
+    '--',
+    'cncdisplay.com  |  orders@cncdisplay.com',
+    '',
+    '--- 你原来的留言 ---',
+    rec.message || '',
+  ].join('\n');
+  const htmlBody =
+    '<div style="font:14px/1.6 system-ui,-apple-system,Segoe UI,Microsoft YaHei,sans-serif;color:#1c2530">' +
+    escapeHtml(text).replace(/\n/g, '<br>') +
+    inlines.map((im) => `<div style="margin:12px 0"><img src="cid:${im.contentId}" alt="${escapeHtml(im.name)}" style="max-width:100%"></div>`).join('') +
+    '<hr style="border:0;border-top:1px solid #e6eaef;margin:16px 0">' +
+    '<div style="color:#78889a;font-size:13px">cncdisplay.com &nbsp;|&nbsp; orders@cncdisplay.com</div>' +
+    '<div style="color:#78889a;font-size:12px;margin-top:10px">--- 你原来的留言 ---<br>' +
+    escapeHtml(rec.message || '').replace(/\n/g, '<br>') + '</div></div>';
+
+  const payload = {
+    to: rec.email,
+    from: { email: 'orders@cncdisplay.com', name: 'cncdisplay' },
+    subject,
+    text: textBody,
+    html: htmlBody,
+  };
+  if (attachments.length) payload.attachments = attachments;
+  if (env.NOTIFY_TO) payload.cc = env.NOTIFY_TO;
+
+  try {
+    await env.NOTIFY.send(payload);
+  } catch (e) {
+    const msg = e && e.message ? e.message : String(e);
+    let hint = null;
+    if (/RECIPIENT_PLAN_RESTRICTED|PLAN_RESTRICTED/i.test(msg)) {
+      hint = 'Cloudflare 免费版只能发给已验证地址。要直接回复客户，需要 Workers Paid（约 $5/月），或改用外部邮件 API。';
+    } else if (/RECIPIENT_NOT_ALLOWED|recipient/i.test(msg)) {
+      hint = 'send_email 绑定设有 destination_address 限制，需在 wrangler.toml 里去掉或改用 allowed_destination_addresses。';
+    }
+    return json({ error: `发送失败：${msg}`, hint }, 502);
+  }
+
+  const now = new Date().toISOString();
+  rec.replies = rec.replies || [];
+  rec.replies.push({
+    at: now,
+    text,
+    files: files.map((f) => ({ name: f.name, size: f.size, type: f.type })),
+    to: rec.email,
+  });
+  if (rec.status === 'new') rec.status = 'following';
+  rec.updatedAt = now;
+  rec.history = rec.history || [];
+  rec.history.push({ at: now, what: `replied to ${rec.email}${files.length ? ` +${files.length} file(s)` : ''}` });
+  await env.ORDERS.put(`${INQ_PREFIX}${id}`, JSON.stringify(rec));
+  return json({ ok: true, replies: rec.replies.length, status: rec.status, inquiry: rec });
 }
 
 async function handleInquiryDelete(env, id) {
@@ -1116,6 +1219,9 @@ export default {
     if (path === '/api/paypal-sync' && request.method === 'POST') return handlePaypalSync(url, env);
     if (path === '/api/traffic' && request.method === 'GET') return handleTraffic(url, env);
     if (path === '/api/inquiries' && request.method === 'GET') return handleInquiryList(url, env);
+
+    const mr = path.match(/^\/api\/inquiries\/([^/]+)\/reply$/);
+    if (mr && request.method === 'POST') return handleInquiryReply(request, env, decodeURIComponent(mr[1]));
 
     const mi = path.match(/^\/api\/inquiries\/([^/]+)$/);
     if (mi) {

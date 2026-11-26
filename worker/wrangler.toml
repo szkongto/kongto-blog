@@ -7,11 +7,12 @@ compatibility_date = "2026-11-25"
 binding = "ORDERS"
 id = "80a18171c0344a5ea52694bcd46bc6a0"
 
-# Order notification mail. Destination must be a verified address in Cloudflare
-# Email Routing for this zone (free plan restriction).
+# Order notification mail + customer replies from the desk. No
+# destination_address here on purpose: the desk must be able to mail buyers.
+# Without it Cloudflare sends to any recipient given a paid Workers plan; on the
+# free plan only verified destinations are allowed (E_RECIPIENT_PLAN_RESTRICTED).
 [[send_email]]
 name = "NOTIFY"
-destination_address = "szkongto01@foxmail.com"
 
 [vars]
 NOTIFY_TO = "szkongto01@foxmail.com"

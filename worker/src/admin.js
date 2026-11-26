@@ -58,6 +58,7 @@ dl.kv dd{margin:0;word-break:break-word}
 .login input{font:inherit;width:100%;padding:9px 10px;border:1px solid #cfd6df;border-radius:6px}
 .login button{margin-top:12px;width:100%;padding:9px;background:#10202f;color:#fff;border:0;border-radius:6px;font:inherit;cursor:pointer}
 .err{color:#b00020;font-size:13px;margin-top:8px;min-height:18px}
+.sec{font-size:13px;margin:18px 0 6px}
 /* traffic */
 .wrap{padding:14px 18px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
@@ -437,6 +438,8 @@ dl.kv dd{margin:0;word-break:break-word}
       '<dt>国家</dt><dd>' + esc(r.country || '-') + '</dd>' +
       '</dl>' +
       '<div class="msg">' + esc(r.message || '') + '</div>' +
+      '<div class="muted" style="font-size:12px">回复客户请直接在自己的邮箱点「回复」——通知邮件的 Reply-To 已设为访客邮箱。</div>' +
+      '<div class="err" id="iErr"></div>' +
       '<div class="grid">' +
       '<label>状态</label><select id="iStatus">' + opts + '</select>' +
       '<label>添加备注</label><textarea id="iNote" placeholder="已回复、报价金额、结果……"></textarea>' +
@@ -446,9 +449,9 @@ dl.kv dd{margin:0;word-break:break-word}
       '<button id="iClose">关闭</button>' +
       '<button id="iDel" class="danger">删除</button>' +
       '</div>' +
-      '<div class="err" id="iErr"></div>' +
-      '<h3 style="font-size:13px;margin:16px 0 4px">备注</h3><div class="hist">' + (notes || '<span class="muted">无</span>') + '</div>';
+      '<h3 class="sec">备注</h3><div class="hist">' + (notes || '<span class="muted">无</span>') + '</div>';
     el('panel').hidden = false;
+
     el('iClose').onclick = function () { el('panel').hidden = true; };
     el('iSave').onclick = function () {
       api('/api/inquiries/' + encodeURIComponent(r.id), {
