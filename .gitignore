@@ -96,3 +96,6 @@ tmp_*
 _*.py
 *.out
 *.err
+
+# 本地门禁输出
+products/qc/
