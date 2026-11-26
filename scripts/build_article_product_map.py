@@ -7,7 +7,8 @@
 
 规则:
   - 标题含 COMPAT_DATA 里的明确型号 -> 该型号产品页 (match_type=model)
-  - 无明确型号（系列/通用文章）    -> /products/ 总览     (match_type=none)
+  - 无明确型号（系列/通用文章）    -> /quote.html 询价页 (match_type=none)
+    2026-11-27 用户改口径: 没有具体型号的文章一律导去询价, 不再给 /products/ 总览
   - 标题含多个型号时取最先出现的那个, 记 note 供人工复核
 
 跳过: meta-refresh 跳转桩、audit 工件。
@@ -40,7 +41,26 @@ OVERRIDES = {
     # 文章正文未写尺寸，属运营口径而非正文推断，故单列 override。
     'posts/article_20260508_Haas_CRT_LCD_Case.html': (
         '/products/haas-12inch-9pin-crt-lcd-upgrade.html', 'manual:user-specified'),
+    # 2026-11-27 单一机型案例页：标题即点名机型，产品页 slug 与之一一对应。
+    # 这些页面以前靠「沿用既有按钮」匹配（循环论证），现改成显式人工裁决。
+    'posts/article_20260508_Haas_CRT_LCD.html': (
+        '/products/haas-12inch-9pin-crt-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-bruce-systems-custom-lcd.html': (
+        '/products/bruce-systems-6.6inch-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-delem-dm54-lcd-upgrade.html': (
+        '/products/delem-dm54-crt-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-fagor-8055-lcd-upgrade.html': (
+        '/products/fagor-8055-crt-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-kme-crt-lcd-upgrade.html': (
+        '/products/kme-17dm14af03-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-num760-lcd-upgrade.html': (
+        '/products/num-760-crt-lcd-upgrade.html', 'manual:case-single-model'),
+    'posts/case-panasonic-9inch-green-crt-lcd-upgrade.html': (
+        '/products/panasonic-9inch-green-crt-lcd-upgrade.html', 'manual:case-single-model'),
 }
+
+# 无型号文章的落点：询价页。
+FALLBACK = '/quote.html'
 
 
 def load_compat():
@@ -119,7 +139,7 @@ def build():
     for rel, text in article_files():
         title = h1_text(text)
         if not title:
-            rows.append([rel, '/products/', 'none', 'NO_H1'])
+            rows.append([rel, FALLBACK, 'none', 'NO_H1'])
             continue
         if rel in OVERRIDES:
             url, note = OVERRIDES[rel]
@@ -129,23 +149,12 @@ def build():
         if model:
             rows.append([rel, url, 'model', note])
             continue
-        # 标题无型号时, 沿用站内既有的产品链接（既有编辑意图）:
-        #   1) 文章里的 btn-pill-orange 产品卡
-        #   2) 已有的 cluster-cta 按钮若指向具体产品页（如 FAGOR 案例页）
-        for pat, note in (
-                (r'<a href="([^"]+)"[^>]*class="btn btn-primary btn-pill-orange"',
-                 'inline-card'),
-                (r'<p class="cluster-cta[^"]*">\s*<a href="([^"]+)"', 'existing-cta')):
-            hm = re.search(pat, text)
-            if hm:
-                u = hm.group(1)
-                p = u.lstrip('/')
-                if u.startswith('/products/') and u != '/products/' and \
-                        os.path.exists(p if not p.endswith('/') else p + 'index.html'):
-                    rows.append([rel, u, 'model', note])
-                    break
-        else:
-            rows.append([rel, '/products/', 'none', ''])
+        # 标题无型号 -> 询价页。
+        # 旧版这里还会「沿用文章里已有的产品链接」, 但那会读到自己上一轮写进去的
+        # 按钮, 形成循环: 一旦误判成某型号就永远改不回来(2026-11-27 四个通用
+        # FANUC/三菱页面被扣成 0093/MDT962B 就是这么来的)。单一机型案例页改为
+        # 显式 OVERRIDES, 不再从页面内容反推。
+        rows.append([rel, FALLBACK, 'none', ''])
     return rows
 
 
