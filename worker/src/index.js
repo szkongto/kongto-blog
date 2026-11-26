@@ -77,19 +77,35 @@ function money(value, currency) {
 
 function buildRecord(event, order) {
   const cap = event.resource || {};
+  const payer = (order && order.payer) || {};
   const pu = (order && order.purchase_units && order.purchase_units[0]) || {};
-  const unit = pu.payments && pu.payments.captures && pu.payments.captures[0];
-  const shipping = (pu.shipping || (order && order.payer && order.payer.address) || {});
+  const ship = pu.shipping || {};
+  const addr = ship.address || payer.address || {};
   const items = (pu.items || []).map((it) => ({
     name: it.name,
     quantity: Number(it.quantity || 1),
     unit: it.unit_amount && it.unit_amount.value,
   }));
-  const full = (
-    [shipping.address_line_1, shipping.address_line_2, shipping.admin_area_2,
-      shipping.admin_area_1, shipping.postal_code, shipping.country_code]
-      .filter(Boolean).join(', ')
-  );
+  const line = (v) => (v == null ? '' : String(v).trim());
+  const cityLine = [
+    line(addr.admin_area_2),
+    [line(addr.admin_area_1), line(addr.postal_code)].filter(Boolean).join(' '),
+  ].filter(Boolean).join(', ');
+  const addressLines = [
+    line(addr.address_line_1),
+    line(addr.address_line_2),
+    cityLine,
+    line(addr.country_code),
+  ].filter(Boolean);
+  const full = addressLines.join(', ');
+
+  const payerName = [payer.name?.given_name, payer.name?.surname].filter(Boolean).join(' ')
+    || (typeof cap.payer?.name === 'string' ? cap.payer.name : null);
+  const phone =
+    line(payer.phone?.phone_number?.national_number) ||
+    line(cap.payer?.phone?.phone_number?.national_number) ||
+    line(ship.phone_number) ||
+    null;
 
   const [slug, qtyPart, destPart] = String(cap.custom_id || '').split('|');
 
@@ -106,15 +122,14 @@ function buildRecord(event, order) {
     qty: qtyPart ? qtyPart.replace('qty=', '') : null,
     dest: destPart ? destPart.replace('dest=', '') : null,
     items,
-    payerName: order && order.payer
-      ? [order.payer.name?.given_name, order.payer.name?.surname].filter(Boolean).join(' ')
-      : (cap.payer?.name || null),
-    payerEmail: order && order.payer ? order.payer.email_address : null,
-    payerId: order && order.payer ? order.payer.payer_id : null,
+    payerName,
+    payerEmail: payer.email_address || null,
+    payerId: payer.payer_id || null,
+    company: payer.business_name || null,
+    phone,
+    shipToName: ship.name?.full_name || payerName,
     shipTo: full || null,
-    shipToName: shipping.name?.full_name || (order && order.payer?.name
-      ? [order.payer.name.given_name, order.payer.name.surname].filter(Boolean).join(' ')
-      : null),
+    addressLines,
     raw: { capture: cap, orderId: order && order.id },
   };
 }
@@ -127,6 +142,8 @@ function escapeHtml(s) {
 
 function emailParts(r) {
   const subject = `[NEW ORDER] ${money(r.amount, r.currency)} - ${r.slug || r.captureId}`;
+  const addrBlock = r.addressLines && r.addressLines.length ? r.addressLines : [r.shipTo || '?'];
+
   const text = [
     `New PayPal order received ${r.receivedAt}`,
     '',
@@ -135,13 +152,18 @@ function emailParts(r) {
     `Page     : ${r.slug}`,
     `Link     : ${r.slug ? `https://cncdisplay.com/products/${r.slug}.html` : '-'}`,
     `Qty      : ${r.qty}   Dest: ${r.dest}`,
+    '',
+    '--- SHIP TO ---',
+    `Name     : ${r.shipToName || '?'}`,
+    `Company  : ${r.company || '-'}`,
+    `Phone    : ${r.phone || '-'}`,
+    `Email    : ${r.payerEmail || '?'}`,
+    ...addrBlock.map((l, i) => `${i === 0 ? 'Address  : ' : '           '}${l}`),
+    '',
+    '--- IDS ---',
     `Invoice  : ${r.invoiceId}`,
     `Capture  : ${r.captureId}`,
     `Order ID : ${r.orderId}`,
-    '',
-    `Buyer    : ${r.payerName || '?'} <${r.payerEmail || '?'}>`,
-    `Ship to  : ${r.shipToName || '?'}`,
-    `Address  : ${r.shipTo || '?'}`,
     '',
     'Next steps: open PayPal Activity, buy the shipping label, then send the',
     'buyer a confirmation with the tracking number.',
@@ -150,18 +172,24 @@ function emailParts(r) {
   const rows = [
     ['Amount', money(r.amount, r.currency)],
     ['Item', r.items.map((i) => `${i.name} x${i.quantity}`).join('; ')],
-    ['Page', r.slug ? `<a href="https://cncdisplay.com/products/${r.slug}.html">${r.slug}</a>` : ''],
+    ['Page', r.slug || ''],
     ['Link', r.slug ? `https://cncdisplay.com/products/${r.slug}.html` : ''],
     ['Qty / Dest', `${r.qty} / ${r.dest}`],
+    ['Name', r.shipToName || ''],
+    ['Company', r.company || ''],
+    ['Phone', r.phone || ''],
+    ['Email', r.payerEmail || ''],
+    ['Address', addrBlock],
     ['Invoice', r.invoiceId],
     ['Capture ID', r.captureId],
     ['Order ID', r.orderId],
-    ['Buyer', `${r.payerName || '?'} <${r.payerEmail || '?'}>`],
-    ['Ship to', `${r.shipToName || '?'} — ${r.shipTo || '?'}`],
     ['Received', r.receivedAt],
   ];
   const html = `<h2>New PayPal order</h2><table cellpadding="6" style="border-collapse:collapse;font:14px system-ui">${
-    rows.map(([k, v]) => `<tr><td style="border:1px solid #ddd;font-weight:600">${escapeHtml(k)}</td><td style="border:1px solid #ddd">${escapeHtml(v)}</td></tr>`).join('')
+    rows.map(([k, v]) => {
+      const cell = Array.isArray(v) ? v.map(escapeHtml).join('<br>') : escapeHtml(v);
+      return `<tr><td style="border:1px solid #ddd;font-weight:600">${escapeHtml(k)}</td><td style="border:1px solid #ddd">${cell}</td></tr>`;
+    }).join('')
   }</table><p>Next steps: open PayPal Activity, buy the shipping label, then email the buyer the tracking number.</p>`;
 
   return { subject, text, html };
@@ -237,8 +265,11 @@ async function handleTestNotify(url, env) {
     payerName: 'Test Buyer',
     payerEmail: 'buyer@example.com',
     payerId: null,
-    shipTo: '2635 Paldan Drive, Auburn Hills, MI, 48326, US',
+    company: 'Example Manufacturing Inc.',
+    phone: '248-555-0100',
+    shipTo: '2635 Paldan Drive, Auburn Hills, MI 48326, US',
     shipToName: 'Test Buyer',
+    addressLines: ['2635 Paldan Drive', 'Auburn Hills, MI 48326', 'US'],
   };
   const result = await notify(sample, env);
   return json({ ok: result === 'sent', result, to: env.NOTIFY_TO || null });
@@ -257,7 +288,7 @@ async function handleList(url, env) {
   records.sort((a, b) => (a.receivedAt < b.receivedAt ? 1 : -1));
 
   if (url.searchParams.get('format') === 'html') {
-    const rows = records.map((r) => `<tr><td>${escapeHtml(r.receivedAt)}</td><td>${escapeHtml(money(r.amount, r.currency))}</td><td>${escapeHtml(r.slug)}</td><td>${escapeHtml(r.payerName)}</td><td>${escapeHtml(r.shipTo)}</td><td>${escapeHtml(r.captureId)}</td></tr>`).join('');
+    const rows = records.map((r) => `<tr><td>${escapeHtml(r.receivedAt)}</td><td>${escapeHtml(money(r.amount, r.currency))}</td><td>${escapeHtml(r.slug)}</td><td>${escapeHtml(r.payerName)}<br>${escapeHtml(r.payerEmail)}<br>${escapeHtml(r.phone)}</td><td>${escapeHtml(r.shipToName)}${r.company ? `<br>${escapeHtml(r.company)}` : ''}<br>${(r.addressLines || [r.shipTo || '']).map(escapeHtml).join('<br>')}</td><td>${escapeHtml(r.captureId)}</td></tr>`).join('');
     return new Response(
       `<!doctype html><meta charset="utf-8"><title>cncdisplay orders</title><body style="font:14px system-ui;padding:20px"><h2>Orders (${records.length})</h2><table cellpadding="6" style="border-collapse:collapse"><tr><th>Received</th><th>Amount</th><th>Page</th><th>Buyer</th><th>Ship to</th><th>Capture</th></tr>${rows}</table></body>`,
       { headers: { 'Content-Type': 'text/html; charset=utf-8' } },
