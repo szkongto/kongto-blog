@@ -2090,6 +2090,17 @@
     "search_text": "Mazak C5470 14\" CRT to LCD | Mazatrol LCD Kit Mazak C5470 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Compatible with Mazak Mazatrol systems. Factory direct, plug-and-play. Mazak C5470 14-inch CRT to LCD Upgrade | Mazatrol Display "
   },
   {
+    "title": "Mitsubishi EUM-1491A 14-inch CRT to LCD Replacement | Kongto",
+    "description": "Mitsubishi EUM-1491A 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Reuses the 9-pin D-Sub signal cable, 800x600, no parameter changes. 2-year warranty, ships within 24 hours.",
+    "h1": "Mitsubishi EUM-1491A 14-inch Color CRT to 12.1-inch LCD Replacement",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/products/mitsubishi-eum-1491a-crt-lcd-upgrade.html",
+    "search_text": "Mitsubishi EUM-1491A 14-inch CRT to LCD Replacement | Kongto Mitsubishi EUM-1491A 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Reuses the 9-pin D-Sub signal cable, 800x600, no parameter changes. 2-year warranty, ships within 24 hours. Mitsubishi EUM-1491A 14-inch Color CRT to 12.1-inch LCD Replacement "
+  },
+  {
     "title": "Mitsubishi FCUA-CT100 9\" CRT to LCD | M500 M520 Monitor",
     "description": "Mitsubishi FCUA-CT100 9-inch CRT to 8-inch TFT-LCD upgrade. Compatible with M500, M520 CNC systems. Factory direct, plug-and-play.",
     "h1": "Mitsubishi FCUA-CT100 9-inch CRT to 8-inch LCD Upgrade | M500 M520 Display",
@@ -2099,6 +2110,17 @@
     "date": "",
     "url": "/products/mitsubishi-fcua-ct100-lcd-upgrade.html",
     "search_text": "Mitsubishi FCUA-CT100 9\" CRT to LCD | M500 M520 Monitor Mitsubishi FCUA-CT100 9-inch CRT to 8-inch TFT-LCD upgrade. Compatible with M500, M520 CNC systems. Factory direct, plug-and-play. Mitsubishi FCUA-CT100 9-inch CRT to 8-inch LCD Upgrade | M500 M520 Display "
+  },
+  {
+    "title": "Mitsubishi JUM-1482 14-inch CRT to LCD Replacement | Kongto",
+    "description": "Mitsubishi JUM-1482 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Reuses the 9-pin D-Sub signal cable, 800x600, no parameter changes. 2-year warranty, ships within 24 hours.",
+    "h1": "Mitsubishi JUM-1482 14-inch Color CRT to 12.1-inch LCD Replacement",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/products/mitsubishi-jum-1482-crt-lcd-upgrade.html",
+    "search_text": "Mitsubishi JUM-1482 14-inch CRT to LCD Replacement | Kongto Mitsubishi JUM-1482 14-inch color CRT to 12.1-inch TFT-LCD upgrade. Reuses the 9-pin D-Sub signal cable, 800x600, no parameter changes. 2-year warranty, ships within 24 hours. Mitsubishi JUM-1482 14-inch Color CRT to 12.1-inch LCD Replacement "
   },
   {
     "title": "Totoku MDT-1283B CRT to LCD | Mitsubishi 12A-VXC",
@@ -2640,6 +2662,39 @@
     "search_text": "FANUC CRT转LCD升级指南 | 完整替换方案 | 江图科技 FANUC CRT转LCD完整升级指南。覆盖A61L-0001系列、D9MM-11A、OM-D等型号。含型号识别、安装步骤、接线图、常见问题解答。 FANUC CRT转LCD升级 — 完整指南 "
   },
   {
+    "title": "马扎克CRT转LCD升级指南 | Mazatrol显示器 | 江图科技",
+    "description": "马扎克Mazak CRT转LCD升级指南，覆盖Mazatrol T-32/M-32数控系统。CD1472、C5470NS、MDT1283B、DR5614型号替换。含型号查询、安装与接线说明。",
+    "h1": "马扎克 CRT转LCD升级指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/guides/mazak-crt-to-lcd-guide.html",
+    "search_text": "马扎克CRT转LCD升级指南 | Mazatrol显示器 | 江图科技 马扎克Mazak CRT转LCD升级指南，覆盖Mazatrol T-32/M-32数控系统。CD1472、C5470NS、MDT1283B、DR5614型号替换。含型号查询、安装与接线说明。 马扎克 CRT转LCD升级指南 "
+  },
+  {
+    "title": "三菱CRT转LCD升级指南 | MELDAS显示器 | 江图科技",
+    "description": "三菱Mitsubishi MELDAS CRT转LCD升级指南。MDT962B、BM09DF、FCUA-CT100型号替换方案，接口、安装尺寸与原装CRT完全一致。",
+    "h1": "三菱 CRT转LCD升级指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/guides/mitsubishi-crt-to-lcd-guide.html",
+    "search_text": "三菱CRT转LCD升级指南 | MELDAS显示器 | 江图科技 三菱Mitsubishi MELDAS CRT转LCD升级指南。MDT962B、BM09DF、FCUA-CT100型号替换方案，接口、安装尺寸与原装CRT完全一致。 三菱 CRT转LCD升级指南 "
+  },
+  {
+    "title": "西门子CRT转LCD升级指南 | SINUMERIK显示器 | 江图科技",
+    "description": "西门子Siemens SINUMERIK CRT转LCD升级指南。覆盖6FC5103、6FC3988-7FA20、SM0901等型号，TTL电平RGB信号原生接收，无需信号转换器。",
+    "h1": "西门子 CRT转LCD升级指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/guides/siemens-crt-to-lcd-guide.html",
+    "search_text": "西门子CRT转LCD升级指南 | SINUMERIK显示器 | 江图科技 西门子Siemens SINUMERIK CRT转LCD升级指南。覆盖6FC5103、6FC3988-7FA20、SM0901等型号，TTL电平RGB信号原生接收，无需信号转换器。 西门子 CRT转LCD升级指南 "
+  },
+  {
     "title": "FANUC 0i 系列 CRT转LCD升级指南 | 江图科技",
     "description": "FANUC 0/0i 系列数控显示器 CRT转LCD升级方案。A61L-0001-0093、0092、0094、0095、0097 等型号即插即用，2年质保。",
     "h1": "FANUC 0i 系列 CRT 转 LCD 升级指南",
@@ -2715,6 +2770,72 @@
     "date": "",
     "url": "/zh/knowledge/crt-vs-lcd-cnc-display-comparison.html",
     "search_text": "CRT与LCD数控显示器完整对比指南 | CRT替换LCD | 江图科技 CNC机床CRT与LCD显示器全面技术对比：寿命、亮度、分辨率、功耗、成本分析，适用于FANUC、三菱、马扎克、西门子等数控系统。 CRT与LCD数控显示器完整对比指南 "
+  },
+  {
+    "title": "FANUC CRT转LCD替换完整指南 | A61L系列显示器 | 江图科技",
+    "description": "FANUC CRT转LCD替换完整指南。覆盖A61L-0001-0072至0116全系列型号，含兼容系统对照表、安装步骤与常见问题解答。",
+    "h1": "FANUC CRT转LCD替换完整指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/fanuc-crt-to-lcd-replacement-guide.html",
+    "search_text": "FANUC CRT转LCD替换完整指南 | A61L系列显示器 | 江图科技 FANUC CRT转LCD替换完整指南。覆盖A61L-0001-0072至0116全系列型号，含兼容系统对照表、安装步骤与常见问题解答。 FANUC CRT转LCD替换完整指南 "
+  },
+  {
+    "title": "哈斯Haas CRT显示器替换指南 | VF/SL系列LCD升级 | 江图科技",
+    "description": "Haas CNC CRT显示器替换LCD指南。覆盖9针单色、12英寸与28HM-NM4显示器，适用于Haas VF与SL系列机床。",
+    "h1": "哈斯 Haas CRT显示器替换指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/haas-crt-monitor-replacement-guide.html",
+    "search_text": "哈斯Haas CRT显示器替换指南 | VF/SL系列LCD升级 | 江图科技 Haas CNC CRT显示器替换LCD指南。覆盖9针单色、12英寸与28HM-NM4显示器，适用于Haas VF与SL系列机床。 哈斯 Haas CRT显示器替换指南 "
+  },
+  {
+    "title": "马扎克Mazak CRT转LCD改装指南 | Mazatrol显示器升级 | 江图科技",
+    "description": "马扎克Mazak CRT转LCD改装指南。覆盖CD1472、MDT1283B、DR5614、AIQA8DSP40型号，适用于Mazatrol T/M系列数控系统。",
+    "h1": "马扎克 Mazak CRT转LCD改装指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/mazak-crt-to-lcd-retrofit-guide.html",
+    "search_text": "马扎克Mazak CRT转LCD改装指南 | Mazatrol显示器升级 | 江图科技 马扎克Mazak CRT转LCD改装指南。覆盖CD1472、MDT1283B、DR5614、AIQA8DSP40型号，适用于Mazatrol T/M系列数控系统。 马扎克 Mazak CRT转LCD改装指南 "
+  },
+  {
+    "title": "三菱CNC显示器替换指南 | MDT962B/FCUA-CT100 | 江图科技",
+    "description": "三菱CNC CRT显示器替换LCD指南。覆盖MDT962B、FCUA-CT100、BM09DF、MDT925PS型号，适用于M500/M520/M60/M64/M70/M700系统。",
+    "h1": "三菱 CNC显示器替换指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/mitsubishi-cnc-display-replacement-guide.html",
+    "search_text": "三菱CNC显示器替换指南 | MDT962B/FCUA-CT100 | 江图科技 三菱CNC CRT显示器替换LCD指南。覆盖MDT962B、FCUA-CT100、BM09DF、MDT925PS型号，适用于M500/M520/M60/M64/M70/M700系统。 三菱 CNC显示器替换指南 "
+  },
+  {
+    "title": "大隈Okuma CRT转LCD替换指南 | OSP显示器升级 | 江图科技",
+    "description": "Okuma OSP CRT显示器替换LCD指南。覆盖OSP5000、OSP5020、OSP7000数控系统，深圳工厂直供LCD替换模块。",
+    "h1": "大隈 Okuma CRT转LCD替换指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/okuma-crt-to-lcd-replacement-guide.html",
+    "search_text": "大隈Okuma CRT转LCD替换指南 | OSP显示器升级 | 江图科技 Okuma OSP CRT显示器替换LCD指南。覆盖OSP5000、OSP5020、OSP7000数控系统，深圳工厂直供LCD替换模块。 大隈 Okuma CRT转LCD替换指南 "
+  },
+  {
+    "title": "西门子CRT转LCD升级指南 | SINUMERIK显示器替换 | 江图科技",
+    "description": "西门子SINUMERIK CRT转LCD升级指南。覆盖6FC3988-7FA20、6FC5103、6FC5203、SM0901、SM1200，适用于810T/820T/840C/840D。",
+    "h1": "西门子 CRT转LCD升级指南",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/knowledge/siemens-crt-to-lcd-upgrade-guide.html",
+    "search_text": "西门子CRT转LCD升级指南 | SINUMERIK显示器替换 | 江图科技 西门子SINUMERIK CRT转LCD升级指南。覆盖6FC3988-7FA20、6FC5103、6FC5203、SM0901、SM1200，适用于810T/820T/840C/840D。 西门子 CRT转LCD升级指南 "
   },
   {
     "title": "CGA/EGA显示器改造为RGBHV工业显示器实战指南",
@@ -4103,6 +4224,17 @@
     "search_text": "Mazak C-5470NS CRT 转 LCD 升级 | 数控显示器替换 Mazak C-5470NS CRT显示器转LCD升级。即插即用，2年保修。 Mazak C-5470NS CRT 转 LCD 升级方案 "
   },
   {
+    "title": "三菱EUM-1491A 14英寸CRT改LCD | 12.1英寸液晶替换 | 江图科技",
+    "description": "三菱EUM-1491A 14英寸彩色CRT改12.1英寸TFT-LCD，沿用原9针D-Sub信号线，800x600，无需修改CNC参数。2年质保，24小时内发货。",
+    "h1": "Mitsubishi EUM-1491A 14英寸CRT改LCD显示器",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/products/mitsubishi-eum-1491a-crt-lcd-upgrade.html",
+    "search_text": "三菱EUM-1491A 14英寸CRT改LCD | 12.1英寸液晶替换 | 江图科技 三菱EUM-1491A 14英寸彩色CRT改12.1英寸TFT-LCD，沿用原9针D-Sub信号线，800x600，无需修改CNC参数。2年质保，24小时内发货。 Mitsubishi EUM-1491A 14英寸CRT改LCD显示器 "
+  },
+  {
     "title": "Mitsubishi FCUA-CT100 CRT 转 LCD 升级 | 数控显示器替换",
     "description": "Mitsubishi FCUA-CT100 CRT显示器转LCD升级模块。即插即用，2年保修。",
     "h1": "Mitsubishi FCUA-CT100 CRT 转 LCD 升级方案",
@@ -4112,6 +4244,17 @@
     "date": "",
     "url": "/zh/products/mitsubishi-fcua-ct100-lcd-upgrade.html",
     "search_text": "Mitsubishi FCUA-CT100 CRT 转 LCD 升级 | 数控显示器替换 Mitsubishi FCUA-CT100 CRT显示器转LCD升级模块。即插即用，2年保修。 Mitsubishi FCUA-CT100 CRT 转 LCD 升级方案 "
+  },
+  {
+    "title": "三菱JUM-1482 14英寸CRT改LCD | 12.1英寸液晶替换 | 江图科技",
+    "description": "三菱JUM-1482 14英寸彩色CRT改12.1英寸TFT-LCD，沿用原9针D-Sub信号线，800x600，无需修改CNC参数。2年质保，24小时内发货。",
+    "h1": "Mitsubishi JUM-1482 14英寸CRT改LCD显示器",
+    "keywords": "",
+    "category": "page",
+    "lang": "zh",
+    "date": "",
+    "url": "/zh/products/mitsubishi-jum-1482-crt-lcd-upgrade.html",
+    "search_text": "三菱JUM-1482 14英寸CRT改LCD | 12.1英寸液晶替换 | 江图科技 三菱JUM-1482 14英寸彩色CRT改12.1英寸TFT-LCD，沿用原9针D-Sub信号线，800x600，无需修改CNC参数。2年质保，24小时内发货。 Mitsubishi JUM-1482 14英寸CRT改LCD显示器 "
   },
   {
     "title": "Totoku MDT-1283B CRT转LCD升级 | Mazak MDT1283B 12寸单色CRT显示器替换",

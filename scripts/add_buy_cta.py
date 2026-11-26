@@ -5,7 +5,7 @@
   <p class="cluster-cta mt-11"><a href="{target}" class="btn-orange">Buy Now &rarr;</a></p>
 
 - 目标取自 data/article_product_map.csv（build_article_product_map.py 生成）
-- 位置: </h1> 之后; 若在 .article-hero 内且有 .subtitle, 放在 .subtitle 之后
+- 位置: </h1> 之后; 若在 .article-hero 内, 放在 hero 容器结束之后（hero 的 ::before 会吃掉点击）
 - 幂等: 先删除已有的 cluster-cta mt-11 块, 再按标准位置重插
 - 不动 cluster-cta note-left-navy 纯文字 CTA
 - 跳过 meta-refresh 跳转桩
@@ -46,12 +46,25 @@ CARD_RE = re.compile(CARD_HEAD + CARD_TAIL)
 # 避免跨段落误删。
 CARD_OPEN_RE = re.compile(CARD_HEAD + r'(?=</main>)')
 H1_RE = re.compile(r'</h1>', re.I)
-SUB_RE = re.compile(r'<p class="subtitle[^"]*">.*?</p>', re.DOTALL)
 
 
 def load_map():
     """映射现算, 不读 data/ CSV —— data/ 被 .gitignore 排除, 且 CSV 会过期。"""
     return {r[0]: {'target_url': r[1]} for r in apm.build()}
+
+
+def hero_ranges(text):
+    """返回所有 .article-hero 容器的 (起, 止) 字符区间（与 check_cta_links 同算法）。"""
+    out, stack = [], []
+    for m in re.finditer(r'<div\b[^>]*>|</div>', text, re.I):
+        if m.group(0).lower().startswith('</'):
+            if stack:
+                start, is_hero = stack.pop()
+                if is_hero:
+                    out.append((start, m.end()))
+        else:
+            stack.append((m.start(), 'article-hero' in m.group(0)))
+    return out
 
 
 def anchor_end(text):
@@ -60,12 +73,11 @@ def anchor_end(text):
     if not h1:
         return None
     end = h1.end()
-    # .article-hero 模板: 按钮放副标题之后
-    hero = text.find('class="article-hero"')
-    if hero != -1 and hero < h1.start():
-        sub = SUB_RE.search(text, end)
-        if sub:
-            return sub.end()
+    # .article-hero 模板: 按钮必须放在 hero 容器之外。
+    # hero 的 ::before 是 inset:0 的装饰层, 按钮放进 hero 会点不动。
+    for start, stop in hero_ranges(text):
+        if start <= h1.start() < stop:
+            return stop
     return end
 
 

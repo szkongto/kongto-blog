@@ -1028,8 +1028,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://cncdisplay.com/products/mitsubishi-eum-1491a-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cncdisplay.com/products/mitsubishi-fcua-ct100-lcd-upgrade.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/products/mitsubishi-jum-1482-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2126,8 +2138,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://cncdisplay.com/zh/products/mitsubishi-eum-1491a-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cncdisplay.com/zh/products/mitsubishi-fcua-ct100-lcd-upgrade.html</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cncdisplay.com/zh/products/mitsubishi-jum-1482-crt-lcd-upgrade.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
