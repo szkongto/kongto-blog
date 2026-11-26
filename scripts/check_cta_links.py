@@ -35,6 +35,25 @@ QUOTE_RE = re.compile(r'<a href="([^"]*)" class="text-accent">Get Quote</a>')
 OLD_BTN_RE = re.compile(r'btn-pill-orange|View Product Details|View Product &amp; Specs')
 
 
+def hero_ranges(text):
+    """返回所有 .article-hero 容器的 (起, 止) 字符区间。
+
+    这些页面的 .article-hero::before 是 position:absolute; inset:0 的装饰层, 默认
+    pointer-events:auto, 会盖在标题/副标题/按钮上面吃掉点击。放进 hero 的按钮
+    看起来正常但点不动（2026-11-27 用户实测 6 个页面）。
+    """
+    out, stack = [], []
+    for m in re.finditer(r'<div\b[^>]*>|</div>', text, re.I):
+        if m.group(0).lower().startswith('</'):
+            if stack:
+                start, is_hero = stack.pop()
+                if is_hero:
+                    out.append((start, m.end()))
+        else:
+            stack.append((m.start(), 'article-hero' in m.group(0)))
+    return out
+
+
 def target_exists(url):
     p = url.lstrip('/')
     if url.endswith('/'):
@@ -65,8 +84,12 @@ def main():
             elif m.group(1) != url:
                 problems.append('%s: 按钮 href=%s 应为 %s' % (rel, m.group(1), url))
             h1 = H1_END_RE.search(text)
-            if h1 and text.find(blocks[0]) < h1.end():
+            pos = text.find(blocks[0])
+            if h1 and pos < h1.end():
                 problems.append('%s: 按钮不在标题下方' % rel)
+            if any(s < pos < e for s, e in hero_ranges(text)):
+                problems.append('%s: 按钮嵌在 .article-hero 里（::before 覆盖层会吃掉点击），'
+                                '应移到 hero 结束之后、正文开始之前' % rel)
 
         n_orange = text.count('class="btn-orange"')
         if n_orange != 1:
