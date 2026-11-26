@@ -20,6 +20,14 @@ from collections import defaultdict
 ROOT = Path(__file__).resolve().parent.parent.parent
 TEMPLATES = ROOT / '_templates'
 
+# 页头 Get Quote 按页面型号指向产品价格页（见 scripts/fix_nav_quote.py）。
+# 本脚本在部署时会重写所有带 lang-switch 的页头，若不在这里同步，
+# 每页单独改的 href 会被静默回滚。映射现算，不读 data/（被 .gitignore 排除）。
+sys.path.insert(0, str(ROOT / 'scripts'))
+import build_article_product_map as apm  # noqa: E402
+
+QUOTE_OVERRIDE = {r[0]: r[1] for r in apm.build() if r[2] == 'model'}
+
 SKIP_FILES = {
     # Redirect/tool pages with no nav
     '404.html', 'en/404.html',
@@ -107,6 +115,13 @@ def build_nav(filepath, content):
         template,
         flags=re.DOTALL
     )
+
+    # 型号文章: 页头 Get Quote 指向该型号产品价格页
+    rel = str(filepath.relative_to(ROOT)).replace('\\', '/')
+    if not cn and rel in QUOTE_OVERRIDE:
+        nav = nav.replace(
+            '<a href="/quote.html" class="text-accent">Get Quote</a>',
+            '<a href="%s" class="text-accent">Get Quote</a>' % QUOTE_OVERRIDE[rel])
     return nav
 
 

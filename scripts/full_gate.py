@@ -31,6 +31,7 @@ GATES = [
     ("price_consistency",   ["python", "scripts/check_price_consistency.py"],   True),
     ("llms_index",          ["python", "scripts/check_llms.py"],                True),
     ("css_comments",        ["python", "scripts/check_css_comments.py"],        True),
+    ("cta_links",           ["python", "scripts/check_cta_links.py"],           True),
 ]
 
 

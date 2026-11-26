@@ -26,6 +26,9 @@ en-blog-*
 fix_*.ps1
 fix_*.py
 fix_progress*
+# fix_*.py 忽略的是本地一次性脚本; 这个脚本是全站购买入口标准的一部分, 必须入库
+# (CLAUDE.md「文章购买入口标准」要求每次改标题/新增文章后运行)
+!scripts/fix_nav_quote.py
 hashnode_debug.png
 images_backup_compressed/
 images_backup_2*/
