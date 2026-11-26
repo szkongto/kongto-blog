@@ -275,6 +275,30 @@ async function handleTestNotify(url, env) {
   return json({ ok: result === 'sent', result, to: env.NOTIFY_TO || null });
 }
 
+async function handlePaypalSelftest(url, env) {
+  if (url.searchParams.get('token') !== env.ADMIN_TOKEN) {
+    return json({ error: 'unauthorized' }, 401);
+  }
+  try {
+    const tk = await paypalToken(env);
+    const res = await fetch(`${PAYPAL_API}/v1/notifications/webhooks`, {
+      headers: { Authorization: `Bearer ${tk}` },
+    });
+    const data = await res.json().catch(() => ({}));
+    return json({
+      ok: res.ok,
+      webhookId: env.PAYPAL_WEBHOOK_ID || null,
+      registered: (data.webhooks || []).map((h) => ({
+        id: h.id,
+        url: h.url,
+        events: (h.event_types || []).map((e) => e.name),
+      })),
+    });
+  } catch (e) {
+    return json({ ok: false, error: e.message || String(e) }, 500);
+  }
+}
+
 async function handleList(url, env) {
   const token = url.searchParams.get('token');
   if (!token || token !== env.ADMIN_TOKEN) return json({ error: 'unauthorized' }, 401);
@@ -303,6 +327,9 @@ export default {
     if (url.pathname === '/api/health') return json({ ok: true });
     if (url.pathname === '/api/paypal-webhook' && request.method === 'POST') {
       return handleWebhook(request, env);
+    }
+    if (url.pathname === '/api/paypal-selftest' && request.method === 'GET') {
+      return handlePaypalSelftest(url, env);
     }
     if (url.pathname === '/api/orders' && request.method === 'GET') {
       return handleList(url, env);
