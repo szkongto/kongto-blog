@@ -11,7 +11,10 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  # 必须排队而不是取消: 取消正在跑的 workflow 不会撤掉它已提交给 Pages 的
+  # deployment, 后一次运行会以 400 "due to in progress deployment" 失败
+  # (2026-11-26 连推两次实测)。排队等前一次真正落地再部署。
+  cancel-in-progress: false
 
 jobs:
   deploy:
