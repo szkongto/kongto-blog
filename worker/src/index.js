@@ -101,13 +101,15 @@ function buildRecord(event, order) {
 
   const payerName = [payer.name?.given_name, payer.name?.surname].filter(Boolean).join(' ')
     || (typeof cap.payer?.name === 'string' ? cap.payer.name : null);
+  const [slug, qtyPart, destPart, telPart] = String(cap.custom_id || '').split('|');
+  const sitePhone = telPart ? line(telPart.replace('tel=', '')) : null;
+
   const phone =
     line(payer.phone?.phone_number?.national_number) ||
     line(cap.payer?.phone?.phone_number?.national_number) ||
     line(ship.phone_number) ||
+    sitePhone ||
     null;
-
-  const [slug, qtyPart, destPart] = String(cap.custom_id || '').split('|');
 
   return {
     receivedAt: new Date().toISOString(),

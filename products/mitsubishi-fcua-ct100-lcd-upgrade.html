@@ -239,6 +239,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;l
 
           </div>
 
+            <div><label class="th-bold">Phone:</label>
+
+              <input id="buyerPhone" class="qty-input" type="tel" inputmode="tel" autocomplete="tel" maxlength="32" placeholder="For DHL delivery" style="width:180px">
+
+            </div>
+
           <div id="paypal-button-container" class="qty-row"><p class="text-muted-sm-c">Payment button loading...</p></div>
 
           <p class="hint-sm">🔒 Secure checkout via PayPal. Credit/debit cards accepted.</p>
@@ -1256,6 +1262,7 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
       var _ppH1 = document.querySelector('h1');
       var _ppTitle = _ppH1 ? _ppH1.textContent.split('|')[0].trim() : 'CNC LCD Upgrade Kit';
       var _ppDestName = (window._DHL[window._selectedCountry] || {}).name || window._selectedCountry;
+      var _ppPhone = ((document.getElementById('buyerPhone') || {}).value || '').replace(/[^0-9+]/g, '').slice(0, 20);
 
 
 
@@ -1266,7 +1273,7 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
 
       return actions.order.create({ purchase_units: [{
         description: (_ppTitle + ' | qty ' + window._qty + ' | DHL ' + _ppDestName).slice(0, 127),
-        custom_id: 'mitsubishi-fcua-ct100-lcd-upgrade|qty=' + window._qty + '|dest=' + window._selectedCountry,
+        custom_id: 'mitsubishi-fcua-ct100-lcd-upgrade|qty=' + window._qty + '|dest=' + window._selectedCountry + '|tel=' + _ppPhone,
         invoice_id: 'CNCD-' + Date.now(),
         items: [{
           name: _ppTitle.slice(0, 127),

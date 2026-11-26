@@ -1,0 +1,26 @@
+{
+  "project": "D:\\cncdisplay\\products",
+  "timeline": "products",
+  "duration": 0.0,
+  "samples": [],
+  "trackReport": {},
+  "failCount": 1,
+  "warnCount": 0,
+  "findings": {
+    "offFrame": [],
+    "truncated": [],
+    "occluded": [],
+    "smallText": [],
+    "compliance": [
+      {
+        "rule": "price",
+        "match": "$",
+        "note": "no price on screen, ever",
+        "context": "ANUC D9CM-01A 9\" CRT → 8\" LCD · $155 · FANUC 0/0i (Toshiba OEM)"
+      }
+    ],
+    "provenance": [],
+    "timeline": []
+  },
+  "imagesChecked": []
+}
