@@ -133,6 +133,7 @@ function emailParts(r) {
     `Amount   : ${money(r.amount, r.currency)}`,
     `Item     : ${r.items.map((i) => `${i.name} x${i.quantity}`).join('; ') || '(none)'}`,
     `Page     : ${r.slug}`,
+    `Link     : ${r.slug ? `https://cncdisplay.com/products/${r.slug}.html` : '-'}`,
     `Qty      : ${r.qty}   Dest: ${r.dest}`,
     `Invoice  : ${r.invoiceId}`,
     `Capture  : ${r.captureId}`,
@@ -149,7 +150,8 @@ function emailParts(r) {
   const rows = [
     ['Amount', money(r.amount, r.currency)],
     ['Item', r.items.map((i) => `${i.name} x${i.quantity}`).join('; ')],
-    ['Page', r.slug],
+    ['Page', r.slug ? `<a href="https://cncdisplay.com/products/${r.slug}.html">${r.slug}</a>` : ''],
+    ['Link', r.slug ? `https://cncdisplay.com/products/${r.slug}.html` : ''],
     ['Qty / Dest', `${r.qty} / ${r.dest}`],
     ['Invoice', r.invoiceId],
     ['Capture ID', r.captureId],
