@@ -99,3 +99,6 @@ _*.py
 
 # 本地门禁输出
 products/qc/
+
+# wrangler local state
+worker/.wrangler/

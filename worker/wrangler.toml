@@ -21,3 +21,13 @@ NOTIFY_TO = "szkongto01@foxmail.com"
 [[routes]]
 pattern = "cncdisplay.com/api/*"
 zone_name = "cncdisplay.com"
+
+# Order desk UI. The static site has no /admin page (checked), so this route
+# only shadows a 404.
+[[routes]]
+pattern = "cncdisplay.com/admin"
+zone_name = "cncdisplay.com"
+
+[[routes]]
+pattern = "cncdisplay.com/admin/*"
+zone_name = "cncdisplay.com"
