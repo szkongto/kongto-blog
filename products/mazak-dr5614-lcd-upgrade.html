@@ -1631,13 +1631,34 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
 
       var total = (price * window._qty + ship).toFixed(2);
 
+      var _ppH1 = document.querySelector('h1');
+      var _ppTitle = _ppH1 ? _ppH1.textContent.split('|')[0].trim() : 'CNC LCD Upgrade Kit';
+      var _ppDestName = (window._DHL[window._selectedCountry] || {}).name || window._selectedCountry;
 
 
 
 
 
 
-      return actions.order.create({ purchase_units: [{ amount: { value: total } }] });
+
+      return actions.order.create({ purchase_units: [{
+        description: (_ppTitle + ' | qty ' + window._qty + ' | DHL ' + _ppDestName).slice(0, 127),
+        custom_id: 'mazak-dr5614-lcd-upgrade|qty=' + window._qty + '|dest=' + window._selectedCountry,
+        invoice_id: 'CNCD-' + Date.now(),
+        items: [{
+          name: _ppTitle.slice(0, 127),
+          quantity: '' + window._qty,
+          unit_amount: { currency_code: 'USD', value: price.toFixed(2) }
+        }],
+        amount: {
+          currency_code: 'USD',
+          value: total,
+          breakdown: {
+            item_total: { currency_code: 'USD', value: (price * window._qty).toFixed(2) },
+            shipping: { currency_code: 'USD', value: ship.toFixed(2) }
+          }
+        }
+      }] });
 
 
 
