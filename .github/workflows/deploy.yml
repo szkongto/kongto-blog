@@ -28,7 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          # 需要 HEAD~1 来算本次改动页，IndexNow 只推变化，不整站重推
+          fetch-depth: 2
           lfs: false
           submodules: false
 
@@ -79,6 +80,13 @@ jobs:
         run: |
           echo "Page deployment failed twice"
           exit 1
+
+      # Bing 是当前唯一稳定的自然搜索来源，但过去没有自动提交渠道：
+      # 一次性脚本留在 _archive/ 里，从未接进部署。
+      # 只推本次 push 改动的页面，先验线上 200 再推；失败不阻断部署。
+      - name: Push changed URLs to IndexNow
+        continue-on-error: true
+        run: python scripts/push_indexnow.py --base HEAD~1
 
   deploy-worker:
     needs: deploy
