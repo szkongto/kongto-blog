@@ -22,7 +22,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "_site"
 HOST = "cncdisplay.com"
-KEY_FILE = ROOT / "indexnow-key.txt"
+# IndexNow 规范：key 文件必须名为 {key}.txt 且位于站点根，文件内容等于 key。
+# 2026-11-27 实测：用 indexnow-key.txt（内容 cncdisplay-2026-indexnow-key，
+# 主干与内容不一致）提交返回 HTTP 403。
+KEY_FILE = ROOT / "ddac7c800685a15fa23809dc08c3b6c9.txt"
 KEY_LOCATION = f"https://{HOST}/{KEY_FILE.name}"
 API = "https://api.indexnow.org/indexnow"
 MAX_PER_REQUEST = 10000
@@ -34,6 +37,8 @@ def load_key() -> str:
     key = KEY_FILE.read_text(encoding="utf-8").strip()
     if not 8 <= len(key) <= 128:
         sys.exit(f"key length invalid ({len(key)}): {KEY_FILE}")
+    if key != KEY_FILE.stem:
+        sys.exit(f"key file name must be {{key}}.txt ({KEY_FILE.name} != {key}.txt)")
     return key
 
 
