@@ -25,7 +25,7 @@
  *   PATCH  /api/inquiries/:id       { status, note }
  *   POST   /api/inquiries/:id/reply multipart: text + files[] (mail to customer)
  *   DELETE /api/inquiries/:id
- *   GET    /api/traffic?days=N      Cloudflare RUM + Search Console summary
+ *   GET    /api/traffic?days=N      Cloudflare RUM + Bing Webmaster summary
  *
  * Bindings / secrets:
  *   PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_WEBHOOK_ID
@@ -35,7 +35,7 @@
  *   ORDERS           KV namespace
  *   NOTIFY, NOTIFY_TO  optional mail copy
  *   CF_ANALYTICS_TOKEN, CF_ACCOUNT_ID, RUM_SITE_TAG
- *   GSC_CLIENT_ID, GSC_CLIENT_SECRET, GSC_REFRESH_TOKEN, GSC_PROPERTY
+ *   BING_API_KEY
  */
 
 import { adminPage } from './admin.js';
@@ -1092,73 +1092,133 @@ async function trafficRum(env, days) {
   };
 }
 
-async function gscToken(env) {
-  const body = new URLSearchParams({
-    client_id: env.GSC_CLIENT_ID || '',
-    client_secret: env.GSC_CLIENT_SECRET || '',
-    refresh_token: env.GSC_REFRESH_TOKEN || '',
-    grant_type: 'refresh_token',
-  });
-  const res = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', body });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`GSC oauth ${res.status}: ${data.error_description || data.error || ''}`);
-  return data.access_token;
+/* Bing Webmaster API. Dates are Microsoft JSON `/Date(ms)/`, not ISO.
+ * GetRankAndTrafficStats is daily; GetQueryStats is bucketed by week and the
+ * bucket Date is the Friday that ENDS the week. Only the first is per-day, so
+ * keyword rows are labelled by week in the UI. */
+function bingDate(s) {
+  const m = /\/Date\((-?\d+)/.exec(s || '');
+  return m ? new Date(Number(m[1])) : null;
 }
 
-async function gscRows(env, token, start, end, dims, limit) {
-  const site = encodeURIComponent(env.GSC_PROPERTY || 'https://cncdisplay.com/');
-  const res = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${site}/searchAnalytics/query`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ startDate: start, endDate: end, dimensions: dims, rowLimit: limit, dataState: 'final' }),
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`GSC ${res.status}: ${data.error?.message || ''}`);
-  return data.rows || [];
+function bingDay(s) {
+  const d = bingDate(s);
+  return d ? d.toISOString().slice(0, 10) : '';
 }
 
-async function trafficGsc(env, days) {
-  const token = await gscToken(env);
-  // GSC lags 2-3 days, so the window ends yesterday.
-  const end = isoDaysAgo(1);
-  const start = isoDaysAgo(days);
-  const daily = await gscRows(env, token, start, end, ['date'], 200);
+async function bingRows(env, method) {
+  if (!env.BING_API_KEY) throw new Error('BING_API_KEY not configured');
+  const site = encodeURIComponent(env.BING_SITE_URL || 'https://cncdisplay.com/');
+  const url = `https://ssl.bing.com/webmaster/api.svc/json/${method}`
+    + `?apikey=${encodeURIComponent(env.BING_API_KEY)}&siteUrl=${site}`;
+  const res = await fetch(url, { headers: { Accept: 'application/json' } });
+  if (!res.ok) throw new Error(`Bing ${method} HTTP ${res.status}`);
+  const data = await res.json().catch(() => ({}));
+  if (data.ErrorCode) throw new Error(`Bing ${method}: ${data.Message || data.ErrorCode}`);
+  return data.d || [];
+}
+
+async function trafficBing(env, days) {
+  const end = isoDaysAgo(0);
+  const start = isoDaysAgo(days - 1);
+  const [stats, queryRows] = await Promise.all([
+    bingRows(env, 'GetRankAndTrafficStats'),
+    bingRows(env, 'GetQueryStats'),
+  ]);
+
+  const daily = stats
+    .map((r) => ({ date: bingDay(r.Date), clicks: r.Clicks || 0, impressions: r.Impressions || 0 }))
+    .filter((r) => r.date && r.date >= start && r.date <= end)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
   const totals = daily.reduce((acc, r) => {
-    acc.clicks += r.clicks; acc.impressions += r.impressions;
-    acc.pos += r.position * r.impressions;
+    acc.clicks += r.clicks;
+    acc.impressions += r.impressions;
     return acc;
-  }, { clicks: 0, impressions: 0, pos: 0 });
-  const queries = await gscRows(env, token, start, end, ['query'], 30);
-  const queryPages = await gscRows(env, token, start, end, ['query', 'page'], 30);
+  }, { clicks: 0, impressions: 0 });
+
+  // Weekly buckets that overlap the window. Bucket Date = Friday ending week.
+  // Bing publishes a bucket only after the week closes, so a 7-day window can
+  // contain none. In that case fall back to the newest bucket and say so.
+  const withBucket = queryRows
+    .map((r) => ({ r, end: bingDay(r.Date) }))
+    .filter((x) => x.end)
+    .map((x) => ({ ...x, start: new Date(Date.parse(x.end) - 6 * 86400000).toISOString().slice(0, 10) }));
+  let picked = withBucket.filter((x) => x.end >= start && x.start <= end);
+  let queryFallback = false;
+  if (!picked.length && withBucket.length) {
+    const newest = withBucket.reduce((m, x) => (x.end > m ? x.end : m), '');
+    picked = withBucket.filter((x) => x.end === newest);
+    queryFallback = true;
+  }
+
+  const buckets = new Set();
+  const byQuery = new Map();
+  let posSum = 0;
+  let posN = 0;
+  for (const { r, end: bucketEnd } of picked) {
+    buckets.add(bucketEnd);
+    const q = r.Query || '';
+    const cur = byQuery.get(q) || { query: q, clicks: 0, impressions: 0, pos: 0, posN: 0, weekEnd: bucketEnd };
+    cur.clicks += r.Clicks || 0;
+    cur.impressions += r.Impressions || 0;
+    const pos = r.AvgImpressionPosition;
+    if (pos > 0) {
+      cur.pos += pos * (r.Impressions || 0);
+      cur.posN += r.Impressions || 0;
+      posSum += pos * (r.Impressions || 0);
+      posN += r.Impressions || 0;
+    }
+    if (bucketEnd > cur.weekEnd) cur.weekEnd = bucketEnd;
+    byQuery.set(q, cur);
+  }
+
+  const queries = [...byQuery.values()]
+    .map((r) => ({
+      query: r.query, clicks: r.clicks, impressions: r.impressions,
+      ctr: r.impressions ? (r.clicks / r.impressions) * 100 : 0,
+      position: r.posN ? r.pos / r.posN : 0,
+      weekEnd: r.weekEnd,
+    }))
+    .sort((a, b) => b.impressions - a.impressions)
+    .slice(0, 30);
+
   return {
     range: { start, end },
     clicks: totals.clicks,
     impressions: totals.impressions,
     ctr: totals.impressions ? (totals.clicks / totals.impressions) * 100 : 0,
-    position: totals.impressions ? totals.pos / totals.impressions : 0,
-    queries: queries.map((r) => ({
-      query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
-      ctr: r.ctr * 100, position: r.position,
-    })),
-    queryPages: queryPages.map((r) => ({
-      query: r.keys[0], page: r.keys[1], clicks: r.clicks,
-      impressions: r.impressions, ctr: r.ctr * 100, position: r.position,
-    })),
+    position: posN ? posSum / posN : 0,
+    daily,
+    queries,
+    weeks: [...buckets].sort(),
+    bucketGranularity: 'week',
+    queryFallback,
   };
+}
+
+async function cachedTraffic(env, key, fn) {
+  try {
+    const hit = await env.ORDERS.get(key);
+    if (hit) return JSON.parse(hit);
+  } catch (_) { /* cache is best-effort */ }
+  const val = await fn();
+  try { await env.ORDERS.put(key, JSON.stringify(val), { expirationTtl: 600 }); } catch (_) {}
+  return val;
 }
 
 async function handleTraffic(url, env) {
   const days = Math.min(Math.max(Number(url.searchParams.get('days') || 7), 1), 90);
   const out = { days, generatedAt: new Date().toISOString() };
   try {
-    out.cf = await trafficRum(env, days);
+    out.cf = await cachedTraffic(env, `cache:traffic:cf:${days}`, () => trafficRum(env, days));
   } catch (e) {
     out.cfError = e.message || String(e);
   }
   try {
-    out.gsc = await trafficGsc(env, days);
+    out.bing = await cachedTraffic(env, `cache:traffic:bing:v2:${days}`, () => trafficBing(env, days));
   } catch (e) {
-    out.gscError = e.message || String(e);
+    out.bingError = e.message || String(e);
   }
   return json(out);
 }

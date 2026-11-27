@@ -163,8 +163,8 @@ dl.kv dd{margin:0;word-break:break-word}
           <div class="box"><h3>落地页 / 热门页面</h3><div id="tPages"></div></div>
         </div>
         <div>
-          <div class="box"><h3>搜索关键词（Google Search Console）</h3><div id="tQueries"></div></div>
-          <div class="box"><h3>关键词 → 落地页（GSC）</h3><div id="tQueryPages"></div></div>
+          <div class="box"><h3>搜索关键词（Bing，按周桶）</h3><div id="tBingQueries"></div></div>
+          <div class="box"><h3>Bing 每日点击 / 展示</h3><div id="tBingDaily"></div></div>
           <div class="box"><h3>国家 / 地区</h3><div id="tCountries"></div></div>
           <div class="box"><h3>每日访问</h3><div id="tDaily"></div></div>
         </div>
@@ -489,12 +489,12 @@ dl.kv dd{margin:0;word-break:break-word}
       el('tstat').textContent = '生成于 ' + new Date(d.generatedAt).toLocaleString('zh-CN');
       var notices = [];
       if (d.cfError) notices.push('Cloudflare 流量数据不可用：' + d.cfError);
-      if (d.gscError) notices.push('Google Search Console 数据不可用：' + d.gscError);
+      if (d.bingError) notices.push('Bing 数据不可用：' + d.bingError);
       el('tnotice').hidden = !notices.length;
       el('tnotice').innerHTML = notices.map(esc).join('<br>');
 
       var cf = d.cf || {};
-      var gsc = d.gsc || {};
+      var bing = d.bing || {};
       // Internal navigation is not an entry source; keep only outside sites.
       function external(rows) {
         return (rows || []).filter(function (r) {
@@ -507,9 +507,9 @@ dl.kv dd{margin:0;word-break:break-word}
       el('tkpi').innerHTML =
         kpi('全站访问数', num(cf.visits), '独立访问（Cloudflare RUM）') +
         kpi('页面浏览', num(cf.pageviews), '所有页面加载次数') +
-        kpi('搜索点击', num(gsc.clicks), 'GSC，截至昨日') +
-        kpi('搜索展示', num(gsc.impressions), 'CTR ' + pct(gsc.ctr)) +
-        kpi('平均排名', (gsc.position ? gsc.position.toFixed(1) : '-'), 'GSC');
+        kpi('Bing 点击', num(bing.clicks), 'Bing Webmaster') +
+        kpi('Bing 展示', num(bing.impressions), 'CTR ' + pct(bing.ctr)) +
+        kpi('Bing 平均排名', (bing.position ? bing.position.toFixed(1) : '-'), '按展示加权');
 
       el('tEntries').innerHTML = table(cf.entries, [
         { title: '来源网站', get: function (r) { return r.host || '直接访问'; } },
@@ -524,16 +524,20 @@ dl.kv dd{margin:0;word-break:break-word}
         { title: '页面', get: function (r) { return r.path || '/'; } },
         { title: '页面浏览', num: true, get: function (r) { return num(r.pageviews); } }
       ]);
-      el('tQueries').innerHTML = table(gsc.queries, [
+      var bingNote = bing.queryFallback
+        ? '<div class="muted" style="font-size:13px;padding:0 0 8px">Bing 关键词只有周粒度，本窗口无完整周桶，显示最近一周（截至 ' +
+          esc((bing.weeks || []).slice(-1)[0] || '-') + '）。</div>'
+        : '';
+      el('tBingQueries').innerHTML = bingNote + table(bing.queries, [
         { title: '关键词', get: function (r) { return r.query; } },
+        { title: '周结束', get: function (r) { return r.weekEnd || '-'; } },
         { title: '点击', num: true, get: function (r) { return num(r.clicks); } },
         { title: '展示', num: true, get: function (r) { return num(r.impressions); } },
         { title: 'CTR', num: true, get: function (r) { return pct(r.ctr); } },
         { title: '排名', num: true, get: function (r) { return r.position ? r.position.toFixed(1) : '-'; } }
       ]);
-      el('tQueryPages').innerHTML = table(gsc.queryPages, [
-        { title: '关键词', get: function (r) { return r.query; } },
-        { title: '落地页', get: function (r) { return (r.page || '').replace(/^https?:\\/\\/[^/]+/, ''); } },
+      el('tBingDaily').innerHTML = table((bing.daily || []).slice(-14), [
+        { title: '日期', get: function (r) { return r.date; } },
         { title: '点击', num: true, get: function (r) { return num(r.clicks); } },
         { title: '展示', num: true, get: function (r) { return num(r.impressions); } }
       ]);

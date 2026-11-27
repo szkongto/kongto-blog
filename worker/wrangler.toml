@@ -18,11 +18,11 @@ name = "NOTIFY"
 NOTIFY_TO = "szkongto01@foxmail.com"
 
 # Traffic dashboard. Cloudflare Web Analytics (RUM) is queried through GraphQL;
-# GSC needs an OAuth refresh token because the property is not shared with a
-# service account.
+# Bing Webmaster is queried with BING_API_KEY (secret). GSC is intentionally
+# not wired in: the refresh token expires every 7 days in Testing mode.
 CF_ACCOUNT_ID = "8ad8e3abfde8c636476aff4b654c49ff"
 RUM_SITE_TAG = "e85da42535574162a96d4ba277c2ed40"
-GSC_PROPERTY = "https://cncdisplay.com/"
+BING_SITE_URL = "https://cncdisplay.com/"
 
 # Served under the site; the zone is already proxied through Cloudflare and the
 # site has no /api/ pages, so nothing else is shadowed.
