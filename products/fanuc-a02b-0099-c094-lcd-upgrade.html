@@ -242,6 +242,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;l
             <div><label class="th-bold">Phone <span style="color:#c00">*</span>:</label>
               <input id="buyerPhone" class="qty-input" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" maxlength="32" placeholder="Required - DHL needs it" style="width:180px" oninput="var e=document.getElementById('ppFormError');if(e){e.style.display='none'}">
             </div>
+            <div><label class="th-bold">How did you find us?</label>
+              <select id="buyerSource" class="qty-input" style="width:180px">
+                <option value="">Select (optional)</option>
+                <option value="google">Google search</option>
+                <option value="bing">Bing / other search</option>
+                <option value="youtube">YouTube</option>
+                <option value="ai">AI assistant (ChatGPT etc.)</option>
+                <option value="referral">Referral / forum</option>
+                <option value="other">Other</option>
+              </select></div>
             <div id="ppFormError" role="alert" style="display:none;color:#c00;font-size:13px;margin:6px 0"></div>
 
           <div id="paypal-button-container" class="qty-row"><p class="text-muted-sm-c">Payment button loading...</p></div>
@@ -1253,6 +1263,7 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
       var _ppTitle = _ppH1 ? _ppH1.textContent.split('|')[0].trim() : 'CNC LCD Upgrade Kit';
       var _ppDestName = (window._DHL[window._selectedCountry] || {}).name || window._selectedCountry;
       var _ppPhone = ((document.getElementById('buyerPhone') || {}).value || '').replace(/[^0-9+]/g, '').slice(0, 20);
+      var _ppSrc = ((document.getElementById('buyerSource') || {}).value || '').replace(/[^a-z]/gi, '').toLowerCase().slice(0, 12);
 
 
 
@@ -1263,7 +1274,7 @@ function updateQty() { document.getElementById('qtyDisplay').textContent = qty; 
 
       return actions.order.create({ purchase_units: [{
         description: (_ppTitle + ' | qty ' + window._qty + ' | DHL ' + _ppDestName).slice(0, 127),
-        custom_id: 'fanuc-a02b-0099-c094-lcd-upgrade|qty=' + window._qty + '|dest=' + window._selectedCountry + '|tel=' + _ppPhone,
+        custom_id: 'fanuc-a02b-0099-c094-lcd-upgrade|qty=' + window._qty + '|dest=' + window._selectedCountry + '|tel=' + _ppPhone + '|src=' + _ppSrc,
         invoice_id: 'CNCD-' + Date.now(),
         items: [{
           name: _ppTitle.slice(0, 127),

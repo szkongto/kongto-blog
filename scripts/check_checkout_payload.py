@@ -35,6 +35,8 @@ os.chdir(ROOT)
 REQUIRED = [
     ('页内电话输入框', re.compile(r'id="buyerPhone"')),
     ('custom_id 带 tel=', re.compile(r'\|tel=')),
+    ('页内渠道下拉', re.compile(r'id="buyerSource"')),
+    ('custom_id 带 src=', re.compile(r'\|src=')),
     ('invoice_id', re.compile(r'invoice_id:')),
     ('items 数组', re.compile(r'items:\s*\[\s*\{')),
     ('unit_amount', re.compile(r'unit_amount')),
