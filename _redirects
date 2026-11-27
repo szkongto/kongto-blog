@@ -464,6 +464,31 @@
 /zh/posts/used-display-recycling-faq-top10-zh.html /zh/posts/faq_20260501_CNC_display_replacement_FAQ.html 301
 /zh/products/9mvb3-0a/index.html /products/ 301
 /zh/products/a61l-0001-0094/index.html /products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
+# 2026-11-27 删 stub 后补：目录形式与 index.html 形式是两条不同 URL，
+# Worker 只做精确匹配，不补这条则 /zh/products/x/ 从 200 变 404（实测）。
+/zh/products/9mvb3-0a/ /products/ 301
+/zh/products/a61l-0001-0094/ /products/fanuc-a61l-0001-0094-lcd-upgrade.html 301
+# 2026-11-27 实测 404 补承接：以下 20 条 URL 当前返回 404（历史删页未做 301），
+# 目标取自同型号现存页或 EN 页既有规则；zh 有同型号页时优先指 zh。
+/products/9mvb3-0a/index.html /products/ 301
+/products/9mvb3-0a/ /products/ 301
+/products/mazak-mdt947-lcd-upgrade.html /products/mitsubishi-mdt947b-lcd-upgrade.html 301
+/zh/products/fanuc-0m-0t-crt-lcd-upgrade.html /products/fanuc-0m-0t-crt-lcd-upgrade.html 301
+/zh/products/fanuc-16i-18i-21i-lcd-upgrade.html /brands/FANUC.html 301
+/zh/products/fanuc-a61l-0001-0077-lcd-upgrade.html /brands/FANUC.html 301
+/zh/products/fanuc-a61l-0001-0078-lcd-upgrade.html /brands/FANUC.html 301
+/zh/products/fanuc-a61l-0001-0087-lcd-upgrade.html /brands/FANUC.html 301
+/zh/products/fanuc-om-d-display-lcd-upgrade.html /brands/FANUC.html 301
+/zh/products/heidenhain-be211-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
+/zh/products/heidenhain-be411-lcd-upgrade.html /products/heidenhain-bc110-lcd-upgrade.html 301
+/zh/products/mazak-cd0910-dm-lcd-upgrade.html /brands/MAZAK.html 301
+/zh/products/mazak-cd1283-d1m-lcd-upgrade.html /zh/products/mazak-mdt1283b-lcd-upgrade.html 301
+/zh/products/mazak-cd1472-d2m-lcd-upgrade.html /zh/products/mazak-cd1472-lcd-upgrade.html 301
+/zh/products/mazak-du3461g-l-lcd-upgrade.html /brands/MAZAK.html 301
+/zh/products/mazak-t3021-ah-lcd-upgrade.html /brands/MAZAK.html 301
+/zh/products/okuma-osp5020-crt-lcd-upgrade.html /zh/products/okuma-osp5020-lcd-upgrade.html 301
+/zh/products/siemens-6fc3998-7fa20-lcd-upgrade.html /zh/products/siemens-6fc3988-7fa20-lcd-upgrade.html 301
+/zh/products/siemens-8.4-inch-crt-lcd-upgrade.html /products/siemens-8.4-inch-crt-lcd-upgrade.html 301
 # 2026-08-09 0093/0074 崩盘修复：合并双文章页 + 修0074 404
 /posts/FANUC_A61L_0001_0093_LCD_CNC_Upgrade_Replacement.html /posts/article_20260526_FANUC_A61L_0001_0093_LCD_Upgrade_Complete_Guide.html 301
 /posts/FANUC_A61L_0001_0074_LCD_CNC_Upgrade_Replacement.html /posts/article_20260503_FANUC_A61L_0001_0074_LCD.html 301
