@@ -103,7 +103,9 @@ def main():
             'output', '_archive_audit', '_templates', 'patches',
             'screaming_frog_reports', 'en_bak',
             # 内部目录：不进站内搜索索引（否则生成指向非发布路径的死条目）
-            'seo_reports', 'schema', 'data', 'cross_poster', '_archive'
+            'seo_reports', 'schema', 'data', 'cross_poster', '_archive',
+            # 构建产物：_site 是本地构建输出，重复收录会生成 442 条 /_site/... 死条目
+            '_site'
         )]
         for fname in files:
             if not fname.endswith('.html'):
