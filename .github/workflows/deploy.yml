@@ -88,6 +88,12 @@ jobs:
         continue-on-error: true
         run: python scripts/push_indexnow.py --base HEAD~1
 
+      # 部署完自己 curl 一遍本次改动的页面。CI success 只证明 artifact 传上去了,
+      # 不代表 Pages 已经切到线上 (切换窗口有瞬态 404, 2026-11-28 实证)。
+      # 这里失败就让整条 run 红, 不允许"以为上线了"。
+      - name: Verify changed pages live
+        run: python scripts/verify_live.py --base HEAD~1
+
   deploy-worker:
     needs: deploy
     if: github.ref == 'refs/heads/main'
