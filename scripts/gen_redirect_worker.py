@@ -1,5 +1,5 @@
 """Parse _redirects → cloudflare-worker.js (301 redirect engine)."""
-import json, re, os
+import json, re, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, '_redirects')
@@ -74,6 +74,33 @@ for src, dst in list(REDIRECTS.items()):
             EN_ADDITIONS[en_src] = dst
 REDIRECTS.update(EN_ADDITIONS)
 
+
+def flatten_redirects(redirects):
+    """Collapse local redirect chains so every source points at its final target."""
+    flattened = {}
+    flattened_chains = []
+    for src in sorted(redirects):
+        seen = [src]
+        dst = redirects[src]
+        while not dst.startswith('http') and dst in redirects:
+            if dst in seen:
+                cycle = ' -> '.join(seen + [dst])
+                raise RuntimeError(f'redirect cycle: {cycle}')
+            seen.append(dst)
+            dst = redirects[dst]
+        if len(seen) > 1:
+            flattened_chains.append((src, seen[1:], dst))
+        flattened[src] = dst
+    return flattened, flattened_chains
+
+
+REDIRECTS, FLATTENED_CHAINS = flatten_redirects(REDIRECTS)
+
+if '--check' in sys.argv:
+    print(f'OK {len(REDIRECTS)} redirect sources, '
+          f'{len(FLATTENED_CHAINS)} chains flattened')
+    sys.exit(0)
+
 # Build worker JS
 def js_escape(s):
     """Escape string for JS single-quoted string literal."""
@@ -138,51 +165,53 @@ addEventListener('fetch', event => {{
     return event.respondWith(new Response('Not Found', {{ status: 404 }}));
   }}
 
+  const redirectTo = target => {{
+    const destination = target.startsWith('http') ? target : `${{url.origin}}${{target}}`;
+    return event.respondWith(Response.redirect(destination, 301));
+  }};
+
+  const lookupRedirect = rawPath => {{
+    const candidates = [rawPath];
+    const normalisedPath = normalise(rawPath);
+    if (normalisedPath !== rawPath) candidates.push(normalisedPath);
+    if (rawPath.length > 1 && rawPath.endsWith('/')) {{
+      candidates.push(rawPath.slice(0, -1));
+    }}
+    for (const candidate of candidates) {{
+      const match = REDIRECTS[candidate];
+      if (match) return match;
+    }}
+    return null;
+  }};
+
   // Collapse double slashes → 301 to clean URL
   // Google indexed some // URLs (e.g. /en//posts/...) as duplicates
   if (path.includes('//')) {{
     const clean = path.replace(/\\/\\/+/g, '/');
-    return event.respondWith(Response.redirect(`${{url.origin}}${{clean}}`, 301));
+    const match = lookupRedirect(clean);
+    return redirectTo(match || clean);
   }}
 
-  // Try exact match first
-  const exact = REDIRECTS[path];
+  // Try exact/normalised/trailing-slash match once. The generated map is
+  // flattened, so a matching source already points at its final target.
+  const exact = lookupRedirect(path);
   if (exact) {{
-    const dest = exact.startsWith('http') ? exact : `${{url.origin}}${{exact}}`;
-    return event.respondWith(Response.redirect(dest, 301));
-  }}
-
-  // Try normalised (decoded) match
-  const normalised = normalise(path);
-  if (normalised !== path) {{
-    const match = REDIRECTS[normalised];
-    if (match) {{
-      const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
-      return event.respondWith(Response.redirect(dest, 301));
-    }}
-  }}
-
-  // Try without trailing slash
-  if (path.length > 1 && path.endsWith('/')) {{
-    const withoutSlash = path.slice(0, -1);
-    const match = REDIRECTS[withoutSlash] || REDIRECTS[normalise(withoutSlash)];
-    if (match) {{
-      const dest = match.startsWith('http') ? match : `${{url.origin}}${{match}}`;
-      return event.respondWith(Response.redirect(dest, 301));
-    }}
+    return redirectTo(exact);
   }}
 
   // Strip /en/ prefix — all old /en/ URLs redirect to root path
   // Phase 0b migration: /en/brands/ /en/products/ /en/guides/ etc.
   if (path.startsWith('/en/') || path === '/en') {{
     const stripped = path === '/en' ? '/' : path.replace(/^\\/en/, '');
-    return event.respondWith(Response.redirect(`${{url.origin}}${{stripped}}`, 301));
+    const match = lookupRedirect(stripped);
+    return redirectTo(match || stripped);
   }}
 
   // Strip /en_bak/ prefix — backup directory leaked to production
   if (path.startsWith('/en_bak/') || path === '/en_bak') {{
     const stripped = path === '/en_bak' ? '/' : path.replace(/^\\/en_bak/, '');
-    return event.respondWith(Response.redirect(`${{url.origin}}${{stripped}}`, 301));
+    const match = lookupRedirect(stripped);
+    return redirectTo(match || stripped);
   }}
 
   // Pass through to origin (GitHub Pages)

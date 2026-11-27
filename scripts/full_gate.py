@@ -14,6 +14,7 @@ os.chdir(ROOT)
 GATES = [
     ("site_checker",        ["python", "scripts/site_checker.py"],             True),
     ("redirect_hard",       ["python", "scripts/audit_redirects_hard.py"],     True),
+    ("redirect_chains",     ["python", "scripts/gen_redirect_worker.py", "--check"], True),
     ("link_check",          ["python", ".github/scripts/check_links_ci.py"],   True),
     ("entry_check(5入口)",  ["python", "scripts/site_map.py", "--check"],      True),
     ("sitemap_quality",     ["python", "scripts/audit_sitemap_quality.py"],    True),
