@@ -116,8 +116,11 @@ def main():
     # 真实文件集合(大小写敏感): os.walk 保留磁盘实际大小写 + set 精确匹配,
     # 模拟 GitHub Pages(Linux) 大小写语义. os.path.isfile 在 Windows 大小写不敏感,
     # 会把磁盘上不存在(仅大小写不同)的目标误判为存在 → 断链漏检.
+    # _site 是 build_site_artifact.py 的本地产物(gitignore), 内容是旧快照,
+    # 审计它会拿过期链接报假错(实测 _site/zh/sitemap.html 仍指已删的
+    # /sitemap.html)。门禁只审被部署的源文件。
     SKIP = ('en_bak', '_archive', '_archive_audit', 'node_modules', '.git',
-            '.github', 'backlinks_output', 'backlinks_daily')
+            '.github', 'backlinks_output', 'backlinks_daily', '_site')
     real_files = set()
     for dirpath, dirnames, filenames in os.walk('.'):
         dp = dirpath.replace('\\', '/').rstrip('/').lstrip('./')
@@ -129,7 +132,7 @@ def main():
     # 遍历所有 html
     for f in glob.glob('**/*.html', recursive=True):
         fs = f.replace('\\', '/')
-        if fs.startswith('en_bak/') or fs.startswith('_archive') or '/node_modules/' in fs:
+        if fs.startswith(('en_bak/', '_site/')) or fs.startswith('_archive') or '/node_modules/' in fs:
             continue
         # 临时调试文件（未跟踪、不部署），不是站点内容
         if os.path.basename(fs).startswith('tmp_'):
