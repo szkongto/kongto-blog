@@ -589,3 +589,5 @@
 /posts/cga-ega-to-vga-industrial-converter.html /posts/Video_Signal_Conversion_System_CGA_EGA_to_VGA_Manual.html 301
 /posts/rgb-to-vga-industrial-converter-cnc.html /posts/Video_Signal_Converter_Buying_Guide.html 301
 /posts/comparison_20260501_video_converter_buying_guide.html /posts/Video_Signal_Converter_Buying_Guide.html 301
+# 2026-11-28 双斜杠外链兜底：Cloudflare 先把 // 归一化，worker 收到的已是 /products/products/...
+/products/products/fanuc-a02b-0200-c071-lcd-upgrade.html /products/fanuc-a02b-0200-c071-lcd-upgrade.html 301
